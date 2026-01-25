@@ -1,7 +1,13 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  /* config options here */
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  webpack: (config: { resolve: { fallback: { fs: boolean; }; }; }) => {
+    config.resolve.fallback = { fs: false }; // a veces ayuda con Turbopack y node_modules
+    return config;
+  },
+  experimental: {
+    // desactivar Turbopack para build en Vercel
+    turbo: false,
+  },
 };
 
-export default nextConfig;
+module.exports = nextConfig;
