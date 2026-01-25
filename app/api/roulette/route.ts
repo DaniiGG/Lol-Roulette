@@ -23,8 +23,8 @@ export async function GET() {
     champions[Math.floor(Math.random() * champions.length)]
 
   return NextResponse.json({
-     id: random.id,
-  key: Number(random.key),
-  name: random.name,
+    id: random.id,
+    key: Number(random.key),
+    name: random.name,
   })
 }
