@@ -1,30 +1,52 @@
 import { NextResponse } from "next/server"
+import { getChampionsByLane } from "@/lib/champion-lanes"
 
 type Champion = {
   id: string
   key: string
   name: string
+  tags: string[]
 }
 
-export async function GET() {
-  // versión fija (luego la podemos automatizar)
-  const version = "14.1.1"
+export async function GET(request: Request) {
+  const { searchParams } = new URL(request.url)
+  const lane = searchParams.get('lane')?.toLowerCase() || 'all'
 
-  const res = await fetch(
-    `https://ddragon.leagueoflegends.com/cdn/${version}/data/es_ES/champion.json`,
-    { cache: "force-cache" } // importante
-  )
+  const version = "16.1.1"
 
-  const data = await res.json()
+  try {
+    const res = await fetch(
+      `https://ddragon.leagueoflegends.com/cdn/${version}/data/es_ES/champion.json`,
+      { cache: "force-cache" }
+    )
 
-  const champions: Champion[] = Object.values(data.data)
+    const data = await res.json()
+    const allChampions: Champion[] = Object.values(data.data)
 
-  const random =
-    champions[Math.floor(Math.random() * champions.length)]
+    const validChampionNames = getChampionsByLane(lane)
 
-  return NextResponse.json({
-    id: random.id,
-    key: Number(random.key),
-    name: random.name,
-  })
+    let champions = allChampions.filter(champ => 
+      validChampionNames.includes(champ.name)
+    )
+
+    if (champions.length === 0) {
+      champions = allChampions
+    }
+
+    const random = champions[Math.floor(Math.random() * champions.length)]
+
+    return NextResponse.json({
+      id: random.id,
+      key: Number(random.key),
+      name: random.name,
+      tags: random.tags,
+      lane: lane
+    })
+
+  } catch (error) {
+    return NextResponse.json(
+      { error: "Failed to fetch champions" },
+      { status: 500 }
+    )
+  }
 }
