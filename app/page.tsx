@@ -6,6 +6,8 @@ import { supabase } from "@/lib/supabase"
 import { ACHIEVEMENTS, checkAchievement, calculateLevel } from "@/lib/achievements"
 import confetti from "canvas-confetti"
 import Cookies from 'js-cookie'
+import AdBanner from "@/components/AdBanner"
+import AdContainer from "@/components/AdContainer"
 
 // Components
 import LaneSelector from "@/components/LaneSelector"
@@ -45,7 +47,7 @@ export default function Home() {
     try {
       const response = await fetch('/api/auth/verify-session', {
         method: 'POST',
-        headers: { 
+        headers: {
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${token}`
         }
@@ -90,11 +92,11 @@ export default function Home() {
     setLoading(true)
     setSpinning(true)
     setVerificationResult(null)
-    
+
     setTimeout(async () => {
       const res = await fetch(`/api/roulette?lane=${selectedLane}`)
       const data = await res.json()
-      
+
       setChamp(data)
       setLoading(false)
       setTimeout(() => setSpinning(false), 500)
@@ -114,11 +116,11 @@ export default function Home() {
     if (!user || !champ || !sessionToken) return
 
     setVerifying(true)
-    
+
     try {
       const res = await fetch('/api/verify', {
         method: 'POST',
-        headers: { 
+        headers: {
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${sessionToken}`
         },
@@ -162,7 +164,7 @@ export default function Home() {
 
     await supabase
       .from('challenges')
-      .update({ 
+      .update({
         status: 'completed',
         completed_at: new Date().toISOString(),
         match_id: matchData.matchId,
@@ -239,7 +241,7 @@ export default function Home() {
     if (sessionToken) {
       fetch('/api/auth/logout', {
         method: 'POST',
-        headers: { 
+        headers: {
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${sessionToken}`
         }
@@ -268,6 +270,16 @@ export default function Home() {
       {/* Content */}
       <div className="relative z-10 min-h-screen p-6">
         <div className="max-w-7xl mx-auto">
+
+          {/* ANUNCIO 1: Banner superior */}
+          <AdContainer position="top">
+            <AdBanner
+              adSlot="1234567890"
+              adFormat="horizontal"
+              style={{ display: 'block', width: '100%', height: '90px' }}
+            />
+          </AdContainer>
+
           {/* Header con Login/Logout */}
           <div className="flex justify-end mb-4">
             {user ? (
@@ -325,7 +337,7 @@ export default function Home() {
               </div>
 
               {/* Lane Selector */}
-              <LaneSelector 
+              <LaneSelector
                 selectedLane={selectedLane}
                 onLaneChange={setSelectedLane}
                 disabled={loading}
@@ -342,48 +354,103 @@ export default function Home() {
                 showVerify={!!champ && !verificationResult}
               />
 
+
+
               {/* CTA para login (solo si no está logueado y ya giró) */}
               {!user && champ && (
-                <div className="p-6 rounded-2xl bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/30">
-                  <div className="flex items-start gap-4">
-                    <div className="text-4xl">🎯</div>
-                    <div className="flex-1">
-                      <h3 className="text-white font-bold text-lg mb-2">
-                        Want to track your progress?
-                      </h3>
-                      <p className="text-neutral-300 text-sm mb-4">
-                        Login to verify wins, earn XP, unlock achievements, and compete on the leaderboard!
-                      </p>
-                      <button
-                        onClick={() => setShowLoginModal(true)}
-                        className="px-6 py-3 rounded-xl bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold hover:from-blue-600 hover:to-purple-600 transition"
-                      >
-                        Login with Riot Account
-                      </button>
+
+                <>
+                  {/* ANUNCIO 2: Entre contenido (solo si no está logueado) */}
+                  <AdContainer position="center">
+                    <AdBanner
+                      adSlot="0987654321"
+                      adFormat="rectangle"
+                      style={{ display: 'block', width: '336px', height: '280px' }}
+                    />
+                  </AdContainer>
+                  <div className="p-6 rounded-2xl bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/30">
+                    <div className="flex items-start gap-4">
+                      <div className="text-4xl">🎯</div>
+                      <div className="flex-1">
+                        <h3 className="text-white font-bold text-lg mb-2">
+                          Want to track your progress?
+                        </h3>
+                        <p className="text-neutral-300 text-sm mb-4">
+                          Login to verify wins, earn XP, unlock achievements, and compete on the leaderboard!
+                        </p>
+                        <button
+                          onClick={() => setShowLoginModal(true)}
+                          className="px-6 py-3 rounded-xl bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold hover:from-blue-600 hover:to-purple-600 transition"
+                        >
+                          Login with Riot Account
+                        </button>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </>
               )}
 
               {/* Verification Result */}
               {verificationResult && champ && user && (
-                <VerificationResult 
+                <VerificationResult
                   result={verificationResult}
                   championName={champ.name}
                 />
               )}
+
+              {/* ANUNCIO 3: Después de verificar (solo usuarios logueados) */}
+              {user && verificationResult && (
+                <AdContainer position="center">
+                  <AdBanner
+                    adSlot="1122334455"
+                    adFormat="rectangle"
+                  />
+                </AdContainer>
+              )}
+
             </div>
 
-            {/* Right: Achievements (solo si está logueado) */}
-            {user && (
-              <div className="lg:col-span-1">
-                <AchievementsList 
+            {/* Right: Achievements / Anuncios */}
+            {user ? (
+              <div className="lg:col-span-1 space-y-6">
+                <AchievementsList
                   unlockedAchievements={userAchievements}
                   newAchievements={newAchievements}
                 />
+
+                {/* ANUNCIO 4: Sidebar (desktop) */}
+                <div className="hidden lg:block">
+                  <AdContainer position="side">
+                    <AdBanner
+                      adSlot="5544332211"
+                      adFormat="vertical"
+                      style={{ display: 'block', width: '160px', height: '600px' }}
+                    />
+                  </AdContainer>
+                </div>
+              </div>
+            ) : (
+              // ANUNCIO 5: Sidebar para usuarios no logueados
+              <div className="hidden lg:block">
+                <AdContainer position="side">
+                  <AdBanner
+                    adSlot="6677889900"
+                    adFormat="auto"
+                  />
+                </AdContainer>
               </div>
             )}
           </div>
+
+
+          {/* ANUNCIO 6: Banner inferior */}
+          <AdContainer position="bottom">
+            <AdBanner
+              adSlot="9988776655"
+              adFormat="horizontal"
+              style={{ display: 'block', width: '100%', height: '90px' }}
+            />
+          </AdContainer>
 
           {/* Footer */}
           <div className="text-center mt-12">
@@ -396,7 +463,7 @@ export default function Home() {
 
       {/* Login Modal */}
       {showLoginModal && (
-        <LoginModal 
+        <LoginModal
           onClose={() => setShowLoginModal(false)}
           onSuccess={(token, userData) => {
             setSessionToken(token)
@@ -409,7 +476,7 @@ export default function Home() {
 
       {/* Achievement Popup */}
       {user && (
-        <AchievementPopup 
+        <AchievementPopup
           achievementTypes={newAchievements}
           onClose={() => setNewAchievements([])}
         />
@@ -419,9 +486,9 @@ export default function Home() {
 }
 
 // Login Modal Component
-function LoginModal({ onClose, onSuccess }: { 
+function LoginModal({ onClose, onSuccess }: {
   onClose: () => void
-  onSuccess: (token: string, user: any) => void 
+  onSuccess: (token: string, user: any) => void
 }) {
   const [riotId, setRiotId] = useState('')
   const [region, setRegion] = useState('euw1')
@@ -496,7 +563,7 @@ function LoginModal({ onClose, onSuccess }: {
       const { token, user } = await sessionResponse.json()
 
       Cookies.set('session_token', token, { expires: 30, secure: true, sameSite: 'strict' })
-      
+
       onSuccess(token, user)
 
     } catch (error) {
