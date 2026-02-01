@@ -2,6 +2,7 @@
 'use client'
 
 import { useEffect } from 'react'
+const NEXT_PUBLIC_ADSENSE_CLIENT = process.env.NEXT_PUBLIC_ADSENSE_CLIENT!
 
 interface AdBannerProps {
   adSlot: string
@@ -29,7 +30,7 @@ export default function AdBanner({
     <ins
       className="adsbygoogle"
       style={style}
-      data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+      data-ad-client={NEXT_PUBLIC_ADSENSE_CLIENT}
       data-ad-slot={adSlot}
       data-ad-format={adFormat}
       data-full-width-responsive={fullWidthResponsive.toString()}

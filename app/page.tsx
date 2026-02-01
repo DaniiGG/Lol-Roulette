@@ -274,7 +274,7 @@ export default function Home() {
           {/* ANUNCIO 1: Banner superior */}
           <AdContainer position="top">
             <AdBanner
-              adSlot="1234567890"
+              adSlot="3964082422"
               adFormat="horizontal"
               style={{ display: 'block', width: '100%', height: '90px' }}
             />
@@ -363,7 +363,7 @@ export default function Home() {
                   {/* ANUNCIO 2: Entre contenido (solo si no está logueado) */}
                   <AdContainer position="center">
                     <AdBanner
-                      adSlot="0987654321"
+                      adSlot="8634294488"
                       adFormat="rectangle"
                       style={{ display: 'block', width: '336px', height: '280px' }}
                     />
@@ -402,7 +402,7 @@ export default function Home() {
               {user && verificationResult && (
                 <AdContainer position="center">
                   <AdBanner
-                    adSlot="1122334455"
+                    adSlot="6439375981"
                     adFormat="rectangle"
                   />
                 </AdContainer>
@@ -422,7 +422,7 @@ export default function Home() {
                 <div className="hidden lg:block">
                   <AdContainer position="side">
                     <AdBanner
-                      adSlot="5544332211"
+                      adSlot="2388450333"
                       adFormat="vertical"
                       style={{ display: 'block', width: '160px', height: '600px' }}
                     />
@@ -434,7 +434,7 @@ export default function Home() {
               <div className="hidden lg:block">
                 <AdContainer position="side">
                   <AdBanner
-                    adSlot="6677889900"
+                    adSlot="1075368665"
                     adFormat="auto"
                   />
                 </AdContainer>
@@ -446,7 +446,7 @@ export default function Home() {
           {/* ANUNCIO 6: Banner inferior */}
           <AdContainer position="bottom">
             <AdBanner
-              adSlot="9988776655"
+              adSlot="1211100030"
               adFormat="horizontal"
               style={{ display: 'block', width: '100%', height: '90px' }}
             />
