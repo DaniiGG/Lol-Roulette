@@ -1,4 +1,4 @@
-// app/page.tsx (VERSIÓN PÚBLICA + LOGIN OPCIONAL)
+// app/page.tsx (VERSIÓN FINAL CORREGIDA)
 "use client"
 
 import { useState, useEffect } from "react"
@@ -87,19 +87,45 @@ export default function Home() {
     }
   }
 
-  // SPIN PÚBLICO (sin login)
+  // SPIN PÚBLICO (funciona sin login)
   const spin = async () => {
     setLoading(true)
     setSpinning(true)
     setVerificationResult(null)
 
     setTimeout(async () => {
-      const res = await fetch(`/api/roulette?lane=${selectedLane}`)
-      const data = await res.json()
+      try {
+        const res = await fetch(`/api/roulette?lane=${selectedLane}`)
+        const data = await res.json()
+        
+        // DEBUG: Ver qué datos llegan
+        console.log('🎲 Champion data received:', data)
+        console.log('Champion ID:', data.id)
+        console.log('Champion Name:', data.name)
+        console.log('Champion Key:', data.key)
+        console.log('Champion Tags:', data.tags)
 
-      setChamp(data)
-      setLoading(false)
-      setTimeout(() => setSpinning(false), 500)
+        // Guardar challenge SOLO si está logueado
+        if (user) {
+          await supabase.from('challenges').insert([{
+            user_id: user.id,
+            champion_id: data.key.toString(),
+            champion_name: data.name,
+            lane: selectedLane,
+            status: 'pending',
+            xp_reward: 100
+          }])
+        }
+
+        setChamp(data)
+        console.log('✅ Champion set in state:', data)
+        
+      } catch (error) {
+        console.error('❌ Error fetching champion:', error)
+      } finally {
+        setLoading(false)
+        setTimeout(() => setSpinning(false), 500)
+      }
     }, 2000)
   }
 
@@ -343,22 +369,19 @@ export default function Home() {
                 disabled={loading}
               />
 
-              {/* Champion Card */}
+              {/* Champion Card - CORREGIDO */}
               <ChampionCard
                 champion={champ}
                 spinning={spinning}
                 onSpin={spin}
-                onVerify={handleVerifyClick}
+                onVerify={user ? handleVerifyClick : undefined}
                 loading={loading}
                 verifying={verifying}
-                showVerify={!!champ && !verificationResult}
+                showVerify={!!(user && champ && !verificationResult)}
               />
-
-
 
               {/* CTA para login (solo si no está logueado y ya giró) */}
               {!user && champ && (
-
                 <>
                   {/* ANUNCIO 2: Entre contenido (solo si no está logueado) */}
                   <AdContainer position="center">
@@ -368,6 +391,7 @@ export default function Home() {
                       style={{ display: 'block', width: '336px', height: '280px' }}
                     />
                   </AdContainer>
+                  
                   <div className="p-6 rounded-2xl bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/30">
                     <div className="flex items-start gap-4">
                       <div className="text-4xl">🎯</div>
@@ -407,7 +431,6 @@ export default function Home() {
                   />
                 </AdContainer>
               )}
-
             </div>
 
             {/* Right: Achievements / Anuncios */}
@@ -441,7 +464,6 @@ export default function Home() {
               </div>
             )}
           </div>
-
 
           {/* ANUNCIO 6: Banner inferior */}
           <AdContainer position="bottom">

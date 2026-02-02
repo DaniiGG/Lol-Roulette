@@ -4,8 +4,7 @@ import type { NextRequest } from 'next/server'
 
 // Rutas que requieren autenticación
 const protectedRoutes = [
-  '/api/verify',
-  '/api/roulette'
+  '/api/verify'
 ]
 
 export async function middleware(request: NextRequest) {

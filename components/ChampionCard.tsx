@@ -25,6 +25,15 @@ export default function ChampionCard({
   verifying = false,
   showVerify = false
 }: ChampionCardProps) {
+  // DEBUG: Ver qué props llegan
+  console.log('🎴 ChampionCard props:', {
+    champion,
+    spinning,
+    loading,
+    showVerify,
+    hasOnVerify: !!onVerify
+  })
+
   return (
     <div className="bg-neutral-900/40 backdrop-blur-xl rounded-3xl border border-neutral-800/50 overflow-hidden">
       {/* Champion Display */}
@@ -115,8 +124,8 @@ export default function ChampionCard({
 
       {/* Action Buttons */}
       <div className="p-6 space-y-3">
-        {!champion || !showVerify ? (
-          // Spin Button
+        {!champion ? (
+          // Spin Button (cuando NO hay campeón)
           <button
             onClick={onSpin}
             disabled={loading}
@@ -147,40 +156,74 @@ export default function ChampionCard({
               )}
             </span>
           </button>
+        ) : showVerify ? (
+          // Verify Button (cuando HAY campeón Y usuario logueado)
+          <>
+            <button
+              onClick={onVerify}
+              disabled={verifying}
+              className="
+                w-full py-4 rounded-xl 
+                bg-gradient-to-r from-green-600 to-emerald-600
+                text-white font-semibold
+                hover:from-green-500 hover:to-emerald-500
+                disabled:opacity-40 disabled:cursor-not-allowed
+                transition-all duration-300
+                hover:scale-105 active:scale-95
+              "
+            >
+              {verifying ? (
+                <span className="flex items-center justify-center gap-2">
+                  <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
+                  Verifying...
+                </span>
+              ) : (
+                'Verify Match'
+              )}
+            </button>
+            
+            {/* New Challenge Button (usuario logueado) */}
+            <button
+              onClick={onSpin}
+              disabled={loading}
+              className="w-full py-3 rounded-xl bg-neutral-800 text-white hover:bg-neutral-700 transition disabled:opacity-40 text-sm"
+            >
+              <span className="text-xs opacity-60">—</span>
+                  <span>Spin Again</span>
+              <span className="text-xs opacity-60">—</span>
+            </button>
+          </>
         ) : (
-          // Verify Button
-          <button
-            onClick={onVerify}
-            disabled={verifying}
-            className="
-              w-full py-4 rounded-xl 
-              bg-gradient-to-r from-green-600 to-emerald-600
-              text-white font-semibold
-              hover:from-green-500 hover:to-emerald-500
-              disabled:opacity-40 disabled:cursor-not-allowed
-              transition-all duration-300
-              hover:scale-105 active:scale-95
-            "
-          >
-            {verifying ? (
-              <span className="flex items-center justify-center gap-2">
-                <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
-                Verifying...
-              </span>
-            ) : (
-              'Verify Match'
-            )}
-          </button>
-        )}
-
-        {/* New Challenge Button (if verified) */}
-        {showVerify && (
+          // New Challenge Button (cuando HAY campeón pero NO está logueado)
           <button
             onClick={onSpin}
             disabled={loading}
-            className="w-full py-3 rounded-xl bg-neutral-800 text-white hover:bg-neutral-700 transition disabled:opacity-40 text-sm"
+            className="
+              group/btn w-full py-4 rounded-xl 
+              bg-white text-neutral-950
+              hover:bg-neutral-100
+              disabled:opacity-40 disabled:cursor-not-allowed
+              transition-all duration-500
+              relative overflow-hidden
+              font-light text-base tracking-widest uppercase
+            "
           >
-            New Challenge
+            <div className="absolute inset-0 bg-gradient-to-r from-neutral-100 to-white opacity-0 group-hover/btn:opacity-100 transition-opacity duration-500"></div>
+            
+            <span className="relative z-10 flex items-center justify-center gap-4">
+              {loading ? (
+                <>
+                  <div className="w-4 h-4 border border-neutral-950/20 border-t-neutral-950 rounded-full animate-spin"></div>
+                  <span>Spinning</span>
+                </>
+              ) : (
+                <>
+                  <span className="text-xs opacity-60">—</span>
+                  <span>Spin Roulette</span>
+                  <span className="text-xs opacity-60">—</span>
+                </>
+              )}
+            </span>
           </button>
         )}
       </div>
