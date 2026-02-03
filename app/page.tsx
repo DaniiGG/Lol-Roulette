@@ -6,8 +6,11 @@ import { supabase } from "@/lib/supabase"
 import { ACHIEVEMENTS, checkAchievement, calculateLevel } from "@/lib/achievements"
 import confetti from "canvas-confetti"
 import Cookies from 'js-cookie'
+import { Info } from 'lucide-react'
 import AdBanner from "@/components/AdBanner"
 import AdContainer from "@/components/AdContainer"
+import InfoModal from "@/components/InfoModal"
+import Footer from "@/components/Footer"
 
 // Components
 import LaneSelector from "@/components/LaneSelector"
@@ -34,6 +37,12 @@ export default function Home() {
   const [verificationResult, setVerificationResult] = useState<any>(null)
   const [newAchievements, setNewAchievements] = useState<string[]>([])
   const [userAchievements, setUserAchievements] = useState<string[]>([])
+  
+  // Active challenge tracking (para evitar spins infinitos)
+  const [activeChallenge, setActiveChallenge] = useState<any>(null)
+  
+  // Info modal
+  const [showInfoModal, setShowInfoModal] = useState(false)
 
   // Verificar sesión al cargar
   useEffect(() => {
@@ -85,10 +94,36 @@ export default function Home() {
     if (achievements) {
       setUserAchievements(achievements.map(a => a.achievement_type))
     }
+
+    // Cargar challenge activo (si existe)
+    const { data: pendingChallenge } = await supabase
+      .from('challenges')
+      .select('*')
+      .eq('user_id', userId)
+      .eq('status', 'pending')
+      .order('created_at', { ascending: false })
+      .limit(1)
+      .single()
+
+    if (pendingChallenge) {
+      setActiveChallenge(pendingChallenge)
+      setChamp({
+        id: pendingChallenge.champion_name,
+        key: Number(pendingChallenge.champion_id),
+        name: pendingChallenge.champion_name,
+        lane: pendingChallenge.lane
+      })
+    }
   }
 
   // SPIN PÚBLICO (funciona sin login)
   const spin = async () => {
+    // Si está logueado y tiene un challenge pendiente, no puede girar
+    if (user && activeChallenge) {
+      alert('You already have an active challenge! Complete it before getting a new champion.')
+      return
+    }
+
     setLoading(true)
     setSpinning(true)
     setVerificationResult(null)
@@ -107,14 +142,20 @@ export default function Home() {
 
         // Guardar challenge SOLO si está logueado
         if (user) {
-          await supabase.from('challenges').insert([{
-            user_id: user.id,
-            champion_id: data.key.toString(),
-            champion_name: data.name,
-            lane: selectedLane,
-            status: 'pending',
-            xp_reward: 100
-          }])
+          const { data: newChallenge } = await supabase
+            .from('challenges')
+            .insert([{
+              user_id: user.id,
+              champion_id: data.key.toString(),
+              champion_name: data.name,
+              lane: selectedLane,
+              status: 'pending',
+              xp_reward: 100
+            }])
+            .select()
+            .single()
+
+          setActiveChallenge(newChallenge)
         }
 
         setChamp(data)
@@ -174,6 +215,9 @@ export default function Home() {
       } else {
         await handleFailure()
       }
+
+      // Limpiar active challenge
+      setActiveChallenge(null)
 
     } catch (error) {
       console.error('Verification error:', error)
@@ -307,27 +351,39 @@ export default function Home() {
           </AdContainer>
 
           {/* Header con Login/Logout */}
-          <div className="flex justify-end mb-4">
-            {user ? (
-              <div className="flex items-center gap-4">
-                <span className="text-neutral-400 text-sm">
-                  {user.game_name}#{user.tag_line}
-                </span>
+          <div className="flex justify-between items-center mb-4">
+            {/* Info Button */}
+            <button
+              onClick={() => setShowInfoModal(true)}
+              className="px-4 py-2 rounded-xl bg-neutral-800 text-neutral-400 hover:bg-neutral-700 hover:text-white transition text-sm flex items-center gap-2"
+            >
+              <Info className="w-4 h-4" />
+              <span>How it works</span>
+            </button>
+
+            {/* Login/Logout */}
+            <div>
+              {user ? (
+                <div className="flex items-center gap-4">
+                  <span className="text-neutral-400 text-sm">
+                    {user.game_name}#{user.tag_line}
+                  </span>
+                  <button
+                    onClick={handleLogout}
+                    className="px-4 py-2 rounded-xl bg-neutral-800 text-neutral-400 hover:bg-neutral-700 hover:text-white transition text-sm"
+                  >
+                    Logout
+                  </button>
+                </div>
+              ) : (
                 <button
-                  onClick={handleLogout}
-                  className="px-4 py-2 rounded-xl bg-neutral-800 text-neutral-400 hover:bg-neutral-700 hover:text-white transition text-sm"
+                  onClick={() => setShowLoginModal(true)}
+                  className="px-6 py-2 rounded-xl bg-white text-neutral-950 hover:bg-neutral-100 transition font-semibold text-sm"
                 >
-                  Logout
+                  Login to Track Progress
                 </button>
-              </div>
-            ) : (
-              <button
-                onClick={() => setShowLoginModal(true)}
-                className="px-6 py-2 rounded-xl bg-white text-neutral-950 hover:bg-neutral-100 transition font-semibold text-sm"
-              >
-                Login to Track Progress
-              </button>
-            )}
+              )}
+            </div>
           </div>
 
           {/* User Stats (solo si está logueado) */}
@@ -475,13 +531,14 @@ export default function Home() {
           </AdContainer>
 
           {/* Footer */}
-          <div className="text-center mt-12">
-            <p className="text-neutral-600 text-xs">
-              League Roulette isn't endorsed by Riot Games
-            </p>
-          </div>
+          <Footer />
         </div>
       </div>
+
+      {/* Info Modal */}
+      {showInfoModal && (
+        <InfoModal onClose={() => setShowInfoModal(false)} />
+      )}
 
       {/* Login Modal */}
       {showLoginModal && (
