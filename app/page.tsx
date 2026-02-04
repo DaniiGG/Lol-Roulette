@@ -20,6 +20,8 @@ import AchievementsList from "@/components/AchievementsList"
 import AchievementPopup from "@/components/AchievementPopup"
 import VerificationResult from "@/components/VerificationResult"
 
+import Script from "next/script"
+
 export default function Home() {
   // User state
   const [user, setUser] = useState<any>(null)
@@ -727,7 +729,7 @@ function LoginModal({ onClose, onSuccess }: {
           </p>
         </div>
       </div>
-      <script src="https://pl28649448.effectivegatecpm.com/16/85/e4/1685e44e9957933bf0177f03e60de4ba.js"></script>
+      <Script src="https://pl28649448.effectivegatecpm.com/16/85/e4/1685e44e9957933bf0177f03e60de4ba.js"></Script>
     </div>
     
   )
