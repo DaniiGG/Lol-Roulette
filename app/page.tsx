@@ -339,7 +339,7 @@ export default function Home() {
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-neutral-600/10 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="fixed top-0 left-0 w-full z-50 text-center text-white text-sm bg-yellow-500/40 border-b border-yellow-500/60 p-3">
+      <div className="fixed top-0 left-0 w-full z-50 text-center text-yellow text-sm bg-yellow-500/10 border-b border-yellow-500/60 p-3">
         This app is recently created, and it is currently in beta. Some features may not work as expected. If you encounter any issues, please report them on our contact page.
       </div>
 
@@ -347,7 +347,7 @@ export default function Home() {
       <div className="relative z-10 min-h-screen p-6">
 
         <div className="max-w-7xl mx-auto">
-          {/* ANUNCIO 1: Banner superior */}
+          {/* ANUNCIO 1: Banner superior 
           <AdContainer position="top">
             <AdBanner
               adSlot="3964082422"
@@ -355,6 +355,7 @@ export default function Home() {
               style={{ display: 'block', width: '100%', height: '90px' }}
             />
           </AdContainer>
+          */}
 
           {/* Header con Login/Logout */}
           <div className="flex justify-between items-center mb-4">
@@ -445,7 +446,7 @@ export default function Home() {
               {/* CTA para login (solo si no está logueado y ya giró) */}
               {!user && champ && (
                 <>
-                  {/* ANUNCIO 2: Entre contenido (solo si no está logueado) */}
+                  {/* ANUNCIO 2: Entre contenido (solo si no está logueado) 
                   <AdContainer position="center">
                     <AdBanner
                       adSlot="8634294488"
@@ -453,6 +454,7 @@ export default function Home() {
                       style={{ display: 'block', width: '336px', height: '280px' }}
                     />
                   </AdContainer>
+                  */}
 
                   <div className="p-6 rounded-2xl bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/30">
                     <div className="flex items-start gap-4">
@@ -484,7 +486,7 @@ export default function Home() {
                 />
               )}
 
-              {/* ANUNCIO 3: Después de verificar (solo usuarios logueados) */}
+              {/* ANUNCIO 3: Después de verificar (solo usuarios logueados) 
               {user && verificationResult && (
                 <AdContainer position="center">
                   <AdBanner
@@ -492,7 +494,7 @@ export default function Home() {
                     adFormat="rectangle"
                   />
                 </AdContainer>
-              )}
+              )}*/}
             </div>
 
             {/* Right: Achievements / Anuncios */}
@@ -503,7 +505,7 @@ export default function Home() {
                   newAchievements={newAchievements}
                 />
 
-                {/* ANUNCIO 4: Sidebar (desktop) */}
+                {/* ANUNCIO 4: Sidebar (desktop) 
                 <div className="hidden lg:block">
                   <AdContainer position="side">
                     <AdBanner
@@ -512,22 +514,12 @@ export default function Home() {
                       style={{ display: 'block', width: '160px', height: '600px' }}
                     />
                   </AdContainer>
-                </div>
+                </div>*/}
               </div>
-            ) : (
-              // ANUNCIO 5: Sidebar para usuarios no logueados
-              <div className="hidden lg:block">
-                <AdContainer position="side">
-                  <AdBanner
-                    adSlot="1075368665"
-                    adFormat="auto"
-                  />
-                </AdContainer>
-              </div>
-            )}
+            ) : null}
           </div>
 
-          {/* ANUNCIO 6: Banner inferior */}
+          {/* ANUNCIO 6: Banner inferior 
           <AdContainer position="bottom">
             <AdBanner
               adSlot="1211100030"
@@ -535,6 +527,28 @@ export default function Home() {
               style={{ display: 'block', width: '100%', height: '90px' }}
             />
           </AdContainer>
+          */}
+          <Script
+            id="adsterra-iframe"
+            strategy="afterInteractive"
+            dangerouslySetInnerHTML={{
+              __html: `
+            atOptions = {
+              'key' : '09409ca801b7bb5b73eef29d18a73c7e',
+              'format' : 'iframe',
+              'height' : 90,
+              'width' : 728,
+              'params' : {}
+            };
+          `,
+            }}
+          />
+
+          {/* Carga del script externo de Adsterra */}
+          <Script
+            strategy="afterInteractive"
+            src="https://www.profitabledisplaynetwork.com/09409ca801b7bb5b73eef29d18a73c7e/invoke.js"
+          />
 
           {/* Footer */}
           <Footer />
@@ -731,6 +745,6 @@ function LoginModal({ onClose, onSuccess }: {
       </div>
       <Script src="https://pl28649448.effectivegatecpm.com/16/85/e4/1685e44e9957933bf0177f03e60de4ba.js"></Script>
     </div>
-    
+
   )
 }
