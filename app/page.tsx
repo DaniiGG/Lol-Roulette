@@ -339,14 +339,14 @@ export default function Home() {
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-neutral-600/10 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="fixed top-0 left-0 w-full z-50 text-center text-yellow text-sm bg-yellow-500/10 border-b border-yellow-500/60 p-3">
+      <div className="fixed top-0 left-0 w-full z-50 text-center text-sm bg-yellow-500 border-b border-yellow-500/60 p-3 text-black">
         This app is recently created, and it is currently in beta. Some features may not work as expected. If you encounter any issues, please report them on our contact page.
       </div>
 
       {/* Content */}
-      <div className="relative z-10 min-h-screen p-6">
+      <div className="relative z-10 min-h-screen p-6" >
 
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mt-16 mx-auto">
           {/* ANUNCIO 1: Banner superior 
           <AdContainer position="top">
             <AdBanner
@@ -515,8 +515,22 @@ export default function Home() {
                     />
                   </AdContainer>
                 </div>*/}
+                
               </div>
-            ) : null}
+            ) :
+             <div id="container-ecd5cd4098135436650955a3e1f14ba3">
+
+      {/* Script de Adsterra */}
+      <Script
+        id="adsterra-ecd5cd"
+        strategy="afterInteractive"
+        async
+        data-cfasync="false"
+        src="https://pl28649548.effectivegatecpm.com/ecd5cd4098135436650955a3e1f14ba3/invoke.js"
+      />
+            </div>
+            
+            }
           </div>
 
           {/* ANUNCIO 6: Banner inferior 
@@ -743,7 +757,7 @@ function LoginModal({ onClose, onSuccess }: {
           </p>
         </div>
       </div>
-      <Script src="https://pl28649448.effectivegatecpm.com/16/85/e4/1685e44e9957933bf0177f03e60de4ba.js"></Script>
+      {/*<Script src="https://pl28649448.effectivegatecpm.com/16/85/e4/1685e44e9957933bf0177f03e60de4ba.js"></Script>*/}
     </div>
 
   )
