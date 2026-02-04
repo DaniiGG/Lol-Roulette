@@ -156,7 +156,7 @@ export default function ContactPage() {
                 <div>
                   <h3 className="font-bold text-white mb-1">Email</h3>
                   <a href="mailto:contact@leagueroulette.com" className="text-blue-400 hover:text-blue-300 transition">
-                    contact@leagueroulette.com
+                    lolroulettenine@gmail.com
                   </a>
                   <p className="text-sm text-neutral-400 mt-2">
                     We typically respond within 24-48 hours
@@ -174,7 +174,7 @@ export default function ContactPage() {
                 <div>
                   <h3 className="font-bold text-white mb-1">Discord Community</h3>
                   <a 
-                    href="https://discord.gg/leagueroulette" 
+                    href="" 
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-purple-400 hover:text-purple-300 transition"
@@ -199,12 +199,12 @@ export default function ContactPage() {
                 <div>
                   <h3 className="font-bold text-white mb-1">Twitter</h3>
                   <a 
-                    href="https://twitter.com/leagueroulette" 
+                    href="" 
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-blue-400 hover:text-blue-300 transition"
                   >
-                    @LeagueRoulette
+                    @--
                   </a>
                   <p className="text-sm text-neutral-400 mt-2">
                     Follow for updates and announcements

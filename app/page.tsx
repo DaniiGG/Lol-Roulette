@@ -37,10 +37,10 @@ export default function Home() {
   const [verificationResult, setVerificationResult] = useState<any>(null)
   const [newAchievements, setNewAchievements] = useState<string[]>([])
   const [userAchievements, setUserAchievements] = useState<string[]>([])
-  
+
   // Active challenge tracking (para evitar spins infinitos)
   const [activeChallenge, setActiveChallenge] = useState<any>(null)
-  
+
   // Info modal
   const [showInfoModal, setShowInfoModal] = useState(false)
 
@@ -132,7 +132,7 @@ export default function Home() {
       try {
         const res = await fetch(`/api/roulette?lane=${selectedLane}`)
         const data = await res.json()
-        
+
         // DEBUG: Ver qué datos llegan
         console.log('🎲 Champion data received:', data)
         console.log('Champion ID:', data.id)
@@ -160,7 +160,7 @@ export default function Home() {
 
         setChamp(data)
         console.log('✅ Champion set in state:', data)
-        
+
       } catch (error) {
         console.error('❌ Error fetching champion:', error)
       } finally {
@@ -337,10 +337,14 @@ export default function Home() {
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-neutral-600/10 rounded-full blur-3xl"></div>
       </div>
 
+      <div className="fixed top-0 left-0 w-full z-50 text-center text-white text-sm bg-yellow-500/40 border-b border-yellow-500/60 p-3">
+        This app is recently created, and it is currently in beta. Some features may not work as expected. If you encounter any issues, please report them on our contact page.
+      </div>
+
       {/* Content */}
       <div className="relative z-10 min-h-screen p-6">
-        <div className="max-w-7xl mx-auto">
 
+        <div className="max-w-7xl mx-auto">
           {/* ANUNCIO 1: Banner superior */}
           <AdContainer position="top">
             <AdBanner
@@ -447,7 +451,7 @@ export default function Home() {
                       style={{ display: 'block', width: '336px', height: '280px' }}
                     />
                   </AdContainer>
-                  
+
                   <div className="p-6 rounded-2xl bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/30">
                     <div className="flex items-start gap-4">
                       <div className="text-4xl">🎯</div>
@@ -723,6 +727,8 @@ function LoginModal({ onClose, onSuccess }: {
           </p>
         </div>
       </div>
+      <script src="https://pl28649448.effectivegatecpm.com/16/85/e4/1685e44e9957933bf0177f03e60de4ba.js"></script>
     </div>
+    
   )
 }
