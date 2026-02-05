@@ -757,7 +757,6 @@ function LoginModal({ onClose, onSuccess }: {
           </p>
         </div>
       </div>
-      {/*<Script src="https://pl28649448.effectivegatecpm.com/16/85/e4/1685e44e9957933bf0177f03e60de4ba.js"></Script>*/}
     </div>
 
   )
