@@ -559,10 +559,7 @@ export default function Home() {
           />
 
           {/* Carga del script externo de Adsterra */}
-          <Script
-            strategy="afterInteractive"
-            src="https://www.profitabledisplaynetwork.com/09409ca801b7bb5b73eef29d18a73c7e/invoke.js"
-          />
+          
 
           {/* Footer */}
           <Footer />
