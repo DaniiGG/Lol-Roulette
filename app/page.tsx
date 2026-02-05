@@ -148,13 +148,11 @@ export default function Home() {
         const res = await fetch(`/api/roulette?lane=${selectedLane}`)
         const data = await res.json()
 
-        let newChallenge: any | null = null
-
         console.log('🎲 Champion data received:', data)
 
         // Guardar challenge SOLO si está logueado
         if (user) {
-          const { data: challengeData } = await supabase
+          const { data: newChallenge } = await supabase
             .from('challenges')
             .insert([{
               user_id: user.id,
@@ -167,8 +165,7 @@ export default function Home() {
             .select()
             .single()
 
-          newChallenge = data
-          setActiveChallenge(challengeData)
+          setActiveChallenge(newChallenge)
         }
 
         setChamp(data)
@@ -176,7 +173,7 @@ export default function Home() {
 
         // Iniciar auto-verificación si está logueado
         if (user && sessionToken) {
-          startAutoVerification(data, newChallenge?.created_at)
+          startAutoVerification(data)
         }
 
       } catch (error) {
@@ -189,7 +186,7 @@ export default function Home() {
   }
 
   // Iniciar auto-verificación
-  const startAutoVerification = (champion: any, challengeCreatedAt?: string) => {
+  const startAutoVerification = (champion: any) => {
     if (!user || !sessionToken) return
 
     console.log('🚀 Starting auto-verification for', champion.name)
@@ -212,8 +209,7 @@ export default function Home() {
         setIsAutoVerifying(false)
         await handleFailure()
       },
-      sessionToken,
-      challengeCreatedAt
+      sessionToken
     )
 
     verifier.start()
@@ -233,7 +229,6 @@ export default function Home() {
 
   // Verificación manual (también detiene auto-verificación)
   const handleManualVerify = () => {
-    stopAutoVerification()
     verifyMatch()
   }
 
@@ -252,8 +247,7 @@ export default function Home() {
         body: JSON.stringify({
           puuid: user.puuid,
           region: user.region,
-          championId: champ.key,
-          challengeCreatedAt: activeChallenge?.created_at
+          championId: champ.key
         })
       })
 
@@ -268,10 +262,6 @@ export default function Home() {
 
       const result = await res.json()
       setVerificationResult(result)
-
-      if (result.pending) {
-        return
-      }
 
       if (result.success) {
         await handleVictory(result)
@@ -307,7 +297,7 @@ export default function Home() {
       .eq('champion_name', champ.name)
       .eq('status', 'pending')
 
-    const newXp = user.xp + 30
+    const newXp = user.xp + 100
     const newLevel = calculateLevel(newXp)
     const newStreak = user.current_streak + 1
     const newTotalChallenges = user.total_challenges_completed + 1
@@ -495,7 +485,7 @@ export default function Home() {
                 onVerify={user ? handleManualVerify : undefined}
                 loading={loading}
                 verifying={verifying}
-                showVerify={!!(user && champ && (!verificationResult || verificationResult.pending) && !isAutoVerifying)}
+                showVerify={!!(user && champ && !verificationResult && !isAutoVerifying)}
               />
 
              
