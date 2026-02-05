@@ -60,16 +60,20 @@ export async function POST(request: Request) {
 
     const match = await matchRes.json()
 
-    // Si hay challengeCreatedAt, exigir que la partida sea posterior
-    const challengeCreatedAtMs = challengeCreatedAt ? Date.parse(challengeCreatedAt) : NaN
-    const matchEndMs = match.info?.gameEndTimestamp ?? match.info?.gameCreation
-    if (!Number.isNaN(challengeCreatedAtMs) && typeof matchEndMs === 'number') {
-      if (matchEndMs <= challengeCreatedAtMs) {
-        return NextResponse.json({
-          pending: true,
-          message: 'No new match found since challenge started.'
-        })
-      }
+    // ⏱️ Verificar que la partida sea posterior al challenge
+    const challengeCreatedAtMs = challengeCreatedAt
+      ? Date.parse(challengeCreatedAt)
+      : null
+
+    const matchEndMs = match.info?.gameEndTimestamp
+
+    if (
+      challengeCreatedAtMs &&
+      typeof matchEndMs === 'number' &&
+      matchEndMs <= challengeCreatedAtMs
+    ) {
+      // Aún no hay partida nueva desde que empezó el challenge
+      return new NextResponse(null, { status: 204 })
     }
 
     // 3. Encontrar datos del jugador en la partida
@@ -134,6 +138,6 @@ function getPlatformRegion(region: string): string {
     'tw2': 'sea',
     'vn2': 'sea'
   }
-  
+
   return mapping[region.toLowerCase()] || 'europe'
 }

@@ -160,7 +160,8 @@ export default function Home() {
               champion_name: data.name,
               lane: selectedLane,
               status: 'pending',
-              xp_reward: 30
+              xp_reward: 30,
+              created_at: new Date().toISOString()
             }])
             .select()
             .single()

@@ -12,7 +12,8 @@ export class AutoVerifier {
     private championId: number,
     private onSuccess: (result: any) => void,
     private onFail: () => void,
-    private sessionToken: string
+    private sessionToken: string,
+    private challengeCreatedAt?: string
   ) {}
 
   // Iniciar verificación automática
@@ -55,13 +56,19 @@ export class AutoVerifier {
         body: JSON.stringify({
           puuid: this.puuid,
           region: this.region,
-          championId: this.championId
+          championId: this.championId,
+          challengeCreatedAt: this.challengeCreatedAt
         })
       })
 
       if (!response.ok) {
         // Si hay error 404 o similar, continuar verificando
         console.log('⏳ No match found yet')
+        return
+      }
+
+      if (response.status === 204) {
+        console.log('⏳ Match not finished yet')
         return
       }
 
