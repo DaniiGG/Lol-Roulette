@@ -41,7 +41,7 @@ export const ACHIEVEMENTS: Record<AchievementType, AchievementDefinition> = {
     description: 'Win 3 challenges in a row',
     icon: '🔥',
     rarity: 'common',
-    xpReward: 100
+    xpReward: 75
   },
   streak_5: {
     type: 'streak_5',
@@ -49,7 +49,7 @@ export const ACHIEVEMENTS: Record<AchievementType, AchievementDefinition> = {
     description: 'Win 5 challenges in a row',
     icon: '⚡',
     rarity: 'rare',
-    xpReward: 200
+    xpReward: 150
   },
   streak_10: {
     type: 'streak_10',
@@ -57,7 +57,7 @@ export const ACHIEVEMENTS: Record<AchievementType, AchievementDefinition> = {
     description: 'Win 10 challenges in a row',
     icon: '👑',
     rarity: 'legendary',
-    xpReward: 500
+    xpReward: 300
   },
   challenges_5: {
     type: 'challenges_5',
@@ -97,7 +97,7 @@ export const ACHIEVEMENTS: Record<AchievementType, AchievementDefinition> = {
     description: 'Complete 100 challenges',
     icon: '💎',
     rarity: 'legendary',
-    xpReward: 1000
+    xpReward: 750
   },
   level_10: {
     type: 'level_10',

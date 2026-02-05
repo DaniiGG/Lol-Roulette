@@ -1,4 +1,4 @@
-// app/page.tsx (VERSIÓN FINAL CORREGIDA)
+// app/page.tsx (CON AUTO-VERIFICACIÓN)
 "use client"
 
 import { useState, useEffect } from "react"
@@ -19,6 +19,8 @@ import UserStats from "@/components/UserStats"
 import AchievementsList from "@/components/AchievementsList"
 import AchievementPopup from "@/components/AchievementPopup"
 import VerificationResult from "@/components/VerificationResult"
+import AutoVerifyIndicator from "@/components/AutoVerifyIndicator"
+import { AutoVerifier } from "@/lib/auto-verify"
 
 import Script from "next/script"
 
@@ -46,13 +48,24 @@ export default function Home() {
   // Info modal
   const [showInfoModal, setShowInfoModal] = useState(false)
 
+  // Auto-verification
+  const [autoVerifier, setAutoVerifier] = useState<AutoVerifier | null>(null)
+  const [isAutoVerifying, setIsAutoVerifying] = useState(false)
+
+  const [authReady, setAuthReady] = useState(false)
+
   // Verificar sesión al cargar
   useEffect(() => {
-    const token = Cookies.get('session_token')
-    if (token) {
-      verifyAndLoadSession(token)
-    }
-  }, [])
+  const token = Cookies.get('session_token')
+
+  if (token) {
+    verifyAndLoadSession(token).finally(() => {
+      setAuthReady(true)
+    })
+  } else {
+    setAuthReady(true)
+  }
+}, [])
 
   const verifyAndLoadSession = async (token: string) => {
     try {
@@ -135,12 +148,7 @@ export default function Home() {
         const res = await fetch(`/api/roulette?lane=${selectedLane}`)
         const data = await res.json()
 
-        // DEBUG: Ver qué datos llegan
         console.log('🎲 Champion data received:', data)
-        console.log('Champion ID:', data.id)
-        console.log('Champion Name:', data.name)
-        console.log('Champion Key:', data.key)
-        console.log('Champion Tags:', data.tags)
 
         // Guardar challenge SOLO si está logueado
         if (user) {
@@ -152,7 +160,7 @@ export default function Home() {
               champion_name: data.name,
               lane: selectedLane,
               status: 'pending',
-              xp_reward: 100
+              xp_reward: 30
             }])
             .select()
             .single()
@@ -163,6 +171,11 @@ export default function Home() {
         setChamp(data)
         console.log('✅ Champion set in state:', data)
 
+        // Iniciar auto-verificación si está logueado
+        if (user && sessionToken) {
+          startAutoVerification(data)
+        }
+
       } catch (error) {
         console.error('❌ Error fetching champion:', error)
       } finally {
@@ -172,12 +185,51 @@ export default function Home() {
     }, 2000)
   }
 
-  // VERIFY (requiere login)
-  const handleVerifyClick = () => {
-    if (!user) {
-      setShowLoginModal(true)
-      return
+  // Iniciar auto-verificación
+  const startAutoVerification = (champion: any) => {
+    if (!user || !sessionToken) return
+
+    console.log('🚀 Starting auto-verification for', champion.name)
+
+    const verifier = new AutoVerifier(
+      user.id,
+      user.puuid,
+      user.region,
+      champion.key,
+      async (result) => {
+        // Success callback
+        console.log('✅ Auto-verification succeeded!', result)
+        setVerificationResult(result)
+        setIsAutoVerifying(false)
+        await handleVictory(result)
+      },
+      async () => {
+        // Fail callback
+        console.log('❌ Auto-verification failed')
+        setIsAutoVerifying(false)
+        await handleFailure()
+      },
+      sessionToken
+    )
+
+    verifier.start()
+    setAutoVerifier(verifier)
+    setIsAutoVerifying(true)
+  }
+
+  // Detener auto-verificación
+  const stopAutoVerification = () => {
+    if (autoVerifier) {
+      autoVerifier.stop()
+      setAutoVerifier(null)
+      setIsAutoVerifying(false)
+      console.log('⏹️ Auto-verification stopped')
     }
+  }
+
+  // Verificación manual (también detiene auto-verificación)
+  const handleManualVerify = () => {
+    stopAutoVerification()
     verifyMatch()
   }
 
@@ -246,7 +298,7 @@ export default function Home() {
       .eq('champion_name', champ.name)
       .eq('status', 'pending')
 
-    const newXp = user.xp + 100
+    const newXp = user.xp + 30
     const newLevel = calculateLevel(newXp)
     const newStreak = user.current_streak + 1
     const newTotalChallenges = user.total_challenges_completed + 1
@@ -320,6 +372,9 @@ export default function Home() {
       })
     }
 
+    // Detener auto-verificación
+    stopAutoVerification()
+
     Cookies.remove('session_token')
     setUser(null)
     setSessionToken(null)
@@ -344,18 +399,9 @@ export default function Home() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 min-h-screen p-6" >
+      <div className="relative z-10 min-h-screen p-6">
 
         <div className="max-w-7xl mt-16 mx-auto">
-          {/* ANUNCIO 1: Banner superior 
-          <AdContainer position="top">
-            <AdBanner
-              adSlot="3964082422"
-              adFormat="horizontal"
-              style={{ display: 'block', width: '100%', height: '90px' }}
-            />
-          </AdContainer>
-          */}
 
           {/* Header con Login/Logout */}
           <div className="flex justify-between items-center mb-4">
@@ -432,50 +478,50 @@ export default function Home() {
                 disabled={loading}
               />
 
-              {/* Champion Card - CORREGIDO */}
+              {/* Champion Card */}
               <ChampionCard
                 champion={champ}
                 spinning={spinning}
                 onSpin={spin}
-                onVerify={user ? handleVerifyClick : undefined}
+                onVerify={user ? handleManualVerify : undefined}
                 loading={loading}
                 verifying={verifying}
-                showVerify={!!(user && champ && !verificationResult)}
+                showVerify={!!(user && champ && !verificationResult && !isAutoVerifying)}
               />
+
+             
+
+              {/* Auto-Verification Indicator (solo si está activo) */}
+              {isAutoVerifying && champ && user && (
+                <AutoVerifyIndicator
+                  isActive={isAutoVerifying}
+                  championName={champ.name}
+                  onManualVerify={handleManualVerify}
+                  onCancel={stopAutoVerification}
+                />
+              )}
 
               {/* CTA para login (solo si no está logueado y ya giró) */}
               {!user && champ && (
-                <>
-                  {/* ANUNCIO 2: Entre contenido (solo si no está logueado) 
-                  <AdContainer position="center">
-                    <AdBanner
-                      adSlot="8634294488"
-                      adFormat="rectangle"
-                      style={{ display: 'block', width: '336px', height: '280px' }}
-                    />
-                  </AdContainer>
-                  */}
-
-                  <div className="p-6 rounded-2xl bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/30">
-                    <div className="flex items-start gap-4">
-                      <div className="text-4xl">🎯</div>
-                      <div className="flex-1">
-                        <h3 className="text-white font-bold text-lg mb-2">
-                          Want to track your progress?
-                        </h3>
-                        <p className="text-neutral-300 text-sm mb-4">
-                          Login to verify wins, earn XP, unlock achievements, and compete on the leaderboard!
-                        </p>
-                        <button
-                          onClick={() => setShowLoginModal(true)}
-                          className="px-6 py-3 rounded-xl bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold hover:from-blue-600 hover:to-purple-600 transition"
-                        >
-                          Login with Riot Account
-                        </button>
-                      </div>
+                <div className="p-6 rounded-2xl bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/30">
+                  <div className="flex items-start gap-4">
+                    <div className="text-4xl">🎯</div>
+                    <div className="flex-1">
+                      <h3 className="text-white font-bold text-lg mb-2">
+                        Want to track your progress?
+                      </h3>
+                      <p className="text-neutral-300 text-sm mb-4">
+                        Login to verify wins, earn XP, unlock achievements, and compete on the leaderboard!
+                      </p>
+                      <button
+                        onClick={() => setShowLoginModal(true)}
+                        className="px-6 py-3 rounded-xl bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold hover:from-blue-600 hover:to-purple-600 transition"
+                      >
+                        Login with Riot Account
+                      </button>
                     </div>
                   </div>
-                </>
+                </div>
               )}
 
               {/* Verification Result */}
@@ -485,63 +531,30 @@ export default function Home() {
                   championName={champ.name}
                 />
               )}
-
-              {/* ANUNCIO 3: Después de verificar (solo usuarios logueados) 
-              {user && verificationResult && (
-                <AdContainer position="center">
-                  <AdBanner
-                    adSlot="6439375981"
-                    adFormat="rectangle"
-                  />
-                </AdContainer>
-              )}*/}
             </div>
 
             {/* Right: Achievements / Anuncios */}
-            {user ? (
+            {authReady && (
+            user ? (
               <div className="lg:col-span-1 space-y-6">
                 <AchievementsList
                   unlockedAchievements={userAchievements}
                   newAchievements={newAchievements}
                 />
-
-                {/* ANUNCIO 4: Sidebar (desktop) 
-                <div className="hidden lg:block">
-                  <AdContainer position="side">
-                    <AdBanner
-                      adSlot="2388450333"
-                      adFormat="vertical"
-                      style={{ display: 'block', width: '160px', height: '600px' }}
-                    />
-                  </AdContainer>
-                </div>*/}
-                
               </div>
-            ) :
-             <div id="container-ecd5cd4098135436650955a3e1f14ba3">
-
-      {/* Script de Adsterra */}
-      <Script
-        id="adsterra-ecd5cd"
-        strategy="afterInteractive"
-        async
-        data-cfasync="false"
-        src="https://pl28649548.effectivegatecpm.com/ecd5cd4098135436650955a3e1f14ba3/invoke.js"
-      />
-            </div>
-            
-            }
+            ) : (
+              <div id="container-ecd5cd4098135436650955a3e1f14ba3">
+                <Script
+                  id="adsterra-ecd5cd"
+                  strategy="afterInteractive"
+                  async
+                  data-cfasync="false"
+                  src="https://pl28649548.effectivegatecpm.com/ecd5cd4098135436650955a3e1f14ba3/invoke.js"
+                />
+              </div>
+            ))}
           </div>
 
-          {/* ANUNCIO 6: Banner inferior 
-          <AdContainer position="bottom">
-            <AdBanner
-              adSlot="1211100030"
-              adFormat="horizontal"
-              style={{ display: 'block', width: '100%', height: '90px' }}
-            />
-          </AdContainer>
-          */}
           <Script
             id="adsterra-iframe"
             strategy="afterInteractive"
@@ -558,8 +571,6 @@ export default function Home() {
             }}
             src="https://www.profitabledisplaynetwork.com/09409ca801b7bb5b73eef29d18a73c7e/invoke.js"
           />
-
-          
 
           {/* Footer */}
           <Footer />
@@ -755,6 +766,5 @@ function LoginModal({ onClose, onSuccess }: {
         </div>
       </div>
     </div>
-
   )
 }
