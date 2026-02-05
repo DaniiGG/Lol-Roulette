@@ -556,9 +556,9 @@ export default function Home() {
             };
           `,
             }}
+            src="https://www.profitabledisplaynetwork.com/09409ca801b7bb5b73eef29d18a73c7e/invoke.js"
           />
 
-          {/* Carga del script externo de Adsterra */}
           
 
           {/* Footer */}
