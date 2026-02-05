@@ -3,10 +3,12 @@
 
 interface VerificationResultProps {
   result: {
-    success: boolean
-    playedCorrectChampion: boolean
-    won: boolean
-    championPlayed: string
+    pending?: boolean
+    message?: string
+    success?: boolean
+    playedCorrectChampion?: boolean
+    won?: boolean
+    championPlayed?: string
     stats?: {
       kills: number
       deaths: number
@@ -19,6 +21,22 @@ interface VerificationResultProps {
 }
 
 export default function VerificationResult({ result, championName }: VerificationResultProps) {
+  if (result.pending) {
+    return (
+      <div className="p-6 rounded-2xl border-2 bg-neutral-800/30 border-neutral-700/60 animate-fade-in">
+        <div className="flex items-center gap-3">
+          <div className="w-6 h-6 border-2 border-neutral-500/40 border-t-neutral-200 rounded-full animate-spin"></div>
+          <div>
+            <h3 className="text-lg font-semibold text-neutral-200">Waiting for a new match</h3>
+            <p className="text-neutral-400 text-sm">
+              {result.message || 'No new match detected yet. We will keep checking.'}
+            </p>
+          </div>
+        </div>
+      </div>
+    )
+  }
+
   return (
     <div className={`
       p-6 rounded-2xl border-2 animate-fade-in

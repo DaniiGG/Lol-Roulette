@@ -7,11 +7,12 @@ type VerifyRequest = {
   puuid: string
   region: string
   championId: number
+  challengeCreatedAt?: string
 }
 
 export async function POST(request: Request) {
   try {
-    const { puuid, region, championId }: VerifyRequest = await request.json()
+    const { puuid, region, championId, challengeCreatedAt }: VerifyRequest = await request.json()
 
     if (!puuid || !region || !championId) {
       return NextResponse.json(
@@ -58,6 +59,18 @@ export async function POST(request: Request) {
     }
 
     const match = await matchRes.json()
+
+    // Si hay challengeCreatedAt, exigir que la partida sea posterior
+    const challengeCreatedAtMs = challengeCreatedAt ? Date.parse(challengeCreatedAt) : NaN
+    const matchEndMs = match.info?.gameEndTimestamp ?? match.info?.gameCreation
+    if (!Number.isNaN(challengeCreatedAtMs) && typeof matchEndMs === 'number') {
+      if (matchEndMs <= challengeCreatedAtMs) {
+        return NextResponse.json({
+          pending: true,
+          message: 'No new match found since challenge started.'
+        })
+      }
+    }
 
     // 3. Encontrar datos del jugador en la partida
     const participant = match.info.participants.find(

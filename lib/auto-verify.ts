@@ -12,7 +12,8 @@ export class AutoVerifier {
     private championId: number,
     private onSuccess: (result: any) => void,
     private onFail: () => void,
-    private sessionToken: string
+    private sessionToken: string,
+    private challengeCreatedAt?: string
   ) {}
 
   // Iniciar verificación automática
@@ -55,7 +56,8 @@ export class AutoVerifier {
         body: JSON.stringify({
           puuid: this.puuid,
           region: this.region,
-          championId: this.championId
+          championId: this.championId,
+          challengeCreatedAt: this.challengeCreatedAt
         })
       })
 
@@ -66,6 +68,11 @@ export class AutoVerifier {
       }
 
       const result = await response.json()
+
+      if (result.pending) {
+        console.log('â³ No new match yet')
+        return
+      }
 
       if (result.success) {
         console.log('✅ Match verified automatically!')

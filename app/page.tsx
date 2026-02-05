@@ -148,11 +148,13 @@ export default function Home() {
         const res = await fetch(`/api/roulette?lane=${selectedLane}`)
         const data = await res.json()
 
+        let newChallenge: any | null = null
+
         console.log('🎲 Champion data received:', data)
 
         // Guardar challenge SOLO si está logueado
         if (user) {
-          const { data: newChallenge } = await supabase
+          const { data: challengeData } = await supabase
             .from('challenges')
             .insert([{
               user_id: user.id,
@@ -165,7 +167,8 @@ export default function Home() {
             .select()
             .single()
 
-          setActiveChallenge(newChallenge)
+          newChallenge = data
+          setActiveChallenge(challengeData)
         }
 
         setChamp(data)
@@ -173,7 +176,7 @@ export default function Home() {
 
         // Iniciar auto-verificación si está logueado
         if (user && sessionToken) {
-          startAutoVerification(data)
+          startAutoVerification(data, newChallenge?.created_at)
         }
 
       } catch (error) {
@@ -186,7 +189,7 @@ export default function Home() {
   }
 
   // Iniciar auto-verificación
-  const startAutoVerification = (champion: any) => {
+  const startAutoVerification = (champion: any, challengeCreatedAt?: string) => {
     if (!user || !sessionToken) return
 
     console.log('🚀 Starting auto-verification for', champion.name)
@@ -209,7 +212,8 @@ export default function Home() {
         setIsAutoVerifying(false)
         await handleFailure()
       },
-      sessionToken
+      sessionToken,
+      challengeCreatedAt
     )
 
     verifier.start()
@@ -248,7 +252,8 @@ export default function Home() {
         body: JSON.stringify({
           puuid: user.puuid,
           region: user.region,
-          championId: champ.key
+          championId: champ.key,
+          challengeCreatedAt: activeChallenge?.created_at
         })
       })
 
@@ -263,6 +268,10 @@ export default function Home() {
 
       const result = await res.json()
       setVerificationResult(result)
+
+      if (result.pending) {
+        return
+      }
 
       if (result.success) {
         await handleVictory(result)
@@ -486,7 +495,7 @@ export default function Home() {
                 onVerify={user ? handleManualVerify : undefined}
                 loading={loading}
                 verifying={verifying}
-                showVerify={!!(user && champ && !verificationResult && !isAutoVerifying)}
+                showVerify={!!(user && champ && (!verificationResult || verificationResult.pending) && !isAutoVerifying)}
               />
 
              
