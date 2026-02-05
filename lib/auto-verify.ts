@@ -6,20 +6,20 @@ export class AutoVerifier {
   private isChecking = false
 
   constructor(
-    private userId: string,
-    private puuid: string,
-    private region: string,
-    private championId: number,
-    private onSuccess: (result: any) => void,
-    private onFail: () => void,
-    private sessionToken: string,
-    private challengeCreatedAt?: string
-  ) {}
+  private userId: string,
+  private puuid: string,
+  private region: string,
+  private championId: number,
+  private challengeCreatedAt: string | null,
+  private onSuccess: (result: any) => void,
+  private onFail: () => void,
+  private sessionToken: string
+) {}
 
   // Iniciar verificación automática
   start() {
     console.log('🔄 Auto-verification started')
-    
+
     // Verificar cada 2 minutos
     this.intervalId = setInterval(() => {
       this.checkMatch()
@@ -61,14 +61,13 @@ export class AutoVerifier {
         })
       })
 
-      if (!response.ok) {
-        // Si hay error 404 o similar, continuar verificando
-        console.log('⏳ No match found yet')
+      if (response.status === 204) {
+        console.log('⏳ No new match yet')
         return
       }
 
-      if (response.status === 204) {
-        console.log('⏳ Match not finished yet')
+      if (!response.ok) {
+        console.log('❌ Verify error:', response.status)
         return
       }
 
@@ -79,9 +78,7 @@ export class AutoVerifier {
         this.stop() // Detener verificación
         this.onSuccess(result)
       } else if (result.playedCorrectChampion === false) {
-        console.log('❌ Wrong champion detected')
-        this.stop()
-        this.onFail()
+        console.log('⏳ Match found but wrong champion, keep waiting')
       }
       // Si playedCorrectChampion es true pero won es false, seguir esperando
 

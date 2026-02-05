@@ -56,16 +56,16 @@ export default function Home() {
 
   // Verificar sesión al cargar
   useEffect(() => {
-  const token = Cookies.get('session_token')
+    const token = Cookies.get('session_token')
 
-  if (token) {
-    verifyAndLoadSession(token).finally(() => {
+    if (token) {
+      verifyAndLoadSession(token).finally(() => {
+        setAuthReady(true)
+      })
+    } else {
       setAuthReady(true)
-    })
-  } else {
-    setAuthReady(true)
-  }
-}, [])
+    }
+  }, [])
 
   const verifyAndLoadSession = async (token: string) => {
     try {
@@ -197,25 +197,22 @@ export default function Home() {
       user.puuid,
       user.region,
       champion.key,
+      activeChallenge?.created_at ?? null,
       async (result) => {
-        // Success callback
-        console.log('✅ Auto-verification succeeded!', result)
         setVerificationResult(result)
         setIsAutoVerifying(false)
         await handleVictory(result)
       },
       async () => {
-        // Fail callback
-        console.log('❌ Auto-verification failed')
         setIsAutoVerifying(false)
         await handleFailure()
       },
       sessionToken
     )
 
-    verifier.start()
     setAutoVerifier(verifier)
     setIsAutoVerifying(true)
+    verifier.start()
   }
 
   // Detener auto-verificación
@@ -248,7 +245,8 @@ export default function Home() {
         body: JSON.stringify({
           puuid: user.puuid,
           region: user.region,
-          championId: champ.key
+          championId: champ.key,
+          challengeCreatedAt: activeChallenge?.created_at
         })
       })
 
@@ -489,7 +487,7 @@ export default function Home() {
                 showVerify={!!(user && champ && !verificationResult && !isAutoVerifying)}
               />
 
-             
+
 
               {/* Auto-Verification Indicator (solo si está activo) */}
               {isAutoVerifying && champ && user && (
@@ -535,24 +533,24 @@ export default function Home() {
 
             {/* Right: Achievements / Anuncios */}
             {authReady && (
-            user ? (
-              <div className="lg:col-span-1 space-y-6">
-                <AchievementsList
-                  unlockedAchievements={userAchievements}
-                  newAchievements={newAchievements}
-                />
-              </div>
-            ) : (
-              <div id="container-ecd5cd4098135436650955a3e1f14ba3">
-                <Script
-                  id="adsterra-ecd5cd"
-                  strategy="afterInteractive"
-                  async
-                  data-cfasync="false"
-                  src="https://pl28649548.effectivegatecpm.com/ecd5cd4098135436650955a3e1f14ba3/invoke.js"
-                />
-              </div>
-            ))}
+              user ? (
+                <div className="lg:col-span-1 space-y-6">
+                  <AchievementsList
+                    unlockedAchievements={userAchievements}
+                    newAchievements={newAchievements}
+                  />
+                </div>
+              ) : (
+                <div id="container-ecd5cd4098135436650955a3e1f14ba3">
+                  <Script
+                    id="adsterra-ecd5cd"
+                    strategy="afterInteractive"
+                    async
+                    data-cfasync="false"
+                    src="https://pl28649548.effectivegatecpm.com/ecd5cd4098135436650955a3e1f14ba3/invoke.js"
+                  />
+                </div>
+              ))}
           </div>
 
           <Script

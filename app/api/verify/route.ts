@@ -12,7 +12,12 @@ type VerifyRequest = {
 
 export async function POST(request: Request) {
   try {
-    const { puuid, region, championId, challengeCreatedAt }: VerifyRequest = await request.json()
+    const {
+      puuid,
+      region,
+      championId,
+      challengeCreatedAt
+    }: VerifyRequest = await request.json()
 
     if (!puuid || !region || !championId) {
       return NextResponse.json(
@@ -21,7 +26,7 @@ export async function POST(request: Request) {
       )
     }
 
-    // 1. Obtener últimas partidas usando PUUID directamente
+    // 1️⃣ Obtener últimas partidas
     const platformRegion = getPlatformRegion(region)
     const matchesRes = await fetch(
       `https://${platformRegion}.api.riotgames.com/lol/match/v5/matches/by-puuid/${puuid}/ids?start=0&count=5`,
@@ -35,49 +40,58 @@ export async function POST(request: Request) {
       throw new Error('Failed to fetch matches')
     }
 
-    const matchIds = await matchesRes.json()
+    const matchIds: string[] = await matchesRes.json()
 
-    if (matchIds.length === 0) {
+    if (!matchIds.length) {
       return NextResponse.json(
         { error: 'No recent matches found' },
         { status: 404 }
       )
     }
 
-    // 2. Verificar la partida más reciente
-    const latestMatchId = matchIds[0]
-    const matchRes = await fetch(
-      `https://${platformRegion}.api.riotgames.com/lol/match/v5/matches/${latestMatchId}`,
-      {
-        headers: { 'X-Riot-Token': RIOT_API_KEY },
-        next: { revalidate: 0 }
-      }
-    )
-
-    if (!matchRes.ok) {
-      throw new Error('Failed to fetch match details')
-    }
-
-    const match = await matchRes.json()
-
-    // ⏱️ Verificar que la partida sea posterior al challenge
+    // 2️⃣ Buscar la primera partida posterior al challenge
     const challengeCreatedAtMs = challengeCreatedAt
       ? Date.parse(challengeCreatedAt)
       : null
 
-    const matchEndMs = match.info?.gameEndTimestamp
+    let relevantMatch: any = null
+    let relevantMatchId: string | null = null
 
-    if (
-      challengeCreatedAtMs &&
-      typeof matchEndMs === 'number' &&
-      matchEndMs <= challengeCreatedAtMs
-    ) {
-      // Aún no hay partida nueva desde que empezó el challenge
+    for (const matchId of matchIds) {
+      const matchRes = await fetch(
+        `https://${platformRegion}.api.riotgames.com/lol/match/v5/matches/${matchId}`,
+        {
+          headers: { 'X-Riot-Token': RIOT_API_KEY },
+          next: { revalidate: 0 }
+        }
+      )
+
+      if (!matchRes.ok) continue
+
+      const match = await matchRes.json()
+      const matchEndMs =
+        match.info?.gameEndTimestamp ?? match.info?.gameCreation
+
+      if (
+        challengeCreatedAtMs &&
+        typeof matchEndMs === 'number' &&
+        matchEndMs <= challengeCreatedAtMs
+      ) {
+        continue
+      }
+
+      relevantMatch = match
+      relevantMatchId = matchId
+      break
+    }
+
+    // Aún no hay partida nueva
+    if (!relevantMatch || !relevantMatchId) {
       return new NextResponse(null, { status: 204 })
     }
 
-    // 3. Encontrar datos del jugador en la partida
-    const participant = match.info.participants.find(
+    // 3️⃣ Buscar participante
+    const participant = relevantMatch.info.participants.find(
       (p: any) => p.puuid === puuid
     )
 
@@ -88,8 +102,9 @@ export async function POST(request: Request) {
       )
     }
 
-    // 4. Verificar si jugó con el campeón correcto
-    const playedCorrectChampion = participant.championId === championId
+    // 4️⃣ Resultado
+    const playedCorrectChampion =
+      participant.championId === championId
     const won = participant.win
 
     return NextResponse.json({
@@ -97,18 +112,19 @@ export async function POST(request: Request) {
       playedCorrectChampion,
       won,
       championPlayed: participant.championName,
-      matchId: latestMatchId,
-      gameMode: match.info.gameMode,
-      gameDuration: match.info.gameDuration,
+      matchId: relevantMatchId,
+      gameMode: relevantMatch.info.gameMode,
+      gameDuration: relevantMatch.info.gameDuration,
       stats: {
         kills: participant.kills,
         deaths: participant.deaths,
         assists: participant.assists,
-        cs: participant.totalMinionsKilled + participant.neutralMinionsKilled,
+        cs:
+          participant.totalMinionsKilled +
+          participant.neutralMinionsKilled,
         gold: participant.goldEarned
       }
     })
-
   } catch (error) {
     console.error('Verification error:', error)
     return NextResponse.json(
@@ -118,25 +134,25 @@ export async function POST(request: Request) {
   }
 }
 
-// Mapeo de regiones a plataformas
+// 🌍 Mapeo de regiones a plataformas
 function getPlatformRegion(region: string): string {
   const mapping: Record<string, string> = {
-    'br1': 'americas',
-    'eun1': 'europe',
-    'euw1': 'europe',
-    'jp1': 'asia',
-    'kr': 'asia',
-    'la1': 'americas',
-    'la2': 'americas',
-    'na1': 'americas',
-    'oc1': 'sea',
-    'ph2': 'sea',
-    'ru': 'europe',
-    'sg2': 'sea',
-    'th2': 'sea',
-    'tr1': 'europe',
-    'tw2': 'sea',
-    'vn2': 'sea'
+    br1: 'americas',
+    eun1: 'europe',
+    euw1: 'europe',
+    jp1: 'asia',
+    kr: 'asia',
+    la1: 'americas',
+    la2: 'americas',
+    na1: 'americas',
+    oc1: 'sea',
+    ph2: 'sea',
+    ru: 'europe',
+    sg2: 'sea',
+    th2: 'sea',
+    tr1: 'europe',
+    tw2: 'sea',
+    vn2: 'sea'
   }
 
   return mapping[region.toLowerCase()] || 'europe'
