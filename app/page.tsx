@@ -128,7 +128,7 @@ export default function Home() {
   }
 
   // SPIN: llamado por RouletteWheel al terminar la animación
-  const handleRouletteResult = async (champData: { id: string; key: string; name: string }) => {
+  const handleRouletteResult = async (champData: { id: string; key: string | number; name: string }) => {
     setVerificationResult(null)
 
     // Incrementar reroll count
@@ -136,6 +136,7 @@ export default function Home() {
       const newRerollCount = rerollCount + 1
       setRerollCount(newRerollCount)
       console.log(`🎲 Spin #${newRerollCount} of 3`)
+      console.log(`🎯 Champion: ${champData.name} (key: ${champData.key}, type: ${typeof champData.key})`)
     }
 
     try {
@@ -146,7 +147,7 @@ export default function Home() {
           const { error } = await supabase
             .from('challenges')
             .update({
-              champion_id: champData.key.toString(),
+              champion_id: String(champData.key),
               champion_name: champData.name,
               lane: selectedLane,
               created_at: new Date().toISOString()  // Reset timestamp for new champion
@@ -161,7 +162,7 @@ export default function Home() {
           // Actualizar el estado local
           const updatedChallenge = {
             ...activeChallenge,
-            champion_id: champData.key.toString(),
+            champion_id: String(champData.key),
             champion_name: champData.name,
             lane: selectedLane,
             created_at: new Date().toISOString()
@@ -179,7 +180,7 @@ export default function Home() {
             .from('challenges')
             .insert([{
               user_id: user.id,
-              champion_id: champData.key.toString(),
+              champion_id: String(champData.key),
               champion_name: champData.name,
               lane: selectedLane,
               status: 'pending',
@@ -202,7 +203,10 @@ export default function Home() {
         }
       }
 
-      setChamp(champData)
+      setChamp({
+        ...champData,
+        key: Number(champData.key)  // Asegurar que sea número
+      })
 
     } catch (error) {
       console.error('❌ Error saving challenge:', error)
@@ -560,6 +564,7 @@ export default function Home() {
                   )}
                 </button>
               )}
+
 
               {/* Auto-Verification Indicator */}
               {isAutoVerifying && champ && user && (

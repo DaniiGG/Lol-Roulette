@@ -8,7 +8,7 @@ import { getChampionsByLane, normalizeChampionName } from '@/lib/champion-lanes'
 // ─────────────────────────────────────────────────────────────────────────────
 interface Champion {
   id: string
-  key: string
+  key: string | number
   name: string
   tags?: string[]
 }
@@ -24,7 +24,7 @@ interface RouletteWheelProps {
 // ─────────────────────────────────────────────────────────────────────────────
 // Constantes
 // ─────────────────────────────────────────────────────────────────────────────
-const DDV         = '16.3.1'
+const DDV         = '14.9.1'
 const SPLASH_BASE = 'https://ddragon.leagueoflegends.com/cdn/img/champion/splash/'
 const SPIN_MS     = 5200
 const CELL_W      = 140
@@ -285,7 +285,11 @@ export default function RouletteWheel({
         draw(finalOffset, winIdx)
         setIsSpinning(false)
         setWinner(winChamp)
-        onResult(winChamp)
+        // Convertir key a número para la verificación
+        onResult({
+          ...winChamp,
+          key: Number(winChamp.key)
+        })
       }
     }
 

@@ -104,15 +104,27 @@ export async function POST(request: Request) {
     }
 
     // 4️⃣ Resultado
-    const playedCorrectChampion =
-      participant.championId === championId
+    console.log('🔍 Verification comparison:')
+    console.log('  Expected championId:', championId, typeof championId)
+    console.log('  Played championId:', participant.championId, typeof participant.championId)
+    console.log('  Champion name:', participant.championName)
+    
+    // Asegurar que ambos sean números para la comparación
+    const expectedChampId = Number(championId)
+    const playedChampId = Number(participant.championId)
+    
+    const playedCorrectChampion = playedChampId === expectedChampId
     const won = participant.win
+    
+    console.log('  Match?', playedCorrectChampion, `(${playedChampId} === ${expectedChampId})`)
 
     return NextResponse.json({
       success: playedCorrectChampion && won,
       playedCorrectChampion,
       won,
       championPlayed: participant.championName,
+      championIdExpected: expectedChampId,
+      championIdPlayed: playedChampId,
       matchId: relevantMatchId,
       gameMode: relevantMatch.info.gameMode,
       gameDuration: relevantMatch.info.gameDuration,
