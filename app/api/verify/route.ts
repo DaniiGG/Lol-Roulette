@@ -72,6 +72,7 @@ export async function POST(request: Request) {
       const matchEndMs =
         match.info?.gameEndTimestamp ?? match.info?.gameCreation
 
+      // Si hay un timestamp del challenge, solo considerar partidas DESPUÉS
       if (
         challengeCreatedAtMs &&
         typeof matchEndMs === 'number' &&

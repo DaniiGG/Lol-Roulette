@@ -6,19 +6,20 @@ export class AutoVerifier {
   private isChecking = false
 
   constructor(
-  private userId: string,
-  private puuid: string,
-  private region: string,
-  private championId: number,
-  private challengeCreatedAt: string | null,
-  private onSuccess: (result: any) => void,
-  private onFail: () => void,
-  private sessionToken: string
-) {}
+    private userId: string,
+    private puuid: string,
+    private region: string,
+    private championId: number,
+    private challengeCreatedAt: string | null,
+    private onSuccess: (result: any) => void,
+    private onFail: () => void,
+    private sessionToken: string
+  ) {}
 
   // Iniciar verificación automática
   start() {
     console.log('🔄 Auto-verification started')
+    console.log('Challenge created at:', this.challengeCreatedAt)
 
     // Verificar cada 2 minutos
     this.intervalId = setInterval(() => {

@@ -20,6 +20,7 @@ import AchievementsList from "@/components/AchievementsList"
 import AchievementPopup from "@/components/AchievementPopup"
 import VerificationResult from "@/components/VerificationResult"
 import AutoVerifyIndicator from "@/components/AutoVerifyIndicator"
+import RouletteWheel from "@/components/RouletteWheel"
 import { AutoVerifier } from "@/lib/auto-verify"
 
 import Script from "next/script"
@@ -44,6 +45,8 @@ export default function Home() {
 
   // Active challenge tracking (para evitar spins infinitos)
   const [activeChallenge, setActiveChallenge] = useState<any>(null)
+  const [rerollCount, setRerollCount] = useState(0)  // Track rerolls (0-2 allowed)
+  const MAX_REROLLS = 2  // 3 total spins = 1 initial + 2 rerolls
 
   // Info modal
   const [showInfoModal, setShowInfoModal] = useState(false)
@@ -52,18 +55,11 @@ export default function Home() {
   const [autoVerifier, setAutoVerifier] = useState<AutoVerifier | null>(null)
   const [isAutoVerifying, setIsAutoVerifying] = useState(false)
 
-  const [authReady, setAuthReady] = useState(false)
-
   // Verificar sesión al cargar
   useEffect(() => {
     const token = Cookies.get('session_token')
-
     if (token) {
-      verifyAndLoadSession(token).finally(() => {
-        setAuthReady(true)
-      })
-    } else {
-      setAuthReady(true)
+      verifyAndLoadSession(token)
     }
   }, [])
 
@@ -131,88 +127,120 @@ export default function Home() {
     }
   }
 
-  // SPIN PÚBLICO (funciona sin login)
-  const spin = async () => {
-    // Si está logueado y tiene un challenge pendiente, no puede girar
-    if (user && activeChallenge) {
-      alert('You already have an active challenge! Complete it before getting a new champion.')
-      return
-    }
-
-    setLoading(true)
-    setSpinning(true)
+  // SPIN: llamado por RouletteWheel al terminar la animación
+  const handleRouletteResult = async (champData: { id: string; key: string; name: string }) => {
     setVerificationResult(null)
 
-    setTimeout(async () => {
-      try {
-        const res = await fetch(`/api/roulette?lane=${selectedLane}`)
-        const data = await res.json()
+    // Incrementar reroll count
+    if (user) {
+      const newRerollCount = rerollCount + 1
+      setRerollCount(newRerollCount)
+      console.log(`🎲 Spin #${newRerollCount} of 3`)
+    }
 
-        console.log('🎲 Champion data received:', data)
+    try {
+      // Guardar/actualizar challenge SOLO si está logueado
+      if (user) {
+        // Si ya existe un challenge pendiente, actualizarlo en lugar de crear uno nuevo
+        if (activeChallenge) {
+          const { error } = await supabase
+            .from('challenges')
+            .update({
+              champion_id: champData.key.toString(),
+              champion_name: champData.name,
+              lane: selectedLane,
+              created_at: new Date().toISOString()  // Reset timestamp for new champion
+            })
+            .eq('id', activeChallenge.id)
 
-        // Guardar challenge SOLO si está logueado
-        if (user) {
-          const { data: newChallenge } = await supabase
+          if (error) {
+            console.error('❌ Error updating challenge:', error)
+            return
+          }
+
+          // Actualizar el estado local
+          const updatedChallenge = {
+            ...activeChallenge,
+            champion_id: champData.key.toString(),
+            champion_name: champData.name,
+            lane: selectedLane,
+            created_at: new Date().toISOString()
+          }
+          setActiveChallenge(updatedChallenge)
+
+          // Reiniciar auto-verificación con nuevo campeón y nuevo timestamp
+          if (sessionToken) {
+            stopAutoVerification()  // Detener la verificación anterior
+            startAutoVerification(champData, updatedChallenge.created_at)
+          }
+        } else {
+          // Crear challenge nuevo (primer spin)
+          const { data: newChallenge, error } = await supabase
             .from('challenges')
             .insert([{
               user_id: user.id,
-              champion_id: data.key.toString(),
-              champion_name: data.name,
+              champion_id: champData.key.toString(),
+              champion_name: champData.name,
               lane: selectedLane,
               status: 'pending',
-              xp_reward: 30,
-              created_at: new Date().toISOString()
+              xp_reward: 100
             }])
             .select()
             .single()
 
+          if (error) {
+            console.error('❌ Error creating challenge:', error)
+            return
+          }
+
           setActiveChallenge(newChallenge)
+          
+          // Iniciar auto-verificación con el timestamp del challenge
+          if (sessionToken && newChallenge) {
+            startAutoVerification(champData, newChallenge.created_at)
+          }
         }
-
-        setChamp(data)
-        console.log('✅ Champion set in state:', data)
-
-        // Iniciar auto-verificación si está logueado
-        if (user && sessionToken) {
-          startAutoVerification(data)
-        }
-
-      } catch (error) {
-        console.error('❌ Error fetching champion:', error)
-      } finally {
-        setLoading(false)
-        setTimeout(() => setSpinning(false), 500)
       }
-    }, 2000)
+
+      setChamp(champData)
+
+    } catch (error) {
+      console.error('❌ Error saving challenge:', error)
+    }
   }
 
   // Iniciar auto-verificación
-  const startAutoVerification = (champion: any) => {
+  const startAutoVerification = (champion: any, challengeCreatedAt: string) => {
     if (!user || !sessionToken) return
 
     console.log('🚀 Starting auto-verification for', champion.name)
+    console.log('Challenge created at:', challengeCreatedAt)
 
     const verifier = new AutoVerifier(
       user.id,
       user.puuid,
       user.region,
       champion.key,
-      activeChallenge?.created_at ?? null,
+      challengeCreatedAt,
       async (result) => {
+        // Success callback
+        console.log('✅ Auto-verification succeeded!', result)
         setVerificationResult(result)
         setIsAutoVerifying(false)
         await handleVictory(result)
       },
       async () => {
+        // Fail callback
+        console.log('❌ Auto-verification failed')
         setIsAutoVerifying(false)
         await handleFailure()
       },
       sessionToken
     )
 
+    verifier.start()
     setAutoVerifier(verifier)
     setIsAutoVerifying(true)
-    verifier.start()
   }
 
   // Detener auto-verificación
@@ -227,6 +255,7 @@ export default function Home() {
 
   // Verificación manual (también detiene auto-verificación)
   const handleManualVerify = () => {
+    stopAutoVerification()
     verifyMatch()
   }
 
@@ -316,6 +345,10 @@ export default function Home() {
 
     setUser(updatedUser)
 
+    // Reset reroll count after successful verification
+    setRerollCount(0)
+    setActiveChallenge(null)
+
     await checkAndUnlockAchievements({
       currentStreak: newStreak,
       totalChallenges: newTotalChallenges,
@@ -328,6 +361,10 @@ export default function Home() {
     await supabase.from('users').update({ current_streak: 0 }).eq('id', user.id)
     const updatedUser = { ...user, current_streak: 0 }
     setUser(updatedUser)
+    
+    // Reset reroll count and challenge on failure
+    setRerollCount(0)
+    setActiveChallenge(null)
   }
 
   const checkAndUnlockAchievements = async (stats: any) => {
@@ -377,6 +414,8 @@ export default function Home() {
     setUser(null)
     setSessionToken(null)
     setVerificationResult(null)
+    setRerollCount(0)  // Reset rerolls on logout
+    setActiveChallenge(null)
   }
 
   return (
@@ -473,23 +512,56 @@ export default function Home() {
               <LaneSelector
                 selectedLane={selectedLane}
                 onLaneChange={setSelectedLane}
-                disabled={loading}
+                disabled={!!(user && rerollCount > MAX_REROLLS)}
               />
 
-              {/* Champion Card */}
-              <ChampionCard
-                champion={champ}
-                spinning={spinning}
-                onSpin={spin}
-                onVerify={user ? handleManualVerify : undefined}
-                loading={loading}
-                verifying={verifying}
-                showVerify={!!(user && champ && !verificationResult && !isAutoVerifying)}
+              {/* Reroll limit warning */}
+              {user && rerollCount > MAX_REROLLS && (
+                <div className="p-4 rounded-xl bg-orange-500/10 border border-orange-500/30 flex items-center gap-3">
+                  <svg className="w-5 h-5 text-orange-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" />
+                  </svg>
+                  <p className="text-orange-300 text-sm">
+                    You've used all 3 spins! Play with <strong>{champ?.name || 'your champion'}</strong> or verify your match to get new spins.
+                  </p>
+                </div>
+              )}
+
+              {/* ★ RULETA VISUAL ★ */}
+              <RouletteWheel
+                lane={selectedLane}
+                onResult={handleRouletteResult}
+                disabled={!!(user && rerollCount > MAX_REROLLS)}
+                rerollsUsed={user ? rerollCount : 0}
+                maxRerolls={MAX_REROLLS}
               />
 
+              {/* Verify button (solo si logueado, hay campeón y no está auto-verificando) */}
+              {user && champ && !verificationResult && !isAutoVerifying && (
+                <button
+                  onClick={handleManualVerify}
+                  disabled={verifying}
+                  className="w-full py-4 rounded-xl bg-white text-neutral-950 font-semibold hover:bg-neutral-100 transition disabled:opacity-50 flex items-center justify-center gap-2"
+                >
+                  {verifying ? (
+                    <>
+                      <svg className="animate-spin w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                      </svg>
+                      Verifying…
+                    </>
+                  ) : (
+                    <>
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                      Verify Match
+                    </>
+                  )}
+                </button>
+              )}
 
-
-              {/* Auto-Verification Indicator (solo si está activo) */}
+              {/* Auto-Verification Indicator */}
               {isAutoVerifying && champ && user && (
                 <AutoVerifyIndicator
                   isActive={isAutoVerifying}
@@ -503,7 +575,9 @@ export default function Home() {
               {!user && champ && (
                 <div className="p-6 rounded-2xl bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/30">
                   <div className="flex items-start gap-4">
-                    <div className="text-4xl">🎯</div>
+                    <svg className="w-8 h-8 text-blue-400 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
                     <div className="flex-1">
                       <h3 className="text-white font-bold text-lg mb-2">
                         Want to track your progress?
@@ -532,25 +606,24 @@ export default function Home() {
             </div>
 
             {/* Right: Achievements / Anuncios */}
-            {authReady && (
-              user ? (
-                <div className="lg:col-span-1 space-y-6">
-                  <AchievementsList
-                    unlockedAchievements={userAchievements}
-                    newAchievements={newAchievements}
-                  />
-                </div>
-              ) : (
-                <div id="container-ecd5cd4098135436650955a3e1f14ba3">
-                  <Script
-                    id="adsterra-ecd5cd"
-                    strategy="afterInteractive"
-                    async
-                    data-cfasync="false"
-                    src="https://pl28649548.effectivegatecpm.com/ecd5cd4098135436650955a3e1f14ba3/invoke.js"
-                  />
-                </div>
-              ))}
+            {user ? (
+              <div className="lg:col-span-1 space-y-6">
+                <AchievementsList
+                  unlockedAchievements={userAchievements}
+                  newAchievements={newAchievements}
+                />
+              </div>
+            ) : (
+              <div id="container-ecd5cd4098135436650955a3e1f14ba3">
+                <Script
+                  id="adsterra-ecd5cd"
+                  strategy="afterInteractive"
+                  async
+                  data-cfasync="false"
+                  src="https://pl28649548.effectivegatecpm.com/ecd5cd4098135436650955a3e1f14ba3/invoke.js"
+                />
+              </div>
+            )}
           </div>
 
           <Script
