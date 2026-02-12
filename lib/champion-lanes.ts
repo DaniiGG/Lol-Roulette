@@ -3,9 +3,9 @@
 export const CHAMPION_LANES: Record<string, string[]> = {
   // TOP
   "Aatrox": ["top"],
-  "Akshan": ["mid", "adc"],
+  
   "Ambessa": ["top"],
-  "Aurora": ["mid", "top"],
+  
   "Camille": ["top"],
   "Cho'Gath": ["top", "jungle"],
   "Darius": ["top"],
@@ -36,7 +36,7 @@ export const CHAMPION_LANES: Record<string, string[]> = {
   "Renekton": ["top"],
   "Riven": ["top"],
   "Rumble": ["top"],
-  "Sett": ["top", "support"],
+  "Sett": ["top"],
   "Shen": ["top", "support"],
   "Singed": ["top"],
   "Sion": ["top"],
@@ -95,9 +95,11 @@ export const CHAMPION_LANES: Record<string, string[]> = {
   // MID
   "Ahri": ["mid"],
   "Akali": ["mid", "top"],
+  "Akshan": ["mid"],
   "Anivia": ["mid"],
   "Annie": ["mid", "support"],
   "Aurelion Sol": ["mid"],
+  "Aurora": ["mid"],
   "Azir": ["mid"],
   "Cassiopeia": ["mid"],
   "Corki": ["mid", "adc"],
@@ -190,4 +192,32 @@ export function getChampionsByLane(lane: string): string[] {
   return Object.entries(CHAMPION_LANES)
     .filter(([_, lanes]) => lanes.includes(lane))
     .map(([champion]) => champion)
+}
+
+// Helper para normalizar nombres de campeones (Data Dragon IDs vs display names)
+export function normalizeChampionName(name: string): string {
+  const mapping: Record<string, string> = {
+    "Bel'Veth": "Belveth",
+    "Cho'Gath": "Chogath",
+    "Dr. Mundo": "DrMundo",
+    "Jarvan IV": "JarvanIV",
+    "K'Sante": "KSante",
+    "Kha'Zix": "Khazix",
+    "Kog'Maw": "KogMaw",
+    "LeBlanc": "Leblanc",
+    "Lee Sin": "LeeSin",
+    "Master Yi": "MasterYi",
+    "Miss Fortune": "MissFortune",
+    "Nunu & Willump": "Nunu",
+    "Rek'Sai": "RekSai",
+    "Renata Glasc": "Renata",
+    "Tahm Kench": "TahmKench",
+    "Twisted Fate": "TwistedFate",
+    "Vel'Koz": "Velkoz",
+    "Wukong": "MonkeyKing",
+    "Xin Zhao": "XinZhao",
+    "Aurelion Sol": "AurelionSol",
+  }
+  
+  return mapping[name] || name.replace(/['\s]/g, '')
 }

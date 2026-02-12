@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useRef, useState, useCallback } from 'react'
+import { getChampionsByLane, normalizeChampionName } from '@/lib/champion-lanes'
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Tipos
@@ -9,6 +10,7 @@ interface Champion {
   id: string
   key: string
   name: string
+  tags?: string[]
 }
 
 interface RouletteWheelProps {
@@ -22,7 +24,7 @@ interface RouletteWheelProps {
 // ─────────────────────────────────────────────────────────────────────────────
 // Constantes
 // ─────────────────────────────────────────────────────────────────────────────
-const DDV         = '14.9.1'
+const DDV         = '16.3.1'
 const SPLASH_BASE = 'https://ddragon.leagueoflegends.com/cdn/img/champion/splash/'
 const SPIN_MS     = 5200
 const CELL_W      = 140
@@ -58,22 +60,48 @@ export default function RouletteWheel({
   const targetRef  = useRef<number>(0)        // offset final (ganador centrado)
   const t0Ref      = useRef<number>(0)        // timestamp inicio
 
-  // ── 1. Cargar lista de campeones ─────────────────────────────────────────
+  // ── 1. Cargar campeones filtrados por lane ──────────────────────────────
   useEffect(() => {
     ;(async () => {
+      setLoadingChamps(true)
       try {
-        const res  = await fetch(`https://ddragon.leagueoflegends.com/cdn/${DDV}/data/en_US/champion.json`)
+        // Cargar todos los campeones de Data Dragon
+        const res = await fetch(`https://ddragon.leagueoflegends.com/cdn/${DDV}/data/en_US/champion.json`)
         const json = await res.json()
-        const all: Champion[] = Object.values(json.data).map((c: any) => ({
-          id:   c.id,
-          key:  c.key,
+        
+        let championPool: Champion[] = Object.values(json.data).map((c: any) => ({
+          id: c.id,
+          key: c.key,
           name: c.name,
+          tags: c.tags || []
         }))
-        setAllChampions(all.sort(() => Math.random() - 0.5))
-      } catch {}
+
+        // Filtrar por lane usando el mapeo
+        if (lane !== 'all') {
+          const laneChampNames = getChampionsByLane(lane)
+          console.log(`🎯 Filtering for lane: ${lane}`)
+          console.log(`📋 Champions in lane: ${laneChampNames.length}`)
+          
+          championPool = championPool.filter(champ => {
+            // Normalizar el nombre del campeón para comparar
+            const normalized = normalizeChampionName(champ.name)
+            const matches = laneChampNames.some(laneName => {
+              const normalizedLaneName = normalizeChampionName(laneName)
+              return normalized.toLowerCase() === normalizedLaneName.toLowerCase()
+            })
+            return matches
+          })
+          
+          console.log(`✅ Filtered pool: ${championPool.length} champions`)
+        }
+
+        setAllChampions(championPool.sort(() => Math.random() - 0.5))
+      } catch (err) {
+        console.error('Error loading champions:', err)
+      }
       setLoadingChamps(false)
     })()
-  }, [])
+  }, [lane])  // Re-cargar cuando cambie el lane
 
   // ── 2. Precargar splash arts ─────────────────────────────────────────────
   useEffect(() => {
@@ -338,6 +366,15 @@ export default function RouletteWheel({
           </div>
           <span className="text-neutral-500 text-xs">
             ({rerollsUsed}/{maxRerolls + 1})
+          </span>
+        </div>
+      )}
+
+      {/* Champion pool indicator */}
+      {!loadingChamps && allChampions.length > 0 && (
+        <div className="w-full max-w-xs flex items-center justify-center gap-2 mb-2">
+          <span className="text-neutral-500 text-xs">
+            {allChampions.length} champion{allChampions.length !== 1 ? 's' : ''} in pool
           </span>
         </div>
       )}
