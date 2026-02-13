@@ -22,6 +22,7 @@ import VerificationResult from "@/components/VerificationResult"
 import AutoVerifyIndicator from "@/components/AutoVerifyIndicator"
 import RouletteWheel from "@/components/RouletteWheel"
 import { AutoVerifier } from "@/lib/auto-verify"
+import RSOLoginModal from "@/components/RSOLoginmodal"
 
 import Script from "next/script"
 
@@ -618,35 +619,10 @@ export default function Home() {
                   newAchievements={newAchievements}
                 />
               </div>
-            ) : (
-              <div id="container-ecd5cd4098135436650955a3e1f14ba3">
-                <Script
-                  id="adsterra-ecd5cd"
-                  strategy="afterInteractive"
-                  async
-                  data-cfasync="false"
-                  src="https://pl28649548.effectivegatecpm.com/ecd5cd4098135436650955a3e1f14ba3/invoke.js"
-                />
-              </div>
-            )}
+            ) : null }
           </div>
 
-          <Script
-            id="adsterra-iframe"
-            strategy="afterInteractive"
-            dangerouslySetInnerHTML={{
-              __html: `
-            atOptions = {
-              'key' : '09409ca801b7bb5b73eef29d18a73c7e',
-              'format' : 'iframe',
-              'height' : 90,
-              'width' : 728,
-              'params' : {}
-            };
-          `,
-            }}
-            src="https://www.profitabledisplaynetwork.com/09409ca801b7bb5b73eef29d18a73c7e/invoke.js"
-          />
+          
 
           {/* Footer */}
           <Footer />
@@ -660,14 +636,9 @@ export default function Home() {
 
       {/* Login Modal */}
       {showLoginModal && (
-        <LoginModal
+        <RSOLoginModal 
           onClose={() => setShowLoginModal(false)}
-          onSuccess={(token, userData) => {
-            setSessionToken(token)
-            setUser(userData)
-            setShowLoginModal(false)
-            loadUserData(userData.id)
-          }}
+         
         />
       )}
 
