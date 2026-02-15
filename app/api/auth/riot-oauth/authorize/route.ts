@@ -5,18 +5,14 @@ const RIOT_CLIENT_ID = process.env.RIOT_CLIENT_ID!
 const RIOT_REDIRECT_URI = process.env.RIOT_REDIRECT_URI!
 
 export async function GET() {
-  // Construir URL de autorización de Riot
-  const authUrl = new URL('https://auth.riotgames.com/authorize')
-  
-  authUrl.searchParams.append('redirect_uri', RIOT_REDIRECT_URI)
-  authUrl.searchParams.append('client_id', RIOT_CLIENT_ID)
-  authUrl.searchParams.append('response_type', 'code')
-  authUrl.searchParams.append('scope', 'openid')
+  const params = new URLSearchParams({
+    client_id: RIOT_CLIENT_ID,
+    redirect_uri: RIOT_REDIRECT_URI,
+    response_type: 'code',
+    scope: 'openid offline_access'
+  })
 
-  // Opcional: state para CSRF protection
-  // const state = generateRandomState()
-  // authUrl.searchParams.append('state', state)
-
-  // Redirigir al usuario a Riot Games para autorización
-  return NextResponse.redirect(authUrl.toString())
+  return NextResponse.redirect(
+    `https://auth.riotgames.com/authorize?${params.toString()}`
+  )
 }

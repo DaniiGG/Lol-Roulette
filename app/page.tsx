@@ -115,7 +115,7 @@ export default function Home() {
       .eq('status', 'pending')
       .order('created_at', { ascending: false })
       .limit(1)
-      .single()
+      .maybeSingle()
 
     if (pendingChallenge) {
       setActiveChallenge(pendingChallenge)
@@ -653,7 +653,7 @@ export default function Home() {
   )
 }
 
-// Login Modal Component
+{/*Login Modal Component
 function LoginModal({ onClose, onSuccess }: {
   onClose: () => void
   onSuccess: (token: string, user: any) => void
@@ -741,6 +741,7 @@ function LoginModal({ onClose, onSuccess }: {
     }
   }
 
+
   return (
     <div className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-50 p-4">
       <div className="bg-neutral-900 rounded-3xl border border-neutral-800 p-8 max-w-md w-full">
@@ -755,41 +756,9 @@ function LoginModal({ onClose, onSuccess }: {
         </div>
 
         <div className="space-y-4">
-          <div>
-            <label className="block text-neutral-400 text-sm mb-2">
-              Riot ID
-            </label>
-            <input
-              type="text"
-              placeholder="GameName#TAG"
-              value={riotId}
-              onChange={(e) => {
-                setRiotId(e.target.value)
-                setError('')
-              }}
-              onKeyPress={(e) => e.key === 'Enter' && handleLogin()}
-              disabled={loading}
-              className="w-full px-4 py-3 rounded-xl bg-neutral-800 border border-neutral-700 text-white placeholder-neutral-500 focus:outline-none focus:border-white transition"
-            />
-          </div>
+          
 
-          <div>
-            <label className="block text-neutral-400 text-sm mb-2">
-              Region
-            </label>
-            <select
-              value={region}
-              onChange={(e) => setRegion(e.target.value)}
-              disabled={loading}
-              className="w-full px-4 py-3 rounded-xl bg-neutral-800 border border-neutral-700 text-white focus:outline-none focus:border-white transition"
-            >
-              {REGIONS.map((r) => (
-                <option key={r.value} value={r.value}>
-                  {r.label}
-                </option>
-              ))}
-            </select>
-          </div>
+          
 
           {error && (
             <div className="p-3 rounded-xl bg-red-500/10 border border-red-500/50">
@@ -814,4 +783,4 @@ function LoginModal({ onClose, onSuccess }: {
       </div>
     </div>
   )
-}
+*/}
