@@ -265,6 +265,9 @@ export default function SlotMachineRoulette({
     // Limpiar animaciones anteriores
     animRefs.current.forEach(id => cancelAnimationFrame(id))
 
+    // Elegir UN SOLO campeón ganador para las 3 columnas
+    const randomWinner = allChampions[Math.floor(Math.random() * allChampions.length)]
+
     // Construir strips para cada columna
     const strips: Champion[][] = []
     const winners: Champion[] = []
@@ -274,12 +277,14 @@ export default function SlotMachineRoulette({
       for (let i = 0; i < 10; i++) {
         pool.push(...[...allChampions].sort(() => Math.random() - 0.5))
       }
-      strips[col] = pool
-
-      // Elegir ganador para esta columna
+      
+      // Insertar el mismo ganador en todas las columnas
       const mid = Math.floor(pool.length * 0.4)
       const winIdx = mid + Math.floor(Math.random() * Math.floor(pool.length * 0.2))
-      winners[col] = pool[winIdx]
+      pool[winIdx] = randomWinner  // ← MISMO campeón en las 3 columnas
+      
+      strips[col] = pool
+      winners[col] = randomWinner  // ← MISMO campeón
 
       stripsRef.current[col] = pool
       winnersRef.current = winners
@@ -295,7 +300,7 @@ export default function SlotMachineRoulette({
       const centerY = H / 2
 
       // Calcular offset final para centrar ganador
-      const winnerIdx = strip.indexOf(winners[colIndex])
+      const winnerIdx = strip.indexOf(randomWinner)
       const finalOffset = winnerIdx * CELL_SIZE - centerY + CELL_SIZE / 2
 
       const startTime = performance.now() + COLUMN_DELAYS[colIndex]
@@ -327,12 +332,10 @@ export default function SlotMachineRoulette({
           if (colIndex === COLUMNS - 1) {
             setTimeout(() => {
               setIsSpinning(false)
-              // Todos los ganadores son iguales (el del medio)
-              const finalWinner = winners[1]
-              setWinner(finalWinner)
+              setWinner(randomWinner)
               onResult({
-                ...finalWinner,
-                key: Number(finalWinner.key)
+                ...randomWinner,
+                key: Number(randomWinner.key)
               })
             }, 300)
           }
@@ -404,7 +407,7 @@ export default function SlotMachineRoulette({
               <div key={colIdx} className="relative">
                 <div className="relative rounded-2xl overflow-hidden border-2 border-neutral-800/80 bg-[#0a0a0d] shadow-inner">
                   <canvas
-                    ref={el => { canvasRefs.current[colIdx] = el }}
+                    ref={el => {canvasRefs.current[colIdx] = el}}
                     className="block w-full"
                     style={{ height: VISIBLE_ROWS * CELL_SIZE + 40 }}
                   />
@@ -455,36 +458,92 @@ export default function SlotMachineRoulette({
         </div>
       )}
 
-      {/* Botón SPIN */}
-      <button
-        onClick={spin}
-        disabled={isSpinning || loadingChamps || disabled}
-        className={`
-          relative w-full max-w-xs py-4 rounded-xl font-bold
-          tracking-[0.12em] uppercase text-sm
-          transition-all duration-200 overflow-hidden
-          ${(isSpinning || disabled)
-            ? 'bg-neutral-800 text-neutral-500 cursor-not-allowed'
-            : 'bg-[#C89B3C] text-neutral-950 hover:bg-[#d9aa44] active:scale-[0.97] shadow-lg shadow-[#C89B3C]/30'
-          }
-        `}
-      >
-        {isSpinning ? (
-          <span className="flex items-center justify-center gap-2">
-            <svg className="animate-spin w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-            </svg>
-            Spinning…
-          </span>
-        ) : (
-          <>
-            {rerollsUsed > 0 && rerollsUsed <= maxRerolls 
-              ? `Reroll (${maxRerolls + 1 - rerollsUsed} left)` 
-              : 'Spin the Slots'}
-            <span className="absolute inset-0 -skew-x-12 -translate-x-full hover:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-white/20 to-transparent pointer-events-none" />
-          </>
-        )}
-      </button>
+      {/* Botón PALANCA DE SLOT */}
+      <div className="relative flex flex-col items-center gap-2">
+        <button
+          onClick={spin}
+          disabled={isSpinning || loadingChamps || disabled}
+          className={`
+            relative group
+            ${(isSpinning || disabled)
+              ? 'cursor-not-allowed'
+              : 'cursor-pointer hover:scale-105 active:scale-95'
+            }
+            transition-all duration-200
+          `}
+        >
+          {/* Palanca base */}
+          <div className="relative">
+            {/* Bola/Mango de la palanca */}
+            <div className={`
+              relative z-10
+              w-24 h-24 rounded-full
+              bg-gradient-to-br from-red-600 to-red-800
+              border-4 border-red-900/50
+              shadow-2xl shadow-red-600/40
+              flex items-center justify-center
+              ${isSpinning ? 'animate-pulse' : ''}
+              ${!(isSpinning || disabled) ? 'group-hover:shadow-red-500/60 group-hover:from-red-500 group-hover:to-red-700' : ''}
+              ${(isSpinning || disabled) ? 'opacity-50' : ''}
+            `}>
+              {/* Reflejo en la bola */}
+              <div className="absolute inset-2 rounded-full bg-gradient-to-br from-white/30 to-transparent" />
+              
+              {/* Icono en el centro */}
+              <div className="relative z-10">
+                {isSpinning ? (
+                  <svg className="w-8 h-8 text-white animate-spin" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                  </svg>
+                ) : (
+                  <svg className="w-10 h-10 text-white drop-shadow-lg" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
+                  </svg>
+                )}
+              </div>
+
+              {/* Anillo dorado alrededor */}
+              <div className={`
+                absolute inset-0 rounded-full
+                border-2 border-[#C89B3C]
+                ${!(isSpinning || disabled) ? 'group-hover:border-[#d9aa44] group-hover:shadow-[0_0_20px_rgba(200,155,60,0.5)]' : ''}
+              `} />
+            </div>
+
+            {/* Palo de la palanca */}
+            <div className={`
+              absolute left-1/2 -translate-x-1/2 top-full
+              w-4 h-32
+              bg-gradient-to-b from-neutral-700 via-neutral-600 to-neutral-800
+              border-l border-r border-neutral-500
+              shadow-lg
+              ${isSpinning ? 'animate-[leverPull_0.5s_ease-in-out_infinite]' : ''}
+            `}>
+              {/* Detalles metálicos */}
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+            </div>
+
+            {/* Base de la palanca */}
+            <div className="absolute left-1/2 -translate-x-1/2 top-[calc(100%+128px)] w-12 h-6 bg-gradient-to-b from-neutral-800 to-neutral-900 rounded-b-lg border-2 border-neutral-700 shadow-xl" />
+          </div>
+
+          {/* Texto debajo */}
+          <div className="mt-40 text-center">
+            <p className={`
+              text-sm font-bold tracking-wider uppercase
+              ${(isSpinning || disabled) ? 'text-neutral-500' : 'text-[#C89B3C] group-hover:text-[#d9aa44]'}
+              transition-colors
+            `}>
+              {isSpinning ? 'Spinning...' : rerollsUsed > 0 && rerollsUsed <= maxRerolls 
+                ? `Pull (${maxRerolls + 1 - rerollsUsed} left)` 
+                : 'Pull the Lever'}
+            </p>
+            {!isSpinning && !(isSpinning || disabled) && (
+              <p className="text-xs text-neutral-600 mt-1">Click to spin</p>
+            )}
+          </div>
+        </button>
+      </div>
 
       {/* Winner card */}
       {winner && !isSpinning && (
@@ -535,6 +594,11 @@ export default function SlotMachineRoulette({
         @keyframes fadeSlideUp {
           from { opacity: 0; transform: translateY(12px) scale(0.95); }
           to   { opacity: 1; transform: translateY(0) scale(1); }
+        }
+        
+        @keyframes leverPull {
+          0%, 100% { transform: translateY(0) scaleY(1); }
+          50% { transform: translateY(8px) scaleY(0.95); }
         }
       `}</style>
     </div>

@@ -8,6 +8,7 @@ const nextConfig = {
     // desactivar Turbopack para build en Vercel
     turbo: false,
   },
+  
 };
 
 module.exports = nextConfig;

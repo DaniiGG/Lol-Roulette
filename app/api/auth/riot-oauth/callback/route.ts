@@ -62,7 +62,28 @@ export async function POST(request: Request) {
     const puuid = account.puuid
     const gameName = account.gameName
     const tagLine = account.tagLine
-    const region = account.region
+    const region = 'euw1'
+
+    // 2.5️⃣ Get Summoner info (level + profile icon)
+    const summonerResponse = await fetch(
+      `https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-puuid/${puuid}`,
+      {
+        headers: {
+          'X-Riot-Token': process.env.RIOT_API_KEY!
+        }
+      }
+    )
+
+    if (!summonerResponse.ok) {
+      const text = await summonerResponse.text()
+      console.error(text)
+      return NextResponse.json({ error: 'Failed to fetch summoner info' }, { status: 400 })
+    }
+
+    const summonerData = await summonerResponse.json()
+
+    const summonerLevel = summonerData.summonerLevel
+    const profileIconId = summonerData.profileIconId
 
     console.log('✅ Riot ID:', `${gameName}#${tagLine}`)
 
@@ -86,6 +107,8 @@ if (fetchError) {
         .update({
           game_name: gameName,
           tag_line: tagLine,
+          summoner_level: summonerLevel,
+          profile_icon_id: profileIconId,
           last_login: new Date().toISOString()
         })
         .eq('puuid', puuid)
@@ -100,7 +123,9 @@ if (fetchError) {
       puuid,
       game_name: gameName,
       tag_line: tagLine,
-      region: 'euw1', // ⚠️ IMPORTANTE si tu tabla tiene region NOT NULL
+      region,
+      profile_icon_id: profileIconId,
+      summoner_level: summonerLevel,
       xp: 0,
       level: 1,
       current_streak: 0,

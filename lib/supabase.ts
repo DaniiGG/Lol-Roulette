@@ -12,6 +12,8 @@ export type User = {
   username: string
   summoner_name?: string
   region?: string
+  profile_icon_id?: number
+  summoner_level?: number
   xp: number
   level: number
   current_streak: number

@@ -88,8 +88,14 @@ export async function POST(request: Request) {
 
     // Aún no hay partida nueva
     if (!relevantMatch || !relevantMatchId) {
-      return new NextResponse(null, { status: 204 })
-    }
+  return NextResponse.json(
+    {
+      success: false,
+      error: 'No new matches found after challenge timestamp'
+    },
+    { status: 404 }
+  )
+}
 
     // 3️⃣ Buscar participante
     const participant = relevantMatch.info.participants.find(

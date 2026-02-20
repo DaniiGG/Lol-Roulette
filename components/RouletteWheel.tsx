@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState, useCallback } from 'react'
 import { getChampionsByLane, normalizeChampionName } from '@/lib/champion-lanes'
+import SlotLever from './SlotLever'
 
 interface Champion {
   id: string
@@ -54,7 +55,7 @@ export default function RouletteWheel({
   /* ───────────────────────── LOAD CHAMPIONS ───────────────────────── */
 
   useEffect(() => {
-    ;(async () => {
+    ; (async () => {
       setLoadingChamps(true)
 
       try {
@@ -180,13 +181,17 @@ export default function RouletteWheel({
       }
 
       if (isWin) {
+        const glow = 20 + Math.sin(performance.now() * 0.01) * 10
+
         ctx.shadowColor = '#C89B3C'
-        ctx.shadowBlur = 25
+        ctx.shadowBlur = glow
         ctx.strokeStyle = '#C89B3C'
-        ctx.lineWidth = 3
+        ctx.lineWidth = 4
+
         ctx.beginPath()
-        ctx.roundRect(x, y, CELL_W, CELL_H, 14)
+        ctx.roundRect(x, y, CELL_W, CELL_H, 16)
         ctx.stroke()
+
         ctx.shadowBlur = 0
       }
     }
@@ -300,35 +305,59 @@ export default function RouletteWheel({
   /* ───────────────────────── UI ───────────────────────── */
 
   return (
-    <div className="w-full flex flex-col items-center gap-6">
+  <div className="w-full flex justify-center items-center relative">
 
-      <div className="relative w-full overflow-hidden rounded-2xl border border-neutral-800 shadow-2xl shadow-black/60">
+    {/* CONTENEDOR CENTRADO SOLO PARA LA RULETA */}
+    <div className="relative">
+
+      {/* RULETA */}
+      <div className="relative overflow-hidden rounded-2xl border border-neutral-800 shadow-2xl shadow-black/60">
+
+        {/* Fade izquierdo */}
+        <div className="pointer-events-none absolute left-0 top-0 h-full w-32 bg-gradient-to-r from-black to-transparent z-10" />
+
+        {/* Fade derecho */}
+        <div className="pointer-events-none absolute right-0 top-0 h-full w-32 bg-gradient-to-l from-black to-transparent z-10" />
+
+        {/* Flecha central */}
+        <div className="pointer-events-none absolute left-1/2 -translate-x-1/2 top-0 z-20 flex flex-col items-center">
+          <div className="w-0 h-0 border-l-[14px] border-r-[14px] border-t-[22px] border-l-transparent border-r-transparent border-t-[#C89B3C] drop-shadow-[0_0_8px_#C89B3C]" />
+          <div className="w-[3px] h-8 bg-[#C89B3C] shadow-[0_0_10px_#C89B3C]" />
+        </div>
+
         <canvas
           ref={canvasRef}
-          className="block w-full"
-          style={{ height: CELL_H + 40 }}
+          className="block"
+          style={{ width: "50vw", height: CELL_H + 40 }}
+        />
+
+        {winner && !isSpinning && (
+          <div className="absolute inset-0 z-40 flex items-center justify-center bg-black/75 backdrop-blur-sm animate-fadeIn">
+            <div className="text-center">
+              <p className="text-[#C89B3C] text-xs uppercase tracking-[0.4em] mb-4 opacity-80">
+                Your Champion
+              </p>
+              <h2 className="text-white text-5xl md:text-6xl font-extrabold
+                             animate-winnerReveal
+                             drop-shadow-[0_0_25px_#C89B3C]
+                             tracking-wider">
+                {winner.name}
+              </h2>
+            </div>
+          </div>
+        )}
+
+      </div>
+
+      {/* PALANCA POSICIONADA ABSOLUTA */}
+      <div className="absolute top-1/2 -translate-y-1/2 left-full ml-6">
+        <SlotLever
+          onActivate={spin}
+          disabled={isSpinning || loadingChamps || disabled}
         />
       </div>
 
-      <button
-        onClick={spin}
-        disabled={isSpinning || loadingChamps || disabled}
-        className="w-full max-w-xs py-4 rounded-xl font-bold uppercase tracking-wider
-                   bg-[#C89B3C] text-black hover:bg-[#d9aa44]
-                   disabled:bg-neutral-800 disabled:text-neutral-500"
-      >
-        {isSpinning ? 'Spinning…' : 'Spin the Wheel'}
-      </button>
-
-      {winner && !isSpinning && (
-        <div className="text-center">
-          <p className="text-[#C89B3C] text-xs uppercase tracking-widest mb-2">
-            Your champion
-          </p>
-          <p className="text-white text-2xl font-bold">{winner.name}</p>
-        </div>
-      )}
-
     </div>
-  )
+  </div>
+)
 }

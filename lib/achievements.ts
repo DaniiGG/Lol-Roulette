@@ -193,20 +193,34 @@ export function checkAchievement(
 
 // Calcular nivel basado en XP
 export function calculateLevel(xp: number): number {
-  return Math.floor(Math.sqrt(xp / 100)) + 1
+  let level = 1
+  let xpNeeded = 0
+
+  while (true) {
+    const xpToNext = 100 * (level + 1)
+    if (xp < xpNeeded + xpToNext) break
+    
+    xpNeeded += xpToNext
+    level++
+  }
+
+  return level
 }
 
 // Calcular XP necesario para siguiente nivel
 export function xpForNextLevel(currentLevel: number): number {
-  return (currentLevel * currentLevel - 1) * 100
+  return 100 * (currentLevel + 1)
 }
 
-// Calcular progreso hacia siguiente nivel
 export function levelProgress(xp: number, level: number): number {
-  const currentLevelXp = ((level - 1) * (level - 1)) * 100
-  const nextLevelXp = xpForNextLevel(level)
-  const xpIntoLevel = xp - currentLevelXp
-  const xpNeeded = nextLevelXp - currentLevelXp
-  
+  let totalXpBeforeLevel = 0
+
+  for (let i = 1; i < level; i++) {
+    totalXpBeforeLevel += 100 * (i + 1)
+  }
+
+  const xpIntoLevel = xp - totalXpBeforeLevel
+  const xpNeeded = 100 * (level + 1)
+
   return Math.floor((xpIntoLevel / xpNeeded) * 100)
 }

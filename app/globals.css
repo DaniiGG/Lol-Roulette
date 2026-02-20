@@ -42,3 +42,32 @@ body {
 .animate-elegant-reveal {
   animation: elegant-reveal 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes winnerReveal {
+  0% {
+    transform: scale(0.7);
+    opacity: 0;
+    filter: blur(10px);
+  }
+  60% {
+    transform: scale(1.1);
+    opacity: 1;
+    filter: blur(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+.animate-winnerReveal {
+  animation: winnerReveal 0.7s cubic-bezier(.2,.8,.2,1) forwards;
+}

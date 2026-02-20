@@ -21,6 +21,7 @@ import AchievementPopup from "@/components/AchievementPopup"
 import VerificationResult from "@/components/VerificationResult"
 import AutoVerifyIndicator from "@/components/AutoVerifyIndicator"
 import RouletteWheel from "@/components/RouletteWheel"
+import SlotMachineRoulette from "@/components/Slotmachineroulette"
 import { AutoVerifier } from "@/lib/auto-verify"
 import RSOLoginModal from "@/components/RSOLoginmodal"
 
@@ -31,6 +32,7 @@ export default function Home() {
   const [user, setUser] = useState<any>(null)
   const [sessionToken, setSessionToken] = useState<string | null>(null)
   const [showLoginModal, setShowLoginModal] = useState(false)
+  const [showAchievementsModal, setShowAchievementsModal] = useState(false)
 
   // Roulette state (PÚBLICO - no requiere login)
   const [champ, setChamp] = useState<any>(null)
@@ -196,7 +198,7 @@ export default function Home() {
           }
 
           setActiveChallenge(newChallenge)
-          
+
           // Iniciar auto-verificación con el timestamp del challenge
           if (sessionToken && newChallenge) {
             startAutoVerification(champData, newChallenge.created_at)
@@ -366,7 +368,7 @@ export default function Home() {
     await supabase.from('users').update({ current_streak: 0 }).eq('id', user.id)
     const updatedUser = { ...user, current_streak: 0 }
     setUser(updatedUser)
-    
+
     // Reset reroll count and challenge on failure
     setRerollCount(0)
     setActiveChallenge(null)
@@ -425,6 +427,26 @@ export default function Home() {
 
   return (
     <main className="min-h-screen relative overflow-hidden bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950">
+      {/* Fondo infinito a los lados */}
+      <div
+        className="fixed top-0 left-[-10] h-full w-[5vw] z-20 pointer-events-none bg-repeat-y"
+        style={{
+          backgroundImage: "url('/images/tribal2.png')",
+          backgroundSize: "contain",
+          backgroundPosition: "center",
+        }}
+      ></div>
+
+      {/* Lado derecho */}
+      <div
+        className="fixed top-0 right-[-10] h-full w-[5vw] z-20 pointer-events-none bg-repeat-y"
+        style={{
+          backgroundImage: "url('/images/tribal2.png')",
+          backgroundSize: "contain",
+          backgroundPosition: "center",
+        }}
+      ></div>
+
       {/* Background effects */}
       <div className="absolute inset-0 opacity-[0.02]" style={{
         backgroundImage: `radial-gradient(circle at 1px 1px, white 1px, transparent 0)`,
@@ -463,6 +485,16 @@ export default function Home() {
                   <span className="text-neutral-400 text-sm">
                     {user.game_name}#{user.tag_line}
                   </span>
+
+                  <button
+                    onClick={() => setShowAchievementsModal(true)}
+                    className="px-4 py-2 rounded-xl bg-neutral-800 text-neutral-300 hover:bg-neutral-700 hover:text-white transition text-sm"
+                  >
+                    🏆Achievements <span className="text-neutral-400 text-sm">
+                      {userAchievements.length}/{Object.keys(ACHIEVEMENTS).length}🏆
+                    </span>
+                  </button>
+
                   <button
                     onClick={handleLogout}
                     className="px-4 py-2 rounded-xl bg-neutral-800 text-neutral-400 hover:bg-neutral-700 hover:text-white transition text-sm"
@@ -488,6 +520,8 @@ export default function Home() {
                 summoner_name: `${user.game_name}#${user.tag_line}`,
                 level: user.level,
                 xp: user.xp,
+                summoner_level: user.summoner_level,
+                profile_icon_id: user.profile_icon_id,
                 current_streak: user.current_streak,
                 longest_streak: user.longest_streak,
                 total_challenges_completed: user.total_challenges_completed
@@ -496,7 +530,7 @@ export default function Home() {
           )}
 
           {/* Main Grid */}
-          <div className={`grid grid-cols-1 ${user ? 'lg:grid-cols-3' : ''} gap-6`}>
+          <div className={`max-w-4xl mx-auto space-y-6`}>
             {/* Left: Roulette (SIEMPRE VISIBLE) */}
             <div className={`${user ? 'lg:col-span-2' : 'max-w-2xl mx-auto w-full'} space-y-6`}>
               {/* Header */}
@@ -611,18 +645,10 @@ export default function Home() {
               )}
             </div>
 
-            {/* Right: Achievements / Anuncios */}
-            {user ? (
-              <div className="lg:col-span-1 space-y-6">
-                <AchievementsList
-                  unlockedAchievements={userAchievements}
-                  newAchievements={newAchievements}
-                />
-              </div>
-            ) : null }
+
           </div>
 
-          
+
 
           {/* Footer */}
           <Footer />
@@ -636,9 +662,9 @@ export default function Home() {
 
       {/* Login Modal */}
       {showLoginModal && (
-        <RSOLoginModal 
+        <RSOLoginModal
           onClose={() => setShowLoginModal(false)}
-         
+
         />
       )}
 
@@ -649,6 +675,30 @@ export default function Home() {
           onClose={() => setNewAchievements([])}
         />
       )}
+
+      {showAchievementsModal && user && (
+        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-50 p-4">
+          <div className="bg-neutral-900 rounded-3xl border border-neutral-800 p-8 max-w-3xl w-full max-h-[90vh] overflow-hidden">
+
+            <div className="flex justify-between items-center mb-6">
+              <h2 className="text-2xl font-bold text-white">Achievements</h2>
+              <button
+                onClick={() => setShowAchievementsModal(false)}
+                className="text-neutral-400 hover:text-white transition"
+              >
+                ✕
+              </button>
+            </div>
+
+            <AchievementsList
+              unlockedAchievements={userAchievements}
+              newAchievements={newAchievements}
+            />
+          </div>
+        </div>
+      )}
+
+
     </main>
   )
 }

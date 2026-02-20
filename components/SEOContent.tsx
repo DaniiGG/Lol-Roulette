@@ -17,7 +17,7 @@ export default function SEOContent() {
             What is League Roulette?
           </h2>
           <p className="leading-relaxed">
-            League Roulette is a <strong>free random champion generator</strong> for League of Legends. 
+            League Roulette is a <strong>free random champion generator</strong> for League of Legends(Lol). 
             Spin the wheel to get a random LoL champion and challenge yourself to win ranked or normal 
             games. Track your progress, earn XP, unlock achievements, and compete on the global leaderboard!
           </p>

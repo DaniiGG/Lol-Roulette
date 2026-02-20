@@ -1,6 +1,7 @@
 // app/privacy/page.tsx
 import Link from 'next/link'
 import { ArrowLeft } from 'lucide-react'
+import SlotLever from '@/components/SlotLever'
 
 export default function PrivacyPolicy() {
   return (
@@ -169,6 +170,10 @@ export default function PrivacyPolicy() {
               <p className="text-sm text-neutral-500">
                 League Roulette is not endorsed by Riot Games and does not reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games and all associated properties are trademarks or registered trademarks of Riot Games, Inc.
               </p>
+               <div>
+      <SlotLever
+      />
+    </div>
             </section>
 
           </div>
