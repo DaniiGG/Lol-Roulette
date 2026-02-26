@@ -23,7 +23,8 @@ const DDV = '14.9.1'
 const SPLASH_BASE = 'https://ddragon.leagueoflegends.com/cdn/img/champion/splash/'
 const LOADING_BASE = 'https://ddragon.leagueoflegends.com/cdn/img/champion/loading/'
 
-const SPIN_MS = 5200
+// Más lento que antes para que se vea elegante
+const SPIN_MS = 6200
 const CELL_W = 200
 const CELL_H = 200
 
@@ -35,8 +36,6 @@ export default function RouletteWheel({
   lane = 'all',
   onResult,
   disabled = false,
-  rerollsUsed = 0,
-  maxRerolls = 2
 }: RouletteWheelProps) {
 
   const [allChampions, setAllChampions] = useState<Champion[]>([])
@@ -49,10 +48,33 @@ export default function RouletteWheel({
   const animRef = useRef<number>(0)
 
   const stripRef = useRef<Champion[]>([])
-  const winIdxRef = useRef<number>(0)
-  const t0Ref = useRef<number>(0)
+  const prevCellIndexRef = useRef(0)
 
-  /* ───────────────────────── LOAD CHAMPIONS ───────────────────────── */
+  /* ───────── AUDIO POOL PARA TICKS ───────── */
+  const audioPoolRef = useRef<HTMLAudioElement[]>([])
+  const audioIndexRef = useRef(0)
+
+  useEffect(() => {
+    const pool: HTMLAudioElement[] = []
+    for (let i = 0; i < 15; i++) {
+      const audio = new Audio('/tick.m4a')
+      audio.volume = 0.4
+      pool.push(audio)
+    }
+    audioPoolRef.current = pool
+  }, [])
+
+  const playTick = () => {
+    const pool = audioPoolRef.current
+    if (!pool.length) return
+
+    const audio = pool[audioIndexRef.current]
+    audio.currentTime = 0
+    audio.play().catch(() => {})
+    audioIndexRef.current = (audioIndexRef.current + 1) % pool.length
+  }
+
+  /* ───────── LOAD CHAMPIONS ───────── */
 
   useEffect(() => {
     ; (async () => {
@@ -92,7 +114,7 @@ export default function RouletteWheel({
     })()
   }, [lane])
 
-  /* ───────────────────────── PRELOAD IMAGES ───────────────────────── */
+  /* ───────── PRELOAD IMAGES ───────── */
 
   useEffect(() => {
     if (!allChampions.length) return
@@ -113,12 +135,11 @@ export default function RouletteWheel({
     })
   }, [allChampions])
 
-  /* ───────────────────────── DRAW ───────────────────────── */
+  /* ───────── DRAW ───────── */
 
   const draw = useCallback((offset: number, highlight: number | null = null) => {
     const canvas = canvasRef.current
     if (!canvas) return
-
     const ctx = canvas.getContext('2d')
     if (!ctx) return
 
@@ -196,10 +217,7 @@ export default function RouletteWheel({
       }
     }
 
-    /* ── CENTER MARKER ── */
-
     const hw = CELL_W / 2
-
     ctx.strokeStyle = '#C89B3C'
     ctx.lineWidth = 1.5
     ctx.setLineDash([4, 6])
@@ -215,86 +233,85 @@ export default function RouletteWheel({
     ctx.stroke()
 
     ctx.setLineDash([])
-
   }, [])
 
-  /* ───────────────────────── SPIN ───────────────────────── */
+  /* ───────── SPIN ───────── */
 
   const spin = useCallback(() => {
-    if (isSpinning || !allChampions.length || disabled) return
+  if (isSpinning || !allChampions.length || disabled) return
 
-    setWinner(null)
-    setIsSpinning(true)
-    cancelAnimationFrame(animRef.current)
+  setWinner(null)
+  setIsSpinning(true)
+  cancelAnimationFrame(animRef.current)
+  
+  prevCellIndexRef.current = 0
 
-    const pool: Champion[] = []
-    for (let i = 0; i < 8; i++) {
-      pool.push(...[...allChampions].sort(() => Math.random() - 0.5))
+  const pool: Champion[] = []
+  for (let i = 0; i < 8; i++) {
+    pool.push(...[...allChampions].sort(() => Math.random() - 0.5))
+  }
+  stripRef.current = pool
+
+  const canvas = canvasRef.current
+  if (!canvas) return
+
+  const cx = canvas.width / 2
+  const mid = Math.floor(pool.length * 0.5)
+  const winIdx = mid + Math.floor(Math.random() * 20)
+  const finalOffset = winIdx * CELL_W + CELL_W / 2 - cx
+  const start = performance.now()
+  const winChamp = pool[winIdx]
+
+  // 🔹 FORZAR TICK INICIAL
+  playTick()
+
+  const animate = (now: number) => {
+    const t = Math.min((now - start) / SPIN_MS, 1)
+    const eased = easeOutQuart(t)
+    const offset = finalOffset * eased
+
+    // 🔹 TICK POR CELDA CRUZADA
+    const currentCellIndex = Math.floor(offset / CELL_W)
+    const diff = currentCellIndex - prevCellIndexRef.current
+    if (diff > 0) {
+      for (let i = 0; i < diff; i++) playTick()
+      prevCellIndexRef.current = currentCellIndex
     }
 
-    stripRef.current = pool
-
-    const canvas = canvasRef.current
-    if (!canvas) return
-
-    const W = canvas.width
-    const cx = W / 2
-    const step = CELL_W
-
-    const mid = Math.floor(pool.length * 0.5)
-    const winIdx = mid + Math.floor(Math.random() * 20)
-
-    winIdxRef.current = winIdx
-
-    const cellCenter = winIdx * step + CELL_W / 2
-    const finalOffset = cellCenter - cx
-
-    const start = performance.now()
-    const winChamp = pool[winIdx]
-
-    const animate = (now: number) => {
-      const t = Math.min((now - start) / SPIN_MS, 1)
-      const eased = easeOutQuart(t)
-      const offset = finalOffset * eased
-
-      if (t < 1) {
-        draw(offset)
-        animRef.current = requestAnimationFrame(animate)
-      } else {
-        draw(finalOffset, winIdx)
-        setIsSpinning(false)
-        setWinner(winChamp)
-        onResult({ ...winChamp, key: Number(winChamp.key) })
-      }
+    if (t < 1) {
+      draw(offset)
+      animRef.current = requestAnimationFrame(animate)
+    } else {
+      draw(finalOffset, winIdx)
+      playTick() // último tick final
+      setIsSpinning(false)
+      setWinner(winChamp)
+      onResult({ ...winChamp, key: Number(winChamp.key) })
     }
+  }
 
-    animRef.current = requestAnimationFrame(animate)
+  animRef.current = requestAnimationFrame(animate)
+}, [isSpinning, allChampions, disabled, draw, onResult])
 
-  }, [isSpinning, allChampions, disabled, draw, onResult])
-
-  /* ───────────────────────── INIT STRIP ───────────────────────── */
+  /* ───────── INIT STRIP ───────── */
 
   useEffect(() => {
     if (!allChampions.length) return
-
     const pool = [...allChampions, ...allChampions, ...allChampions]
     stripRef.current = pool
-
     setTimeout(() => draw(0), 300)
   }, [allChampions, draw])
 
-  /* ───────────────────────── RESIZE ───────────────────────── */
+  /* ───────── RESIZE ───────── */
 
   useEffect(() => {
     const canvas = canvasRef.current
     if (!canvas) return
-
     const resize = () => {
       canvas.width = canvas.parentElement?.clientWidth ?? 700
       canvas.height = CELL_H + 40
       draw(0)
     }
-
     resize()
     window.addEventListener('resize', resize)
     return () => window.removeEventListener('resize', resize)
@@ -302,62 +319,53 @@ export default function RouletteWheel({
 
   useEffect(() => () => cancelAnimationFrame(animRef.current), [])
 
-  /* ───────────────────────── UI ───────────────────────── */
+  /* ───────── UI ───────── */
 
   return (
-  <div className="w-full flex justify-center items-center relative">
+    <div className="w-full flex justify-center items-center relative">
+      <div className="relative">
+        <div className="relative overflow-hidden rounded-2xl border border-neutral-800 shadow-2xl shadow-black/60">
+          {/* Fade izquierdo */}
+          <div className="pointer-events-none absolute left-0 top-0 h-full w-32 bg-gradient-to-r from-black to-transparent z-10" />
+          {/* Fade derecho */}
+          <div className="pointer-events-none absolute right-0 top-0 h-full w-32 bg-gradient-to-l from-black to-transparent z-10" />
+          {/* Flecha central */}
+          <div className="pointer-events-none absolute left-1/2 -translate-x-1/2 top-0 z-20 flex flex-col items-center">
+            <div className="w-0 h-0 border-l-[14px] border-r-[14px] border-t-[22px] border-l-transparent border-r-transparent border-t-[#C89B3C] drop-shadow-[0_0_8px_#C89B3C]" />
+            <div className="w-[3px] h-8 bg-[#C89B3C] shadow-[0_0_10px_#C89B3C]" />
+          </div>
 
-    {/* CONTENEDOR CENTRADO SOLO PARA LA RULETA */}
-    <div className="relative">
+          <canvas
+            ref={canvasRef}
+            className="block"
+            style={{ width: "50vw", height: CELL_H + 40 }}
+          />
 
-      {/* RULETA */}
-      <div className="relative overflow-hidden rounded-2xl border border-neutral-800 shadow-2xl shadow-black/60">
-
-        {/* Fade izquierdo */}
-        <div className="pointer-events-none absolute left-0 top-0 h-full w-32 bg-gradient-to-r from-black to-transparent z-10" />
-
-        {/* Fade derecho */}
-        <div className="pointer-events-none absolute right-0 top-0 h-full w-32 bg-gradient-to-l from-black to-transparent z-10" />
-
-        {/* Flecha central */}
-        <div className="pointer-events-none absolute left-1/2 -translate-x-1/2 top-0 z-20 flex flex-col items-center">
-          <div className="w-0 h-0 border-l-[14px] border-r-[14px] border-t-[22px] border-l-transparent border-r-transparent border-t-[#C89B3C] drop-shadow-[0_0_8px_#C89B3C]" />
-          <div className="w-[3px] h-8 bg-[#C89B3C] shadow-[0_0_10px_#C89B3C]" />
-        </div>
-
-        <canvas
-          ref={canvasRef}
-          className="block"
-          style={{ width: "50vw", height: CELL_H + 40 }}
-        />
-
-        {winner && !isSpinning && (
-          <div className="absolute inset-0 z-40 flex items-center justify-center bg-black/75 backdrop-blur-sm animate-fadeIn">
-            <div className="text-center">
-              <p className="text-[#C89B3C] text-xs uppercase tracking-[0.4em] mb-4 opacity-80">
-                Your Champion
-              </p>
-              <h2 className="text-white text-5xl md:text-6xl font-extrabold
+          {winner && !isSpinning && (
+            <div className="absolute inset-0 z-40 flex items-center justify-center bg-black/75 backdrop-blur-sm animate-fadeIn">
+              <div className="text-center">
+                <p className="text-[#C89B3C] text-xs uppercase tracking-[0.4em] mb-4 opacity-80">
+                  Your Champion
+                </p>
+                <h2 className="text-white text-5xl md:text-6xl font-extrabold
                              animate-winnerReveal
                              drop-shadow-[0_0_25px_#C89B3C]
                              tracking-wider">
-                {winner.name}
-              </h2>
+                  {winner.name}
+                </h2>
+              </div>
             </div>
-          </div>
-        )}
+          )}
 
+        </div>
+
+        <div className="absolute top-1/2 -translate-y-1/2 left-full ml-6">
+          <SlotLever
+            onActivate={spin}
+            disabled={isSpinning || loadingChamps || disabled}
+          />
+        </div>
       </div>
-
-      {/* PALANCA POSICIONADA ABSOLUTA */}
-      <div className="absolute top-1/2 -translate-y-1/2 left-full ml-6">
-        <SlotLever
-          onActivate={spin}
-          disabled={isSpinning || loadingChamps || disabled}
-        />
-      </div>
-
     </div>
-  </div>
-)
+  )
 }

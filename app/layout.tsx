@@ -4,7 +4,7 @@ import "./globals.css";
 import Script from 'next/script'
 
 export const metadata: Metadata = {
-  title: 'League Roulette - Random Champion Challenge for League of Legends',
+  title: 'Random Champion Generator for League of Legends (LoL Roulette)',
   description: 'Spin the roulette to get a random League of Legends champion! Track your wins, earn XP, unlock achievements, and compete on the leaderboard. Free LoL random champion generator.',
   keywords: 'league of legends, lol, random champion, champion roulette, lol roulette, random pick, league challenge, lol challenge, summoner stats, league tracker',
   authors: [{ name: 'League Roulette' }],

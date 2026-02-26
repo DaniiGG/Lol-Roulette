@@ -97,20 +97,16 @@ export default function Home() {
       .select('*')
       .eq('id', userId)
       .single()
-
     if (userData) setUser(userData)
-
     const { data: achievements } = await supabase
       .from('achievements')
       .select('achievement_type')
       .eq('user_id', userId)
-
     if (achievements) {
       setUserAchievements(achievements.map(a => a.achievement_type))
     }
-
     // Cargar challenge activo (si existe)
-    const { data: pendingChallenge } = await supabase
+    const { data: pendingChallenge, error: challengeError } = await supabase
       .from('challenges')
       .select('*')
       .eq('user_id', userId)
@@ -118,7 +114,9 @@ export default function Home() {
       .order('created_at', { ascending: false })
       .limit(1)
       .maybeSingle()
-
+    if (challengeError) {
+      console.error('❌ Error loading challenge:', challengeError)
+    }
     if (pendingChallenge) {
       setActiveChallenge(pendingChallenge)
       setChamp({
@@ -135,17 +133,18 @@ export default function Home() {
     setVerificationResult(null)
 
     // Incrementar reroll count
+    const newRerollCount = user ? rerollCount + 1 : 0
+    setRerollCount(newRerollCount)
     if (user) {
-      const newRerollCount = rerollCount + 1
-      setRerollCount(newRerollCount)
-      console.log(`🎲 Spin #${newRerollCount} of 3`)
-      console.log(`🎯 Champion: ${champData.name} (key: ${champData.key}, type: ${typeof champData.key})`)
+      console.log(`🎲 Spin #${newRerollCount} of ${MAX_REROLLS + 1}`)
+      console.log(`🎯 Champion: ${champData.name} (key: ${champData.key})`)
     }
+
 
     try {
       // Guardar/actualizar challenge SOLO si está logueado
       if (user) {
-        // Si ya existe un challenge pendiente, actualizarlo en lugar de crear uno nuevo
+        // Si ya existe un challenge pendiente, actualizarlo
         if (activeChallenge) {
           const { error } = await supabase
             .from('challenges')
@@ -153,32 +152,32 @@ export default function Home() {
               champion_id: String(champData.key),
               champion_name: champData.name,
               lane: selectedLane,
-              created_at: new Date().toISOString()  // Reset timestamp for new champion
+              created_at: new Date().toISOString(),
+              reroll_count: newRerollCount  // ✅ NUEVO: Guardar en DB
             })
             .eq('id', activeChallenge.id)
-
           if (error) {
             console.error('❌ Error updating challenge:', error)
             return
           }
 
-          // Actualizar el estado local
           const updatedChallenge = {
             ...activeChallenge,
             champion_id: String(champData.key),
             champion_name: champData.name,
             lane: selectedLane,
-            created_at: new Date().toISOString()
+            created_at: new Date().toISOString(),
+            reroll_count: newRerollCount  // ✅ NUEVO
           }
           setActiveChallenge(updatedChallenge)
 
-          // Reiniciar auto-verificación con nuevo campeón y nuevo timestamp
+          // Reiniciar auto-verificación
           if (sessionToken) {
-            stopAutoVerification()  // Detener la verificación anterior
+            stopAutoVerification()
             startAutoVerification(champData, updatedChallenge.created_at)
           }
         } else {
-          // Crear challenge nuevo (primer spin)
+          // Crear challenge nuevo
           const { data: newChallenge, error } = await supabase
             .from('challenges')
             .insert([{
@@ -187,7 +186,8 @@ export default function Home() {
               champion_name: champData.name,
               lane: selectedLane,
               status: 'pending',
-              xp_reward: 100
+              xp_reward: 100,
+              reroll_count: newRerollCount  // ✅ NUEVO: Guardar desde el inicio
             }])
             .select()
             .single()
@@ -199,7 +199,7 @@ export default function Home() {
 
           setActiveChallenge(newChallenge)
 
-          // Iniciar auto-verificación con el timestamp del challenge
+          // Iniciar auto-verificación
           if (sessionToken && newChallenge) {
             startAutoVerification(champData, newChallenge.created_at)
           }
@@ -208,9 +208,8 @@ export default function Home() {
 
       setChamp({
         ...champData,
-        key: Number(champData.key)  // Asegurar que sea número
+        key: Number(champData.key)
       })
-
     } catch (error) {
       console.error('❌ Error saving challenge:', error)
     }
@@ -365,10 +364,20 @@ export default function Home() {
 
   const handleFailure = async () => {
     if (!user) return
+    // ✅ NUEVO: Marcar challenge como failed en lugar de solo borrarlo
+    if (activeChallenge) {
+      await supabase
+        .from('challenges')
+        .update({
+          status: 'failed',
+          completed_at: new Date().toISOString()
+        })
+        .eq('id', activeChallenge.id)
+    }
+    // Resetear streak
     await supabase.from('users').update({ current_streak: 0 }).eq('id', user.id)
     const updatedUser = { ...user, current_streak: 0 }
     setUser(updatedUser)
-
     // Reset reroll count and challenge on failure
     setRerollCount(0)
     setActiveChallenge(null)

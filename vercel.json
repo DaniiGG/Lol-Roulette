@@ -1,0 +1,13 @@
+{
+  "crons": [
+    {
+      "path": "/api/cron/timeout-challenges",
+      "schedule": "*/15 * * * *"
+    },
+    {
+      "path": "/api/admin/cleanup-challenges",
+      "schedule": "0 3 * * *",
+      "comment": "Limpia challenges failed/completed antiguos (3 AM diario)"
+    }
+  ]
+}

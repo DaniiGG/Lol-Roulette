@@ -26,12 +26,13 @@ export default function Footer() {
                 <a href="/" className="text-neutral-400 hover:text-white transition">
                   Home
                 </a>
-              </li>
+              </li>{/*
               <li>
                 <a href="/leaderboard" className="text-neutral-400 hover:text-white transition">
                   Leaderboard
                 </a>
               </li>
+              */}
               <li>
                 <a href="/about" className="text-neutral-400 hover:text-white transition">
                   About Us
@@ -59,11 +60,13 @@ export default function Footer() {
                   Terms of Service
                 </a>
               </li>
+              {/*
               <li>
                 <a href="/cookies" className="text-neutral-400 hover:text-white transition">
                   Cookie Policy
                 </a>
               </li>
+              */}
             </ul>
           </div>
 
@@ -72,7 +75,7 @@ export default function Footer() {
             <h4 className="text-white font-semibold mb-4 text-sm">Follow Us</h4>
             <div className="flex gap-3">
               <a 
-                href="https://twitter.com/leagueroulette" 
+                href="" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-neutral-800 hover:bg-neutral-700 rounded-lg flex items-center justify-center text-neutral-400 hover:text-white transition"
@@ -83,7 +86,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a 
-                href="https://discord.gg/leagueroulette" 
+                href="" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-neutral-800 hover:bg-neutral-700 rounded-lg flex items-center justify-center text-neutral-400 hover:text-white transition"
@@ -94,7 +97,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a 
-                href="https://github.com/leagueroulette" 
+                href="" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-neutral-800 hover:bg-neutral-700 rounded-lg flex items-center justify-center text-neutral-400 hover:text-white transition"
