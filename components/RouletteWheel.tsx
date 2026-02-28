@@ -58,7 +58,7 @@ export default function RouletteWheel({
     const pool: HTMLAudioElement[] = []
     for (let i = 0; i < 15; i++) {
       const audio = new Audio('/tick.m4a')
-      audio.volume = 0.4
+      audio.volume = 0.2
       pool.push(audio)
     }
     audioPoolRef.current = pool

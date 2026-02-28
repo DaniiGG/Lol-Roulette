@@ -7,7 +7,6 @@ import { ACHIEVEMENTS, checkAchievement, calculateLevel } from "@/lib/achievemen
 import confetti from "canvas-confetti"
 import Cookies from 'js-cookie'
 import { Info } from 'lucide-react'
-import AdBanner from "@/components/AdBanner"
 import AdContainer from "@/components/AdContainer"
 import InfoModal from "@/components/InfoModal"
 import Footer from "@/components/Footer"
@@ -436,25 +435,6 @@ export default function Home() {
 
   return (
     <main className="min-h-screen relative overflow-hidden bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950">
-      {/* Fondo infinito a los lados */}
-      <div
-        className="fixed top-0 left-[-10] h-full w-[5vw] z-20 pointer-events-none bg-repeat-y"
-        style={{
-          backgroundImage: "url('/images/tribal2.png')",
-          backgroundSize: "contain",
-          backgroundPosition: "center",
-        }}
-      ></div>
-
-      {/* Lado derecho */}
-      <div
-        className="fixed top-0 right-[-10] h-full w-[5vw] z-20 pointer-events-none bg-repeat-y"
-        style={{
-          backgroundImage: "url('/images/tribal2.png')",
-          backgroundSize: "contain",
-          backgroundPosition: "center",
-        }}
-      ></div>
 
       {/* Background effects */}
       <div className="absolute inset-0 opacity-[0.02]" style={{
@@ -478,14 +458,25 @@ export default function Home() {
 
           {/* Header con Login/Logout */}
           <div className="flex justify-between items-center mb-4">
-            {/* Info Button */}
-            <button
-              onClick={() => setShowInfoModal(true)}
-              className="px-4 py-2 rounded-xl bg-neutral-800 text-neutral-400 hover:bg-neutral-700 hover:text-white transition text-sm flex items-center gap-2"
-            >
-              <Info className="w-4 h-4" />
-              <span>How it works</span>
-            </button>
+            {/* Left side buttons */}
+            <div className="flex items-center gap-2">
+              <button
+                onClick={() => setShowInfoModal(true)}
+                className="px-4 py-2 rounded-xl bg-neutral-800 text-neutral-400 hover:bg-neutral-700 hover:text-white transition text-sm flex items-center gap-2"
+              >
+                <Info className="w-4 h-4" />
+                <span>How it works</span>
+              </button>
+              <a
+                href="/leaderboard"
+                className="px-4 py-2 rounded-xl bg-neutral-800 text-neutral-400 hover:bg-neutral-700 hover:text-white transition text-sm flex items-center gap-2"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                </svg>
+                <span>Leaderboard</span>
+              </a>
+            </div>
 
             {/* Login/Logout */}
             <div>
