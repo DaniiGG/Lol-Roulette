@@ -23,24 +23,23 @@ export default function Footer() {
             <h4 className="text-white font-semibold mb-4 text-sm">Quick Links</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="/" className="text-neutral-400 hover:text-white transition">
-                  Home
-                </a>
-              </li>{/*
-              <li>
-                <a href="/leaderboard" className="text-neutral-400 hover:text-white transition">
-                  Leaderboard
+                <a href="/howtoplay" className="text-neutral-400 hover:text-white transition">
+                  How to play
                 </a>
               </li>
-              */}
               <li>
                 <a href="/about" className="text-neutral-400 hover:text-white transition">
                   About Us
                 </a>
               </li>
-              <li>
-                <a href="/contact" className="text-neutral-400 hover:text-white transition">
-                  Contact
+               <li>
+                <a href="/faq" className="text-neutral-400 hover:text-white transition">
+                  Faq
+                </a>
+              </li>
+               <li>
+                <a href="/tips" className="text-neutral-400 hover:text-white transition">
+                  Tips
                 </a>
               </li>
             </ul>
@@ -50,6 +49,11 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-semibold mb-4 text-sm">Legal</h4>
             <ul className="space-y-2 text-sm">
+              <li>
+                <a href="/contact" className="text-neutral-400 hover:text-white transition">
+                  Contact
+                </a>
+              </li>
               <li>
                 <a href="/privacy" className="text-neutral-400 hover:text-white transition">
                   Privacy Policy

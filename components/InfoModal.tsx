@@ -29,7 +29,7 @@ export default function InfoModal({ onClose }: InfoModalProps) {
 
         {/* Content */}
         <div className="space-y-6 text-neutral-300">
-          
+
           {/* Step 1 */}
           <div className="p-5 bg-neutral-800/50 rounded-xl border border-neutral-700">
             <div className="flex items-start gap-4">
@@ -39,7 +39,7 @@ export default function InfoModal({ onClose }: InfoModalProps) {
               <div>
                 <h3 className="text-xl font-bold text-white mb-2">Spin the Roulette</h3>
                 <p className="text-sm leading-relaxed">
-                  Select your preferred lane (Top, Jungle, Mid, ADC, Support) or choose "All" for any role. 
+                  Select your preferred lane (Top, Jungle, Mid, ADC, Support) or choose "All" for any role.
                   Click "Spin Roulette" to get a random champion assigned to you.
                 </p>
               </div>
@@ -55,7 +55,7 @@ export default function InfoModal({ onClose }: InfoModalProps) {
               <div>
                 <h3 className="text-xl font-bold text-white mb-2">Play League of Legends</h3>
                 <p className="text-sm leading-relaxed mb-3">
-                  Open League of Legends and play a match (Ranked or Normal) with the champion you got. 
+                  Open League of Legends and play a match (Ranked or Normal) with the champion you got.
                   Try your best to win!
                 </p>
                 <div className="bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-3 flex items-start gap-2">
@@ -77,7 +77,7 @@ export default function InfoModal({ onClose }: InfoModalProps) {
               <div>
                 <h3 className="text-xl font-bold text-white mb-2">Login & Verify (Optional)</h3>
                 <p className="text-sm leading-relaxed mb-3">
-                  After playing, login with your Riot ID and click "Verify Match" to confirm you played 
+                  After playing, login with your Riot ID and click "Verify Match" to confirm you played
                   with the assigned champion.
                 </p>
                 <div className="space-y-2 text-xs">
@@ -103,12 +103,19 @@ export default function InfoModal({ onClose }: InfoModalProps) {
               <div>
                 <h3 className="text-xl font-bold text-white mb-2">Progress & Compete</h3>
                 <p className="text-sm leading-relaxed">
-                  Level up by earning XP, unlock 15+ achievements, build win streaks, and compete 
+                  Level up by earning XP, unlock 15+ achievements, build win streaks, and compete
                   on the global leaderboard!
                 </p>
               </div>
             </div>
           </div>
+          <ul className="space-y-2 text-sm">
+            <li>
+              <a href="/howtoplay" className="text-xl font-bold hover:text-white transition">
+                More info +
+              </a>
+            </li>
+          </ul>
 
           {/* Features */}
           <div className="pt-4 border-t border-neutral-700">
@@ -146,7 +153,7 @@ export default function InfoModal({ onClose }: InfoModalProps) {
               <div className="flex items-center gap-2">
                 <div className="w-8 h-8 bg-red-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
                   <svg className="w-4 h-4 text-red-400" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                   </svg>
                 </div>
                 <span>Win streak tracking</span>
@@ -183,7 +190,7 @@ export default function InfoModal({ onClose }: InfoModalProps) {
                   Do I need to login?
                 </summary>
                 <p className="mt-2 ml-4 text-neutral-400">
-                  No, you can spin the roulette without logging in. But to track wins, earn XP, 
+                  No, you can spin the roulette without logging in. But to track wins, earn XP,
                   and unlock achievements, you need to login with your Riot account.
                 </p>
               </details>
@@ -193,7 +200,7 @@ export default function InfoModal({ onClose }: InfoModalProps) {
                   Is my password safe?
                 </summary>
                 <p className="mt-2 ml-4 text-neutral-400">
-                  We never ask for your password. We verify your account using Riot's official API 
+                  We never ask for your password. We verify your account using Riot's official API
                   with your Riot ID (GameName#TAG).
                 </p>
               </details>
@@ -208,7 +215,7 @@ export default function InfoModal({ onClose }: InfoModalProps) {
               </details>
             </div>
           </div>
-
+          
         </div>
 
         {/* Footer */}
@@ -241,7 +248,7 @@ export default function InfoModal({ onClose }: InfoModalProps) {
 
         {/* Content */}
         <div className="space-y-6 text-neutral-300">
-          
+
           {/* Step 1 */}
           <div className="p-5 bg-neutral-800/50 rounded-xl border border-neutral-700">
             <div className="flex items-start gap-4">
@@ -251,7 +258,7 @@ export default function InfoModal({ onClose }: InfoModalProps) {
               <div>
                 <h3 className="text-xl font-bold text-white mb-2">Spin the Roulette</h3>
                 <p className="text-sm leading-relaxed">
-                  Select your preferred lane (Top, Jungle, Mid, ADC, Support) or choose "All" for any role. 
+                  Select your preferred lane (Top, Jungle, Mid, ADC, Support) or choose "All" for any role.
                   Click "Spin Roulette" to get a random champion assigned to you.
                 </p>
               </div>
@@ -267,7 +274,7 @@ export default function InfoModal({ onClose }: InfoModalProps) {
               <div>
                 <h3 className="text-xl font-bold text-white mb-2">Play League of Legends</h3>
                 <p className="text-sm leading-relaxed mb-3">
-                  Open League of Legends and play a match (Ranked or Normal) with the champion you got. 
+                  Open League of Legends and play a match (Ranked or Normal) with the champion you got.
                   Try your best to win!
                 </p>
                 <div className="bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-3">
@@ -288,7 +295,7 @@ export default function InfoModal({ onClose }: InfoModalProps) {
               <div>
                 <h3 className="text-xl font-bold text-white mb-2">Login & Verify (Optional)</h3>
                 <p className="text-sm leading-relaxed mb-3">
-                  After playing, login with your Riot ID and click "Verify Match" to confirm you played 
+                  After playing, login with your Riot ID and click "Verify Match" to confirm you played
                   with the assigned champion.
                 </p>
                 <div className="space-y-2 text-xs">
@@ -314,7 +321,7 @@ export default function InfoModal({ onClose }: InfoModalProps) {
               <div>
                 <h3 className="text-xl font-bold text-white mb-2">Progress & Compete</h3>
                 <p className="text-sm leading-relaxed">
-                  Level up by earning XP, unlock 15+ achievements, build win streaks, and compete 
+                  Level up by earning XP, unlock 15+ achievements, build win streaks, and compete
                   on the global leaderboard!
                 </p>
               </div>
@@ -370,7 +377,7 @@ export default function InfoModal({ onClose }: InfoModalProps) {
                   Do I need to login?
                 </summary>
                 <p className="mt-2 ml-4 text-neutral-400">
-                  No, you can spin the roulette without logging in. But to track wins, earn XP, 
+                  No, you can spin the roulette without logging in. But to track wins, earn XP,
                   and unlock achievements, you need to login with your Riot account.
                 </p>
               </details>
@@ -380,7 +387,7 @@ export default function InfoModal({ onClose }: InfoModalProps) {
                   Is my password safe?
                 </summary>
                 <p className="mt-2 ml-4 text-neutral-400">
-                  We never ask for your password. We verify your account using Riot's official API 
+                  We never ask for your password. We verify your account using Riot's official API
                   with your Riot ID (GameName#TAG).
                 </p>
               </details>

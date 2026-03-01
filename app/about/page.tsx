@@ -1,166 +1,245 @@
 // app/about/page.tsx
-import { Target, Sparkles, Shield, Users, Phone, ArrowLeft } from 'lucide-react'
-
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 text-white">
-      <div className="max-w-4xl mx-auto px-6 py-16">
+    <main className="min-h-screen bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 p-6">
+      <div className="max-w-4xl mx-auto">
         
+        {/* Back Button */}
+        <a 
+          href="/"
+          className="inline-flex items-center gap-2 text-neutral-400 hover:text-white transition mb-6"
+        >
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+          </svg>
+          Back to Game
+        </a>
+
         {/* Header */}
-        <div className="mb-12">
-          <a href="/" className="text-neutral-400 hover:text-white transition text-sm mb-4 inline-flex items-center gap-2">
-            <ArrowLeft className="w-4 h-4" />
-            Back to Home
-          </a>
-          <h1 className="text-5xl font-bold mb-4">About League Roulette</h1>
-          <p className="text-xl text-neutral-400">
-            Your random champion challenge companion
-          </p>
+        <div className="mb-12 text-center">
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">About League Roulette</h1>
+          <p className="text-xl text-neutral-400">Challenging League of Legends players since 2024</p>
         </div>
 
-        {/* Content */}
-        <div className="space-y-8 text-neutral-300 leading-relaxed">
+        {/* Main Content */}
+        <div className="prose prose-invert max-w-none">
           
-          <section>
-            <h2 className="text-3xl font-bold text-white mb-4 flex items-center gap-3">
-              <div className="w-10 h-10 bg-blue-500/20 rounded-xl flex items-center justify-center">
-                <Target className="w-6 h-6 text-blue-400" />
-              </div>
-              Our Mission
-            </h2>
-            <p>
-              League Roulette was created to help League of Legends players rediscover the fun 
-              of the game by challenging them to play with random champions. We believe that 
-              stepping out of your comfort zone and trying new champions is the best way to 
-              improve as a player and keep the game fresh and exciting.
+          {/* Mission Section */}
+          <section className="mb-12 p-8 rounded-2xl bg-neutral-900 border border-neutral-800">
+            <h2 className="text-3xl font-bold text-white mb-4">Our Mission</h2>
+            <p className="text-neutral-300 text-lg leading-relaxed mb-4">
+              League Roulette was created to help League of Legends players break out of their comfort zones and become more versatile summoners. We believe that true mastery comes from being able to adapt to any situation, and what better way to practice adaptability than by playing random champions?
+            </p>
+            <p className="text-neutral-300 text-lg leading-relaxed">
+              Our platform combines the excitement of randomness with a structured progression system, making it fun and rewarding to challenge yourself with champions you might never have considered playing before.
             </p>
           </section>
 
-          <section>
-            <h2 className="text-3xl font-bold text-white mb-4 flex items-center gap-3">
-              <div className="w-10 h-10 bg-purple-500/20 rounded-xl flex items-center justify-center">
-                <Sparkles className="w-6 h-6 text-purple-400" />
+          {/* Story Section */}
+          <section className="mb-12 p-8 rounded-2xl bg-neutral-900 border border-neutral-800">
+            <h2 className="text-3xl font-bold text-white mb-4">The Story Behind League Roulette</h2>
+            <p className="text-neutral-300 text-lg leading-relaxed mb-4">
+              Every League of Legends player has experienced the frustration of facing the same champions over and over, or falling into the trap of only playing their comfort picks. League Roulette was born from a simple idea: what if we could make learning new champions fun and competitive?
+            </p>
+            <p className="text-neutral-300 text-lg leading-relaxed mb-4">
+              The concept started as a friendly challenge among friends, using a basic random number generator to pick champions. The excitement and laughter that came from watching each other struggle (and sometimes surprise everyone) with unfamiliar champions inspired us to create something more substantial.
+            </p>
+            <p className="text-neutral-300 text-lg leading-relaxed">
+              What began as a simple tool has evolved into a full-featured platform with automatic match verification, achievement systems, leaderboards, and a growing community of players who embrace the chaos and challenge of random champion selection.
+            </p>
+          </section>
+
+          {/* What We Offer Section */}
+          <section className="mb-12 p-8 rounded-2xl bg-neutral-900 border border-neutral-800">
+            <h2 className="text-3xl font-bold text-white mb-6">What We Offer</h2>
+            
+            <div className="space-y-6">
+              <div className="flex gap-4">
+                <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-[#C89B3C]/20 flex items-center justify-center text-2xl">
+                  🎰
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-white mb-2">Random Champion Selection</h3>
+                  <p className="text-neutral-400">
+                    Our sophisticated roulette system randomly selects champions from all 173 League of Legends champions. Filter by lane to focus on your preferred role, or go full random for the ultimate challenge.
+                  </p>
+                </div>
               </div>
-              What We Offer
-            </h2>
-            <ul className="space-y-3">
-              <li className="flex items-start gap-3">
-                <div className="w-8 h-8 bg-blue-500/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <Target className="w-4 h-4 text-blue-400" />
+
+              <div className="flex gap-4">
+                <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-[#C89B3C]/20 flex items-center justify-center text-2xl">
+                  ✅
                 </div>
                 <div>
-                  <strong className="text-white">Random Champion Generator:</strong> Get assigned 
-                  a random champion for your next game, with the option to filter by lane.
+                  <h3 className="text-xl font-semibold text-white mb-2">Automatic Verification</h3>
+                  <p className="text-neutral-400">
+                    Using the official Riot Games API, we automatically detect and verify your matches. No manual screenshots or proof needed - just play your game and we'll handle the rest.
+                  </p>
                 </div>
+              </div>
+
+              <div className="flex gap-4">
+                <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-[#C89B3C]/20 flex items-center justify-center text-2xl">
+                  📈
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-white mb-2">Progression System</h3>
+                  <p className="text-neutral-400">
+                    Earn XP and level up by completing challenges. Build win streaks, unlock achievements, and climb the ranks. Every successful challenge brings you closer to mastery.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex gap-4">
+                <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-[#C89B3C]/20 flex items-center justify-center text-2xl">
+                  🏆
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-white mb-2">Competitive Leaderboards</h3>
+                  <p className="text-neutral-400">
+                    Compete with players worldwide across multiple categories: total XP, win streaks, challenges completed, and more. See how you stack up against the best.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex gap-4">
+                <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-[#C89B3C]/20 flex items-center justify-center text-2xl">
+                  🎖️
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-white mb-2">Achievement System</h3>
+                  <p className="text-neutral-400">
+                    Unlock special achievements by reaching milestones. From your first victory to incredible win streaks, celebrate your accomplishments and show off your dedication.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Why Random Champions Section */}
+          <section className="mb-12 p-8 rounded-2xl bg-gradient-to-br from-[#C89B3C]/10 to-transparent border border-[#C89B3C]/30">
+            <h2 className="text-3xl font-bold text-white mb-4">Why Random Champions?</h2>
+            <p className="text-neutral-300 text-lg leading-relaxed mb-4">
+              Playing random champions might seem chaotic, but it's one of the best ways to improve as a League of Legends player. Here's why:
+            </p>
+            
+            <ul className="space-y-3 text-neutral-300 text-lg">
+              <li className="flex gap-3">
+                <span className="text-[#C89B3C] flex-shrink-0">•</span>
+                <span><strong className="text-white">Learn Champion Abilities:</strong> Understanding what every champion does makes you a better player, whether you're playing with or against them.</span>
               </li>
-              <li className="flex items-start gap-3">
-                <div className="w-8 h-8 bg-green-500/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <svg className="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                </div>
-                <div>
-                  <strong className="text-white">Match Verification:</strong> We use Riot's official 
-                  API to verify that you played with the assigned champion and track your wins.
-                </div>
+              <li className="flex gap-3">
+                <span className="text-[#C89B3C] flex-shrink-0">•</span>
+                <span><strong className="text-white">Improve Fundamentals:</strong> When you can't rely on muscle memory, you focus on core mechanics like positioning, map awareness, and decision-making.</span>
               </li>
-              <li className="flex items-start gap-3">
-                <div className="w-8 h-8 bg-yellow-500/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <svg className="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                  </svg>
-                </div>
-                <div>
-                  <strong className="text-white">Progression System:</strong> Earn XP, level up, 
-                  unlock achievements, and build win streaks as you complete challenges.
-                </div>
+              <li className="flex gap-3">
+                <span className="text-[#C89B3C] flex-shrink-0">•</span>
+                <span><strong className="text-white">Break Bad Habits:</strong> Playing new champions forces you to think differently and adapt your playstyle.</span>
               </li>
-              <li className="flex items-start gap-3">
-                <div className="w-8 h-8 bg-purple-500/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <svg className="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                  </svg>
-                </div>
-                <div>
-                  <strong className="text-white">Global Competition:</strong> Compete with players 
-                  worldwide on the leaderboard.
-                </div>
+              <li className="flex gap-3">
+                <span className="text-[#C89B3C] flex-shrink-0">•</span>
+                <span><strong className="text-white">Discover New Favorites:</strong> You might find your new main champion through League Roulette!</span>
+              </li>
+              <li className="flex gap-3">
+                <span className="text-[#C89B3C] flex-shrink-0">•</span>
+                <span><strong className="text-white">Have More Fun:</strong> Predictability gets boring. Random champions keep every game fresh and exciting.</span>
               </li>
             </ul>
           </section>
 
-          <section>
-            <h2 className="text-3xl font-bold text-white mb-4 flex items-center gap-3">
-              <div className="w-10 h-10 bg-green-500/20 rounded-xl flex items-center justify-center">
-                <Shield className="w-6 h-6 text-green-400" />
-              </div>
-              Privacy & Security
-            </h2>
-            <p className="mb-3">
-              We take your privacy seriously. League Roulette:
+          {/* Community Section */}
+          <section className="mb-12 p-8 rounded-2xl bg-neutral-900 border border-neutral-800">
+            <h2 className="text-3xl font-bold text-white mb-4">Join Our Community</h2>
+            <p className="text-neutral-300 text-lg leading-relaxed mb-4">
+              League Roulette is more than just a tool - it's a community of players who embrace challenge and growth. Whether you're a seasoned veteran or a newer player looking to expand your champion pool, you'll find like-minded summoners here.
             </p>
-            <ul className="space-y-2 list-disc ml-6">
-              <li>Never asks for your password</li>
-              <li>Uses Riot's official API for secure authentication</li>
-              <li>Only stores your public Riot ID and game statistics</li>
-              <li>Does not sell or share your data with third parties</li>
-              <li>Complies with GDPR and privacy regulations</li>
-            </ul>
-          </section>
-
-          <section>
-            <h2 className="text-3xl font-bold text-white mb-4 flex items-center gap-3">
-              <div className="w-10 h-10 bg-orange-500/20 rounded-xl flex items-center justify-center">
-                <Users className="w-6 h-6 text-orange-400" />
-              </div>
-              Community
-            </h2>
-            <p>
-              League Roulette is made by gamers, for gamers. We're constantly working to improve 
-              the experience based on your feedback. Join our Discord community to share your 
-              experiences, suggest features, and connect with other players taking on the challenge!
+            <p className="text-neutral-300 text-lg leading-relaxed mb-4">
+              Share your epic comeback stories, discuss strategies for difficult champions, and celebrate achievements together. The leaderboards foster healthy competition, while the shared experience of random champion chaos creates lasting connections.
+            </p>
+            <p className="text-neutral-300 text-lg leading-relaxed">
+              We're constantly improving the platform based on community feedback. Have a suggestion? Found a bug? Want to share your experience? We'd love to hear from you on our <a href="/contact" className="text-[#C89B3C] hover:text-[#d9aa44] underline">contact page</a>.
             </p>
           </section>
 
-          <section>
-            <h2 className="text-3xl font-bold text-white mb-4 flex items-center gap-3">
-              <div className="w-10 h-10 bg-blue-500/20 rounded-xl flex items-center justify-center">
-                <Phone className="w-6 h-6 text-blue-400" />
+          {/* Values Section */}
+          <section className="mb-12 p-8 rounded-2xl bg-neutral-900 border border-neutral-800">
+            <h2 className="text-3xl font-bold text-white mb-6">Our Values</h2>
+            
+            <div className="grid md:grid-cols-3 gap-6">
+              <div>
+                <h3 className="text-xl font-semibold text-[#C89B3C] mb-2">🎯 Fair Play</h3>
+                <p className="text-neutral-400">
+                  We use official Riot Games APIs to ensure all verification is accurate and fair. No cheating, no shortcuts - just honest gameplay.
+                </p>
               </div>
-              Get in Touch
-            </h2>
-            <p className="mb-4">
-              Have questions, feedback, or suggestions? We'd love to hear from you!
+              
+              <div>
+                <h3 className="text-xl font-semibold text-[#C89B3C] mb-2">🔒 Privacy</h3>
+                <p className="text-neutral-400">
+                  Your data is protected and never shared. We only access the information necessary to verify matches and track your progress.
+                </p>
+              </div>
+              
+              <div>
+                <h3 className="text-xl font-semibold text-[#C89B3C] mb-2">🚀 Innovation</h3>
+                <p className="text-neutral-400">
+                  We're constantly adding new features and improvements. League Roulette evolves with the needs of our community.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* Stats Section */}
+          <section className="mb-12 p-8 rounded-2xl bg-gradient-to-br from-blue-500/10 to-purple-500/10 border border-blue-500/30">
+            <h2 className="text-3xl font-bold text-white mb-6 text-center">League Roulette by the Numbers</h2>
+            
+            <div className="grid md:grid-cols-4 gap-6 text-center">
+              <div>
+                <div className="text-4xl font-bold text-[#C89B3C] mb-2">173</div>
+                <div className="text-neutral-400">Champions Available</div>
+              </div>
+              
+              <div>
+                <div className="text-4xl font-bold text-[#C89B3C] mb-2">5</div>
+                <div className="text-neutral-400">Lane Filters</div>
+              </div>
+              
+              <div>
+                <div className="text-4xl font-bold text-[#C89B3C] mb-2">∞</div>
+                <div className="text-neutral-400">Possible Combinations</div>
+              </div>
+              
+              <div>
+                <div className="text-4xl font-bold text-[#C89B3C] mb-2">24/7</div>
+                <div className="text-neutral-400">Automatic Verification</div>
+              </div>
+            </div>
+          </section>
+
+          {/* Call to Action */}
+          <section className="text-center p-8 rounded-2xl bg-gradient-to-r from-[#C89B3C]/20 to-transparent border border-[#C89B3C]/50">
+            <h2 className="text-3xl font-bold text-white mb-4">Ready to Challenge Yourself?</h2>
+            <p className="text-neutral-300 text-lg mb-6">
+              Join thousands of players who are expanding their champion pools and having fun doing it.
             </p>
-            <div className="flex gap-4">
-              <a 
-                href="/contact" 
-                className="px-6 py-3 bg-blue-600 hover:bg-blue-500 rounded-xl font-semibold transition"
+            <div className="flex gap-4 justify-center flex-wrap">
+              <a
+                href="/"
+                className="px-8 py-4 rounded-xl bg-[#C89B3C] text-neutral-950 font-bold hover:bg-[#d9aa44] transition text-lg"
               >
-                Contact Us
+                Start Playing Now
               </a>
-              <a 
-                href="https://discord.gg/leagueroulette" 
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-6 py-3 bg-neutral-800 hover:bg-neutral-700 rounded-xl font-semibold transition"
+              <a
+                href="/how-to-play"
+                className="px-8 py-4 rounded-xl bg-neutral-800 text-white font-bold hover:bg-neutral-700 transition text-lg"
               >
-                Join Discord
+                Learn How to Play
               </a>
             </div>
           </section>
 
-          <section className="pt-8 border-t border-neutral-800">
-            <p className="text-sm text-neutral-500">
-              League Roulette isn't endorsed by Riot Games and doesn't reflect the views or 
-              opinions of Riot Games or anyone officially involved in producing or managing 
-              Riot Games properties. League of Legends and Riot Games are trademarks or 
-              registered trademarks of Riot Games, Inc.
-            </p>
-          </section>
-
         </div>
       </div>
-    </div>
+    </main>
   )
 }
