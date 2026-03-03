@@ -12,7 +12,7 @@ export class AutoVerifier {
     private championId: number,
     private challengeCreatedAt: string | null,
     private onSuccess: (result: any) => void,
-    private onFail: () => void,
+    private onFail: (result: any) => void,
     private sessionToken: string
   ) {}
 

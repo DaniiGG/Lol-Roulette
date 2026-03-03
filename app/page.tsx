@@ -233,11 +233,12 @@ export default function Home() {
         setIsAutoVerifying(false)
         await handleVictory(result)
       },
-      async () => {
+      async (result) => {
         // Fail callback
         console.log('❌ Auto-verification failed')
+        setVerificationResult(result)
         setIsAutoVerifying(false)
-        await handleFailure()
+        await handleFailure(result)
       },
       sessionToken
     )
@@ -298,7 +299,7 @@ export default function Home() {
       if (result.success) {
         await handleVictory(result)
       } else {
-        await handleFailure()
+        await handleFailure(result)
       }
 
       // Limpiar active challenge
@@ -360,7 +361,7 @@ export default function Home() {
     })
   }
 
-  const handleFailure = async () => {
+  const handleFailure = async (matchData: any) => {
     if (!user) return
     // ✅ NUEVO: Marcar challenge como failed en lugar de solo borrarlo
     if (activeChallenge) {
@@ -368,7 +369,9 @@ export default function Home() {
         .from('challenges')
         .update({
           status: 'failed',
-          completed_at: new Date().toISOString()
+          completed_at: new Date().toISOString(),
+           match_id: matchData.matchId,
+           match_data: matchData.stats
         })
         .eq('id', activeChallenge.id)
     }
