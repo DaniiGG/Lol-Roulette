@@ -158,7 +158,7 @@ export default function LeaderboardPage() {
               <div className="flex-1">
                 <p className="text-sm text-neutral-400 mb-1">Your Rank</p>
                 <p className="text-white font-semibold">
-                  {userRank.gameName}<span className="text-neutral-500">#{userRank.tagLine}</span>
+                  {userRank.gameName}
                 </p>
               </div>
               <div className="text-right">
@@ -278,7 +278,7 @@ export default function LeaderboardPage() {
                       <div className="flex items-center gap-2 mb-1">
                         <p className="text-white font-bold text-lg truncate">
                           {entry.gameName}
-                          <span className="text-neutral-500">#{entry.tagLine}</span>
+                          
                         </p>
                         {isCurrentUser && (
                           <span className="px-2 py-1 rounded-lg bg-[#C89B3C] text-neutral-950 text-xs font-bold">

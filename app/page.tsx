@@ -9,7 +9,6 @@ import Cookies from 'js-cookie'
 import { Info } from 'lucide-react'
 import AdContainer from "@/components/AdContainer"
 import InfoModal from "@/components/InfoModal"
-import Footer from "@/components/Footer"
 
 // Components
 import LaneSelector from "@/components/LaneSelector"
@@ -447,14 +446,11 @@ export default function Home() {
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-neutral-600/10 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="fixed top-0 left-0 w-full z-50 text-center text-sm bg-yellow-500 border-b border-yellow-500/60 p-3 text-black">
-        This app is recently created, and it is currently in beta. Some features may not work as expected. If you encounter any issues, please report them on our contact page.
-      </div>
 
       {/* Content */}
       <div className="relative z-10 min-h-screen p-6">
 
-        <div className="max-w-7xl mt-16 mx-auto">
+        <div className="max-w-7xl mx-auto">
 
           {/* Header con Login/Logout */}
           <div className="flex justify-between items-center mb-4">
@@ -647,11 +643,6 @@ export default function Home() {
 
 
           </div>
-
-
-
-          {/* Footer */}
-          <Footer />
         </div>
       </div>
 

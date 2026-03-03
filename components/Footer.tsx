@@ -3,7 +3,7 @@
 
 export default function Footer() {
   return (
-    <footer className="mt-16 pb-8 border-t border-neutral-800/50">
+    <footer className="pb-8 border-t border-neutral-800/50">
       <div className="max-w-7xl mx-auto px-6">
         
         {/* Main Footer */}
