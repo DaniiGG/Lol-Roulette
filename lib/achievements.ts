@@ -194,10 +194,10 @@ export function checkAchievement(
 // Calcular nivel basado en XP
 export function calculateLevel(xp: number): number {
   let level = 1
-  let xpAccumulated = 0
+  let totalXp = 0
 
-  while (xp >= xpAccumulated + 100 * (level + 1)) {
-    xpAccumulated += 100 * (level + 1)
+  while (xp >= totalXp + 100 * (level + 1)) {
+    totalXp += 100 * (level + 1)
     level++
   }
 
