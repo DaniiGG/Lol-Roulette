@@ -205,10 +205,6 @@ export function calculateLevel(xp: number): number {
 }
 
 // Calcular XP necesario para siguiente nivel
-export function xpForNextLevel(currentLevel: number): number {
-  return 100 * (currentLevel + 1)
-}
-
 export function levelProgress(xp: number): number {
   const level = calculateLevel(xp)
 
@@ -220,5 +216,8 @@ export function levelProgress(xp: number): number {
   const xpIntoLevel = xp - totalXpBeforeLevel
   const xpNeeded = 100 * (level + 1)
 
-  return Math.floor((xpIntoLevel / xpNeeded) * 100)
+  return Math.min(
+    100,
+    Math.floor((xpIntoLevel / xpNeeded) * 100)
+  )
 }
