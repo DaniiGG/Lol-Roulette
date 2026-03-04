@@ -17,7 +17,7 @@ interface UserStatsProps {
 }
 
 export default function UserStats({ user }: UserStatsProps) {
-  const progress = levelProgress(user.xp, user.level)
+  const progress = levelProgress(user.xp)
 
   return (
     <div className="bg-neutral-900/40 backdrop-blur-xl rounded-2xl border border-neutral-800/50 p-6">
