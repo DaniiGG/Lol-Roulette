@@ -52,8 +52,8 @@ export default function AchievementBadge({
       `}
     >
       {/* Icon */}
-      <div className="text-4xl mb-2 text-center">
-        {achievement.icon}
+      <div className="text-4xl mb-2 flex items-center justify-center">
+        <img src={achievement.icon} alt={achievement.name} className="w-20 h-20" />
       </div>
 
       {/* Name */}

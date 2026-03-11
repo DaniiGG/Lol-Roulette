@@ -31,7 +31,7 @@ export const ACHIEVEMENTS: Record<AchievementType, AchievementDefinition> = {
     type: 'first_win',
     name: 'First Blood',
     description: 'Complete your first challenge',
-    icon: '🎯',
+    icon: '/images/achievements/firstblood.png',
     rarity: 'common',
     xpReward: 50
   },
@@ -39,7 +39,7 @@ export const ACHIEVEMENTS: Record<AchievementType, AchievementDefinition> = {
     type: 'streak_3',
     name: 'On Fire',
     description: 'Win 3 challenges in a row',
-    icon: '🔥',
+    icon: '/images/achievements/onfire.png',
     rarity: 'common',
     xpReward: 75
   },
@@ -47,7 +47,7 @@ export const ACHIEVEMENTS: Record<AchievementType, AchievementDefinition> = {
     type: 'streak_5',
     name: 'Unstoppable',
     description: 'Win 5 challenges in a row',
-    icon: '⚡',
+    icon: '/images/achievements/unstoppable.png',
     rarity: 'rare',
     xpReward: 150
   },
@@ -55,7 +55,7 @@ export const ACHIEVEMENTS: Record<AchievementType, AchievementDefinition> = {
     type: 'streak_10',
     name: 'Legendary',
     description: 'Win 10 challenges in a row',
-    icon: '👑',
+    icon: '/images/achievements/legendary.png',
     rarity: 'legendary',
     xpReward: 300
   },
@@ -63,7 +63,7 @@ export const ACHIEVEMENTS: Record<AchievementType, AchievementDefinition> = {
     type: 'challenges_5',
     name: 'Getting Started',
     description: 'Complete 5 challenges',
-    icon: '📈',
+    icon: '/images/achievements/gettingstarted.png',
     rarity: 'common',
     xpReward: 100
   },
@@ -71,7 +71,7 @@ export const ACHIEVEMENTS: Record<AchievementType, AchievementDefinition> = {
     type: 'challenges_10',
     name: 'Dedicated',
     description: 'Complete 10 challenges',
-    icon: '💪',
+    icon: '/images/achievements/dedicated.png',
     rarity: 'common',
     xpReward: 150
   },
@@ -79,7 +79,7 @@ export const ACHIEVEMENTS: Record<AchievementType, AchievementDefinition> = {
     type: 'challenges_25',
     name: 'Veteran',
     description: 'Complete 25 challenges',
-    icon: '🎖️',
+    icon: '/images/achievements/veteran.png',
     rarity: 'rare',
     xpReward: 300
   },
@@ -87,7 +87,7 @@ export const ACHIEVEMENTS: Record<AchievementType, AchievementDefinition> = {
     type: 'challenges_50',
     name: 'Expert',
     description: 'Complete 50 challenges',
-    icon: '⭐',
+    icon: '/images/achievements/expert.png',
     rarity: 'epic',
     xpReward: 500
   },
@@ -95,7 +95,7 @@ export const ACHIEVEMENTS: Record<AchievementType, AchievementDefinition> = {
     type: 'challenges_100',
     name: 'Master',
     description: 'Complete 100 challenges',
-    icon: '💎',
+    icon: '/images/achievements/master.png',
     rarity: 'legendary',
     xpReward: 750
   },
@@ -103,17 +103,17 @@ export const ACHIEVEMENTS: Record<AchievementType, AchievementDefinition> = {
     type: 'level_10',
     name: 'Rising Star',
     description: 'Reach level 10',
-    icon: '🌟',
-    rarity: 'common',
-    xpReward: 200
+    icon: '/images/achievements/risingstar.png',
+    rarity: 'rare',
+    xpReward: 300
   },
   level_25: {
     type: 'level_25',
     name: 'Champion',
     description: 'Reach level 25',
     icon: '🏆',
-    rarity: 'rare',
-    xpReward: 400
+    rarity: 'epic',
+    xpReward: 500
   },
   level_50: {
     type: 'level_50',

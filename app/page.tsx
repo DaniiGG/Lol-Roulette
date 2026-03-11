@@ -658,6 +658,9 @@ export default function Home() {
       {showLoginModal && (
         <RSOLoginModal
           onClose={() => setShowLoginModal(false)}
+           onSuccess={(token, user) => {
+    console.log('Logged in!', token, user)
+  }}
 
         />
       )}
