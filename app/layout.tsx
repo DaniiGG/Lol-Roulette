@@ -121,6 +121,18 @@ export default function RootLayout({
     })(window,document,'script','dataLayer','GTM-WG86XDJF');`
           }}
         />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-2D2RD00KWB"
+          strategy="afterInteractive"
+        />
+        <Script id="ga-script" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-2D2RD00KWB');
+          `}
+        </Script>
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
