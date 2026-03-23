@@ -31,7 +31,7 @@ export const metadata: Metadata = {
       }
     ]
   },
-  
+
   // Twitter Card
   twitter: {
     card: 'summary_large_image',
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     images: ['/og-image.png'],
     creator: '@LeagueRoulette' // Tu Twitter si tienes
   },
-  
+
   // Robots
   robots: {
     index: true,
@@ -53,12 +53,12 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  
+
   // Verification (Google Search Console)
   verification: {
     google: 'tu-codigo-de-verificacion-aqui', // Lo obtienes después
   },
-  
+
   // Otros
   alternates: {
     canonical: 'https://lol-roulette-nine.vercel.app',
@@ -82,8 +82,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-        <meta name="google-adsense-account" content="ca-pub-1048626365060254"></meta>
-        <meta name="google-site-verification" content="3sVvOH8RoSBRMz3-yWd4pFKr5fcoclC4VZXl7GNi4ic" />
+      <meta name="google-adsense-account" content="ca-pub-1048626365060254"></meta>
+      <meta name="google-site-verification" content="3sVvOH8RoSBRMz3-yWd4pFKr5fcoclC4VZXl7GNi4ic" />
       <head>
         {/* Schema.org JSON-LD */}
         <script
@@ -110,15 +110,34 @@ export default function RootLayout({
             })
           }}
         />
+        <Script
+          id="gtm-script"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id=GTM-WG86XDJF'+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WG86XDJF');`
+          }}
+        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-WG86XDJF"
+            height="0"
+            width="0"
+            style={{ display: 'none', visibility: 'hidden' }}
+          />
+        </noscript>
         <Navbar />
         <div className="pt-16">
           {children}
         </div>
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );
