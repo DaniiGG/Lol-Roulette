@@ -6,9 +6,27 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
-  title: 'Random Champion Generator for League of Legends (LoL Roulette)',
-  description: 'Spin the roulette to get a random League of Legends champion! Track your wins, earn XP, unlock achievements, and compete on the leaderboard. Free LoL random champion generator.',
-  keywords: 'league of legends, lol, random champion, champion roulette, lol roulette, random pick, league challenge, lol challenge, summoner stats, league tracker',
+  title: 'LoL Random Champion Generator 🎯 | Spin the Roulette & Get a Random Pick',
+  description: 'Not sure what to play in League of Legends? 🎯 Spin the random champion roulette, challenge your friends, track wins, earn XP, and climb the leaderboard. Free LoL randomizer!',
+  keywords: [
+    "lol roullette",
+    "league of legends random champion generator",
+    "random champ",
+    'league roulette',
+    'lol random champion generator',
+    'league of legends random picker',
+    'lol roulette champion',
+    'random champion lol challenge',
+    'league of legends roulette game',
+    'what champion should i play lol',
+    'lol randomizer with friends',
+    'league of legends challenge generator',
+    'random champion generator for lol',
+    'lol champion roulette',
+    'league of legends random champion challenge',
+    'random champion generator for league of legends',
+    'lol random champion generator free',
+  ],
   authors: [{ name: 'League Roulette' }],
   creator: 'League Roulette',
   publisher: 'League Roulette',
@@ -84,6 +102,7 @@ export default function RootLayout({
     <html lang="en">
       <meta name="google-adsense-account" content="ca-pub-1048626365060254"></meta>
       <meta name="google-site-verification" content="3sVvOH8RoSBRMz3-yWd4pFKr5fcoclC4VZXl7GNi4ic" />
+      
       <head>
         {/* Schema.org JSON-LD */}
         <script
@@ -92,9 +111,12 @@ export default function RootLayout({
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'WebApplication',
-              name: 'League Roulette',
+              name: 'League Roulette | LoL Random Champion Generator',
+              keywords: 'lol random champion, league of legends randomizer',
               description: 'Random champion generator and challenge tracker for League of Legends',
               url: 'https://lol-roulette-nine.vercel.app',
+              inLanguage: 'en',
+              isAccessibleForFree: true,
               applicationCategory: 'Game',
               operatingSystem: 'Web',
               offers: {

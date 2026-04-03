@@ -449,7 +449,7 @@ export default function Home() {
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-neutral-600/10 rounded-full blur-3xl"></div>
       </div>
 
-
+{/*<h6 className="w-100% bg-red-500 text-white text-center py-2">LOGIN IS CURRENTLY DISABLED</h6>*/}
       {/* Content */}
       <div className="relative z-10 min-h-screen p-6">
 
