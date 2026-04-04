@@ -37,7 +37,7 @@ export default function BlogIndexPage() {
               className="flex h-full flex-col rounded-3xl border border-neutral-800 bg-neutral-900 p-6"
             >
               <p className="mb-3 text-xs uppercase tracking-[0.25em] text-neutral-500">
-                SEO article
+                Lol Roulette article
               </p>
               <h2 className="mb-3 text-2xl font-semibold text-white">
                 {post.title}
