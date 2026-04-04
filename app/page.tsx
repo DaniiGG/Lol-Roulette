@@ -2,6 +2,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import Link from "next/link"
 import { supabase } from "@/lib/supabase"
 import { ACHIEVEMENTS, checkAchievement, calculateLevel } from "@/lib/achievements"
 import confetti from "canvas-confetti"
@@ -643,9 +644,60 @@ export default function Home() {
                 />
               )}
             </div>
-
-
           </div>
+
+          <section className="mx-auto mt-16 max-w-5xl">
+            <div className="mb-8 text-center">
+              <p className="mb-3 text-sm uppercase tracking-[0.3em] text-[#C89B3C]">
+                Blog
+              </p>
+              <h2 className="mb-4 text-3xl font-semibold text-white md:text-4xl">
+                More ways to use League Roulette
+              </h2>
+              <p className="mx-auto max-w-3xl text-lg leading-8 text-neutral-400">
+                Read practical guides about random champion picks, fun League of Legends
+                challenges, and fresh ideas for deciding what to play next.
+              </p>
+            </div>
+
+            <div className="grid gap-6 md:grid-cols-3">
+              <Link
+                href="/blog/what-champion-should-i-play"
+                className="rounded-3xl border border-neutral-800 bg-neutral-900/80 p-6 transition hover:border-[#C89B3C]/40 hover:bg-neutral-900"
+              >
+                <h3 className="mb-3 text-2xl font-semibold text-white">
+                  What Champion Should I Play?
+                </h3>
+                <p className="leading-7 text-neutral-400">
+                  A guide for players who want fast inspiration before their next queue.
+                </p>
+              </Link>
+
+              <Link
+                href="/blog/lol-random-challenge"
+                className="rounded-3xl border border-neutral-800 bg-neutral-900/80 p-6 transition hover:border-[#C89B3C]/40 hover:bg-neutral-900"
+              >
+                <h3 className="mb-3 text-2xl font-semibold text-white">
+                  Fun LoL Random Challenge Ideas
+                </h3>
+                <p className="leading-7 text-neutral-400">
+                  Formats for solo players, duos, and full groups of friends.
+                </p>
+              </Link>
+
+              <Link
+                href="/blog/fun-lol-challenges"
+                className="rounded-3xl border border-neutral-800 bg-neutral-900/80 p-6 transition hover:border-[#C89B3C]/40 hover:bg-neutral-900"
+              >
+                <h3 className="mb-3 text-2xl font-semibold text-white">
+                  Fun Ways to Play League of Legends
+                </h3>
+                <p className="leading-7 text-neutral-400">
+                  Challenge ideas that make normal League sessions feel fresh again.
+                </p>
+              </Link>
+            </div>
+          </section>
         </div>
       </div>
 
