@@ -1,10 +1,22 @@
 // app/contact/page.tsx
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Mail, MessageSquare, Send, CheckCircle, ArrowLeft, Lightbulb } from 'lucide-react'
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://lol-roulette-nine.vercel.app' },
+    { '@type': 'ListItem', position: 2, name: 'Contact', item: 'https://lol-roulette-nine.vercel.app/contact' },
+  ],
+}
+
 export default function ContactPage() {
+  useEffect(() => {
+    document.title = 'Contact Us - League Roulette | Support & Feedback'
+  }, [])
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -29,6 +41,10 @@ export default function ContactPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 text-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <div className="max-w-4xl mx-auto px-6 py-16">
         
         {/* Header */}

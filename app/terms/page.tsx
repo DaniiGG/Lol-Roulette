@@ -1,6 +1,31 @@
 // app/terms/page.tsx
+import type { Metadata } from "next"
 import Link from 'next/link'
 import { ArrowLeft } from 'lucide-react'
+
+export const metadata: Metadata = {
+  title: 'Terms of Service - League Roulette',
+  description: 'League Roulette terms of service. Read the terms governing your use of our free LoL random champion generator and challenge tracking platform.',
+  keywords: ['league roulette terms of service', 'lol random champion terms', 'league of legends challenge terms', 'terms of service', 'terms and conditions'],
+  alternates: {
+    canonical: '/terms',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+}
+
+const baseUrl = 'https://lol-roulette-nine.vercel.app'
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: baseUrl },
+    { '@type': 'ListItem', position: 2, name: 'Terms of Service', item: `${baseUrl}/terms` },
+  ],
+}
 
 export default function TermsOfService() {
   return (
@@ -14,6 +39,11 @@ export default function TermsOfService() {
           <ArrowLeft className="w-4 h-4" />
           <span>Back to Home</span>
         </Link>
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        />
 
         {/* Header */}
         <div className="mb-12">

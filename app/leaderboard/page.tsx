@@ -6,6 +6,15 @@ import { supabase } from '@/lib/supabase'
 import Cookies from 'js-cookie'
 import Link from 'next/link'
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://lol-roulette-nine.vercel.app' },
+    { '@type': 'ListItem', position: 2, name: 'Leaderboard', item: 'https://lol-roulette-nine.vercel.app/leaderboard' },
+  ],
+}
+
 interface LeaderboardEntry {
   rank: number
   id: string
@@ -30,6 +39,9 @@ const CATEGORIES = [
 ]
 
 export default function LeaderboardPage() {
+  useEffect(() => {
+    document.title = 'Leaderboard - League Roulette | Compete with Top Players'
+  }, [])
   const [category, setCategory] = useState<Category>('xp')
   const [leaderboard, setLeaderboard] = useState<LeaderboardEntry[]>([])
   const [loading, setLoading] = useState(true)
@@ -124,6 +136,10 @@ export default function LeaderboardPage() {
 
   return (
     <main className="min-h-screen bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 p-6">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <div className="max-w-4xl mx-auto">
         
         {/* Header */}

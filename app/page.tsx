@@ -21,6 +21,8 @@ import VerificationResult from "@/components/VerificationResult"
 import AutoVerifyIndicator from "@/components/AutoVerifyIndicator"
 import RouletteWheel from "@/components/RouletteWheel"
 import SlotMachineRoulette from "@/components/Slotmachineroulette"
+import SEOContent from "@/components/SEOContent"
+import ChampionStats from "@/components/ChampionStats"
 import { AutoVerifier } from "@/lib/auto-verify"
 import RSOLoginModal from "@/components/RSOLoginmodal"
 
@@ -47,8 +49,8 @@ export default function Home() {
 
   // Active challenge tracking (para evitar spins infinitos)
   const [activeChallenge, setActiveChallenge] = useState<any>(null)
-  const [rerollCount, setRerollCount] = useState(0)  // Track rerolls (0-2 allowed)
-  const MAX_REROLLS = 2  // 3 total spins = 1 initial + 2 rerolls
+  const [rerollCount, setRerollCount] = useState(0)  // Track rerolls (unlimited for now)
+  const MAX_REROLLS = Infinity  // Unlimited spins
 
   // Info modal
   const [showInfoModal, setShowInfoModal] = useState(false)
@@ -535,13 +537,19 @@ export default function Home() {
             <div className={`${user ? 'lg:col-span-2' : 'max-w-2xl mx-auto w-full'} space-y-6`}>
               {/* Header */}
               <div className="text-center">
-                <h1 className="text-5xl md:text-6xl font-extralight tracking-tight text-white mb-4 opacity-90">
-                  League Roulette
+                <h1 className="text-5xl md:text-6xl font-extralight tracking-tight text-white mb-4 opacity-90 leading-tight">
+                  Free Random LoL Champion Generator | League Roulette
                 </h1>
+                <div className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500/20 to-blue-500/20 px-6 py-3 rounded-full border border-emerald-500/30 mb-6">
+                  <span className="text-emerald-400 text-sm font-semibold">⭐ Free</span>
+                  <span className="text-blue-400 text-sm font-semibold">• Instant</span>
+                  <span className="text-neutral-400 text-sm font-semibold">• No Login Required</span>
+                  <span className="text-orange-400 text-sm font-semibold">• Season 2026</span>
+                </div>
                 <div className="flex items-center justify-center gap-3">
                   <div className="h-px w-12 bg-gradient-to-r from-transparent via-neutral-500 to-transparent"></div>
                   <p className="text-neutral-400 font-light tracking-widest text-sm uppercase">
-                    Discover your champion
+                    League of Legends Random Champion Picker – Ranked, ARAM & Custom Games
                   </p>
                   <div className="h-px w-12 bg-gradient-to-r from-transparent via-neutral-500 to-transparent"></div>
                 </div>
@@ -554,17 +562,7 @@ export default function Home() {
                 disabled={!!(user && rerollCount > MAX_REROLLS)}
               />
 
-              {/* Reroll limit warning */}
-              {user && rerollCount > MAX_REROLLS && (
-                <div className="p-4 rounded-xl bg-orange-500/10 border border-orange-500/30 flex items-center gap-3">
-                  <svg className="w-5 h-5 text-orange-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" />
-                  </svg>
-                  <p className="text-orange-300 text-sm">
-                    You've used all 3 spins! Play with <strong>{champ?.name || 'your champion'}</strong> or verify your match to get new spins.
-                  </p>
-                </div>
-              )}
+
 
               {/* ★ RULETA VISUAL ★ */}
               <RouletteWheel
@@ -574,6 +572,11 @@ export default function Home() {
                 rerollsUsed={user ? rerollCount : 0}
                 maxRerolls={MAX_REROLLS}
               />
+
+              {/* Champion Stats & Build */}
+              {champ && (
+                <ChampionStats championId={champ.id} championName={champ.name} />
+              )}
 
               {/* Verify button (solo si logueado, hay campeón y no está auto-verificando) */}
               {user && champ && !verificationResult && !isAutoVerifying && (
@@ -646,13 +649,16 @@ export default function Home() {
             </div>
           </div>
 
+          {/* SEO Rich Content */}
+          <SEOContent />
+
           <section className="mx-auto mt-16 max-w-5xl">
             <div className="mb-8 text-center">
               <p className="mb-3 text-sm uppercase tracking-[0.3em] text-[#C89B3C]">
                 Blog
               </p>
               <h2 className="mb-4 text-3xl font-semibold text-white md:text-4xl">
-                More ways to use League Roulette
+                Random LoL Challenge Guides & Champion Inspiration
               </h2>
               <p className="mx-auto max-w-3xl text-lg leading-8 text-neutral-400">
                 Read practical guides about random champion picks, fun League of Legends

@@ -6,7 +6,7 @@ export default function SEOContent() {
     <div className="max-w-4xl mx-auto mt-16 mb-8 px-6">
       {/* Hidden H1 for SEO */}
       <h1 className="sr-only">
-        League of Legends Random Champion Generator - Free LoL Roulette
+        Free Random League of Legends Champion Generator | LoL Roulette & Picker 2026 - Ranked, ARAM, Custom
       </h1>
       
       {/* SEO Content Section */}
@@ -70,6 +70,50 @@ export default function SEOContent() {
 
         <section>
           <h2 className="text-2xl font-bold text-white mb-4">
+            Perfect for ARAM, Ranked & Custom Games
+          </h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="p-6 rounded-xl bg-neutral-800/50 border border-neutral-700">
+              <h3 className="text-xl font-semibold text-[#C89B3C] mb-3">ARAM Chaos</h3>
+              <p className="text-neutral-300">Random ARAM champion generator gives you unexpected team comps. Try support mains in ADC or assassins in botlane!</p>
+            </div>
+            <div className="p-6 rounded-xl bg-neutral-800/50 border border-neutral-700">
+              <h3 className="text-xl font-semibold text-[#C89B3C] mb-3">Ranked Challenges</h3>
+              <p className="text-neutral-300">LoL random champion picker ranked edition. Off-meta picks to climb out of rut. Track winrate improvement!</p>
+            </div>
+            <div className="p-6 rounded-xl bg-neutral-800/50 border border-neutral-700">
+              <h3 className="text-xl font-semibold text-[#C89B3C] mb-3">Custom Games</h3>
+              <p className="text-neutral-300">League champion roulette with friends. Random champion wheel for tournaments, 1v1s, or fun custom modes.</p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-bold text-white mb-4">
+            Random Challenge Ideas
+          </h2>
+          <div className="grid md:grid-cols-2 gap-4">
+            <div className="p-4 rounded-lg bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/30">
+              <h3 className="font-semibold text-white mb-2">Solo Queue Dare</h3>
+              <p className="text-neutral-300 text-sm">Play 3 games in a row with random picks. No bans on your champion!</p>
+            </div>
+            <div className="p-4 rounded-lg bg-gradient-to-r from-orange-500/10 to-red-500/10 border border-orange-500/30">
+              <h3 className="font-semibold text-white mb-2">Off-Meta Week</h3>
+              <p className="text-neutral-300 text-sm">Only play champions you have 10 games on. Expand champion pool!</p>
+            </div>
+            <div className="p-4 rounded-lg bg-gradient-to-r from-green-500/10 to-emerald-500/10 border border-green-500/30">
+              <h3 className="font-semibold text-white mb-2">Streak Master</h3>
+              <p className="text-neutral-300 text-sm">Keep winning with random picks until you lose. Beat your record!</p>
+            </div>
+            <div className="p-4 rounded-lg bg-gradient-to-r from-blue-500/10 to-indigo-500/10 border border-blue-500/30">
+              <h3 className="font-semibold text-white mb-2">Friends Roulette</h3>
+              <p className="text-neutral-300 text-sm">Everyone spins together. No dodging allowed!</p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-bold text-white mb-4">
             Frequently Asked Questions
           </h2>
           
@@ -113,14 +157,50 @@ export default function SEOContent() {
                 endorsed by Riot Games.
               </p>
             </div>
+
+            <div>
+              <h3 className="font-semibold text-white mb-2">
+                Does it include all 169+ Season 2026 champions?
+              </h3>
+              <p>
+                Yes! Updated for Season 2026 with all League of Legends champions including new releases.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="font-semibold text-white mb-2">
+                Is it good for ARAM random champion generator?
+              </h3>
+              <p>
+                Perfect for ARAM! Filter by role and get random picks that work great in Howling Abyss chaos.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="font-semibold text-white mb-2">
+                Can I use random champion picker for ranked?
+              </h3>
+              <p>
+                Absolutely! Many players use it to practice off-meta picks and improve their champion pool for ranked climb.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="font-semibold text-white mb-2">
+                Is League Roulette mobile optimized?
+              </h3>
+              <p>
+                100% mobile-friendly. Spin the roulette on phone, tablet, or desktop. Perfect for queue times!
+              </p>
+            </div>
           </div>
         </section>
 
         <section className="pt-6 border-t border-neutral-700">
           <p className="text-sm text-neutral-500">
-            <strong>Keywords:</strong> league of legends random champion, lol random champion picker, 
-            random lol champion generator, league roulette, lol challenge tracker, league of legends 
-            roulette, random champion lol, lol random pick, league challenge, summoner tracker
+            <strong>Keywords:</strong> league of legends random champion generator, lol random champion picker, random aram champion generator, 
+            league roulette, lol champion roulette, random champion lol ranked, league of legends champion wheel, 
+            lol randomizer, free lol random champion generator 2026, league challenge tracker
           </p>
         </section>
 

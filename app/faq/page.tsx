@@ -1,11 +1,69 @@
 // app/faq/page.tsx
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: 'FAQ - League Roulette | Random Champion Generator Questions',
+  description: 'Frequently asked questions about League Roulette. Learn how the random champion generator works, match verification, XP system, achievements, and more.',
+  keywords: ['league roulette faq', 'lol random champion generator questions', 'how does league roulette work', 'random champion picker help', 'lol challenge tracker faq'],
+  alternates: {
+    canonical: '/faq',
+  },
+  openGraph: {
+    title: 'FAQ - League Roulette | Random Champion Generator',
+    description: 'Answers to common questions about the free LoL random champion generator, match verification, and progression system.',
+    url: '/faq',
+    siteName: 'League Roulette',
+  },
+}
+
+const baseUrl = 'https://lol-roulette-nine.vercel.app'
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: baseUrl },
+    { '@type': 'ListItem', position: 2, name: 'FAQ', item: `${baseUrl}/faq` },
+  ],
+}
+
+const faqData = [
+  { question: 'What is League Roulette?', answer: 'League Roulette is a web-based challenge platform for League of Legends players. It randomly selects champions for you to play, helping you expand your champion pool, improve game knowledge, and have fun with unpredictable matches. The platform tracks your progress, awards XP and achievements, and features global leaderboards.' },
+  { question: 'Is League Roulette free to use?', answer: 'Yes! League Roulette is completely free to use. All core features including champion selection, automatic verification, XP tracking, achievements, and leaderboards are available to all users at no cost. We support the platform through advertisements.' },
+  { question: 'Do I need to download anything?', answer: 'No downloads required! League Roulette runs entirely in your web browser. You only need League of Legends installed on your computer to play the actual matches. Simply visit our website, login with your Riot account, and start spinning.' },
+  { question: 'How do I create an account?', answer: 'Click the "Login to Track Progress" button on the homepage and authenticate with your Riot Games account. We use Riot\'s official OAuth system, so your credentials are secure and never stored on our servers. Once authenticated, your account is automatically created and you can start playing immediately.' },
+  { question: 'How does the champion selection work?', answer: 'First, select your preferred lane (Top, Jungle, Mid, ADC, Support, or All Lanes). Then click "Pull the Lever" to spin the slot machine roulette. The system randomly selects a champion from your chosen lane pool. Each spin is completely random and fair.' },
+  { question: 'Can I reroll if I don\'t like the champion?', answer: 'Yes! You have unlimited spins per challenge. If you don\'t like your champion, you can keep rerolling until you find one you want to play.' },
+  { question: 'What game modes count for verification?', answer: 'All official League of Legends game modes count: Ranked Solo/Duo, Ranked Flex, Normal Draft, Normal Blind Pick, and ARAM. Both Summoner\'s Rift and Howling Abyss matches are verified. Custom games and practice tool matches do not count.' },
+  { question: 'How does automatic verification work?', answer: 'Our system checks your match history every 2 minutes using the official Riot Games API. When it detects a new match with your assigned champion, it automatically verifies the result. This usually happens within 5 minutes of your match ending.' },
+  { question: 'How much XP do I earn per challenge?', answer: 'You earn 100 XP for each successfully completed challenge. Every 1,000 XP equals one level. So you need 10 successful challenges to level up. Achievements also award bonus XP when unlocked.' },
+  { question: 'What achievements are available?', answer: 'League Roulette features multiple achievement categories: First Steps (complete your first challenge), Consistency (reach 10, 50, 100 challenges), Win Streaks (achieve 3, 5, 10 consecutive wins), Leveling (reach levels 5, 10, 25, 50), and Special achievements for unique accomplishments.' },
+  { question: 'How do leaderboards work?', answer: 'There are 5 leaderboard categories: Total XP, Highest Level, Most Challenges, Current Streak, and Best Streak. You can switch between categories to see where you rank. Leaderboards update in real-time as players complete challenges.' },
+  { question: 'Is my Riot account safe?', answer: 'Absolutely. We use Riot\'s official OAuth authentication system. Your Riot username and password are never shared with or stored on our servers. We only receive a secure token that allows us to read your public match history.' },
+  { question: 'Which regions are supported?', answer: 'All League of Legends regions are supported: EUW, EUNE, NA, KR, BR, LAN, LAS, OCE, TR, RU, JP, PH, SG, TH, TW, and VN.' },
+  { question: 'Does League Roulette work on mobile?', answer: 'Yes! The website is fully responsive and works on mobile phones and tablets. You can use mobile to spin the roulette and check your progress, then play the match on your PC.' },
+]
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqData.map(faq => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.answer,
+    },
+  })),
+}
+
 export default function FAQPage() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 p-6">
       <div className="max-w-4xl mx-auto">
         
         {/* Back Button */}
-        <a 
+        <a
           href="/"
           className="inline-flex items-center gap-2 text-neutral-400 hover:text-white transition mb-6"
         >
@@ -14,6 +72,15 @@ export default function FAQPage() {
           </svg>
           Back to Game
         </a>
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
 
         {/* Header */}
         <div className="mb-12 text-center">
@@ -104,7 +171,7 @@ export default function FAQPage() {
                   </svg>
                 </summary>
                 <div className="mt-4 text-neutral-300 leading-relaxed">
-                  Yes! You get 3 total spins per challenge. If you don't like your first champion, you can reroll up to 2 more times. However, once you've used all 3 spins, you must play with your final champion or complete/verify a match to get new spins. This keeps the challenge fair and prevents infinite rerolling.
+                  Yes! You have unlimited spins per challenge. If you don't like your champion, you can keep rerolling until you find one you want to play.
                 </div>
               </details>
 
@@ -361,7 +428,7 @@ export default function FAQPage() {
                 Contact Support
               </a>
               <a
-                href="/how-to-play"
+                href="/howtoplay"
                 className="px-8 py-4 rounded-xl bg-neutral-800 text-white font-bold hover:bg-neutral-700 transition text-lg"
               >
                 Read Tutorial

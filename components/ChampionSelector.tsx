@@ -129,12 +129,12 @@ export default function ChampionSelector({
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
               </svg>
-              Reroll ({rerollsLeft} left)
+              Reroll ({rerollsLeft === Infinity ? 'Unlimited' : `${rerollsLeft} left`})
             </span>
           </button>
           
           <p className="text-neutral-500 text-sm mt-3">
-            Don't like these options? You have {rerollsLeft} more {rerollsLeft === 1 ? 'spin' : 'spins'}
+            {rerollsLeft === Infinity ? 'Don\'t like these options? You have unlimited spins' : `Don't like these options? You have ${rerollsLeft} more ${rerollsLeft === 1 ? 'spin' : 'spins'}`}
           </p>
         </div>
       )}

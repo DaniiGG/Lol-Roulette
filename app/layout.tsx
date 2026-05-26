@@ -6,7 +6,10 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
-  title: 'LoL Random Champion Generator 🎯 | Spin the Roulette & Get a Random Pick',
+  title: {
+    default: 'LoL Random Champion Generator 🎯 | Spin the Roulette & Get a Random Pick',
+    template: '%s | League Roulette',
+  },
   description: 'Not sure what to play in League of Legends? 🎯 Spin the random champion roulette, challenge your friends, track wins, earn XP, and climb the leaderboard. Free LoL randomizer!',
   keywords: [
     "lol roullette",
@@ -26,6 +29,9 @@ export const metadata: Metadata = {
     'league of legends random champion challenge',
     'random champion generator for league of legends',
     'lol random champion generator free',
+    'random champion picker',
+    'league of legends champion wheel',
+    'free lol randomizer 2026',
   ],
   authors: [{ name: 'League Roulette' }],
   creator: 'League Roulette',
@@ -74,7 +80,7 @@ export const metadata: Metadata = {
 
   // Verification (Google Search Console)
   verification: {
-    google: 'tu-codigo-de-verificacion-aqui', // Lo obtienes después
+    google: '3sVvOH8RoSBRMz3-yWd4pFKr5fcoclC4VZXl7GNi4ic',
   },
 
   // Otros
@@ -110,25 +116,46 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               '@context': 'https://schema.org',
-              '@type': 'WebApplication',
-              name: 'League Roulette | LoL Random Champion Generator',
-              keywords: 'lol random champion, league of legends randomizer',
-              description: 'Random champion generator and challenge tracker for League of Legends',
-              url: 'https://lol-roulette-nine.vercel.app',
-              inLanguage: 'en',
-              isAccessibleForFree: true,
-              applicationCategory: 'Game',
-              operatingSystem: 'Web',
-              offers: {
-                '@type': 'Offer',
-                price: '0',
-                priceCurrency: 'USD'
-              },
-              aggregateRating: {
-                '@type': 'AggregateRating',
-                ratingValue: '4.8',
-                ratingCount: '1250'
-              }
+              '@graph': [
+                {
+                  '@type': 'WebApplication',
+                  name: 'League Roulette | LoL Random Champion Generator',
+                  keywords: 'lol random champion, league of legends randomizer',
+                  description: 'Random champion generator and challenge tracker for League of Legends',
+                  url: 'https://lol-roulette-nine.vercel.app',
+                  inLanguage: 'en',
+                  isAccessibleForFree: true,
+                  applicationCategory: 'Game',
+                  operatingSystem: 'Web',
+                  offers: {
+                    '@type': 'Offer',
+                    price: '0',
+                    priceCurrency: 'USD'
+                  },
+                  aggregateRating: {
+                    '@type': 'AggregateRating',
+                    ratingValue: '4.8',
+                    ratingCount: '1250'
+                  },
+                  publisher: {
+                    '@type': 'Organization',
+                    name: 'League Roulette',
+                    url: 'https://lol-roulette-nine.vercel.app'
+                  }
+                },
+                {
+                  '@type': 'Organization',
+                  name: 'League Roulette',
+                  url: 'https://lol-roulette-nine.vercel.app',
+                  logo: 'https://lol-roulette-nine.vercel.app/images/logo.png',
+                  description: 'Free random champion generator and challenge tracker for League of Legends',
+                  contactPoint: {
+                    '@type': 'ContactPoint',
+                    email: 'lolroulettenine@gmail.com',
+                    contactType: 'customer support'
+                  }
+                }
+              ]
             })
           }}
         />

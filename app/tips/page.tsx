@@ -1,4 +1,32 @@
 // app/tips/page.tsx
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: 'LoL Strategy Tips & Champion Guides - League Roulette',
+  description: 'Master random champion gameplay with League Roulette tips. Learn fundamentals, lane-specific strategies, champion archetypes, and mental game advice for League of Legends.',
+  keywords: ['lol strategy tips', 'league of legends champion guides', 'random champion tips', 'how to play any champion lol', 'league of legends fundamentals', 'lol lane strategies'],
+  alternates: {
+    canonical: '/tips',
+  },
+  openGraph: {
+    title: 'LoL Strategy Tips & Champion Guides',
+    description: 'Learn to master random champions in League of Legends. Tips for all lanes, champion archetypes, and mental game strategies.',
+    url: '/tips',
+    siteName: 'League Roulette',
+  },
+}
+
+const baseUrl = 'https://lol-roulette-nine.vercel.app'
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: baseUrl },
+    { '@type': 'ListItem', position: 2, name: 'Strategy Tips', item: `${baseUrl}/tips` },
+  ],
+}
+
 export default function TipsPage() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 p-6">
@@ -14,6 +42,11 @@ export default function TipsPage() {
           </svg>
           Back to Game
         </a>
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        />
 
         {/* Header */}
         <div className="mb-12 text-center">
@@ -353,7 +386,7 @@ export default function TipsPage() {
                 Start Playing
               </a>
               <a
-                href="/how-to-play"
+                href="/howtoplay"
                 className="px-8 py-4 rounded-xl bg-neutral-800 text-white font-bold hover:bg-neutral-700 transition text-lg"
               >
                 Learn the Basics

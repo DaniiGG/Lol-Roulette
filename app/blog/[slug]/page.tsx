@@ -46,13 +46,21 @@ export default async function BlogPostPage(props: BlogPostPageProps) {
     author: {
       "@type": "Organization",
       name: "League Roulette",
+      url: "https://lol-roulette-nine.vercel.app",
     },
     publisher: {
       "@type": "Organization",
       name: "League Roulette",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://lol-roulette-nine.vercel.app/images/logo.png",
+      },
     },
+    datePublished: "2026-01-15",
+    dateModified: new Date().toISOString().split("T")[0],
     mainEntityOfPage: `https://lol-roulette-nine.vercel.app/blog/${post.slug}`,
     keywords: post.keywords.join(", "),
+    image: "https://lol-roulette-nine.vercel.app/og-image.png",
   }
 
   return (

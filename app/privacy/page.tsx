@@ -1,7 +1,32 @@
 // app/privacy/page.tsx
+import type { Metadata } from "next"
 import Link from 'next/link'
 import { ArrowLeft } from 'lucide-react'
 import SlotLever from '@/components/SlotLever'
+
+export const metadata: Metadata = {
+  title: 'Privacy Policy - League Roulette',
+  description: 'League Roulette privacy policy. Learn how we collect, use, and protect your data when you use our free LoL random champion generator and challenge tracker.',
+  keywords: ['league roulette privacy policy', 'lol random champion privacy', 'league of legends data privacy', 'riot api privacy', 'privacy policy'],
+  alternates: {
+    canonical: '/privacy',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+}
+
+const baseUrl = 'https://lol-roulette-nine.vercel.app'
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: baseUrl },
+    { '@type': 'ListItem', position: 2, name: 'Privacy Policy', item: `${baseUrl}/privacy` },
+  ],
+}
 
 export default function PrivacyPolicy() {
   return (
@@ -15,6 +40,11 @@ export default function PrivacyPolicy() {
           <ArrowLeft className="w-4 h-4" />
           <span>Back to Home</span>
         </Link>
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        />
 
         {/* Header */}
         <div className="mb-12">

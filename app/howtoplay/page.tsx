@@ -1,4 +1,32 @@
 // app/how-to-play/page.tsx
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: 'How to Play League Roulette - Complete Guide & Tutorial',
+  description: 'Learn how to use the League Roulette random champion generator. Step-by-step guide covering account setup, lane selection, spinning, match verification, and rewards.',
+  keywords: ['how to play league roulette', 'lol random champion generator tutorial', 'league roulette guide', 'how to use lol champion picker', 'league of legends challenge platform tutorial'],
+  alternates: {
+    canonical: '/howtoplay',
+  },
+  openGraph: {
+    title: 'How to Play League Roulette - Complete Guide',
+    description: 'Step-by-step tutorial for the free LoL random champion generator. Learn to spin, verify matches, earn XP, and climb leaderboards.',
+    url: '/howtoplay',
+    siteName: 'League Roulette',
+  },
+}
+
+const baseUrl = 'https://lol-roulette-nine.vercel.app'
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: baseUrl },
+    { '@type': 'ListItem', position: 2, name: 'How to Play', item: `${baseUrl}/howtoplay` },
+  ],
+}
+
 export default function HowToPlayPage() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 p-6">
@@ -14,6 +42,11 @@ export default function HowToPlayPage() {
           </svg>
           Back to Game
         </a>
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        />
 
         {/* Header */}
         <div className="mb-12 text-center">
@@ -144,7 +177,7 @@ export default function HowToPlayPage() {
             </p>
             
             <p className="text-neutral-300 text-lg leading-relaxed mb-4">
-              <strong className="text-white">Rerolls:</strong> Don't like what you got? You get up to 3 spins per challenge! Use them wisely:
+              <strong className="text-white">Rerolls:</strong> Don't like what you got? You have unlimited spins! Use them to find your perfect match.
             </p>
             
             <ul className="space-y-2 text-neutral-300 text-lg mb-4 ml-6">
@@ -164,7 +197,7 @@ export default function HowToPlayPage() {
 
             <div className="p-4 rounded-xl bg-orange-500/10 border border-orange-500/30">
               <p className="text-orange-300 text-sm">
-                <strong>Important:</strong> Once you've used all 3 spins, you must play with your final champion or verify a match to get new spins. This prevents infinite rerolling and keeps the challenge fair!
+                <strong>Important:</strong> You can reroll as many times as you like until you find a champion you want to play!
               </p>
             </div>
           </section>

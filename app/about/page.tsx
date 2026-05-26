@@ -1,11 +1,39 @@
 // app/about/page.tsx
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: 'About League Roulette - Free LoL Random Champion Generator',
+  description: 'Learn about League Roulette, the free random champion generator for League of Legends. Track wins, earn XP, unlock achievements, and climb the leaderboard.',
+  keywords: ['about league roulette', 'lol random champion generator about', 'league of legends challenge platform', 'free lol randomizer tool'],
+  alternates: {
+    canonical: '/about',
+  },
+  openGraph: {
+    title: 'About League Roulette - Random Champion Challenge Platform',
+    description: 'Free random champion generator for League of Legends with match verification, XP tracking, achievements, and leaderboards.',
+    url: '/about',
+    siteName: 'League Roulette',
+  },
+}
+
+const baseUrl = 'https://lol-roulette-nine.vercel.app'
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: baseUrl },
+    { '@type': 'ListItem', position: 2, name: 'About', item: `${baseUrl}/about` },
+  ],
+}
+
 export default function AboutPage() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 p-6">
       <div className="max-w-4xl mx-auto">
         
         {/* Back Button */}
-        <a 
+        <a
           href="/"
           className="inline-flex items-center gap-2 text-neutral-400 hover:text-white transition mb-6"
         >
@@ -14,6 +42,11 @@ export default function AboutPage() {
           </svg>
           Back to Game
         </a>
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        />
 
         {/* Header */}
         <div className="mb-12 text-center">
@@ -230,7 +263,7 @@ export default function AboutPage() {
                 Start Playing Now
               </a>
               <a
-                href="/how-to-play"
+                href="/howtoplay"
                 className="px-8 py-4 rounded-xl bg-neutral-800 text-white font-bold hover:bg-neutral-700 transition text-lg"
               >
                 Learn How to Play
