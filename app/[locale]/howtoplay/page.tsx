@@ -1,5 +1,6 @@
 // app/how-to-play/page.tsx
 import type { Metadata } from "next"
+import { getTranslations } from 'next-intl/server'
 
 export const metadata: Metadata = {
   title: 'How to Play League Roulette - Complete Guide & Tutorial',
@@ -27,7 +28,9 @@ const breadcrumbSchema = {
   ],
 }
 
-export default function HowToPlayPage() {
+export default async function HowToPlayPage() {
+  const t = await getTranslations('howToPlay')
+
   return (
     <main className="min-h-screen bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 p-6">
       <div className="max-w-4xl mx-auto">
@@ -40,7 +43,7 @@ export default function HowToPlayPage() {
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
           </svg>
-          Back to Game
+          {t('backToGame')}
         </a>
 
         <script
@@ -50,8 +53,8 @@ export default function HowToPlayPage() {
 
         {/* Header */}
         <div className="mb-12 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">How to Play League Roulette</h1>
-          <p className="text-xl text-neutral-400">Your complete guide to getting started</p>
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">{t('title')}</h1>
+          <p className="text-xl text-neutral-400">{t('subtitle')}</p>
         </div>
 
         {/* Main Content */}
@@ -59,7 +62,7 @@ export default function HowToPlayPage() {
           
           {/* Introduction */}
           <section className="p-8 rounded-2xl bg-gradient-to-br from-[#C89B3C]/10 to-transparent border border-[#C89B3C]/30">
-            <h2 className="text-3xl font-bold text-white mb-4">What is League Roulette?</h2>
+            <h2 className="text-3xl font-bold text-white mb-4">{t('whatIsTitle')}</h2>
             <p className="text-neutral-300 text-lg leading-relaxed mb-4">
               League Roulette is a challenge platform for League of Legends players that randomly selects champions for you to play. It's designed to help you break out of your comfort zone, learn new champions, and improve your overall game knowledge while having fun and earning rewards.
             </p>
@@ -75,12 +78,12 @@ export default function HowToPlayPage() {
                 1
               </div>
               <div>
-                <h2 className="text-3xl font-bold text-white">Create Your Account</h2>
+                <h2 className="text-3xl font-bold text-white">{t('steps.account.title')}</h2>
               </div>
             </div>
             
             <p className="text-neutral-300 text-lg leading-relaxed mb-4">
-              To get started with League Roulette, you'll need to login using your Riot Games account. This secure authentication process allows us to:
+              {t('steps.account.desc')}
             </p>
             
             <ul className="space-y-2 text-neutral-300 text-lg mb-4 ml-6">
@@ -116,12 +119,12 @@ export default function HowToPlayPage() {
                 2
               </div>
               <div>
-                <h2 className="text-3xl font-bold text-white">Select Your Lane</h2>
+                <h2 className="text-3xl font-bold text-white">{t('steps.lane.title')}</h2>
               </div>
             </div>
             
             <p className="text-neutral-300 text-lg leading-relaxed mb-4">
-              Before spinning the roulette, choose which lane you want to play. This ensures you'll get a champion that fits your selected role:
+              {t('steps.lane.desc')}
             </p>
             
             <div className="grid md:grid-cols-2 gap-4 mb-4">
@@ -168,12 +171,12 @@ export default function HowToPlayPage() {
                 3
               </div>
               <div>
-                <h2 className="text-3xl font-bold text-white">Spin the Roulette</h2>
+                <h2 className="text-3xl font-bold text-white">{t('steps.spin.title')}</h2>
               </div>
             </div>
             
             <p className="text-neutral-300 text-lg leading-relaxed mb-4">
-              Once you've selected your lane, it's time to spin! Click the "Pull the Lever" button and watch as the slot machine randomly selects a champion for you. The anticipation builds as the slots spin, finally revealing your challenge.
+              {t('steps.spin.desc')}
             </p>
             
             <p className="text-neutral-300 text-lg leading-relaxed mb-4">
@@ -209,12 +212,12 @@ export default function HowToPlayPage() {
                 4
               </div>
               <div>
-                <h2 className="text-3xl font-bold text-white">Play Your Match</h2>
+                <h2 className="text-3xl font-bold text-white">{t('steps.play.title')}</h2>
               </div>
             </div>
             
             <p className="text-neutral-300 text-lg leading-relaxed mb-4">
-              Now comes the fun part - actually playing the champion! Head into League of Legends and queue up for a match with your randomly selected champion. Here are some tips for success:
+              {t('steps.play.desc')}
             </p>
             
             <div className="space-y-4 mb-4">
@@ -259,12 +262,12 @@ export default function HowToPlayPage() {
                 5
               </div>
               <div>
-                <h2 className="text-3xl font-bold text-white">Automatic Verification</h2>
+                <h2 className="text-3xl font-bold text-white">{t('steps.verify.title')}</h2>
               </div>
             </div>
             
             <p className="text-neutral-300 text-lg leading-relaxed mb-4">
-              Once your match ends, our system automatically checks your match history through the Riot Games API. Within minutes, your challenge will be verified:
+              {t('steps.verify.desc')}
             </p>
             
             <div className="space-y-3 mb-4">
@@ -311,12 +314,12 @@ export default function HowToPlayPage() {
                 6
               </div>
               <div>
-                <h2 className="text-3xl font-bold text-white">Track Your Progress</h2>
+                <h2 className="text-3xl font-bold text-white">{t('steps.progress.title')}</h2>
               </div>
             </div>
             
             <p className="text-neutral-300 text-lg leading-relaxed mb-4">
-              After each successful challenge, you'll earn rewards and progress through the system:
+              {t('steps.progress.desc')}
             </p>
             
             <div className="grid md:grid-cols-2 gap-4">
@@ -380,7 +383,7 @@ export default function HowToPlayPage() {
 
           {/* Call to Action */}
           <section className="text-center p-8 rounded-2xl bg-gradient-to-r from-[#C89B3C]/20 to-transparent border border-[#C89B3C]/50">
-            <h2 className="text-3xl font-bold text-white mb-4">Ready to Start Your Journey?</h2>
+            <h2 className="text-3xl font-bold text-white mb-4">{t('ctaTitle')}</h2>
             <p className="text-neutral-300 text-lg mb-6">
               You now know everything you need to begin your League Roulette adventure. Time to spin the wheel and embrace the challenge!
             </p>
@@ -389,13 +392,13 @@ export default function HowToPlayPage() {
                 href="/"
                 className="px-8 py-4 rounded-xl bg-[#C89B3C] text-neutral-950 font-bold hover:bg-[#d9aa44] transition text-lg"
               >
-                Start Playing
+                {t('ctaPlay')}
               </a>
               <a
                 href="/faq"
                 className="px-8 py-4 rounded-xl bg-neutral-800 text-white font-bold hover:bg-neutral-700 transition text-lg"
               >
-                View FAQ
+                {t('ctaFaq')}
               </a>
             </div>
           </section>

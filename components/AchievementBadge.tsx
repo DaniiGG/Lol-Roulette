@@ -1,6 +1,7 @@
 // components/AchievementBadge.tsx
 'use client'
 
+import { useTranslations } from 'next-intl'
 import { ACHIEVEMENTS, AchievementDefinition } from '@/lib/achievements'
 import { motion } from 'framer-motion'
 
@@ -17,6 +18,7 @@ export default function AchievementBadge({
   unlockedAt,
   showAnimation = false 
 }: AchievementBadgeProps) {
+  const t = useTranslations('achievements')
   const achievement = ACHIEVEMENTS[achievementType as keyof typeof ACHIEVEMENTS]
   
   if (!achievement) return null
@@ -77,7 +79,7 @@ export default function AchievementBadge({
         mt-2 text-center text-xs font-semibold
         ${unlocked ? 'text-yellow-300' : 'text-neutral-600'}
       `}>
-        +{achievement.xpReward} XP
+        {t('xpReward', { xp: achievement.xpReward })}
       </div>
 
       {/* Unlocked Date */}
@@ -102,7 +104,7 @@ export default function AchievementBadge({
           : 'bg-neutral-700 text-neutral-500'
         }
       `}>
-        {achievement.rarity.toUpperCase()}
+        {t(achievement.rarity)}
       </div>
     </motion.div>
   )

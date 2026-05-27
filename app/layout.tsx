@@ -1,44 +1,21 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Outfit } from "next/font/google";
 import "./globals.css";
 import Script from 'next/script'
-import Navbar from '@/components/Navbar'
-import Footer from '@/components/Footer'
+
+const outfit = Outfit({
+  variable: "--font-body",
+  subsets: ["latin"],
+  weight: ["200", "300", "400", "500", "600", "700", "800"],
+});
 
 export const metadata: Metadata = {
   title: {
-    default: 'LoL Random Champion Generator 🎯 | Spin the Roulette & Get a Random Pick',
+    default: 'LoL Random Champion Generator | Spin the Roulette & Get a Random Pick',
     template: '%s | League Roulette',
   },
-  description: 'Not sure what to play in League of Legends? 🎯 Spin the random champion roulette, challenge your friends, track wins, earn XP, and climb the leaderboard. Free LoL randomizer!',
-  keywords: [
-    "lol roullette",
-    "league of legends random champion generator",
-    "random champ",
-    'league roulette',
-    'lol random champion generator',
-    'league of legends random picker',
-    'lol roulette champion',
-    'random champion lol challenge',
-    'league of legends roulette game',
-    'what champion should i play lol',
-    'lol randomizer with friends',
-    'league of legends challenge generator',
-    'random champion generator for lol',
-    'lol champion roulette',
-    'league of legends random champion challenge',
-    'random champion generator for league of legends',
-    'lol random champion generator free',
-    'random champion picker',
-    'league of legends champion wheel',
-    'free lol randomizer 2026',
-  ],
-  authors: [{ name: 'League Roulette' }],
-  creator: 'League Roulette',
-  publisher: 'League Roulette',
+  description: 'Not sure what to play in League of Legends? Spin the random champion roulette, challenge your friends, track wins, earn XP, and climb the leaderboard. Free LoL randomizer!',
   metadataBase: new URL('https://lol-roulette-nine.vercel.app'),
-
-  // Open Graph (para redes sociales)
   openGraph: {
     type: 'website',
     locale: 'en_US',
@@ -46,58 +23,19 @@ export const metadata: Metadata = {
     title: 'League Roulette - Random Champion Challenge',
     description: 'Get random League of Legends champions and track your wins!',
     siteName: 'League Roulette',
-    images: [
-      {
-        url: '/og-image.png', // Crearemos esto
-        width: 1200,
-        height: 630,
-        alt: 'League Roulette'
-      }
-    ]
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'League Roulette' }]
   },
-
-  // Twitter Card
   twitter: {
     card: 'summary_large_image',
     title: 'League Roulette - Random Champion Challenge',
     description: 'Get random League of Legends champions and track your wins!',
     images: ['/og-image.png'],
-    creator: '@LeagueRoulette' // Tu Twitter si tienes
-  },
-
-  // Robots
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-
-  // Verification (Google Search Console)
-  verification: {
-    google: '3sVvOH8RoSBRMz3-yWd4pFKr5fcoclC4VZXl7GNi4ic',
-  },
-
-  // Otros
-  alternates: {
-    canonical: 'https://lol-roulette-nine.vercel.app',
+    creator: '@LeagueRoulette'
   },
 }
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const geistSans = { variable: '' } as any;
+const geistMono = { variable: '' } as any;
 
 export default function RootLayout({
   children,
@@ -106,99 +44,23 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <meta name="google-adsense-account" content="ca-pub-1048626365060254"></meta>
-      <meta name="google-site-verification" content="3sVvOH8RoSBRMz3-yWd4pFKr5fcoclC4VZXl7GNi4ic" />
-      
       <head>
-        {/* Schema.org JSON-LD */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@graph': [
-                {
-                  '@type': 'WebApplication',
-                  name: 'League Roulette | LoL Random Champion Generator',
-                  keywords: 'lol random champion, league of legends randomizer',
-                  description: 'Random champion generator and challenge tracker for League of Legends',
-                  url: 'https://lol-roulette-nine.vercel.app',
-                  inLanguage: 'en',
-                  isAccessibleForFree: true,
-                  applicationCategory: 'Game',
-                  operatingSystem: 'Web',
-                  offers: {
-                    '@type': 'Offer',
-                    price: '0',
-                    priceCurrency: 'USD'
-                  },
-                  aggregateRating: {
-                    '@type': 'AggregateRating',
-                    ratingValue: '4.8',
-                    ratingCount: '1250'
-                  },
-                  publisher: {
-                    '@type': 'Organization',
-                    name: 'League Roulette',
-                    url: 'https://lol-roulette-nine.vercel.app'
-                  }
-                },
-                {
-                  '@type': 'Organization',
-                  name: 'League Roulette',
-                  url: 'https://lol-roulette-nine.vercel.app',
-                  logo: 'https://lol-roulette-nine.vercel.app/images/logo.png',
-                  description: 'Free random champion generator and challenge tracker for League of Legends',
-                  contactPoint: {
-                    '@type': 'ContactPoint',
-                    email: 'lolroulettenine@gmail.com',
-                    contactType: 'customer support'
-                  }
-                }
-              ]
-            })
-          }}
-        />
-        <Script
-          id="gtm-script"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id=GTM-WG86XDJF'+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-WG86XDJF');`
-          }}
-        />
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-2D2RD00KWB"
-          strategy="afterInteractive"
-        />
-        <Script id="ga-script" strategy="afterInteractive">
-          {`
+        <meta name="google-adsense-account" content="ca-pub-1048626365060254" />
+        <meta name="google-site-verification" content="3sVvOH8RoSBRMz3-yWd4pFKr5fcoclC4VZXl7GNi4ic" />
+        <Script id="gtm-script" strategy="afterInteractive" dangerouslySetInnerHTML={{
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id=GTM-WG86XDJF'+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-WG86XDJF');`
+          }} />
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-2D2RD00KWB" strategy="afterInteractive" />
+        <Script id="ga-script" strategy="afterInteractive">{`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'G-2D2RD00KWB');
-          `}
-        </Script>
+          `}</Script>
       </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <noscript>
-          <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-WG86XDJF"
-            height="0"
-            width="0"
-            style={{ display: 'none', visibility: 'hidden' }}
-          />
-        </noscript>
-        <Navbar />
-        <div className="pt-16">
-          {children}
-        </div>
-        <Footer />
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WG86XDJF" height="0" width="0" style={{ display: 'none', visibility: 'hidden' }} /></noscript>
+        {children}
       </body>
     </html>
   );

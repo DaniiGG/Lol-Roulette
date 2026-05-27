@@ -1,6 +1,7 @@
 // components/AchievementsList.tsx
 'use client'
 
+import { useTranslations } from 'next-intl'
 import { ACHIEVEMENTS } from '@/lib/achievements'
 import AchievementBadge from './AchievementBadge'
 
@@ -13,10 +14,12 @@ export default function AchievementsList({
   unlockedAchievements, 
   newAchievements = [] 
 }: AchievementsListProps) {
+  const t = useTranslations('achievements')
+
   return (
     <div className="bg-neutral-900/40 backdrop-blur-xl rounded-2xl border border-neutral-800/50 p-6 h-full">
       <div className="flex items-center justify-between mb-4">
-        <h3 className="text-xl font-bold text-white">Achievements</h3>
+        <h3 className="text-xl font-bold text-white">{t('title')}</h3>
         <span className="text-neutral-400 text-sm">
           {unlockedAchievements.length}/{Object.keys(ACHIEVEMENTS).length}
         </span>

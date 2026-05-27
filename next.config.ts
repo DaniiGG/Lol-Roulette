@@ -1,14 +1,13 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  webpack: (config: { resolve: { fallback: { fs: boolean; }; }; }) => {
-    config.resolve.fallback = { fs: false }; // a veces ayuda con Turbopack y node_modules
+import type { NextConfig } from 'next';
+import createNextIntlPlugin from 'next-intl/plugin';
+
+const withNextIntl = createNextIntlPlugin('./i18n/request.ts');
+
+const nextConfig: NextConfig = {
+  webpack: (config: { resolve: { fallback: { fs: boolean } } }) => {
+    config.resolve.fallback = { fs: false };
     return config;
   },
-  experimental: {
-    // desactivar Turbopack para build en Vercel
-    turbo: false,
-  },
-  
 };
 
-module.exports = nextConfig;
+export default withNextIntl(nextConfig);

@@ -1,8 +1,8 @@
-// components/SettingsModal.tsx
-'use client'
+"use client";
 
 import { useState } from 'react'
 import { Settings, X, Zap, Bell, Volume2 } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 
 interface SettingsModalProps {
   onClose: () => void
@@ -15,6 +15,7 @@ interface SettingsModalProps {
 }
 
 export default function SettingsModal({ onClose, settings, onSave }: SettingsModalProps) {
+  const t = useTranslations('settings');
   const [localSettings, setLocalSettings] = useState(settings)
 
   const handleSave = () => {
@@ -32,7 +33,7 @@ export default function SettingsModal({ onClose, settings, onSave }: SettingsMod
             <div className="w-10 h-10 bg-purple-500/20 rounded-xl flex items-center justify-center">
               <Settings className="w-6 h-6 text-purple-400" />
             </div>
-            <h2 className="text-2xl font-bold text-white">Settings</h2>
+            <h2 className="text-2xl font-bold text-white">{t('title')}</h2>
           </div>
           <button
             onClick={onClose}
@@ -53,7 +54,7 @@ export default function SettingsModal({ onClose, settings, onSave }: SettingsMod
               </div>
               <div className="flex-1">
                 <div className="flex items-center justify-between mb-2">
-                  <h3 className="font-semibold text-white">Auto-Verification</h3>
+                  <h3 className="font-semibold text-white">{t('autoVerify')}</h3>
                   <label className="relative inline-block w-12 h-6">
                     <input
                       type="checkbox"
@@ -65,9 +66,7 @@ export default function SettingsModal({ onClose, settings, onSave }: SettingsMod
                     <span className="absolute left-1 top-1 w-4 h-4 bg-white rounded-full transition-transform peer-checked:translate-x-6"></span>
                   </label>
                 </div>
-                <p className="text-sm text-neutral-400">
-                  Automatically check for completed matches every 2 minutes
-                </p>
+                <p className="text-sm text-neutral-400">{t('autoVerifyDesc')}</p>
               </div>
             </div>
           </div>
@@ -80,7 +79,7 @@ export default function SettingsModal({ onClose, settings, onSave }: SettingsMod
               </div>
               <div className="flex-1">
                 <div className="flex items-center justify-between mb-2">
-                  <h3 className="font-semibold text-white">Browser Notifications</h3>
+                  <h3 className="font-semibold text-white">{t('notifications')}</h3>
                   <label className="relative inline-block w-12 h-6">
                     <input
                       type="checkbox"
@@ -92,9 +91,7 @@ export default function SettingsModal({ onClose, settings, onSave }: SettingsMod
                     <span className="absolute left-1 top-1 w-4 h-4 bg-white rounded-full transition-transform peer-checked:translate-x-6"></span>
                   </label>
                 </div>
-                <p className="text-sm text-neutral-400">
-                  Get notified when your match is verified
-                </p>
+                <p className="text-sm text-neutral-400">{t('notificationsDesc')}</p>
               </div>
             </div>
           </div>
@@ -107,7 +104,7 @@ export default function SettingsModal({ onClose, settings, onSave }: SettingsMod
               </div>
               <div className="flex-1">
                 <div className="flex items-center justify-between mb-2">
-                  <h3 className="font-semibold text-white">Sound Effects</h3>
+                  <h3 className="font-semibold text-white">{t('sound')}</h3>
                   <label className="relative inline-block w-12 h-6">
                     <input
                       type="checkbox"
@@ -119,9 +116,7 @@ export default function SettingsModal({ onClose, settings, onSave }: SettingsMod
                     <span className="absolute left-1 top-1 w-4 h-4 bg-white rounded-full transition-transform peer-checked:translate-x-6"></span>
                   </label>
                 </div>
-                <p className="text-sm text-neutral-400">
-                  Play sound when achievements unlock or matches verify
-                </p>
+                <p className="text-sm text-neutral-400">{t('soundDesc')}</p>
               </div>
             </div>
           </div>
@@ -134,22 +129,19 @@ export default function SettingsModal({ onClose, settings, onSave }: SettingsMod
             onClick={onClose}
             className="flex-1 py-3 rounded-xl bg-neutral-800 text-white hover:bg-neutral-700 transition"
           >
-            Cancel
+            {t('cancel')}
           </button>
           <button
             onClick={handleSave}
             className="flex-1 py-3 rounded-xl bg-white text-neutral-950 font-semibold hover:bg-neutral-100 transition"
           >
-            Save Changes
+            {t('save')}
           </button>
         </div>
 
         {/* Info */}
         <div className="mt-4 p-3 bg-blue-500/10 border border-blue-500/30 rounded-lg">
-          <p className="text-xs text-blue-300">
-            💡 Auto-verification works best when you keep the tab open. 
-            Close the tab and verification will pause until you return.
-          </p>
+          <p className="text-xs text-blue-300">{t('tip')}</p>
         </div>
       </div>
     </div>

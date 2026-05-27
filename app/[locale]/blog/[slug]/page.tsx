@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { notFound } from "next/navigation"
 import { blogPosts, getBlogMetadata, getBlogPost } from "@/lib/blog-posts"
+import { getTranslations } from 'next-intl/server'
 
 type BlogPostPageProps = {
   params: Promise<{
@@ -31,6 +32,7 @@ export async function generateMetadata(
 export default async function BlogPostPage(props: BlogPostPageProps) {
   const { slug } = await props.params
   const post = getBlogPost(slug)
+  const t = await getTranslations('blog')
 
   if (!post) {
     notFound()
@@ -76,12 +78,12 @@ export default async function BlogPostPage(props: BlogPostPageProps) {
           className="mb-8 inline-flex items-center gap-2 text-sm text-neutral-400 transition hover:text-white"
         >
           <span aria-hidden="true">←</span>
-          Back to Blog
+          {t('backToBlog')}
         </Link>
 
         <header className="mb-10 rounded-3xl border border-neutral-800 bg-neutral-900/80 p-8">
           <p className="mb-3 text-sm uppercase tracking-[0.3em] text-[#C89B3C]">
-            League Roulette Guide
+            {t('guideLabel')}
           </p>
           <h1 className="mb-6 text-4xl font-semibold tracking-tight text-white md:text-5xl">
             {post.title}
@@ -123,11 +125,10 @@ export default async function BlogPostPage(props: BlogPostPageProps) {
 
         <section className="mt-10 rounded-3xl border border-[#C89B3C]/30 bg-gradient-to-r from-[#C89B3C]/10 to-transparent p-8">
           <h2 className="mb-3 text-3xl font-semibold text-white">
-            Ready to spin for your next match?
+            {t('ctaTitle')}
           </h2>
           <p className="mb-6 max-w-3xl text-lg leading-8 text-neutral-300">
-            Go back to the home page and let the roulette choose your next
-            champion, or keep reading related articles below for more ideas.
+            {t('ctaDesc')}
           </p>
           <div className="flex flex-wrap gap-4">
             <Link
@@ -140,14 +141,14 @@ export default async function BlogPostPage(props: BlogPostPageProps) {
               href="/blog"
               className="rounded-xl bg-neutral-800 px-5 py-3 font-semibold text-white transition hover:bg-neutral-700"
             >
-              Browse more blog posts
+              {t('browseMore')}
             </Link>
           </div>
         </section>
 
         <section className="mt-10">
           <h2 className="mb-5 text-2xl font-semibold text-white">
-            Related reading
+            {t('relatedReading')}
           </h2>
           <div className="grid gap-5 md:grid-cols-2">
             {relatedPosts.map((relatedPost) => (

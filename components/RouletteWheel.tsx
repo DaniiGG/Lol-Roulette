@@ -363,6 +363,7 @@ export default function RouletteWheel({
           <SlotLever
             onActivate={spin}
             disabled={isSpinning || loadingChamps || disabled}
+            isSpinning={isSpinning}
           />
         </div>
       </div>

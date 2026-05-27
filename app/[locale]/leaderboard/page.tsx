@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react'
 import { supabase } from '@/lib/supabase'
 import Cookies from 'js-cookie'
 import Link from 'next/link'
+import { useTranslations } from 'next-intl'
 
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
@@ -39,6 +40,7 @@ const CATEGORIES = [
 ]
 
 export default function LeaderboardPage() {
+  const t = useTranslations('leaderboard')
   useEffect(() => {
     document.title = 'Leaderboard - League Roulette | Compete with Top Players'
   }, [])
@@ -49,7 +51,6 @@ export default function LeaderboardPage() {
   const [currentUserId, setCurrentUserId] = useState<string | null>(null)
   const [userRank, setUserRank] = useState<LeaderboardEntry | null>(null)
 
-  // Verificar sesión
   useEffect(() => {
     const token = Cookies.get('session_token')
     if (token) {
@@ -94,7 +95,6 @@ export default function LeaderboardPage() {
       const data = await response.json()
       setLeaderboard(data.leaderboard)
 
-      // Buscar posición del usuario actual
       if (currentUserId) {
         const userEntry = data.leaderboard.find((entry: LeaderboardEntry) => entry.id === currentUserId)
         setUserRank(userEntry || null)
@@ -142,7 +142,6 @@ export default function LeaderboardPage() {
       />
       <div className="max-w-4xl mx-auto">
         
-        {/* Header */}
         <div className="mb-8">
           <Link 
             href="/"
@@ -151,14 +150,13 @@ export default function LeaderboardPage() {
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
             </svg>
-            Back to Game
+            {t('backToGame')}
           </Link>
 
-          <h1 className="text-5xl font-bold text-white mb-2">🏆 Leaderboard</h1>
-          <p className="text-neutral-400">Compete with the best League Roulette players</p>
+          <h1 className="text-5xl font-bold text-white mb-2">{t('title')}</h1>
+          <p className="text-neutral-400">{t('subtitle')}</p>
         </div>
 
-        {/* User's Rank Card (if logged in and not in top 100) */}
         {currentUserId && userRank && userRank.rank > 10 && (
           <div className="mb-6 p-4 rounded-xl bg-gradient-to-r from-[#C89B3C]/20 to-transparent border-2 border-[#C89B3C]">
             <div className="flex items-center gap-4">
@@ -172,7 +170,7 @@ export default function LeaderboardPage() {
                 </div>
               </div>
               <div className="flex-1">
-                <p className="text-sm text-neutral-400 mb-1">Your Rank</p>
+                <p className="text-sm text-neutral-400 mb-1">{t('yourRank')}</p>
                 <p className="text-white font-semibold">
                   {userRank.gameName}
                 </p>
@@ -185,7 +183,6 @@ export default function LeaderboardPage() {
           </div>
         )}
 
-        {/* Category Tabs */}
         <div className="mb-6">
           <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
             {CATEGORIES.map(cat => (
@@ -211,19 +208,17 @@ export default function LeaderboardPage() {
           </p>
         </div>
 
-        {/* Loading State */}
         {loading && (
           <div className="flex items-center justify-center py-20">
             <div className="text-center">
               <svg className="animate-spin w-12 h-12 text-[#C89B3C] mx-auto mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
               </svg>
-              <p className="text-neutral-400">Loading leaderboard...</p>
+              <p className="text-neutral-400">{t('loading')}</p>
             </div>
           </div>
         )}
 
-        {/* Error State */}
         {error && !loading && (
           <div className="p-6 rounded-xl bg-red-500/10 border border-red-500/30 text-center">
             <svg className="w-12 h-12 text-red-400 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -234,12 +229,11 @@ export default function LeaderboardPage() {
               onClick={loadLeaderboard}
               className="px-6 py-2 rounded-lg bg-red-500/20 hover:bg-red-500/30 text-red-300 transition"
             >
-              Retry
+              {t('retry')}
             </button>
           </div>
         )}
 
-        {/* Leaderboard */}
         {!loading && !error && (
           <div className="space-y-2">
             {leaderboard.map((entry) => {
@@ -261,7 +255,6 @@ export default function LeaderboardPage() {
                   `}
                 >
                   <div className="flex items-center gap-4">
-                    {/* Rank */}
                     <div className={`
                       flex-shrink-0 w-14 h-14 flex items-center justify-center
                       rounded-xl font-bold text-xl
@@ -272,7 +265,6 @@ export default function LeaderboardPage() {
                       </span>
                     </div>
 
-                    {/* Profile Icon */}
                     <div className="flex-shrink-0">
                       <div className={`
                         w-14 h-14 rounded-full overflow-hidden border-2
@@ -289,27 +281,24 @@ export default function LeaderboardPage() {
                       </div>
                     </div>
 
-                    {/* Player Info */}
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center gap-2 mb-1">
                         <p className="text-white font-bold text-lg truncate">
                           {entry.gameName}
-                          
                         </p>
                         {isCurrentUser && (
                           <span className="px-2 py-1 rounded-lg bg-[#C89B3C] text-neutral-950 text-xs font-bold">
-                            YOU
+                            {t('youBadge')}
                           </span>
                         )}
                       </div>
                       <div className="flex items-center gap-4 text-sm text-neutral-400">
-                        <span>Level {entry.level}</span>
+                        <span>{t('level', { level: entry.level })}</span>
                         <span>•</span>
-                        <span>{entry.totalChallenges} challenges</span>
+                        <span>{t('challenges', { count: entry.totalChallenges })}</span>
                       </div>
                     </div>
 
-                    {/* Stat Value */}
                     <div className="flex-shrink-0 text-right">
                       <p className="text-3xl font-bold text-[#C89B3C]">
                         {getStatValue(entry).toLocaleString()}
@@ -320,7 +309,6 @@ export default function LeaderboardPage() {
                     </div>
                   </div>
 
-                  {/* Top 3 Glow Effect */}
                   {isTopThree && (
                     <div className="absolute inset-0 pointer-events-none">
                       <div className={`absolute inset-0 opacity-5 ${
@@ -334,33 +322,31 @@ export default function LeaderboardPage() {
               )
             })}
 
-            {/* Empty State */}
             {leaderboard.length === 0 && (
               <div className="text-center py-20">
                 <div className="text-6xl mb-4">🏆</div>
-                <p className="text-neutral-400 text-xl mb-2">No rankings yet</p>
-                <p className="text-neutral-600 text-sm mb-6">Be the first to complete challenges and claim the top spot!</p>
+                <p className="text-neutral-400 text-xl mb-2">{t('emptyTitle')}</p>
+                <p className="text-neutral-600 text-sm mb-6">{t('emptyDesc')}</p>
                 <Link
                   href="/"
                   className="inline-block px-6 py-3 rounded-xl bg-[#C89B3C] text-neutral-950 font-bold hover:bg-[#d9aa44] transition"
                 >
-                  Start Playing
+                  {t('emptyCta')}
                 </Link>
               </div>
             )}
           </div>
         )}
 
-        {/* CTA for non-logged users */}
         {!currentUserId && leaderboard.length > 0 && (
           <div className="mt-8 p-6 rounded-xl bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/30 text-center">
-            <p className="text-white text-lg font-semibold mb-2">Want to compete?</p>
-            <p className="text-neutral-400 text-sm mb-4">Login to track your progress and climb the leaderboard!</p>
+            <p className="text-white text-lg font-semibold mb-2">{t('loginCta')}</p>
+            <p className="text-neutral-400 text-sm mb-4">{t('loginDesc')}</p>
             <Link
               href="/"
               className="inline-block px-6 py-3 rounded-xl bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold hover:from-blue-600 hover:to-purple-600 transition"
             >
-              Login & Start Playing
+              {t('loginButton')}
             </Link>
           </div>
         )}

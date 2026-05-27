@@ -1,5 +1,6 @@
 // app/about/page.tsx
 import type { Metadata } from "next"
+import { getTranslations } from 'next-intl/server'
 
 export const metadata: Metadata = {
   title: 'About League Roulette - Free LoL Random Champion Generator',
@@ -27,7 +28,9 @@ const breadcrumbSchema = {
   ],
 }
 
-export default function AboutPage() {
+export default async function AboutPage() {
+  const t = await getTranslations('about')
+
   return (
     <main className="min-h-screen bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 p-6">
       <div className="max-w-4xl mx-auto">
@@ -40,7 +43,7 @@ export default function AboutPage() {
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
           </svg>
-          Back to Game
+          {t('backToGame')}
         </a>
 
         <script
@@ -50,8 +53,8 @@ export default function AboutPage() {
 
         {/* Header */}
         <div className="mb-12 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">About League Roulette</h1>
-          <p className="text-xl text-neutral-400">Challenging League of Legends players since 2024</p>
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">{t('title')}</h1>
+          <p className="text-xl text-neutral-400">{t('subtitle')}</p>
         </div>
 
         {/* Main Content */}
@@ -59,32 +62,32 @@ export default function AboutPage() {
           
           {/* Mission Section */}
           <section className="mb-12 p-8 rounded-2xl bg-neutral-900 border border-neutral-800">
-            <h2 className="text-3xl font-bold text-white mb-4">Our Mission</h2>
+            <h2 className="text-3xl font-bold text-white mb-4">{t('missionTitle')}</h2>
             <p className="text-neutral-300 text-lg leading-relaxed mb-4">
-              League Roulette was created to help League of Legends players break out of their comfort zones and become more versatile summoners. We believe that true mastery comes from being able to adapt to any situation, and what better way to practice adaptability than by playing random champions?
+              {t('missionP1')}
             </p>
             <p className="text-neutral-300 text-lg leading-relaxed">
-              Our platform combines the excitement of randomness with a structured progression system, making it fun and rewarding to challenge yourself with champions you might never have considered playing before.
+              {t('missionP2')}
             </p>
           </section>
 
           {/* Story Section */}
           <section className="mb-12 p-8 rounded-2xl bg-neutral-900 border border-neutral-800">
-            <h2 className="text-3xl font-bold text-white mb-4">The Story Behind League Roulette</h2>
+            <h2 className="text-3xl font-bold text-white mb-4">{t('storyTitle')}</h2>
             <p className="text-neutral-300 text-lg leading-relaxed mb-4">
-              Every League of Legends player has experienced the frustration of facing the same champions over and over, or falling into the trap of only playing their comfort picks. League Roulette was born from a simple idea: what if we could make learning new champions fun and competitive?
+              {t('storyP1')}
             </p>
             <p className="text-neutral-300 text-lg leading-relaxed mb-4">
-              The concept started as a friendly challenge among friends, using a basic random number generator to pick champions. The excitement and laughter that came from watching each other struggle (and sometimes surprise everyone) with unfamiliar champions inspired us to create something more substantial.
+              {t('storyP2')}
             </p>
             <p className="text-neutral-300 text-lg leading-relaxed">
-              What began as a simple tool has evolved into a full-featured platform with automatic match verification, achievement systems, leaderboards, and a growing community of players who embrace the chaos and challenge of random champion selection.
+              {t('storyP3')}
             </p>
           </section>
 
           {/* What We Offer Section */}
           <section className="mb-12 p-8 rounded-2xl bg-neutral-900 border border-neutral-800">
-            <h2 className="text-3xl font-bold text-white mb-6">What We Offer</h2>
+            <h2 className="text-3xl font-bold text-white mb-6">{t('offerTitle')}</h2>
             
             <div className="space-y-6">
               <div className="flex gap-4">
@@ -92,9 +95,9 @@ export default function AboutPage() {
                   🎰
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Random Champion Selection</h3>
+                  <h3 className="text-xl font-semibold text-white mb-2">{t('offerRandom')}</h3>
                   <p className="text-neutral-400">
-                    Our sophisticated roulette system randomly selects champions from all 173 League of Legends champions. Filter by lane to focus on your preferred role, or go full random for the ultimate challenge.
+                    {t('offerRandomDesc')}
                   </p>
                 </div>
               </div>
@@ -104,9 +107,9 @@ export default function AboutPage() {
                   ✅
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Automatic Verification</h3>
+                  <h3 className="text-xl font-semibold text-white mb-2">{t('offerVerify')}</h3>
                   <p className="text-neutral-400">
-                    Using the official Riot Games API, we automatically detect and verify your matches. No manual screenshots or proof needed - just play your game and we'll handle the rest.
+                    {t('offerVerifyDesc')}
                   </p>
                 </div>
               </div>
@@ -116,9 +119,9 @@ export default function AboutPage() {
                   📈
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Progression System</h3>
+                  <h3 className="text-xl font-semibold text-white mb-2">{t('offerXp')}</h3>
                   <p className="text-neutral-400">
-                    Earn XP and level up by completing challenges. Build win streaks, unlock achievements, and climb the ranks. Every successful challenge brings you closer to mastery.
+                    {t('offerXpDesc')}
                   </p>
                 </div>
               </div>
@@ -128,9 +131,9 @@ export default function AboutPage() {
                   🏆
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Competitive Leaderboards</h3>
+                  <h3 className="text-xl font-semibold text-white mb-2">{t('offerLeaderboard')}</h3>
                   <p className="text-neutral-400">
-                    Compete with players worldwide across multiple categories: total XP, win streaks, challenges completed, and more. See how you stack up against the best.
+                    {t('offerLeaderboardDesc')}
                   </p>
                 </div>
               </div>
@@ -140,9 +143,9 @@ export default function AboutPage() {
                   🎖️
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Achievement System</h3>
+                  <h3 className="text-xl font-semibold text-white mb-2">{t('offerStreaks')}</h3>
                   <p className="text-neutral-400">
-                    Unlock special achievements by reaching milestones. From your first victory to incredible win streaks, celebrate your accomplishments and show off your dedication.
+                    {t('offerStreaksDesc')}
                   </p>
                 </div>
               </div>
@@ -151,72 +154,58 @@ export default function AboutPage() {
 
           {/* Why Random Champions Section */}
           <section className="mb-12 p-8 rounded-2xl bg-gradient-to-br from-[#C89B3C]/10 to-transparent border border-[#C89B3C]/30">
-            <h2 className="text-3xl font-bold text-white mb-4">Why Random Champions?</h2>
+            <h2 className="text-3xl font-bold text-white mb-4">{t('whyTitle')}</h2>
             <p className="text-neutral-300 text-lg leading-relaxed mb-4">
-              Playing random champions might seem chaotic, but it's one of the best ways to improve as a League of Legends player. Here's why:
+              {t('whyP1')}
             </p>
             
             <ul className="space-y-3 text-neutral-300 text-lg">
-              <li className="flex gap-3">
-                <span className="text-[#C89B3C] flex-shrink-0">•</span>
-                <span><strong className="text-white">Learn Champion Abilities:</strong> Understanding what every champion does makes you a better player, whether you're playing with or against them.</span>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-[#C89B3C] flex-shrink-0">•</span>
-                <span><strong className="text-white">Improve Fundamentals:</strong> When you can't rely on muscle memory, you focus on core mechanics like positioning, map awareness, and decision-making.</span>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-[#C89B3C] flex-shrink-0">•</span>
-                <span><strong className="text-white">Break Bad Habits:</strong> Playing new champions forces you to think differently and adapt your playstyle.</span>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-[#C89B3C] flex-shrink-0">•</span>
-                <span><strong className="text-white">Discover New Favorites:</strong> You might find your new main champion through League Roulette!</span>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-[#C89B3C] flex-shrink-0">•</span>
-                <span><strong className="text-white">Have More Fun:</strong> Predictability gets boring. Random champions keep every game fresh and exciting.</span>
-              </li>
+              {(t.raw('whyBullets') as string[]).map((bullet: string, i: number) => (
+                <li key={i} className="flex gap-3">
+                  <span className="text-[#C89B3C] flex-shrink-0">•</span>
+                  <span>{bullet}</span>
+                </li>
+              ))}
             </ul>
           </section>
 
           {/* Community Section */}
           <section className="mb-12 p-8 rounded-2xl bg-neutral-900 border border-neutral-800">
-            <h2 className="text-3xl font-bold text-white mb-4">Join Our Community</h2>
+            <h2 className="text-3xl font-bold text-white mb-4">{t('communityTitle')}</h2>
             <p className="text-neutral-300 text-lg leading-relaxed mb-4">
-              League Roulette is more than just a tool - it's a community of players who embrace challenge and growth. Whether you're a seasoned veteran or a newer player looking to expand your champion pool, you'll find like-minded summoners here.
+              {t('communityP1')}
             </p>
             <p className="text-neutral-300 text-lg leading-relaxed mb-4">
-              Share your epic comeback stories, discuss strategies for difficult champions, and celebrate achievements together. The leaderboards foster healthy competition, while the shared experience of random champion chaos creates lasting connections.
+              {t('communityP2')}
             </p>
             <p className="text-neutral-300 text-lg leading-relaxed">
-              We're constantly improving the platform based on community feedback. Have a suggestion? Found a bug? Want to share your experience? We'd love to hear from you on our <a href="/contact" className="text-[#C89B3C] hover:text-[#d9aa44] underline">contact page</a>.
+              {t.rich('communityP3', { contactLink: (chunks) => <a href="/contact" className="text-[#C89B3C] hover:text-[#d9aa44] underline">{chunks}</a> })}
             </p>
           </section>
 
           {/* Values Section */}
           <section className="mb-12 p-8 rounded-2xl bg-neutral-900 border border-neutral-800">
-            <h2 className="text-3xl font-bold text-white mb-6">Our Values</h2>
+            <h2 className="text-3xl font-bold text-white mb-6">{t('valuesTitle')}</h2>
             
             <div className="grid md:grid-cols-3 gap-6">
               <div>
-                <h3 className="text-xl font-semibold text-[#C89B3C] mb-2">🎯 Fair Play</h3>
+                <h3 className="text-xl font-semibold text-[#C89B3C] mb-2">🎯 {t('valueFairPlay')}</h3>
                 <p className="text-neutral-400">
-                  We use official Riot Games APIs to ensure all verification is accurate and fair. No cheating, no shortcuts - just honest gameplay.
+                  {t('valueFairPlayDesc')}
                 </p>
               </div>
               
               <div>
-                <h3 className="text-xl font-semibold text-[#C89B3C] mb-2">🔒 Privacy</h3>
+                <h3 className="text-xl font-semibold text-[#C89B3C] mb-2">🔒 {t('valuePrivacy')}</h3>
                 <p className="text-neutral-400">
-                  Your data is protected and never shared. We only access the information necessary to verify matches and track your progress.
+                  {t('valuePrivacyDesc')}
                 </p>
               </div>
               
               <div>
-                <h3 className="text-xl font-semibold text-[#C89B3C] mb-2">🚀 Innovation</h3>
+                <h3 className="text-xl font-semibold text-[#C89B3C] mb-2">🚀 {t('valueInnovation')}</h3>
                 <p className="text-neutral-400">
-                  We're constantly adding new features and improvements. League Roulette evolves with the needs of our community.
+                  {t('valueInnovationDesc')}
                 </p>
               </div>
             </div>
@@ -224,49 +213,49 @@ export default function AboutPage() {
 
           {/* Stats Section */}
           <section className="mb-12 p-8 rounded-2xl bg-gradient-to-br from-blue-500/10 to-purple-500/10 border border-blue-500/30">
-            <h2 className="text-3xl font-bold text-white mb-6 text-center">League Roulette by the Numbers</h2>
+            <h2 className="text-3xl font-bold text-white mb-6 text-center">{t('numbersTitle')}</h2>
             
             <div className="grid md:grid-cols-4 gap-6 text-center">
               <div>
                 <div className="text-4xl font-bold text-[#C89B3C] mb-2">173</div>
-                <div className="text-neutral-400">Champions Available</div>
+                <div className="text-neutral-400">{t('numbersChampions')}</div>
               </div>
               
               <div>
                 <div className="text-4xl font-bold text-[#C89B3C] mb-2">5</div>
-                <div className="text-neutral-400">Lane Filters</div>
+                <div className="text-neutral-400">{t('numbersChallenges')}</div>
               </div>
               
               <div>
                 <div className="text-4xl font-bold text-[#C89B3C] mb-2">∞</div>
-                <div className="text-neutral-400">Possible Combinations</div>
+                <div className="text-neutral-400">{t('numbersAchievements')}</div>
               </div>
               
               <div>
                 <div className="text-4xl font-bold text-[#C89B3C] mb-2">24/7</div>
-                <div className="text-neutral-400">Automatic Verification</div>
+                <div className="text-neutral-400">{t('numbersPlayers')}</div>
               </div>
             </div>
           </section>
 
           {/* Call to Action */}
           <section className="text-center p-8 rounded-2xl bg-gradient-to-r from-[#C89B3C]/20 to-transparent border border-[#C89B3C]/50">
-            <h2 className="text-3xl font-bold text-white mb-4">Ready to Challenge Yourself?</h2>
+            <h2 className="text-3xl font-bold text-white mb-4">{t('ctaTitle')}</h2>
             <p className="text-neutral-300 text-lg mb-6">
-              Join thousands of players who are expanding their champion pools and having fun doing it.
+              {t('communityP1')}
             </p>
             <div className="flex gap-4 justify-center flex-wrap">
               <a
                 href="/"
                 className="px-8 py-4 rounded-xl bg-[#C89B3C] text-neutral-950 font-bold hover:bg-[#d9aa44] transition text-lg"
               >
-                Start Playing Now
+                {t('ctaStart')}
               </a>
               <a
                 href="/howtoplay"
                 className="px-8 py-4 rounded-xl bg-neutral-800 text-white font-bold hover:bg-neutral-700 transition text-lg"
               >
-                Learn How to Play
+                {t('ctaLearn')}
               </a>
             </div>
           </section>

@@ -1,5 +1,6 @@
 // app/tips/page.tsx
 import type { Metadata } from "next"
+import { getTranslations } from 'next-intl/server'
 
 export const metadata: Metadata = {
   title: 'LoL Strategy Tips & Champion Guides - League Roulette',
@@ -27,7 +28,9 @@ const breadcrumbSchema = {
   ],
 }
 
-export default function TipsPage() {
+export default async function TipsPage() {
+  const t = await getTranslations('tips')
+
   return (
     <main className="min-h-screen bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 p-6">
       <div className="max-w-4xl mx-auto">
@@ -40,7 +43,7 @@ export default function TipsPage() {
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
           </svg>
-          Back to Game
+          {t('backToGame')}
         </a>
 
         <script
@@ -50,8 +53,8 @@ export default function TipsPage() {
 
         {/* Header */}
         <div className="mb-12 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">Strategy & Champion Tips</h1>
-          <p className="text-xl text-neutral-400">Master the art of playing random champions</p>
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">{t('title')}</h1>
+          <p className="text-xl text-neutral-400">{t('subtitle')}</p>
         </div>
 
         {/* Main Content */}
@@ -374,7 +377,7 @@ export default function TipsPage() {
 
           {/* Final Motivation */}
           <section className="text-center p-8 rounded-2xl bg-gradient-to-r from-[#C89B3C]/20 to-transparent border border-[#C89B3C]/50">
-            <h2 className="text-3xl font-bold text-white mb-4">Ready to Improve?</h2>
+            <h2 className="text-3xl font-bold text-white mb-4">{t('ctaTitle')}</h2>
             <p className="text-neutral-300 text-lg mb-6">
               Every random champion game makes you a better League of Legends player. Use these strategies, stay positive, and embrace the challenge!
             </p>
@@ -383,13 +386,13 @@ export default function TipsPage() {
                 href="/"
                 className="px-8 py-4 rounded-xl bg-[#C89B3C] text-neutral-950 font-bold hover:bg-[#d9aa44] transition text-lg"
               >
-                Start Playing
+                {t('ctaPlay')}
               </a>
               <a
                 href="/howtoplay"
                 className="px-8 py-4 rounded-xl bg-neutral-800 text-white font-bold hover:bg-neutral-700 transition text-lg"
               >
-                Learn the Basics
+                {t('ctaBasics')}
               </a>
             </div>
           </section>

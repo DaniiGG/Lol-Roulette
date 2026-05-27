@@ -1,74 +1,78 @@
 'use client'
 
 import Link from 'next/link'
+import { useTranslations } from 'next-intl'
 
 export default function Footer() {
+  const t = useTranslations('footer')
+  const tNav = useTranslations('nav')
+  const year = new Date().getFullYear()
+
   return (
     <footer className="border-t border-neutral-800/50 pb-8">
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid grid-cols-1 gap-8 py-12 md:grid-cols-4">
           <div>
-            <h3 className="mb-4 font-bold text-white">League Roulette</h3>
+            <h3 className="mb-4 font-bold text-white">{tNav('siteName')}</h3>
             <p className="text-sm leading-relaxed text-neutral-400">
-              Random champion challenge tracker for League of Legends. Discover
-              new champions, track your wins, and compete globally.
+              {t('description')}
             </p>
           </div>
 
           <div>
-            <h4 className="mb-4 text-sm font-semibold text-white">Quick Links</h4>
+            <h4 className="mb-4 text-sm font-semibold text-white">{t('quickLinks')}</h4>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/blog" className="text-neutral-400 transition hover:text-white">
-                  Blog
+                  {tNav('blog')}
                 </Link>
               </li>
               <li>
                 <a href="/howtoplay" className="text-neutral-400 transition hover:text-white">
-                  How to play
+                  {tNav('howToPlay')}
                 </a>
               </li>
               <li>
                 <a href="/about" className="text-neutral-400 transition hover:text-white">
-                  About Us
+                  {tNav('about')}
                 </a>
               </li>
               <li>
                 <a href="/faq" className="text-neutral-400 transition hover:text-white">
-                  FAQ
+                  {tNav('faq')}
                 </a>
               </li>
               <li>
                 <a href="/tips" className="text-neutral-400 transition hover:text-white">
-                  Tips
+                  {tNav('tips')}
                 </a>
               </li>
             </ul>
           </div>
 
           <div>
-            <h4 className="mb-4 text-sm font-semibold text-white">Legal</h4>
+            <h4 className="mb-4 text-sm font-semibold text-white">{t('legal')}</h4>
             <ul className="space-y-2 text-sm">
               <li>
                 <a href="/contact" className="text-neutral-400 transition hover:text-white">
-                  Contact
+                  {tNav('contact')}
                 </a>
               </li>
               <li>
                 <a href="/privacy" className="text-neutral-400 transition hover:text-white">
-                  Privacy Policy
+                  {tNav('privacy')}
                 </a>
               </li>
               <li>
                 <a href="/terms" className="text-neutral-400 transition hover:text-white">
-                  Terms of Service
+                  {tNav('terms')}
                 </a>
               </li>
             </ul>
           </div>
 
           <div>
-            <h4 className="mb-4 text-sm font-semibold text-white">Follow Us</h4>
+            <h4 className="mb-4 text-sm font-semibold text-white">{t('followUs')}</h4>
             <div className="flex gap-3">
               <a
                 href=""
@@ -110,15 +114,11 @@ export default function Footer() {
         <div className="border-t border-neutral-800/50 pt-8">
           <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
             <p className="text-center text-xs text-neutral-600 md:text-left">
-              © {new Date().getFullYear()} League Roulette. All rights reserved.
+              {t('copyright', { year })}
             </p>
 
             <p className="max-w-2xl text-center text-xs text-neutral-600 md:text-right">
-              League Roulette is not endorsed by Riot Games and does not reflect
-              the views or opinions of Riot Games or anyone officially involved
-              in producing or managing Riot Games properties. League of Legends
-              and Riot Games are trademarks or registered trademarks of Riot
-              Games, Inc.
+              {t('disclaimer')}
             </p>
           </div>
         </div>

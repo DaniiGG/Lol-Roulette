@@ -1,6 +1,8 @@
 // components/ChampionSelector.tsx
 'use client'
 
+import { useTranslations } from 'next-intl'
+
 interface Champion {
   id: string
   key: number
@@ -25,6 +27,7 @@ export default function ChampionSelector({
   onReroll,
   disabled = false
 }: ChampionSelectorProps) {
+  const t = useTranslations('championSelector')
   const LOADING_BASE = 'https://ddragon.leagueoflegends.com/cdn/img/champion/loading/'
 
   return (
@@ -33,12 +36,12 @@ export default function ChampionSelector({
       {/* Header */}
       <div className="text-center mb-6">
         <h2 className="text-3xl font-bold text-white mb-2">
-          {champions.length === 1 ? 'Your Champion' : 'Choose Your Champion'}
+          {champions.length === 1 ? t('yourChampion') : t('chooseChampion')}
         </h2>
         <p className="text-neutral-400">
           {champions.length === 1 
-            ? 'Click to confirm or reroll for more options'
-            : `Select one champion to play (${champions.length} options available)`
+            ? t('clickConfirm')
+            : t('selectOne', { n: champions.length })
           }
         </p>
       </div>
@@ -94,7 +97,7 @@ export default function ChampionSelector({
               
               {/* Play Button Overlay */}
               <div className="mt-3 px-4 py-2 rounded-lg bg-[#C89B3C] text-neutral-950 font-bold text-center opacity-0 group-hover:opacity-100 transition-opacity">
-                ✓ Play with {champion.name}
+                {t('playWith', { champion: champion.name })}
               </div>
             </div>
 
@@ -129,12 +132,12 @@ export default function ChampionSelector({
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
               </svg>
-              Reroll ({rerollsLeft === Infinity ? 'Unlimited' : `${rerollsLeft} left`})
+              {rerollsLeft === Infinity ? t('rerollUnlimited') : t('rerollLeft', { n: rerollsLeft })}
             </span>
           </button>
           
           <p className="text-neutral-500 text-sm mt-3">
-            {rerollsLeft === Infinity ? 'Don\'t like these options? You have unlimited spins' : `Don't like these options? You have ${rerollsLeft} more ${rerollsLeft === 1 ? 'spin' : 'spins'}`}
+            {rerollsLeft === Infinity ? t('unlimitedSpins') : t('spinsLeft', { n: rerollsLeft })}
           </p>
         </div>
       )}
@@ -143,7 +146,7 @@ export default function ChampionSelector({
       {champions.length > 1 && rerollsLeft === 0 && (
         <div className="text-center p-4 rounded-xl bg-blue-500/10 border border-blue-500/30">
           <p className="text-blue-300">
-            ✨ Choose wisely! No rerolls remaining
+            {t('noRerolls')}
           </p>
         </div>
       )}

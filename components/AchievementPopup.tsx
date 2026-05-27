@@ -1,6 +1,7 @@
 // components/AchievementPopup.tsx
 'use client'
 
+import { useTranslations } from 'next-intl'
 import { ACHIEVEMENTS } from '@/lib/achievements'
 import { useEffect } from 'react'
 
@@ -10,6 +11,8 @@ interface AchievementPopupProps {
 }
 
 export default function AchievementPopup({ achievementTypes, onClose }: AchievementPopupProps) {
+  const t = useTranslations('achievements')
+
   useEffect(() => {
     if (onClose) {
       const timer = setTimeout(() => {
@@ -25,7 +28,7 @@ export default function AchievementPopup({ achievementTypes, onClose }: Achievem
     <div className="fixed inset-0 flex items-center justify-center z-50 pointer-events-none px-4">
       <div className="bg-gradient-to-br from-yellow-500 to-orange-600 p-6 md:p-8 rounded-3xl border-4 border-yellow-300 shadow-2xl pointer-events-auto animate-bounce-in max-w-md w-full">
         <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 text-center">
-          🎉 New Achievement!
+          {t('newAchievement')}
         </h2>
         
         <div className="space-y-4">
@@ -42,7 +45,7 @@ export default function AchievementPopup({ achievementTypes, onClose }: Achievem
                 </p>
                 <div className="inline-block px-4 py-2 bg-yellow-400/30 rounded-full">
                   <p className="text-yellow-100 font-bold">
-                    +{achievement.xpReward} XP
+                    {t('xpReward', { xp: achievement.xpReward })}
                   </p>
                 </div>
               </div>
@@ -55,7 +58,7 @@ export default function AchievementPopup({ achievementTypes, onClose }: Achievem
             onClick={onClose}
             className="mt-4 w-full py-2 bg-white/20 hover:bg-white/30 text-white rounded-xl transition"
           >
-            Close
+            {t('close')}
           </button>
         )}
       </div>

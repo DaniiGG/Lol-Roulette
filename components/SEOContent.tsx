@@ -1,15 +1,16 @@
-// components/SEOContent.tsx
-// Agregar al final de tu página principal
+'use client'
+
+import { useTranslations } from 'next-intl'
 
 export default function SEOContent() {
+  const t = useTranslations('seo')
+  
   return (
     <div className="max-w-4xl mx-auto mt-16 mb-8 px-6">
-      {/* Hidden H1 for SEO */}
       <h1 className="sr-only">
-        Free Random League of Legends Champion Generator | LoL Roulette & Picker 2026 - Ranked, ARAM, Custom
+        {t('srHeading')}
       </h1>
       
-      {/* SEO Content Section */}
       <div className="bg-neutral-900/40 backdrop-blur-xl rounded-2xl border border-neutral-800/50 p-8 space-y-6 text-neutral-300">
         
         <section>
@@ -29,7 +30,7 @@ export default function SEOContent() {
           </h2>
           <ol className="list-decimal ml-6 space-y-2">
             <li>Select your preferred lane (Top, Jungle, Mid, ADC, or Support)</li>
-            <li>Click "Spin Roulette" to get a random League of Legends champion</li>
+            <li>Click Spin Roulette to get a random League of Legends champion</li>
             <li>Play a match with that champion in League of Legends</li>
             <li>Login to verify your win and earn XP and achievements</li>
             <li>Build your streak and climb the leaderboard!</li>
@@ -133,7 +134,7 @@ export default function SEOContent() {
                 How does match verification work?
               </h3>
               <p>
-                We use Riot Games' official API to verify that you played and won with 
+                We use Riot Games official API to verify that you played and won with 
                 the assigned champion. Your match data is fetched securely and privately.
               </p>
             </div>

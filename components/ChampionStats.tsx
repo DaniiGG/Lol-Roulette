@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { useTranslations } from 'next-intl'
 
 interface ChampionStatsProps {
   championId: string
@@ -38,6 +39,7 @@ const CLASS_BUILDS: Record<string, { items: string[], role: string }> = {
 }
 
 export default function ChampionStats({ championId, championName }: ChampionStatsProps) {
+  const t = useTranslations('championStats')
   const [stats, setStats] = useState<any>(null)
   const [loading, setLoading] = useState(true)
 
@@ -76,25 +78,25 @@ export default function ChampionStats({ championId, championName }: ChampionStat
     <div className="w-full mt-6 space-y-6 animate-fadeIn">
       <div className="p-6 rounded-3xl bg-neutral-900/60 border border-neutral-800/80 backdrop-blur-md">
         <h3 className="text-2xl font-semibold text-white mb-6 flex items-center gap-3">
-          <span className="text-[#C89B3C]">📊</span> {championName} Statistics
+          <span className="text-[#C89B3C]">{t('statistics', { champion: championName })}</span>
         </h3>
         
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           <div className="p-4 rounded-2xl bg-neutral-950/50 border border-neutral-800/50">
-            <p className="text-neutral-400 text-xs uppercase tracking-wider mb-1">Health (HP)</p>
-            <p className="text-xl font-medium text-emerald-400">{stats.stats.hp} <span className="text-sm text-neutral-500">+{stats.stats.hpperlevel}/lvl</span></p>
+            <p className="text-neutral-400 text-xs uppercase tracking-wider mb-1">{t('health')}</p>
+            <p className="text-xl font-medium text-emerald-400">{stats.stats.hp} <span className="text-sm text-neutral-500">+{stats.stats.hpperlevel}{t('perLevel')}</span></p>
           </div>
           <div className="p-4 rounded-2xl bg-neutral-950/50 border border-neutral-800/50">
-            <p className="text-neutral-400 text-xs uppercase tracking-wider mb-1">Attack Damage</p>
-            <p className="text-xl font-medium text-orange-400">{stats.stats.attackdamage} <span className="text-sm text-neutral-500">+{stats.stats.attackdamageperlevel}/lvl</span></p>
+            <p className="text-neutral-400 text-xs uppercase tracking-wider mb-1">{t('attackDamage')}</p>
+            <p className="text-xl font-medium text-orange-400">{stats.stats.attackdamage} <span className="text-sm text-neutral-500">+{stats.stats.attackdamageperlevel}{t('perLevel')}</span></p>
           </div>
           <div className="p-4 rounded-2xl bg-neutral-950/50 border border-neutral-800/50">
-            <p className="text-neutral-400 text-xs uppercase tracking-wider mb-1">Armor</p>
-            <p className="text-xl font-medium text-yellow-500">{stats.stats.armor} <span className="text-sm text-neutral-500">+{stats.stats.armorperlevel}/lvl</span></p>
+            <p className="text-neutral-400 text-xs uppercase tracking-wider mb-1">{t('armor')}</p>
+            <p className="text-xl font-medium text-yellow-500">{stats.stats.armor} <span className="text-sm text-neutral-500">+{stats.stats.armorperlevel}{t('perLevel')}</span></p>
           </div>
           <div className="p-4 rounded-2xl bg-neutral-950/50 border border-neutral-800/50">
-            <p className="text-neutral-400 text-xs uppercase tracking-wider mb-1">Magic Resist</p>
-            <p className="text-xl font-medium text-blue-400">{stats.stats.spellblock} <span className="text-sm text-neutral-500">+{stats.stats.spellblockperlevel}/lvl</span></p>
+            <p className="text-neutral-400 text-xs uppercase tracking-wider mb-1">{t('magicResist')}</p>
+            <p className="text-xl font-medium text-blue-400">{stats.stats.spellblock} <span className="text-sm text-neutral-500">+{stats.stats.spellblockperlevel}{t('perLevel')}</span></p>
           </div>
         </div>
 
@@ -109,9 +111,9 @@ export default function ChampionStats({ championId, championName }: ChampionStat
 
       <div className="p-6 rounded-3xl bg-neutral-900/60 border border-neutral-800/80 backdrop-blur-md">
         <h3 className="text-2xl font-semibold text-white mb-2 flex items-center gap-3">
-          <span className="text-blue-500">⚔️</span> Recommended Build
+          <span className="text-blue-500">{t('recommendedBuild')}</span>
         </h3>
-        <p className="text-neutral-400 text-sm mb-6">General standard build for {recommendedBuild.role}</p>
+        <p className="text-neutral-400 text-sm mb-6">{t('buildForRole', { role: recommendedBuild.role })}</p>
 
         <div className="flex flex-wrap gap-3">
           {recommendedBuild.items.map((item: string, i: number) => (

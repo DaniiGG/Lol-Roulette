@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState, useCallback } from 'react'
 import { getChampionsByLane, normalizeChampionName } from '@/lib/champion-lanes'
+import { useTranslations } from 'next-intl'
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Tipos
@@ -50,6 +51,7 @@ export default function SlotMachineRoulette({
   rerollsUsed = 0,
   maxRerolls = 2
 }: SlotMachineRouletteProps) {
+  const t = useTranslations('slotMachine')
   const [allChampions, setAllChampions] = useState<Champion[]>([])
   const [isSpinning, setIsSpinning]     = useState(false)
   const [winner, setWinner]             = useState<Champion | null>(null)
@@ -423,7 +425,7 @@ export default function SlotMachineRoulette({
                 <svg className="animate-spin w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
                 </svg>
-                <span className="text-sm font-semibold tracking-wider">Loading champions…</span>
+                <span className="text-sm font-semibold tracking-wider">{t('loading')}</span>
               </div>
             </div>
           )}
@@ -436,7 +438,7 @@ export default function SlotMachineRoulette({
       {/* Reroll counter */}
       {rerollsUsed > 0 && (
         <div className="flex items-center justify-center gap-2">
-          <span className="text-neutral-400 text-sm">Rerolls:</span>
+          <span className="text-neutral-400 text-sm">{t('rerolls')}</span>
           <div className="flex gap-1">
             {[...Array(maxRerolls + 1)].map((_, i) => (
               <div
@@ -454,7 +456,7 @@ export default function SlotMachineRoulette({
       {/* Champion count */}
       {!loadingChamps && allChampions.length > 0 && (
         <div className="text-neutral-500 text-xs">
-          {allChampions.length} champion{allChampions.length !== 1 ? 's' : ''} in pool
+          {t('championCount', { count: allChampions.length })}
         </div>
       )}
 
@@ -534,12 +536,12 @@ export default function SlotMachineRoulette({
               ${(isSpinning || disabled) ? 'text-neutral-500' : 'text-[#C89B3C] group-hover:text-[#d9aa44]'}
               transition-colors
             `}>
-              {isSpinning ? 'Spinning...' : rerollsUsed > 0 && rerollsUsed <= maxRerolls 
-                ? `Pull (${maxRerolls + 1 - rerollsUsed} left)` 
-                : 'Pull the Lever'}
+              {isSpinning ? t('spinning') : rerollsUsed > 0 && rerollsUsed <= maxRerolls 
+                ? t('pullLeft', { remaining: maxRerolls + 1 - rerollsUsed }) 
+                : t('pullLever')}
             </p>
             {!isSpinning && !(isSpinning || disabled) && (
-              <p className="text-xs text-neutral-600 mt-1">Click to spin</p>
+              <p className="text-xs text-neutral-600 mt-1">{t('clickToSpin')}</p>
             )}
           </div>
         </button>
@@ -568,7 +570,7 @@ export default function SlotMachineRoulette({
 
           <div className="flex-1 min-w-0">
             <p className="text-[#C89B3C] text-xs font-bold tracking-[0.3em] uppercase mb-1">
-              🎰 Jackpot!
+              {t('jackpot')}
             </p>
             <p className="text-white text-3xl font-bold leading-tight truncate">
               {winner.name}
@@ -578,7 +580,7 @@ export default function SlotMachineRoulette({
           <button
             onClick={spin}
             disabled={disabled}
-            title="Spin again"
+            title={t('spinAgain')}
             className="flex-shrink-0 p-3 rounded-xl bg-neutral-800/80
                        hover:bg-neutral-700 text-neutral-400 hover:text-white
                        transition disabled:opacity-40 disabled:cursor-not-allowed"

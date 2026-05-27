@@ -1,6 +1,7 @@
 // components/Login.tsx (MEJORADO)
 'use client'
 
+import { useTranslations } from 'next-intl'
 import { useState } from 'react'
 
 interface LoginProps {
@@ -23,6 +24,7 @@ const REGIONS = [
 ]
 
 export default function Login({ onLogin, loading = false }: LoginProps) {
+  const t = useTranslations('login')
   const [riotId, setRiotId] = useState('')
   const [region, setRegion] = useState('euw1')
   const [error, setError] = useState('')
@@ -31,19 +33,18 @@ export default function Login({ onLogin, loading = false }: LoginProps) {
     setError('')
 
     if (!riotId.trim()) {
-      setError('Please enter your Riot ID')
+      setError(t('errorRequired'))
       return
     }
 
-    // Validar formato GameName#TAG
     if (!riotId.includes('#')) {
-      setError('Invalid format. Use: GameName#TAG')
+      setError(t('errorFormat'))
       return
     }
 
     const parts = riotId.split('#')
     if (parts.length !== 2 || !parts[0] || !parts[1]) {
-      setError('Invalid format. Example: Player#EUW')
+      setError(t('errorFormatExample'))
       return
     }
 
@@ -56,17 +57,17 @@ export default function Login({ onLogin, loading = false }: LoginProps) {
         {/* Header */}
         <div className="text-center mb-8">
           <h1 className="text-5xl font-extralight text-white mb-2">
-            League Roulette
+            {t('title')}
           </h1>
           <div className="flex items-center justify-center gap-3 mb-4">
             <div className="h-px w-8 bg-gradient-to-r from-transparent via-neutral-500 to-transparent"></div>
             <p className="text-neutral-400 text-xs tracking-widest uppercase">
-              Random Champion Challenge
+              {t('subtitle')}
             </p>
             <div className="h-px w-8 bg-gradient-to-r from-transparent via-neutral-500 to-transparent"></div>
           </div>
           <p className="text-neutral-500 text-sm">
-            Enter your Riot ID to start
+            {t('enterRiotId')}
           </p>
         </div>
 
@@ -74,11 +75,11 @@ export default function Login({ onLogin, loading = false }: LoginProps) {
         <div className="space-y-4">
           <div>
             <label className="block text-neutral-400 text-sm mb-2">
-              Riot ID
+              {t('riotId')}
             </label>
             <input
               type="text"
-              placeholder="GameName#TAG"
+              placeholder={t('riotIdPlaceholder')}
               value={riotId}
               onChange={(e) => {
                 setRiotId(e.target.value)
@@ -89,13 +90,13 @@ export default function Login({ onLogin, loading = false }: LoginProps) {
               className="w-full px-4 py-3 rounded-xl bg-neutral-800 border border-neutral-700 text-white placeholder-neutral-500 focus:outline-none focus:border-white transition disabled:opacity-50"
             />
             <p className="text-neutral-600 text-xs mt-2">
-              Example: Hide on bush#KR1 or Faker#KR1
+              {t('example')}
             </p>
           </div>
 
           <div>
             <label className="block text-neutral-400 text-sm mb-2">
-              Region
+              {t('region')}
             </label>
             <select
               value={region}
@@ -125,10 +126,10 @@ export default function Login({ onLogin, loading = false }: LoginProps) {
             {loading ? (
               <span className="flex items-center justify-center gap-2">
                 <div className="w-4 h-4 border-2 border-neutral-950/20 border-t-neutral-950 rounded-full animate-spin"></div>
-                Verifying...
+                {t('verifying')}
               </span>
             ) : (
-              'Start Playing'
+              t('startPlaying')
             )}
           </button>
         </div>
@@ -136,17 +137,17 @@ export default function Login({ onLogin, loading = false }: LoginProps) {
         {/* Info */}
         <div className="mt-6 p-4 rounded-xl bg-blue-500/10 border border-blue-500/30">
           <h3 className="text-blue-400 font-semibold text-sm mb-2">
-            🔒 Secure Authentication
+            {t('secureAuth')}
           </h3>
           <p className="text-blue-300/80 text-xs leading-relaxed">
-            We verify your account using Riot's official API. Your password is never stored or shared.
+            {t('secureDesc')}
           </p>
         </div>
 
         {/* Footer */}
         <div className="mt-8 text-center">
           <p className="text-neutral-600 text-xs">
-            League Roulette isn't endorsed by Riot Games
+            {t('disclaimer')}
           </p>
         </div>
       </div>

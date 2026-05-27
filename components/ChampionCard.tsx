@@ -1,6 +1,8 @@
 // components/ChampionCard.tsx
 'use client'
 
+import { useTranslations } from 'next-intl'
+
 interface ChampionCardProps {
   champion?: {
     id: string
@@ -25,6 +27,8 @@ export default function ChampionCard({
   verifying = false,
   showVerify = false
 }: ChampionCardProps) {
+  const t = useTranslations('championCard')
+
   // DEBUG: Ver qué props llegan
   console.log('🎴 ChampionCard props:', {
     champion,
@@ -73,7 +77,7 @@ export default function ChampionCard({
                 <div className="flex items-center gap-2">
                   <div className="h-px w-8 bg-white/60"></div>
                   <span className="text-xs text-neutral-400 tracking-[0.2em] uppercase font-light">
-                    Your Champion
+                    {t('yourChampion')}
                   </span>
                 </div>
                 <h2 className="text-5xl md:text-6xl font-extralight text-white tracking-tight">
@@ -113,10 +117,10 @@ export default function ChampionCard({
               </div>
             </div>
             <p className="text-neutral-400 font-light text-lg tracking-wide">
-              Ready to begin
+              {t('readyToBegin')}
             </p>
             <p className="text-neutral-600 text-sm mt-2 font-light">
-              Press the button below
+              {t('pressBelow')}
             </p>
           </div>
         )}
@@ -145,12 +149,12 @@ export default function ChampionCard({
               {loading ? (
                 <>
                   <div className="w-4 h-4 border border-neutral-950/20 border-t-neutral-950 rounded-full animate-spin"></div>
-                  <span>Spinning</span>
+                  <span>{t('spinning')}</span>
                 </>
               ) : (
                 <>
                   <span className="text-xs opacity-60">—</span>
-                  <span>Spin Roulette</span>
+                  <span>{t('spinRoulette')}</span>
                   <span className="text-xs opacity-60">—</span>
                 </>
               )}
@@ -175,10 +179,10 @@ export default function ChampionCard({
               {verifying ? (
                 <span className="flex items-center justify-center gap-2">
                   <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
-                  Verifying...
+                  {t('verifying')}
                 </span>
               ) : (
-                'Verify Match'
+                t('verifyMatch')
               )}
             </button>
             
@@ -189,7 +193,7 @@ export default function ChampionCard({
               className="w-full py-3 rounded-xl bg-neutral-800 text-white hover:bg-neutral-700 transition disabled:opacity-40 text-sm"
             >
               <span className="text-xs opacity-60">—</span>
-                  <span>Spin Again</span>
+                  <span>{t('spinAgain')}</span>
               <span className="text-xs opacity-60">—</span>
             </button>
           </>
@@ -214,12 +218,12 @@ export default function ChampionCard({
               {loading ? (
                 <>
                   <div className="w-4 h-4 border border-neutral-950/20 border-t-neutral-950 rounded-full animate-spin"></div>
-                  <span>Spinning</span>
+                  <span>{t('spinning')}</span>
                 </>
               ) : (
                 <>
                   <span className="text-xs opacity-60">—</span>
-                  <span>Spin Roulette</span>
+                  <span>{t('spinRoulette')}</span>
                   <span className="text-xs opacity-60">—</span>
                 </>
               )}

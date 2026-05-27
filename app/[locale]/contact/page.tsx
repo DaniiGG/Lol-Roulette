@@ -3,6 +3,7 @@
 
 import { useState, useEffect } from 'react'
 import { Mail, MessageSquare, Send, CheckCircle, ArrowLeft, Lightbulb } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
@@ -14,6 +15,7 @@ const breadcrumbSchema = {
 }
 
 export default function ContactPage() {
+  const t = useTranslations('contact')
   useEffect(() => {
     document.title = 'Contact Us - League Roulette | Support & Feedback'
   }, [])
@@ -29,9 +31,6 @@ export default function ContactPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setLoading(true)
-
-    // Aquí podrías integrar con un servicio de email como SendGrid, Resend, etc.
-    // Por ahora solo simularemos el envío
     setTimeout(() => {
       setSubmitted(true)
       setLoading(false)
@@ -51,11 +50,11 @@ export default function ContactPage() {
         <div className="mb-12">
           <a href="/" className="text-neutral-400 hover:text-white transition text-sm mb-4 inline-flex items-center gap-2">
             <ArrowLeft className="w-4 h-4" />
-            Back to Home
+            {t('backToHome')}
           </a>
-          <h1 className="text-5xl font-bold mb-4">Contact Us</h1>
+          <h1 className="text-5xl font-bold mb-4">{t('title')}</h1>
           <p className="text-xl text-neutral-400">
-            We'd love to hear from you!
+            {t('subtitle')}
           </p>
         </div>
 
@@ -71,71 +70,71 @@ export default function ContactPage() {
                       <CheckCircle className="w-10 h-10 text-green-400" />
                     </div>
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-2">Message Sent!</h3>
+                  <h3 className="text-2xl font-bold text-white mb-2">{t('successTitle')}</h3>
                   <p className="text-green-300 mb-6">
-                    Thank you for reaching out. We'll get back to you as soon as possible.
+                    {t('successDesc')}
                   </p>
                   <button
                     onClick={() => setSubmitted(false)}
                     className="px-6 py-3 bg-white text-neutral-950 rounded-xl font-semibold hover:bg-neutral-100 transition"
                   >
-                    Send Another Message
+                    {t('sendAnother')}
                   </button>
                 </div>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label className="block text-sm font-semibold mb-2">Name</label>
+                  <label className="block text-sm font-semibold mb-2">{t('formName')}</label>
                   <input
                     type="text"
                     required
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     className="w-full px-4 py-3 bg-neutral-800 border border-neutral-700 rounded-xl text-white focus:border-white focus:outline-none transition"
-                    placeholder="Your name"
+                    placeholder={t('namePlaceholder')}
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-semibold mb-2">Email</label>
+                  <label className="block text-sm font-semibold mb-2">{t('formEmail')}</label>
                   <input
                     type="email"
                     required
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     className="w-full px-4 py-3 bg-neutral-800 border border-neutral-700 rounded-xl text-white focus:border-white focus:outline-none transition"
-                    placeholder="your@email.com"
+                    placeholder={t('emailPlaceholder')}
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-semibold mb-2">Subject</label>
+                  <label className="block text-sm font-semibold mb-2">{t('formSubject')}</label>
                   <select
                     required
                     value={formData.subject}
                     onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                     className="w-full px-4 py-3 bg-neutral-800 border border-neutral-700 rounded-xl text-white focus:border-white focus:outline-none transition"
                   >
-                    <option value="">Select a subject</option>
-                    <option value="general">General Inquiry</option>
-                    <option value="bug">Bug Report</option>
-                    <option value="feature">Feature Request</option>
-                    <option value="partnership">Partnership/Business</option>
-                    <option value="support">Technical Support</option>
-                    <option value="other">Other</option>
+                    <option value="">{t('subjectSelect')}</option>
+                    <option value="general">{t('subjectGeneral')}</option>
+                    <option value="bug">{t('subjectBug')}</option>
+                    <option value="feature">{t('subjectFeature')}</option>
+                    <option value="partnership">{t('subjectPartnership')}</option>
+                    <option value="support">{t('subjectSupport')}</option>
+                    <option value="other">{t('subjectOther')}</option>
                   </select>
                 </div>
 
                 <div>
-                  <label className="block text-sm font-semibold mb-2">Message</label>
+                  <label className="block text-sm font-semibold mb-2">{t('formMessage')}</label>
                   <textarea
                     required
                     rows={6}
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     className="w-full px-4 py-3 bg-neutral-800 border border-neutral-700 rounded-xl text-white focus:border-white focus:outline-none transition resize-none"
-                    placeholder="Tell us what's on your mind..."
+                    placeholder={t('messagePlaceholder')}
                   />
                 </div>
 
@@ -147,12 +146,12 @@ export default function ContactPage() {
                   {loading ? (
                     <>
                       <div className="w-4 h-4 border-2 border-neutral-950/20 border-t-neutral-950 rounded-full animate-spin" />
-                      Sending...
+                      {t('sending')}
                     </>
                   ) : (
                     <>
                       <Send className="w-4 h-4" />
-                      Send Message
+                      {t('send')}
                     </>
                   )}
                 </button>
@@ -170,12 +169,12 @@ export default function ContactPage() {
                   <Mail className="w-6 h-6 text-blue-400" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-white mb-1">Email</h3>
+                  <h3 className="font-bold text-white mb-1">{t('emailLabel')}</h3>
                   <a href="mailto:contact@leagueroulette.com" className="text-blue-400 hover:text-blue-300 transition">
                     lolroulettenine@gmail.com
                   </a>
                   <p className="text-sm text-neutral-400 mt-2">
-                    We typically respond within 24-48 hours
+                    {t('emailDesc')}
                   </p>
                 </div>
               </div>
@@ -188,17 +187,17 @@ export default function ContactPage() {
                   <MessageSquare className="w-6 h-6 text-purple-400" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-white mb-1">Discord Community</h3>
+                  <h3 className="font-bold text-white mb-1">{t('discordLabel')}</h3>
                   <a 
                     href="" 
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-purple-400 hover:text-purple-300 transition"
                   >
-                    Join our Discord
+                    {t('discordDesc')}
                   </a>
                   <p className="text-sm text-neutral-400 mt-2">
-                    Get instant support and connect with the community
+                    {t('discordText')}
                   </p>
                 </div>
               </div>
@@ -213,7 +212,7 @@ export default function ContactPage() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="font-bold text-white mb-1">Twitter</h3>
+                  <h3 className="font-bold text-white mb-1">{t('twitterLabel')}</h3>
                   <a 
                     href="" 
                     target="_blank"
@@ -223,7 +222,7 @@ export default function ContactPage() {
                     @--
                   </a>
                   <p className="text-sm text-neutral-400 mt-2">
-                    Follow for updates and announcements
+                    {t('twitterDesc')}
                   </p>
                 </div>
               </div>
@@ -234,15 +233,15 @@ export default function ContactPage() {
               <div className="flex items-start gap-3">
                 <Lightbulb className="w-5 h-5 text-yellow-400 flex-shrink-0 mt-0.5" />
                 <div className="flex-1">
-                  <h3 className="font-bold text-white mb-2">Quick Help</h3>
+                  <h3 className="font-bold text-white mb-2">{t('quickHelp')}</h3>
                   <p className="text-sm text-neutral-300 mb-3">
-                    Before reaching out, check if your question is answered in our FAQ
+                    {t('quickHelpDesc')}
                   </p>
                   <button
                     onClick={() => window.location.href = '/?showInfo=true'}
                     className="text-yellow-400 hover:text-yellow-300 text-sm font-semibold transition"
                   >
-                    View FAQ →
+                    {t('viewFaq')}
                   </button>
                 </div>
               </div>
