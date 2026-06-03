@@ -1,13 +1,13 @@
 // app/api/auth/logout/route.ts
 import { NextResponse } from 'next/server'
-import { supabase } from '@/lib/supabase'
+import { supabaseAdmin } from '@/lib/supabase-admin'
 
 export async function POST(request: Request) {
   try {
     const token = request.headers.get('Authorization')?.replace('Bearer ', '')
 
     if (token) {
-      await supabase.from('sessions').delete().eq('token', token)
+      await supabaseAdmin.from('sessions').delete().eq('token', token)
     }
 
     return NextResponse.json({ success: true })

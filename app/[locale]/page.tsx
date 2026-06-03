@@ -6,6 +6,10 @@ import Link from "next/link"
 import { useTranslations } from "next-intl"
 import { supabase } from "@/lib/supabase"
 import { ACHIEVEMENTS, checkAchievement, calculateLevel } from "@/lib/achievements"
+import {
+  createChallenge, rerollChallenge, completeChallenge, completeChallengeById, failChallenge,
+  updateUserStats, resetStreak, addXp, unlockAchievement
+} from "@/lib/api-client"
 import confetti from "canvas-confetti"
 import Cookies from 'js-cookie'
 import { Info } from 'lucide-react'
@@ -150,29 +154,14 @@ export default function Home() {
       if (user) {
         // Si ya existe un challenge pendiente, actualizarlo
         if (activeChallenge) {
-          const { error } = await supabase
-            .from('challenges')
-            .update({
-              champion_id: String(champData.key),
-              champion_name: champData.name,
-              lane: selectedLane,
-              created_at: new Date().toISOString(),
-              reroll_count: newRerollCount  // ✅ NUEVO: Guardar en DB
-            })
-            .eq('id', activeChallenge.id)
-          if (error) {
-            console.error('❌ Error updating challenge:', error)
-            return
-          }
-
-          const updatedChallenge = {
-            ...activeChallenge,
+          const { challenge: updatedChallenge } = await rerollChallenge(sessionToken!, {
+            challenge_id: activeChallenge.id,
             champion_id: String(champData.key),
             champion_name: champData.name,
             lane: selectedLane,
-            created_at: new Date().toISOString(),
-            reroll_count: newRerollCount  // ✅ NUEVO
-          }
+            reroll_count: newRerollCount
+          })
+
           setActiveChallenge(updatedChallenge)
 
           // Reiniciar auto-verificación
@@ -182,24 +171,12 @@ export default function Home() {
           }
         } else {
           // Crear challenge nuevo
-          const { data: newChallenge, error } = await supabase
-            .from('challenges')
-            .insert([{
-              user_id: user.id,
-              champion_id: String(champData.key),
-              champion_name: champData.name,
-              lane: selectedLane,
-              status: 'pending',
-              xp_reward: 100,
-              reroll_count: newRerollCount  // ✅ NUEVO: Guardar desde el inicio
-            }])
-            .select()
-            .single()
-
-          if (error) {
-            console.error('❌ Error creating challenge:', error)
-            return
-          }
+          const { challenge: newChallenge } = await createChallenge(sessionToken!, {
+            champion_id: String(champData.key),
+            champion_name: champData.name,
+            lane: selectedLane,
+            reroll_count: newRerollCount
+          })
 
           setActiveChallenge(newChallenge)
 
@@ -324,68 +301,69 @@ export default function Home() {
 
     confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 } })
 
-    await supabase
-      .from('challenges')
-      .update({
-        status: 'completed',
-        completed_at: new Date().toISOString(),
-        match_id: matchData.matchId,
-        match_data: matchData.stats
-      })
-      .eq('user_id', user.id)
-      .eq('champion_name', champ.name)
-      .eq('status', 'pending')
+    try {
+      if (activeChallenge) {
+        await completeChallengeById(sessionToken!, {
+          challenge_id: activeChallenge.id,
+          match_id: matchData.matchId,
+          match_data: matchData.stats
+        })
+      } else {
+        await completeChallenge(sessionToken!, {
+          match_id: matchData.matchId,
+          match_data: matchData.stats
+        })
+      }
 
-    const newXp = user.xp + 100
-    const newLevel = calculateLevel(newXp)
-    const newStreak = user.current_streak + 1
-    const newTotalChallenges = user.total_challenges_completed + 1
+      const newXp = user.xp + 100
+      const newLevel = calculateLevel(newXp)
+      const newStreak = user.current_streak + 1
+      const newTotalChallenges = user.total_challenges_completed + 1
 
-    const { data: updatedUser } = await supabase
-      .from('users')
-      .update({
+      const { user: updatedUser } = await updateUserStats(sessionToken!, {
         xp: newXp,
         level: newLevel,
         current_streak: newStreak,
         longest_streak: Math.max(newStreak, user.longest_streak),
         total_challenges_completed: newTotalChallenges
       })
-      .eq('id', user.id)
-      .select()
-      .single()
 
-    setUser(updatedUser)
+      setUser(updatedUser)
 
-    // Reset reroll count after successful verification
-    setRerollCount(0)
-    setActiveChallenge(null)
+      // Reset reroll count after successful verification
+      setRerollCount(0)
+      setActiveChallenge(null)
 
-    await checkAndUnlockAchievements({
-      currentStreak: newStreak,
-      totalChallenges: newTotalChallenges,
-      level: newLevel
-    })
+      await checkAndUnlockAchievements({
+        currentStreak: newStreak,
+        totalChallenges: newTotalChallenges,
+        level: newLevel
+      })
+    } catch (error) {
+      console.error('❌ Error in handleVictory:', error)
+    }
   }
 
   const handleFailure = async (matchData: any) => {
     if (!user) return
-    // ✅ NUEVO: Marcar challenge como failed en lugar de solo borrarlo
     if (activeChallenge) {
-      await supabase
-        .from('challenges')
-        .update({
-          status: 'failed',
-          completed_at: new Date().toISOString(),
-           match_id: matchData.matchId,
-           match_data: matchData.stats
+      try {
+        await failChallenge(sessionToken!, {
+          challenge_id: activeChallenge.id,
+          match_id: matchData.matchId,
+          match_data: matchData.stats
         })
-        .eq('id', activeChallenge.id)
+      } catch (error) {
+        console.error('❌ Error failing challenge:', error)
+      }
     }
-    // Resetear streak
-    await supabase.from('users').update({ current_streak: 0 }).eq('id', user.id)
+    try {
+      await resetStreak(sessionToken!)
+    } catch (error) {
+      console.error('❌ Error resetting streak:', error)
+    }
     const updatedUser = { ...user, current_streak: 0 }
     setUser(updatedUser)
-    // Reset reroll count and challenge on failure
     setRerollCount(0)
     setActiveChallenge(null)
   }
@@ -399,14 +377,16 @@ export default function Home() {
       if (userAchievements.includes(type)) continue
 
       if (checkAchievement(type as any, stats)) {
-        await supabase.from('achievements').insert([{
-          user_id: user.id,
-          achievement_type: type,
-          achievement_name: achievement.name,
-          achievement_description: achievement.description
-        }])
-
-        await supabase.from('users').update({ xp: user.xp + achievement.xpReward }).eq('id', user.id)
+        try {
+          await unlockAchievement(sessionToken!, {
+            achievement_type: type,
+            achievement_name: achievement.name,
+            achievement_description: achievement.description
+          })
+          await addXp(sessionToken!, achievement.xpReward)
+        } catch (error) {
+          console.error('❌ Error unlocking achievement:', error)
+        }
 
         newlyUnlocked.push(type)
       }

@@ -2,7 +2,7 @@
 // Endpoint para limpiar challenges antiguos manualmente
 
 import { NextResponse } from 'next/server'
-import { supabase } from '@/lib/supabase'
+import { supabaseAdmin } from '@/lib/supabase-admin'
 
 export async function POST(request: Request) {
   try {
@@ -15,7 +15,7 @@ export async function POST(request: Request) {
     let totalDeleted = 0
 
     // 1. Delete completed challenges older than 7 days
-    const { count: completedCount, error: error1 } = await supabase
+    const { count: completedCount, error: error1 } = await supabaseAdmin
       .from('challenges')
       .delete({ count: 'exact' })
       .eq('status', 'completed')
@@ -29,7 +29,7 @@ export async function POST(request: Request) {
     }
 
     // 2. Delete pending challenges older than 24 hours (abandoned)
-    const { count: pendingCount, error: error2 } = await supabase
+    const { count: pendingCount, error: error2 } = await supabaseAdmin
       .from('challenges')
       .delete({ count: 'exact' })
       .eq('status', 'pending')
@@ -43,7 +43,7 @@ export async function POST(request: Request) {
     }
 
     // 3. Delete failed challenges older than 3 days
-    const { count: failedCount, error: error3 } = await supabase
+    const { count: failedCount, error: error3 } = await supabaseAdmin
       .from('challenges')
       .delete({ count: 'exact' })
       .eq('status', 'failed')

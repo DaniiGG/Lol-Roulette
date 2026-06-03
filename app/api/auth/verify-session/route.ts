@@ -1,6 +1,7 @@
 // app/api/auth/verify-session/route.ts
 import { NextResponse } from 'next/server'
 import { supabase } from '@/lib/supabase'
+import { supabaseAdmin } from '@/lib/supabase-admin'
 import jwt from 'jsonwebtoken'
 
 const JWT_SECRET = process.env.JWT_SECRET!
@@ -22,7 +23,7 @@ export async function POST(request: Request) {
       // Si falla JWT, intentar con sistema legacy (tabla sessions)
       console.log('⚠️ Not a valid JWT, trying legacy session...')
       
-      const { data: session, error } = await supabase
+      const { data: session, error } = await supabaseAdmin
         .from('sessions')
         .select('user_id, puuid, expires_at')
         .eq('token', token)
@@ -34,7 +35,7 @@ export async function POST(request: Request) {
 
       // Verificar expiración
       if (new Date(session.expires_at) < new Date()) {
-        await supabase.from('sessions').delete().eq('token', token)
+        await supabaseAdmin.from('sessions').delete().eq('token', token)
         return NextResponse.json({ error: 'Session expired' }, { status: 401 })
       }
 
@@ -46,7 +47,7 @@ export async function POST(request: Request) {
         .single()
 
       // Actualizar last_used
-      await supabase
+      await supabaseAdmin
         .from('sessions')
         .update({ last_used: new Date().toISOString() })
         .eq('token', token)
@@ -67,7 +68,7 @@ export async function POST(request: Request) {
     }
 
     // Actualizar sesión en DB (opcional, para tracking)
-    await supabase
+    await supabaseAdmin
       .from('sessions')
       .update({ last_used: new Date().toISOString() })
       .eq('user_id', user.id)

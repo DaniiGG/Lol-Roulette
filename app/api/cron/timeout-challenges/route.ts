@@ -3,6 +3,7 @@
 
 import { NextResponse } from 'next/server'
 import { supabase } from '@/lib/supabase'
+import { supabaseAdmin } from '@/lib/supabase-admin'
 
 export async function GET(request: Request) {
   // Proteger endpoint
@@ -19,7 +20,7 @@ export async function GET(request: Request) {
     // 1. Buscar challenges pendientes de hace más de 1.5 horas
     const timeoutThreshold = new Date(Date.now() - 90 * 60 * 1000).toISOString() // 90 minutos
     
-    const { data: timedOutChallenges, error: fetchError } = await supabase
+    const { data: timedOutChallenges, error: fetchError } = await supabaseAdmin
       .from('challenges')
       .select('id, user_id, champion_name, created_at')
       .eq('status', 'pending')
@@ -47,7 +48,7 @@ export async function GET(request: Request) {
     for (const challenge of timedOutChallenges) {
       try {
         // Marcar challenge como failed
-        const { error: updateError } = await supabase
+        const { error: updateError } = await supabaseAdmin
           .from('challenges')
           .update({
             status: 'failed',
@@ -75,7 +76,7 @@ export async function GET(request: Request) {
     
     for (const userId of affectedUsers) {
       try {
-        const { error: streakError } = await supabase
+        const { error: streakError } = await supabaseAdmin
           .from('users')
           .update({ current_streak: 0 })
           .eq('id', userId)
