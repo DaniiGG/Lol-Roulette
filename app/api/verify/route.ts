@@ -54,8 +54,11 @@ export async function POST(request: Request) {
 
     if (!matchIds.length) {
       return NextResponse.json(
-        { error: 'No recent matches found' },
-        { status: 404 }
+        {
+          success: false,
+          pending: true,
+          error: 'No recent matches found'
+        }
       )
     }
 
@@ -98,14 +101,12 @@ export async function POST(request: Request) {
 
     // Aún no hay partida nueva
     if (!relevantMatch || !relevantMatchId) {
-  return NextResponse.json(
-    {
-      success: false,
-      error: 'No new matches found after challenge timestamp'
-    },
-    { status: 404 }
-  )
-}
+      return NextResponse.json({
+        success: false,
+        pending: true,
+        error: 'No new matches found after challenge timestamp'
+      })
+    }
 
     // 3️⃣ Buscar participante
     const participant = relevantMatch.info.participants.find(

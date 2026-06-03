@@ -279,6 +279,10 @@ export default function Home() {
       const result = await res.json()
       setVerificationResult(result)
 
+      if (result.pending) {
+        return
+      }
+
       if (result.success) {
         await handleVictory(result)
       } else {

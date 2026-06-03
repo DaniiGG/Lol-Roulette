@@ -74,6 +74,11 @@ export class AutoVerifier {
 
       const result = await response.json()
 
+      if (result.pending) {
+        console.log('No new match yet')
+        return
+      }
+
       if (result.success) {
         console.log('✅ Match verified automatically!')
         this.stop() // Detener verificación
