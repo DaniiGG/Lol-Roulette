@@ -5,10 +5,10 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import { useTranslations } from "next-intl"
 import { supabase } from "@/lib/supabase"
-import { ACHIEVEMENTS, checkAchievement, calculateLevel } from "@/lib/achievements"
+import { ACHIEVEMENTS, checkAchievement } from "@/lib/achievements"
 import {
-  createChallenge, rerollChallenge, completeChallenge, completeChallengeById, failChallenge,
-  updateUserStats, resetStreak, addXp, unlockAchievement
+  createChallenge, rerollChallenge, completeChallengeById, failChallenge,
+  resetStreak
 } from "@/lib/api-client"
 import confetti from "canvas-confetti"
 import Cookies from 'js-cookie'
@@ -297,48 +297,28 @@ export default function Home() {
   }
 
   const handleVictory = async (matchData: any) => {
-    if (!user) return
+    if (!user || !activeChallenge) return
 
     confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 } })
 
     try {
-      if (activeChallenge) {
-        await completeChallengeById(sessionToken!, {
-          challenge_id: activeChallenge.id,
-          match_id: matchData.matchId,
-          match_data: matchData.stats
-        })
-      } else {
-        await completeChallenge(sessionToken!, {
-          match_id: matchData.matchId,
-          match_data: matchData.stats
-        })
-      }
-
-      const newXp = user.xp + 100
-      const newLevel = calculateLevel(newXp)
-      const newStreak = user.current_streak + 1
-      const newTotalChallenges = user.total_challenges_completed + 1
-
-      const { user: updatedUser } = await updateUserStats(sessionToken!, {
-        xp: newXp,
-        level: newLevel,
-        current_streak: newStreak,
-        longest_streak: Math.max(newStreak, user.longest_streak),
-        total_challenges_completed: newTotalChallenges
+      const result = await completeChallengeById(sessionToken!, {
+        challenge_id: activeChallenge.id,
+        match_id: matchData.matchId
       })
 
-      setUser(updatedUser)
+      setUser(result.user)
 
       // Reset reroll count after successful verification
       setRerollCount(0)
       setActiveChallenge(null)
 
-      await checkAndUnlockAchievements({
-        currentStreak: newStreak,
-        totalChallenges: newTotalChallenges,
-        level: newLevel
-      })
+      const unlockedTypes = (result.achievements || []).map((achievement: any) => achievement.achievement_type)
+      if (unlockedTypes.length > 0) {
+        setNewAchievements(unlockedTypes)
+        setUserAchievements([...userAchievements, ...unlockedTypes])
+        confetti({ particleCount: 150, spread: 100, origin: { y: 0.5 } })
+      }
     } catch (error) {
       console.error('❌ Error in handleVictory:', error)
     }
@@ -378,12 +358,6 @@ export default function Home() {
 
       if (checkAchievement(type as any, stats)) {
         try {
-          await unlockAchievement(sessionToken!, {
-            achievement_type: type,
-            achievement_name: achievement.name,
-            achievement_description: achievement.description
-          })
-          await addXp(sessionToken!, achievement.xpReward)
         } catch (error) {
           console.error('❌ Error unlocking achievement:', error)
         }

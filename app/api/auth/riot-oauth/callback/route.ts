@@ -2,8 +2,6 @@ import { NextResponse } from 'next/server'
 import { supabaseAdmin  } from '@/lib/supabase-admin'
 import jwt from 'jsonwebtoken'
 
-console.log("SERVICE ROLE EXISTS:", !!process.env.SUPABASE_SERVICE_ROLE_KEY)
-
 const RIOT_CLIENT_ID = process.env.RIOT_CLIENT_ID!
 const RIOT_CLIENT_SECRET = process.env.RIOT_CLIENT_SECRET!
 const RIOT_REDIRECT_URI = process.env.RIOT_REDIRECT_URI!

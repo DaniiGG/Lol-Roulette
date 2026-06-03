@@ -1,5 +1,6 @@
 // app/api/verify/route.ts
 import { NextResponse } from 'next/server'
+import { verifyAuth } from '@/lib/verify-jwt'
 
 const RIOT_API_KEY = process.env.RIOT_API_KEY!
 
@@ -12,6 +13,11 @@ type VerifyRequest = {
 
 export async function POST(request: Request) {
   try {
+    const auth = verifyAuth(request)
+    if (!auth) {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+    }
+
     const {
       puuid,
       region,
@@ -19,17 +25,21 @@ export async function POST(request: Request) {
       challengeCreatedAt
     }: VerifyRequest = await request.json()
 
-    if (!puuid || !region || !championId) {
+    if (!region || !championId) {
       return NextResponse.json(
         { error: 'Missing required fields' },
         { status: 400 }
       )
     }
 
+    if (puuid && puuid !== auth.puuid) {
+      return NextResponse.json({ error: 'Cannot verify another user' }, { status: 403 })
+    }
+
     // 1️⃣ Obtener últimas partidas
     const platformRegion = getPlatformRegion(region)
     const matchesRes = await fetch(
-      `https://${platformRegion}.api.riotgames.com/lol/match/v5/matches/by-puuid/${puuid}/ids?start=0&count=5`,
+      `https://${platformRegion}.api.riotgames.com/lol/match/v5/matches/by-puuid/${auth.puuid}/ids?start=0&count=5`,
       {
         headers: { 'X-Riot-Token': RIOT_API_KEY },
         next: { revalidate: 0 }
@@ -99,7 +109,7 @@ export async function POST(request: Request) {
 
     // 3️⃣ Buscar participante
     const participant = relevantMatch.info.participants.find(
-      (p: any) => p.puuid === puuid
+      (p: any) => p.puuid === auth.puuid
     )
 
     if (!participant) {
