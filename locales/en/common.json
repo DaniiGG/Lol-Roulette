@@ -6,6 +6,7 @@
     "tips": "Tips",
     "faq": "FAQ",
     "about": "About",
+    "mastery": "Mastery",
     "blog": "Blog",
     "contact": "Contact",
     "privacy": "Privacy",
@@ -480,5 +481,33 @@
   },
   "localeSwitcher": {
     "label": "Language"
+  },
+  "championMastery": {
+    "title": "Champion Mastery",
+    "totalPoints": "Total Points",
+    "championsPlayed": "Champions Played",
+    "mastery7Plus": "Mastery 7+",
+    "mastery5Plus": "Mastery 5+",
+    "points": "pts",
+    "noMasteries": "No mastery data available",
+    "showAll": "Show all ({count})",
+    "showLess": "Show less",
+    "showingAll": "Showing all {count} champions",
+    "loadingMasteries": "Loading your champion mastery data...",
+    "levelDistribution": "Level Distribution",
+    "searchChampion": "Search champion...",
+    "all": "All",
+    "sortPoints": "Points",
+    "sortLevel": "Level",
+    "sortName": "Name",
+    "sortRecent": "Recent",
+    "toNextLevel": "to next level"
+  },
+  "mastery": {
+    "title": "Champion Mastery",
+    "subtitle": "View your mastery levels and points across all champions",
+    "loginRequired": "Login Required",
+    "loginRequiredDesc": "You need to login with your Riot ID to view your champion mastery data.",
+    "goHome": "Go to Home"
   }
 }

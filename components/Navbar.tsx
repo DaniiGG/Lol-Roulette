@@ -17,10 +17,10 @@ export default function Navbar() {
   const navLinks = [
     { href: '/', label: t('play'), icon: '🎮' },
     { href: '/leaderboard', label: t('leaderboard'), icon: '🏆' },
+    { href: '/mastery', label: t('mastery'), icon: '🏅' },
     { href: '/howtoplay', label: t('howToPlay'), icon: '📖' },
     { href: '/tips', label: t('tips'), icon: '💡' },
     { href: '/faq', label: t('faq'), icon: '❓' },
-    { href: '/about', label: t('about'), icon: 'ℹ️' },
     { href: '/blog', label: t('blog'), icon: '📝' }
   ]
 

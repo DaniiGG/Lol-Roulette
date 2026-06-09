@@ -6,6 +6,7 @@
     "tips": "Consejos",
     "faq": "FAQ",
     "about": "Acerca de",
+    "mastery": "Maestría",
     "blog": "Blog",
     "contact": "Contacto",
     "privacy": "Privacidad",
@@ -449,5 +450,33 @@
   },
   "localeSwitcher": {
     "label": "Idioma"
+  },
+  "championMastery": {
+    "title": "Maestría de Campeones",
+    "totalPoints": "Puntos Totales",
+    "championsPlayed": "Campeones Jugados",
+    "mastery7Plus": "Maestría 7+",
+    "mastery5Plus": "Maestría 5+",
+    "points": "pts",
+    "noMasteries": "No hay datos de maestría disponibles",
+    "showAll": "Ver todos ({count})",
+    "showLess": "Ver menos",
+    "showingAll": "Mostrando todos los {count} campeones",
+    "loadingMasteries": "Cargando datos de maestría...",
+    "levelDistribution": "Distribución de Niveles",
+    "searchChampion": "Buscar campeón...",
+    "all": "Todos",
+    "sortPoints": "Puntos",
+    "sortLevel": "Nivel",
+    "sortName": "Nombre",
+    "sortRecent": "Reciente",
+    "toNextLevel": "para siguiente nivel"
+  },
+  "mastery": {
+    "title": "Maestría de Campeones",
+    "subtitle": "Ve tus niveles de maestría y puntos en todos los campeones",
+    "loginRequired": "Inicia sesión",
+    "loginRequiredDesc": "Necesitas iniciar sesión con tu ID de Riot para ver tus maestrías.",
+    "goHome": "Ir al inicio"
   }
 }
