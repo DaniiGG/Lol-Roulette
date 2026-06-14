@@ -19,9 +19,6 @@ export default function Navbar() {
     { href: '/leaderboard', label: t('leaderboard'), icon: '🏆' },
     { href: '/mastery', label: t('mastery'), icon: '🏅' },
     { href: '/howtoplay', label: t('howToPlay'), icon: '📖' },
-    { href: '/tips', label: t('tips'), icon: '💡' },
-    { href: '/faq', label: t('faq'), icon: '❓' },
-    { href: '/blog', label: t('blog'), icon: '📝' }
   ]
 
   return (

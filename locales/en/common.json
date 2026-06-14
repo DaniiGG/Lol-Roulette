@@ -508,6 +508,23 @@
     "subtitle": "View your mastery levels and points across all champions",
     "loginRequired": "Login Required",
     "loginRequiredDesc": "You need to login with your Riot ID to view your champion mastery data.",
-    "goHome": "Go to Home"
+    "signIn": "Sign In",
+    "winrateSection": "Winrate by Champion"
+  },
+  "championWinrate": {
+    "loading": "Loading your match history...",
+    "noData": "No match history found. Play some games first!",
+    "noLaneData": "No champions found for {lane}",
+    "wins": "W",
+    "losses": "L",
+    "games": "games",
+    "lane": {
+      "all": "All Lanes",
+      "top": "Top",
+      "jungle": "Jungle",
+      "mid": "Mid",
+      "adc": "ADC",
+      "support": "Support"
+    }
   }
 }

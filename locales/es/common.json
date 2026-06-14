@@ -477,6 +477,23 @@
     "subtitle": "Ve tus niveles de maestría y puntos en todos los campeones",
     "loginRequired": "Inicia sesión",
     "loginRequiredDesc": "Necesitas iniciar sesión con tu ID de Riot para ver tus maestrías.",
-    "goHome": "Ir al inicio"
+    "signIn": "Iniciar sesión",
+    "winrateSection": "Winrate por Campeón"
+  },
+  "championWinrate": {
+    "loading": "Cargando historial de partidas...",
+    "noData": "No se encontraron partidas recientes. ¡Juega algunas partidas primero!",
+    "noLaneData": "No hay campeones para {lane}",
+    "wins": "V",
+    "losses": "D",
+    "games": "partidas",
+    "lane": {
+      "all": "Todas",
+      "top": "Top",
+      "jungle": "Jungla",
+      "mid": "Mid",
+      "adc": "ADC",
+      "support": "Soporte"
+    }
   }
 }

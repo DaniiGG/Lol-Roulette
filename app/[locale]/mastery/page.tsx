@@ -2,16 +2,14 @@
 
 import { useState, useEffect } from "react"
 import { useTranslations, useLocale } from "next-intl"
-import { useRouter } from "next/navigation"
-import Link from "next/link"
-import { supabase } from "@/lib/supabase"
 import Cookies from "js-cookie"
 import ChampionMastery from "@/components/ChampionMastery"
+import ChampionWinrate from "@/components/ChampionWinrate"
+import HybridLoginModal from "@/components/RSOLoginmodal"
 
 export default function MasteryPage() {
   const t = useTranslations('mastery')
   const locale = useLocale()
-  const router = useRouter()
   const [user, setUser] = useState<any>(null)
   const [loading, setLoading] = useState(true)
   const [loginModalOpen, setLoginModalOpen] = useState(false)
@@ -73,14 +71,25 @@ export default function MasteryPage() {
             <div className="text-6xl mb-6">🏅</div>
             <h1 className="text-3xl font-bold text-white mb-3">{t('loginRequired')}</h1>
             <p className="text-neutral-400 mb-8">{t('loginRequiredDesc')}</p>
-            <Link
-              href={`/${locale === 'en' ? '' : locale}`}
-              className="inline-block px-8 py-4 rounded-xl bg-white text-neutral-950 font-semibold hover:bg-neutral-100 transition"
+            <button
+              onClick={() => setLoginModalOpen(true)}
+              className="inline-block px-8 py-4 rounded-xl bg-white text-neutral-950 font-semibold hover:bg-neutral-100 transition cursor-pointer"
             >
-              {t('goHome')}
-            </Link>
+              {t('signIn')}
+            </button>
           </div>
         </div>
+
+        {loginModalOpen && (
+          <HybridLoginModal
+            onClose={() => setLoginModalOpen(false)}
+            onSuccess={(token: string, userData: any) => {
+              Cookies.set('session_token', token, { expires: 30, secure: true, sameSite: 'strict' })
+              setUser(userData)
+              setLoginModalOpen(false)
+            }}
+          />
+        )}
       </main>
     )
   }
@@ -113,6 +122,13 @@ export default function MasteryPage() {
 
             {user && user.puuid && user.region && (
               <ChampionMastery puuid={user.puuid} region={user.region} />
+            )}
+
+            {user && user.puuid && user.region && (
+              <div className="mt-12">
+                <h2 className="text-2xl font-bold text-white mb-6">{t('winrateSection')}</h2>
+                <ChampionWinrate puuid={user.puuid} region={user.region} />
+              </div>
             )}
           </div>
         </div>

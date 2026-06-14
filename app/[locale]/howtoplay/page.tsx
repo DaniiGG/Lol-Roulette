@@ -200,7 +200,7 @@ export default async function HowToPlayPage() {
 
             <div className="p-4 rounded-xl bg-orange-500/10 border border-orange-500/30">
               <p className="text-orange-300 text-sm">
-                <strong>Important:</strong> You can reroll as many times as you like until you find a champion you want to play!
+                <strong>Important:</strong> Actually, you can reroll <strong>as many times as you like</strong> until you find a champion you want to play!
               </p>
             </div>
           </section>
