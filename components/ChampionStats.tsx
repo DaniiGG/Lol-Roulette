@@ -8,7 +8,7 @@ interface ChampionStatsProps {
   championName: string
 }
 
-const DDV = '14.9.1'
+const DDV = '16.12.1'
 
 // Mapeo básico de builds por clase de campeón
 const CLASS_BUILDS: Record<string, { items: string[], role: string }> = {

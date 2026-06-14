@@ -1,23 +1,28 @@
 // app/how-to-play/page.tsx
 import type { Metadata } from "next"
 import { getTranslations } from 'next-intl/server'
+import { getHreflangAlternates } from '@/lib/seo-utils'
 
-export const metadata: Metadata = {
-  title: 'How to Play League Roulette - Complete Guide & Tutorial',
-  description: 'Learn how to use the League Roulette random champion generator. Step-by-step guide covering account setup, lane selection, spinning, match verification, and rewards.',
-  keywords: ['how to play league roulette', 'lol random champion generator tutorial', 'league roulette guide', 'how to use lol champion picker', 'league of legends challenge platform tutorial'],
-  alternates: {
-    canonical: '/howtoplay',
-  },
-  openGraph: {
-    title: 'How to Play League Roulette - Complete Guide',
-    description: 'Step-by-step tutorial for the free LoL random champion generator. Learn to spin, verify matches, earn XP, and climb leaderboards.',
-    url: '/howtoplay',
-    siteName: 'League Roulette',
-  },
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params
+  return {
+    title: 'How to Play League Roulette - Complete Guide & Tutorial',
+    description: 'Learn how to use the League Roulette random champion generator. Step-by-step guide covering account setup, lane selection, spinning, match verification, and rewards.',
+    keywords: ['how to play league roulette', 'lol random champion generator tutorial', 'league roulette guide', 'how to use lol champion picker', 'league of legends challenge platform tutorial'],
+    alternates: {
+      canonical: locale === 'en' ? '/howtoplay' : `/${locale}/howtoplay`,
+      languages: getHreflangAlternates('/howtoplay'),
+    },
+    openGraph: {
+      title: 'How to Play League Roulette - Complete Guide',
+      description: 'Step-by-step tutorial for the free LoL random champion generator. Learn to spin, verify matches, earn XP, and climb leaderboards.',
+      url: locale === 'en' ? '/howtoplay' : `/${locale}/howtoplay`,
+      siteName: 'League Roulette',
+    },
+  }
 }
 
-const baseUrl = 'https://lol-roulette-nine.vercel.app'
+const baseUrl = 'https://leagueroulette.com'
 
 const breadcrumbSchema = {
   '@context': 'https://schema.org',

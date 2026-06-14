@@ -1,23 +1,28 @@
 // app/about/page.tsx
 import type { Metadata } from "next"
 import { getTranslations } from 'next-intl/server'
+import { getHreflangAlternates } from '@/lib/seo-utils'
 
-export const metadata: Metadata = {
-  title: 'About League Roulette - Free LoL Random Champion Generator',
-  description: 'Learn about League Roulette, the free random champion generator for League of Legends. Track wins, earn XP, unlock achievements, and climb the leaderboard.',
-  keywords: ['about league roulette', 'lol random champion generator about', 'league of legends challenge platform', 'free lol randomizer tool'],
-  alternates: {
-    canonical: '/about',
-  },
-  openGraph: {
-    title: 'About League Roulette - Random Champion Challenge Platform',
-    description: 'Free random champion generator for League of Legends with match verification, XP tracking, achievements, and leaderboards.',
-    url: '/about',
-    siteName: 'League Roulette',
-  },
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params
+  return {
+    title: 'About League Roulette - Free LoL Random Champion Generator',
+    description: 'Learn about League Roulette, the free random champion generator for League of Legends. Track wins, earn XP, unlock achievements, and climb the leaderboard.',
+    keywords: ['about league roulette', 'lol random champion generator about', 'league of legends challenge platform', 'free lol randomizer tool'],
+    alternates: {
+      canonical: locale === 'en' ? '/about' : `/${locale}/about`,
+      languages: getHreflangAlternates('/about'),
+    },
+    openGraph: {
+      title: 'About League Roulette - Random Champion Challenge Platform',
+      description: 'Free random champion generator for League of Legends with match verification, XP tracking, achievements, and leaderboards.',
+      url: locale === 'en' ? '/about' : `/${locale}/about`,
+      siteName: 'League Roulette',
+    },
+  }
 }
 
-const baseUrl = 'https://lol-roulette-nine.vercel.app'
+const baseUrl = 'https://leagueroulette.com'
 
 const breadcrumbSchema = {
   '@context': 'https://schema.org',

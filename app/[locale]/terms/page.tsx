@@ -2,21 +2,26 @@
 import type { Metadata } from "next"
 import Link from 'next/link'
 import { ArrowLeft } from 'lucide-react'
+import { getHreflangAlternates } from '@/lib/seo-utils'
 
-export const metadata: Metadata = {
-  title: 'Terms of Service - League Roulette',
-  description: 'League Roulette terms of service. Read the terms governing your use of our free LoL random champion generator and challenge tracking platform.',
-  keywords: ['league roulette terms of service', 'lol random champion terms', 'league of legends challenge terms', 'terms of service', 'terms and conditions'],
-  alternates: {
-    canonical: '/terms',
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params
+  return {
+    title: 'Terms of Service - League Roulette',
+    description: 'League Roulette terms of service. Read the terms governing your use of our free LoL random champion generator and challenge tracking platform.',
+    keywords: ['league roulette terms of service', 'lol random champion terms', 'league of legends challenge terms', 'terms of service', 'terms and conditions'],
+    alternates: {
+      canonical: locale === 'en' ? '/terms' : `/${locale}/terms`,
+      languages: getHreflangAlternates('/terms'),
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
+  }
 }
 
-const baseUrl = 'https://lol-roulette-nine.vercel.app'
+const baseUrl = 'https://leagueroulette.com'
 
 const breadcrumbSchema = {
   '@context': 'https://schema.org',

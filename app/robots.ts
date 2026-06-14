@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = 'https://lol-roulette-nine.vercel.app'
+  const baseUrl = 'https://leagueroulette.com'
 
   return {
     rules: [

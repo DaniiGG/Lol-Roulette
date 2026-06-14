@@ -18,7 +18,7 @@ export type BlogPost = {
   sections: BlogSection[]
 }
 
-const baseUrl = "https://lol-roulette-nine.vercel.app"
+const baseUrl = "https://leagueroulette.com"
 
 export const blogPosts: BlogPost[] = [
   {

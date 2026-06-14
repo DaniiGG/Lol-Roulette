@@ -2,11 +2,62 @@
 
 import { useTranslations } from 'next-intl'
 
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Is League Roulette free?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes! League Roulette is completely free to use. You can spin the roulette without creating an account, or login to track your progress and compete.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'How does match verification work?',
+      acceptedAnswer: { '@type': 'Answer', text: 'We use Riot Games official API to verify that you played and won with the assigned champion. Your match data is fetched securely and privately.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can I filter champions by lane?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes! You can select your preferred lane (Top, Jungle, Mid, ADC, Support) and get a random champion that fits that role.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Is this affiliated with Riot Games?',
+      acceptedAnswer: { '@type': 'Answer', text: 'No. League Roulette is an independent fan-made project and is not endorsed by Riot Games.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Does it include all Season 2026 champions?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes! Updated for Season 2026 with all League of Legends champions including new releases.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Is it good for ARAM random champion generator?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Perfect for ARAM! Filter by role and get random picks that work great in Howling Abyss chaos.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can I use random champion picker for ranked?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Absolutely! Many players use it to practice off-meta picks and improve their champion pool for ranked climb.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Is League Roulette mobile optimized?',
+      acceptedAnswer: { '@type': 'Answer', text: '100% mobile-friendly. Spin the roulette on phone, tablet, or desktop. Perfect for queue times!' },
+    },
+  ],
+}
+
 export default function SEOContent() {
   const t = useTranslations('seo')
   
   return (
     <div className="max-w-4xl mx-auto mt-16 mb-8 px-6">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <h1 className="sr-only">
         {t('srHeading')}
       </h1>

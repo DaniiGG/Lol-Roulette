@@ -1,0 +1,16 @@
+{
+  "name": "League Roulette",
+  "short_name": "League Roulette",
+  "description": "Free random champion generator for League of Legends. Spin the roulette, track wins, earn XP.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#030305",
+  "theme_color": "#C89B3C",
+  "icons": [
+    {
+      "src": "/og-image.png",
+      "sizes": "1200x630",
+      "type": "image/png"
+    }
+  ]
+}

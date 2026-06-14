@@ -12,7 +12,7 @@ export async function GET(request: Request) {
   const { searchParams } = new URL(request.url)
   const lane = searchParams.get('lane')?.toLowerCase() || 'all'
 
-  const version = "16.1.1"
+  const version = "16.12.1"
 
   try {
     const res = await fetch(

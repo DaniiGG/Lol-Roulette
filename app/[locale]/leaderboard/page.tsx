@@ -11,8 +11,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://lol-roulette-nine.vercel.app' },
-    { '@type': 'ListItem', position: 2, name: 'Leaderboard', item: 'https://lol-roulette-nine.vercel.app/leaderboard' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://leagueroulette.com' },
+    { '@type': 'ListItem', position: 2, name: 'Leaderboard', item: 'https://leagueroulette.com/leaderboard' },
   ],
 }
 
@@ -275,7 +275,7 @@ export default function LeaderboardPage() {
                           alt={entry.gameName}
                           className="w-full h-full object-cover"
                           onError={(e) => {
-                            e.currentTarget.src = 'https://ddragon.leagueoflegends.com/cdn/14.9.1/img/profileicon/0.png'
+                            e.currentTarget.src = 'https://ddragon.leagueoflegends.com/cdn/16.12.1/img/profileicon/0.png'
                           }}
                         />
                       </div>

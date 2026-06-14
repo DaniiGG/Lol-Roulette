@@ -18,7 +18,7 @@ interface ChampionWinrateEntry {
 }
 
 const LANES = ['all', 'top', 'jungle', 'mid', 'adc', 'support'] as const
-const DDV = '14.9.1'
+const DDV = '16.12.1'
 
 export default function ChampionWinrate({ puuid, region }: ChampionWinrateProps) {
   const t = useTranslations('championWinrate')

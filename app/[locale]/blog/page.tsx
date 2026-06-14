@@ -1,8 +1,21 @@
+import type { Metadata } from "next"
 import Link from "next/link"
 import { getTranslations } from 'next-intl/server'
-import { blogIndexMetadata, blogPosts } from "@/lib/blog-posts"
+import { blogPosts } from "@/lib/blog-posts"
+import { getHreflangAlternates } from '@/lib/seo-utils'
 
-export const metadata = blogIndexMetadata
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params
+  return {
+    title: 'League Roulette Blog | LoL Challenges, Tips, and Random Champion Ideas',
+    description: 'Read League Roulette blog posts about random champion picks, fun League of Legends challenges, and better ways to choose what to play next.',
+    keywords: ['league roulette blog', 'lol random champion blog', 'league of legends challenge ideas', 'what champion should i play lol', 'fun lol challenges'],
+    alternates: {
+      canonical: locale === 'en' ? '/blog' : `/${locale}/blog`,
+      languages: getHreflangAlternates('/blog'),
+    },
+  }
+}
 
 export default async function BlogIndexPage() {
   const t = await getTranslations('blog')

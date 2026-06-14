@@ -3,21 +3,26 @@ import type { Metadata } from "next"
 import Link from 'next/link'
 import { ArrowLeft } from 'lucide-react'
 import SlotLever from '@/components/SlotLever'
+import { getHreflangAlternates } from '@/lib/seo-utils'
 
-export const metadata: Metadata = {
-  title: 'Privacy Policy - League Roulette',
-  description: 'League Roulette privacy policy. Learn how we collect, use, and protect your data when you use our free LoL random champion generator and challenge tracker.',
-  keywords: ['league roulette privacy policy', 'lol random champion privacy', 'league of legends data privacy', 'riot api privacy', 'privacy policy'],
-  alternates: {
-    canonical: '/privacy',
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params
+  return {
+    title: 'Privacy Policy - League Roulette',
+    description: 'League Roulette privacy policy. Learn how we collect, use, and protect your data when you use our free LoL random champion generator and challenge tracker.',
+    keywords: ['league roulette privacy policy', 'lol random champion privacy', 'league of legends data privacy', 'riot api privacy', 'privacy policy'],
+    alternates: {
+      canonical: locale === 'en' ? '/privacy' : `/${locale}/privacy`,
+      languages: getHreflangAlternates('/privacy'),
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
+  }
 }
 
-const baseUrl = 'https://lol-roulette-nine.vercel.app'
+const baseUrl = 'https://leagueroulette.com'
 
 const breadcrumbSchema = {
   '@context': 'https://schema.org',

@@ -9,8 +9,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://lol-roulette-nine.vercel.app' },
-    { '@type': 'ListItem', position: 2, name: 'Contact', item: 'https://lol-roulette-nine.vercel.app/contact' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://leagueroulette.com' },
+    { '@type': 'ListItem', position: 2, name: 'Contact', item: 'https://leagueroulette.com/contact' },
   ],
 }
 

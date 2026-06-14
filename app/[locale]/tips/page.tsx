@@ -1,23 +1,28 @@
 // app/tips/page.tsx
 import type { Metadata } from "next"
 import { getTranslations } from 'next-intl/server'
+import { getHreflangAlternates } from '@/lib/seo-utils'
 
-export const metadata: Metadata = {
-  title: 'LoL Strategy Tips & Champion Guides - League Roulette',
-  description: 'Master random champion gameplay with League Roulette tips. Learn fundamentals, lane-specific strategies, champion archetypes, and mental game advice for League of Legends.',
-  keywords: ['lol strategy tips', 'league of legends champion guides', 'random champion tips', 'how to play any champion lol', 'league of legends fundamentals', 'lol lane strategies'],
-  alternates: {
-    canonical: '/tips',
-  },
-  openGraph: {
-    title: 'LoL Strategy Tips & Champion Guides',
-    description: 'Learn to master random champions in League of Legends. Tips for all lanes, champion archetypes, and mental game strategies.',
-    url: '/tips',
-    siteName: 'League Roulette',
-  },
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params
+  return {
+    title: 'LoL Strategy Tips & Champion Guides - League Roulette',
+    description: 'Master random champion gameplay with League Roulette tips. Learn fundamentals, lane-specific strategies, champion archetypes, and mental game advice for League of Legends.',
+    keywords: ['lol strategy tips', 'league of legends champion guides', 'random champion tips', 'how to play any champion lol', 'league of legends fundamentals', 'lol lane strategies'],
+    alternates: {
+      canonical: locale === 'en' ? '/tips' : `/${locale}/tips`,
+      languages: getHreflangAlternates('/tips'),
+    },
+    openGraph: {
+      title: 'LoL Strategy Tips & Champion Guides',
+      description: 'Learn to master random champions in League of Legends. Tips for all lanes, champion archetypes, and mental game strategies.',
+      url: locale === 'en' ? '/tips' : `/${locale}/tips`,
+      siteName: 'League Roulette',
+    },
+  }
 }
 
-const baseUrl = 'https://lol-roulette-nine.vercel.app'
+const baseUrl = 'https://leagueroulette.com'
 
 const breadcrumbSchema = {
   '@context': 'https://schema.org',

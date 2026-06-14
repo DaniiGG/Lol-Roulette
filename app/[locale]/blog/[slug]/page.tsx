@@ -3,9 +3,11 @@ import Link from "next/link"
 import { notFound } from "next/navigation"
 import { blogPosts, getBlogMetadata, getBlogPost } from "@/lib/blog-posts"
 import { getTranslations } from 'next-intl/server'
+import { getHreflangAlternates } from '@/lib/seo-utils'
 
 type BlogPostPageProps = {
   params: Promise<{
+    locale: string
     slug: string
   }>
 }
@@ -19,14 +21,21 @@ export async function generateStaticParams() {
 export async function generateMetadata(
   props: BlogPostPageProps
 ): Promise<Metadata> {
-  const { slug } = await props.params
+  const { locale, slug } = await props.params
   const post = getBlogPost(slug)
 
   if (!post) {
     return {}
   }
 
-  return getBlogMetadata(post)
+  const base = getBlogMetadata(post)
+  return {
+    ...base,
+    alternates: {
+      canonical: locale === 'en' ? `/blog/${slug}` : `/${locale}/blog/${slug}`,
+      languages: getHreflangAlternates(`/blog/${slug}`),
+    },
+  }
 }
 
 export default async function BlogPostPage(props: BlogPostPageProps) {
@@ -46,23 +55,23 @@ export default async function BlogPostPage(props: BlogPostPageProps) {
     headline: post.title,
     description: post.description,
     author: {
-      "@type": "Organization",
-      name: "League Roulette",
-      url: "https://lol-roulette-nine.vercel.app",
+      "@type": "Person",
+      name: "League Roulette Team",
+      url: "https://leagueroulette.com/about",
     },
     publisher: {
       "@type": "Organization",
       name: "League Roulette",
       logo: {
         "@type": "ImageObject",
-        url: "https://lol-roulette-nine.vercel.app/images/logo.png",
+        url: "https://leagueroulette.com/og-image.png",
       },
     },
     datePublished: "2026-01-15",
     dateModified: new Date().toISOString().split("T")[0],
-    mainEntityOfPage: `https://lol-roulette-nine.vercel.app/blog/${post.slug}`,
+    mainEntityOfPage: `https://leagueroulette.com/blog/${post.slug}`,
     keywords: post.keywords.join(", "),
-    image: "https://lol-roulette-nine.vercel.app/og-image.png",
+    image: "https://leagueroulette.com/og-image.png",
   }
 
   return (
