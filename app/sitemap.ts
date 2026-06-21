@@ -1,6 +1,6 @@
 // app/sitemap.ts
 import { MetadataRoute } from 'next'
-import { blogPosts } from '@/lib/blog-posts'
+import { BLOG_SLUGS } from '@/lib/blog-posts'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://leagueroulette.com'
@@ -18,8 +18,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 0.8,
     },
-    ...blogPosts.map((post) => ({
-      url: `${baseUrl}/blog/${post.slug}`,
+    ...BLOG_SLUGS.map((slug) => ({
+      url: `${baseUrl}/blog/${slug}`,
       lastModified: new Date(),
       changeFrequency: 'monthly' as const,
       priority: 0.7,

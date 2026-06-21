@@ -1,103 +1,109 @@
 {
   "nav": {
-    "play": "Play",
-    "leaderboard": "Leaderboard",
-    "howToPlay": "How to Play",
-    "tips": "Tips",
+    "play": "Gioca",
+    "leaderboard": "Classifica",
+    "howToPlay": "Come Giocare",
+    "tips": "Consigli",
     "faq": "FAQ",
-    "about": "About",
+    "about": "Informazioni",
+    "mastery": "Maestria",
     "blog": "Blog",
-    "contact": "Contact",
+    "contact": "Contatti",
     "privacy": "Privacy",
-    "terms": "Terms",
+    "terms": "Termini",
     "siteName": "League Roulette",
-    "siteTagline": "Random Champion Challenge"
+    "siteTagline": "Sfida Campioni Casuali"
   },
   "home": {
-    "howItWorks": "How it works",
-    "leaderboard": "Leaderboard",
-    "achievements": "Achievements",
-    "logout": "Logout",
-    "loginToTrack": "Login to Track",
+    "howItWorks": "Come funziona",
+    "leaderboard": "Classifica",
+    "achievements": "Risultati",
+    "logout": "Esci",
+    "loginToTrack": "Accedi per Tracciare",
     "heroTitle1": "LEAGUE ROULETTE",
     "heroTitle2": "CAMPIONE",
     "heroTitle3": "CASUALE",
-    "tags": ["Free", "Instant", "No Login Needed", "Season 2026"],
-    "trackProgress": "Track Your Progress",
-    "trackProgressDesc": "Log in to verify wins, earn XP, unlock achievements, and climb the leaderboard.",
-    "loginWithRiot": "Login with Riot Account",
-    "guidesSection": "Guides",
-    "guidesTitle": "Random LoL Challenge Guides",
-    "guidesDesc": "Practical guides about random champion picks, fun challenges, and fresh ideas for your next queue.",
+    "tags": [
+      "Gratis",
+      "Istantaneo",
+      "Nessun Login",
+      "Stagione 2026"
+    ],
+    "trackProgress": "Traccia i Tuoi Progressi",
+    "trackProgressDesc": "Accedi per verificare le vittorie, guadagnare XP, sbloccare risultati e scalare la classifica.",
+    "loginWithRiot": "Accedi con Account Riot",
+    "guidesSection": "Guide",
+    "guidesTitle": "Guide Sfide Casuali LoL",
+    "guidesDesc": "Guide pratiche su pick casuali, sfide divertenti e idee fresche per la tua prossima coda.",
     "blogPosts": [
       {
         "href": "/blog/what-champion-should-i-play",
-        "title": "What Champion Should I Play?",
-        "desc": "Fast inspiration before your next queue."
+        "title": "Quale Campione Scegliere?",
+        "desc": "Ispirazione rapida prima della prossima partita."
       },
       {
         "href": "/blog/lol-random-challenge",
-        "title": "Fun LoL Random Challenge Ideas",
-        "desc": "Formats for solo, duo, and full group play."
+        "title": "Idee Sfide Casuali Divertenti",
+        "desc": "Formati per solo, duo e gruppo."
       },
       {
         "href": "/blog/fun-lol-challenges",
-        "title": "Fun Ways to Play League",
-        "desc": "Fresh ideas for normal League sessions."
+        "title": "Modi Divertenti per Giocare",
+        "desc": "Idee fresche per sessioni normal."
       }
     ],
     "matchMaking": {
-      "verifying": "Verifying Match...",
-      "verify": "Verify Match"
+      "verifying": "Verifica partita...",
+      "verify": "Verifica Partita"
     }
   },
   "championCard": {
-    "yourChampion": "Your Champion",
-    "readyToBegin": "Ready to begin",
-    "pressBelow": "Press the button below",
-    "spinning": "Spinning",
-    "spinRoulette": "Spin Roulette",
-    "verifying": "Verifying...",
-    "verifyMatch": "Verify Match",
-    "spinAgain": "Spin Again"
+    "yourChampion": "Il Tuo Campione",
+    "readyToBegin": "Pronto per iniziare",
+    "pressBelow": "Premi il pulsante qui sotto",
+    "spinning": "Rotazione",
+    "spinRoulette": "Gira la Roulette",
+    "verifying": "Verifica...",
+    "verifyMatch": "Verifica Partita",
+    "spinAgain": "Gira Ancora"
   },
   "championSelector": {
-    "yourChampion": "Your Champion",
-    "chooseChampion": "Choose Your Champion",
-    "clickConfirm": "Click to confirm or reroll for more options",
-    "selectOne": "Select one champion to play ({n} options available)",
-    "playWith": "✓ Play with {champion}",
-    "rerollLeft": "Reroll ({n} left)",
-    "rerollUnlimited": "Reroll (Unlimited)",
-    "unlimitedSpins": "Don't like these options? You have unlimited spins",
-    "spinsLeft": "Don't like these options? You have {n} more spin(s)",
-    "noRerolls": "✨ Choose wisely! No rerolls remaining"
+    "yourChampion": "Il Tuo Campione",
+    "chooseChampion": "Scegli il Tuo Campione",
+    "clickConfirm": "Clicca per confermare o rilancia per altre opzioni",
+    "selectOne": "Seleziona un campione ({n} opzioni disponibili)",
+    "playWith": "✓ Gioca con {champion}",
+    "rerollLeft": "Rilancia ({n} rimasti)",
+    "rerollUnlimited": "Rilancia (Illimitato)",
+    "unlimitedSpins": "Non ti piacciono? Hai giri illimitati",
+    "spinsLeft": "Non ti piacciono? Hai {n} altro/i giro/i",
+    "noRerolls": "✨ Scegli con saggezza! Nessuna rilancia rimasta"
   },
   "championStats": {
-    "statistics": "📊 {champion} Statistics",
-    "health": "Health (HP)",
-    "attackDamage": "Attack Damage",
-    "armor": "Armor",
-    "magicResist": "Magic Resist",
-    "perLevel": "/lvl",
-    "recommendedBuild": "⚔️ Recommended Build",
-    "buildForRole": "General standard build for {role}"
+    "statistics": "📊 Statistiche {champion}",
+    "health": "Vita (HP)",
+    "attackDamage": "Danno da Attacco",
+    "armor": "Armatura",
+    "magicResist": "Resistenza Magica",
+    "perLevel": "/lv",
+    "recommendedBuild": "⚔️ Build Raccomandata",
+    "buildForRole": "Build standard generale per {role}"
   },
   "laneSelector": {
-    "selectLane": "Select Lane",
-    "allLanes": "All Lanes",
+    "selectLane": "Seleziona Corsia",
+    "allLanes": "Tutte le Corsie",
     "top": "Top",
-    "jungle": "Jungle",
+    "jungle": "Giungla",
     "mid": "Mid",
     "adc": "ADC",
     "support": "Support",
-    "anyChampion": "Any champion",
-    "islandLife": "Island life",
-    "pveSimulator": "PvE simulator",
-    "mainCharacter": "Main character",
-    "glassCannon": "Glass cannon",
-    "teamPlayer": "Team player",
-    "all": "ALL",
+    "anyChampion": "Qualsiasi campione",
+    "islandLife": "Vita da isola",
+    "pveSimulator": "Simulatore PvE",
+    "mainCharacter": "Protagonista",
+    "glassCannon": "Cannone di vetro",
+    "teamPlayer": "Giocatore di squadra",
+    "all": "TUTTE",
     "topShort": "TOP",
     "jng": "JNG",
     "midShort": "MID",
@@ -105,379 +111,839 @@
     "sup": "SUP"
   },
   "infoModal": {
-    "title": "How It Works",
-    "step1Title": "Spin the Roulette",
-    "step1Desc": "Select a lane or leave it on All Lanes, then click Spin to get a random champion.",
-    "step2Title": "Play League of Legends",
-    "step2Desc": "Jump into a match with your assigned champion and give it your best shot.",
-    "step2ProTip": "Pro tip: You can play without logging in, but you won't be able to track your progress.",
-    "step3Title": "Login & Verify (Optional)",
-    "step3Win": "If you won: +100 XP, build your streak, unlock achievements",
-    "step3Lose": "If you lost: Streak resets, but you can try again!",
-    "step4Title": "Progress & Compete",
-    "step4Desc": "Earn XP, level up, unlock achievements, and climb the global leaderboard.",
-    "moreInfo": "More info +",
-    "features": "Features",
-    "featureRandom": "Random champion generator",
-    "featureVerify": "Match verification",
-    "featureXp": "XP & leveling system",
-    "featureAchievements": "15+ achievements",
-    "featureStreak": "Win streak tracking",
-    "featureLeaderboard": "Global leaderboard",
+    "title": "Come Funziona",
+    "step1Title": "Gira la Roulette",
+    "step1Desc": "Seleziona una corsia o lascia su Tutte le Corsie, poi clicca Gira per ottenere un campione casuale.",
+    "step2Title": "Gioca a League of Legends",
+    "step2Desc": "Entra in una partita con il tuo campione assegnato e dai il meglio.",
+    "step2ProTip": "Consiglio: Puoi giocare senza accedere, ma non potrai tracciare i progressi.",
+    "step3Title": "Accedi e Verifica (Opzionale)",
+    "step3Desc": "Dopo aver giocato, accedi con il tuo Riot ID e clicca Verifica Partita per confermare di aver giocato con il campione assegnato.",
+    "step3Win": "Se hai vinto: +100 XP, costruisci la tua striscia, sblocca risultati",
+    "step3Lose": "Se hai perso: La striscia si azzera, ma puoi riprovare!",
+    "step4Title": "Progredisci e Competi",
+    "step4Desc": "Guadagna XP, sali di livello, sblocca risultati e scala la classifica globale.",
+    "moreInfo": "Più info +",
+    "features": "Caratteristiche",
+    "featureRandom": "Generatore casuale di campioni",
+    "featureVerify": "Verifica partite",
+    "featureXp": "Sistema XP e livelli",
+    "featureAchievements": "15+ risultati",
+    "featureStreak": "Tracciamento strisce",
+    "featureLeaderboard": "Classifica globale",
     "faq": "FAQ",
-    "faqFreeQ": "Is this free?",
-    "faqFreeA": "Yes! League Roulette is completely free to use. No hidden fees or premium subscriptions.",
-    "faqLoginQ": "Do I need to login?",
-    "faqLoginA": "No, you can generate random champions without logging in. Login is only required to track wins, earn XP, and use the leaderboard.",
-    "faqPasswordQ": "Is my password safe?",
-    "faqPasswordA": "Yes. We use Riot's official OAuth — your password is never stored on our servers. With manual login, we only verify your public Riot ID.",
-    "faqModesQ": "What modes count?",
-    "faqModesA": "Any matchmade game mode counts: Summoner's Rift (all queues), ARAM, and rotating game modes.",
-    "gotIt": "Got it, let's play!"
+    "faqFreeQ": "È gratuito?",
+    "faqFreeA": "Sì! League Roulette è completamente gratuito. Nessuna tariffa nascosta o abbonamento premium.",
+    "faqLoginQ": "Devo accedere?",
+    "faqLoginA": "No, puoi generare campioni casuali senza accedere. L'accesso serve solo per tracciare vittorie, XP e classifica.",
+    "faqPasswordQ": "La mia password è al sicuro?",
+    "faqPasswordA": "Sì. Usiamo l'OAuth ufficiale di Riot — la tua password non viene mai memorizzata. Con login manuale verifichiamo solo il tuo Riot ID pubblico.",
+    "faqModesQ": "Quali modalità contano?",
+    "faqModesA": "Tutte le modalità matchmade contano: Faglia dell'Invocatore (tutte le code), ARAM e modalità rotanti.",
+    "gotIt": "Capito, giochiamo!"
   },
   "autoVerify": {
-    "title": "Auto-Scan",
-    "monitoring": "Monitoring for {champion} match.\nPlay your game — we'll handle the rest.",
-    "nextCheck": "Next check",
-    "elapsed": "Elapsed",
-    "verifyNow": "Verify Now",
-    "cancel": "Cancel",
-    "info": "Checks every 2 min for 1 hour. Click Verify Now for instant result."
+    "title": "Auto-Verifica",
+    "monitoring": "Monitoraggio partita {champion}.\nGioca — ci pensiamo noi.",
+    "nextCheck": "Prossimo controllo",
+    "elapsed": "Trascorso",
+    "verifyNow": "Verifica Ora",
+    "cancel": "Annulla",
+    "info": "Controlla ogni 2 min per 1 ora. Clicca Verifica Ora per risultato immediato."
   },
   "verificationResult": {
-    "scanning": "Scanning for match...",
-    "waiting": "Waiting for new game data",
-    "victory": "VICTORY!",
-    "defeat": "DEFEAT",
-    "challengeFailed": "CHALLENGE FAILED",
-    "youPlayed": "You played {champion}",
-    "wrongChampion": "You played {actual}, not {expected}",
-    "badLuck": " — better luck next time",
+    "scanning": "Ricerca partita...",
+    "waiting": "Attesa nuovi dati partita",
+    "victory": "VITTORIA!",
+    "defeat": "SCONFITTA",
+    "challengeFailed": "SFIDA FALLITA",
+    "youPlayed": "Hai giocato {champion}",
+    "wrongChampion": "Hai giocato {actual}, non {expected}",
+    "badLuck": " — miglior fortuna la prossima volta",
     "kda": "KDA",
     "cs": "CS",
-    "gold": "Gold",
+    "gold": "Oro",
     "kp": "KP",
-    "minions": "Minions",
-    "earned": "Earned",
-    "involved": "Involved",
+    "minions": "Suddi",
+    "earned": "Guadagnato",
+    "involved": "Partecipazione",
     "xpEarned": "+100 XP",
-    "xpLabel": "earned"
+    "xpLabel": "guadagnati"
   },
   "userStats": {
     "level": "Lv.{level}",
     "lolLevel": "LoL Lv.{level}",
-    "challenges": "Challenges",
-    "xpProgress": "XP Progress",
-    "currentStreak": "Current Streak",
-    "bestStreak": "Best Streak"
+    "challenges": "Sfide",
+    "xpProgress": "Progresso XP",
+    "currentStreak": "Striscia Attuale",
+    "bestStreak": "Miglior Striscia"
   },
   "achievements": {
-    "newAchievement": "🎉 New Achievement!",
-    "close": "Close",
-    "title": "Achievements",
-    "common": "COMMON",
-    "rare": "RARE",
-    "epic": "EPIC",
-    "legendary": "LEGENDARY",
+    "newAchievement": "🎉 Nuovo Risultato!",
+    "close": "Chiudi",
+    "title": "Risultati",
+    "common": "COMUNE",
+    "rare": "RARO",
+    "epic": "EPICO",
+    "legendary": "LEGGENDARIO",
     "xpReward": "+{xp} XP"
   },
   "settings": {
-    "title": "Settings",
-    "autoVerify": "Auto-Verification",
-    "autoVerifyDesc": "Automatically check for completed matches every 2 minutes",
-    "notifications": "Browser Notifications",
-    "notificationsDesc": "Get notified when your match is verified",
-    "sound": "Sound Effects",
-    "soundDesc": "Play sound when achievements unlock or matches verify",
-    "cancel": "Cancel",
-    "save": "Save Changes",
-    "tip": "💡 Auto-verification works best when you keep the tab open. Close the tab and verification will pause until you return."
+    "title": "Impostazioni",
+    "autoVerify": "Auto-Verifica",
+    "autoVerifyDesc": "Controlla automaticamente le partite ogni 2 minuti",
+    "notifications": "Notifiche",
+    "notificationsDesc": "Notifica quando la partita viene verificata",
+    "sound": "Effetti Sonori",
+    "soundDesc": "Riproduci suono quando si sbloccano risultati o si verificano partite",
+    "cancel": "Annulla",
+    "save": "Salva Modifiche",
+    "tip": "💡 L'auto-verifica funziona meglio con la scheda aperta."
   },
   "slotMachine": {
-    "loading": "Loading champions…",
-    "rerolls": "Rerolls:",
-    "championCount": "{count} champion(s) in pool",
-    "spinning": "Spinning...",
-    "pullLeft": "Pull ({remaining} left)",
-    "pullLever": "Pull the Lever",
-    "clickToSpin": "Click to spin",
+    "loading": "Caricamento campioni...",
+    "rerolls": "Rilanci:",
+    "championCount": "{count} campione/i disponibile/i",
+    "spinning": "Rotazione...",
+    "pullLeft": "Tira ({remaining} rimasti)",
+    "pullLever": "Tira la Leva",
+    "clickToSpin": "Clicca per girare",
     "jackpot": "🎰 Jackpot!",
-    "spinAgain": "Spin again"
+    "spinAgain": "Gira ancora"
   },
   "slotLever": {
-    "spinning": "Spinning...",
-    "pull": "Pull"
+    "spinning": "Rotazione...",
+    "pull": "Tira"
   },
   "login": {
     "title": "League Roulette",
-    "subtitle": "Random Champion Challenge",
-    "enterRiotId": "Enter your Riot ID to start",
+    "subtitle": "Sfida Campioni Casuali",
+    "enterRiotId": "Inserisci il tuo Riot ID",
     "riotId": "Riot ID",
-    "riotIdPlaceholder": "GameName#TAG",
-    "example": "Example: Hide on bush#KR1 or Faker#KR1",
-    "region": "Region",
-    "verifying": "Verifying...",
-    "startPlaying": "Start Playing",
-    "secureAuth": "🔒 Secure Authentication",
-    "secureDesc": "We verify your account using Riot's official API. Your password is never stored or shared.",
-    "disclaimer": "League Roulette isn't endorsed by Riot Games",
-    "errorRequired": "Please enter your Riot ID",
-    "errorFormat": "Invalid format. Use: GameName#TAG",
-    "errorFormatExample": "Invalid format. Example: Player#EUW"
+    "riotIdPlaceholder": "Nome#TAG",
+    "example": "Esempio: Hide on bush#KR1 o Faker#KR1",
+    "region": "Regione",
+    "verifying": "Verifica...",
+    "startPlaying": "Inizia a Giocare",
+    "secureAuth": "🔒 Autenticazione Sicura",
+    "secureDesc": "Verifichiamo il tuo account tramite API ufficiale Riot. La password non viene mai memorizzata o condivisa.",
+    "disclaimer": "League Roulette non è approvato da Riot Games",
+    "errorRequired": "Inserisci il tuo Riot ID",
+    "errorFormat": "Formato non valido. Usa: Nome#TAG",
+    "errorFormatExample": "Formato non valido. Esempio: Player#EUW"
   },
   "rsoLogin": {
-    "title": "Login to League Roulette",
-    "chooseMethod": "Choose your preferred login method",
+    "title": "Accedi",
+    "chooseMethod": "Scegli il metodo di accesso",
     "riotOauth": "Riot OAuth",
-    "recommended": "Recommended",
-    "oauthDesc": "Secure, automatic verification",
-    "manualRiotId": "Manual Riot ID",
-    "manualDesc": "Enter GameName#TAG",
-    "oauthExplanation": "OAuth: You login on Riot's website - we never see your password\nManual: We verify your public Riot ID - no password needed",
-    "back": "Back",
-    "officialAuth": "Official Riot Authentication",
-    "officialDesc": "Login on auth.riotgames.com - Riot's official page",
-    "noPassword": "We Never See Your Password",
-    "noPasswordDesc": "Entered only on Riot's website, never on ours",
-    "continueOauth": "Continue with Riot OAuth",
+    "recommended": "Raccomandato",
+    "oauthDesc": "Verifica automatica sicura",
+    "manualRiotId": "Riot ID Manuale",
+    "manualDesc": "Inserisci Nome#TAG",
+    "oauthExplanation": "OAuth: Accedi sul sito Riot — non vediamo mai la tua password\nManuale: Verifichiamo il tuo Riot ID pubblico — nessuna password necessaria",
+    "back": "Indietro",
+    "officialAuth": "Autenticazione Ufficiale Riot",
+    "officialDesc": "Accedi su auth.riotgames.com",
+    "noPassword": "Non Vediamo Mai La Tua Password",
+    "noPasswordDesc": "Inserita solo sul sito di Riot, mai sul nostro",
+    "continueOauth": "Continua con Riot OAuth",
     "riotIdLabel": "Riot ID",
-    "riotIdPlaceholder": "GameName#TAG (e.g., Faker#KR1)",
-    "findRiotId": "Find your Riot ID in-game or on your Riot account page",
-    "regionLabel": "Region",
-    "verifying": "Verifying...",
-    "loginButton": "Login with Riot ID",
-    "howThisWorks": "How this works:",
-    "howThisWorksDesc": "We use Riot's public API to verify your Riot ID exists and get your account info. No password required - this only accesses publicly available data.",
-    "errorInvalidFormat": "Invalid format. Use: GameName#TAG (e.g., Faker#KR1)",
-    "errorInvalidRiotId": "Invalid Riot ID format",
-    "errorNotFound": "Account not found. Check your Riot ID and region.",
-    "errorSession": "Error creating session. Please try again.",
-    "errorUnexpected": "Unexpected error: {message}",
+    "riotIdPlaceholder": "Nome#TAG (es. Faker#KR1)",
+    "findRiotId": "Trova il tuo Riot ID in-game o sulla pagina del tuo account Riot",
+    "regionLabel": "Regione",
+    "verifying": "Verifica...",
+    "loginButton": "Accedi con Riot ID",
+    "howThisWorks": "Come funziona:",
+    "howThisWorksDesc": "Usiamo l'API pubblica di Riot per verificare che il tuo Riot ID esista. Nessuna password richiesta.",
+    "errorInvalidFormat": "Formato non valido. Usa: Nome#TAG",
+    "errorInvalidRiotId": "Formato Riot ID non valido",
+    "errorNotFound": "Account non trovato. Controlla Riot ID e regione.",
+    "errorSession": "Errore creazione sessione. Riprova.",
+    "errorUnexpected": "Errore imprevisto: {message}",
     "regions": {
-      "euw": "EUW - Europe West",
-      "eune": "EUNE - Europe Nordic & East",
-      "na": "NA - North America",
-      "kr": "KR - Korea",
-      "br": "BR - Brazil",
-      "lan": "LAN - Latin America North",
-      "las": "LAS - Latin America South",
+      "euw": "EUW - Europa Ovest",
+      "eune": "EUNE - Europa Nord & Est",
+      "na": "NA - America del Nord",
+      "kr": "KR - Corea",
+      "br": "BR - Brasile",
+      "lan": "LAN - America Latina Nord",
+      "las": "LAS - America Latina Sud",
       "oce": "OCE - Oceania",
-      "tr": "TR - Turkey",
+      "tr": "TR - Turchia",
       "ru": "RU - Russia",
-      "jp": "JP - Japan"
+      "jp": "JP - Giappone"
     }
   },
   "footer": {
-    "description": "Random champion challenge tracker for League of Legends. Discover new champions, track your wins, and compete globally.",
-    "quickLinks": "Quick Links",
-    "legal": "Legal",
-    "followUs": "Follow Us",
-    "copyright": "© {year} League Roulette. All rights reserved.",
-    "disclaimer": "League Roulette is not endorsed by Riot Games and does not reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. League of Legends and Riot Games are trademarks or registered trademarks of Riot Games, Inc."
+    "description": "Tracker sfide campioni casuali per League of Legends. Scopri nuovi campioni, traccia le tue vittorie e competi a livello globale.",
+    "quickLinks": "Link Veloce",
+    "legal": "Legale",
+    "followUs": "Seguici",
+    "copyright": "© {year} League Roulette. Tutti i diritti riservati.",
+    "disclaimer": "League Roulette non è approvato da Riot Games. League of Legends e Riot Games sono marchi registrati di Riot Games, Inc."
   },
   "about": {
-    "backToGame": "Back to Game",
-    "title": "About League Roulette",
-    "subtitle": "Challenging League of Legends players since 2024",
-    "missionTitle": "Our Mission",
-    "missionP1": "League Roulette was created to add a fresh layer of excitement to League of Legends. We believe that stepping outside your comfort zone is the best way to improve and have fun.",
-    "missionP2": "Our platform randomly assigns champions, pushing players to master new roles, discover hidden favorites, and break free from autopilot mode.",
-    "storyTitle": "The Story Behind League Roulette",
-    "storyP1": "Born from the simple question: 'What champion should I play?' League Roulette started as a small side project to solve that daily dilemma.",
-    "storyP2": "What began as a basic randomizer grew into a full-featured challenge platform with win tracking, achievements, XP, and a global leaderboard.",
-    "storyP3": "Today, thousands of players use League Roulette to spice up their games, learn new champions, and compete with friends.",
-    "offerTitle": "What We Offer",
-    "offerRandom": "Random Champion Generator",
-    "offerRandomDesc": "Instant random champion picks filtered by lane. Unbiased and truly random.",
-    "offerVerify": "Match Verification",
-    "offerVerifyDesc": "Automatic match verification using Riot Games API. Play your game, we'll handle the rest.",
-    "offerXp": "XP & Progression",
-    "offerXpDesc": "Earn XP, level up, and unlock achievements as you complete challenges.",
-    "offerLeaderboard": "Global Leaderboard",
-    "offerLeaderboardDesc": "Compete with players worldwide. Climb the ranks and prove your versatility.",
-    "offerStreaks": "Streak Tracking",
-    "offerStreaksDesc": "Build and maintain win streaks. How many random champion wins can you chain?",
-    "whyTitle": "Why Random Champions?",
-    "whyP1": "Playing random champions is one of the best ways to improve at League of Legends. It breaks you out of your comfort zone and forces you to learn.",
+    "backToGame": "Torna al Gioco",
+    "title": "Informazioni su League Roulette",
+    "subtitle": "Sfidiamo i giocatori LoL dal 2024",
+    "missionTitle": "La Nostra Missione",
+    "missionP1": "League Roulette è stato creato per aggiungere entusiasmo a League of Legends. Crediamo che uscire dalla propria zona di comfort sia il modo migliore per migliorare e divertirsi.",
+    "missionP2": "La nostra piattaforma assegna campioni casualmente, spingendo i giocatori a padroneggiare nuovi ruoli e scoprire preferiti nascosti.",
+    "storyTitle": "La Storia Dietro League Roulette",
+    "storyP1": "Nato dalla semplice domanda: 'Quale campione dovrei giocare?' League Roulette è iniziato come un piccolo progetto.",
+    "storyP2": "Ciò che è iniziato come un randomizzatore di base è cresciuto in una piattaforma completa con tracciamento vittorie, risultati, XP e classifica globale.",
+    "storyP3": "Oggi, migliaia di giocatori usano League Roulette per ravvivare le loro partite, imparare nuovi campioni e competere con amici.",
+    "offerTitle": "Cosa Offriamo",
+    "offerRandom": "Generatore Casuale di Campioni",
+    "offerRandomDesc": "Pick casuali istantanei filtrati per corsia. Imparziale e veramente casuale.",
+    "offerVerify": "Verifica Partite",
+    "offerVerifyDesc": "Verifica automatica tramite API Riot Games. Gioca, pensiamo noi al resto.",
+    "offerXp": "XP e Progressione",
+    "offerXpDesc": "Guadagna XP, sali di livello e sblocca risultati completando sfide.",
+    "offerLeaderboard": "Classifica Globale",
+    "offerLeaderboardDesc": "Competi con giocatori di tutto il mondo. Scala le classifiche e dimostra la tua versatilità.",
+    "offerStreaks": "Tracciamento Strisce",
+    "offerStreaksDesc": "Costruisci e mantieni strisce vincenti. Quante vittorie consecutive riesci a ottenere?",
+    "whyTitle": "Perché Campioni Casuali?",
+    "whyP1": "Giocare campioni casuali è uno dei modi migliori per migliorare a LoL. Ti fa uscire dalla zona di comfort.",
     "whyBullets": [
-      "Discover new champions you might never have tried",
-      "Learn multiple roles and become a flexible player",
-      "Understand champion matchups from both sides",
-      "Keep the game fresh and exciting",
-      "Build game knowledge that makes you a better player overall"
+      "Scopri nuovi campioni che non avresti mai provato",
+      "Impara ruoli multipli e diventa flessibile",
+      "Comprendi i matchup da entrambi i lati",
+      "Mantieni il gioco fresco ed emozionante",
+      "Costruisci conoscenza che ti rende un giocatore migliore"
     ],
-    "communityTitle": "Join Our Community",
-    "communityP1": "League Roulette is more than a tool — it's a community of players who love League of Legends and enjoy taking on new challenges.",
-    "communityP2": "Follow us on social media, join our Discord, and share your random champion experiences with fellow summoners.",
-    "communityP3": "Have suggestions or feedback? We'd love to hear from you. Visit our {contactLink}.",
-    "contactLink": "contact page",
-    "valuesTitle": "Our Values",
+    "communityTitle": "Unisciti alla Nostra Community",
+    "communityP1": "League Roulette è più di uno strumento — è una community di giocatori che amano League of Legends.",
+    "communityP2": "Seguici sui social, unisciti al nostro Discord e condividi le tue esperienze.",
+    "communityP3": "Hai suggerimenti? Visitaci alla nostra {contactLink}.",
+    "contactLink": "pagina contatti",
+    "valuesTitle": "I Nostri Valori",
     "valueFairPlay": "Fair Play",
-    "valueFairPlayDesc": "Every champion selection is truly random. No bias, no patterns — just pure RNG.",
-    "valuePrivacy": "Privacy First",
-    "valuePrivacyDesc": "We never store passwords. Riot OAuth keeps your account secure. Your data is yours.",
-    "valueInnovation": "Constant Innovation",
-    "valueInnovationDesc": "We're always improving with new features, achievements, and challenges based on your feedback.",
-    "numbersTitle": "League Roulette by the Numbers",
-    "numbersChampions": "Champions Available",
-    "numbersChallenges": "Challenges Completed",
-    "numbersAchievements": "Achievements to Unlock",
-    "numbersPlayers": "Active Players",
-    "ctaTitle": "Ready to Challenge Yourself?",
-    "ctaStart": "Start Playing Now",
-    "ctaLearn": "Learn How to Play"
+    "valueFairPlayDesc": "Ogni selezione è veramente casuale. Nessun pregiudizio — solo RNG puro.",
+    "valuePrivacy": "Privacy Prima",
+    "valuePrivacyDesc": "Non memorizziamo mai password. Riot OAuth mantiene il tuo account sicuro.",
+    "valueInnovation": "Innovazione Costante",
+    "valueInnovationDesc": "Miglioriamo sempre con nuove funzionalità basate sui tuoi feedback.",
+    "numbersTitle": "League Roulette in Numeri",
+    "numbersChampions": "Campioni Disponibili",
+    "numbersChallenges": "Sfide Completate",
+    "numbersAchievements": "Risultati da Sbloccare",
+    "numbersPlayers": "Giocatori Attivi",
+    "ctaTitle": "Pronto per la Sfida?",
+    "ctaStart": "Inizia a Giocare Ora",
+    "ctaLearn": "Impara Come Giocare"
   },
   "contact": {
-    "backToHome": "Back to Home",
-    "title": "Contact Us",
-    "subtitle": "We'd love to hear from you!",
-    "formName": "Name",
+    "backToHome": "Torna alla Home",
+    "title": "Contattaci",
+    "subtitle": "Ci farebbe piacere sentirti!",
+    "formName": "Nome",
     "formEmail": "Email",
-    "formSubject": "Subject",
-    "formMessage": "Message",
-    "namePlaceholder": "Your name",
-    "emailPlaceholder": "your@email.com",
-    "messagePlaceholder": "Tell us what's on your mind...",
-    "subjectSelect": "Select a subject",
-    "subjectGeneral": "General Inquiry",
-    "subjectBug": "Bug Report",
-    "subjectFeature": "Feature Request",
+    "formSubject": "Oggetto",
+    "formMessage": "Messaggio",
+    "namePlaceholder": "Il tuo nome",
+    "emailPlaceholder": "tua@email.com",
+    "messagePlaceholder": "Dicci cosa hai in mente...",
+    "subjectSelect": "Seleziona oggetto",
+    "subjectGeneral": "Richiesta Generale",
+    "subjectBug": "Segnalazione Bug",
+    "subjectFeature": "Richiesta Funzionalità",
     "subjectPartnership": "Partnership/Business",
-    "subjectSupport": "Technical Support",
-    "subjectOther": "Other",
-    "sending": "Sending...",
-    "send": "Send Message",
-    "successTitle": "Message Sent!",
-    "successDesc": "Thank you for reaching out. We'll get back to you as soon as possible.",
-    "sendAnother": "Send Another Message",
+    "subjectSupport": "Supporto Tecnico",
+    "subjectOther": "Altro",
+    "sending": "Invio...",
+    "send": "Invia Messaggio",
+    "successTitle": "Messaggio Inviato!",
+    "successDesc": "Grazie per averci contattato. Ti risponderemo al più presto.",
+    "sendAnother": "Invia Altro Messaggio",
     "emailLabel": "Email",
-    "emailDesc": "We typically respond within 24-48 hours",
-    "discordLabel": "Discord Community",
-    "discordDesc": "Join our Discord",
-    "discordText": "Get instant support and connect with the community",
+    "emailDesc": "Rispondiamo entro 24-48 ore",
+    "discordLabel": "Community Discord",
+    "discordDesc": "Unisciti al nostro Discord",
+    "discordText": "Supporto istantaneo e connessione con la community",
     "twitterLabel": "Twitter",
-    "twitterDesc": "Follow for updates and announcements",
-    "quickHelp": "Quick Help",
-    "quickHelpDesc": "Before reaching out, check if your question is answered in our FAQ",
-    "viewFaq": "View FAQ →"
+    "twitterDesc": "Seguici per novità",
+    "quickHelp": "Aiuto Rapido",
+    "quickHelpDesc": "Prima di contattarci, controlla il nostro FAQ",
+    "viewFaq": "Vedi FAQ →"
   },
   "faq": {
-    "backToGame": "Back to Game",
-    "title": "Frequently Asked Questions",
-    "subtitle": "Find answers to common questions about League Roulette",
-    "sectionGettingStarted": "Getting Started",
+    "backToGame": "Torna al Gioco",
+    "title": "Domande Frequenti",
+    "subtitle": "Trova risposte alle domande comuni su League Roulette",
+    "sectionGettingStarted": "Primi Passi",
     "sectionGameplay": "Gameplay",
-    "sectionVerification": "Verification & Progress",
-    "sectionAchievements": "Achievements & Leaderboards",
-    "sectionTechnical": "Technical & Account",
-    "stillQuestions": "Still Have Questions?",
-    "stillQuestionsDesc": "Didn't find what you were looking for? We're here to help!",
-    "contactSupport": "Contact Support",
-    "readTutorial": "Read Tutorial"
+    "sectionVerification": "Verifica e Progressi",
+    "sectionAchievements": "Risultati e Classifiche",
+    "sectionTechnical": "Tecnico e Account",
+    "stillQuestions": "Ancora Domande?",
+    "stillQuestionsDesc": "Non hai trovato quello che cercavi? Siamo qui per aiutare!",
+    "contactSupport": "Contatta Supporto",
+    "readTutorial": "Leggi Tutorial"
   },
   "howToPlay": {
-    "backToGame": "Back to Game",
-    "title": "How to Play League Roulette",
-    "subtitle": "Your complete guide to getting started",
-    "whatIsTitle": "What is League Roulette?",
+    "backToGame": "Torna al Gioco",
+    "title": "Come Giocare a League Roulette",
+    "subtitle": "Guida completa per iniziare",
+    "whatIsTitle": "Cos'è League Roulette?",
     "steps": {
       "account": {
-        "title": "Create Your Account",
-        "desc": "Connect your Riot account to get started. We support:"
+        "title": "Crea il Tuo Account",
+        "desc": "Collega il tuo account Riot per iniziare. Supportiamo:"
       },
       "lane": {
-        "title": "Select Your Lane",
-        "desc": "Choose your preferred role or leave it on All Lanes for a complete surprise."
+        "title": "Seleziona la Tua Corsia",
+        "desc": "Scegli il tuo ruolo preferito o lascia su Tutte le Corsie per una sorpresa totale."
       },
       "spin": {
-        "title": "Spin the Roulette",
-        "desc": "Click the button and get your random champion assignment."
+        "title": "Gira la Roulette",
+        "desc": "Clicca il pulsante e ricevi il tuo campione casuale."
       },
       "play": {
-        "title": "Play Your Match",
-        "desc": "Jump into a game with your assigned champion and do your best."
+        "title": "Gioca la Tua Partita",
+        "desc": "Entra in una partita con il campione assegnato e dai il meglio."
       },
       "verify": {
-        "title": "Automatic Verification",
-        "desc": "Our system automatically checks your match history to verify the result."
+        "title": "Verifica Automatica",
+        "desc": "Il nostro sistema controlla automaticamente la cronologia per verificare il risultato."
       },
       "progress": {
-        "title": "Track Your Progress",
-        "desc": "Earn XP, level up, unlock achievements, and climb the leaderboard."
+        "title": "Traccia i Progressi",
+        "desc": "Guadagna XP, sali di livello, sblocca risultati e scala la classifica."
       }
     },
-    "ctaTitle": "Ready to Start Your Journey?",
-    "ctaPlay": "Start Playing",
-    "ctaFaq": "View FAQ"
+    "ctaTitle": "Pronto per Iniziare?",
+    "ctaPlay": "Inizia a Giocare",
+    "ctaFaq": "Vedi FAQ"
   },
   "tips": {
-    "backToGame": "Back to Game",
-    "title": "Strategy & Champion Tips",
-    "subtitle": "Master the art of playing random champions",
-    "ctaTitle": "Ready to Improve?",
-    "ctaPlay": "Start Playing",
-    "ctaBasics": "Learn the Basics"
+    "backToGame": "Torna al Gioco",
+    "title": "Strategie e Consigli",
+    "subtitle": "Padroneggia l'arte di giocare campioni casuali",
+    "ctaTitle": "Pronto a Migliorare?",
+    "ctaPlay": "Inizia a Giocare",
+    "ctaBasics": "Impara le Basi"
   },
   "leaderboard": {
-    "backToGame": "Back to Game",
-    "title": "🏆 Leaderboard",
-    "subtitle": "Compete with the best League Roulette players",
-    "tabXp": "Total XP",
-    "tabLevel": "Highest Level",
-    "tabChallenges": "Most Challenges",
-    "tabStreak": "Current Streak",
-    "tabBestStreak": "Best Streak",
-    "descXp": "Most experience points earned",
-    "descLevel": "Highest player level",
-    "descChallenges": "Most challenges completed",
-    "descStreak": "Longest active win streak",
-    "descBestStreak": "Best win streak of all time",
-    "yourRank": "Your Rank",
-    "loading": "Loading leaderboard...",
-    "retry": "Retry",
-    "emptyTitle": "No rankings yet",
-    "emptyDesc": "Be the first to complete challenges and claim the top spot!",
-    "emptyCta": "Start Playing",
-    "youBadge": "YOU",
-    "level": "Level {level}",
-    "challenges": "{count} challenges",
-    "loginCta": "Want to compete?",
-    "loginDesc": "Login to track your progress and climb the leaderboard!",
-    "loginButton": "Login & Start Playing"
+    "backToGame": "Torna al Gioco",
+    "title": "🏆 Classifica",
+    "subtitle": "Competi con i migliori giocatori",
+    "tabXp": "XP Totale",
+    "tabLevel": "Livello Massimo",
+    "tabChallenges": "Più Sfide",
+    "tabStreak": "Striscia Attuale",
+    "tabBestStreak": "Miglior Striscia",
+    "descXp": "Più punti esperienza guadagnati",
+    "descLevel": "Livello giocatore più alto",
+    "descChallenges": "Più sfide completate",
+    "descStreak": "Striscia vincente attiva più lunga",
+    "descBestStreak": "Miglior striscia vincente di sempre",
+    "yourRank": "La Tua Posizione",
+    "loading": "Caricamento classifica...",
+    "retry": "Riprova",
+    "emptyTitle": "Ancora nessuna classifica",
+    "emptyDesc": "Sii il primo a completare sfide e conquistare il primo posto!",
+    "emptyCta": "Inizia a Giocare",
+    "youBadge": "TU",
+    "level": "Livello {level}",
+    "challenges": "{count} sfide",
+    "loginCta": "Vuoi competere?",
+    "loginDesc": "Accedi per tracciare i tuoi progressi e scalare la classifica!",
+    "loginButton": "Accedi e Gioca"
   },
   "blog": {
-    "back": "Back to League Roulette",
-    "sectionLabel": "League Roulette Blog",
-    "title": "LoL challenge guides, random picks, and champion inspiration",
-    "desc": "Discover practical guides, fun challenge ideas, and fresh ways to enjoy League of Legends with random champion picks.",
-    "cardLabel": "Lol Roulette article",
-    "readArticle": "Read article",
-    "backToBlog": "Back to Blog",
-    "guideLabel": "League Roulette Guide",
-    "ctaTitle": "Ready to spin for your next match?",
-    "ctaDesc": "Feeling inspired? Try our random champion generator and put your new knowledge to the test.",
-    "browseMore": "Browse more blog posts",
-    "relatedReading": "Related reading"
+    "back": "Torna a League Roulette",
+    "sectionLabel": "Blog League Roulette",
+    "title": "Guide sfide LoL, pick casuali e ispirazione campioni",
+    "desc": "Scopri guide pratiche, idee sfida divertenti e nuovi modi di goderti League con pick casuali.",
+    "cardLabel": "Articolo LoL Roulette",
+    "readArticle": "Leggi articolo",
+    "backToBlog": "Torna al Blog",
+    "guideLabel": "Guida League Roulette",
+    "ctaTitle": "Pronto per la prossima partita?",
+    "ctaDesc": "Torna alla home page e lascia che la roulette scelga il tuo prossimo campione.",
+    "browseMore": "Altri articoli",
+    "relatedReading": "Letture correlate"
   },
   "privacy": {
-    "backToHome": "Back to Home",
-    "title": "Privacy Policy",
-    "lastUpdated": "Last updated: February 12, 2026"
+    "backToHome": "Torna alla Home",
+    "title": "Informativa sulla Privacy",
+    "lastUpdated": "Ultimo aggiornamento: 12 febbraio 2026"
   },
   "terms": {
-    "backToHome": "Back to Home",
-    "title": "Terms of Service",
-    "lastUpdated": "Last updated: February 12, 2026"
+    "backToHome": "Torna alla Home",
+    "title": "Termini di Servizio",
+    "lastUpdated": "Ultimo aggiornamento: 12 febbraio 2026"
   },
   "meta": {
-    "defaultTitle": "LoL Random Champion Generator 🎯 | Spin the Roulette & Get a Random Pick",
+    "defaultTitle": "Generatore Casuale Campioni LoL 🎯 | Gira la Roulette e Ottieni un Pick Casuale",
     "titleTemplate": "%s | League Roulette",
-    "defaultDescription": "Not sure what to play in League of Legends? 🎯 Spin the random champion roulette, challenge your friends, track wins, earn XP, and climb the leaderboard. Free LoL randomizer!"
+    "defaultDescription": "Non sai cosa giocare in League of Legends? 🎯 Gira la roulette campioni casuali, sfida gli amici, traccia vittorie, XP e classifica. Randomizer LoL gratis!"
   },
   "seo": {
-    "srHeading": "Free Random League of Legends Champion Generator | LoL Roulette & Picker 2026 - Ranked, ARAM, Custom"
+    "srHeading": "Generatore Gratuito di Campioni Casuali per League of Legends | Roulette LoL 2026 - Ranked, ARAM, Personalizzate",
+    "whatIsTitle": "Cos'è League Roulette?",
+    "whatIsText": "League Roulette è un <strong>generatore di campioni casuale gratuito</strong> per League of Legends (LoL). Gira la ruota per ottenere un campione LoL casuale e sfidati a vincere partite ranked o normali.",
+    "howToTitle": "Come Usare il Selezionatore di Campioni Casuali",
+    "howToSteps": [
+      "Seleziona la tua corsia preferita (Top, Giungla, Mid, ADC o Support)",
+      "Clicca Gira Roulette per ottenere un campione League of Legends casuale",
+      "Gioca una partita con quel campione in League of Legends",
+      "Accedi per verificare la vittoria e guadagnare XP e risultati",
+      "Costruisci la tua striscia e scala la classifica!"
+    ],
+    "featuresTitle": "Caratteristiche",
+    "features": [
+      "Generatore campioni casuali per tutte le corsie",
+      "Verifica partite con API Riot",
+      "Sistema XP e livelli",
+      "15+ risultati sbloccabili",
+      "Tracciamento strisce vincenti",
+      "Classifica globale",
+      "100% gratuito",
+      "Interfaccia mobile-friendly"
+    ],
+    "whyTitle": "Perché Usare un Generatore di Campioni Casuali?",
+    "whyText": "Usare un selezionatore di campioni casuali LoL ti aiuta a:",
+    "whyBullets": [
+      "Scoprire nuovi campioni e stili di gioco",
+      "Uscire dalla tua zona di comfort",
+      "Migliorare la conoscenza generale del gioco",
+      "Rendere League of Legends divertente di nuovo",
+      "Creare contenuti divertenti per lo streaming"
+    ],
+    "perfectTitle": "Perfetto per ARAM, Ranked e Partite Personalizzate",
+    "perfectAramTitle": "Caos ARAM",
+    "perfectAramText": "Il generatore campioni casuali ARAM ti dà composizioni di squadra inaspettate.",
+    "perfectRankedTitle": "Sfide Ranked",
+    "perfectRankedText": "Edizione ranked del generatore campioni casuali LoL. Pick off-meta per uscire dalla routine.",
+    "perfectCustomTitle": "Partite Personalizzate",
+    "perfectCustomText": "Roulette campioni League con amici. Ruota campioni casuali per tornei.",
+    "challengesTitle": "Idee Sfide Casuali",
+    "challenge1Title": "Sfida Solo Queue",
+    "challenge1Text": "Gioca 3 partite di fila con pick casuali. Niente ban sul tuo campione!",
+    "challenge2Title": "Settimana Off-Meta",
+    "challenge2Text": "Gioca solo campioni su cui hai poche partite. Espandi il tuo pool!",
+    "challenge3Title": "Maestro delle Strisce",
+    "challenge3Text": "Continua a vincere con pick casuali finché non perdi. Supera il tuo record!",
+    "challenge4Title": "Roulette in Gruppo",
+    "challenge4Text": "Tutti girano insieme. Niente schivate!",
+    "faqTitle": "Domande Frequenti",
+    "faq1Q": "League Roulette è gratuito?",
+    "faq1A": "Sì! League Roulette è completamente gratuito.",
+    "faq2Q": "Come funziona la verifica delle partite?",
+    "faq2A": "Usiamo l'API ufficiale di Riot Games per verificare che hai giocato e vinto con il campione assegnato.",
+    "faq3Q": "Posso filtrare i campioni per corsia?",
+    "faq3A": "Sì! Puoi selezionare la tua corsia preferita e ottenere un campione casuale adatto a quel ruolo.",
+    "faq4Q": "È affiliato con Riot Games?",
+    "faq4A": "No. League Roulette è un progetto indipendente creato da fan.",
+    "faq5Q": "Include tutti i campioni della Stagione 2026?",
+    "faq5A": "Sì! Aggiornato per la Stagione 2026 con tutti i campioni League of Legends incluse nuove uscite.",
+    "faq6Q": "È buono come generatore campioni casuali ARAM?",
+    "faq6A": "Perfetto per ARAM! Filtra per ruolo e ottieni pick casuali che funzionano alla grande nel caos dell'Abisso Ululante.",
+    "faq7Q": "Posso usare il generatore campioni casuali per ranked?",
+    "faq7A": "Assolutamente! Molti giocatori lo usano per praticare pick off-meta.",
+    "faq8Q": "League Roulette è ottimizzato per mobile?",
+    "faq8A": "100% mobile-friendly. Gira la roulette su telefono, tablet o desktop."
   },
   "localeSwitcher": {
-    "label": "Language"
-  }
+    "label": "Lingua"
+  },
+  "mastery": {
+    "title": "Maestria Campioni",
+    "subtitle": "Visualizza i tuoi livelli e punti maestria su tutti i campioni",
+    "loginRequired": "Accesso Richiesto",
+    "loginRequiredDesc": "Devi accedere con il tuo Riot ID per vedere i dati di maestria.",
+    "signIn": "Accedi",
+    "winrateSection": "Winrate per Campione"
+  },
+  "championMastery": {
+    "title": "Maestria Campioni",
+    "totalPoints": "Punti Totali",
+    "championsPlayed": "Campioni Giocati",
+    "mastery7Plus": "Maestria 7+",
+    "mastery5Plus": "Maestria 5+",
+    "points": "pt",
+    "noMasteries": "Nessun dato di maestria disponibile",
+    "showAll": "Mostra tutto ({count})",
+    "showLess": "Mostra meno",
+    "showingAll": "Mostrando tutti i {count} campioni",
+    "loadingMasteries": "Caricamento dati maestria...",
+    "levelDistribution": "Distribuzione Livelli",
+    "searchChampion": "Cerca campione...",
+    "all": "Tutti",
+    "sortPoints": "Punti",
+    "sortLevel": "Livello",
+    "sortName": "Nome",
+    "sortRecent": "Recenti",
+    "toNextLevel": "al prossimo livello"
+  },
+  "championWinrate": {
+    "loading": "Caricamento cronologia partite...",
+    "noData": "Nessuna cronologia trovata. Gioca qualche partita prima!",
+    "noLaneData": "Nessun campione trovato per {lane}",
+    "wins": "V",
+    "losses": "P",
+    "games": "partite",
+    "lane": {
+      "all": "Tutte le Corsie",
+      "top": "Top",
+      "jungle": "Giungla",
+      "mid": "Mid",
+      "adc": "ADC",
+      "support": "Support"
+    }
+  },
+  "faqContent": [
+    {
+      "q": "Cos'è League Roulette?",
+      "a": "League Roulette è una piattaforma di sfide basata sul web per giocatori di League of Legends. Seleziona campioni casualmente per farti giocare, aiutandoti ad espandere il tuo pool, migliorare la conoscenza del gioco e divertirti con partite imprevedibili. La piattaforma traccia i progressi, assegna XP e risultati, e presenta classifiche globali."
+    },
+    {
+      "q": "League Roulette è gratuito?",
+      "a": "Sì! League Roulette è completamente gratuito. Tutte le funzionalità principali incluse selezione campioni, verifica automatica, tracciamento XP, risultati e classifiche sono disponibili per tutti senza alcun costo."
+    },
+    {
+      "q": "Devo scaricare qualcosa?",
+      "a": "Nessun download necessario! League Roulette funziona interamente nel browser web. Hai solo bisogno di League of Legends installato per giocare le partite."
+    },
+    {
+      "q": "Come creo un account?",
+      "a": "Clicca il pulsante 'Accedi per tracciare i progressi' sulla home page e autenticati con il tuo account Riot Games. Usiamo il sistema OAuth ufficiale di Riot, quindi le tue credenziali sono sicure e mai memorizzate."
+    },
+    {
+      "q": "Come funziona la selezione campioni?",
+      "a": "Prima, seleziona la tua corsia preferita (Top, Giungla, Mid, ADC, Support o Tutte). Poi clicca 'Tira la Leva' per far girare la roulette. Il sistema seleziona casualmente un campione dal pool della corsia scelta."
+    },
+    {
+      "q": "Posso rilancia re se non mi piace il campione?",
+      "a": "Sì! Hai giri illimitati per sfida. Se non ti piace il campione, puoi continuare a rilanciare finché non ne trovi uno che vuoi giocare."
+    },
+    {
+      "q": "Quali modalità contano per la verifica?",
+      "a": "Tutte le modalità ufficiali di League of Legends contano: Ranked Solo/Duo, Ranked Flex, Normal Draft, Normal Blind Pick e ARAM. Partite personalizzate e practice tool non contano."
+    },
+    {
+      "q": "Come funziona la verifica automatica?",
+      "a": "Il nostro sistema controlla la cronologia partite ogni 2 minuti usando l'API ufficiale Riot Games. Quando rileva una nuova partita con il campione assegnato, verifica automaticamente il risultato."
+    },
+    {
+      "q": "Quanto XP guadagno per sfida?",
+      "a": "Guadagni 100 XP per ogni sfida completata con successo. Ogni 1.000 XP equivale a un livello. Quindi servono 10 sfide riuscite per salire di livello."
+    },
+    {
+      "q": "Quali risultati sono disponibili?",
+      "a": "League Roulette offre molteplici categorie di risultati: Primi Passi, Consistenza, Strisce Vincenti, Livellamento e Risultati Speciali per imprese uniche."
+    },
+    {
+      "q": "Come funzionano le classifiche?",
+      "a": "Ci sono 5 categorie di classifica: XP Totale, Livello Più Alto, Più Sfide, Striscia Attuale e Miglior Striscia. Puoi cambiare categoria per vedere la tua posizione."
+    },
+    {
+      "q": "Il mio account Riot è sicuro?",
+      "a": "Assolutamente. Usiamo il sistema di autenticazione OAuth ufficiale di Riot. Il tuo username e password Riot non sono mai condivisi o memorizzati."
+    },
+    {
+      "q": "Quali regioni sono supportate?",
+      "a": "Tutte le regioni di League of Legends sono supportate: EUW, EUNE, NA, KR, BR, LAN, LAS, OCE, TR, RU, JP, PH, SG, TH, TW e VN."
+    },
+    {
+      "q": "League Roulette funziona su mobile?",
+      "a": "Sì! Il sito è completamente responsive e funziona su telefoni e tablet."
+    }
+  ],
+  "tipsContent": {
+    "intro": "Giocare campioni casuali è uno dei modi migliori per migliorare a League of Legends. Questa guida ti aiuterà ad avere successo con campioni sconosciuti, capire diversi stili di gioco e sviluppare l'adattabilità necessaria per vincere con chiunque.",
+    "generalTitle": "Consigli Generali per il Successo",
+    "g1Title": "Padroneggia i Fondamentali",
+    "g1Text": "Quando non puoi fare affidamento sulle meccaniche specifiche del campione, i tuoi fondamentali diventano ancora più importanti. Concentrati su:",
+    "g1Bullet1": "<strong>CS:</strong> Last-hit dei suddi è universale per tutti i campioni",
+    "g1Bullet2": "<strong>Consapevolezza mappa:</strong> Guarda la minimap, traccia il jungler nemico, warda le aree chiave",
+    "g1Bullet3": "<strong>Posizionamento:</strong> Stai sicuro nei teamfight, rispetta le minacce nemiche",
+    "g1Bullet4": "<strong>Gestione ondate:</strong> Congela quando sei in vantaggio, spingi quando vagi",
+    "g2Title": "Ricerca Rapida del Campione",
+    "g2Text": "Prima che la partita inizi, passa 2-3 minuti a imparare il campione. Leggi le descrizioni abilità in selezione, controlla le build raccomandate e guarda un breve clip YouTube se disponibile.",
+    "g3Title": "Gioca Sicuro in Early Game",
+    "g3Text": "Non cercare di fare giocate spettacolari con campioni sconosciuti. Concentrati sul farming sicuro, impara il tuo danno e capisci i tuoi power spike.",
+    "g4Title": "Pensa alle Condizioni di Vittoria",
+    "g4Text": "Anche se non conosci tutte le meccaniche, puoi capire il tuo ruolo: Sei un tank che deve ingaggiare? Un carry che ha bisogno d'oro? Un support che potenzia i compagni?",
+    "laneTitle": "Strategie Specifiche per Corsia",
+    "topTitle": "Top Lane",
+    "topText": "La top lane è un'isola dove l'abilità 1v1 determina il successo. La maggior parte dei top laner casuali saranno bruiser o tank.",
+    "top1": "<strong>Posizione di scambio:</strong> Posizionati aggressivamente quando il nemico last-hitta",
+    "top2": "<strong>Controllo ondata:</strong> Congela vicino alla tua torre quando sei in vantaggio, essenziale per top",
+    "top3": "<strong>Uso TP:</strong> Conserva il teletrasporto per giocate in bot o per tornare in corsia",
+    "top4": "<strong>Split push:</strong> La maggior parte dei top laner eccelle nel pressionare le corsie laterali in late game",
+    "jngTitle": "Giungla",
+    "jngText": "La giungla è il ruolo che più dipende dalla conoscenza del gioco. Concentrati su queste basi con jungler casuali:",
+    "jng1": "<strong>Efficienza clear:</strong> Impara il percorso di clear ottimale — di solito inizia da Raptors o Buff",
+    "jng2": "<strong>Preparazione gank:</strong> Ganka solo corsie con CC o quando i nemici sono overextend",
+    "jng3": "<strong>Controllo obiettivi:</strong> Draghi e Rift Herald fanno vincere le partite, priorizzali",
+    "jng4": "<strong>Traccia il jungler nemico:</strong> Warda la sua giungla, pinga le posizioni alla squadra",
+    "midTitle": "Mid Lane",
+    "midText": "La mid lane ha il pool di campioni più vario — da maghi ad assassini a combattenti.",
+    "mid1": "<strong>Roaming:</strong> Spingi l'ondata poi vag verso le corsie laterali, la mid ha il miglior accesso per roam",
+    "mid2": "<strong>Gestione mana:</strong> Molti mid laner sono limitati dal mana, non spammare abilità",
+    "mid3": "<strong>Assassino vs Mago:</strong> Gli assassini cercano pick, i maghi forniscono DPS nei teamfight",
+    "mid4": "<strong>Controllo visione:</strong> Warda entrambi i cespugli del fiume per evitare gank",
+    "adcTitle": "ADC (Corsia Bot)",
+    "adcText": "Gli ADC sono meccanicamente impegnativi ma seguono schemi simili su tutti i campioni.",
+    "adc1": "<strong>Attack move:</strong> Usa A-click per kiting ed evitare errori di clic",
+    "adc2": "<strong>Posizionamento:</strong> Rimani a portata massima nei combattimenti, dietro la frontline",
+    "adc3": "<strong>Scambi in corsia:</strong> Auto-attacca quando il nemico va a farmare",
+    "adc4": "<strong>Focus sul scaling:</strong> La maggior parte degli ADC serve 2-3 oggetti per essere forti, farming sicuro",
+    "supTitle": "Support",
+    "supText": "Il support ha gli stili di gioco più vari — incantatori, tank, maghi giocano tutti diversamente.",
+    "sup1": "<strong>Gioco di visione:</strong> Tieni sempre ward piazzate, nega la visione nemica con lo spazzino",
+    "sup2": "<strong>Ingaggiare vs Peel:</strong> I support tank ingaggiano, gli incantatori proteggono i carry",
+    "sup3": "<strong>Roaming:</strong> Quando l'ADC farming sicuro, vag al mid per giocate",
+    "sup4": "<strong>Efficienza oro:</strong> Gli oggetti da support forniscono scaling, completa la tua quest",
+    "archTitle": "Capire gli Archetipi dei Campioni",
+    "archText": "Anche se non conosci un campione specifico, puoi capire come giocarlo dal suo archetipo. Ecco le categorie principali:",
+    "arch1": "Assassini",
+    "arch1Desc": "Alta mobilità, danno burst. Cerca bersagli isolati, elimina i morbidi, scappa.",
+    "arch2": "Bruiser/Combattenti",
+    "arch2Desc": "Infliggono danno incassando. Tuffati nella backline o split push. Costruisci un oggetto danno, poi tank.",
+    "arch3": "Tank",
+    "arch3Desc": "Ingaggiano/proteggono la squadra. Accumula PV/resistenze. Inizia i combattimenti con CC.",
+    "arch4": "Tiratori",
+    "arch4Desc": "DPS a distanza. Farma fino a 3 oggetti, poi scala. Rimani a portata massima. Vinci con danno sostenuto.",
+    "arch5": "Maghi",
+    "arch5Desc": "Danno basato su abilità. Pattern di poke o burst. Gestisci mana. Controlla zone con abilità.",
+    "arch6": "Incantatori",
+    "arch6Desc": "Potenzia alleati, cura/scudo. Stai indietro, abilita i carry. Costruisci oggetti da support.",
+    "mentalTitle": "Il Gioco Mentale",
+    "m1Title": "Abbraccia il Processo di Apprendimento",
+    "m1Text": "Giocare campioni casuali è una questione di crescita, non solo vittorie. Ogni partita ti insegna qualcosa di nuovo — come si sente un campione, cosa lo countera, quali sono i suoi power spike. Anche le sconfitte sono preziose esperienze di apprendimento.",
+    "m2Title": "Comunica con la Tua Squadra",
+    "m2Text": "Fai sapere alla squadra che stai provando un nuovo campione. La maggior parte dei giocatori capisce e potrebbe anche darti consigli.",
+    "m3Title": "Stabilisci Obiettivi Realistici",
+    "m3Text": "Non aspettarti di carry ogni partita con campioni sconosciuti. Stabilisci obiettivi raggiungibili: farming buono, non feedare, imparare le abilità, decisioni intelligenti.",
+    "m4Title": "Mantieni un Atteggiamento Positivo",
+    "m4Text": "La frustrazione è nemica dell'apprendimento. Se ti stai arrabbiando, fai una pausa. Ricorda che anche i pro giocatori hanno faticato imparando nuovi campioni.",
+    "advTitle": "Strategie Avanzate",
+    "a1Title": "Costruisci un Database di Conoscenze",
+    "a1Text": "Dopo aver giocato un campione, prendi nota mentali: Cosa sembrava forte? Cos'era difficile? Quali oggetti funzionavano? Questa conoscenza si accumula col tempo.",
+    "a2Title": "Riscaldamento nel Practice Tool",
+    "a2Text": "Passa 2-3 minuti nel practice tool prima della partita. Prova portate abilità, pratica combo, controlla i numeri di danno.",
+    "a3Title": "Analizza le Tue Partite",
+    "a3Text": "Rivedi le tue partite — cosa ha funzionato, cosa no? Usa le sconfitte per identificare aree di miglioramento oltre la meccanica dei campioni.",
+    "a4Title": "Impara dagli Altri",
+    "a4Text": "Guarda giocatori di alto livello su YouTube o Twitch. Anche un clip di 5 minuti può insegnarti combo, build o stili di gioco.",
+    "finalText": "Ogni partita con campione casuale ti rende un miglior giocatore di League of Legends. Usa queste strategie, resta positivo e accetta la sfida!"
+  },
+  "blogContent": [
+    {
+      "slug": "what-champion-should-i-play",
+      "title": "Quale Campione Dovrei Giocare in League of Legends?",
+      "description": "Non sai quale campione giocare in LoL? Usa il nostro generatore campioni casuali per un pick divertente, scopri nuovi main e rendi ogni coda fresca.",
+      "keywords": [
+        "quale campione giocare lol",
+        "generatore campioni casuali league of legends",
+        "generatore campioni casuali lol",
+        "selezionatore campioni casuali lol",
+        "quale campione mainare in league"
+      ],
+      "excerpt": "Una guida pratica per giocatori che si sentono bloccati in select e vogliono un modo più intelligente e divertente per scegliere il prossimo pick.",
+      "ctaLabel": "Gira la Roulette Ora",
+      "ctaHref": "/",
+      "heroIntro": [
+        "Ogni giocatore di League of Legends incontra lo stesso muro prima o poi: la coda scatta, la select si apre e improvvisamente ogni scelta sembra sbagliata. Forse il tuo comfort pick è noioso, forse il tuo main è bannato, o forse vuoi semplicemente qualcosa di nuovo senza perdere dieci minuti a pensare. È esattamente qui che un generatore campioni casuali LoL diventa utile.",
+        "Invece di fissare il roster e scorrere gli stessi nomi, puoi usare League Roulette per ottenere un campione casuale in secondi. Il risultato è semplice, ma l'impatto è sorprendentemente grande. La selezione casuale rimuove la stanchezza decisionale, ti spinge verso nuovi campioni e trasforma ogni partita in una sfida anziché una draft di routine.",
+        "Se ti sei chiesto quale campione giocare in League of Legends, la risposta migliore spesso non è un'altra tier list. È uno strumento che ti aiuta a giocare più campioni, imparare più matchup e goderti il gioco con meno esitazione."
+      ],
+      "sections": [
+        {
+          "heading": "Perché i Giocatori si Bloccano Scegliendo un Campione",
+          "paragraphs": [
+            "La select dei campioni può essere stressante perché League ti chiede di bilanciare divertimento, comfort, bisogni della squadra, matchup e umore attuale tutto insieme. La maggior parte dei giocatori restringe il pool a pochi pick familiari. Sembra sicuro, ma può rendere il gioco ripetitivo e rallentare il miglioramento.",
+            "Più ripeti gli stessi pick, più diventa difficile diversificare. Nuovi campioni sembrano rischiosi, kit sconosciuti sembrano travolgenti e la pressione del ranked rende la sperimentazione costosa. Uno strumento di campioni casuali rompe questo ciclo togliendoti la prima decisione. Una volta scelto il pick, smetti di discutere e inizi ad adattarti."
+          ],
+          "bullets": [
+            "Passi meno tempo a pensare e più a giocare",
+            "Scopri campioni che normalmente non sceglieresti",
+            "Costruisci flessibilità tra ruoli, classi e matchup"
+          ]
+        },
+        {
+          "heading": "Perché un Generatore Campioni Casuali Aiuta Davvero",
+          "paragraphs": [
+            "Usare un generatore campioni casuali non è solo caos. È anche un metodo di allenamento sorprendentemente efficace. Quando giochi fuori dalla tua zona di comfort, impari quali strumenti di ingaggio contano, come funzionano diversi pattern di scambio e cosa vogliono fare gli altri campioni in corsia o nei teamfight.",
+            "Quella conoscenza ti rende migliore anche quando torni al tuo ruolo principale. Dopo aver giocato tank, capisci quando peelare. Dopo aver provato maghi, rispetti di più lo spacing e le finestre di cooldown. Dopo aver imparato tiratori, ti posizioni più attentamente. La varietà crea senso del gioco, e il senso del gioco si trasferisce a ogni campione in League of Legends.",
+            "C'è anche un beneficio motivazionale. I pick casuali trasformano le partite normali in mini-sfide. Non stai solo macinando partite. Ti stai mettendo alla prova, cercando una vittoria con un nuovo campione, creando momenti più memorabili con amici o in solo queue."
+          ]
+        },
+        {
+          "heading": "Come Usare League Roulette in Modo Intelligente",
+          "paragraphs": [
+            "Il modo più semplice per iniziare è girare e impegnarsi. Se la roulette ti dà un campione fuori dal tuo pool abituale, trattalo come una sfida a breve termine. Non devi padroneggiare il pick istantaneamente. Il tuo obiettivo è imparare una cosa utile dalla partita.",
+            "Un approccio intelligente è iniziare in partite normali, sessioni stile ARAM con amici o code rilassate dove la sperimentazione è naturale. Puoi anche filtrare per corsia se vuoi struttura."
+          ],
+          "bullets": [
+            "Gioca almeno 2 o 3 partite prima di giudicare il campione",
+            "Cerca prima un combo base e una build oggetti standard",
+            "Concentrati su un singolo obiettivo di miglioramento come farming, spaziamento o uso dell'ultima"
+          ]
+        },
+        {
+          "heading": "Chi Beneficia di Più dai Pick Casuali",
+          "paragraphs": [
+            "Questo approccio è perfetto per giocatori annoiati, che usano troppo pilota automatico o vogliono espandere il pool. Aiuta anche duo e gruppi di amici che vogliono una sfida condivisa.",
+            "Anche i nuovi giocatori beneficiano. I campioni casuali ti espongono all'intero roster più velocemente, rendendo il gioco più facile da capire. Più kit vedi dall'interno, meno confusi diventano i matchup nemici futuri."
+          ]
+        },
+        {
+          "heading": "Rendi Ogni Coda Più Divertente",
+          "paragraphs": [
+            "League è al meglio quando ogni partita ha una storia. Un generatore campioni casuali crea quella storia prima che il gioco inizi. Forse ottieni un assassino quando di solito giochi tank, o forse trovi un campione che clicca inaspettatamente con il tuo stile.",
+            "Se sei stanco di chiederti quale campione giocare in LoL, smetti di indovinare e lascia che la roulette risponda per te. Usa lo strumento, accetta la sfida e guarda dove ti porta il giro."
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "lol-random-challenge",
+      "title": "Idee Sfide Casuali LoL Divertenti",
+      "description": "Prova queste idee sfida casuali League of Legends con il nostro strumento LoL Roulette. Ottimo per solo queue, gruppi di amici, partite personalizzate e sfide contenuto.",
+      "keywords": [
+        "idee sfide casuali lol",
+        "sfida casuale league of legends",
+        "sfida roulette lol",
+        "sfida campione casuale league",
+        "sfide divertenti lol con amici"
+      ],
+      "excerpt": "Formati di sfida creativi che puoi iniziare subito con campioni casuali, corsie casuali e regole di gruppo.",
+      "ctaLabel": "Inizia la Tua Sfida",
+      "ctaHref": "/",
+      "heroIntro": [
+        "Quando League of Legends inizia a sembrare ripetitivo, la soluzione più veloce non è sempre una nuova patch o un nuovo account. A volte basta un formato migliore. Le sfide casuali prendono lo stesso gioco che ami e lo trasformano in qualcosa di fresco, competitivo e genuinamente divertente.",
+        "Una sfida casuale LoL funziona perché cambia le regole che segui di solito. Invece di usare il tuo ruolo migliore e campione più forte, lasci che il caso decida parte dell'esperienza. Quel semplice twist crea più varietà, più caos e spesso partite più memorabili di una normale sessione in coda.",
+        "League Roulette è costruito esattamente per questo. Puoi girare per un campione, filtrare per corsia quando serve e trasformare ogni partita in una sfida."
+      ],
+      "sections": [
+        {
+          "heading": "Sfida Corsia Casuale",
+          "paragraphs": [
+            "Questo è uno dei modi più semplici per rinfrescare le tue partite. Prima, decidi chi gioca in quali corsie o lascia che tutti assegnino una corsia a caso. Poi gira per un campione e impegnati a far funzionare quella combinazione.",
+            "Questa sfida è particolarmente buona per i gruppi perché forza la comunicazione e riduce la pressione di performare perfettamente."
+          ],
+          "bullets": [
+            "Ottimo per five-stack e lobby personalizzate",
+            "Aiuta i giocatori a imparare i fondamentali dei ruoli fuori dalla zona di comfort",
+            "Crea situazioni divertenti ma educative in select"
+          ]
+        },
+        {
+          "heading": "Sfida Maestria Bassa",
+          "paragraphs": [
+            "Un altro formato forte è la sfida maestria bassa. Invece di rilanciare finché trovi qualcosa di familiare, permetti solo campioni che tocchi a malapena. Funziona bene se il gruppo vuole casualità con un po' di controllo.",
+            "La regola di maestria bassa è utile per giocatori che vogliono migliorare il pool col tempo. Trasforma campioni trascurati in obiettivi di pratica e rende ogni partita mirata."
+          ]
+        },
+        {
+          "heading": "Sfida Scambio Ruoli Duo o Squadra",
+          "paragraphs": [
+            "Se giochi abitualmente con gli stessi amici, lo scambio ruoli aggiunge novità istantanea. Abbinalo a campioni casuali e ottieni uno dei migliori formati di sfida sociale in League.",
+            "Questo è anche ottimo per l'empatia. Una volta trascorse qualche partita nel ruolo di qualcun altro, ne capisci molto meglio le frustrazioni."
+          ],
+          "bullets": [
+            "I support imparano quanto sia difficile il controllo ondate in corsia singola",
+            "I jungler sperimentano direttamente la pressione di corsia e i tempi di roam",
+            "Il shotcalling migliora perché ogni giocatore vede più mappa attraverso ruoli diversi"
+          ]
+        },
+        {
+          "heading": "Sfida Vinci Prima di Rilanciare",
+          "paragraphs": [
+            "Questo formato funziona particolarmente bene con League Roulette perché aggiunge posta in gioco. Gira un campione e non puoi rilanciare finché non vinci o completi l'obiettivo concordato.",
+            "La bellezza di questa sfida è che ricompensa l'impegno. Invece di trattare un pick casuale come usa e getta, gli dai valore reale."
+          ]
+        },
+        {
+          "heading": "Come Mantenere le Sfide Casuali Divertenti",
+          "paragraphs": [
+            "Le migliori sfide casuali sono stimolanti senza diventare miserabili. Significa stabilire regole che si adattino all'umore e al livello del gruppo.",
+            "Dovresti anche decidere se la sessione è per ridere, imparare o competere. Regole chiare rendono l'esperienza più fluida."
+          ]
+        },
+        {
+          "heading": "Trasforma la Casualità in un Evento Ripetibile",
+          "paragraphs": [
+            "Le serate sfida casuali sono più facili da mantenere quando hai un sistema semplice. Gira, blocca, gioca e traccia vittorie. Quel ritmo è ciò che rende strumenti come League Roulette preziosi.",
+            "Se vuoi un altro formato dopo questo, consulta la nostra guida sui modi divertenti di giocare a League of Legends, o torna alla roulette e inizia subito la prossima sfida."
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "fun-lol-challenges",
+      "title": "Modi Divertenti di Giocare a League of Legends",
+      "description": "Cerchi sfide divertenti per League of Legends? Ecco modi creativi per usare un generatore campioni casuali con amici, duo e team casual.",
+      "keywords": [
+        "modi divertenti di giocare a league of legends",
+        "sfide divertenti lol",
+        "idee sfida league of legends",
+        "generatore campioni casuali lol divertente",
+        "giochi lol da fare con amici"
+      ],
+      "excerpt": "Idee fresche per trasformare sessioni normali di League in serate sfida con campioni casuali, restrizioni e regole di squadra.",
+      "ctaLabel": "Prova Ora",
+      "ctaHref": "/",
+      "heroIntro": [
+        "League of Legends è al suo meglio quando sembra imprevedibile, sociale e leggermente caotico. Il problema è che molti giocatori finiscono per stabilirsi negli stessi schemi: stesso ruolo, stessi tre campioni, stesse build.",
+        "Ecco perché i formati sfida contano. Una buona sfida ti dà un motivo per affrontare il gioco diversamente senza bisogno di un set di regole personalizzato complesso o un client modificato.",
+        "Se cerchi modi divertenti di giocare a League of Legends, pensa meno a trovare il pick meta perfetto e più a creare un'esperienza migliore."
+      ],
+      "sections": [
+        {
+          "heading": "Sfida Duo Casuale",
+          "paragraphs": [
+            "La sfida duo casuale è uno dei formati più facili da eseguire perché funziona in quasi ogni coda. Due giocatori girano ciascuno un campione e si impegnano a giocare con la combinazione che appare.",
+            "Questa sfida è divertente perché cambia come comunicano i duo. Invece di affidarsi a una combinazione provata, devono risolvere il gioco insieme in tempo reale."
+          ]
+        },
+        {
+          "heading": "Sfida Build Limitata",
+          "paragraphs": [
+            "Se la casualità del campione da sola non basta, aggiungi restrizioni oggetti. Puoi girare un campione normalmente, poi concordare una regola build extra per la partita.",
+            "Questo formato funziona meglio in ambienti casual perché l'obiettivo è la creatività, non l'efficienza."
+          ],
+          "bullets": [
+            "Buono per normal e gruppi di amici",
+            "Incoraggia sperimentazione senza configurazione complicata",
+            "Rende la discussione post-partita più interessante perché ogni build ha una storia"
+          ]
+        },
+        {
+          "heading": "Sfida Focus Abilità Casuale",
+          "paragraphs": [
+            "Una variante divertente è usare campioni casuali ma stabilire una regola di miglioramento personale legata a quel campione.",
+            "Mantiene la sfida divertente dandole un angolo pratico di apprendimento. Usi la casualità per allenare un'abilità trasferibile ogni partita."
+          ]
+        },
+        {
+          "heading": "Serata a Tema di Squadra",
+          "paragraphs": [
+            "Per gruppi più grandi, le serate a tema sono uno dei modi migliori per mantenere League fresco. Usa la roulette, poi aggiungi una condizione per tutta la squadra come tutti campioni a distanza o tutti corpo a corpo.",
+            "Funziona così bene perché crea identità condivisa. Tutti partecipano alla stessa battuta o sfida."
+          ]
+        },
+        {
+          "heading": "Come le Sfide Casuali Ti Rendono Migliore",
+          "paragraphs": [
+            "Anche quando l'obiettivo principale è divertirsi, questi formati migliorano la comprensione generale del gioco. Insegnano flessibilità, consapevolezza matchup e resilienza quando il piano iniziale crolla.",
+            "Un generatore campioni casuali crea vincoli, e i vincoli forzano l'adattamento. È lì che spesso avviene la crescita."
+          ]
+        },
+        {
+          "heading": "Inizia Semplice e Mantienilo Ripetibile",
+          "paragraphs": [
+            "Il modo più semplice per mantenere vivi questi formati è non sovraprogettarli. Scegli una sfida, gira la roulette e gioca.",
+            "Se vuoi un formato più strutturato, visita la nostra guida idee sfida casuali. Se sei pronto a iniziare subito, torna alla home page e gira per il tuo prossimo campione."
+          ]
+        }
+      ]
+    }
+  ]
 }

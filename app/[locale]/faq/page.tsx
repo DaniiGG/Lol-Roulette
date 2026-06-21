@@ -65,6 +65,8 @@ const faqSchema = {
 
 export default async function FAQPage() {
   const t = await getTranslations('faq')
+  const tAll = await getTranslations()
+  const faqContent = tAll.raw('faqContent') as { q: string; a: string }[]
 
   return (
     <main className="min-h-screen bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 p-6">
@@ -99,206 +101,103 @@ export default async function FAQPage() {
         {/* FAQ Categories */}
         <div className="space-y-8">
           
-          {/* Getting Started */}
+          {/* Getting Started (0-3) */}
           <section>
             <h2 className="text-3xl font-bold text-[#C89B3C] mb-6">{t('sectionGettingStarted')}</h2>
-            
             <div className="space-y-4">
-              <details className="group p-6 rounded-xl bg-neutral-900 border border-neutral-800 hover:border-neutral-700 transition">
-                <summary className="cursor-pointer text-xl font-semibold text-white list-none flex justify-between items-center">
-                  {faqData[0].question}
-                  <svg className="w-5 h-5 text-neutral-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </summary>
-                <div className="mt-4 text-neutral-300 leading-relaxed">
-                  {faqData[0].answer}
-                </div>
-              </details>
-
-              <details className="group p-6 rounded-xl bg-neutral-900 border border-neutral-800 hover:border-neutral-700 transition">
-                <summary className="cursor-pointer text-xl font-semibold text-white list-none flex justify-between items-center">
-                  {faqData[1].question}
-                  <svg className="w-5 h-5 text-neutral-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </summary>
-                <div className="mt-4 text-neutral-300 leading-relaxed">
-                  {faqData[1].answer}
-                </div>
-              </details>
-
-              <details className="group p-6 rounded-xl bg-neutral-900 border border-neutral-800 hover:border-neutral-700 transition">
-                <summary className="cursor-pointer text-xl font-semibold text-white list-none flex justify-between items-center">
-                  {faqData[2].question}
-                  <svg className="w-5 h-5 text-neutral-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </summary>
-                <div className="mt-4 text-neutral-300 leading-relaxed">
-                  {faqData[2].answer}
-                </div>
-              </details>
-
-              <details className="group p-6 rounded-xl bg-neutral-900 border border-neutral-800 hover:border-neutral-700 transition">
-                <summary className="cursor-pointer text-xl font-semibold text-white list-none flex justify-between items-center">
-                  {faqData[3].question}
-                  <svg className="w-5 h-5 text-neutral-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </summary>
-                <div className="mt-4 text-neutral-300 leading-relaxed">
-                  {faqData[3].answer}
-                </div>
-              </details>
+              {[0, 1, 2, 3].map((i) => (
+                <details key={i} className="group p-6 rounded-xl bg-neutral-900 border border-neutral-800 hover:border-neutral-700 transition">
+                  <summary className="cursor-pointer text-xl font-semibold text-white list-none flex justify-between items-center">
+                    {faqContent[i].q}
+                    <svg className="w-5 h-5 text-neutral-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </summary>
+                  <div className="mt-4 text-neutral-300 leading-relaxed">
+                    {faqContent[i].a}
+                  </div>
+                </details>
+              ))}
             </div>
           </section>
 
-          {/* Gameplay */}
+          {/* Gameplay (4-6) */}
           <section>
             <h2 className="text-3xl font-bold text-[#C89B3C] mb-6">{t('sectionGameplay')}</h2>
-            
             <div className="space-y-4">
-              <details className="group p-6 rounded-xl bg-neutral-900 border border-neutral-800 hover:border-neutral-700 transition">
-                <summary className="cursor-pointer text-xl font-semibold text-white list-none flex justify-between items-center">
-                  {faqData[4].question}
-                  <svg className="w-5 h-5 text-neutral-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </summary>
-                <div className="mt-4 text-neutral-300 leading-relaxed">
-                  {faqData[4].answer}
-                </div>
-              </details>
-
-              <details className="group p-6 rounded-xl bg-neutral-900 border border-neutral-800 hover:border-neutral-700 transition">
-                <summary className="cursor-pointer text-xl font-semibold text-white list-none flex justify-between items-center">
-                  {faqData[5].question}
-                  <svg className="w-5 h-5 text-neutral-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </summary>
-                <div className="mt-4 text-neutral-300 leading-relaxed">
-                  {faqData[5].answer}
-                </div>
-              </details>
-
-              <details className="group p-6 rounded-xl bg-neutral-900 border border-neutral-800 hover:border-neutral-700 transition">
-                <summary className="cursor-pointer text-xl font-semibold text-white list-none flex justify-between items-center">
-                  {faqData[6].question}
-                  <svg className="w-5 h-5 text-neutral-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </summary>
-                <div className="mt-4 text-neutral-300 leading-relaxed">
-                  {faqData[6].answer}
-                </div>
-              </details>
+              {[4, 5, 6].map((i) => (
+                <details key={i} className="group p-6 rounded-xl bg-neutral-900 border border-neutral-800 hover:border-neutral-700 transition">
+                  <summary className="cursor-pointer text-xl font-semibold text-white list-none flex justify-between items-center">
+                    {faqContent[i].q}
+                    <svg className="w-5 h-5 text-neutral-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </summary>
+                  <div className="mt-4 text-neutral-300 leading-relaxed">
+                    {faqContent[i].a}
+                  </div>
+                </details>
+              ))}
             </div>
           </section>
 
-          {/* Verification & Progress */}
+          {/* Verification & Progress (7-9) */}
           <section>
             <h2 className="text-3xl font-bold text-[#C89B3C] mb-6">{t('sectionVerification')}</h2>
-            
             <div className="space-y-4">
-              <details className="group p-6 rounded-xl bg-neutral-900 border border-neutral-800 hover:border-neutral-700 transition">
-                <summary className="cursor-pointer text-xl font-semibold text-white list-none flex justify-between items-center">
-                  {faqData[7].question}
-                  <svg className="w-5 h-5 text-neutral-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </summary>
-                <div className="mt-4 text-neutral-300 leading-relaxed">
-                  {faqData[7].answer}
-                </div>
-              </details>
-
-              <details className="group p-6 rounded-xl bg-neutral-900 border border-neutral-800 hover:border-neutral-700 transition">
-                <summary className="cursor-pointer text-xl font-semibold text-white list-none flex justify-between items-center">
-                  {faqData[8].question}
-                  <svg className="w-5 h-5 text-neutral-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </summary>
-                <div className="mt-4 text-neutral-300 leading-relaxed">
-                  {faqData[8].answer}
-                </div>
-              </details>
-
-              <details className="group p-6 rounded-xl bg-neutral-900 border border-neutral-800 hover:border-neutral-700 transition">
-                <summary className="cursor-pointer text-xl font-semibold text-white list-none flex justify-between items-center">
-                  {faqData[9].question}
-                  <svg className="w-5 h-5 text-neutral-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </summary>
-                <div className="mt-4 text-neutral-300 leading-relaxed">
-                  {faqData[9].answer}
-                </div>
-              </details>
+              {[7, 8, 9].map((i) => (
+                <details key={i} className="group p-6 rounded-xl bg-neutral-900 border border-neutral-800 hover:border-neutral-700 transition">
+                  <summary className="cursor-pointer text-xl font-semibold text-white list-none flex justify-between items-center">
+                    {faqContent[i].q}
+                    <svg className="w-5 h-5 text-neutral-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </summary>
+                  <div className="mt-4 text-neutral-300 leading-relaxed">
+                    {faqContent[i].a}
+                  </div>
+                </details>
+              ))}
             </div>
           </section>
 
-          {/* Achievements & Leaderboards */}
+          {/* Achievements & Leaderboards (10-11) */}
           <section>
             <h2 className="text-3xl font-bold text-[#C89B3C] mb-6">{t('sectionAchievements')}</h2>
-            
             <div className="space-y-4">
-              <details className="group p-6 rounded-xl bg-neutral-900 border border-neutral-800 hover:border-neutral-700 transition">
-                <summary className="cursor-pointer text-xl font-semibold text-white list-none flex justify-between items-center">
-                  {faqData[10].question}
-                  <svg className="w-5 h-5 text-neutral-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </summary>
-                <div className="mt-4 text-neutral-300 leading-relaxed">
-                  {faqData[10].answer}
-                </div>
-              </details>
-
-              <details className="group p-6 rounded-xl bg-neutral-900 border border-neutral-800 hover:border-neutral-700 transition">
-                <summary className="cursor-pointer text-xl font-semibold text-white list-none flex justify-between items-center">
-                  {faqData[11].question}
-                  <svg className="w-5 h-5 text-neutral-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </summary>
-                <div className="mt-4 text-neutral-300 leading-relaxed">
-                  {faqData[11].answer}
-                </div>
-              </details>
+              {[10, 11].map((i) => (
+                <details key={i} className="group p-6 rounded-xl bg-neutral-900 border border-neutral-800 hover:border-neutral-700 transition">
+                  <summary className="cursor-pointer text-xl font-semibold text-white list-none flex justify-between items-center">
+                    {faqContent[i].q}
+                    <svg className="w-5 h-5 text-neutral-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </summary>
+                  <div className="mt-4 text-neutral-300 leading-relaxed">
+                    {faqContent[i].a}
+                  </div>
+                </details>
+              ))}
             </div>
           </section>
 
-          {/* Technical & Account */}
+          {/* Technical & Account (12-13) */}
           <section>
             <h2 className="text-3xl font-bold text-[#C89B3C] mb-6">{t('sectionTechnical')}</h2>
-            
             <div className="space-y-4">
-              <details className="group p-6 rounded-xl bg-neutral-900 border border-neutral-800 hover:border-neutral-700 transition">
-                <summary className="cursor-pointer text-xl font-semibold text-white list-none flex justify-between items-center">
-                  {faqData[12].question}
-                  <svg className="w-5 h-5 text-neutral-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </summary>
-                <div className="mt-4 text-neutral-300 leading-relaxed">
-                  {faqData[12].answer}
-                </div>
-              </details>
-
-              <details className="group p-6 rounded-xl bg-neutral-900 border border-neutral-800 hover:border-neutral-700 transition">
-                <summary className="cursor-pointer text-xl font-semibold text-white list-none flex justify-between items-center">
-                  {faqData[13].question}
-                  <svg className="w-5 h-5 text-neutral-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </summary>
-                <div className="mt-4 text-neutral-300 leading-relaxed">
-                  {faqData[13].answer}
-                </div>
-              </details>
+              {[12, 13].map((i) => (
+                <details key={i} className="group p-6 rounded-xl bg-neutral-900 border border-neutral-800 hover:border-neutral-700 transition">
+                  <summary className="cursor-pointer text-xl font-semibold text-white list-none flex justify-between items-center">
+                    {faqContent[i].q}
+                    <svg className="w-5 h-5 text-neutral-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </summary>
+                  <div className="mt-4 text-neutral-300 leading-relaxed">
+                    {faqContent[i].a}
+                  </div>
+                </details>
+              ))}
             </div>
           </section>
 

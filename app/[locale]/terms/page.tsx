@@ -2,6 +2,7 @@
 import type { Metadata } from "next"
 import Link from 'next/link'
 import { ArrowLeft } from 'lucide-react'
+import { getTranslations } from 'next-intl/server'
 import { getHreflangAlternates } from '@/lib/seo-utils'
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
@@ -32,7 +33,9 @@ const breadcrumbSchema = {
   ],
 }
 
-export default function TermsOfService() {
+export default async function TermsOfService() {
+  const t = await getTranslations('terms')
+
   return (
     <main className="min-h-screen bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950">
       <div className="max-w-4xl mx-auto px-6 py-12">
@@ -42,7 +45,7 @@ export default function TermsOfService() {
           className="inline-flex items-center gap-2 text-neutral-400 hover:text-white transition mb-8"
         >
           <ArrowLeft className="w-4 h-4" />
-          <span>Back to Home</span>
+          <span>{t('backToHome')}</span>
         </Link>
 
         <script
@@ -52,8 +55,8 @@ export default function TermsOfService() {
 
         {/* Header */}
         <div className="mb-12">
-          <h1 className="text-4xl font-bold text-white mb-4">Terms of Service</h1>
-          <p className="text-neutral-400">Last updated: February 12, 2026</p>
+          <h1 className="text-4xl font-bold text-white mb-4">{t('title')}</h1>
+          <p className="text-neutral-400">{t('lastUpdated')}</p>
         </div>
 
         {/* Content */}

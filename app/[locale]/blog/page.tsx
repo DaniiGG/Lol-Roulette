@@ -1,7 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { getTranslations } from 'next-intl/server'
-import { blogPosts } from "@/lib/blog-posts"
 import { getHreflangAlternates } from '@/lib/seo-utils'
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
@@ -19,6 +18,14 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
 export default async function BlogIndexPage() {
   const t = await getTranslations('blog')
+  const tAll = await getTranslations()
+
+  let blogPosts: { slug: string; title: string; excerpt: string; description: string }[] = []
+  try {
+    blogPosts = tAll.raw('blogContent') as { slug: string; title: string; excerpt: string; description: string }[]
+  } catch {
+    blogPosts = []
+  }
 
   return (
     <main className="min-h-screen bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 px-6 py-12">
@@ -45,7 +52,7 @@ export default async function BlogIndexPage() {
         </div>
 
         <div className="grid gap-6 md:grid-cols-3">
-          {blogPosts.map((post) => (
+          {blogPosts.map((post: { slug: string; title: string; excerpt: string }) => (
             <article
               key={post.slug}
               className="flex h-full flex-col rounded-3xl border border-neutral-800 bg-neutral-900 p-6"
