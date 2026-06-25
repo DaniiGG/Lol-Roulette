@@ -13,10 +13,10 @@ const outfit = Outfit({
 export async function generateMetadata(): Promise<Metadata> {
   return {
     title: {
-      default: 'LoL Random Champion Generator | Spin the Roulette & Get a Random Pick',
+      default: 'League Roulette - Free LoL Random Champion Generator & Challenge Tracker',
       template: '%s | League Roulette',
     },
-    description: 'Not sure what to play in League of Legends? Spin the random champion roulette, challenge your friends, track wins, earn XP, and climb the leaderboard. Free LoL randomizer!',
+    description: 'League Roulette is a free random champion generator for League of Legends. Spin the roulette, get a random LoL pick, track wins, earn XP, and climb the leaderboard.',
     metadataBase: new URL('https://leagueroulette.com'),
     manifest: '/manifest.json',
     icons: {
@@ -31,15 +31,15 @@ export async function generateMetadata(): Promise<Metadata> {
       type: 'website',
       locale: 'en_US',
       url: 'https://leagueroulette.com',
-      title: 'League Roulette - Random Champion Challenge',
-      description: 'Get random League of Legends champions and track your wins!',
+      title: 'League Roulette - Free LoL Random Champion Generator',
+      description: 'League Roulette is a free random champion generator for League of Legends. Spin the roulette, track wins, earn XP, and climb the leaderboard.',
       siteName: 'League Roulette',
       images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'League Roulette' }],
     },
     twitter: {
       card: 'summary_large_image',
-      title: 'League Roulette - Random Champion Challenge',
-      description: 'Get random League of Legends champions and track your wins!',
+      title: 'League Roulette - Free LoL Random Champion Generator',
+      description: 'League Roulette is a free random champion generator for League of Legends. Spin the roulette, track wins, earn XP, and climb the leaderboard.',
       images: ['/og-image.png'],
       creator: '@LeagueRoulette',
     },
