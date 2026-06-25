@@ -2,7 +2,9 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { notFound } from "next/navigation"
 import { getTranslations } from 'next-intl/server'
+import { setRequestLocale } from 'next-intl/server'
 import { getHreflangAlternates } from '@/lib/seo-utils'
+import { routing } from '@/i18n/routing'
 import { BLOG_SLUGS, blogKeywords } from "@/lib/blog-posts"
 
 type BlogSection = {
@@ -29,13 +31,20 @@ type BlogPostPageProps = {
 }
 
 export async function generateStaticParams() {
-  return BLOG_SLUGS.map((slug) => ({ slug }))
+  const params: { locale: string; slug: string }[] = []
+  for (const locale of routing.locales) {
+    for (const slug of BLOG_SLUGS) {
+      params.push({ locale, slug })
+    }
+  }
+  return params
 }
 
 export async function generateMetadata(
   props: BlogPostPageProps
 ): Promise<Metadata> {
   const { locale, slug } = await props.params
+  setRequestLocale(locale)
   const tAll = await getTranslations()
 
   let blogPosts: BlogPost[] = []
@@ -72,7 +81,8 @@ export async function generateMetadata(
 }
 
 export default async function BlogPostPage(props: BlogPostPageProps) {
-  const { slug } = await props.params
+  const { locale, slug } = await props.params
+  setRequestLocale(locale)
   const t = await getTranslations('blog')
   const tAll = await getTranslations()
 
