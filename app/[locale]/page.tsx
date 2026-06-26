@@ -13,7 +13,6 @@ import {
 import confetti from "canvas-confetti"
 import Cookies from 'js-cookie'
 import { Info } from 'lucide-react'
-import AdContainer from "@/components/AdContainer"
 import InfoModal from "@/components/InfoModal"
 
 // Components
@@ -30,6 +29,8 @@ import SEOContent from "@/components/SEOContent"
 import ChampionStats from "@/components/ChampionStats"
 import { AutoVerifier } from "@/lib/auto-verify"
 import RSOLoginModal from "@/components/RSOLoginmodal"
+import ChampionPoolModal from "@/components/ChampionPoolModal"
+import { loadChampionPool, getPoolForLane, type ChampionPool } from "@/lib/champion-pool"
 
 import Script from "next/script"
 
@@ -47,6 +48,11 @@ export default function Home() {
   const [loading, setLoading] = useState(false)
   const [spinning, setSpinning] = useState(false)
   const [selectedLane, setSelectedLane] = useState('all')
+  const [showPoolModal, setShowPoolModal] = useState(false)
+  const [usePool, setUsePool] = useState(false)
+  const [championPool, setChampionPool] = useState<ChampionPool | null>(null)
+  const [poolEnabled, setPoolEnabled] = useState(false)
+  const activePoolChamps = usePool && championPool ? getPoolForLane(championPool, selectedLane) : null
 
   // Premium features (requieren login)
   const [verifying, setVerifying] = useState(false)
@@ -564,7 +570,30 @@ export default function Home() {
                 disabled={!!(user && rerollCount > MAX_REROLLS)}
               />
 
-
+              {/* Champion Pool Toggle */}
+              <div className="flex items-center justify-center gap-3 mt-2">
+                <button
+                  onClick={() => { setShowPoolModal(true); setChampionPool(loadChampionPool()) }}
+                  className="text-xs text-neutral-500 hover:text-[#C89B3C] transition underline underline-offset-2"
+                >
+                  {t('editPool')}
+                </button>
+                {championPool && Object.keys(championPool).length > 0 && (
+                  <label className="flex items-center gap-2 cursor-pointer">
+                    <div className="relative">
+                      <input
+                        type="checkbox"
+                        checked={usePool}
+                        onChange={(e) => setUsePool(e.target.checked)}
+                        className="sr-only peer"
+                      />
+                      <div className="w-8 h-4 rounded-full bg-neutral-700 peer-checked:bg-[#C89B3C]/50 transition-colors" />
+                      <div className={`absolute top-0.5 left-0.5 w-3 h-3 rounded-full bg-neutral-400 transition-all ${usePool ? 'translate-x-4 bg-[#C89B3C]' : ''}`} />
+                    </div>
+                    <span className="text-xs text-neutral-500">{t('usePool')}</span>
+                  </label>
+                )}
+              </div>
 
               {/* ★ RULETA VISUAL ★ */}
               <RouletteWheel
@@ -573,6 +602,7 @@ export default function Home() {
                 disabled={!!(user && rerollCount > MAX_REROLLS)}
                 rerollsUsed={user ? rerollCount : 0}
                 maxRerolls={MAX_REROLLS}
+                championPool={activePoolChamps}
               />
 
               {/* Champion Stats & Build */}
@@ -690,6 +720,17 @@ export default function Home() {
       {/* Info Modal */}
       {showInfoModal && (
         <InfoModal onClose={() => setShowInfoModal(false)} />
+      )}
+
+      {/* Champion Pool Modal */}
+      {showPoolModal && (
+        <ChampionPoolModal
+          onClose={() => setShowPoolModal(false)}
+          onSave={(pool) => {
+            setChampionPool(pool)
+            if (Object.keys(pool).length > 0) setUsePool(true)
+          }}
+        />
       )}
 
       {/* Login Modal */}

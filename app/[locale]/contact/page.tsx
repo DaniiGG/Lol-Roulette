@@ -180,28 +180,7 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Discord */}
-            <div className="p-6 bg-neutral-800/50 rounded-2xl border border-neutral-700">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <MessageSquare className="w-6 h-6 text-purple-400" />
-                </div>
-                <div>
-                  <h3 className="font-bold text-white mb-1">{t('discordLabel')}</h3>
-                  <a 
-                    href="" 
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-purple-400 hover:text-purple-300 transition"
-                  >
-                    {t('discordDesc')}
-                  </a>
-                  <p className="text-sm text-neutral-400 mt-2">
-                    {t('discordText')}
-                  </p>
-                </div>
-              </div>
-            </div>
+
 
             {/* Twitter */}
             <div className="p-6 bg-neutral-800/50 rounded-2xl border border-neutral-700">

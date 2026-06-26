@@ -15,7 +15,6 @@ export type AchievementType =
   | 'level_50'
   | 'all_lanes'
   | 'off_meta'
-  | 'daily_completed'
 
 export interface AchievementDefinition {
   type: AchievementType
@@ -138,14 +137,6 @@ export const ACHIEVEMENTS: Record<AchievementType, AchievementDefinition> = {
     icon: '🎪',
     rarity: 'rare',
     xpReward: 300
-  },
-  daily_completed: {
-    type: 'daily_completed',
-    name: 'Daily Grind',
-    description: 'Complete a daily challenge',
-    icon: '📅',
-    rarity: 'common',
-    xpReward: 100
   }
 }
 

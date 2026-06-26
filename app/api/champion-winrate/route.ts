@@ -33,7 +33,7 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
 
-    const { puuid, region } = await request.json()
+    const { puuid, region, gameMode } = await request.json()
     if (!puuid || !region) {
       return NextResponse.json({ error: 'Missing required fields' }, { status: 400 })
     }
@@ -82,8 +82,11 @@ export async function POST(request: Request) {
 
     const championStats: Record<string, { wins: number; games: number }> = {}
 
+    const validModes = gameMode === 'aram' ? ['ARAM'] : gameMode === 'classic' ? ['CLASSIC'] : ['ARAM', 'CLASSIC', 'URF', 'CHERRY', 'NEXUSBLITZ']
+
     for (const match of matchDetails) {
       if (!match?.info?.participants) continue
+      if (!validModes.includes(match.info.gameMode)) continue
 
       const participant = match.info.participants.find(
         (p: any) => p.puuid === puuid

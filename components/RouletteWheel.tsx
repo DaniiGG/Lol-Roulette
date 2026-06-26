@@ -17,6 +17,7 @@ interface RouletteWheelProps {
   disabled?: boolean
   rerollsUsed?: number
   maxRerolls?: number
+  championPool?: string[] | null
 }
 
 const DDV = '16.12.1'
@@ -36,6 +37,7 @@ export default function RouletteWheel({
   lane = 'all',
   onResult,
   disabled = false,
+  championPool = null,
 }: RouletteWheelProps) {
 
   const [allChampions, setAllChampions] = useState<Champion[]>([])
@@ -103,6 +105,15 @@ export default function RouletteWheel({
               normalized.toLowerCase()
             )
           })
+        }
+
+        if (championPool && championPool.length > 0) {
+          pool = pool.filter(champ =>
+            championPool.some(p =>
+              normalizeChampionName(p).toLowerCase() ===
+              normalizeChampionName(champ.name).toLowerCase()
+            )
+          )
         }
 
         setAllChampions(pool.sort(() => Math.random() - 0.5))

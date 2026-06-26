@@ -26,6 +26,7 @@ export default function ChampionWinrate({ puuid, region }: ChampionWinrateProps)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
   const [selectedLane, setSelectedLane] = useState<typeof LANES[number]>('all')
+  const [selectedMode, setSelectedMode] = useState<'all' | 'aram' | 'classic'>('all')
   const [sessionToken, setSessionToken] = useState<string | null>(null)
 
   useEffect(() => {
@@ -46,7 +47,7 @@ export default function ChampionWinrate({ puuid, region }: ChampionWinrateProps)
             'Content-Type': 'application/json',
             'Authorization': `Bearer ${sessionToken}`
           },
-          body: JSON.stringify({ puuid, region })
+          body: JSON.stringify({ puuid, region, gameMode: selectedMode === 'all' ? undefined : selectedMode })
         })
         if (!res.ok) {
           const err = await res.json()
@@ -62,7 +63,7 @@ export default function ChampionWinrate({ puuid, region }: ChampionWinrateProps)
     }
 
     fetchWinrate()
-  }, [puuid, region, sessionToken])
+  }, [puuid, region, sessionToken, selectedMode])
 
   const laneChampions = useMemo(() => {
     if (selectedLane === 'all') return champions
@@ -116,7 +117,7 @@ export default function ChampionWinrate({ puuid, region }: ChampionWinrateProps)
 
   return (
     <div className="w-full space-y-6">
-      <div className="flex flex-wrap gap-2">
+      <div className="flex flex-wrap items-center gap-2">
         {LANES.map((lane) => (
           <button
             key={lane}
@@ -128,6 +129,20 @@ export default function ChampionWinrate({ puuid, region }: ChampionWinrateProps)
             }`}
           >
             {t(`lane.${lane}`)}
+          </button>
+        ))}
+        <span className="text-neutral-600 mx-1">|</span>
+        {(['all', 'classic', 'aram'] as const).map((mode) => (
+          <button
+            key={mode}
+            onClick={() => setSelectedMode(mode)}
+            className={`px-4 py-2 rounded-xl text-sm font-medium transition ${
+              selectedMode === mode
+                ? 'bg-blue-500/20 text-blue-400 border border-blue-500/40'
+                : 'bg-neutral-900 text-neutral-400 border border-neutral-800 hover:border-neutral-700'
+            }`}
+          >
+            {t(`mode.${mode}`)}
           </button>
         ))}
       </div>

@@ -55,7 +55,9 @@
     "matchMaking": {
       "verifying": "Verifying Match...",
       "verify": "Verify Match"
-    }
+    },
+    "editPool": "Edit Champion Pool",
+    "usePool": "Use Pool"
   },
   "championCard": {
     "yourChampion": "Your Champion",
@@ -945,6 +947,19 @@
       "mid": "Mid",
       "adc": "ADC",
       "support": "Support"
+    },
+    "mode": {
+      "all": "All Modes",
+      "classic": "5v5 SR",
+      "aram": "ARAM"
     }
+  },
+  "championPool": {
+    "title": "Champion Pool",
+    "desc": "Select at least 5 champions per lane to build your pool",
+    "minPerLane": "Need 5 champions per lane",
+    "totalSelected": "{count} champions selected",
+    "cancel": "Cancel",
+    "save": "Save Pool"
   }
 }
