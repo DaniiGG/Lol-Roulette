@@ -696,10 +696,12 @@ export default function Home() {
       {showLoginModal && (
         <RSOLoginModal
           onClose={() => setShowLoginModal(false)}
-           onSuccess={(token, user) => {
-    console.log('Logged in!', token, user)
-  }}
-
+          onSuccess={(token, user) => {
+            setSessionToken(token)
+            setUser(user)
+            setShowLoginModal(false)
+            if (user?.id) loadUserData(user.id)
+          }}
         />
       )}
 
