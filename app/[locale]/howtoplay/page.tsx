@@ -6,9 +6,9 @@ import { getHreflangAlternates } from '@/lib/seo-utils'
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
   return {
-    title: 'How to Play League Roulette - Complete Guide & Tutorial',
-    description: 'Learn how to use the League Roulette random champion generator. Step-by-step guide covering account setup, lane selection, spinning, match verification, and rewards.',
-    keywords: ['how to play league roulette', 'lol random champion generator tutorial', 'league roulette guide', 'how to use lol champion picker', 'league of legends challenge platform tutorial'],
+    title: 'How to Play League Roulette - Random League Champion Generator Guide',
+    description: 'Learn how to use the random league champion generator and champion roulette. Step-by-step tutorial for getting random LoL champion picks, match verification, and rewards.',
+    keywords: ['random league champion generator tutorial', 'how to play league roulette', 'champion roulette guide', 'lol random champion generator tutorial', 'league roulette guide', 'how to use lol champion picker', 'random lol champion guide', 'league of legends challenge platform tutorial'],
     alternates: {
       canonical: locale === 'en' ? '/howtoplay' : `/${locale}/howtoplay`,
       languages: getHreflangAlternates('/howtoplay'),

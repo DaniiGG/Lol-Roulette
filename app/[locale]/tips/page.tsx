@@ -6,9 +6,9 @@ import { getHreflangAlternates } from '@/lib/seo-utils'
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
   return {
-    title: 'LoL Strategy Tips & Champion Guides - League Roulette',
-    description: 'Master random champion gameplay with League Roulette tips. Learn fundamentals, lane-specific strategies, champion archetypes, and mental game advice for League of Legends.',
-    keywords: ['lol strategy tips', 'league of legends champion guides', 'random champion tips', 'how to play any champion lol', 'league of legends fundamentals', 'lol lane strategies'],
+    title: 'Roulette LoL Tips - Master Random Champion Picks & Strategy',
+    description: 'Win more with random lol champion picks. Champion roulette tips for every lane, champion archetypes, and mental game advice to master any LoL champion.',
+    keywords: ['roulette lol tips', 'random lol champion guide', 'lol strategy tips', 'league of legends champion guides', 'random champion tips', 'how to play any champion lol', 'league of legends fundamentals', 'champion roulette tips'],
     alternates: {
       canonical: locale === 'en' ? '/tips' : `/${locale}/tips`,
       languages: getHreflangAlternates('/tips'),

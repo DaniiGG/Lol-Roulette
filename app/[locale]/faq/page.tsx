@@ -6,9 +6,9 @@ import { getHreflangAlternates } from '@/lib/seo-utils'
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
   return {
-    title: 'FAQ - League Roulette | Random Champion Generator Questions',
-    description: 'Frequently asked questions about League Roulette. Learn how the random champion generator works, match verification, XP system, achievements, and more.',
-    keywords: ['league roulette faq', 'lol random champion generator questions', 'how does league roulette work', 'random champion picker help', 'lol challenge tracker faq'],
+    title: 'FAQ - League Roulette | Random lol Champion & Champion Roulette Questions',
+    description: 'Everything you need to know about the random league champion generator and champion roulette. How the LoL random picker works, match verification, win tracking, and more.',
+    keywords: ['champion roulette faq', 'random lol champion faq', 'league roulette faq', 'lol random champion generator questions', 'how does league roulette work', 'random champion picker help', 'champion roulette league of legends', 'win 2 spin lol'],
     alternates: {
       canonical: locale === 'en' ? '/faq' : `/${locale}/faq`,
       languages: getHreflangAlternates('/faq'),
