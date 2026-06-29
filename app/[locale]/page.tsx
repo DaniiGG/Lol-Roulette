@@ -484,7 +484,7 @@ export default function Home() {
 
           {/* User Stats (solo si está logueado) */}
           {user && (
-            <div className="mb-8">
+            <div className="mb-3">
               <UserStats user={{
                 summoner_name: `${user.game_name}#${user.tag_line}`,
                 level: user.level,
@@ -499,67 +499,34 @@ export default function Home() {
           )}
 
           {/* Main Grid */}
-          <div className={`max-w-4xl mx-auto space-y-6`}>
+          <div className={`max-w-4xl mx-auto space-y-3`}>
             {/* Left: Roulette (SIEMPRE VISIBLE) */}
             <div className={`${user ? 'lg:col-span-2' : 'max-w-2xl mx-auto w-full'} space-y-6`}>
               {/* HEADER */}
               <div className="text-center relative">
-                {/* Ambient glow behind title */}
-                <div className="absolute left-1/2 -translate-x-1/2 -top-8 w-96 h-48 bg-gradient-to-b from-[#C89B3C]/10 via-[#00e5ff]/5 to-transparent rounded-full blur-[100px] pointer-events-none"></div>
-                <h1 className="mb-5 relative">
-                  <div className="flex items-center justify-center gap-3 mb-1">
-                    <span className="h-px w-6 bg-gradient-to-r from-transparent via-[#C89B3C]/40 to-transparent"></span>
-                    <span
-                      className="text-xs md:text-sm tracking-[0.35em] text-[#C89B3C] animate-title-rise opacity-0"
-                      style={{ animationDelay: '0s' }}
-                    >
-                      ✦ {t('heroTitle1')} ✦
-                    </span>
-                    <span className="h-px w-6 bg-gradient-to-r from-transparent via-[#C89B3C]/40 to-transparent"></span>
+                <h1 className="mb-2 relative">
+                  <div className="flex items-center justify-center gap-2 mb-1">
+                    <span className="h-px w-5 bg-gradient-to-r from-transparent via-[#C89B3C]/40 to-transparent"></span>
+                    <span className="text-[10px] md:text-xs tracking-[0.35em] text-[#C89B3C]">✦ {t('heroTitle1')} ✦</span>
+                    <span className="h-px w-5 bg-gradient-to-r from-transparent via-[#C89B3C]/40 to-transparent"></span>
                   </div>
-                  <div className="flex items-baseline justify-center gap-3 sm:gap-4 flex-wrap">
-                    <div
-                      className="text-5xl sm:text-6xl md:text-6xl font-bold tracking-wide text-white animate-title-rise opacity-0 leading-none"
-                      style={{ animationDelay: '0.15s', textShadow: '0 0 30px rgba(200,155,60,0.4), 0 0 60px rgba(200,155,60,0.15)' }}
-                    >
+                  <div className="flex items-baseline justify-center gap-2 sm:gap-3 flex-wrap">
+                    <div className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-wide text-white leading-none">
                       {t('heroTitle2')}
                     </div>
                     <div className="relative inline-block">
-                      <div
-                        className="text-5xl sm:text-6xl md:text-6xl font-black tracking-tight text-[#00e5ff] animate-title-rise opacity-0 leading-[1.1]"
-                        style={{ animationDelay: '0.3s', textShadow: '0 0 30px rgba(0,229,255,0.4), 0 0 60px rgba(0,229,255,0.15)' }}
-                      >
+                      <div className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-[#00e5ff] leading-[1.1]">
                         {t('heroTitle3')}
                       </div>
-                      <div
-                        className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-28 sm:w-36 h-[2px] bg-gradient-to-r from-transparent via-[#C89B3C] to-transparent rounded-full animate-trace-reveal opacity-0"
-                        style={{ animationDelay: '0.8s' }}
-                      ></div>
                     </div>
                   </div>
-                  {/* Floating sparkle accents */}
-                  <span className="absolute -top-2 -right-4 md:-top-3 md:-right-8 text-[8px] md:text-xs text-[#C89B3C]/30 animate-sparkle pointer-events-none select-none" style={{ animationDelay: '0.5s' }}>✦</span>
-                  <span className="absolute -bottom-1 -left-4 md:-bottom-2 md:-left-8 text-[8px] md:text-xs text-[#00e5ff]/30 animate-sparkle pointer-events-none select-none" style={{ animationDelay: '1.2s' }}>✦</span>
                 </h1>
-                <div
-                  className="inline-flex items-center gap-2 bg-gradient-to-r from-[#C89B3C]/10 via-[#C89B3C]/5 to-transparent px-6 py-2.5 rounded-full border border-[#C89B3C]/20 animate-title-rise opacity-0 mb-6"
-                  style={{ animationDelay: '0.6s' }}
-                >
+                <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[#C89B3C]/10 via-[#C89B3C]/5 to-transparent px-4 py-1.5 rounded-full border border-[#C89B3C]/20 mb-3">
                   {t.raw('tags').map((tag: string, i: number) => (
-                    <span key={tag} className={`text-xs md:text-sm font-semibold ${i === 0 ? 'text-[#C89B3C]' : i === 1 ? 'text-[#00e5ff]' : i === 2 ? 'text-neutral-500' : 'text-[#C89B3C]/70'}`}>
-                      {i > 0 && <span className="mx-1.5 text-neutral-600">◆</span>}{tag}
+                    <span key={tag} className={`text-[10px] md:text-xs font-semibold ${i === 0 ? 'text-[#C89B3C]' : i === 1 ? 'text-[#00e5ff]' : i === 2 ? 'text-neutral-500' : 'text-[#C89B3C]/70'}`}>
+                      {i > 0 && <span className="mx-1 text-neutral-600">◆</span>}{tag}
                     </span>
                   ))}
-                </div>
-                <div
-                  className="flex items-center justify-center gap-3 animate-title-rise opacity-0"
-                  style={{ animationDelay: '0.9s' }}
-                >
-                  <div className="h-px w-10 bg-gradient-to-r from-transparent via-[#C89B3C]/30 to-transparent"></div>
-                  <p className="text-neutral-500 font-light tracking-[0.2em] text-[10px] md:text-xs uppercase">
-                    {t('trackProgressDesc')}
-                  </p>
-                  <div className="h-px w-10 bg-gradient-to-r from-transparent via-[#00e5ff]/30 to-transparent"></div>
                 </div>
               </div>
 

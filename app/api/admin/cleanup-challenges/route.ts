@@ -2,11 +2,11 @@ import { NextResponse } from 'next/server'
 import { supabaseAdmin } from '@/lib/supabase-admin'
 
 function isAuthorized(request: Request) {
-  const adminSecret = process.env.ADMIN_SECRET
-  if (!adminSecret) return false
+  const cronSecret = process.env.CRON_SECRET
+  if (!cronSecret) return false
 
   const authHeader = request.headers.get('authorization')
-  return authHeader === `Bearer ${adminSecret}`
+  return authHeader === `Bearer ${cronSecret}`
 }
 
 export async function POST(request: Request) {
