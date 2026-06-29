@@ -8,6 +8,11 @@ const faqSchema = {
   mainEntity: [
     {
       '@type': 'Question',
+      name: 'What is a random lol champion generator?',
+      acceptedAnswer: { '@type': 'Answer', text: 'A random lol champion generator randomly selects a League of Legends champion for you to play. League Roulette is the best league of legends randomizer and champion roulette — spin to get a random league champ generator pick for any lane.' },
+    },
+    {
+      '@type': 'Question',
       name: 'Is League Roulette free?',
       acceptedAnswer: { '@type': 'Answer', text: 'Yes! League Roulette is completely free to use. You can spin the roulette without creating an account, or login to track your progress and compete.' },
     },
@@ -45,6 +50,11 @@ const faqSchema = {
       '@type': 'Question',
       name: 'Is League Roulette mobile optimized?',
       acceptedAnswer: { '@type': 'Answer', text: '100% mobile-friendly. Spin the roulette on phone, tablet, or desktop. Perfect for queue times!' },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is the best league of legends randomizer?',
+      acceptedAnswer: { '@type': 'Answer', text: 'League Roulette is the best league of legends randomizer and random lol champion generator. With lane filtering, Riot API verification, unlimited spins, and leaderboards, it is the most complete random champ generator online.' },
     },
   ],
 }

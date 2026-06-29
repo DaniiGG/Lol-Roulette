@@ -1,83 +1,49 @@
 // app/sitemap.ts
 import { MetadataRoute } from 'next'
 import { BLOG_SLUGS } from '@/lib/blog-posts'
+import { routing } from '@/i18n/routing'
+
+const baseUrl = 'https://leagueroulette.com'
+
+const staticPages = [
+  { path: '', priority: 1, freq: 'daily' as const },
+  { path: 'howtoplay', priority: 0.9, freq: 'weekly' as const },
+  { path: 'faq', priority: 0.8, freq: 'weekly' as const },
+  { path: 'blog', priority: 0.8, freq: 'weekly' as const },
+  { path: 'tips', priority: 0.7, freq: 'weekly' as const },
+  { path: 'leaderboard', priority: 0.7, freq: 'daily' as const },
+  { path: 'mastery', priority: 0.6, freq: 'weekly' as const },
+  { path: 'about', priority: 0.5, freq: 'monthly' as const },
+  { path: 'contact', priority: 0.5, freq: 'monthly' as const },
+  { path: 'privacy', priority: 0.3, freq: 'yearly' as const },
+  { path: 'terms', priority: 0.3, freq: 'yearly' as const },
+]
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://leagueroulette.com'
-  
-  return [
-    {
-      url: baseUrl,
-      lastModified: new Date(),
-      changeFrequency: 'daily',
-      priority: 1,
-    },
-    {
-      url: `${baseUrl}/howtoplay`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/faq`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/blog`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.8,
-    },
-    ...BLOG_SLUGS.map((slug) => ({
+  const entries: MetadataRoute.Sitemap = []
+
+  for (const page of staticPages) {
+    for (const locale of routing.locales) {
+      const localePath = locale === routing.defaultLocale ? '' : `/${locale}`
+      const pagePath = page.path ? `/${page.path}` : ''
+      entries.push({
+        url: `${baseUrl}${localePath}${pagePath}`,
+        lastModified: new Date(),
+        changeFrequency: page.freq,
+        priority: page.priority,
+      })
+    }
+  }
+
+  for (const slug of BLOG_SLUGS) {
+    entries.push({
       url: `${baseUrl}/blog/${slug}`,
       lastModified: new Date(),
       changeFrequency: 'monthly' as const,
       priority: 0.7,
-    })),
-    {
-      url: `${baseUrl}/tips`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/leaderboard`,
-      lastModified: new Date(),
-      changeFrequency: 'daily',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/mastery`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.6,
-    },
-    {
-      url: `${baseUrl}/about`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.5,
-    },
-    {
-      url: `${baseUrl}/contact`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.5,
-    },
-    {
-      url: `${baseUrl}/privacy`,
-      lastModified: new Date(),
-      changeFrequency: 'yearly',
-      priority: 0.3,
-    },
-    {
-      url: `${baseUrl}/terms`,
-      lastModified: new Date(),
-      changeFrequency: 'yearly',
-      priority: 0.3,
-    },
-  ]
+    })
+  }
+
+  return entries
 }
 

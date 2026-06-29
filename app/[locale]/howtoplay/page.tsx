@@ -7,15 +7,15 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale } = await params
   return {
     title: 'How to Play League Roulette - Random League Champion Generator Guide',
-    description: 'Learn how to use the random league champion generator and champion roulette. Step-by-step tutorial for getting random LoL champion picks, match verification, and rewards.',
-    keywords: ['random league champion generator tutorial', 'how to play league roulette', 'champion roulette guide', 'lol random champion generator tutorial', 'league roulette guide', 'how to use lol champion picker', 'random lol champion guide', 'league of legends challenge platform tutorial'],
+    description: 'Learn how to use the random league champ generator and League of Legends roulette. Step-by-step tutorial for getting random lol champion picks, champion roulette spins, match verification, and rewards.',
+    keywords: ['random league champion generator tutorial', 'how to play league roulette', 'champion roulette guide', 'lol random champion generator tutorial', 'league roulette guide', 'how to use lol champion picker', 'random lol champion guide', 'league of legends challenge platform tutorial', 'league of legends randomizer guide', 'random league champ generator tutorial'],
     alternates: {
       canonical: locale === 'en' ? '/howtoplay' : `/${locale}/howtoplay`,
       languages: getHreflangAlternates('/howtoplay'),
     },
     openGraph: {
       title: 'How to Play League Roulette - Complete Guide',
-      description: 'Step-by-step tutorial for the free LoL random champion generator. Learn to spin, verify matches, earn XP, and climb leaderboards.',
+      description: 'Step-by-step tutorial for the free LoL random champion generator and league of legends randomizer. Learn to spin, verify matches, earn XP, and climb leaderboards.',
       url: locale === 'en' ? '/howtoplay' : `/${locale}/howtoplay`,
       siteName: 'League Roulette',
     },

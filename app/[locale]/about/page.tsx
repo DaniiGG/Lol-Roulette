@@ -6,16 +6,16 @@ import { getHreflangAlternates } from '@/lib/seo-utils'
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
   return {
-    title: 'About League Roulette - Free LoL Random Champion Generator',
-    description: 'Learn about League Roulette, the free random champion generator for League of Legends. Track wins, earn XP, unlock achievements, and climb the leaderboard.',
-    keywords: ['about league roulette', 'lol random champion generator about', 'league of legends challenge platform', 'free lol randomizer tool'],
+    title: 'About League Roulette - Free LoL Random Champion Generator & Randomizer',
+    description: 'Learn about League Roulette, the free random lol champion generator and League of Legends roulette. Track wins with the best league of legends randomizer and champion roulette.',
+    keywords: ['about league roulette', 'lol random champion generator about', 'league of legends challenge platform', 'free lol randomizer tool', 'league of legends randomizer about', 'random league champ generator platform'],
     alternates: {
       canonical: locale === 'en' ? '/about' : `/${locale}/about`,
       languages: getHreflangAlternates('/about'),
     },
     openGraph: {
       title: 'About League Roulette - Random Champion Challenge Platform',
-      description: 'Free random champion generator for League of Legends with match verification, XP tracking, achievements, and leaderboards.',
+      description: 'Free random champion generator and League of Legends randomizer with match verification, XP tracking, achievements, and leaderboards.',
       url: locale === 'en' ? '/about' : `/${locale}/about`,
       siteName: 'League Roulette',
     },
