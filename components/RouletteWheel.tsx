@@ -123,7 +123,7 @@ export default function RouletteWheel({
 
       setLoadingChamps(false)
     })()
-  }, [lane])
+  }, [lane, championPool])
 
   /* ───────── PRELOAD IMAGES ───────── */
 

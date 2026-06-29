@@ -72,6 +72,14 @@ export default function Home() {
   const [autoVerifier, setAutoVerifier] = useState<AutoVerifier | null>(null)
   const [isAutoVerifying, setIsAutoVerifying] = useState(false)
 
+  // Cargar champion pool de localStorage al iniciar
+  useEffect(() => {
+    const saved = loadChampionPool()
+    if (Object.keys(saved).length > 0) {
+      setChampionPool(saved)
+    }
+  }, [])
+
   // Verificar sesión al cargar
   useEffect(() => {
     const token = Cookies.get('session_token')
