@@ -60,6 +60,7 @@ export default function RootLayout({
         <meta name="google-adsense-account" content="ca-pub-1048626365060254" />
         <meta name="google-site-verification" content="3sVvOH8RoSBRMz3-yWd4pFKr5fcoclC4VZXl7GNi4ic" />
         <meta name="theme-color" content="#C89B3C" />
+        <meta name="google-adsense-account" content="ca-pub-1048626365060254"/>
         <Script id="organization-schema" type="application/ld+json" dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
