@@ -35,13 +35,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   }
 
-  for (const slug of BLOG_SLUGS) {
-    entries.push({
-      url: `${baseUrl}/blog/${slug}`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    })
+  for (const locale of routing.locales) {
+    const localePrefix = locale === routing.defaultLocale ? '' : `/${locale}`
+    for (const slug of BLOG_SLUGS) {
+      entries.push({
+        url: `${baseUrl}${localePrefix}/blog/${slug}`,
+        lastModified: new Date(),
+        changeFrequency: 'monthly' as const,
+        priority: 0.7,
+      })
+    }
   }
 
   return entries

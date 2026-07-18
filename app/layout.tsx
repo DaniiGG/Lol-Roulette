@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 import "./globals.css";
 import Script from 'next/script'
@@ -16,7 +16,7 @@ export async function generateMetadata(): Promise<Metadata> {
       default: 'League Roulette - Random LoL Picker & League of Legends Roulette',
       template: '%s | League Roulette',
     },
-    description: 'Free random lol champion generator and League of Legends roulette. Spin the champion roulette for a random league champ generator pick, lol random challenge, or league of legends champion randomizer. The best league of legends randomizer with Riot API win tracking.',
+    description: 'Free random LoL champion generator & League of Legends roulette. Spin for a random champion, verify wins with Riot API, earn XP, and climb the leaderboard.',
     metadataBase: new URL('https://leagueroulette.com'),
     manifest: '/manifest.json',
     icons: {
@@ -24,7 +24,6 @@ export async function generateMetadata(): Promise<Metadata> {
       apple: '/apple-touch-icon.png',
     },
     alternates: {
-      canonical: 'https://leagueroulette.com',
       languages: getHreflangAlternates('/'),
     },
     openGraph: {
@@ -32,14 +31,14 @@ export async function generateMetadata(): Promise<Metadata> {
       locale: 'en_US',
       url: 'https://leagueroulette.com',
       title: 'League Roulette - Random LoL Picker & League of Legends Roulette',
-      description: 'Free random lol champion generator and League of Legends roulette. Champion roulette for random league champ generator picks, lol random challenges, and league of legends champion randomizer with Riot API.',
+      description: 'Spin for a random champion, verify wins with Riot API, earn XP, and climb the leaderboard.',
       siteName: 'League Roulette',
       images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'League Roulette' }],
     },
     twitter: {
       card: 'summary_large_image',
       title: 'League Roulette - Random LoL Picker & League of Legends Roulette',
-      description: 'Free random lol champion generator and League of Legends roulette. Spin the champion roulette, track wins, earn XP.',
+      description: 'Spin for a random champion, verify wins, earn XP.',
       images: ['/og-image.png'],
       creator: '@LeagueRoulette',
     },
@@ -115,19 +114,6 @@ export default function RootLayout({
                     "Multi-language support"
                   ],
                   "screenshot": "https://leagueroulette.com/og-image.png"
-                },
-                {
-                  "@type": "WebApplication",
-                  "name": "League Roulette",
-                  "url": "https://leagueroulette.com",
-                  "applicationCategory": "GameApplication",
-                  "operatingSystem": "Web",
-                  "description": "A random lol champion generator that assigns champions for ranked, ARAM, and custom games.",
-                  "offers": {
-                    "@type": "Offer",
-                    "price": "0",
-                    "priceCurrency": "USD"
-                  }
                 },
                 {
                   "@type": "BreadcrumbList",
