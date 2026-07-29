@@ -13,7 +13,7 @@ const outfit = Outfit({
 export async function generateMetadata(): Promise<Metadata> {
   return {
     title: {
-      default: 'League Roulette - Random LoL Picker & League of Legends Roulette',
+      default: 'League Roulette - Random Champion & LoL Randomizer',
       template: '%s | League Roulette',
     },
     description: 'Free random LoL champion generator & League of Legends roulette. Spin for a random champion, verify wins with Riot API, earn XP, and climb the leaderboard.',
@@ -30,7 +30,7 @@ export async function generateMetadata(): Promise<Metadata> {
       type: 'website',
       locale: 'en_US',
       url: 'https://leagueroulette.com',
-      title: 'League Roulette - Random LoL Picker & League of Legends Roulette',
+      title: 'League Roulette - Random Champion & LoL Randomizer',
       description: 'Spin for a random champion, verify wins with Riot API, earn XP, and climb the leaderboard.',
       siteName: 'League Roulette',
       images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'League Roulette' }],
