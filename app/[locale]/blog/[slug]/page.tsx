@@ -125,12 +125,43 @@ export default async function BlogPostPage(props: BlogPostPageProps) {
     image: "https://leagueroulette.com/og-image.png",
   }
 
+  const isTutorial = slug.startsWith('how-to-');
+  const howToSchema = isTutorial ? {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: post.title,
+    description: post.description,
+    totalTime: "PT15M",
+    step: post.sections.map((section: { heading: string; paragraphs: string[] }) => ({
+      "@type": "HowToStep",
+      name: section.heading,
+      text: section.paragraphs.join(' '),
+    })),
+  } : null;
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://leagueroulette.com" },
+      { "@type": "ListItem", position: 2, name: "Blog", item: "https://leagueroulette.com/blog" },
+      { "@type": "ListItem", position: 3, name: post.title, item: `https://leagueroulette.com/blog/${post.slug}` },
+    ],
+  };
+
+  const allSchema: any[] = [
+    { "@context": "https://schema.org", "@type": "WebSite", name: "League Roulette", url: "https://leagueroulette.com" },
+    { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: breadcrumbSchema.itemListElement },
+  ];
+  if (isTutorial && howToSchema) allSchema.push(howToSchema);
+  allSchema.push(articleSchema);
+  const graphSchema = { "@context": "https://schema.org", "@graph": allSchema };
+
   return (
     <main className="min-h-screen bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 px-6 py-12">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(graphSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      {isTutorial && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />}
 
       <article className="mx-auto max-w-4xl">
         <Link

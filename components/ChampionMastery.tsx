@@ -19,7 +19,7 @@ interface MasteryEntry {
   lastPlayTime: number
 }
 
-const DDV = '16.12.1'
+const DDV = '16.18.1'
 
 let championNameCache: Record<number, string> | null = null
 

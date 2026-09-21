@@ -25,7 +25,7 @@ interface SlotMachineRouletteProps {
 // ─────────────────────────────────────────────────────────────────────────────
 // Constantes
 // ─────────────────────────────────────────────────────────────────────────────
-const DDV          = '16.12.1'
+const DDV          = '16.18.1'
 const SPLASH_BASE  = 'https://ddragon.leagueoflegends.com/cdn/img/champion/splash/'
 const LOADING_BASE = 'https://ddragon.leagueoflegends.com/cdn/img/champion/loading/'
 

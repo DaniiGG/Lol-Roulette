@@ -275,7 +275,7 @@ export default function LeaderboardPage() {
                           alt={entry.gameName}
                           className="w-full h-full object-cover"
                           onError={(e) => {
-                            e.currentTarget.src = 'https://ddragon.leagueoflegends.com/cdn/16.12.1/img/profileicon/0.png'
+                            e.currentTarget.src = 'https://ddragon.leagueoflegends.com/cdn/16.18.1/img/profileicon/0.png'
                           }}
                         />
                       </div>
