@@ -19,6 +19,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       url: locale === 'en' ? '/howtoplay' : `/${locale}/howtoplay`,
       siteName: 'League Roulette',
     },
+    robots: { index: false, follow: true },
   }
 }
 

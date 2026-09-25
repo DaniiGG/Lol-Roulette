@@ -39,3 +39,36 @@ export const blogKeywords: Record<string, string[]> = {
   "understanding-lane-matchups": ["lane matchups league of legends","champion matchups"],
   "champion-rotation-guide": ["champion rotation guide","free champions this week"],
 }
+
+export const BLOG_META: Record<string, { date: string; author: string; lane: string; tags: string[] }> = {
+  "what-champion-should-i-play": { date: "2026-01-15", author: "League Roulette Team", lane: "top-lane", tags: ["random-champion", "beginner-guide", "champion-select"] },
+  "lol-random-challenge": { date: "2026-01-22", author: "League Roulette Team", lane: "all-lanes", tags: ["challenge", "fun", "game-modes"] },
+  "fun-lol-challenges": { date: "2026-02-01", author: "League Roulette Team", lane: "all-lanes", tags: ["challenge", "friends", "social"] },
+  "best-champions-for-top-lane": { date: "2026-02-10", author: "League Roulette Team", lane: "top-lane", tags: ["top-lane", "champions", "guide"] },
+  "mid-lane-champions-guide": { date: "2026-02-18", author: "League Roulette Team", lane: "mid-lane", tags: ["mid-lane", "champions", "guide"] },
+  "adc-champions-guide": { date: "2026-02-25", author: "League Roulette Team", lane: "adc", tags: ["adc", "carry", "guide"] },
+  "best-support-champions": { date: "2026-03-05", author: "League Roulette Team", lane: "support", tags: ["support", "engage", "peel"] },
+  "how-to-improve-at-league": { date: "2026-03-12", author: "League Roulette Team", lane: "all-lanes", tags: ["improvement", "tips", "skills"] },
+  "aram-champion-pool": { date: "2026-03-20", author: "League Roulette Team", lane: "aram", tags: ["aram", "champion-pool", "howling-abbys"] },
+  "champions-that-counter": { date: "2026-03-28", author: "League Roulette Team", lane: "all-lanes", tags: ["counters", "matchups", "strategy"] },
+  "what-is-my-main": { date: "2026-04-05", author: "League Roulette Team", lane: "all-lanes", tags: ["quiz", "main-role", "self-discovery"] },
+  "fun-lol-challenges-with-friends": { date: "2026-04-12", author: "League Roulette Team", lane: "all-lanes", tags: ["friends", "social", "challenge"] },
+  "how-to-climb-ranked": { date: "2026-04-20", author: "League Roulette Team", lane: "all-lanes", tags: ["ranked", "climb", "mmr"] },
+  "lol-tier-list-current-patch": { date: "2026-04-28", author: "League Roulette Team", lane: "all-lanes", tags: ["tier-list", "meta", "patch"] },
+  "best-champions-for-beginners": { date: "2026-05-05", author: "League Roulette Team", lane: "all-lanes", tags: ["beginners", "easy-champions", "tutorial"] },
+  "how-to-farm-in-league": { date: "2026-05-12", author: "League Roulette Team", lane: "all-lanes", tags: ["farming", "cs", "last-hitting"] },
+  "understanding-lane-matchups": { date: "2026-05-20", author: "League Roulette Team", lane: "all-lanes", tags: ["matchups", "lane", "strategy"] },
+  "champion-rotation-guide": { date: "2026-05-28", author: "League Roulette Team", lane: "all-lanes", tags: ["champion-rotation", "free-champions"] },
+}
+
+export function getLaneForSlug(slug: string): string {
+  return BLOG_META[slug]?.lane || "all-lanes"
+}
+
+export function getTagsForSlug(slug: string): string[] {
+  return BLOG_META[slug]?.tags || []
+}
+
+export function getBlogMeta(slug: string) {
+  return BLOG_META[slug] || { date: "2026-01-15", author: "League Roulette Team", lane: "all-lanes", tags: [] }
+}

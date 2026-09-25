@@ -5,7 +5,7 @@ import { getTranslations } from 'next-intl/server'
 import { setRequestLocale } from 'next-intl/server'
 import { getHreflangAlternates } from '@/lib/seo-utils'
 import { routing } from '@/i18n/routing'
-import { BLOG_SLUGS, blogKeywords } from "@/lib/blog-posts"
+import { BLOG_SLUGS, blogKeywords, BLOG_META, getLaneForSlug, getTagsForSlug } from "@/lib/blog-posts"
 
 type BlogSection = {
   heading: string
@@ -57,10 +57,15 @@ export async function generateMetadata(
   const post = blogPosts.find((p: BlogPost) => p.slug === slug)
   if (!post) return {}
 
+  const meta = BLOG_META[slug] || { date: "2026-01-15", author: "League Roulette Team", lane: "all-lanes", tags: [] }
+  const tags = getTagsForSlug(slug)
+  const lane = getLaneForSlug(slug)
+
   return {
     title: `${post.title} | League Roulette Blog`,
     description: post.description,
     keywords: blogKeywords[slug] || [],
+    authors: [{ name: meta.author, url: `https://leagueroulette.com/about` }],
     alternates: {
       canonical: locale === 'en' ? `/blog/${slug}` : `/${locale}/blog/${slug}`,
       languages: getHreflangAlternates(`/blog/${slug}`),
@@ -71,11 +76,20 @@ export async function generateMetadata(
       url: locale === 'en' ? `/blog/${slug}` : `/${locale}/blog/${slug}`,
       type: "article",
       siteName: "League Roulette",
+      publishedTime: meta.date,
+      authors: [`https://leagueroulette.com/about`],
+      images: [{ url: "https://leagueroulette.com/og-image.png", width: 1200, height: 630, alt: post.title }],
     },
     twitter: {
       card: "summary_large_image",
       title: post.title,
       description: post.description,
+      images: ['https://leagueroulette.com/og-image.png'],
+      creator: '@LeagueRoulette',
+    },
+    other: {
+      'article:section': lane,
+      'article:tag': tags.join(', '),
     },
   }
 }
@@ -98,7 +112,15 @@ export default async function BlogPostPage(props: BlogPostPageProps) {
     notFound()
   }
 
-  const relatedPosts = blogPosts.filter((entry: BlogPost) => entry.slug !== post.slug)
+  const meta = BLOG_META[slug] || { date: "2026-01-15", author: "League Roulette Team", lane: "all-lanes", tags: [] }
+  const lane = getLaneForSlug(slug)
+  const tags = getTagsForSlug(slug)
+
+  const relatedPosts = blogPosts.filter((entry: BlogPost) => {
+    if (entry.slug === post.slug) return false
+    const entryLane = getLaneForSlug(entry.slug)
+    return entryLane === lane || entryLane === 'all-lanes' || lane === 'all-lanes'
+  }).slice(0, 4)
 
   const articleSchema = {
     "@context": "https://schema.org",
@@ -107,7 +129,7 @@ export default async function BlogPostPage(props: BlogPostPageProps) {
     description: post.description,
     author: {
       "@type": "Person",
-      name: "League Roulette Team",
+      name: meta.author,
       url: "https://leagueroulette.com/about",
     },
     publisher: {
@@ -118,11 +140,13 @@ export default async function BlogPostPage(props: BlogPostPageProps) {
         url: "https://leagueroulette.com/og-image.png",
       },
     },
-    datePublished: "2026-01-15",
+    datePublished: meta.date,
     dateModified: new Date().toISOString().split("T")[0],
     mainEntityOfPage: `https://leagueroulette.com/blog/${post.slug}`,
     keywords: (blogKeywords[slug] || []).join(", "),
     image: "https://leagueroulette.com/og-image.png",
+    articleSection: lane,
+    tags: tags,
   }
 
   const isTutorial = slug.startsWith('how-to-');

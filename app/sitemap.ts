@@ -41,7 +41,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       entries.push({
         url: `${baseUrl}${localePrefix}/blog/${slug}`,
         lastModified: new Date(),
-        changeFrequency: 'monthly' as const,
+        changeFrequency: 'weekly' as const,
         priority: 0.7,
       })
     }
@@ -49,4 +49,3 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return entries
 }
-

@@ -21,15 +21,24 @@ export function getOrganizationSchema() {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'League Roulette',
+    alternateName: 'League Roulette LoL',
     url: baseUrl,
     logo: `${baseUrl}/og-image.png`,
-    sameAs: ['https://twitter.com/LeagueRoulette'],
+    sameAs: [
+      'https://twitter.com/LeagueRoulette',
+      'https://www.facebook.com/LeagueRoulette',
+      'https://www.reddit.com/r/LeagueRoulette',
+      'https://discord.gg/leagueroulette',
+      'https://www.youtube.com/@LeagueRoulette',
+      'https://www.tiktok.com/@leagueroulette',
+    ],
     description: 'Free random champion generator for League of Legends with match verification, XP tracking, achievements, and leaderboards.',
     contactPoint: {
       '@type': 'ContactPoint',
       contactType: 'customer support',
       url: `${baseUrl}/contact`,
     },
+    founders: [{ '@type': 'Person', name: 'League Roulette Team' }],
   }
 }
 

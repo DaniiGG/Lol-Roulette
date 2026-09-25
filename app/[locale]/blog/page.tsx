@@ -6,13 +6,21 @@ import { getHreflangAlternates } from '@/lib/seo-utils'
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
+  const t = await getTranslations('blog')
   return {
-    title: 'League Roulette Blog | LoL Challenges, Tips, and Random Champion Ideas',
-    description: 'Read League Roulette blog posts about random champion picks, fun League of Legends challenges, and better ways to choose what to play next.',
+    title: t('title'),
+    description: t('desc'),
     keywords: ['league roulette blog', 'lol random champion blog', 'league of legends challenge ideas', 'what champion should i play lol', 'fun lol challenges'],
     alternates: {
       canonical: locale === 'en' ? '/blog' : `/${locale}/blog`,
       languages: getHreflangAlternates('/blog'),
+    },
+    openGraph: {
+      title: t('title'),
+      description: t('desc'),
+      url: locale === 'en' ? '/blog' : `/${locale}/blog`,
+      type: 'website',
+      siteName: 'League Roulette',
     },
   }
 }

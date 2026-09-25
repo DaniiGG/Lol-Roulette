@@ -12,6 +12,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: 'Champion Mastery - League Roulette | Check Your LoL Mastery Points',
     description: 'Check your League of Legends champion mastery points and win rates. Track your most played champions and performance with the League Roulette mastery tool.',
     keywords: ['league of legends champion mastery', 'lol mastery points', 'champion mastery check', 'league roulette mastery', 'lol win rate tracker'],
+    robots: { index: false, follow: true },
     alternates: {
       canonical: locale === 'en' ? '/mastery' : `/${locale}/mastery`,
       languages: getHreflangAlternates('/mastery'),

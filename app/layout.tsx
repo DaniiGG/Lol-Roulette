@@ -55,6 +55,9 @@ export async function generateMetadata(): Promise<Metadata> {
       images: ['/og-image.png'],
       creator: '@LeagueRoulette',
     },
+    other: {
+      'X-Robots-Tag': 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1',
+    },
   }
 }
 
@@ -75,7 +78,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@graph": [
-                { "@type": "Organization", "name": "League Roulette", "url": "https://leagueroulette.com", "logo": "https://leagueroulette.com/og-image.png", "sameAs": ["https://twitter.com/LeagueRoulette"], "description": "Free random champion generator for League of Legends with match verification, XP tracking, achievements, and leaderboards.", "contactPoint": { "@type": "ContactPoint", "contactType": "customer support", "url": "https://leagueroulette.com/contact" } },
+                { "@type": "Organization", "name": "League Roulette", "alternateName": "League Roulette LoL", "url": "https://leagueroulette.com", "logo": "https://leagueroulette.com/og-image.png", "sameAs": ["https://twitter.com/LeagueRoulette", "https://www.facebook.com/LeagueRoulette", "https://www.reddit.com/r/LeagueRoulette", "https://discord.gg/leagueroulette", "https://www.youtube.com/@LeagueRoulette", "https://www.tiktok.com/@leagueroulette"], "description": "Free random champion generator for League of Legends with match verification, XP tracking, achievements, and leaderboards.", "contactPoint": { "@type": "ContactPoint", "contactType": "customer support", "url": "https://leagueroulette.com/contact" }, "founders": [{ "@type": "Person", "name": "League Roulette Team" }] },
                 { "@type": "WebSite", "name": "League Roulette", "url": "https://leagueroulette.com", "description": "Free random lol champion generator and League of Legends roulette.", "potentialAction": { "@type": "SearchAction", "target": { "@type": "EntryPoint", "urlTemplate": "https://leagueroulette.com/?s={search_term_string}" }, "query-input": "required name=search_term_string" } },
                 { "@type": "WebApplication", "name": "League Roulette", "url": "https://leagueroulette.com", "applicationCategory": "GameApplication", "operatingSystem": "Web", "description": "Random champion generator for League of Legends.", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }, "featureList": ["Random champion generator for all lanes", "Match verification via Riot Games API", "XP and leveling system", "Achievements and leaderboards"] },
                 { "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", position: 1, name: "Home", item: "https://leagueroulette.com" }] }
