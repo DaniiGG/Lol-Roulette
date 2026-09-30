@@ -12,14 +12,18 @@
         "privacy": "Datenschutz",
         "terms": "AGB",
         "siteName": "League Roulette",
-        "siteTagline": "Zufällige Champion-Herausforderung"
+        "siteTagline": "Zufällige Champion-Herausforderung",
+        "challenges": "Herausforderungen",
+        "tierlist": "Rangliste",
+        "modes": "Modi",
+        "popular": "Beliebt"
     },
     "home": {
         "howItWorks": "So funktioniert es",
         "leaderboard": "Rangliste",
-        "achievements": "Errungenschaften",
+        "achievements": "Erfolge",
         "logout": "Abmelden",
-        "loginToTrack": "Anmelden zum Verfolgen",
+        "loginToTrack": "Anmelden zum Fortschritt",
         "heroTitle1": "LEAGUE ROULETTE",
         "heroTitle2": "ZUFÄLLIG",
         "heroTitle3": "CHAMPION",
@@ -53,19 +57,28 @@
             }
         ],
         "matchMaking": {
-            "verifying": "Spiel wird überprüft...",
-            "verify": "Spiel bestätigen"
-        }
+            "verifying": "Partie wird verifiziert...",
+            "verify": "Partie verifizieren"
+        },
+        "editPool": "Pool bearbeiten",
+        "usePool": "Pool verwenden",
+        "challengeActive": "Aktive Challenge",
+        "lane": "Lane"
     },
     "championCard": {
         "yourChampion": "Dein Champion",
-        "readyToBegin": "Bereit zu beginnen",
-        "pressBelow": "Drücke den Button unten",
-        "spinning": "Dreht",
-        "spinRoulette": "Roulette drehen",
+        "readyToBegin": "Bereit zum Spielen",
+        "pressBelow": "Knopf unten drücken",
+        "spinning": "Drehen",
+        "spinRoulette": "Rad drehen",
         "verifying": "Überprüft...",
         "verifyMatch": "Spiel bestätigen",
-        "spinAgain": "Erneut drehen"
+        "spinAgain": "Erneut drehen",
+        "playWith": "Spielen mit",
+        "stats": "Statistiken",
+        "mastery": "Meisterschaft",
+        "winrate": "Winrate",
+        "championPool": "Champion-Pool"
     },
     "championSelector": {
         "yourChampion": "Dein Champion",
@@ -77,7 +90,13 @@
         "rerollUnlimited": "Neu würfeln (Unbegrenzt)",
         "unlimitedSpins": "Gefallen dir diese Optionen nicht? Du hast unbegrenzte Drehungen",
         "spinsLeft": "Gefallen dir diese Optionen nicht? Du hast {n} weitere Drehung(en)",
-        "noRerolls": "✨ Wähle weise! Keine Neuwürfe mehr"
+        "noRerolls": "✨ Wähle weise! Keine Neuwürfe mehr",
+        "top": "Oben",
+        "mid": "Mitte",
+        "jungle": "Dschungel",
+        "bottom": "Unten",
+        "support": "Support",
+        "adc": "Unten"
     },
     "championStats": {
         "statistics": "📊 {champion} Statistiken",
@@ -92,11 +111,11 @@
     "laneSelector": {
         "selectLane": "Linie wählen",
         "allLanes": "Alle Linien",
-        "top": "Top",
+        "top": "Oben",
         "jungle": "Dschungel",
         "mid": "Mitte",
-        "adc": "ADC",
-        "support": "Unterstützung",
+        "adc": "Unten",
+        "support": "Support",
         "anyChampion": "Jeder Champion",
         "islandLife": "Inselleben",
         "pveSimulator": "PvE-Simulator",
@@ -108,10 +127,11 @@
         "jng": "DSCH",
         "midShort": "MID",
         "adcShort": "ADC",
-        "sup": "SUP"
+        "sup": "SUP",
+        "bottom": "Unten"
     },
     "infoModal": {
-        "title": "So funktioniert es",
+        "title": "Informationen",
         "step1Title": "Roulette drehen",
         "step1Desc": "Wähle eine Linie oder lasse es auf Allen Linien, dann klicke auf Drehen für einen zufälligen Champion.",
         "step2Title": "League of Legends spielen",
@@ -140,16 +160,22 @@
         "faqPasswordA": "Ja. Wir verwenden Riot's offizielles OAuth — dein Passwort wird nie auf unseren Servern gespeichert.",
         "faqModesQ": "Welche Modi zählen?",
         "faqModesA": "Alle Matchmaking-Spielmodi zählen: Beschwörerkluft (alle Warteschlangen), ARAM und Rotationsmodi.",
-        "gotIt": "Verstanden, los geht's!"
+        "gotIt": "Verstanden, los geht's!",
+        "description": "Beschreibung"
     },
     "autoVerify": {
-        "title": "Auto-Scan",
+        "title": "Automatische Verifizierung",
         "monitoring": "Überwache auf {champion}-Spiel.\nSpiele dein Spiel — wir kümmern uns um den Rest.",
         "nextCheck": "Nächste Prüfung",
         "elapsed": "Verstrichen",
         "verifyNow": "Jetzt bestätigen",
         "cancel": "Abbrechen",
-        "info": "Prüft alle 2 Minuten für 1 Stunde. Klicke auf Jetzt bestätigen für sofortiges Ergebnis."
+        "info": "Prüft alle 2 Minuten für 1 Stunde. Klicke auf Jetzt bestätigen für sofortiges Ergebnis.",
+        "verify": "Überprüfen",
+        "status": "Status",
+        "pending": "Ausstehend",
+        "success": "Erfolgreich",
+        "failed": "Fehlgeschlagen"
     },
     "verificationResult": {
         "scanning": "Suche nach Spiel...",
@@ -168,7 +194,11 @@
         "earned": "Verdient",
         "involved": "Beteiligt",
         "xpEarned": "+100 EP",
-        "xpLabel": "verdient"
+        "xpLabel": "verdient",
+        "title": "Verifizierungsergebnis",
+        "matchVerified": "Bestätigung der Partie",
+        "championMatched": "Champion übereinstimmend",
+        "championMismatch": "Champion nicht übereinstimmend"
     },
     "userStats": {
         "level": "St. {level}",
@@ -176,29 +206,36 @@
         "challenges": "Herausforderungen",
         "xpProgress": "EP-Fortschritt",
         "currentStreak": "Aktuelle Serie",
-        "bestStreak": "Beste Serie"
+        "bestStreak": "Beste Serie",
+        "totalPlayed": "Gesamtspiele",
+        "wins": "Siege",
+        "streak": "Siegessträhne",
+        "xp": "Erfahrungspunkte"
     },
     "achievements": {
         "newAchievement": "🎉 Neue Errungenschaft!",
         "close": "Schließen",
-        "title": "Errungenschaften",
+        "title": "Erfolge",
         "common": "GEWÖHNLICH",
         "rare": "SELTEN",
         "epic": "EPISCH",
         "legendary": "LEGENDÄR",
-        "xpReward": "+{xp} EP"
+        "xpReward": "+{xp} EP",
+        "desc": "Verfolge deine Erfolge"
     },
     "settings": {
         "title": "Einstellungen",
         "autoVerify": "Auto-Bestätigung",
         "autoVerifyDesc": "Automatisch alle 2 Minuten nach abgeschlossenen Spielen suchen",
-        "notifications": "Browser-Benachrichtigungen",
+        "notifications": "Benachrichtigungen",
         "notificationsDesc": "Benachrichtigung erhalten, wenn dein Spiel bestätigt wurde",
         "sound": "Soundeffekte",
         "soundDesc": "Ton abspielen bei Errungenschaften oder Spielbestätigung",
         "cancel": "Abbrechen",
         "save": "Änderungen speichern",
-        "tip": "💡 Auto-Bestätigung funktioniert am besten, wenn du den Tab offen lässt."
+        "tip": "💡 Auto-Bestätigung funktioniert am besten, wenn du den Tab offen lässt.",
+        "profile": "Profil",
+        "language": "Sprache"
     },
     "slotMachine": {
         "loading": "Lade Champions…",
@@ -209,14 +246,15 @@
         "pullLever": "Hebel ziehen",
         "clickToSpin": "Klicken zum Drehen",
         "jackpot": "🎰 Jackpot!",
-        "spinAgain": "Erneut drehen"
+        "spinAgain": "Erneut drehen",
+        "spin": "Drehen"
     },
     "slotLever": {
         "spinning": "Dreht...",
-        "pull": "Ziehen"
+        "pull": "Hebel ziehen"
     },
     "login": {
-        "title": "League Roulette",
+        "title": "Anmelden",
         "subtitle": "Zufällige Champion-Herausforderung",
         "enterRiotId": "Gib deine Riot-ID ein",
         "riotId": "Riot ID",
@@ -230,10 +268,14 @@
         "disclaimer": "League Roulette wird nicht von Riot Games unterstützt",
         "errorRequired": "Bitte gib deine Riot-ID ein",
         "errorFormat": "Ungültiges Format. Verwende: Spielname#TAG",
-        "errorFormatExample": "Ungültiges Format. Beispiel: Spieler#EUW"
+        "errorFormatExample": "Ungültiges Format. Beispiel: Spieler#EUW",
+        "signIn": "Anmelden",
+        "signUp": "Registrieren",
+        "email": "E-Mail",
+        "password": "Passwort"
     },
     "rsoLogin": {
-        "title": "Bei League Roulette anmelden",
+        "title": "Riot-Login",
         "chooseMethod": "Wähle deine bevorzugte Anmeldemethode",
         "riotOauth": "Riot OAuth",
         "recommended": "Empfohlen",
@@ -280,11 +322,15 @@
         "legal": "Rechtliches",
         "followUs": "Folge uns",
         "copyright": "© {year} League Roulette. Alle Rechte vorbehalten.",
-        "disclaimer": "League Roulette wird nicht von Riot Games unterstützt."
+        "disclaimer": "League Roulette wird nicht von Riot Games unterstützt.",
+        "rights": "Alle Rechte vorbehalten",
+        "contact": "Kontakt",
+        "privacy": "Datenschutz",
+        "terms": "Nutzungsbedingungen"
     },
     "about": {
         "backToGame": "Zurück zum Spiel",
-        "title": "Über League Roulette",
+        "title": "Über uns",
         "subtitle": "Fordert League of Legends-Spieler seit 2024 heraus",
         "missionTitle": "Unsere Mission",
         "missionP1": "League Roulette wurde entwickelt, um League of Legends eine neue Ebene der Spannung zu verleihen.",
@@ -332,11 +378,14 @@
         "numbersPlayers": "Aktive Spieler",
         "ctaTitle": "Bereit, dich herauszufordern?",
         "ctaStart": "Jetzt spielen",
-        "ctaLearn": "Spielanleitung"
+        "ctaLearn": "Spielanleitung",
+        "description": "Über das Spiel",
+        "mission": "Unsere Mission",
+        "team": "Das Team"
     },
     "contact": {
         "backToHome": "Zurück zur Startseite",
-        "title": "Kontaktiere uns",
+        "title": "Kontakt",
         "subtitle": "Wir freuen uns, von dir zu hören!",
         "formName": "Name",
         "formEmail": "E-Mail",
@@ -366,12 +415,13 @@
         "twitterDesc": "Folge uns für Updates und Ankündigungen",
         "quickHelp": "Schnelle Hilfe",
         "quickHelpDesc": "Bevor du uns kontaktierst, prüfe unsere FAQ",
-        "viewFaq": "FAQ ansehen →"
+        "viewFaq": "FAQ ansehen →",
+        "submit": "Absenden"
     },
     "faq": {
         "backToGame": "Zurück zum Spiel",
         "title": "Häufig gestellte Fragen",
-        "subtitle": "Finde Antworten auf häufige Fragen zu League Roulette",
+        "subtitle": "Antworten finden",
         "sectionGettingStarted": "Erste Schritte",
         "sectionGameplay": "Spielablauf",
         "sectionVerification": "Bestätigung & Fortschritt",
@@ -380,7 +430,11 @@
         "stillQuestions": "Noch Fragen?",
         "stillQuestionsDesc": "Nicht gefunden, was du suchst? Wir helfen dir gerne!",
         "contactSupport": "Support kontaktieren",
-        "readTutorial": "Anleitung lesen"
+        "readTutorial": "Anleitung lesen",
+        "gettingStarted": "Einstieg",
+        "account": "Konto",
+        "gameplay": "Spielmechanik",
+        "support": "Support"
     },
     "faqContent": [
         {
@@ -442,8 +496,8 @@
     ],
     "howToPlay": {
         "backToGame": "Zurück zum Spiel",
-        "title": "Spielanleitung League Roulette",
-        "subtitle": "Deine vollständige Anleitung für den Einstieg",
+        "title": "Wie man spielt",
+        "subtitle": "Meister den zufälligen Champion-Generator",
         "whatIsTitle": "Was ist League Roulette?",
         "steps": {
             "account": {
@@ -478,10 +532,11 @@
     "tips": {
         "backToGame": "Zurück zum Spiel",
         "title": "Strategie & Champion-Tipps",
-        "subtitle": "Meistere die Kunst, zufällige Champions zu spielen",
-        "ctaTitle": "Bereit, besser zu werden?",
+        "subtitle": "Meister die Kunst, mit zufälligen Champions zu spielen",
+        "ctaTitle": "Verbessern?",
         "ctaPlay": "Spielen beginnen",
-        "ctaBasics": "Grundlagen lernen"
+        "ctaBasics": "Grundlagen lernen",
+        "ctaDesc": "Trete bei und lerne"
     },
     "tipsContent": {
         "intro": "Zufällige Champions zu spielen ist eine der besten Methoden, um in League of Legends besser zu werden. Diese Anleitung hilft dir, mit unbekannten Champions erfolgreich zu sein.",
@@ -566,11 +621,11 @@
     "leaderboard": {
         "backToGame": "Zurück zum Spiel",
         "title": "🏆 Rangliste",
-        "subtitle": "Wettbewerbe mit den besten League Roulette-Spielern",
-        "tabXp": "Gesamt-EP",
+        "subtitle": "Tritt gegen die besten Spieler an",
+        "tabXp": "Gesamte XP",
         "tabLevel": "Höchstes Level",
-        "tabChallenges": "Meiste Herausforderungen",
-        "tabStreak": "Aktuelle Serie",
+        "tabChallenges": "Challenges",
+        "tabStreak": "Siegessträhne",
         "tabBestStreak": "Beste Serie",
         "descXp": "Meiste Erfahrungspunkte gesammelt",
         "descLevel": "Höchstes Spielerlevel",
@@ -593,8 +648,8 @@
     "blog": {
         "back": "Zurück zu League Roulette",
         "sectionLabel": "League Roulette Blog",
-        "title": "LoL-Challenge-Anleitungen, zufällige Picks und Champion-Inspiration",
-        "desc": "Entdecke praktische Anleitungen, lustige Challenge-Ideen und neue Wege, League of Legends zu genießen.",
+        "title": "Guide für Challenges, zufällige Picks und Inspiration",
+        "desc": "Tipps und Anleitungen für das beste League Roulette-Erlebnis",
         "cardLabel": "LoL Roulette Artikel",
         "readArticle": "Artikel lesen",
         "backToBlog": "Zurück zum Blog",
@@ -602,11 +657,12 @@
         "ctaTitle": "Bereit für dein nächstes Spiel?",
         "ctaDesc": "Probiere unseren zufälligen Champion-Generator aus und stelle dein Wissen auf die Probe.",
         "browseMore": "Weitere Blogbeiträge durchsuchen",
-        "relatedReading": "Weiterführende Literatur"
+        "relatedReading": "Weiterführende Literatur",
+        "subtitle": "Neueste Artikel"
     },
     "privacy": {
         "backToHome": "Zurück zur Startseite",
-        "title": "Datenschutzerklärung",
+        "title": "Datenschutz",
         "lastUpdated": "Zuletzt aktualisiert: 12. Februar 2026"
     },
     "terms": {
@@ -615,12 +671,14 @@
         "lastUpdated": "Zuletzt aktualisiert: 12. Februar 2026"
     },
     "meta": {
-        "defaultTitle": "LoL Zufälliger Champion-Generator 🎯 | Roulette drehen & Zufalls-Pick erhalten",
+        "defaultTitle": "Zufälliger LoL-Champion-Generator & League Roulette",
         "titleTemplate": "%s | League Roulette",
-        "defaultDescription": "Du weißt nicht, was du in League of Legends spielen sollst? 🎯 Drehe das zufällige Champion-Roulette, fordere Freunde heraus und erklimme die Rangliste."
+        "defaultDescription": "Zufällige LoL-Champion-Challenges",
+        "title": "League Roulette",
+        "description": "Zufällige Champion-Herausforderungen"
     },
     "seo": {
-        "srHeading": "Kostenloser Zufälliger League of Legends Champion-Generator | LoL Roulette & Picker 2026",
+        "srHeading": "Kostenloser zufälliger LoL-Champion-Generator | League Roulette",
         "whatIsTitle": "Was ist League Roulette?",
         "whatIsText": "League Roulette ist ein <strong>kostenloser zufälliger Champion-Generator</strong> für League of Legends (LoL).",
         "howToTitle": "Wie man den zufälligen Champion-Picker verwendet",
@@ -640,7 +698,8 @@
             "Sieges-Serienverfolgung",
             "Globale Rangliste",
             "100% kostenlos",
-            "Mobilfreundliche Oberfläche"
+            "Mobilfreundliche Oberfläche",
+            "Free to Play"
         ],
         "whyTitle": "Warum einen zufälligen Champion-Generator verwenden?",
         "whyText": "Ein zufälliger LoL-Champion-Picker hilft dir:",
@@ -683,7 +742,9 @@
         "faq7Q": "Kann ich es für Rangliste verwenden?",
         "faq7A": "Absolut!",
         "faq8Q": "Ist League Roulette mobil optimiert?",
-        "faq8A": "100% mobilfreundlich."
+        "faq8A": "100% mobilfreundlich.",
+        "description": "Zufällige Herausforderungen",
+        "whatIs": "Was ist League Roulette?"
     },
     "localeSwitcher": {
         "label": "Sprache"
@@ -691,7 +752,7 @@
     "championMastery": {
         "title": "Champion-Meisterschaft",
         "totalPoints": "Gesamtpunkte",
-        "championsPlayed": "Champions gespielt",
+        "championsPlayed": "Gespielte Champions",
         "mastery7Plus": "Meisterschaft 7+",
         "mastery5Plus": "Meisterschaft 5+",
         "points": "Pkt",
@@ -711,14 +772,14 @@
     },
     "mastery": {
         "title": "Champion-Meisterschaft",
-        "subtitle": "Zeige deine Meisterschaftsstufen und Punkte für alle Champions",
+        "subtitle": "Meisterschaftsstufen und Punkte anzeigen",
         "loginRequired": "Anmeldung erforderlich",
-        "loginRequiredDesc": "Du musst dich mit deiner Riot-ID anmelden, um deine Champion-Meisterschaftsdaten zu sehen.",
+        "loginRequiredDesc": "Anmelden um Meisterschaft zu sehen",
         "signIn": "Anmelden",
         "winrateSection": "Siegesrate nach Champion"
     },
     "championWinrate": {
-        "loading": "Lade Spielverlauf...",
+        "loading": "Spielverlauf wird geladen...",
         "noData": "Kein Spielverlauf gefunden. Spiele zuerst ein paar Spiele!",
         "noLaneData": "Keine Champions für {lane} gefunden",
         "wins": "S",
@@ -731,13 +792,20 @@
             "mid": "Mitte",
             "adc": "ADC",
             "support": "Unterstützung"
+        },
+        "title": "Winrate",
+        "winRate": "Winrate",
+        "mode": {
+            "all": "Alle Modi",
+            "classic": "Klassisch",
+            "aram": "ARAM"
         }
     },
     "blogContent": [
         {
             "slug": "what-champion-should-i-play",
-            "title": "What Champion Should I Play in League of Legends?",
-            "description": "Not sure what champion to play in LoL? Use our random champion generator to get a fun pick, discover new mains, and make every queue feel fresh.",
+            "title": "Welcher Champion sollte ich in League of Legends spielen?",
+            "description": "Nicht sicher, welchen Champion du in LoL spielen sollst? Nutze unseren zufälligen Champion-Generator für Spaß.",
             "keywords": [
                 "what champion should i play lol",
                 "league of legends random champion generator",
@@ -804,8 +872,8 @@
         },
         {
             "slug": "lol-random-challenge",
-            "title": "Fun LoL Random Challenge Ideas",
-            "description": "Try these League of Legends random challenge ideas with our LoL Roulette tool. Great for solo queue, friend groups, custom games, and content challenges.",
+            "title": "Wie man den zufälligen Champion-Generator nutzt",
+            "description": "Lerne, wie du den zufälligen Champion-Generator verwendest, um jedes Mal einen neuen Champion zu erhalten",
             "keywords": [
                 "lol random challenge ideas",
                 "league of legends random challenge",
@@ -878,8 +946,8 @@
         },
         {
             "slug": "fun-lol-challenges",
-            "title": "Fun Ways to Play League of Legends",
-            "description": "Looking for fun League of Legends challenges? Here are creative ways to use a random champion generator with friends, duos, and casual teams.",
+            "title": "Beste Strategien für den zufälligen Champion",
+            "description": "Tipps und Tricks, um mit Champions zu gewinnen, die du noch nie gespielt hast",
             "keywords": [
                 "fun ways to play league of legends",
                 "fun lol challenges",
@@ -947,8 +1015,8 @@
         },
         {
             "slug": "best-champions-for-top-lane",
-            "title": "Best Top Lane Champions Current Patch",
-            "description": "Discover the strongest top lane champions.",
+            "title": "ARAM-Guide: Alles, was du wissen musst",
+            "description": "ARAM ist ein lustiges Spielmodus, bei dem der Champion immer zufällig ist. Hier ist dein umfassender Guide",
             "keywords": [
                 "best top lane champions",
                 "top lane champions current patch",
@@ -992,8 +1060,8 @@
         },
         {
             "slug": "mid-lane-champions-guide",
-            "title": "Mid Lane Champions Guide",
-            "description": "Complete guide to mid lane champions.",
+            "title": "Verbessere deine Meisterschaft mit zufälligen Champions",
+            "description": "Wie du deine Fähigkeiten in League of Legends durch zufällige Champions verbesserst",
             "keywords": [
                 "mid lane champions",
                 "best mid lane champions",
@@ -1516,5 +1584,25 @@
                 }
             ]
         }
-    ]
+    ],
+    "siteName": "League Roulette",
+    "siteTagline": "Random Champion Challenge",
+    "championPool": {
+        "title": "Champion-Pool",
+        "desc": "Wähle mindestens 5 Champions pro Lane",
+        "minPerLane": "5 pro Lane nötig",
+        "totalSelected": "Ausgewählt: {count}",
+        "cancel": "Abbrechen",
+        "save": "Speichern"
+    },
+    "heroTitle1": "League Roulette",
+    "heroTitle2": "Zufällige Herausforderung",
+    "heroSubtitle": "Teste dein Glück mit zufälligen Champion-Herausforderungen",
+    "heroCta": "Jetzt spielen",
+    "howItWorks": {
+        "title": "Wie es funktioniert",
+        "step1": "1. Wähle eine Challenge",
+        "step2": "2. Team zusammensetzen und spielen",
+        "step3": "3. Challenge abschließen und Belohnungen kassieren"
+    }
 }

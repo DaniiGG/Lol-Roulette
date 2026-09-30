@@ -1,0 +1,15 @@
+{
+    "backToGame": "Voltar ao jogo",
+    "title": "Ranking",
+    "subtitle": "Veja como você se compara aos melhores",
+    "yourRank": "Seu rank",
+    "loading": "Carregando ranking...",
+    "retry": "Tentar novamente",
+    "youBadge": "Você",
+    "emptyTitle": "Sem rankings ainda",
+    "emptyDesc": "Seja o primeiro a subir no ranking!",
+    "emptyCta": "Jogar",
+    "loginCta": "Faça login para ver seu rank",
+    "loginDesc": "Faça login para acompanhar seu progresso e competir com outros",
+    "loginButton": "Entrar"
+}

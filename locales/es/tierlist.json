@@ -1,0 +1,129 @@
+{
+    "title": "Lista de Clasificación de Campeones",
+    "subtitle": "Rankings de meta actuales para cada rol",
+    "updated": "Actualizado semanalmente",
+    "tiers": {
+        "S": "S - No puede faltar",
+        "A": "A - Selección fuerte",
+        "B": "B - Buena selección",
+        "C": "C - Medio",
+        "D": "D - Débil"
+    },
+    "roles": {
+        "top": {
+            "title": "Top",
+            "champions": [
+                {
+                    "name": "Gnar",
+                    "tier": "A",
+                    "role": "Top",
+                    "description": "Fuerte split-pusher con buen engage"
+                },
+                {
+                    "name": "Rumble",
+                    "tier": "A",
+                    "role": "Top",
+                    "description": "Excelente waveclear y daño en teamfights"
+                },
+                {
+                    "name": "Malphite",
+                    "tier": "S",
+                    "role": "Top",
+                    "description": "Tanque de línea frontal imparable con ulti"
+                }
+            ]
+        },
+        "mid": {
+            "title": "Mid",
+            "champions": [
+                {
+                    "name": "Ahri",
+                    "tier": "A",
+                    "role": "Mid",
+                    "description": "Alta movilidad y daño de explosión"
+                },
+                {
+                    "name": "Viktor",
+                    "tier": "S",
+                    "role": "Mid",
+                    "description": "Excelente scaling y presencia en teamfights"
+                },
+                {
+                    "name": "Zed",
+                    "tier": "A",
+                    "role": "Mid",
+                    "description": "Fuerte asesino con alto burst"
+                }
+            ]
+        },
+        "adc": {
+            "title": "ADC",
+            "champions": [
+                {
+                    "name": "Jinx",
+                    "tier": "S",
+                    "role": "ADC",
+                    "description": "Hyper carry con loco late game"
+                },
+                {
+                    "name": "Aphelios",
+                    "tier": "A",
+                    "role": "ADC",
+                    "description": "Sistema de armas flexible con alto daño"
+                },
+                {
+                    "name": "Caitlyn",
+                    "tier": "A",
+                    "role": "ADC",
+                    "description": "Fuerte rango y posicionamiento"
+                }
+            ]
+        },
+        "support": {
+            "title": "Soporte",
+            "champions": [
+                {
+                    "name": "Leona",
+                    "tier": "S",
+                    "role": "Support",
+                    "description": "Duro engage con combo devastador"
+                },
+                {
+                    "name": "Nautilus",
+                    "tier": "A",
+                    "role": "Support",
+                    "description": "Confiable CC y tanque"
+                },
+                {
+                    "name": "Lulu",
+                    "tier": "A",
+                    "role": "Support",
+                    "description": "Excelente peel y utilidad"
+                }
+            ]
+        },
+        "aram": {
+            "title": "ARAM",
+            "champions": [
+                {
+                    "name": "Brand",
+                    "tier": "S",
+                    "role": "ARAM",
+                    "description": "Daño AoE masivo en espacios cerrados"
+                },
+                {
+                    "name": "Ziggs",
+                    "tier": "A",
+                    "role": "ARAM",
+                    "description": "Excelente control de onda y daño de bomba"
+                },
+                {
+                    "name": "Alistar",
+                    "tier": "A",
+                    "role": "ARAM",
+                    "description": "Engages confiables y curación"
+                }
+            ]
+        }
+    }
+}

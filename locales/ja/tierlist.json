@@ -1,0 +1,129 @@
+{
+    "title": "チャンピオンティアリスト",
+    "subtitle": "各ロールの現在のメタランキング",
+    "updated": "週次更新",
+    "tiers": {
+        "S": "S - 必須",
+        "A": "A - 強い選択",
+        "B": "B - 良い選択",
+        "C": "C - 普通",
+        "D": "D - 弱い"
+    },
+    "roles": {
+        "top": {
+            "title": "トップ",
+            "champions": [
+                {
+                    "name": "Gnar",
+                    "tier": "A",
+                    "role": "Top",
+                    "description": "良いエンゲージを持つ強力なスプリッシャー"
+                },
+                {
+                    "name": "Rumble",
+                    "tier": "A",
+                    "role": "Top",
+                    "description": "優れたウェイクリアとチームファイトダメージ"
+                },
+                {
+                    "name": "Malphite",
+                    "tier": "S",
+                    "role": "Top",
+                    "description": "抑えられない最終兵器を持つフロントライナータンク"
+                }
+            ]
+        },
+        "mid": {
+            "title": "ミッド",
+            "champions": [
+                {
+                    "name": "Ahri",
+                    "tier": "A",
+                    "role": "Mid",
+                    "description": "高いモビリティとバートダメージ"
+                },
+                {
+                    "name": "Viktor",
+                    "tier": "S",
+                    "role": "Mid",
+                    "description": "優れたスケーリングとチームファイトへの存在感"
+                },
+                {
+                    "name": "Zed",
+                    "tier": "A",
+                    "role": "Mid",
+                    "description": "高いバートを持つ強力なアサシン"
+                }
+            ]
+        },
+        "adc": {
+            "title": "ADC",
+            "champions": [
+                {
+                    "name": "Jinx",
+                    "tier": "S",
+                    "role": "ADC",
+                    "description": "後期ゲームが狂うようなハイパーキャリー"
+                },
+                {
+                    "name": "Aphelios",
+                    "tier": "A",
+                    "role": "ADC",
+                    "description": "柔軟な武器システムと高いダメージ"
+                },
+                {
+                    "name": "Caitlyn",
+                    "tier": "A",
+                    "role": "ADC",
+                    "description": "強い射程とポジショニング"
+                }
+            ]
+        },
+        "support": {
+            "title": "サポート",
+            "champions": [
+                {
+                    "name": "Leona",
+                    "tier": "S",
+                    "role": "Support",
+                    "description": "壊滅的なコンボを持つハードエンゲージ"
+                },
+                {
+                    "name": "Nautilus",
+                    "tier": "A",
+                    "role": "Support",
+                    "description": "信頼性の高いCCとタンク性"
+                },
+                {
+                    "name": "Lulu",
+                    "tier": "A",
+                    "role": "Support",
+                    "description": "優れたピールとユーティリティ"
+                }
+            ]
+        },
+        "aram": {
+            "title": "ARAM",
+            "champions": [
+                {
+                    "name": "Brand",
+                    "tier": "S",
+                    "role": "ARAM",
+                    "description": "狭いスペースでの大規模AOEダメージ"
+                },
+                {
+                    "name": "Ziggs",
+                    "tier": "A",
+                    "role": "ARAM",
+                    "description": "優れたウェーブコントロールと爆弾ダメージ"
+                },
+                {
+                    "name": "Alistar",
+                    "tier": "A",
+                    "role": "ARAM",
+                    "description": "信頼性の高いエンゲージとヒーリング"
+                }
+            ]
+        }
+    }
+}

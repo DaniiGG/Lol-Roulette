@@ -1,0 +1,47 @@
+{
+    "title": "أوضاع اللعبة",
+    "subtitle": "ابحث عن الوضع الذي يناسب أسلوبك",
+    "modes": [
+        {
+            "name": "Summoner's Rift",
+            "description": "الخريطة الكلاسيكية 5 ضد 5. ثلاثة خطوط، اثنين من الأدغال، وهدف واحد: النصر.",
+            "icon": "🗺️",
+            "queueTypes": [
+                "Clasificado Solo",
+                "Clasificado Flex",
+                "Normal Draft",
+                "Normal Ciego"
+            ],
+            "bestFor": "لاعبين محترفين"
+        },
+        {
+            "name": "Howling Abyss",
+            "description": "خريطة ARAM بملعب واحد. كل شيء عشوائي وخطير.",
+            "icon": "🎮",
+            "queueTypes": [
+                "ARAM",
+                "URF ARAM"
+            ],
+            "bestFor": "لاعبين يفضلون الأكشن السريع"
+        },
+        {
+            "name": "ARAM",
+            "description": "وضع مباريات عشوائية في خريطة واحدة.",
+            "icon": "🤝",
+            "queueTypes": [
+                "One for All"
+            ],
+            "bestFor": "لعبة سريعة وممتعة"
+        },
+        {
+            "name": "Ultra Rapid Fire",
+            "description": "Super fast attacks and abilities. Pure chaos and fun.",
+            "icon": "⚡",
+            "queueTypes": [
+                "URF"
+            ],
+            "bestFor": "Players who want a lighthearted break"
+        }
+    ],
+    "tips": "Choose a mode that matches your playstyle"
+}

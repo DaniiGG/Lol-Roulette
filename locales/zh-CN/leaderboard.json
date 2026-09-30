@@ -1,0 +1,15 @@
+{
+    "backToGame": "Back to Game",
+    "title": "排行榜",
+    "subtitle": "See how you stack up against the best players",
+    "yourRank": "Your Rank",
+    "loading": "Loading leaderboard...",
+    "retry": "Retry",
+    "youBadge": "You",
+    "emptyTitle": "No rankings yet",
+    "emptyDesc": "Be the first to climb the ranks!",
+    "emptyCta": "Start Playing",
+    "loginCta": "Login to see your rank",
+    "loginDesc": "Sign in to track your progress and compete with others",
+    "loginButton": "Login"
+}

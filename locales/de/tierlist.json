@@ -1,0 +1,129 @@
+{
+    "title": "Champion-Rangliste",
+    "subtitle": "Aktuelle Meta-Rankings für jede Rolle",
+    "updated": "Wöchentlich aktualisiert",
+    "tiers": {
+        "S": "S - Pflichtpick",
+        "A": "A - Starkes Pick",
+        "B": "B - Gutes Pick",
+        "C": "C - Durchschnittlich",
+        "D": "D - Schwach"
+    },
+    "roles": {
+        "top": {
+            "title": "Top Lane",
+            "champions": [
+                {
+                    "name": "Gnar",
+                    "tier": "A",
+                    "role": "Top",
+                    "description": "Starker Split-Pusher mit gutem Engagement"
+                },
+                {
+                    "name": "Rumble",
+                    "tier": "A",
+                    "role": "Top",
+                    "description": "Hervorragende Wellenclearung und Teamfightschaden"
+                },
+                {
+                    "name": "Malphite",
+                    "tier": "S",
+                    "role": "Top",
+                    "description": "Unaufhaltsamer Frontline-Tank mit ultimativem Knockdown"
+                }
+            ]
+        },
+        "mid": {
+            "title": "Mid Lane",
+            "champions": [
+                {
+                    "name": "Ahri",
+                    "tier": "A",
+                    "role": "Mid",
+                    "description": "Hohe Mobilität und Burstschaden"
+                },
+                {
+                    "name": "Viktor",
+                    "tier": "S",
+                    "role": "Mid",
+                    "description": "Hervorragendes Skalieren und Teamfight-Präsenz"
+                },
+                {
+                    "name": "Zed",
+                    "tier": "A",
+                    "role": "Mid",
+                    "description": "Starker Assassine mit hohem Burst"
+                }
+            ]
+        },
+        "adc": {
+            "title": "ADC",
+            "champions": [
+                {
+                    "name": "Jinx",
+                    "tier": "S",
+                    "role": "ADC",
+                    "description": "Hyper-Carrier mit wahnsinnigem Late Game"
+                },
+                {
+                    "name": "Aphelios",
+                    "tier": "A",
+                    "role": "ADC",
+                    "description": "Flexibles Waffensystem mit hohem Schaden"
+                },
+                {
+                    "name": "Caitlyn",
+                    "tier": "A",
+                    "role": "ADC",
+                    "description": "Starker Bereich und Positionierung"
+                }
+            ]
+        },
+        "support": {
+            "title": "Support",
+            "champions": [
+                {
+                    "name": "Leona",
+                    "tier": "S",
+                    "role": "Support",
+                    "description": "Harter Engage mit verheerender Kombination"
+                },
+                {
+                    "name": "Nautilus",
+                    "tier": "A",
+                    "role": "Support",
+                    "description": "Zuverlässiger Crowd Control und Tankigkeit"
+                },
+                {
+                    "name": "Lulu",
+                    "tier": "A",
+                    "role": "Support",
+                    "description": "Hervorragendes Peeling und Nutzen"
+                }
+            ]
+        },
+        "aram": {
+            "title": "ARAM",
+            "champions": [
+                {
+                    "name": "Brand",
+                    "tier": "S",
+                    "role": "ARAM",
+                    "description": "Massiver AOE-Schaden in geschlossenen Räumen"
+                },
+                {
+                    "name": "Ziggs",
+                    "tier": "A",
+                    "role": "ARAM",
+                    "description": "Hervorragende Wellenkontrolle und Bombenschaden"
+                },
+                {
+                    "name": "Alistar",
+                    "tier": "A",
+                    "role": "ARAM",
+                    "description": "Zuverlässige Engages und Heilung"
+                }
+            ]
+        }
+    }
+}

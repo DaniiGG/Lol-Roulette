@@ -1,0 +1,67 @@
+{
+    "title": "인기 챔피언",
+    "subtitle": "이번 주 가장 많이 선택된 챔피언",
+    "sectionLabel": "인기 피크",
+    "champions": [
+        {
+            "name": "Ahri",
+            "tier": "S",
+            "role": "Mage",
+            "description": "높은 이동성을 가진法师"
+        },
+        {
+            "name": "Jinx",
+            "tier": "S",
+            "role": "ADC",
+            "description": "미친 라이트 게임을 가진 하이퍼 캐리"
+        },
+        {
+            "name": "Leona",
+            "tier": "S",
+            "role": "Support",
+            "description": "압도적 궁극기를 가진 라인프론트 탱크"
+        },
+        {
+            "name": "Malphite",
+            "tier": "S",
+            "role": "Tank",
+            "description": "Unstoppable ultimate tank"
+        },
+        {
+            "name": "Viktor",
+            "tier": "A",
+            "role": "Mage",
+            "description": "Excellent scaling mage"
+        },
+        {
+            "name": "Gnar",
+            "tier": "A",
+            "role": "Fighter",
+            "description": "Strong split-pusher with knockup"
+        },
+        {
+            "name": "Ziggs",
+            "tier": "A",
+            "role": "Mage",
+            "description": "Bomb specialist with AoE damage"
+        },
+        {
+            "name": "Rumble",
+            "tier": "A",
+            "role": "Mage",
+            "description": "Heat-based mage with burst"
+        },
+        {
+            "name": "Brand",
+            "tier": "S",
+            "role": "ARAM",
+            "description": "Massive AoE fire damage"
+        },
+        {
+            "name": "Caitlyn",
+            "tier": "A",
+            "role": "ADC",
+            "description": "Strong range and positioning"
+        }
+    ]
+}

@@ -1,0 +1,47 @@
+{
+    "title": "游戏模式",
+    "subtitle": "Find the mode that fits your style",
+    "modes": [
+        {
+            "name": "Summoner's Rift",
+            "description": "The classic 5v5 map. Three lanes, two jungles, and one objective: victory.",
+            "icon": "🗺️",
+            "queueTypes": [
+                "Ranked Solo",
+                "Ranked Flex",
+                "Normal Draft",
+                "Normal Blind Pick"
+            ],
+            "bestFor": "Players who enjoy strategic gameplay, teamfighting, and objective control"
+        },
+        {
+            "name": "ARAM",
+            "description": "All Random All Mid. One lane, all random champions. Fast and chaotic.",
+            "icon": "🎮",
+            "queueTypes": [
+                "ARAM",
+                "URF ARAM"
+            ],
+            "bestFor": "Players who want fast-paced action with random champions"
+        },
+        {
+            "name": "One for All",
+            "description": "Everyone plays the same champion. Coordination and teamwork matter most.",
+            "icon": "🤝",
+            "queueTypes": [
+                "One for All"
+            ],
+            "bestFor": "Players who love coordination and mastering a single champion together"
+        },
+        {
+            "name": "Ultra Rapid Fire",
+            "description": "Super fast attacks and abilities. Pure chaos and fun.",
+            "icon": "⚡",
+            "queueTypes": [
+                "URF"
+            ],
+            "bestFor": "Players who want a lighthearted break from normal gameplay"
+        }
+    ],
+    "tips": "Choose a mode that matches your playstyle and preferred pace of game"
+}

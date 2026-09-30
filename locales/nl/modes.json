@@ -1,0 +1,47 @@
+{
+    "title": "Spelmodi",
+    "subtitle": "Vind de modus die bij je stijl past",
+    "modes": [
+        {
+            "name": "Summoner's Rift",
+            "description": "De klassieke 5v5-kaart. Drie lanes, twee jungleën en één doel: overwinning.",
+            "icon": "🗺️",
+            "queueTypes": [
+                "Ranked Solo",
+                "Ranked Flex",
+                "Normal Draft",
+                "Normal Blind Pick"
+            ],
+            "bestFor": "Pro-spelers"
+        },
+        {
+            "name": "Howling Abyss",
+            "description": "ARAM-kaart met één speelveld. Alles is willekeurig en gevaarlijk.",
+            "icon": "🎮",
+            "queueTypes": [
+                "ARAM",
+                "URF ARAM"
+            ],
+            "bestFor": "Spelers die snelheid willen"
+        },
+        {
+            "name": "ARAM",
+            "description": "Willekeurige spelmodus op één kaart.",
+            "icon": "🤝",
+            "queueTypes": [
+                "One for All"
+            ],
+            "bestFor": "Snel en leuk spel"
+        },
+        {
+            "name": "Ultra Rapid Fire",
+            "description": "Super fast attacks and abilities. Pure chaos and fun.",
+            "icon": "⚡",
+            "queueTypes": [
+                "URF"
+            ],
+            "bestFor": "Players who want a lighthearted break from normal gameplay"
+        }
+    ],
+    "tips": "Choose a mode that matches your playstyle and preferred pace of game"
+}

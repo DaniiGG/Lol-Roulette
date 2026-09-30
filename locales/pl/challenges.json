@@ -1,0 +1,57 @@
+{
+    "weeklyChallenge": {
+        "title": "Wyzwanie Tygodniowe",
+        "subtitle": "Ukończ wyzwanie tygodniowe, aby zyskać uznanie",
+        "challenges": [
+            {
+                "id": "support-only",
+                "name": "Tylko Support",
+                "description": "Zagraj 3 mecze ten tydzień grając tylko z championami support. Bez carry!",
+                "emoji": "👩",
+                "deadline": "Ta Niedziela",
+                "difficulty": "Średni"
+            },
+            {
+                "id": "low-mastery",
+                "name": "Niska Biegłość",
+                "description": "Graj z championami, na których masz mniej niż 10 meczy. Rozszerz swój pool!",
+                "emoji": "🎯",
+                "deadline": "Ta Niedziela",
+                "difficulty": "Trudny"
+            },
+            {
+                "id": "friends-roulette",
+                "name": "Ruleta Przyjaciół",
+                "description": "Zaskocz 3 przyjaciół na grupową ruletę. Każdy kręci i gra swoją wybór!",
+                "emoji": "🎉",
+                "deadline": "Ta Niedziela",
+                "difficulty": "Łatwy"
+            },
+            {
+                "id": "aram-only",
+                "name": "Tylko ARAM",
+                "description": "Zagraj 5 meczy w Howling Abyss ten tydzień. Champion zawsze losowy!",
+                "emoji": "🏟️",
+                "deadline": "Ta Niedziela",
+                "difficulty": "Średni"
+            },
+            {
+                "id": "champion-rotation",
+                "name": "Rotacja Championów",
+                "description": "Graj z każdym darmowym champion w rotacji tego tygodnia. Jedna gra na każdego!",
+                "emoji": "🔄",
+                "deadline": "Ta Niedziela",
+                "difficulty": "Trudny"
+            }
+        ]
+    },
+    "createChallenge": "Stwórz swoje wyzwanie",
+    "shareCode": "Udostępnij kod",
+    "joinChallenge": "Dołącz i Kręć",
+    "back": "Wstecz",
+    "sectionLabel": "Wyzwanie Tygodniowe",
+    "startPlaying": "Zaczynamy",
+    "browseMore": "Przeglądaj Blog",
+    "aramNote": "W ARAM champion jest zawsze losowy - po prostu wpisz i graj!",
+    "noChampions": "Brak wyzwań tygodniowych"
+}

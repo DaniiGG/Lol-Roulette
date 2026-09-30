@@ -1,0 +1,129 @@
+{
+    "title": "Lista Tierów Championów",
+    "subtitle": "Aktualne ranki meta dla każdej roli",
+    "updated": "Aktualizacja cotygodniowa",
+    "tiers": {
+        "S": "S - Must Pick",
+        "A": "A - Mocny Pick",
+        "B": "B - Dobry Pick",
+        "C": "C - Średni",
+        "D": "D - Słaby"
+    },
+    "roles": {
+        "top": {
+            "title": "Top",
+            "champions": [
+                {
+                    "name": "Gnar",
+                    "tier": "A",
+                    "role": "Top",
+                    "description": "Silny split-pusher z dobrym engage"
+                },
+                {
+                    "name": "Rumble",
+                    "tier": "A",
+                    "role": "Top",
+                    "description": "Świetne clearowanie fal i obrażenia w drużynie"
+                },
+                {
+                    "name": "Malphite",
+                    "tier": "S",
+                    "role": "Top",
+                    "description": "Nie do pokonania tank linii frontowych z ulty"
+                }
+            ]
+        },
+        "mid": {
+            "title": "Mid",
+            "champions": [
+                {
+                    "name": "Ahri",
+                    "tier": "A",
+                    "role": "Mid",
+                    "description": "Wysoka mobilność i obrażenia eksplozyjne"
+                },
+                {
+                    "name": "Viktor",
+                    "tier": "S",
+                    "role": "Mid",
+                    "description": "Świetne skalowanie i obecność w drużynie"
+                },
+                {
+                    "name": "Zed",
+                    "tier": "A",
+                    "role": "Mid",
+                    "description": "Silny zabójca z wysokim burstem"
+                }
+            ]
+        },
+        "adc": {
+            "title": "ADC",
+            "champions": [
+                {
+                    "name": "Jinx",
+                    "tier": "S",
+                    "role": "ADC",
+                    "description": "Hyper carry z wariackim late game"
+                },
+                {
+                    "name": "Aphelios",
+                    "tier": "A",
+                    "role": "ADC",
+                    "description": "Elastyczny system broni z dużym obrażeniem"
+                },
+                {
+                    "name": "Caitlyn",
+                    "tier": "A",
+                    "role": "ADC",
+                    "description": "Silny zasięg i pozycjonowanie"
+                }
+            ]
+        },
+        "support": {
+            "title": "Support",
+            "champions": [
+                {
+                    "name": "Leona",
+                    "tier": "S",
+                    "role": "Support",
+                    "description": "Twardy engage z dewastującym combo"
+                },
+                {
+                    "name": "Nautilus",
+                    "tier": "A",
+                    "role": "Support",
+                    "description": "Niezdrowy CC i tank"
+                },
+                {
+                    "name": "Lulu",
+                    "tier": "A",
+                    "role": "Support",
+                    "description": "Świetny peel i użyteczność"
+                }
+            ]
+        },
+        "aram": {
+            "title": "ARAM",
+            "champions": [
+                {
+                    "name": "Brand",
+                    "tier": "S",
+                    "role": "ARAM",
+                    "description": "Masowe obrażenia AoE w zamkniętych przestrzeniach"
+                },
+                {
+                    "name": "Ziggs",
+                    "tier": "A",
+                    "role": "ARAM",
+                    "description": "Świetna kontrola fal i obrażenia bombowe"
+                },
+                {
+                    "name": "Alistar",
+                    "tier": "A",
+                    "role": "ARAM",
+                    "description": "Niezawodne engage i leczenie"
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,57 @@
+{
+    "weeklyChallenge": {
+        "title": "Wöchentliche Challenge",
+        "subtitle": "Schließe die Wochen-Challenge ab, um Ruhm zu ernten",
+        "challenges": [
+            {
+                "id": "support-only",
+                "name": "Nur Support",
+                "description": "Spiele 3 Spiele diese Woche nur mit Support-Champions. Keine Carries erlaubt!",
+                "emoji": "👩",
+                "deadline": "Dieser Sonntag",
+                "difficulty": "Mittel"
+            },
+            {
+                "id": "low-mastery",
+                "name": "Geringe Meisterschaft",
+                "description": "Spiele mit Champions, die du weniger als 10 Spiele hast. Erweitere deinen Pool!",
+                "emoji": "🎯",
+                "deadline": "Dieser Sonntag",
+                "difficulty": "Schwer"
+            },
+            {
+                "id": "friends-roulette",
+                "name": "Freunde Roulette",
+                "description": "Fordere 3 Freunde zu einer Gruppen-Roulette heraus. Jeder dreht und spielt seine Wahl!",
+                "emoji": "🎉",
+                "deadline": "Dieser Sonntag",
+                "difficulty": "Leicht"
+            },
+            {
+                "id": "aram-only",
+                "name": "Nur ARAM",
+                "description": "Spiele 5 Spiele in Howling Abyss diese Woche. Der Champion ist immer zufällig!",
+                "emoji": "🏟️",
+                "deadline": "Dieser Sonntag",
+                "difficulty": "Mittel"
+            },
+            {
+                "id": "champion-rotation",
+                "name": "Champion-Drehung",
+                "description": "Spiele mit jedem kostenlosen Champion in dieser Wochen-Drehung. Eine Runde pro Stück!",
+                "emoji": "🔄",
+                "deadline": "Dieser Sonntag",
+                "difficulty": "Schwer"
+            }
+        ]
+    },
+    "createChallenge": "Eigene Challenge erstellen",
+    "shareCode": "Code teilen",
+    "joinChallenge": "Beitreten & Drehen",
+    "back": "Zurück",
+    "sectionLabel": "Wöchentliche Challenge",
+    "startPlaying": "Spielen",
+    "browseMore": "Blog durchsuchen",
+    "aramNote": "In ARAM ist der Champion immer zufällig - einfach einloggen und spielen!",
+    "noChampions": "Keine wöchentlichen Challenges verfügbar"
+}

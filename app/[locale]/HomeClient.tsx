@@ -1,8 +1,9 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import Link from "next/link"
 import { useTranslations } from "next-intl"
+import { useSearchParams } from "next/navigation"
 import { supabase } from "@/lib/supabase"
 import { ACHIEVEMENTS, checkAchievement } from "@/lib/achievements"
 import {
@@ -26,6 +27,7 @@ import RouletteWheel from "@/components/RouletteWheel"
 import SlotMachineRoulette from "@/components/Slotmachineroulette"
 import SEOContent from "@/components/SEOContent"
 import ChampionStats from "@/components/ChampionStats"
+import MatchSimulator from "@/components/MatchSimulator"
 import { AutoVerifier } from "@/lib/auto-verify"
 import RSOLoginModal from "@/components/RSOLoginmodal"
 import ChampionPoolModal from "@/components/ChampionPoolModal"
@@ -35,12 +37,18 @@ import Script from "next/script"
 
 export default function Home() {
   const t = useTranslations('home')
+  const searchParams = useSearchParams()
+  const urlChallenge = searchParams.get('challenge')
 
   // User state
   const [user, setUser] = useState<any>(null)
   const [sessionToken, setSessionToken] = useState<string | null>(null)
   const [showLoginModal, setShowLoginModal] = useState(false)
   const [showAchievementsModal, setShowAchievementsModal] = useState(false)
+
+  // Challenge state
+  const [activeChallengeId, setActiveChallengeId] = useState<string | null>(urlChallenge || null)
+  const [challengeLane, setChallengeLane] = useState<string>('all')
 
   // Roulette state (PÚBLICO - no requiere login)
   const [champ, setChamp] = useState<any>(null)
@@ -59,17 +67,18 @@ export default function Home() {
   const [newAchievements, setNewAchievements] = useState<string[]>([])
   const [userAchievements, setUserAchievements] = useState<string[]>([])
 
-  // Active challenge tracking (para evitar spins infinitos)
-  const [activeChallenge, setActiveChallenge] = useState<any>(null)
-  const [rerollCount, setRerollCount] = useState(0)  // Track rerolls (unlimited for now)
-  const MAX_REROLLS = Infinity  // Unlimited spins
+   // Active challenge tracking (para evitar spins infinitos)
+   const activeChallengeRef = useRef<any>(null)
+   const [rerollCount, setRerollCount] = useState(0)  // Track rerolls (unlimited for now)
+   const MAX_REROLLS = Infinity  // Unlimited spins
 
   // Info modal
   const [showInfoModal, setShowInfoModal] = useState(false)
 
-  // Auto-verification
-  const [autoVerifier, setAutoVerifier] = useState<AutoVerifier | null>(null)
-  const [isAutoVerifying, setIsAutoVerifying] = useState(false)
+// Auto-verification
+   const [autoVerifier, setAutoVerifier] = useState<AutoVerifier | null>(null)
+   const [isAutoVerifying, setIsAutoVerifying] = useState(false)
+   const [showSimulator, setShowSimulator] = useState(false)
 
   // Cargar champion pool de localStorage al iniciar
   useEffect(() => {
@@ -78,6 +87,27 @@ export default function Home() {
       setChampionPool(saved)
     }
   }, [])
+
+  // Challenge lane mapping
+  const getLaneForChallenge = (challengeId: string): string => {
+    const laneMap: Record<string, string> = {
+      'support-only': 'support',
+      'aram-only': 'aram',
+    }
+    return laneMap[challengeId] || 'all'
+  }
+
+  // Update challenge lane when challenge changes
+  useEffect(() => {
+    if (urlChallenge) {
+      setActiveChallengeId(urlChallenge)
+      setChallengeLane(getLaneForChallenge(urlChallenge))
+      setSelectedLane(getLaneForChallenge(urlChallenge))
+    } else {
+      setActiveChallengeId(null)
+      setChallengeLane('all')
+    }
+  }, [urlChallenge])
 
   // Verificar sesión al cargar
   useEffect(() => {
@@ -139,7 +169,8 @@ export default function Home() {
       console.error('❌ Error loading challenge:', challengeError)
     }
     if (pendingChallenge) {
-      setActiveChallenge(pendingChallenge)
+      activeChallengeRef.current = pendingChallenge
+      setActiveChallengeId(pendingChallenge.id)
       setChamp({
         id: pendingChallenge.champion_name,
         key: Number(pendingChallenge.champion_id),
@@ -166,16 +197,17 @@ export default function Home() {
       // Guardar/actualizar challenge SOLO si está logueado
       if (user) {
         // Si ya existe un challenge pendiente, actualizarlo
-        if (activeChallenge) {
+        if (activeChallengeRef.current) {
           const { challenge: updatedChallenge } = await rerollChallenge(sessionToken!, {
-            challenge_id: activeChallenge.id,
+            challenge_id: activeChallengeRef.current.id,
             champion_id: String(champData.key),
             champion_name: champData.name,
             lane: selectedLane,
             reroll_count: newRerollCount
           })
 
-          setActiveChallenge(updatedChallenge)
+          activeChallengeRef.current = updatedChallenge
+          setActiveChallengeId(updatedChallenge.id)
 
           // Reiniciar auto-verificación
           if (sessionToken) {
@@ -191,7 +223,8 @@ export default function Home() {
             reroll_count: newRerollCount
           })
 
-          setActiveChallenge(newChallenge)
+          activeChallengeRef.current = newChallenge
+          setActiveChallengeId(newChallenge.id)
 
           // Iniciar auto-verificación
           if (sessionToken && newChallenge) {
@@ -276,7 +309,7 @@ export default function Home() {
           puuid: user.puuid,
           region: user.region,
           championId: champ.key,
-          challengeCreatedAt: activeChallenge?.created_at
+          challengeCreatedAt: activeChallengeRef.current?.created_at
         })
       })
 
@@ -303,7 +336,8 @@ export default function Home() {
       }
 
       // Limpiar active challenge
-      setActiveChallenge(null)
+      setActiveChallengeId(null)
+      activeChallengeRef.current = null
 
     } catch (error) {
       console.error('Verification error:', error)
@@ -314,13 +348,13 @@ export default function Home() {
   }
 
   const handleVictory = async (matchData: any) => {
-    if (!user || !activeChallenge) return
+    if (!user || !activeChallengeRef.current) return
 
     confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 } })
 
     try {
       const result = await completeChallengeById(sessionToken!, {
-        challenge_id: activeChallenge.id,
+        challenge_id: activeChallengeRef.current.id,
         match_id: matchData.matchId
       })
 
@@ -328,7 +362,8 @@ export default function Home() {
 
       // Reset reroll count after successful verification
       setRerollCount(0)
-      setActiveChallenge(null)
+      activeChallengeRef.current = null
+      setActiveChallengeId(null)
 
       const unlockedTypes = (result.achievements || []).map((achievement: any) => achievement.achievement_type)
       if (unlockedTypes.length > 0) {
@@ -343,10 +378,10 @@ export default function Home() {
 
   const handleFailure = async (matchData: any) => {
     if (!user) return
-    if (activeChallenge) {
+    if (activeChallengeRef.current) {
       try {
         await failChallenge(sessionToken!, {
-          challenge_id: activeChallenge.id,
+          challenge_id: activeChallengeRef.current.id,
           match_id: matchData.matchId,
           match_data: matchData.stats
         })
@@ -362,7 +397,8 @@ export default function Home() {
     const updatedUser = { ...user, current_streak: 0 }
     setUser(updatedUser)
     setRerollCount(0)
-    setActiveChallenge(null)
+    activeChallengeRef.current = null
+    setActiveChallengeId(null)
   }
 
   const checkAndUnlockAchievements = async (stats: any) => {
@@ -409,7 +445,8 @@ export default function Home() {
     setSessionToken(null)
     setVerificationResult(null)
     setRerollCount(0)  // Reset rerolls on logout
-    setActiveChallenge(null)
+    setActiveChallengeId(null)
+    activeChallengeRef.current = null
   }
 
   return (
@@ -537,11 +574,24 @@ export default function Home() {
                 </div>
               </div>
 
+              {/* Challenge Active Banner */}
+              {activeChallengeId && (
+                <div className="mx-auto mb-4 max-w-4xl rounded-2xl border border-[#C89B3C]/40 bg-[#C89B3C]/10 p-4 text-center">
+                  <p className="text-sm font-semibold text-[#C89B3C]">⚡ Active Challenge</p>
+                  <p className="text-lg text-white">
+                    {t('challengeActive') || 'Challenge Active - Lane is locked'}
+                  </p>
+                  <p className="text-sm text-neutral-400">
+                    {challengeLane !== 'all' ? `${t('lane') || 'Lane'}: ${challengeLane}` : ''}
+                  </p>
+                </div>
+              )}
+
               {/* Lane Selector */}
               <LaneSelector
                 selectedLane={selectedLane}
                 onLaneChange={setSelectedLane}
-                disabled={!!(user && rerollCount > MAX_REROLLS)}
+                disabled={!!activeChallengeId || !!(user && rerollCount > MAX_REROLLS)}
               />
 
               {/* Champion Pool Toggle */}
@@ -610,17 +660,37 @@ export default function Home() {
               )}
 
 
-              {/* Auto-Verification Indicator */}
-              {isAutoVerifying && champ && user && (
-                <AutoVerifyIndicator
-                  isActive={isAutoVerifying}
-                  championName={champ.name}
-                  onManualVerify={handleManualVerify}
-                  onCancel={stopAutoVerification}
-                />
-              )}
+{/* Auto-Verification Indicator */}
+               {isAutoVerifying && champ && user && (
+                 <AutoVerifyIndicator
+                   isActive={isAutoVerifying}
+                   championName={champ.name}
+                   onManualVerify={handleManualVerify}
+                   onCancel={stopAutoVerification}
+                 />
+               )}
 
-              {/* CTA para login (solo si no está logueado y ya giró) */}
+{/* Match Simulator Toggle - Solo desarrollo */}
+                {process.env.NODE_ENV === 'development' && (
+                  <>
+                    <button
+                      onClick={() => setShowSimulator(!showSimulator)}
+                      className="w-full py-3 rounded-xl bg-neutral-800 hover:bg-neutral-700 text-neutral-400 hover:text-white transition text-sm font-semibold flex items-center justify-center gap-2"
+                    >
+                      <span className="text-lg">🧪</span>
+                      {showSimulator ? 'Hide' : 'Show'} Match Simulator
+                    </button>
+
+                    {/* Match Simulator */}
+                    {showSimulator && (
+                      <div className="mt-4">
+                        <MatchSimulator />
+                      </div>
+                    )}
+                  </>
+                )}
+
+               {/* CTA para login (solo si no está logueado y ya giró) */}
               {!user && champ && (
                 <div className="p-6 rounded-2xl bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/30">
                   <div className="flex items-start gap-4">

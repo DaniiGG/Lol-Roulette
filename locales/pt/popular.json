@@ -1,0 +1,67 @@
+{
+    "title": "Campeões Populares",
+    "subtitle": "Campeões mais escolhidos nesta semana",
+    "sectionLabel": "Picks Populares",
+    "champions": [
+        {
+            "name": "Ahri",
+            "tier": "S",
+            "role": "Mage",
+            "description": "Mage de alta mobilidade"
+        },
+        {
+            "name": "Jinx",
+            "tier": "S",
+            "role": "ADC",
+            "description": "Hyper carry com late game insano"
+        },
+        {
+            "name": "Leona",
+            "tier": "S",
+            "role": "Support",
+            "description": "Tanque de linha frontal inabalável"
+        },
+        {
+            "name": "Malphite",
+            "tier": "S",
+            "role": "Tank",
+            "description": "Unstoppable ultimate tank"
+        },
+        {
+            "name": "Viktor",
+            "tier": "A",
+            "role": "Mage",
+            "description": "Excellent scaling mage"
+        },
+        {
+            "name": "Gnar",
+            "tier": "A",
+            "role": "Fighter",
+            "description": "Strong split-pusher with knockup"
+        },
+        {
+            "name": "Ziggs",
+            "tier": "A",
+            "role": "Mage",
+            "description": "Bomb specialist with AoE damage"
+        },
+        {
+            "name": "Rumble",
+            "tier": "A",
+            "role": "Mage",
+            "description": "Heat-based mage with burst"
+        },
+        {
+            "name": "Brand",
+            "tier": "S",
+            "role": "ARAM",
+            "description": "Massive AoE fire damage"
+        },
+        {
+            "name": "Caitlyn",
+            "tier": "A",
+            "role": "ADC",
+            "description": "Strong range and positioning"
+        }
+    ]
+}

@@ -1,0 +1,47 @@
+{
+    "title": "게임 모드",
+    "subtitle": "스타일에 맞는 모드를 찾으세요",
+    "modes": [
+        {
+            "name": "Summoner's Rift",
+            "description": "클래식 5v5 맵. 세 개의 라인, 두 개의 정글, 그리고 하나의 목표: 승리.",
+            "icon": "🗺️",
+            "queueTypes": [
+                "Ranked Solo",
+                "Ranked Flex",
+                "Normal Draft",
+                "Normal Blind Pick"
+            ],
+            "bestFor": "프로 플레이어"
+        },
+        {
+            "name": "Howling Abyss",
+            "description": "하나의 게임 장소를 가진 ARAM 맵. 모두가 랜덤하고 위험합니다.",
+            "icon": "🎮",
+            "queueTypes": [
+                "ARAM",
+                "URF ARAM"
+            ],
+            "bestFor": "빠른 액션을 좋아하는 플레이어"
+        },
+        {
+            "name": "ARAM",
+            "description": "한 개의 맵에서 랜덤 게임 모드.",
+            "icon": "🤝",
+            "queueTypes": [
+                "One for All"
+            ],
+            "bestFor": "빠르고 재미있는 게임"
+        },
+        {
+            "name": "Ultra Rapid Fire",
+            "description": "Super fast attacks and abilities. Pure chaos and fun.",
+            "icon": "⚡",
+            "queueTypes": [
+                "URF"
+            ],
+            "bestFor": "Players who want a lighthearted break from normal gameplay"
+        }
+    ],
+    "tips": "Choose a mode that matches your playstyle and preferred pace of game"
+}

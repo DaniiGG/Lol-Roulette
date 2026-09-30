@@ -12,14 +12,18 @@
         "privacy": "Privacy",
         "terms": "Voorwaarden",
         "siteName": "League Roulette",
-        "siteTagline": "Willekeurige Kampioen Uitdaging"
+        "siteTagline": "Willekeurige Kampioen Uitdaging",
+        "challenges": "Uitdagingen",
+        "tierlist": "Ranglijst",
+        "modes": "Modi",
+        "popular": "Populair"
     },
     "home": {
         "howItWorks": "Hoe het werkt",
-        "leaderboard": "Klassement",
+        "leaderboard": "Ranglijst",
         "achievements": "Prestaties",
         "logout": "Uitloggen",
-        "loginToTrack": "Inloggen om te Volgen",
+        "loginToTrack": "Inloggen om bij te houden",
         "heroTitle1": "LEAGUE ROULETTE",
         "heroTitle2": "WILLEKEURIGE",
         "heroTitle3": "KAMPIOEN",
@@ -53,7 +57,7 @@
             }
         ],
         "matchMaking": {
-            "verifying": "Wedstrijd verifiëren...",
+            "verifying": "Wedstrijd worden geverifieerd...",
             "verify": "Verifieer Wedstrijd"
         }
     },
@@ -62,10 +66,15 @@
         "readyToBegin": "Klaar om te beginnen",
         "pressBelow": "Druk op de knop hieronder",
         "spinning": "Draaien",
-        "spinRoulette": "Draai aan de Roulette",
+        "spinRoulette": "Draai Roulette",
         "verifying": "Bezig met verifiëren...",
         "verifyMatch": "Verifieer Wedstrijd",
-        "spinAgain": "Opnieuw Draaien"
+        "spinAgain": "Opnieuw Draaien",
+        "playWith": "Spelen met",
+        "stats": "Statistieken",
+        "mastery": "Meesterschap",
+        "winrate": "Winst Percentage",
+        "championPool": "Champion Pool"
     },
     "championSelector": {
         "yourChampion": "Jouw Kampioen",
@@ -77,7 +86,13 @@
         "rerollUnlimited": "Herrol (Onbeperkt)",
         "unlimitedSpins": "Niet blij? Onbeperkte spins",
         "spinsLeft": "Niet blij? Nog {n} spin(s) over",
-        "noRerolls": "✨ Kies wijs! Geen herrol meer over"
+        "noRerolls": "✨ Kies wijs! Geen herrol meer over",
+        "top": "Top",
+        "mid": "Midden",
+        "jungle": "Jungle",
+        "bottom": "Beneden",
+        "support": "Support",
+        "adc": "Beneden"
     },
     "championStats": {
         "statistics": "📊 {champion} Statistieken",
@@ -94,8 +109,8 @@
         "allLanes": "Alle Banen",
         "top": "Top",
         "jungle": "Jungle",
-        "mid": "Mid",
-        "adc": "ADC",
+        "mid": "Midden",
+        "adc": "Beneden",
         "support": "Support",
         "anyChampion": "Elke kampioen",
         "islandLife": "Eiland leven",
@@ -108,10 +123,11 @@
         "jng": "JNG",
         "midShort": "MID",
         "adcShort": "ADC",
-        "sup": "SUP"
+        "sup": "SUP",
+        "bottom": "Beneden"
     },
     "infoModal": {
-        "title": "Hoe Het Werkt",
+        "title": "Informatie",
         "step1Title": "Draai aan de Roulette",
         "step1Desc": "Selecteer een baan of laat het op Alle Banen staan, klik dan op Draai voor een willekeurige kampioen.",
         "step2Title": "Speel League of Legends",
@@ -140,16 +156,22 @@
         "faqPasswordA": "Ja. We gebruiken Riot's officiële OAuth — je wachtwoord wordt nooit opgeslagen.",
         "faqModesQ": "Welke modi tellen?",
         "faqModesA": "Alle officiële modi tellen: Summoner's Rift, ARAM en roulerende modi.",
-        "gotIt": "Ik snap het, laten we spelen!"
+        "gotIt": "Ik snap het, laten we spelen!",
+        "description": "Beschrijving"
     },
     "autoVerify": {
-        "title": "Auto-Scan",
+        "title": "Automatische verificatie",
         "monitoring": "Controleren op {champion} wedstrijd.\nSpeel je wedstrijd — wij regelen de rest.",
         "nextCheck": "Volgende check",
         "elapsed": "Verstreken",
         "verifyNow": "Nu Verifiëren",
         "cancel": "Annuleren",
-        "info": "Controleert elke 2 min gedurende 1 uur. Klik op Nu Verifiëren voor direct resultaat."
+        "info": "Controleert elke 2 min gedurende 1 uur. Klik op Nu Verifiëren voor direct resultaat.",
+        "verify": "Verifiëren",
+        "status": "Status",
+        "pending": "In afwachting",
+        "success": "Succesvol",
+        "failed": "Mislukt"
     },
     "verificationResult": {
         "scanning": "Zoeken naar wedstrijd...",
@@ -168,7 +190,11 @@
         "earned": "Verdeid",
         "involved": "Betrokken",
         "xpEarned": "+100 XP",
-        "xpLabel": "verdiend"
+        "xpLabel": "verdiend",
+        "title": "Verificatieresultaat",
+        "matchVerified": "Wedstrijd bevestigd",
+        "championMatched": "Champion overeenkomstig",
+        "championMismatch": "Champion niet overeenkomstig"
     },
     "userStats": {
         "level": "Nv.{level}",
@@ -176,7 +202,11 @@
         "challenges": "Uitdagingen",
         "xpProgress": "XP Voortgang",
         "currentStreak": "Huidige Streak",
-        "bestStreak": "Beste Streak"
+        "bestStreak": "Beste Streak",
+        "totalPlayed": "Totaal gespeeld",
+        "wins": "Overwinningen",
+        "streak": "Winstreeks",
+        "xp": "Ervaringspunten"
     },
     "achievements": {
         "newAchievement": "🎉 Nieuwe Prestatie!",
@@ -186,19 +216,22 @@
         "rare": "ZELDZAAM",
         "epic": "EPISCH",
         "legendary": "LEGENDAIRE",
-        "xpReward": "+{xp} XP"
+        "xpReward": "+{xp} XP",
+        "desc": "Volg je prestaties"
     },
     "settings": {
         "title": "Instellingen",
         "autoVerify": "Auto-Verificatie",
         "autoVerifyDesc": "Automatisch controleren op voltooide wedstrijden elke 2 minuten",
-        "notifications": "Browser Meldingen",
+        "notifications": "Meldingen",
         "notificationsDesc": "Melding ontvangen wanneer je wedstrijd is geverifieerd",
         "sound": "Geluidseffecten",
         "soundDesc": "Geluid afspelen bij prestaties of verificaties",
         "cancel": "Annuleren",
         "save": "Wijzigingen Opslaan",
-        "tip": "💡 Auto-verificatie werkt het beste met het tabblad open."
+        "tip": "💡 Auto-verificatie werkt het beste met het tabblad open.",
+        "profile": "Profiel",
+        "language": "Taal"
     },
     "slotMachine": {
         "loading": "Kampioenen laden...",
@@ -209,14 +242,15 @@
         "pullLever": "Trek aan de Hendel",
         "clickToSpin": "Klik om te draaien",
         "jackpot": "🎰 Jackpot!",
-        "spinAgain": "Opnieuw draaien"
+        "spinAgain": "Opnieuw draaien",
+        "spin": "Draaien"
     },
     "slotLever": {
         "spinning": "Draaien...",
-        "pull": "Trek"
+        "pull": "Trekken"
     },
     "login": {
-        "title": "League Roulette",
+        "title": "Inloggen",
         "subtitle": "Willekeurige Kampioen Uitdaging",
         "enterRiotId": "Voer je Riot ID in om te beginnen",
         "riotId": "Riot ID",
@@ -230,10 +264,14 @@
         "disclaimer": "League Roulette wordt niet onderschreven door Riot Games",
         "errorRequired": "Voer je Riot ID in",
         "errorFormat": "Ongeldig formaat. Gebruik: SpelNaam#TAG",
-        "errorFormatExample": "Ongeldig formaat. Voorbeeld: Speler#EUW"
+        "errorFormatExample": "Ongeldig formaat. Voorbeeld: Speler#EUW",
+        "signIn": "Inloggen",
+        "signUp": "Registreren",
+        "email": "E-mail",
+        "password": "Wachtwoord"
     },
     "rsoLogin": {
-        "title": "Inloggen",
+        "title": "Riot inloggen",
         "chooseMethod": "Kies je inlogmethode",
         "riotOauth": "Riot OAuth",
         "recommended": "Aanbevolen",
@@ -280,11 +318,15 @@
         "legal": "Juridisch",
         "followUs": "Volg Ons",
         "copyright": "© {year} League Roulette. Alle rechten voorbehouden.",
-        "disclaimer": "League Roulette wordt niet onderschreven door Riot Games."
+        "disclaimer": "League Roulette wordt niet onderschreven door Riot Games.",
+        "rights": "Alle rechten voorbehouden",
+        "contact": "Contact",
+        "privacy": "Privacy",
+        "terms": "Gebruiksvoorwaarden"
     },
     "about": {
         "backToGame": "Terug naar Spel",
-        "title": "Over League Roulette",
+        "title": "Over",
         "subtitle": "LoL-spelers uitdagen sinds 2024",
         "missionTitle": "Onze Missie",
         "missionP1": "League Roulette is gemaakt om een nieuwe laag opwinding aan League of Legends toe te voegen.",
@@ -332,14 +374,17 @@
         "numbersPlayers": "Actieve Spelers",
         "ctaTitle": "Klaar voor de Uitdaging?",
         "ctaStart": "Begin nu met Spelen",
-        "ctaLearn": "Leer Hoe te Spelen"
+        "ctaLearn": "Leer Hoe te Spelen",
+        "description": "Over het spel",
+        "mission": "Onze missie",
+        "team": "Het team"
     },
     "contact": {
         "backToHome": "Terug naar Home",
-        "title": "Contacteer Ons",
+        "title": "Contact",
         "subtitle": "We horen graag van je!",
         "formName": "Naam",
-        "formEmail": "Email",
+        "formEmail": "E-mail",
         "formSubject": "Onderwerp",
         "formMessage": "Bericht",
         "namePlaceholder": "Jouw naam",
@@ -366,12 +411,13 @@
         "twitterDesc": "Volg voor updates",
         "quickHelp": "Snelle Hulp",
         "quickHelpDesc": "Controleer onze FAQ",
-        "viewFaq": "Bekijk FAQ →"
+        "viewFaq": "Bekijk FAQ →",
+        "submit": "Verzenden"
     },
     "faq": {
         "backToGame": "Terug naar Spel",
-        "title": "Veelgestelde Vragen",
-        "subtitle": "Antwoorden op veelgestelde vragen over League Roulette",
+        "title": "Veelgestelde vragen",
+        "subtitle": "Antwoorden vinden",
         "sectionGettingStarted": "Aan de Slag",
         "sectionGameplay": "Gameplay",
         "sectionVerification": "Verificatie & Voortgang",
@@ -380,12 +426,16 @@
         "stillQuestions": "Nog Vragen?",
         "stillQuestionsDesc": "Niet gevonden wat je zocht? We helpen je graag!",
         "contactSupport": "Neem Contact Op",
-        "readTutorial": "Lees Tutorial"
+        "readTutorial": "Lees Tutorial",
+        "gettingStarted": "Aan de slag",
+        "account": "Account",
+        "gameplay": "Spel",
+        "support": "Support"
     },
     "howToPlay": {
         "backToGame": "Terug naar Spel",
-        "title": "Hoe Speel je League Roulette",
-        "subtitle": "Volledige gids om te beginnen",
+        "title": "Hoe te spelen",
+        "subtitle": "Meester de willekeurige champion-generator",
         "whatIsTitle": "Wat is League Roulette?",
         "steps": {
             "account": {
@@ -419,20 +469,21 @@
     },
     "tips": {
         "backToGame": "Terug naar Spel",
-        "title": "Strategie & Kampioen Tips",
-        "subtitle": "Beheers de kunst van het spelen van willekeurige kampioenen",
-        "ctaTitle": "Klaar om te Verbeteren?",
+        "title": "Strategie & Champion Tips",
+        "subtitle": "Meester de kunst om met willekeurige champions te spelen",
+        "ctaTitle": "Beter worden?",
         "ctaPlay": "Begin met Spelen",
-        "ctaBasics": "Leer de Basis"
+        "ctaBasics": "Leer de Basis",
+        "ctaDesc": "Sluit je aan en leer"
     },
     "leaderboard": {
         "backToGame": "Terug naar Spel",
-        "title": "🏆 Klassement",
+        "title": "🏆 Ranglijst",
         "subtitle": "Concurreer met de beste spelers",
-        "tabXp": "Totale XP",
-        "tabLevel": "Hoogste Niveau",
-        "tabChallenges": "Meeste Uitdagingen",
-        "tabStreak": "Huidige Streak",
+        "tabXp": "Totaal XP",
+        "tabLevel": "Hoogste niveau",
+        "tabChallenges": "Challenges",
+        "tabStreak": "Winstreeks",
         "tabBestStreak": "Beste Streak",
         "descXp": "Meeste ervaringspunten verdiend",
         "descLevel": "Hoogste spelersniveau",
@@ -455,8 +506,8 @@
     "blog": {
         "back": "Terug naar League Roulette",
         "sectionLabel": "League Roulette Blog",
-        "title": "LoL uitdaging gidsen en inspiratie",
-        "desc": "Ontdek praktische gidsen en leuke uitdagingen.",
+        "title": "Gidsen voor challenges, willekeurige picks en inspiratie",
+        "desc": "Tips en gidsen voor de beste League Roulette-ervaring",
         "cardLabel": "LoL Roulette artikel",
         "readArticle": "Lees artikel",
         "backToBlog": "Terug naar Blog",
@@ -464,25 +515,28 @@
         "ctaTitle": "Klaar om te draaien?",
         "ctaDesc": "Probeer onze generator en test je kennis.",
         "browseMore": "Meer blog berichten",
-        "relatedReading": "Gerelateerd lezen"
+        "relatedReading": "Gerelateerd lezen",
+        "subtitle": "Laatste artikelen"
     },
     "privacy": {
         "backToHome": "Terug naar Home",
-        "title": "Privacybeleid",
+        "title": "Privacy",
         "lastUpdated": "Laatst bijgewerkt: 12 februari 2026"
     },
     "terms": {
         "backToHome": "Terug naar Home",
-        "title": "Servicevoorwaarden",
+        "title": "Gebruiksvoorwaarden",
         "lastUpdated": "Laatst bijgewerkt: 12 februari 2026"
     },
     "meta": {
-        "defaultTitle": "LoL Willekeurige Kampioen Generator 🎯 | Draai de Roulette",
+        "defaultTitle": "Willekeurige LoL-champion-generator & League Roulette",
         "titleTemplate": "%s | League Roulette",
-        "defaultDescription": "Niet zeker wat te spelen in League of Legends? 🎯 Draai de roulette en krijg een willekeurige pick. Gratis LoL randomizer!"
+        "defaultDescription": "Willekeurige LoL-champion-challenges",
+        "title": "League Roulette",
+        "description": "Willekeurige champion-challenges"
     },
     "seo": {
-        "srHeading": "Gratis Willekeurige League of Legends Kampioen Generator | LoL Roulette 2026",
+        "srHeading": "Gratis willekeurige LoL-champion-generator | League Roulette",
         "whatIsTitle": "Wat is League Roulette?",
         "whatIsText": "League Roulette is een <strong>gratis willekeurige kampioen generator</strong> voor League of Legends (LoL). Draai aan het wiel voor een willekeurige LoL kampioen.",
         "howToTitle": "Hoe Gebruik je de Willekeurige Kampioen Kiezer",
@@ -545,23 +599,25 @@
         "faq7Q": "Kan ik het gebruiken voor ranked?",
         "faq7A": "Absoluut! Veel spelers gebruiken het voor off-meta picks.",
         "faq8Q": "Is League Roulette mobiel geoptimaliseerd?",
-        "faq8A": "100% mobiel-vriendelijk. Draai de roulette op telefoon of tablet."
+        "faq8A": "100% mobiel-vriendelijk. Draai de roulette op telefoon of tablet.",
+        "description": "Willekeurige challenges",
+        "whatIs": "Wat is League Roulette?"
     },
     "localeSwitcher": {
         "label": "Taal"
     },
     "mastery": {
-        "title": "Kampioen Meesterschap",
-        "subtitle": "Bekijk je meesterschapsniveaus voor alle kampioenen",
-        "loginRequired": "Inloggen Vereist",
-        "loginRequiredDesc": "Je moet inloggen met je Riot ID om je meesterschapsgegevens te zien.",
+        "title": "Champion meesterschap",
+        "subtitle": "Toon meesterschapsniveaus en punten",
+        "loginRequired": "Inloggen vereist",
+        "loginRequiredDesc": "Meld aan om meesterschap te zien",
         "signIn": "Inloggen",
         "winrateSection": "Winrate per Kampioen"
     },
     "championMastery": {
-        "title": "Kampioen Meesterschap",
-        "totalPoints": "Totaal Punten",
-        "championsPlayed": "Kampioenen Gespeeld",
+        "title": "Champion meesterschap",
+        "totalPoints": "Totaal punten",
+        "championsPlayed": "Gespeelde champions",
         "mastery7Plus": "Meesterschap 7+",
         "mastery5Plus": "Meesterschap 5+",
         "points": "pt",
@@ -580,12 +636,12 @@
         "toNextLevel": "naar volgend niveau"
     },
     "championWinrate": {
-        "loading": "Wedstrijdgeschiedenis laden...",
-        "noData": "Geen geschiedenis gevonden. Speel eerst wat wedstrijden!",
-        "noLaneData": "Geen kampioenen gevonden voor {lane}",
+        "loading": "Wedstrijdgeschiedenis wordt geladen...",
+        "noData": "Geen wedstrijdgeschiedenis gevonden. Speel eerst!",
+        "noLaneData": "Geen champions gevonden voor {lane}",
         "wins": "W",
         "losses": "V",
-        "games": "wedstrijden",
+        "games": "Wedstrijden",
         "lane": {
             "all": "Alle Banen",
             "top": "Top",
@@ -593,7 +649,9 @@
             "mid": "Mid",
             "adc": "ADC",
             "support": "Support"
-        }
+        },
+        "title": "Winst percentage",
+        "winRate": "Winst percentage"
     },
     "faqContent": [
         {
@@ -736,8 +794,8 @@
     "blogContent": [
         {
             "slug": "what-champion-should-i-play",
-            "title": "What Champion Should I Play in League of Legends?",
-            "description": "Not sure what champion to play in LoL? Use our random champion generator to get a fun pick, discover new mains, and make every queue feel fresh.",
+            "title": "Welke champion moet ik spelen in League of Legends?",
+            "description": "Weet je niet welke champion je in LoL moet spelen? Gebruik onze willekeurige champion-generator voor plezier.",
             "keywords": [
                 "what champion should i play lol",
                 "league of legends random champion generator",
@@ -804,8 +862,8 @@
         },
         {
             "slug": "lol-random-challenge",
-            "title": "Fun LoL Random Challenge Ideas",
-            "description": "Try these League of Legends random challenge ideas with our LoL Roulette tool. Great for solo queue, friend groups, custom games, and content challenges.",
+            "title": "Hoe de willekeurige champion-generator te gebruiken",
+            "description": "Leer hoe je de willekeurige champion-generator gebruikt om elke keer een nieuwe champion te krijgen",
             "keywords": [
                 "lol random challenge ideas",
                 "league of legends random challenge",
@@ -878,8 +936,8 @@
         },
         {
             "slug": "fun-lol-challenges",
-            "title": "Fun Ways to Play League of Legends",
-            "description": "Looking for fun League of Legends challenges? Here are creative ways to use a random champion generator with friends, duos, and casual teams.",
+            "title": "Beste strategieën voor de willekeurige champion",
+            "description": "Tips en trucs om te winnen met champions die je nog nooit hebt gespeeld",
             "keywords": [
                 "fun ways to play league of legends",
                 "fun lol challenges",
@@ -947,8 +1005,8 @@
         },
         {
             "slug": "best-champions-for-top-lane",
-            "title": "Best Top Lane Champions Current Patch",
-            "description": "Discover the strongest top lane champions.",
+            "title": "ARAM-gids: Alles wat je moet weten",
+            "description": "ARAM is een leuke spelmodus waarin de champion altijd willekeurig is. Hier is je complete gids",
             "keywords": [
                 "best top lane champions",
                 "top lane champions current patch",
@@ -992,8 +1050,8 @@
         },
         {
             "slug": "mid-lane-champions-guide",
-            "title": "Mid Lane Champions Guide",
-            "description": "Complete guide to mid lane champions.",
+            "title": "Verbeter je meesterschap met willekeurige champions",
+            "description": "Hoe je je vaardigheden in League of Legends kunt verbeteren door willekeurige champions te spelen",
             "keywords": [
                 "mid lane champions",
                 "best mid lane champions",
@@ -1516,5 +1574,23 @@
                 }
             ]
         }
-    ]
+    ],
+    "siteName": "League Roulette",
+    "siteTagline": "Random Champion Challenge",
+    "championPool": {
+        "title": "Champion pool",
+        "desc": "Kies minimaal 5 champions per lane",
+        "minPerLane": "5 per lane nodig",
+        "totalSelected": "Geselecteerd: {count}"
+    },
+    "heroTitle1": "League Roulette",
+    "heroTitle2": "Willekeurige Challenge",
+    "heroSubtitle": "Test je geluk met willekeurige champion-challenges",
+    "heroCta": "Nu spelen",
+    "howItWorks": {
+        "title": "Hoe het werkt",
+        "step1": "1. Kies een challenge",
+        "step2": "2. Vorm een team en speel",
+        "step3": "3. Voltooi de challenge en verdien beloningen"
+    }
 }

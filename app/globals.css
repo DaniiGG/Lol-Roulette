@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.font-emoji {
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", sans-serif;
+}
+
 :root {
   --background: #030305;
   --foreground: #ededed;

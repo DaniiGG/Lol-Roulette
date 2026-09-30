@@ -1,0 +1,57 @@
+{
+    "weeklyChallenge": {
+        "title": "Wekelijks Challenge",
+        "subtitle": "Voltooi de weekly challenge om roem te verdienen",
+        "challenges": [
+            {
+                "id": "support-only",
+                "name": "Alleen Support",
+                "description": "Speel 3 games deze week alleen met support-champions. Geen carries toegestaan!",
+                "emoji": "👩",
+                "deadline": "Deze Zondag",
+                "difficulty": "Gemiddeld"
+            },
+            {
+                "id": "low-mastery",
+                "name": "Lage Meesterschap",
+                "description": "Speel met champions waar je minder dan 10 games op hebt. Breid je pool uit!",
+                "emoji": "🎯",
+                "deadline": "Deze Zondag",
+                "difficulty": "Moeilijk"
+            },
+            {
+                "id": "friends-roulette",
+                "name": "Vrienden Roulette",
+                "description": "Daag 3 vrienden uit voor een groeps-roulette. Iedereen draait en speelt zijn keuze!",
+                "emoji": "🎉",
+                "deadline": "Deze Zondag",
+                "difficulty": "Gemakkelijk"
+            },
+            {
+                "id": "aram-only",
+                "name": "Alleen ARAM",
+                "description": "Speel 5 games in Howling Abyss deze week. De champion is altijd willekeurig!",
+                "emoji": "🏟️",
+                "deadline": "Deze Zondag",
+                "difficulty": "Gemiddeld"
+            },
+            {
+                "id": "champion-rotation",
+                "name": "Champion Rotatie",
+                "description": "Speel met elke gratis champion in deze week-roatie. Eén ronde elk!",
+                "emoji": "🔄",
+                "deadline": "Deze Zondag",
+                "difficulty": "Moeilijk"
+            }
+        ]
+    },
+    "createChallenge": "Maak je eigen challenge",
+    "shareCode": "Code delen",
+    "joinChallenge": "Mee doen & Draaien",
+    "back": "Terug",
+    "sectionLabel": "Wekelijks Challenge",
+    "startPlaying": "Beginnen",
+    "browseMore": "Blog doorzoeken",
+    "aramNote": "In ARAM is de champion altijd willekeurig - gewoon inloggen en spelen!",
+    "noChampions": "Geen wekelijks challenges beschikbaar"
+}

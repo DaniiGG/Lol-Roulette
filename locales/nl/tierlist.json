@@ -1,0 +1,129 @@
+{
+    "title": "Champion Tierlijst",
+    "subtitle": "Huidige meta-rankings voor elke rol",
+    "updated": "Wekelijks bijgewerkt",
+    "tiers": {
+        "S": "S - Must Pick",
+        "A": "A - Sterk Pick",
+        "B": "B - Goed Pick",
+        "C": "C - Gemiddeld",
+        "D": "D - Zwak"
+    },
+    "roles": {
+        "top": {
+            "title": "Top Lane",
+            "champions": [
+                {
+                    "name": "Gnar",
+                    "tier": "A",
+                    "role": "Top",
+                    "description": "Sterke split-pusher met goed engagement"
+                },
+                {
+                    "name": "Rumble",
+                    "tier": "A",
+                    "role": "Top",
+                    "description": "Uitstekende waveclear en teamfightdamage"
+                },
+                {
+                    "name": "Malphite",
+                    "tier": "S",
+                    "role": "Top",
+                    "description": "Onstuitbare frontline-tank met ultimate"
+                }
+            ]
+        },
+        "mid": {
+            "title": "Mid Lane",
+            "champions": [
+                {
+                    "name": "Ahri",
+                    "tier": "A",
+                    "role": "Mid",
+                    "description": "Hoge mobiliteit en burstschade"
+                },
+                {
+                    "name": "Viktor",
+                    "tier": "S",
+                    "role": "Mid",
+                    "description": "Uitstekend schalen en teamfightaanwezigheid"
+                },
+                {
+                    "name": "Zed",
+                    "tier": "A",
+                    "role": "Mid",
+                    "description": "Sterke assassine met hoge burst"
+                }
+            ]
+        },
+        "adc": {
+            "title": "ADC",
+            "champions": [
+                {
+                    "name": "Jinx",
+                    "tier": "S",
+                    "role": "ADC",
+                    "description": "Hyper-carrier met waanzinnig late game"
+                },
+                {
+                    "name": "Aphelios",
+                    "tier": "A",
+                    "role": "ADC",
+                    "description": "Flexibel wapensysteem met hoge schade"
+                },
+                {
+                    "name": "Caitlyn",
+                    "tier": "A",
+                    "role": "ADC",
+                    "description": "Sterk bereik en positionering"
+                }
+            ]
+        },
+        "support": {
+            "title": "Support",
+            "champions": [
+                {
+                    "name": "Leona",
+                    "tier": "S",
+                    "role": "Support",
+                    "description": "Harde engage met verwoestend combo"
+                },
+                {
+                    "name": "Nautilus",
+                    "tier": "A",
+                    "role": "Support",
+                    "description": "Betrouwbare CC en tank"
+                },
+                {
+                    "name": "Lulu",
+                    "tier": "A",
+                    "role": "Support",
+                    "description": "Uitstekend peel en nuttigheid"
+                }
+            ]
+        },
+        "aram": {
+            "title": "ARAM",
+            "champions": [
+                {
+                    "name": "Brand",
+                    "tier": "S",
+                    "role": "ARAM",
+                    "description": "Massieve AOE-schade in gesloten ruimtes"
+                },
+                {
+                    "name": "Ziggs",
+                    "tier": "A",
+                    "role": "ARAM",
+                    "description": "Uitstekende golfcontrole en bommenbeschadiging"
+                },
+                {
+                    "name": "Alistar",
+                    "tier": "A",
+                    "role": "ARAM",
+                    "description": "Betrouwbare engages en heling"
+                }
+            ]
+        }
+    }
+}

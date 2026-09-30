@@ -1,0 +1,129 @@
+{
+    "title": "قائمة ترتيب الأبطال",
+    "subtitle": "ترتيبات الميتا الحالية لكل دور",
+    "updated": "محدث أسبوعيًا",
+    "tiers": {
+        "S": "S - لا بدّ منه",
+        "A": "A - اختيار قوي",
+        "B": "B - اختيار جيد",
+        "C": "C - متوسط",
+        "D": "D - ضعيف"
+    },
+    "roles": {
+        "top": {
+            "title": "الخط العلوي",
+            "champions": [
+                {
+                    "name": "Gnar",
+                    "tier": "A",
+                    "role": "Top",
+                    "description": "مدفع قوي مع دخول جيد"
+                },
+                {
+                    "name": "Rumble",
+                    "tier": "A",
+                    "role": "Top",
+                    "description": "وضوح ممتاز للموجات وضرر في القتال الجماعي"
+                },
+                {
+                    "name": "Malphite",
+                    "tier": "S",
+                    "role": "Top",
+                    "description": "درع خط أمامي لا يُهزَم مع نهائي لا يُقاوم"
+                }
+            ]
+        },
+        "mid": {
+            "title": "الخط الأوسط",
+            "champions": [
+                {
+                    "name": "Ahri",
+                    "tier": "A",
+                    "role": "Mid",
+                    "description": "حركة عالية وضرر انفجاري"
+                },
+                {
+                    "name": "Viktor",
+                    "tier": "S",
+                    "role": "Mid",
+                    "description": "توسّع ممتاز وحضور في القتال الجماعي"
+                },
+                {
+                    "name": "Zed",
+                    "tier": "A",
+                    "role": "Mid",
+                    "description": "قاتل قوي بضربة انفجارية عالية"
+                }
+            ]
+        },
+        "adc": {
+            "title": "الخط السفلي",
+            "champions": [
+                {
+                    "name": "Jinx",
+                    "tier": "S",
+                    "role": "ADC",
+                    "description": "ناقل قوي مع مرحلة متأخرة مجنونة"
+                },
+                {
+                    "name": "Aphelios",
+                    "tier": "A",
+                    "role": "ADC",
+                    "description": "نظام أسلحة مرن مع ضرر عالٍ"
+                },
+                {
+                    "name": "Caitlyn",
+                    "tier": "A",
+                    "role": "ADC",
+                    "description": "مدى قوي وتموضع ممتاز"
+                }
+            ]
+        },
+        "support": {
+            "title": "الدعم",
+            "champions": [
+                {
+                    "name": "Leona",
+                    "tier": "S",
+                    "role": "Support",
+                    "description": "دخول قوي مع تركيبة مدمّرة"
+                },
+                {
+                    "name": "Nautilus",
+                    "tier": "A",
+                    "role": "Support",
+                    "description": "تحكم جماعي مضمون وقدرة تحمّل"
+                },
+                {
+                    "name": "Lulu",
+                    "tier": "A",
+                    "role": "Support",
+                    "description": "تقشير ممتاز وفائدة"
+                }
+            ]
+        },
+        "aram": {
+            "title": "ARAM",
+            "champions": [
+                {
+                    "name": "Brand",
+                    "tier": "S",
+                    "role": "ARAM",
+                    "description": "ضرر نطاقي هائل في الأماكن الضيقة"
+                },
+                {
+                    "name": "Ziggs",
+                    "tier": "A",
+                    "role": "ARAM",
+                    "description": "تحكم ممتاز بالموجات وضرر القنابل"
+                },
+                {
+                    "name": "Alistar",
+                    "tier": "A",
+                    "role": "ARAM",
+                    "description": "دخول موثوقة وشفاء"
+                }
+            ]
+        }
+    }
+}

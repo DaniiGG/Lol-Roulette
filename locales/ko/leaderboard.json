@@ -1,0 +1,15 @@
+{
+    "backToGame": "게임으로 돌아가기",
+    "title": "랭킹",
+    "subtitle": "최고 선수들과 비교해 보세요",
+    "yourRank": "당신의 랭크",
+    "loading": "랭킹을 불러오는 중...",
+    "retry": "다시 시도",
+    "youBadge": "당신",
+    "emptyTitle": "아직 랭킹이 없습니다",
+    "emptyDesc": "가장 먼저 랭킹을 올려보세요!",
+    "emptyCta": "플레이",
+    "loginCta": "로그인하여 랭크를 확인하세요",
+    "loginDesc": "로그인하여 진행 상황을 추적하고 다른 사람과 경쟁하세요",
+    "loginButton": "로그인"
+}

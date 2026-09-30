@@ -1,0 +1,47 @@
+{
+    "title": "ゲームモード",
+    "subtitle": "スタイルに合ったモードを見つけましょう",
+    "modes": [
+        {
+            "name": "Summoner's Rift",
+            "description": "クラシックな5v5マップ。3つのレーン、2つのジャングル、そして1つの目標：勝利。",
+            "icon": "🗺️",
+            "queueTypes": [
+                "Ranked Solo",
+                "Ranked Flex",
+                "Normal Draft",
+                "Normal Blind Pick"
+            ],
+            "bestFor": "プロプレイヤー"
+        },
+        {
+            "name": "Howling Abyss",
+            "description": "1つのゲーム場を持つARAMマップ。すべてがランダムで危険です。",
+            "icon": "🎮",
+            "queueTypes": [
+                "ARAM",
+                "URF ARAM"
+            ],
+            "bestFor": "アクションが好きなプレイヤー"
+        },
+        {
+            "name": "ARAM",
+            "description": "1つのマップでのランダムゲームモード。",
+            "icon": "🤝",
+            "queueTypes": [
+                "One for All"
+            ],
+            "bestFor": "速くて楽しいゲーム"
+        },
+        {
+            "name": "Ultra Rapid Fire",
+            "description": "Super fast attacks and abilities. Pure chaos and fun.",
+            "icon": "⚡",
+            "queueTypes": [
+                "URF"
+            ],
+            "bestFor": "Players who want a lighthearted break from normal gameplay"
+        }
+    ],
+    "tips": "Choose a mode that matches your playstyle and preferred pace of game"
+}

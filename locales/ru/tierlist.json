@@ -1,0 +1,129 @@
+{
+    "title": "Таблица рейтингов чемпионов",
+    "subtitle": "Текущие мета-ранги для каждой роли",
+    "updated": "Обновляется еженедельно",
+    "tiers": {
+        "S": "S - Must Pick",
+        "A": "A - Сильный выбор",
+        "B": "B - Хороший выбор",
+        "C": "C - Средний",
+        "D": "D - Слабый"
+    },
+    "roles": {
+        "top": {
+            "title": "Топ",
+            "champions": [
+                {
+                    "name": "Gnar",
+                    "tier": "A",
+                    "role": "Top",
+                    "description": "Сильный сплитпер с хорошим энгейджем"
+                },
+                {
+                    "name": "Rumble",
+                    "tier": "A",
+                    "role": "Top",
+                    "description": "Отличное очищение волн и урон в команде"
+                },
+                {
+                    "name": "Malphite",
+                    "tier": "S",
+                    "role": "Top",
+                    "description": "Непобедимый танк линии фронта с ультимейтоном"
+                }
+            ]
+        },
+        "mid": {
+            "title": "Мид",
+            "champions": [
+                {
+                    "name": "Ahri",
+                    "tier": "A",
+                    "role": "Mid",
+                    "description": "Высокая мобильность и урон взрыва"
+                },
+                {
+                    "name": "Viktor",
+                    "tier": "S",
+                    "role": "Mid",
+                    "description": "Отличное масштабирование и присутствие в команде"
+                },
+                {
+                    "name": "Zed",
+                    "tier": "A",
+                    "role": "Mid",
+                    "description": "Сильный ассасин с высоким уроном"
+                }
+            ]
+        },
+        "adc": {
+            "title": "ADC",
+            "champions": [
+                {
+                    "name": "Jinx",
+                    "tier": "S",
+                    "role": "ADC",
+                    "description": "Гипер-кэри с безумным лейт геймом"
+                },
+                {
+                    "name": "Aphelios",
+                    "tier": "A",
+                    "role": "ADC",
+                    "description": "Гибкая система оружия с высоким уроном"
+                },
+                {
+                    "name": "Caitlyn",
+                    "tier": "A",
+                    "role": "ADC",
+                    "description": "Сильный диапазон и позиционирование"
+                }
+            ]
+        },
+        "support": {
+            "title": "Поддержка",
+            "champions": [
+                {
+                    "name": "Leona",
+                    "tier": "S",
+                    "role": "Support",
+                    "description": "Жёсткий энгейдж с разрушительным комбо"
+                },
+                {
+                    "name": "Nautilus",
+                    "tier": "A",
+                    "role": "Support",
+                    "description": "Надёжный CC и танковость"
+                },
+                {
+                    "name": "Lulu",
+                    "tier": "A",
+                    "role": "Support",
+                    "description": "Отличное пилирование и полезность"
+                }
+            ]
+        },
+        "aram": {
+            "title": "ARAM",
+            "champions": [
+                {
+                    "name": "Brand",
+                    "tier": "S",
+                    "role": "ARAM",
+                    "description": "Массовый AOE-урон в закрытых пространствах"
+                },
+                {
+                    "name": "Ziggs",
+                    "tier": "A",
+                    "role": "ARAM",
+                    "description": "Отличный контроль волн и бомбовый урон"
+                },
+                {
+                    "name": "Alistar",
+                    "tier": "A",
+                    "role": "ARAM",
+                    "description": "Надёжные энгейджи и лечение"
+                }
+            ]
+        }
+    }
+}

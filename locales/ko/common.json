@@ -11,14 +11,19 @@
         "privacy": "Privacy",
         "terms": "Terms",
         "siteName": "League Roulette",
-        "siteTagline": "Random Champion Challenge"
+        "siteTagline": "Random Champion Challenge",
+        "challenges": "챌린지",
+        "tierlist": "티어 목록",
+        "modes": "모드",
+        "popular": "인기",
+        "mastery": "mastery"
     },
     "home": {
-        "howItWorks": "How it works",
-        "leaderboard": "Leaderboard",
-        "achievements": "Achievements",
-        "logout": "Logout",
-        "loginToTrack": "Login to Track",
+        "howItWorks": "방법",
+        "leaderboard": "랭킹",
+        "achievements": "업적",
+        "logout": "로그아웃",
+        "loginToTrack": "로그인하여 추적",
         "heroTitle1": "LEAGUE ROULETTE",
         "heroTitle2": "랜덤",
         "heroTitle3": "챔피언",
@@ -28,12 +33,12 @@
             "No Login Needed",
             "Season 2026"
         ],
-        "trackProgress": "Track Your Progress",
-        "trackProgressDesc": "Log in to verify wins, earn XP, unlock achievements, and climb the leaderboard.",
-        "loginWithRiot": "Login with Riot Account",
-        "guidesSection": "Guides",
-        "guidesTitle": "Random LoL Challenge Guides",
-        "guidesDesc": "Practical guides about random champion picks, fun challenges, and fresh ideas for your next queue.",
+        "trackProgress": "진행 상황 추적",
+        "trackProgressDesc": "로그인하여 승리를 확인하고 XP를 적립하세요",
+        "loginWithRiot": "Riot 계정으로 로그인",
+        "guidesSection": "가이드",
+        "guidesTitle": "랜덤 LoL 챌린지 가이드",
+        "guidesDesc": "랜덤 챔피언 픽에 대한 실용 가이드",
         "blogPosts": [
             {
                 "href": "/blog/what-champion-should-i-play",
@@ -52,19 +57,24 @@
             }
         ],
         "matchMaking": {
-            "verifying": "Verifying Match...",
-            "verify": "Verify Match"
+            "verifying": "경기 검증 중...",
+            "verify": "경기 검증"
         }
     },
     "championCard": {
-        "yourChampion": "Your Champion",
-        "readyToBegin": "Ready to begin",
-        "pressBelow": "Press the button below",
-        "spinning": "Spinning",
-        "spinRoulette": "Spin Roulette",
+        "yourChampion": "챔피언",
+        "readyToBegin": "시작 준비 완료",
+        "pressBelow": "아래 버튼을 누르세요",
+        "spinning": "회전 중",
+        "spinRoulette": "룰렛 회전",
         "verifying": "Verifying...",
         "verifyMatch": "Verify Match",
-        "spinAgain": "Spin Again"
+        "spinAgain": "Spin Again",
+        "playWith": "플레이",
+        "stats": "통계",
+        "mastery": "마스터리",
+        "winrate": "승률",
+        "championPool": "챔피언 풀"
     },
     "championSelector": {
         "yourChampion": "Your Champion",
@@ -76,7 +86,13 @@
         "rerollUnlimited": "Reroll (Unlimited)",
         "unlimitedSpins": "Don't like these options? You have unlimited spins",
         "spinsLeft": "Don't like these options? You have {n} more spin(s)",
-        "noRerolls": "✨ Choose wisely! No rerolls remaining"
+        "noRerolls": "✨ Choose wisely! No rerolls remaining",
+        "top": "탑",
+        "mid": "미드",
+        "jungle": "정글",
+        "bottom": "바텀",
+        "support": "서포트",
+        "adc": "바텀"
     },
     "championStats": {
         "statistics": "📊 {champion} Statistics",
@@ -91,11 +107,11 @@
     "laneSelector": {
         "selectLane": "Select Lane",
         "allLanes": "All Lanes",
-        "top": "Top",
-        "jungle": "Jungle",
-        "mid": "Mid",
-        "adc": "ADC",
-        "support": "Support",
+        "top": "탑",
+        "jungle": "정글",
+        "mid": "미드",
+        "adc": "바텀",
+        "support": "서포트",
         "anyChampion": "Any champion",
         "islandLife": "Island life",
         "pveSimulator": "PvE simulator",
@@ -107,10 +123,11 @@
         "jng": "JNG",
         "midShort": "MID",
         "adcShort": "ADC",
-        "sup": "SUP"
+        "sup": "SUP",
+        "bottom": "바텀"
     },
     "infoModal": {
-        "title": "How It Works",
+        "title": "정보",
         "step1Title": "Spin the Roulette",
         "step1Desc": "Select a lane or leave it on All Lanes, then click Spin to get a random champion.",
         "step2Title": "Play League of Legends",
@@ -138,16 +155,22 @@
         "faqPasswordA": "Yes. We use Riot's official OAuth — your password is never stored on our servers. With manual login, we only verify your public Riot ID.",
         "faqModesQ": "What modes count?",
         "faqModesA": "Any matchmade game mode counts: Summoner's Rift (all queues), ARAM, and rotating game modes.",
-        "gotIt": "Got it, let's play!"
+        "gotIt": "Got it, let's play!",
+        "description": "설명"
     },
     "autoVerify": {
-        "title": "Auto-Scan",
+        "title": "자동 검증",
         "monitoring": "Monitoring for {champion} match.\nPlay your game — we'll handle the rest.",
         "nextCheck": "Next check",
         "elapsed": "Elapsed",
         "verifyNow": "Verify Now",
         "cancel": "Cancel",
-        "info": "Checks every 2 min for 1 hour. Click Verify Now for instant result."
+        "info": "Checks every 2 min for 1 hour. Click Verify Now for instant result.",
+        "verify": "검증",
+        "status": "상태",
+        "pending": "보류",
+        "success": "성공",
+        "failed": "실패"
     },
     "verificationResult": {
         "scanning": "Scanning for match...",
@@ -166,7 +189,11 @@
         "earned": "Earned",
         "involved": "Involved",
         "xpEarned": "+100 XP",
-        "xpLabel": "earned"
+        "xpLabel": "earned",
+        "title": "검증 결과",
+        "matchVerified": "경기 확인됨",
+        "championMatched": "챔피언 일치",
+        "championMismatch": "챔피언 불일치"
     },
     "userStats": {
         "level": "Lv.{level}",
@@ -174,29 +201,36 @@
         "challenges": "Challenges",
         "xpProgress": "XP Progress",
         "currentStreak": "Current Streak",
-        "bestStreak": "Best Streak"
+        "bestStreak": "Best Streak",
+        "totalPlayed": "총 게임 수",
+        "wins": "승리",
+        "streak": "연승",
+        "xp": "경험치"
     },
     "achievements": {
         "newAchievement": "🎉 New Achievement!",
         "close": "Close",
-        "title": "Achievements",
+        "title": "업적",
         "common": "COMMON",
         "rare": "RARE",
         "epic": "EPIC",
         "legendary": "LEGENDARY",
-        "xpReward": "+{xp} XP"
+        "xpReward": "+{xp} XP",
+        "desc": "업적을 추적하세요"
     },
     "settings": {
-        "title": "Settings",
+        "title": "설정",
         "autoVerify": "Auto-Verification",
         "autoVerifyDesc": "Automatically check for completed matches every 2 minutes",
-        "notifications": "Browser Notifications",
+        "notifications": "알림",
         "notificationsDesc": "Get notified when your match is verified",
         "sound": "Sound Effects",
         "soundDesc": "Play sound when achievements unlock or matches verify",
         "cancel": "Cancel",
         "save": "Save Changes",
-        "tip": "💡 Auto-verification works best when you keep the tab open. Close the tab and verification will pause until you return."
+        "tip": "💡 Auto-verification works best when you keep the tab open. Close the tab and verification will pause until you return.",
+        "profile": "프로필",
+        "language": "언어"
     },
     "slotMachine": {
         "loading": "Loading champions…",
@@ -207,14 +241,15 @@
         "pullLever": "Pull the Lever",
         "clickToSpin": "Click to spin",
         "jackpot": "🎰 Jackpot!",
-        "spinAgain": "Spin again"
+        "spinAgain": "Spin again",
+        "spin": "회전"
     },
     "slotLever": {
         "spinning": "Spinning...",
-        "pull": "Pull"
+        "pull": "당기기"
     },
     "login": {
-        "title": "League Roulette",
+        "title": "로그인",
         "subtitle": "Random Champion Challenge",
         "enterRiotId": "Enter your Riot ID to start",
         "riotId": "Riot ID",
@@ -228,10 +263,14 @@
         "disclaimer": "League Roulette isn't endorsed by Riot Games",
         "errorRequired": "Please enter your Riot ID",
         "errorFormat": "Invalid format. Use: GameName#TAG",
-        "errorFormatExample": "Invalid format. Example: Player#EUW"
+        "errorFormatExample": "Invalid format. Example: Player#EUW",
+        "signIn": "로그인",
+        "signUp": "가입",
+        "email": "이메일",
+        "password": "비밀번호"
     },
     "rsoLogin": {
-        "title": "Login to League Roulette",
+        "title": "Riot 로그인",
         "chooseMethod": "Choose your preferred login method",
         "riotOauth": "Riot OAuth",
         "recommended": "Recommended",
@@ -278,11 +317,15 @@
         "legal": "Legal",
         "followUs": "Follow Us",
         "copyright": "© {year} League Roulette. All rights reserved.",
-        "disclaimer": "League Roulette is not endorsed by Riot Games and does not reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. League of Legends and Riot Games are trademarks or registered trademarks of Riot Games, Inc."
+        "disclaimer": "League Roulette is not endorsed by Riot Games and does not reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. League of Legends and Riot Games are trademarks or registered trademarks of Riot Games, Inc.",
+        "rights": "모든 권리 보유",
+        "contact": "문의",
+        "privacy": "개인정보처리방침",
+        "terms": "이용약관"
     },
     "about": {
         "backToGame": "Back to Game",
-        "title": "About League Roulette",
+        "title": "소개",
         "subtitle": "Challenging League of Legends players since 2024",
         "missionTitle": "Our Mission",
         "missionP1": "League Roulette was created to add a fresh layer of excitement to League of Legends. We believe that stepping outside your comfort zone is the best way to improve and have fun.",
@@ -330,16 +373,19 @@
         "numbersPlayers": "Active Players",
         "ctaTitle": "Ready to Challenge Yourself?",
         "ctaStart": "Start Playing Now",
-        "ctaLearn": "Learn How to Play"
+        "ctaLearn": "Learn How to Play",
+        "description": "게임 소개",
+        "mission": "미션",
+        "team": "팀"
     },
     "contact": {
         "backToHome": "Back to Home",
-        "title": "Contact Us",
+        "title": "문의",
         "subtitle": "We'd love to hear from you!",
-        "formName": "Name",
-        "formEmail": "Email",
-        "formSubject": "Subject",
-        "formMessage": "Message",
+        "formName": "이름",
+        "formEmail": "이메일",
+        "formSubject": "제목",
+        "formMessage": "메시지",
         "namePlaceholder": "Your name",
         "emailPlaceholder": "your@email.com",
         "messagePlaceholder": "Tell us what's on your mind...",
@@ -364,12 +410,13 @@
         "twitterDesc": "Follow for updates and announcements",
         "quickHelp": "Quick Help",
         "quickHelpDesc": "Before reaching out, check if your question is answered in our FAQ",
-        "viewFaq": "View FAQ →"
+        "viewFaq": "View FAQ →",
+        "submit": "보내기"
     },
     "faq": {
         "backToGame": "Back to Game",
-        "title": "Frequently Asked Questions",
-        "subtitle": "Find answers to common questions about League Roulette",
+        "title": "자주 묻는 질문",
+        "subtitle": "답변 찾기",
         "sectionGettingStarted": "Getting Started",
         "sectionGameplay": "Gameplay",
         "sectionVerification": "Verification & Progress",
@@ -378,12 +425,16 @@
         "stillQuestions": "Still Have Questions?",
         "stillQuestionsDesc": "Didn't find what you were looking for? We're here to help!",
         "contactSupport": "Contact Support",
-        "readTutorial": "Read Tutorial"
+        "readTutorial": "Read Tutorial",
+        "gettingStarted": "시작하기",
+        "account": "계정",
+        "gameplay": "게임플레이",
+        "support": "지원"
     },
     "howToPlay": {
         "backToGame": "Back to Game",
-        "title": "How to Play League Roulette",
-        "subtitle": "Your complete guide to getting started",
+        "title": "플레이 방법",
+        "subtitle": "랜덤 챔피언 제네레이터를 마스터하세요",
         "whatIsTitle": "What is League Roulette?",
         "steps": {
             "account": {
@@ -417,20 +468,21 @@
     },
     "tips": {
         "backToGame": "Back to Game",
-        "title": "Strategy & Champion Tips",
-        "subtitle": "Master the art of playing random champions",
-        "ctaTitle": "Ready to Improve?",
+        "title": "전략 및 챔피언 팁",
+        "subtitle": "랜덤 챔피온으로 플레이하는 기술을 마스터하세요",
+        "ctaTitle": "향상되나요?",
         "ctaPlay": "Start Playing",
-        "ctaBasics": "Learn the Basics"
+        "ctaBasics": "Learn the Basics",
+        "ctaDesc": "참여하고 배우세요"
     },
     "leaderboard": {
         "backToGame": "Back to Game",
-        "title": "🏆 Leaderboard",
-        "subtitle": "Compete with the best League Roulette players",
-        "tabXp": "Total XP",
-        "tabLevel": "Highest Level",
-        "tabChallenges": "Most Challenges",
-        "tabStreak": "Current Streak",
+        "title": "🏆 랭킹",
+        "subtitle": "최고의 플레이어와 경쟁하세요",
+        "tabXp": "총 XP",
+        "tabLevel": "최고 레벨",
+        "tabChallenges": "챌린지",
+        "tabStreak": "연승",
         "tabBestStreak": "Best Streak",
         "descXp": "Most experience points earned",
         "descLevel": "Highest player level",
@@ -451,10 +503,10 @@
         "loginButton": "Login & Start Playing"
     },
     "blog": {
-        "back": "Back to League Roulette",
-        "sectionLabel": "League Roulette Blog",
-        "title": "LoL challenge guides, random picks, and champion inspiration",
-        "desc": "Discover practical guides, fun challenge ideas, and fresh ways to enjoy League of Legends with random champion picks.",
+        "back": "League Roulette로 돌아가기",
+        "sectionLabel": "League Roulette 블로그",
+        "title": "챌린지 가이드, 랜덤 픽, 영감",
+        "desc": "최고의 League Roulette 경험을 위한 팁과 가이드",
         "cardLabel": "Lol Roulette article",
         "readArticle": "Read article",
         "backToBlog": "Back to Blog",
@@ -462,25 +514,28 @@
         "ctaTitle": "Ready to spin for your next match?",
         "ctaDesc": "Feeling inspired? Try our random champion generator and put your new knowledge to the test.",
         "browseMore": "Browse more blog posts",
-        "relatedReading": "Related reading"
+        "relatedReading": "Related reading",
+        "subtitle": "최신 글"
     },
     "privacy": {
         "backToHome": "Back to Home",
-        "title": "Privacy Policy",
+        "title": "개인정보처리방침",
         "lastUpdated": "Last updated: February 12, 2026"
     },
     "terms": {
         "backToHome": "Back to Home",
-        "title": "Terms of Service",
+        "title": "이용약관",
         "lastUpdated": "Last updated: February 12, 2026"
     },
     "meta": {
-        "defaultTitle": "LoL Random Champion Generator 🎯 | Spin the Roulette & Get a Random Pick",
+        "defaultTitle": "랜덤 LoL 챔피언 제네레이터 & League Roulette",
         "titleTemplate": "%s | League Roulette",
-        "defaultDescription": "Not sure what to play in League of Legends? 🎯 Spin the random champion roulette, challenge your friends, track wins, earn XP, and climb the leaderboard. Free LoL randomizer!"
+        "defaultDescription": "랜덤 LoL 챔피언 챌린지",
+        "title": "League Roulette",
+        "description": "랜덤 챔피언 챌린지"
     },
     "seo": {
-        "srHeading": "Free Random League of Legends Champion Generator | LoL Roulette & Picker 2026 - Ranked, ARAM, Custom",
+        "srHeading": "무료 랜덤 LoL 챔피언 제네레이터 | League Roulette",
         "whatIsTitle": "What is League Roulette?",
         "whatIsText": "League Roulette is a <strong>free random champion generator</strong> for League of Legends (LoL). Spin the wheel to get a random LoL champion and challenge yourself to win ranked or normal games.",
         "howToTitle": "How to Use the Random Champion Picker",
@@ -543,25 +598,27 @@
         "faq7Q": "Can I use random champion picker for ranked?",
         "faq7A": "Absolutely! Many players use it to practice off-meta picks.",
         "faq8Q": "Is League Roulette mobile optimized?",
-        "faq8A": "100% mobile-friendly. Spin the roulette on phone, tablet, or desktop."
+        "faq8A": "100% mobile-friendly. Spin the roulette on phone, tablet, or desktop.",
+        "description": "랜덤 챌린지",
+        "whatIs": "League Roulette이란?"
     },
     "localeSwitcher": {
-        "label": "Language"
+        "label": "언어"
     },
     "mastery": {
-        "title": "Champion Mastery",
-        "subtitle": "View your mastery levels and points across all champions",
-        "loginRequired": "Login Required",
-        "loginRequiredDesc": "You need to login with your Riot ID to view your champion mastery data.",
+        "title": "챔피언 마스터리",
+        "subtitle": "마스터리 레벨과 포인트를 표시",
+        "loginRequired": "로그인 필요",
+        "loginRequiredDesc": "마스터리를 보려면 로그인",
         "signIn": "Sign In",
         "winrateSection": "Winrate by Champion"
     },
     "championMastery": {
-        "title": "Champion Mastery",
-        "totalPoints": "Total Points",
-        "championsPlayed": "Champions Played",
-        "mastery7Plus": "Mastery 7+",
-        "mastery5Plus": "Mastery 5+",
+        "title": "챔피언 마스터리",
+        "totalPoints": "총 포인트",
+        "championsPlayed": "플레이한 챔피언",
+        "mastery7Plus": "마스터리 7+",
+        "mastery5Plus": "마스터리 5+",
         "points": "pts",
         "noMasteries": "No mastery data available",
         "showAll": "Show all ({count})",
@@ -578,12 +635,12 @@
         "toNextLevel": "to next level"
     },
     "championWinrate": {
-        "loading": "Loading your match history...",
-        "noData": "No match history found. Play some games first!",
-        "noLaneData": "No champions found for {lane}",
+        "loading": "경기 이력을 로드하는 중...",
+        "noData": "경기 이력이 없습니다. 먼저 플레이하세요!",
+        "noLaneData": "{lane}의 챔피언을 찾을 수 없습니다",
         "wins": "W",
         "losses": "L",
-        "games": "games",
+        "games": "게임 수",
         "lane": {
             "all": "All Lanes",
             "top": "Top",
@@ -591,7 +648,9 @@
             "mid": "Mid",
             "adc": "ADC",
             "support": "Support"
-        }
+        },
+        "title": "승률",
+        "winRate": "승률"
     },
     "faqContent": [
         {
@@ -734,8 +793,8 @@
     "blogContent": [
         {
             "slug": "what-champion-should-i-play",
-            "title": "What Champion Should I Play in League of Legends?",
-            "description": "Not sure what champion to play in LoL? Use our random champion generator to get a fun pick, discover new mains, and make every queue feel fresh.",
+            "title": "League of Legends에서 어떤 챔피언을 플레이해야 할까?",
+            "description": "LoL에서 어떤 챔피언을 플레이할지 모르겠다면? 랜덤 챔피언 제네레이터로 즐겨보세요",
             "keywords": [
                 "what champion should i play lol",
                 "league of legends random champion generator",
@@ -802,8 +861,8 @@
         },
         {
             "slug": "lol-random-challenge",
-            "title": "Fun LoL Random Challenge Ideas",
-            "description": "Try these League of Legends random challenge ideas with our LoL Roulette tool. Great for solo queue, friend groups, custom games, and content challenges.",
+            "title": "랜덤 챔피언 제네레이터 사용하는 방법",
+            "description": "매번 새로운 챔피언을 얻기 위해 랜덤 챔피언 제네레이터를 사용하는 법을 배우세요",
             "keywords": [
                 "lol random challenge ideas",
                 "league of legends random challenge",
@@ -876,8 +935,8 @@
         },
         {
             "slug": "fun-lol-challenges",
-            "title": "Fun Ways to Play League of Legends",
-            "description": "Looking for fun League of Legends challenges? Here are creative ways to use a random champion generator with friends, duos, and casual teams.",
+            "title": "랜덤 챔피언을 위한 최고의 전략",
+            "description": "한 번도 플레이하지 않은 챔피언으로 이기는 팁과 요령",
             "keywords": [
                 "fun ways to play league of legends",
                 "fun lol challenges",
@@ -945,8 +1004,8 @@
         },
         {
             "slug": "best-champions-for-top-lane",
-            "title": "Best Top Lane Champions Current Patch",
-            "description": "Discover the strongest top lane champions.",
+            "title": "ARAM 가이드: 알아야 할 모든 것",
+            "description": "ARAM은 챔피언이 항상 랜덤한 재미있는 게임 모드입니다. 완전 가이드",
             "keywords": [
                 "best top lane champions",
                 "top lane champions current patch",
@@ -990,8 +1049,8 @@
         },
         {
             "slug": "mid-lane-champions-guide",
-            "title": "Mid Lane Champions Guide",
-            "description": "Complete guide to mid lane champions.",
+            "title": "랜덤 챔피언으로 마스터리 향상",
+            "description": "랜덤 챔피언을 플레이하여 League of Legends 실력을 향상시키는 방법",
             "keywords": [
                 "mid lane champions",
                 "best mid lane champions",
@@ -1514,5 +1573,23 @@
                 }
             ]
         }
-    ]
+    ],
+    "siteName": "League Roulette",
+    "siteTagline": "Random Champion Challenge",
+    "championPool": {
+        "title": "챔피언 풀",
+        "desc": "각 라인에서 최소 5명의 챔피언을 선택하세요",
+        "minPerLane": "라인당 5명 필요",
+        "totalSelected": "선택: {count}"
+    },
+    "heroTitle1": "League Roulette",
+    "heroTitle2": "랜덤 챌린지",
+    "heroSubtitle": "랜덤 챔피언 챌린지로 운을 시험해 보세요",
+    "heroCta": "플레이 시작",
+    "howItWorks": {
+        "title": "방법",
+        "step1": "1. 챌린지를 선택하세요",
+        "step2": "2. 팀을 구성하고 플레이하세요",
+        "step3": "3. 챌린지를 완료하고 보상을 획득하세요"
+    }
 }

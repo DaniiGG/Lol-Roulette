@@ -1,0 +1,15 @@
+{
+    "backToGame": "ゲームに戻る",
+    "title": "ランキング",
+    "subtitle": "上位選手とどう比較できるか確認",
+    "yourRank": "あなたのランク",
+    "loading": "ランキングを読み込み中...",
+    "retry": "再試行",
+    "youBadge": "あなた",
+    "emptyTitle": "まだランキングがありません",
+    "emptyDesc": "最初にランキングを登ろう！",
+    "emptyCta": "プレイする",
+    "loginCta": "ログインしてあなたのランクを見る",
+    "loginDesc": "ログインして進捗を追跡し、他の人と競争する",
+    "loginButton": "ログイン"
+}

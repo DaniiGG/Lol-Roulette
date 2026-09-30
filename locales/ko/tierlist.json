@@ -1,0 +1,129 @@
+{
+    "title": "챔피언 탑 리스트",
+    "subtitle": "각 역할의 현재 메타 랭킹",
+    "updated": "매주 업데이트",
+    "tiers": {
+        "S": "S - 필수",
+        "A": "A - 강력한 선택",
+        "B": "B - 좋은 선택",
+        "C": "C - 보통",
+        "D": "D - 약함"
+    },
+    "roles": {
+        "top": {
+            "title": "탑",
+            "champions": [
+                {
+                    "name": "Gnar",
+                    "tier": "A",
+                    "role": "Top",
+                    "description": "좋은 엔게이지를 가진 강력한 스플리셔"
+                },
+                {
+                    "name": "Rumble",
+                    "tier": "A",
+                    "role": "Top",
+                    "description": "우수한 웨이브클리어와 팀파이트 데미지"
+                },
+                {
+                    "name": "Malphite",
+                    "tier": "S",
+                    "role": "Top",
+                    "description": "압도적 궁극기를 가진 라인프론트 탱크"
+                }
+            ]
+        },
+        "mid": {
+            "title": "미드",
+            "champions": [
+                {
+                    "name": "Ahri",
+                    "tier": "A",
+                    "role": "Mid",
+                    "description": "높은 이동성과 폭발 데미지"
+                },
+                {
+                    "name": "Viktor",
+                    "tier": "S",
+                    "role": "Mid",
+                    "description": "우수한 스케일링과 팀파이트 존재감"
+                },
+                {
+                    "name": "Zed",
+                    "tier": "A",
+                    "role": "Mid",
+                    "description": "높은 폭발을 가진 강력한 어설틴"
+                }
+            ]
+        },
+        "adc": {
+            "title": "ADC",
+            "champions": [
+                {
+                    "name": "Jinx",
+                    "tier": "S",
+                    "role": "ADC",
+                    "description": "미친 라이트 게임을 가진 하이퍼 캐리"
+                },
+                {
+                    "name": "Aphelios",
+                    "tier": "A",
+                    "role": "ADC",
+                    "description": "유연한 무기 시스템과 높은 데미지"
+                },
+                {
+                    "name": "Caitlyn",
+                    "tier": "A",
+                    "role": "ADC",
+                    "description": "강한 사거리와 포지셔닝"
+                }
+            ]
+        },
+        "support": {
+            "title": "서포트",
+            "champions": [
+                {
+                    "name": "Leona",
+                    "tier": "S",
+                    "role": "Support",
+                    "description": "파멸적인 콤보를 가진 하드 엔게이지"
+                },
+                {
+                    "name": "Nautilus",
+                    "tier": "A",
+                    "role": "Support",
+                    "description": "신뢰할 수 있는 CC와 탱킹"
+                },
+                {
+                    "name": "Lulu",
+                    "tier": "A",
+                    "role": "Support",
+                    "description": "우수한 필和保护 및 유틸리티"
+                }
+            ]
+        },
+        "aram": {
+            "title": "ARAM",
+            "champions": [
+                {
+                    "name": "Brand",
+                    "tier": "S",
+                    "role": "ARAM",
+                    "description": "밀폐된 공간에서의 대규모 AOE 데미지"
+                },
+                {
+                    "name": "Ziggs",
+                    "tier": "A",
+                    "role": "ARAM",
+                    "description": "우수한 웨일 컨트롤과 폭탄 데미지"
+                },
+                {
+                    "name": "Alistar",
+                    "tier": "A",
+                    "role": "ARAM",
+                    "description": "신뢰할 수 있는 엔게이지와 치유"
+                }
+            ]
+        }
+    }
+}

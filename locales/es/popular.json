@@ -1,0 +1,67 @@
+{
+    "title": "Campeones Populares",
+    "subtitle": "Campeones más seleccionados esta semana",
+    "sectionLabel": "Selecciones Populares",
+    "champions": [
+        {
+            "name": "Ahri",
+            "tier": "S",
+            "role": "Mago",
+            "description": "Mago de alta movilidad"
+        },
+        {
+            "name": "Jinx",
+            "tier": "S",
+            "role": "ADC",
+            "description": "Hyper carry con loco late game"
+        },
+        {
+            "name": "Leona",
+            "tier": "S",
+            "role": "Soporte",
+            "description": "Tanque de línea frontal imparable"
+        },
+        {
+            "name": "Malphite",
+            "tier": "S",
+            "role": "Tanque",
+            "description": "Tanque con ultimate imparable"
+        },
+        {
+            "name": "Viktor",
+            "tier": "A",
+            "role": "Mago",
+            "description": "Mago con excelente escalado"
+        },
+        {
+            "name": "Gnar",
+            "tier": "A",
+            "role": "Luchador",
+            "description": "Gran split-pusher"
+        },
+        {
+            "name": "Ziggs",
+            "tier": "A",
+            "role": "Mago",
+            "description": "Especialista en bombas"
+        },
+        {
+            "name": "Rumble",
+            "tier": "A",
+            "role": "Mago",
+            "description": "Mago de calor"
+        },
+        {
+            "name": "Brand",
+            "tier": "S",
+            "role": "ARAM",
+            "description": "Daño de fuego AoE masivo"
+        },
+        {
+            "name": "Caitlyn",
+            "tier": "A",
+            "role": "ADC",
+            "description": "Gran rango"
+        }
+    ]
+}

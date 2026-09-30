@@ -8,6 +8,10 @@
         "about": "About",
         "mastery": "Mastery",
         "blog": "Blog",
+        "challenges": "Challenges",
+        "tierlist": "Tier List",
+        "modes": "Modes",
+        "popular": "Popular",
         "contact": "Contact",
         "privacy": "Privacy",
         "terms": "Terms",
@@ -57,7 +61,9 @@
             "verify": "Verify Match"
         },
         "editPool": "Edit Champion Pool",
-        "usePool": "Use Pool"
+        "usePool": "Use Pool",
+        "challengeActive": "Challenge Active - Lane is locked",
+        "lane": "Lane"
     },
     "championCard": {
         "yourChampion": "Your Champion",

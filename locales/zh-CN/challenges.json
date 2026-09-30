@@ -1,0 +1,57 @@
+{
+    "weeklyChallenge": {
+        "title": "Weekly Challenge",
+        "subtitle": "Complete this week's challenge to earn bragging rights",
+        "challenges": [
+            {
+                "id": "support-only",
+                "name": "Support Only",
+                "description": "Play 3 games this week playing only support champions. No carries allowed!",
+                "emoji": "👩",
+                "deadline": "This Sunday",
+                "difficulty": "Medium"
+            },
+            {
+                "id": "low-mastery",
+                "name": "Low Mastery",
+                "description": "Play with champions you have less than 10 games on. Expand your pool!",
+                "emoji": "🎯",
+                "deadline": "This Sunday",
+                "difficulty": "Hard"
+            },
+            {
+                "id": "friends-roulette",
+                "name": "Friends Roulette",
+                "description": "Challenge 3 friends to a group roulette. Everyone spins and plays their pick!",
+                "emoji": "🎉",
+                "deadline": "This Sunday",
+                "difficulty": "Easy"
+            },
+            {
+                "id": "aram-only",
+                "name": "ARAM Only",
+                "description": "Play 5 games in Howling Abyss this week. The champion is always random!",
+                "emoji": "🏟️",
+                "deadline": "This Sunday",
+                "difficulty": "Medium"
+            },
+            {
+                "id": "champion-rotation",
+                "name": "Champion Rotation",
+                "description": "Play with every free champion in this week's rotation. One game each!",
+                "emoji": "🔄",
+                "deadline": "This Sunday",
+                "difficulty": "Hard"
+            }
+        ]
+    },
+    "createChallenge": "Create Your Own Challenge",
+    "shareCode": "Share Code",
+    "joinChallenge": "Join Challenge",
+    "back": "Back",
+    "sectionLabel": "Weekly Challenge",
+    "startPlaying": "Start Playing",
+    "browseMore": "Browse Blog",
+    "aramNote": "aramNote",
+    "noChampions": "noChampions"
+}

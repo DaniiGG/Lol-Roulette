@@ -1,0 +1,47 @@
+{
+    "title": "Modalità di Gioco",
+    "subtitle": "Trova la modalità che si adatta al tuo stile",
+    "modes": [
+        {
+            "name": "Summoner's Rift",
+            "description": "La mappa classica 5v5. Tre corsie, due jungle e un obiettivo: la vittoria.",
+            "icon": "🗺️",
+            "queueTypes": [
+                "Ranked Solo",
+                "Ranked Flex",
+                "Normal Draft",
+                "Normal Blind Pick"
+            ],
+            "bestFor": "Giocatori professionisti"
+        },
+        {
+            "name": "Howling Abyss",
+            "description": "Mappa ARAM a un solo gioco. Tutto è casuale e pericoloso.",
+            "icon": "🎮",
+            "queueTypes": [
+                "ARAM",
+                "URF ARAM"
+            ],
+            "bestFor": "Giocatori che preferiscono azione veloce"
+        },
+        {
+            "name": "ARAM",
+            "description": "Modalità di gioco casual su una mappa.",
+            "icon": "🤝",
+            "queueTypes": [
+                "One for All"
+            ],
+            "bestFor": "Gioco veloce e divertente"
+        },
+        {
+            "name": "Ultra Rapid Fire",
+            "description": "Super fast attacks and abilities. Pure chaos and fun.",
+            "icon": "⚡",
+            "queueTypes": [
+                "URF"
+            ],
+            "bestFor": "Players who want a lighthearted break from normal gameplay"
+        }
+    ],
+    "tips": "Choose a mode that matches your playstyle and preferred pace of game"
+}

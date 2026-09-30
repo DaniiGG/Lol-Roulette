@@ -11,7 +11,12 @@
         "privacy": "Privacy",
         "terms": "Terms",
         "siteName": "League Roulette",
-        "siteTagline": "Random Champion Challenge"
+        "siteTagline": "Random Champion Challenge",
+        "challenges": "challenges",
+        "tierlist": "tierlist",
+        "modes": "modes",
+        "popular": "popular",
+        "mastery": "mastery"
     },
     "home": {
         "howItWorks": "How it works",
@@ -1514,5 +1519,7 @@
                 }
             ]
         }
-    ]
+    ],
+    "siteName": "League Roulette",
+    "siteTagline": "Random Champion Challenge"
 }

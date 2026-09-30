@@ -1,0 +1,129 @@
+{
+    "title": "Classement des Champions",
+    "subtitle": "Classements méta actuels pour chaque rôle",
+    "updated": "Mis à jour hebdomadairement",
+    "tiers": {
+        "S": "S - Incontournable",
+        "A": "A - Bon choix",
+        "B": "B - Bon choix",
+        "C": "C - Moyen",
+        "D": "D - Faible"
+    },
+    "roles": {
+        "top": {
+            "title": "Ligne du haut",
+            "champions": [
+                {
+                    "name": "Gnar",
+                    "tier": "A",
+                    "role": "Top",
+                    "description": "Split-pusher fort avec bon engage"
+                },
+                {
+                    "name": "Rumble",
+                    "tier": "A",
+                    "role": "Top",
+                    "description": "Excellent clear de vagues et dégâts en équipe"
+                },
+                {
+                    "name": "Malphite",
+                    "tier": "S",
+                    "role": "Top",
+                    "description": "Tank frontière inarrêtable avec ulti"
+                }
+            ]
+        },
+        "mid": {
+            "title": "Ligne du milieu",
+            "champions": [
+                {
+                    "name": "Ahri",
+                    "tier": "A",
+                    "role": "Mid",
+                    "description": "Haute mobilité et burst"
+                },
+                {
+                    "name": "Viktor",
+                    "tier": "S",
+                    "role": "Mid",
+                    "description": "Excellent scaling et présence en équipe"
+                },
+                {
+                    "name": "Zed",
+                    "tier": "A",
+                    "role": "Mid",
+                    "description": "Assassin fort avec haut burst"
+                }
+            ]
+        },
+        "adc": {
+            "title": "ADC",
+            "champions": [
+                {
+                    "name": "Jinx",
+                    "tier": "S",
+                    "role": "ADC",
+                    "description": "Hyper carry avec late game fou"
+                },
+                {
+                    "name": "Aphelios",
+                    "tier": "A",
+                    "role": "ADC",
+                    "description": "Système d'armes flexible avec haut dégât"
+                },
+                {
+                    "name": "Caitlyn",
+                    "tier": "A",
+                    "role": "ADC",
+                    "description": "Forte portée et positionnement"
+                }
+            ]
+        },
+        "support": {
+            "title": "Support",
+            "champions": [
+                {
+                    "name": "Leona",
+                    "tier": "S",
+                    "role": "Support",
+                    "description": "Engage dur avec combo dévastateur"
+                },
+                {
+                    "name": "Nautilus",
+                    "tier": "A",
+                    "role": "Support",
+                    "description": "CC fiable et tank"
+                },
+                {
+                    "name": "Lulu",
+                    "tier": "A",
+                    "role": "Support",
+                    "description": "Excellant peel et utilité"
+                }
+            ]
+        },
+        "aram": {
+            "title": "ARAM",
+            "champions": [
+                {
+                    "name": "Brand",
+                    "tier": "S",
+                    "role": "ARAM",
+                    "description": "Dégâts AoE massifs en espace clos"
+                },
+                {
+                    "name": "Ziggs",
+                    "tier": "A",
+                    "role": "ARAM",
+                    "description": "Excellent contrôle de vague et dégâts de bombe"
+                },
+                {
+                    "name": "Alistar",
+                    "tier": "A",
+                    "role": "ARAM",
+                    "description": "Engages fiables et guérison"
+                }
+            ]
+        }
+    }
+}

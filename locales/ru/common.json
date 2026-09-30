@@ -11,14 +11,19 @@
         "privacy": "Privacy",
         "terms": "Terms",
         "siteName": "League Roulette",
-        "siteTagline": "Random Champion Challenge"
+        "siteTagline": "Random Champion Challenge",
+        "challenges": "Вызовы",
+        "tierlist": "Таблица рейтингов",
+        "modes": "Режимы",
+        "popular": "Популярные",
+        "mastery": "mastery"
     },
     "home": {
-        "howItWorks": "How it works",
-        "leaderboard": "Leaderboard",
-        "achievements": "Achievements",
-        "logout": "Logout",
-        "loginToTrack": "Login to Track",
+        "howItWorks": "Как работает",
+        "leaderboard": "Рейтинг",
+        "achievements": "Достижения",
+        "logout": "Выйти",
+        "loginToTrack": "Войдите, чтобы отслеживать",
         "heroTitle1": "LEAGUE ROULETTE",
         "heroTitle2": "СЛУЧАЙНЫЙ",
         "heroTitle3": "ЧЕМПИОН",
@@ -28,12 +33,12 @@
             "No Login Needed",
             "Season 2026"
         ],
-        "trackProgress": "Track Your Progress",
-        "trackProgressDesc": "Log in to verify wins, earn XP, unlock achievements, and climb the leaderboard.",
-        "loginWithRiot": "Login with Riot Account",
-        "guidesSection": "Guides",
-        "guidesTitle": "Random LoL Challenge Guides",
-        "guidesDesc": "Practical guides about random champion picks, fun challenges, and fresh ideas for your next queue.",
+        "trackProgress": "Отслеживайте прогресс",
+        "trackProgressDesc": "Войдите, чтобы проверить победы и заработать XP",
+        "loginWithRiot": "Войти через Riot",
+        "guidesSection": "Гайды",
+        "guidesTitle": "Гайды по случайным челленджам LoL",
+        "guidesDesc": "Практические гайды по случайным пикам чемпионов",
         "blogPosts": [
             {
                 "href": "/blog/what-champion-should-i-play",
@@ -52,19 +57,24 @@
             }
         ],
         "matchMaking": {
-            "verifying": "Verifying Match...",
-            "verify": "Verify Match"
+            "verifying": "Проверка матча...",
+            "verify": "Проверить матч"
         }
     },
     "championCard": {
-        "yourChampion": "Your Champion",
-        "readyToBegin": "Ready to begin",
-        "pressBelow": "Press the button below",
-        "spinning": "Spinning",
-        "spinRoulette": "Spin Roulette",
+        "yourChampion": "Ваш чемпион",
+        "readyToBegin": "Готовы начать",
+        "pressBelow": "Нажмите кнопку ниже",
+        "spinning": "Вращение",
+        "spinRoulette": "Крутить рулетку",
         "verifying": "Verifying...",
         "verifyMatch": "Verify Match",
-        "spinAgain": "Spin Again"
+        "spinAgain": "Spin Again",
+        "playWith": "Играть с",
+        "stats": "Статистика",
+        "mastery": "Мастерство",
+        "winrate": "Процент побед",
+        "championPool": "Пул чемпионов"
     },
     "championSelector": {
         "yourChampion": "Your Champion",
@@ -76,7 +86,13 @@
         "rerollUnlimited": "Reroll (Unlimited)",
         "unlimitedSpins": "Don't like these options? You have unlimited spins",
         "spinsLeft": "Don't like these options? You have {n} more spin(s)",
-        "noRerolls": "✨ Choose wisely! No rerolls remaining"
+        "noRerolls": "✨ Choose wisely! No rerolls remaining",
+        "top": "Верх",
+        "mid": "Середина",
+        "jungle": "Джунгли",
+        "bottom": "Низ",
+        "support": "Поддержка",
+        "adc": "Низ"
     },
     "championStats": {
         "statistics": "📊 {champion} Statistics",
@@ -91,11 +107,11 @@
     "laneSelector": {
         "selectLane": "Select Lane",
         "allLanes": "All Lanes",
-        "top": "Top",
-        "jungle": "Jungle",
-        "mid": "Mid",
-        "adc": "ADC",
-        "support": "Support",
+        "top": "Верх",
+        "jungle": "Джунгли",
+        "mid": "Середина",
+        "adc": "Низ",
+        "support": "Поддержка",
         "anyChampion": "Any champion",
         "islandLife": "Island life",
         "pveSimulator": "PvE simulator",
@@ -107,10 +123,11 @@
         "jng": "JNG",
         "midShort": "MID",
         "adcShort": "ADC",
-        "sup": "SUP"
+        "sup": "SUP",
+        "bottom": "Низ"
     },
     "infoModal": {
-        "title": "How It Works",
+        "title": "Информация",
         "step1Title": "Spin the Roulette",
         "step1Desc": "Select a lane or leave it on All Lanes, then click Spin to get a random champion.",
         "step2Title": "Play League of Legends",
@@ -138,16 +155,22 @@
         "faqPasswordA": "Yes. We use Riot's official OAuth — your password is never stored on our servers. With manual login, we only verify your public Riot ID.",
         "faqModesQ": "What modes count?",
         "faqModesA": "Any matchmade game mode counts: Summoner's Rift (all queues), ARAM, and rotating game modes.",
-        "gotIt": "Got it, let's play!"
+        "gotIt": "Got it, let's play!",
+        "description": "Описание"
     },
     "autoVerify": {
-        "title": "Auto-Scan",
+        "title": "Автоматическая верификация",
         "monitoring": "Monitoring for {champion} match.\nPlay your game — we'll handle the rest.",
         "nextCheck": "Next check",
         "elapsed": "Elapsed",
         "verifyNow": "Verify Now",
         "cancel": "Cancel",
-        "info": "Checks every 2 min for 1 hour. Click Verify Now for instant result."
+        "info": "Checks every 2 min for 1 hour. Click Verify Now for instant result.",
+        "verify": "Проверить",
+        "status": "Статус",
+        "pending": "Ожидание",
+        "success": "Успех",
+        "failed": "Ошибка"
     },
     "verificationResult": {
         "scanning": "Scanning for match...",
@@ -166,7 +189,11 @@
         "earned": "Earned",
         "involved": "Involved",
         "xpEarned": "+100 XP",
-        "xpLabel": "earned"
+        "xpLabel": "earned",
+        "title": "Результат верификации",
+        "matchVerified": "Матч подтверждён",
+        "championMatched": "Чемпион совпадает",
+        "championMismatch": "Чемпион не совпадает"
     },
     "userStats": {
         "level": "Lv.{level}",
@@ -174,29 +201,36 @@
         "challenges": "Challenges",
         "xpProgress": "XP Progress",
         "currentStreak": "Current Streak",
-        "bestStreak": "Best Streak"
+        "bestStreak": "Best Streak",
+        "totalPlayed": "Всего сыграно",
+        "wins": "Победы",
+        "streak": "Серия побед",
+        "xp": "Опыт"
     },
     "achievements": {
         "newAchievement": "🎉 New Achievement!",
         "close": "Close",
-        "title": "Achievements",
+        "title": "Достижения",
         "common": "COMMON",
         "rare": "RARE",
         "epic": "EPIC",
         "legendary": "LEGENDARY",
-        "xpReward": "+{xp} XP"
+        "xpReward": "+{xp} XP",
+        "desc": "Отслеживайте свои достижения"
     },
     "settings": {
-        "title": "Settings",
+        "title": "Настройки",
         "autoVerify": "Auto-Verification",
         "autoVerifyDesc": "Automatically check for completed matches every 2 minutes",
-        "notifications": "Browser Notifications",
+        "notifications": "Уведомления",
         "notificationsDesc": "Get notified when your match is verified",
         "sound": "Sound Effects",
         "soundDesc": "Play sound when achievements unlock or matches verify",
         "cancel": "Cancel",
         "save": "Save Changes",
-        "tip": "💡 Auto-verification works best when you keep the tab open. Close the tab and verification will pause until you return."
+        "tip": "💡 Auto-verification works best when you keep the tab open. Close the tab and verification will pause until you return.",
+        "profile": "Профиль",
+        "language": "Язык"
     },
     "slotMachine": {
         "loading": "Loading champions…",
@@ -207,14 +241,15 @@
         "pullLever": "Pull the Lever",
         "clickToSpin": "Click to spin",
         "jackpot": "🎰 Jackpot!",
-        "spinAgain": "Spin again"
+        "spinAgain": "Spin again",
+        "spin": "Крутить"
     },
     "slotLever": {
         "spinning": "Spinning...",
-        "pull": "Pull"
+        "pull": "Тянуть"
     },
     "login": {
-        "title": "League Roulette",
+        "title": "Войти",
         "subtitle": "Random Champion Challenge",
         "enterRiotId": "Enter your Riot ID to start",
         "riotId": "Riot ID",
@@ -228,10 +263,14 @@
         "disclaimer": "League Roulette isn't endorsed by Riot Games",
         "errorRequired": "Please enter your Riot ID",
         "errorFormat": "Invalid format. Use: GameName#TAG",
-        "errorFormatExample": "Invalid format. Example: Player#EUW"
+        "errorFormatExample": "Invalid format. Example: Player#EUW",
+        "signIn": "Войти",
+        "signUp": "Зарегистрироваться",
+        "email": "Email",
+        "password": "Пароль"
     },
     "rsoLogin": {
-        "title": "Login to League Roulette",
+        "title": "Вход Riot",
         "chooseMethod": "Choose your preferred login method",
         "riotOauth": "Riot OAuth",
         "recommended": "Recommended",
@@ -278,11 +317,15 @@
         "legal": "Legal",
         "followUs": "Follow Us",
         "copyright": "© {year} League Roulette. All rights reserved.",
-        "disclaimer": "League Roulette is not endorsed by Riot Games and does not reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. League of Legends and Riot Games are trademarks or registered trademarks of Riot Games, Inc."
+        "disclaimer": "League Roulette is not endorsed by Riot Games and does not reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. League of Legends and Riot Games are trademarks or registered trademarks of Riot Games, Inc.",
+        "rights": "Все права защищены",
+        "contact": "Контакт",
+        "privacy": "Конфиденциальность",
+        "terms": "Условия использования"
     },
     "about": {
         "backToGame": "Back to Game",
-        "title": "About League Roulette",
+        "title": "О нас",
         "subtitle": "Challenging League of Legends players since 2024",
         "missionTitle": "Our Mission",
         "missionP1": "League Roulette was created to add a fresh layer of excitement to League of Legends. We believe that stepping outside your comfort zone is the best way to improve and have fun.",
@@ -330,16 +373,19 @@
         "numbersPlayers": "Active Players",
         "ctaTitle": "Ready to Challenge Yourself?",
         "ctaStart": "Start Playing Now",
-        "ctaLearn": "Learn How to Play"
+        "ctaLearn": "Learn How to Play",
+        "description": "О игре",
+        "mission": "Наша миссия",
+        "team": "Команда"
     },
     "contact": {
         "backToHome": "Back to Home",
-        "title": "Contact Us",
+        "title": "Контакт",
         "subtitle": "We'd love to hear from you!",
-        "formName": "Name",
+        "formName": "Имя",
         "formEmail": "Email",
-        "formSubject": "Subject",
-        "formMessage": "Message",
+        "formSubject": "Тема",
+        "formMessage": "Сообщение",
         "namePlaceholder": "Your name",
         "emailPlaceholder": "your@email.com",
         "messagePlaceholder": "Tell us what's on your mind...",
@@ -364,12 +410,13 @@
         "twitterDesc": "Follow for updates and announcements",
         "quickHelp": "Quick Help",
         "quickHelpDesc": "Before reaching out, check if your question is answered in our FAQ",
-        "viewFaq": "View FAQ →"
+        "viewFaq": "View FAQ →",
+        "submit": "Отправить"
     },
     "faq": {
         "backToGame": "Back to Game",
-        "title": "Frequently Asked Questions",
-        "subtitle": "Find answers to common questions about League Roulette",
+        "title": "Частые вопросы",
+        "subtitle": "Найдите ответы",
         "sectionGettingStarted": "Getting Started",
         "sectionGameplay": "Gameplay",
         "sectionVerification": "Verification & Progress",
@@ -378,12 +425,16 @@
         "stillQuestions": "Still Have Questions?",
         "stillQuestionsDesc": "Didn't find what you were looking for? We're here to help!",
         "contactSupport": "Contact Support",
-        "readTutorial": "Read Tutorial"
+        "readTutorial": "Read Tutorial",
+        "gettingStarted": "Начало",
+        "account": "Аккаунт",
+        "gameplay": "Игровой процесс",
+        "support": "Поддержка"
     },
     "howToPlay": {
         "backToGame": "Back to Game",
-        "title": "How to Play League Roulette",
-        "subtitle": "Your complete guide to getting started",
+        "title": "Как играть",
+        "subtitle": "Освойте генератор случайных чемпионов",
         "whatIsTitle": "What is League Roulette?",
         "steps": {
             "account": {
@@ -417,20 +468,21 @@
     },
     "tips": {
         "backToGame": "Back to Game",
-        "title": "Strategy & Champion Tips",
-        "subtitle": "Master the art of playing random champions",
-        "ctaTitle": "Ready to Improve?",
+        "title": "Стратегические советы",
+        "subtitle": "Освойте искусство игры со случайными чемпионами",
+        "ctaTitle": "Хотите улучшить?",
         "ctaPlay": "Start Playing",
-        "ctaBasics": "Learn the Basics"
+        "ctaBasics": "Learn the Basics",
+        "ctaDesc": "Присоединяйтесь и учитесь"
     },
     "leaderboard": {
         "backToGame": "Back to Game",
-        "title": "🏆 Leaderboard",
-        "subtitle": "Compete with the best League Roulette players",
-        "tabXp": "Total XP",
-        "tabLevel": "Highest Level",
-        "tabChallenges": "Most Challenges",
-        "tabStreak": "Current Streak",
+        "title": "🏆 Рейтинг",
+        "subtitle": "Соревнуйтесь с лучшими игроками",
+        "tabXp": "Всего XP",
+        "tabLevel": "Максимальный уровень",
+        "tabChallenges": "Челленджи",
+        "tabStreak": "Серия побед",
         "tabBestStreak": "Best Streak",
         "descXp": "Most experience points earned",
         "descLevel": "Highest player level",
@@ -451,10 +503,10 @@
         "loginButton": "Login & Start Playing"
     },
     "blog": {
-        "back": "Back to League Roulette",
-        "sectionLabel": "League Roulette Blog",
-        "title": "LoL challenge guides, random picks, and champion inspiration",
-        "desc": "Discover practical guides, fun challenge ideas, and fresh ways to enjoy League of Legends with random champion picks.",
+        "back": "Вернуться к League Roulette",
+        "sectionLabel": "Блог League Roulette",
+        "title": "Гайды по челленджам, случайные пики и вдохновение",
+        "desc": "Советы и гайды для лучшего опыта League Roulette",
         "cardLabel": "Lol Roulette article",
         "readArticle": "Read article",
         "backToBlog": "Back to Blog",
@@ -462,25 +514,28 @@
         "ctaTitle": "Ready to spin for your next match?",
         "ctaDesc": "Feeling inspired? Try our random champion generator and put your new knowledge to the test.",
         "browseMore": "Browse more blog posts",
-        "relatedReading": "Related reading"
+        "relatedReading": "Related reading",
+        "subtitle": "Последние статьи"
     },
     "privacy": {
         "backToHome": "Back to Home",
-        "title": "Privacy Policy",
+        "title": "Конфиденциальность",
         "lastUpdated": "Last updated: February 12, 2026"
     },
     "terms": {
         "backToHome": "Back to Home",
-        "title": "Terms of Service",
+        "title": "Условия использования",
         "lastUpdated": "Last updated: February 12, 2026"
     },
     "meta": {
-        "defaultTitle": "LoL Random Champion Generator 🎯 | Spin the Roulette & Get a Random Pick",
+        "defaultTitle": "Случайный генератор чемпионов LoL & League Roulette",
         "titleTemplate": "%s | League Roulette",
-        "defaultDescription": "Not sure what to play in League of Legends? 🎯 Spin the random champion roulette, challenge your friends, track wins, earn XP, and climb the leaderboard. Free LoL randomizer!"
+        "defaultDescription": "Случайные челленджи чемпионов LoL",
+        "title": "League Roulette",
+        "description": "Случайные челленджи чемпионов"
     },
     "seo": {
-        "srHeading": "Free Random League of Legends Champion Generator | LoL Roulette & Picker 2026 - Ranked, ARAM, Custom",
+        "srHeading": "Бесплатный случайный генератор чемпионов LoL | League Roulette",
         "whatIsTitle": "What is League Roulette?",
         "whatIsText": "League Roulette is a <strong>free random champion generator</strong> for League of Legends (LoL). Spin the wheel to get a random LoL champion and challenge yourself to win ranked or normal games.",
         "howToTitle": "How to Use the Random Champion Picker",
@@ -543,25 +598,27 @@
         "faq7Q": "Can I use random champion picker for ranked?",
         "faq7A": "Absolutely! Many players use it to practice off-meta picks.",
         "faq8Q": "Is League Roulette mobile optimized?",
-        "faq8A": "100% mobile-friendly. Spin the roulette on phone, tablet, or desktop."
+        "faq8A": "100% mobile-friendly. Spin the roulette on phone, tablet, or desktop.",
+        "description": "Случайные челленджи",
+        "whatIs": "Что такое League Roulette?"
     },
     "localeSwitcher": {
-        "label": "Language"
+        "label": "Язык"
     },
     "mastery": {
-        "title": "Champion Mastery",
-        "subtitle": "View your mastery levels and points across all champions",
-        "loginRequired": "Login Required",
-        "loginRequiredDesc": "You need to login with your Riot ID to view your champion mastery data.",
+        "title": "Мастерство чемпионов",
+        "subtitle": "Показать уровни мастерства и очки",
+        "loginRequired": "Требуется вход",
+        "loginRequiredDesc": "Войдите, чтобы увидеть мастерство",
         "signIn": "Sign In",
         "winrateSection": "Winrate by Champion"
     },
     "championMastery": {
-        "title": "Champion Mastery",
-        "totalPoints": "Total Points",
-        "championsPlayed": "Champions Played",
-        "mastery7Plus": "Mastery 7+",
-        "mastery5Plus": "Mastery 5+",
+        "title": "Мастерство чемпионов",
+        "totalPoints": "Всего очков",
+        "championsPlayed": "Игранных чемпионов",
+        "mastery7Plus": "Мастерство 7+",
+        "mastery5Plus": "Мастерство 5+",
         "points": "pts",
         "noMasteries": "No mastery data available",
         "showAll": "Show all ({count})",
@@ -578,12 +635,12 @@
         "toNextLevel": "to next level"
     },
     "championWinrate": {
-        "loading": "Loading your match history...",
-        "noData": "No match history found. Play some games first!",
-        "noLaneData": "No champions found for {lane}",
+        "loading": "Загрузка истории матчей...",
+        "noData": "История матчей не найдена. Сначала играйте!",
+        "noLaneData": "Чемпионы не найдены для {lane}",
         "wins": "W",
         "losses": "L",
-        "games": "games",
+        "games": "Матчей",
         "lane": {
             "all": "All Lanes",
             "top": "Top",
@@ -591,7 +648,9 @@
             "mid": "Mid",
             "adc": "ADC",
             "support": "Support"
-        }
+        },
+        "title": "Процент побед",
+        "winRate": "Процент побед"
     },
     "faqContent": [
         {
@@ -734,8 +793,8 @@
     "blogContent": [
         {
             "slug": "what-champion-should-i-play",
-            "title": "What Champion Should I Play in League of Legends?",
-            "description": "Not sure what champion to play in LoL? Use our random champion generator to get a fun pick, discover new mains, and make every queue feel fresh.",
+            "title": "Какого чемпиона играть в League of Legends?",
+            "description": "Не знаешь, какого чемпиона играть в LoL? Используй нашего случайного генератора для веселья.",
             "keywords": [
                 "what champion should i play lol",
                 "league of legends random champion generator",
@@ -802,8 +861,8 @@
         },
         {
             "slug": "lol-random-challenge",
-            "title": "Fun LoL Random Challenge Ideas",
-            "description": "Try these League of Legends random challenge ideas with our LoL Roulette tool. Great for solo queue, friend groups, custom games, and content challenges.",
+            "title": "Как использовать случайный генератор чемпионов",
+            "description": "Узнай, как использовать случайный генератор, чтобы получать нового чемпиона каждый раз",
             "keywords": [
                 "lol random challenge ideas",
                 "league of legends random challenge",
@@ -876,8 +935,8 @@
         },
         {
             "slug": "fun-lol-challenges",
-            "title": "Fun Ways to Play League of Legends",
-            "description": "Looking for fun League of Legends challenges? Here are creative ways to use a random champion generator with friends, duos, and casual teams.",
+            "title": "Лучшие стратегии для случайного чемпиона",
+            "description": "Советы и хитрости, чтобы побеждать с чемпионами, в которых ты никогда не играл",
             "keywords": [
                 "fun ways to play league of legends",
                 "fun lol challenges",
@@ -945,8 +1004,8 @@
         },
         {
             "slug": "best-champions-for-top-lane",
-            "title": "Best Top Lane Champions Current Patch",
-            "description": "Discover the strongest top lane champions.",
+            "title": "Гайд ARAM: Всё, что нужно знать",
+            "description": "ARAM — это весёлый режим, в котором чемпион всегда случайный. Полный гайд",
             "keywords": [
                 "best top lane champions",
                 "top lane champions current patch",
@@ -990,8 +1049,8 @@
         },
         {
             "slug": "mid-lane-champions-guide",
-            "title": "Mid Lane Champions Guide",
-            "description": "Complete guide to mid lane champions.",
+            "title": "Повышай мастерство с случайными чемпионами",
+            "description": "Как улучшить свои навыки в League of Legends, играя случайных чемпионов",
             "keywords": [
                 "mid lane champions",
                 "best mid lane champions",
@@ -1514,5 +1573,23 @@
                 }
             ]
         }
-    ]
+    ],
+    "siteName": "League Roulette",
+    "siteTagline": "Random Champion Challenge",
+    "championPool": {
+        "title": "Пул чемпионов",
+        "desc": "Выберите минимум 5 чемпионов на линию",
+        "minPerLane": "5 на линию необходимо",
+        "totalSelected": "Выбрано: {count}"
+    },
+    "heroTitle1": "League Roulette",
+    "heroTitle2": "Случайный челлендж",
+    "heroSubtitle": "Проверьте свою удачу со случайными челленджами чемпионов",
+    "heroCta": "Играть",
+    "howItWorks": {
+        "title": "Как работает",
+        "step1": "1. Выберите челлендж",
+        "step2": "2. Соберите команду и играйте",
+        "step3": "3. Выполните челлендж и получите награды"
+    }
 }

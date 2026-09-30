@@ -1,0 +1,47 @@
+{
+    "title": "Spielmodi",
+    "subtitle": "Finde den Modus, der zu deinem Stil passt",
+    "modes": [
+        {
+            "name": "Summoner's Rift",
+            "description": "Die klassische 5v5-Karte. Drei Lanes, zwei Dschungel und ein Ziel: Sieg.",
+            "icon": "🗺️",
+            "queueTypes": [
+                "Ranked Solo",
+                "Ranked Flex",
+                "Normal Draft",
+                "Normal Blind Pick"
+            ],
+            "bestFor": "Pro-Spieler"
+        },
+        {
+            "name": "Howling Abyss",
+            "description": "ARAM-Karte mit einem Spielplatz. Alles ist zufällig und gefährlich.",
+            "icon": "🎮",
+            "queueTypes": [
+                "ARAM",
+                "URF ARAM"
+            ],
+            "bestFor": "Spieler, die schnelles Action mögen"
+        },
+        {
+            "name": "ARAM",
+            "description": "Zufälliger Spielmodus auf einer Karte.",
+            "icon": "🤝",
+            "queueTypes": [
+                "One for All"
+            ],
+            "bestFor": "Schnelles und lustiges Spiel"
+        },
+        {
+            "name": "Ultra Rapid Fire",
+            "description": "Super fast attacks and abilities. Pure chaos and fun.",
+            "icon": "⚡",
+            "queueTypes": [
+                "URF"
+            ],
+            "bestFor": "Players who want a lighthearted break from normal gameplay"
+        }
+    ],
+    "tips": "Choose a mode that matches your playstyle and preferred pace of game"
+}

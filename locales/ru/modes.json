@@ -1,0 +1,47 @@
+{
+    "title": "Режимы игры",
+    "subtitle": "Найдите режим, который подходит вашему стилю",
+    "modes": [
+        {
+            "name": "Summoner's Rift",
+            "description": "Классическая карта 5v5. Три линии, два джунгля и одна цель: победа.",
+            "icon": "🗺️",
+            "queueTypes": [
+                "Ranked Solo",
+                "Ranked Flex",
+                "Normal Draft",
+                "Normal Blind Pick"
+            ],
+            "bestFor": "Профессиональные игроки"
+        },
+        {
+            "name": "Howling Abyss",
+            "description": "Карта ARAM с одним полем боя. Всё случайно и опасно.",
+            "icon": "🎮",
+            "queueTypes": [
+                "ARAM",
+                "URF ARAM"
+            ],
+            "bestFor": "Любители быстрого экшена"
+        },
+        {
+            "name": "ARAM",
+            "description": "Случайный режим игры на одной карте.",
+            "icon": "🤝",
+            "queueTypes": [
+                "One for All"
+            ],
+            "bestFor": "Быстрая и весёлая игра"
+        },
+        {
+            "name": "Ultra Rapid Fire",
+            "description": "Super fast attacks and abilities. Pure chaos and fun.",
+            "icon": "⚡",
+            "queueTypes": [
+                "URF"
+            ],
+            "bestFor": "Players who want a lighthearted break from normal gameplay"
+        }
+    ],
+    "tips": "Choose a mode that matches your playstyle and preferred pace of game"
+}

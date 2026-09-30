@@ -14,10 +14,10 @@ export default function Navbar() {
 
   const isActive = (path: string) => path === '/blog' ? pathname.startsWith('/blog') : pathname === path
 
-  const navLinks = [
+const navLinks = [
     { href: '/', label: t('play'), icon: '🎮' },
     { href: '/leaderboard', label: t('leaderboard'), icon: '🏆' },
-    { href: '/mastery', label: t('mastery'), icon: '🏅' },
+    { href: '/challenges', label: t('challenges'), icon: '⚡' },
     { href: '/howtoplay', label: t('howToPlay'), icon: '📖' },
   ]
 

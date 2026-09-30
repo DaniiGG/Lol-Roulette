@@ -1,0 +1,15 @@
+{
+    "backToGame": "Terug naar het spel",
+    "title": "Ranglijst",
+    "subtitle": "Kijk hoe je presteert tegen de besten",
+    "yourRank": "Je rang",
+    "loading": "Ranglijst laden...",
+    "retry": "Opnieuw proberen",
+    "youBadge": "Jij",
+    "emptyTitle": "Nog geen ranglijst",
+    "emptyDesc": "Wees de eerste die de ranglijst beklimt!",
+    "emptyCta": "Spelen",
+    "loginCta": "Inloggen om je rang te zien",
+    "loginDesc": "Log in om je voortgang te volgen en te concurreren met anderen",
+    "loginButton": "Inloggen"
+}

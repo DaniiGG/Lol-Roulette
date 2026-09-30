@@ -1,0 +1,57 @@
+{
+    "weeklyChallenge": {
+        "title": "Desafío Semanal",
+        "subtitle": "Completa el desafío semanal para ganar derechos de orgulloso",
+        "challenges": [
+            {
+                "id": "support-only",
+                "name": "Solo Support",
+                "description": "Juega 3 partidas esta semana jugando solo con campeones de soporte. ¡Sin carries permitidos!",
+                "emoji": "👩",
+                "deadline": "Este Domingo",
+                "difficulty": "Medio"
+            },
+            {
+                "id": "low-mastery",
+                "name": "Baja Maestría",
+                "description": "Juega con campeones en los que tienes menos de 10 partidas. ¡Amplía tu pool!",
+                "emoji": "🎯",
+                "deadline": "Este Domingo",
+                "difficulty": "Difícil"
+            },
+            {
+                "id": "friends-roulette",
+                "name": "Ruleta de Amigos",
+                "description": "Desafia a 3 amigos a una ruleta grupal. ¡Cada uno gira y juega su elección!",
+                "emoji": "🎉",
+                "deadline": "Este Domingo",
+                "difficulty": "Fácil"
+            },
+            {
+                "id": "aram-only",
+                "name": "Solo ARAM",
+                "description": "Juega 5 partidas en Howling Abyss esta semana. ¡El campeón siempre es aleatorio!",
+                "emoji": "🏟️",
+                "deadline": "Este Domingo",
+                "difficulty": "Medio"
+            },
+            {
+                "id": "champion-rotation",
+                "name": "Rotación de Campeones",
+                "description": "Juega con cada campeón gratuito en la rotación de esta semana. ¡Una partida por uno!",
+                "emoji": "🔄",
+                "deadline": "Este Domingo",
+                "difficulty": "Difícil"
+            }
+        ]
+    },
+    "aramNote": "En ARAM el campeón siempre es aleatorio - ¡solo entra y juega!",
+    "noChampions": "No hay desafíos semanales disponibles",
+    "createChallenge": "Crear tu propio desafío",
+    "shareCode": "Compartir código",
+    "joinChallenge": "Unirse y Girar",
+    "back": "Volver",
+    "sectionLabel": "Desafío Semanal",
+    "startPlaying": "Empezar a Jugar",
+    "browseMore": "Explorar Blog"
+}

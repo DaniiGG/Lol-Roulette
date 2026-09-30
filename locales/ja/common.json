@@ -11,14 +11,19 @@
         "privacy": "Privacy",
         "terms": "Terms",
         "siteName": "League Roulette",
-        "siteTagline": "Random Champion Challenge"
+        "siteTagline": "Random Champion Challenge",
+        "challenges": "チャレンジ",
+        "tierlist": "タイアルリスト",
+        "modes": "モード",
+        "popular": "人気",
+        "mastery": "mastery"
     },
     "home": {
-        "howItWorks": "How it works",
-        "leaderboard": "Leaderboard",
-        "achievements": "Achievements",
-        "logout": "Logout",
-        "loginToTrack": "Login to Track",
+        "howItWorks": "仕組み",
+        "leaderboard": "ランキング",
+        "achievements": "実績",
+        "logout": "ログアウト",
+        "loginToTrack": "ログインしてトラック",
         "heroTitle1": "LEAGUE ROULETTE",
         "heroTitle2": "ランダム",
         "heroTitle3": "チャンピオン",
@@ -28,12 +33,12 @@
             "No Login Needed",
             "Season 2026"
         ],
-        "trackProgress": "Track Your Progress",
-        "trackProgressDesc": "Log in to verify wins, earn XP, unlock achievements, and climb the leaderboard.",
-        "loginWithRiot": "Login with Riot Account",
-        "guidesSection": "Guides",
-        "guidesTitle": "Random LoL Challenge Guides",
-        "guidesDesc": "Practical guides about random champion picks, fun challenges, and fresh ideas for your next queue.",
+        "trackProgress": "あなたの進行状況を追跡",
+        "trackProgressDesc": "ログインして勝利を確認し、XPを獲得",
+        "loginWithRiot": "Riotアカウントでログイン",
+        "guidesSection": "ガイド",
+        "guidesTitle": "ランダムLoLチャレンジガイド",
+        "guidesDesc": "ランダムなチャンピオンピックに関する実用的なガイド",
         "blogPosts": [
             {
                 "href": "/blog/what-champion-should-i-play",
@@ -52,19 +57,24 @@
             }
         ],
         "matchMaking": {
-            "verifying": "Verifying Match...",
-            "verify": "Verify Match"
+            "verifying": "試合を検証中...",
+            "verify": "試合を検証"
         }
     },
     "championCard": {
-        "yourChampion": "Your Champion",
-        "readyToBegin": "Ready to begin",
-        "pressBelow": "Press the button below",
-        "spinning": "Spinning",
-        "spinRoulette": "Spin Roulette",
+        "yourChampion": "あなたのチャンピオン",
+        "readyToBegin": "プレイ開始",
+        "pressBelow": "ボタンを押す",
+        "spinning": "回転中",
+        "spinRoulette": "ルーレットを回す",
         "verifying": "Verifying...",
         "verifyMatch": "Verify Match",
-        "spinAgain": "Spin Again"
+        "spinAgain": "Spin Again",
+        "playWith": "プレイ",
+        "stats": "統計",
+        "mastery": "マスタリー",
+        "winrate": "勝率",
+        "championPool": "チャンピオンプール"
     },
     "championSelector": {
         "yourChampion": "Your Champion",
@@ -76,7 +86,13 @@
         "rerollUnlimited": "Reroll (Unlimited)",
         "unlimitedSpins": "Don't like these options? You have unlimited spins",
         "spinsLeft": "Don't like these options? You have {n} more spin(s)",
-        "noRerolls": "✨ Choose wisely! No rerolls remaining"
+        "noRerolls": "✨ Choose wisely! No rerolls remaining",
+        "top": "トップ",
+        "mid": "ミッド",
+        "jungle": "ジャングル",
+        "bottom": "ボトム",
+        "support": "サポート",
+        "adc": "ボトム"
     },
     "championStats": {
         "statistics": "📊 {champion} Statistics",
@@ -91,11 +107,11 @@
     "laneSelector": {
         "selectLane": "Select Lane",
         "allLanes": "All Lanes",
-        "top": "Top",
-        "jungle": "Jungle",
-        "mid": "Mid",
-        "adc": "ADC",
-        "support": "Support",
+        "top": "トップ",
+        "jungle": "ジャングル",
+        "mid": "ミッド",
+        "adc": "ボトム",
+        "support": "サポート",
         "anyChampion": "Any champion",
         "islandLife": "Island life",
         "pveSimulator": "PvE simulator",
@@ -107,10 +123,11 @@
         "jng": "JNG",
         "midShort": "MID",
         "adcShort": "ADC",
-        "sup": "SUP"
+        "sup": "SUP",
+        "bottom": "ボトム"
     },
     "infoModal": {
-        "title": "How It Works",
+        "title": "情報",
         "step1Title": "Spin the Roulette",
         "step1Desc": "Select a lane or leave it on All Lanes, then click Spin to get a random champion.",
         "step2Title": "Play League of Legends",
@@ -138,16 +155,22 @@
         "faqPasswordA": "Yes. We use Riot's official OAuth — your password is never stored on our servers. With manual login, we only verify your public Riot ID.",
         "faqModesQ": "What modes count?",
         "faqModesA": "Any matchmade game mode counts: Summoner's Rift (all queues), ARAM, and rotating game modes.",
-        "gotIt": "Got it, let's play!"
+        "gotIt": "Got it, let's play!",
+        "description": "説明"
     },
     "autoVerify": {
-        "title": "Auto-Scan",
+        "title": "自動検証",
         "monitoring": "Monitoring for {champion} match.\nPlay your game — we'll handle the rest.",
         "nextCheck": "Next check",
         "elapsed": "Elapsed",
         "verifyNow": "Verify Now",
         "cancel": "Cancel",
-        "info": "Checks every 2 min for 1 hour. Click Verify Now for instant result."
+        "info": "Checks every 2 min for 1 hour. Click Verify Now for instant result.",
+        "verify": "検証",
+        "status": "ステータス",
+        "pending": "保留中",
+        "success": "成功",
+        "failed": "失敗"
     },
     "verificationResult": {
         "scanning": "Scanning for match...",
@@ -166,7 +189,11 @@
         "earned": "Earned",
         "involved": "Involved",
         "xpEarned": "+100 XP",
-        "xpLabel": "earned"
+        "xpLabel": "earned",
+        "title": "検証結果",
+        "matchVerified": "試合確認済み",
+        "championMatched": "チャンピオン一致",
+        "championMismatch": "チャンピオン不一致"
     },
     "userStats": {
         "level": "Lv.{level}",
@@ -174,29 +201,36 @@
         "challenges": "Challenges",
         "xpProgress": "XP Progress",
         "currentStreak": "Current Streak",
-        "bestStreak": "Best Streak"
+        "bestStreak": "Best Streak",
+        "totalPlayed": "総試合数",
+        "wins": "勝利",
+        "streak": "連勝",
+        "xp": "経験値"
     },
     "achievements": {
         "newAchievement": "🎉 New Achievement!",
         "close": "Close",
-        "title": "Achievements",
+        "title": "実績",
         "common": "COMMON",
         "rare": "RARE",
         "epic": "EPIC",
         "legendary": "LEGENDARY",
-        "xpReward": "+{xp} XP"
+        "xpReward": "+{xp} XP",
+        "desc": "実績を追跡"
     },
     "settings": {
-        "title": "Settings",
+        "title": "設定",
         "autoVerify": "Auto-Verification",
         "autoVerifyDesc": "Automatically check for completed matches every 2 minutes",
-        "notifications": "Browser Notifications",
+        "notifications": "通知",
         "notificationsDesc": "Get notified when your match is verified",
         "sound": "Sound Effects",
         "soundDesc": "Play sound when achievements unlock or matches verify",
         "cancel": "Cancel",
         "save": "Save Changes",
-        "tip": "💡 Auto-verification works best when you keep the tab open. Close the tab and verification will pause until you return."
+        "tip": "💡 Auto-verification works best when you keep the tab open. Close the tab and verification will pause until you return.",
+        "profile": "プロフィール",
+        "language": "言語"
     },
     "slotMachine": {
         "loading": "Loading champions…",
@@ -207,14 +241,15 @@
         "pullLever": "Pull the Lever",
         "clickToSpin": "Click to spin",
         "jackpot": "🎰 Jackpot!",
-        "spinAgain": "Spin again"
+        "spinAgain": "Spin again",
+        "spin": "回す"
     },
     "slotLever": {
         "spinning": "Spinning...",
-        "pull": "Pull"
+        "pull": "引く"
     },
     "login": {
-        "title": "League Roulette",
+        "title": "ログイン",
         "subtitle": "Random Champion Challenge",
         "enterRiotId": "Enter your Riot ID to start",
         "riotId": "Riot ID",
@@ -228,10 +263,14 @@
         "disclaimer": "League Roulette isn't endorsed by Riot Games",
         "errorRequired": "Please enter your Riot ID",
         "errorFormat": "Invalid format. Use: GameName#TAG",
-        "errorFormatExample": "Invalid format. Example: Player#EUW"
+        "errorFormatExample": "Invalid format. Example: Player#EUW",
+        "signIn": "ログイン",
+        "signUp": "新規登録",
+        "email": "メール",
+        "password": "パスワード"
     },
     "rsoLogin": {
-        "title": "Login to League Roulette",
+        "title": "Riotログイン",
         "chooseMethod": "Choose your preferred login method",
         "riotOauth": "Riot OAuth",
         "recommended": "Recommended",
@@ -278,11 +317,15 @@
         "legal": "Legal",
         "followUs": "Follow Us",
         "copyright": "© {year} League Roulette. All rights reserved.",
-        "disclaimer": "League Roulette is not endorsed by Riot Games and does not reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. League of Legends and Riot Games are trademarks or registered trademarks of Riot Games, Inc."
+        "disclaimer": "League Roulette is not endorsed by Riot Games and does not reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. League of Legends and Riot Games are trademarks or registered trademarks of Riot Games, Inc.",
+        "rights": "全著作権所有",
+        "contact": "お問い合わせ",
+        "privacy": "プライバシー",
+        "terms": "利用規約"
     },
     "about": {
         "backToGame": "Back to Game",
-        "title": "About League Roulette",
+        "title": "について",
         "subtitle": "Challenging League of Legends players since 2024",
         "missionTitle": "Our Mission",
         "missionP1": "League Roulette was created to add a fresh layer of excitement to League of Legends. We believe that stepping outside your comfort zone is the best way to improve and have fun.",
@@ -330,16 +373,19 @@
         "numbersPlayers": "Active Players",
         "ctaTitle": "Ready to Challenge Yourself?",
         "ctaStart": "Start Playing Now",
-        "ctaLearn": "Learn How to Play"
+        "ctaLearn": "Learn How to Play",
+        "description": "ゲームについて",
+        "mission": "ミッション",
+        "team": "チーム"
     },
     "contact": {
         "backToHome": "Back to Home",
-        "title": "Contact Us",
+        "title": "お問い合わせ",
         "subtitle": "We'd love to hear from you!",
-        "formName": "Name",
-        "formEmail": "Email",
-        "formSubject": "Subject",
-        "formMessage": "Message",
+        "formName": "名前",
+        "formEmail": "メール",
+        "formSubject": "件名",
+        "formMessage": "メッセージ",
         "namePlaceholder": "Your name",
         "emailPlaceholder": "your@email.com",
         "messagePlaceholder": "Tell us what's on your mind...",
@@ -364,12 +410,13 @@
         "twitterDesc": "Follow for updates and announcements",
         "quickHelp": "Quick Help",
         "quickHelpDesc": "Before reaching out, check if your question is answered in our FAQ",
-        "viewFaq": "View FAQ →"
+        "viewFaq": "View FAQ →",
+        "submit": "送信"
     },
     "faq": {
         "backToGame": "Back to Game",
-        "title": "Frequently Asked Questions",
-        "subtitle": "Find answers to common questions about League Roulette",
+        "title": "よくある質問",
+        "subtitle": "回答を探す",
         "sectionGettingStarted": "Getting Started",
         "sectionGameplay": "Gameplay",
         "sectionVerification": "Verification & Progress",
@@ -378,12 +425,16 @@
         "stillQuestions": "Still Have Questions?",
         "stillQuestionsDesc": "Didn't find what you were looking for? We're here to help!",
         "contactSupport": "Contact Support",
-        "readTutorial": "Read Tutorial"
+        "readTutorial": "Read Tutorial",
+        "gettingStarted": "始める",
+        "account": "アカウント",
+        "gameplay": "ゲームプレイ",
+        "support": "サポート"
     },
     "howToPlay": {
         "backToGame": "Back to Game",
-        "title": "How to Play League Roulette",
-        "subtitle": "Your complete guide to getting started",
+        "title": "プレイ方法",
+        "subtitle": "ランダムチャンピオングェネレーターをマスター",
         "whatIsTitle": "What is League Roulette?",
         "steps": {
             "account": {
@@ -417,20 +468,21 @@
     },
     "tips": {
         "backToGame": "Back to Game",
-        "title": "Strategy & Champion Tips",
-        "subtitle": "Master the art of playing random champions",
-        "ctaTitle": "Ready to Improve?",
+        "title": "戦略とチャンピオンのヒント",
+        "subtitle": "ランダムなチャンピオンでプレイする技術を極める",
+        "ctaTitle": "向上しますか？",
         "ctaPlay": "Start Playing",
-        "ctaBasics": "Learn the Basics"
+        "ctaBasics": "Learn the Basics",
+        "ctaDesc": "参加して学ぶ"
     },
     "leaderboard": {
         "backToGame": "Back to Game",
-        "title": "🏆 Leaderboard",
-        "subtitle": "Compete with the best League Roulette players",
-        "tabXp": "Total XP",
-        "tabLevel": "Highest Level",
-        "tabChallenges": "Most Challenges",
-        "tabStreak": "Current Streak",
+        "title": "🏆 ランキング",
+        "subtitle": "最高のプレイヤーと競う",
+        "tabXp": "総XP",
+        "tabLevel": "最高レベル",
+        "tabChallenges": "チャレンジ",
+        "tabStreak": "連勝",
         "tabBestStreak": "Best Streak",
         "descXp": "Most experience points earned",
         "descLevel": "Highest player level",
@@ -451,10 +503,10 @@
         "loginButton": "Login & Start Playing"
     },
     "blog": {
-        "back": "Back to League Roulette",
-        "sectionLabel": "League Roulette Blog",
-        "title": "LoL challenge guides, random picks, and champion inspiration",
-        "desc": "Discover practical guides, fun challenge ideas, and fresh ways to enjoy League of Legends with random champion picks.",
+        "back": "League Rouletteに戻る",
+        "sectionLabel": "League Rouletteブログ",
+        "title": "チャレンジガイド、ランダムなピック、インスピレーション",
+        "desc": "最高のLeague Roulette体験のためのヒントとガイド",
         "cardLabel": "Lol Roulette article",
         "readArticle": "Read article",
         "backToBlog": "Back to Blog",
@@ -462,25 +514,28 @@
         "ctaTitle": "Ready to spin for your next match?",
         "ctaDesc": "Feeling inspired? Try our random champion generator and put your new knowledge to the test.",
         "browseMore": "Browse more blog posts",
-        "relatedReading": "Related reading"
+        "relatedReading": "Related reading",
+        "subtitle": "最新記事"
     },
     "privacy": {
         "backToHome": "Back to Home",
-        "title": "Privacy Policy",
+        "title": "プライバシー",
         "lastUpdated": "Last updated: February 12, 2026"
     },
     "terms": {
         "backToHome": "Back to Home",
-        "title": "Terms of Service",
+        "title": "利用規約",
         "lastUpdated": "Last updated: February 12, 2026"
     },
     "meta": {
-        "defaultTitle": "LoL Random Champion Generator 🎯 | Spin the Roulette & Get a Random Pick",
+        "defaultTitle": "ランダムLoLチャンピオングェネレーター & League Roulette",
         "titleTemplate": "%s | League Roulette",
-        "defaultDescription": "Not sure what to play in League of Legends? 🎯 Spin the random champion roulette, challenge your friends, track wins, earn XP, and climb the leaderboard. Free LoL randomizer!"
+        "defaultDescription": "ランダムなLoLチャンピオンチャレンジ",
+        "title": "League Roulette",
+        "description": "ランダムチャンピオンチャレンジ"
     },
     "seo": {
-        "srHeading": "Free Random League of Legends Champion Generator | LoL Roulette & Picker 2026 - Ranked, ARAM, Custom",
+        "srHeading": "無料のランダムLoLチャンピオングェネレーター | League Roulette",
         "whatIsTitle": "What is League Roulette?",
         "whatIsText": "League Roulette is a <strong>free random champion generator</strong> for League of Legends (LoL). Spin the wheel to get a random LoL champion and challenge yourself to win ranked or normal games.",
         "howToTitle": "How to Use the Random Champion Picker",
@@ -543,25 +598,27 @@
         "faq7Q": "Can I use random champion picker for ranked?",
         "faq7A": "Absolutely! Many players use it to practice off-meta picks.",
         "faq8Q": "Is League Roulette mobile optimized?",
-        "faq8A": "100% mobile-friendly. Spin the roulette on phone, tablet, or desktop."
+        "faq8A": "100% mobile-friendly. Spin the roulette on phone, tablet, or desktop.",
+        "description": "ランダムチャレンジ",
+        "whatIs": "League Rouletteとは？"
     },
     "localeSwitcher": {
-        "label": "Language"
+        "label": "言語"
     },
     "mastery": {
-        "title": "Champion Mastery",
-        "subtitle": "View your mastery levels and points across all champions",
-        "loginRequired": "Login Required",
-        "loginRequiredDesc": "You need to login with your Riot ID to view your champion mastery data.",
+        "title": "チャンピオンマスタリー",
+        "subtitle": "マスタリーのレベルとポイントを表示",
+        "loginRequired": "ログインが必要",
+        "loginRequiredDesc": "マスタリーを見るにはログイン",
         "signIn": "Sign In",
         "winrateSection": "Winrate by Champion"
     },
     "championMastery": {
-        "title": "Champion Mastery",
-        "totalPoints": "Total Points",
-        "championsPlayed": "Champions Played",
-        "mastery7Plus": "Mastery 7+",
-        "mastery5Plus": "Mastery 5+",
+        "title": "チャンピオンマスタリー",
+        "totalPoints": "合計ポイント",
+        "championsPlayed": "プレイしたチャンピオン",
+        "mastery7Plus": "マスタリー7+",
+        "mastery5Plus": "マスタリー5+",
         "points": "pts",
         "noMasteries": "No mastery data available",
         "showAll": "Show all ({count})",
@@ -578,12 +635,12 @@
         "toNextLevel": "to next level"
     },
     "championWinrate": {
-        "loading": "Loading your match history...",
-        "noData": "No match history found. Play some games first!",
-        "noLaneData": "No champions found for {lane}",
+        "loading": "試合履歴を読み込み中...",
+        "noData": "試合履歴が見つかりません。先にプレイしてください！",
+        "noLaneData": "{lane}のチャンピオンが見つかりません",
         "wins": "W",
         "losses": "L",
-        "games": "games",
+        "games": "試合数",
         "lane": {
             "all": "All Lanes",
             "top": "Top",
@@ -591,7 +648,9 @@
             "mid": "Mid",
             "adc": "ADC",
             "support": "Support"
-        }
+        },
+        "title": "勝率",
+        "winRate": "勝率"
     },
     "faqContent": [
         {
@@ -734,8 +793,8 @@
     "blogContent": [
         {
             "slug": "what-champion-should-i-play",
-            "title": "What Champion Should I Play in League of Legends?",
-            "description": "Not sure what champion to play in LoL? Use our random champion generator to get a fun pick, discover new mains, and make every queue feel fresh.",
+            "title": "League of Legendsでどのチャンピオンをプレイすべき？",
+            "description": "LoLでどのチャンピオンをプレイするかわからない？ランダムチャンピオングェネレーターで楽しもう",
             "keywords": [
                 "what champion should i play lol",
                 "league of legends random champion generator",
@@ -802,8 +861,8 @@
         },
         {
             "slug": "lol-random-challenge",
-            "title": "Fun LoL Random Challenge Ideas",
-            "description": "Try these League of Legends random challenge ideas with our LoL Roulette tool. Great for solo queue, friend groups, custom games, and content challenges.",
+            "title": "ランダムチャンピオングェネレーターの使い方",
+            "description": "ランダムチャンピオングェネレーターを使って、毎回新しいチャンピオンを取得する方法を学ぼう",
             "keywords": [
                 "lol random challenge ideas",
                 "league of legends random challenge",
@@ -876,8 +935,8 @@
         },
         {
             "slug": "fun-lol-challenges",
-            "title": "Fun Ways to Play League of Legends",
-            "description": "Looking for fun League of Legends challenges? Here are creative ways to use a random champion generator with friends, duos, and casual teams.",
+            "title": "ランダムチャンピオンのベスト戦略",
+            "description": "一度もプレイしたことのないチャンピオンで勝つためのヒントとコツ",
             "keywords": [
                 "fun ways to play league of legends",
                 "fun lol challenges",
@@ -945,8 +1004,8 @@
         },
         {
             "slug": "best-champions-for-top-lane",
-            "title": "Best Top Lane Champions Current Patch",
-            "description": "Discover the strongest top lane champions.",
+            "title": "ARAMガイド：知っておくべきすべて",
+            "description": "ARAMはチャンピオンが常にランダムな楽しいゲームモードだ。完全ガイド",
             "keywords": [
                 "best top lane champions",
                 "top lane champions current patch",
@@ -990,8 +1049,8 @@
         },
         {
             "slug": "mid-lane-champions-guide",
-            "title": "Mid Lane Champions Guide",
-            "description": "Complete guide to mid lane champions.",
+            "title": "ランダムチャンピオンでマスタリーを向上",
+            "description": "ランダムチャンピオンをプレイしてLeague of Legendsのスキルを向上させる方法",
             "keywords": [
                 "mid lane champions",
                 "best mid lane champions",
@@ -1514,5 +1573,23 @@
                 }
             ]
         }
-    ]
+    ],
+    "siteName": "League Roulette",
+    "siteTagline": "Random Champion Challenge",
+    "championPool": {
+        "title": "チャンピオンプール",
+        "desc": "各ラインで少なくとも5人のチャンピオンを選択",
+        "minPerLane": "ラインごとに5人必要",
+        "totalSelected": "選択済み: {count}"
+    },
+    "heroTitle1": "League Roulette",
+    "heroTitle2": "ランダムチャレンジ",
+    "heroSubtitle": "ランダムなチャンピオンチャレンジで運を試してみよう",
+    "heroCta": "プレイ開始",
+    "howItWorks": {
+        "title": "仕組み",
+        "step1": "1. チャレンジを選ぶ",
+        "step2": "2. チームを組んでプレイする",
+        "step3": "3. チャレンジを完了して報酬を獲得"
+    }
 }

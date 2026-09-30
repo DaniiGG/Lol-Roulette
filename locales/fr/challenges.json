@@ -1,0 +1,57 @@
+{
+    "weeklyChallenge": {
+        "title": "Défi Hebdomadaire",
+        "subtitle": "Complétez le défi de la semaine pour gagner des droits",
+        "challenges": [
+            {
+                "id": "support-only",
+                "name": "Support Only",
+                "description": "Jouez 3 parties cette semaine en jouant uniquement avec des champions support. Pas de carries autorisés !",
+                "emoji": "👩",
+                "deadline": "Ce Dimanche",
+                "difficulty": "Moyen"
+            },
+            {
+                "id": "low-mastery",
+                "name": "Faible Maîtrise",
+                "description": "Jouez avec des champions sur lesquels vous avez moins de 10 parties. Élargissez votre pool !",
+                "emoji": "🎯",
+                "deadline": "Ce Dimanche",
+                "difficulty": "Difficile"
+            },
+            {
+                "id": "friends-roulette",
+                "name": "Roulette des Amis",
+                "description": "Défiotez 3 amis à une roulette de groupe. Chacun tourne et joue son choix !",
+                "emoji": "🎉",
+                "deadline": "Ce Dimanche",
+                "difficulty": "Facile"
+            },
+            {
+                "id": "aram-only",
+                "name": "Uniquement ARAM",
+                "description": "Jouez 5 parties à Howling Abyss cette semaine. Le champion est toujours aléatoire !",
+                "emoji": "🏟️",
+                "deadline": "Ce Dimanche",
+                "difficulty": "Moyen"
+            },
+            {
+                "id": "champion-rotation",
+                "name": "Rotation des Champions",
+                "description": "Jouez avec chaque champion gratuit dans la rotation de cette semaine. Une partie chacun !",
+                "emoji": "🔄",
+                "deadline": "Ce Dimanche",
+                "difficulty": "Difficile"
+            }
+        ]
+    },
+    "createChallenge": "Créer votre propre défi",
+    "shareCode": "Partager le code",
+    "joinChallenge": "Rejoindre & Tourner",
+    "back": "Retour",
+    "sectionLabel": "Défi Hebdomadaire",
+    "startPlaying": "Commencer à Jouer",
+    "browseMore": "Parcourir le Blog",
+    "aramNote": "En ARAM le champion est toujours aléatoire - entrez simplement et jouez !",
+    "noChampions": "Aucun défi hebdomadaire disponible"
+}

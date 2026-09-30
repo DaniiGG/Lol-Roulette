@@ -1,0 +1,57 @@
+{
+    "weeklyChallenge": {
+        "title": "週次チャレンジ",
+        "subtitle": "今週のチャレンジを完了して名誉を得る",
+        "challenges": [
+            {
+                "id": "support-only",
+                "name": "サポートのみ",
+                "description": "今週3試合、サポートキャラのみでプレイ。キャリーは禁止！",
+                "emoji": "👩",
+                "deadline": "今週の日曜日",
+                "difficulty": "普通"
+            },
+            {
+                "id": "low-mastery",
+                "name": "低マスタリー",
+                "description": "10試合未満のキャラでプレイ。プールを広げよう！",
+                "emoji": "🎯",
+                "deadline": "今週の日曜日",
+                "difficulty": "難しい"
+            },
+            {
+                "id": "friends-roulette",
+                "name": "フレンズルーレット",
+                "description": "3人のフレンドとグループルーレットを挑戦。みんなで回してそれぞれの選択をプレイ！",
+                "emoji": "🎉",
+                "deadline": "今週の日曜日",
+                "difficulty": "簡単"
+            },
+            {
+                "id": "aram-only",
+                "name": "ARAMのみ",
+                "description": "今週Howling Abyssで5試合プレイ。チャンピオンは常にランダム！",
+                "emoji": "🏟️",
+                "deadline": "今週の日曜日",
+                "difficulty": "普通"
+            },
+            {
+                "id": "champion-rotation",
+                "name": "チャンピオンローテーション",
+                "description": "今週の無料チャンピオンすべてでプレイ。1つずつ！",
+                "emoji": "🔄",
+                "deadline": "今週の日曜日",
+                "difficulty": "難しい"
+            }
+        ]
+    },
+    "createChallenge": "独自のチャレンジを作成",
+    "shareCode": "コードを共有",
+    "joinChallenge": "参加して回す",
+    "back": "戻る",
+    "sectionLabel": "週次チャレンジ",
+    "startPlaying": "プレイ開始",
+    "browseMore": "ブログを閲覧",
+    "aramNote": "ARAMではチャンピオンは常にランダム - とりあえず入ってプレイしよう！",
+    "noChampions": "週次チャレンジがありません"
+}

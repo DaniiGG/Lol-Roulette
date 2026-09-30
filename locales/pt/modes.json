@@ -1,0 +1,47 @@
+{
+    "title": "Modos de Jogo",
+    "subtitle": "Encontre o modo que se adapta ao seu estilo",
+    "modes": [
+        {
+            "name": "Summoner's Rift",
+            "description": "O mapa clássico 5v5. Três linhas, duas selvas e um objetivo: a vitória.",
+            "icon": "🗺️",
+            "queueTypes": [
+                "Ranked Solo",
+                "Ranked Flex",
+                "Normal Draft",
+                "Normal Blind Pick"
+            ],
+            "bestFor": "Jogadores profissionais"
+        },
+        {
+            "name": "Howling Abyss",
+            "description": "Mapa ARAM com um único campo de batalha. Tudo é aleatório e perigoso.",
+            "icon": "🎮",
+            "queueTypes": [
+                "ARAM",
+                "URF ARAM"
+            ],
+            "bestFor": "Jogadores que preferem ação rápida"
+        },
+        {
+            "name": "ARAM",
+            "description": "Modo de jogo aleatório em um mapa.",
+            "icon": "🤝",
+            "queueTypes": [
+                "One for All"
+            ],
+            "bestFor": "Jogo rápido e divertido"
+        },
+        {
+            "name": "Ultra Rapid Fire",
+            "description": "Super fast attacks and abilities. Pure chaos and fun.",
+            "icon": "⚡",
+            "queueTypes": [
+                "URF"
+            ],
+            "bestFor": "Players who want a lighthearted break from normal gameplay"
+        }
+    ],
+    "tips": "Choose a mode that matches your playstyle and preferred pace of game"
+}

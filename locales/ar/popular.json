@@ -1,0 +1,67 @@
+{
+    "title": "أشهر الأبطال",
+    "subtitle": "الأبطال الأكثر اختياراً هذا الأسبوع",
+    "sectionLabel": "الاختيارات الشائعة",
+    "champions": [
+        {
+            "name": "Ahri",
+            "tier": "S",
+            "role": "Mage",
+            "description": "ماجي ذو حركة عالية"
+        },
+        {
+            "name": "Jinx",
+            "tier": "S",
+            "role": "ADC",
+            "description": "ناقل فائق مع لعبة متأخرة مجنونة"
+        },
+        {
+            "name": "Leona",
+            "tier": "S",
+            "role": "Support",
+            "description": "دبابة خط أمامي لا تُهزَم"
+        },
+        {
+            "name": "Malphite",
+            "tier": "S",
+            "role": "Tank",
+            "description": "Unstoppable tank"
+        },
+        {
+            "name": "Viktor",
+            "tier": "A",
+            "role": "Mage",
+            "description": "Scaling mage"
+        },
+        {
+            "name": "Gnar",
+            "tier": "A",
+            "role": "Fighter",
+            "description": "Split-pusher"
+        },
+        {
+            "name": "Ziggs",
+            "tier": "A",
+            "role": "Mage",
+            "description": "Bomb specialist"
+        },
+        {
+            "name": "Rumble",
+            "tier": "A",
+            "role": "Mage",
+            "description": "Heat mage"
+        },
+        {
+            "name": "Brand",
+            "tier": "S",
+            "role": "ARAM",
+            "description": "AoE fire"
+        },
+        {
+            "name": "Caitlyn",
+            "tier": "A",
+            "role": "ADC",
+            "description": "Range ADC"
+        }
+    ]
+}
