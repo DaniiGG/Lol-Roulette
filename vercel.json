@@ -1,6 +1,0 @@
-{
-  "crons": [{
-    "path": "/api/cron/expire-challenge-sessions",
-    "schedule": "*/5 * * * *"
-  }]
-}
