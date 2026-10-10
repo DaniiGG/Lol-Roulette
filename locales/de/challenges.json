@@ -1,57 +1,107 @@
 {
-    "weeklyChallenge": {
-        "title": "Wöchentliche Challenge",
-        "subtitle": "Schließe die Wochen-Challenge ab, um Ruhm zu ernten",
-        "challenges": [
-            {
-                "id": "support-only",
-                "name": "Nur Support",
-                "description": "Spiele 3 Spiele diese Woche nur mit Support-Champions. Keine Carries erlaubt!",
-                "emoji": "👩",
-                "deadline": "Dieser Sonntag",
-                "difficulty": "Mittel"
-            },
-            {
-                "id": "low-mastery",
-                "name": "Geringe Meisterschaft",
-                "description": "Spiele mit Champions, die du weniger als 10 Spiele hast. Erweitere deinen Pool!",
-                "emoji": "🎯",
-                "deadline": "Dieser Sonntag",
-                "difficulty": "Schwer"
-            },
-            {
-                "id": "friends-roulette",
-                "name": "Freunde Roulette",
-                "description": "Fordere 3 Freunde zu einer Gruppen-Roulette heraus. Jeder dreht und spielt seine Wahl!",
-                "emoji": "🎉",
-                "deadline": "Dieser Sonntag",
-                "difficulty": "Leicht"
-            },
-            {
-                "id": "aram-only",
-                "name": "Nur ARAM",
-                "description": "Spiele 5 Spiele in Howling Abyss diese Woche. Der Champion ist immer zufällig!",
-                "emoji": "🏟️",
-                "deadline": "Dieser Sonntag",
-                "difficulty": "Mittel"
-            },
-            {
-                "id": "champion-rotation",
-                "name": "Champion-Drehung",
-                "description": "Spiele mit jedem kostenlosen Champion in dieser Wochen-Drehung. Eine Runde pro Stück!",
-                "emoji": "🔄",
-                "deadline": "Dieser Sonntag",
-                "difficulty": "Schwer"
-            }
-        ]
-    },
-    "createChallenge": "Eigene Challenge erstellen",
-    "shareCode": "Code teilen",
-    "joinChallenge": "Beitreten & Drehen",
-    "back": "Zurück",
-    "sectionLabel": "Wöchentliche Challenge",
-    "startPlaying": "Spielen",
-    "browseMore": "Blog durchsuchen",
-    "aramNote": "In ARAM ist der Champion immer zufällig - einfach einloggen und spielen!",
-    "noChampions": "Keine wöchentlichen Challenges verfügbar"
+  "weeklyChallenge": {
+    "title": "Wöchentliche Challenge",
+    "subtitle": "Schließe die Wochen-Challenge ab, um Ruhm zu ernten",
+    "challenges": [
+      {
+        "id": "support-only",
+        "name": "Nur Support",
+        "description": "Spiele 3 Spiele diese Woche nur mit Support-Champions. Keine Carries erlaubt!",
+        "emoji": "👩",
+        "deadline": "Dieser Sonntag",
+        "difficulty": "Mittel"
+      },
+      {
+        "id": "low-mastery",
+        "name": "Geringe Meisterschaft",
+        "description": "Spiele mit Champions, die du weniger als 10 Spiele hast. Erweitere deinen Pool!",
+        "emoji": "🎯",
+        "deadline": "Dieser Sonntag",
+        "difficulty": "Schwer"
+      },
+      {
+        "id": "friends-roulette",
+        "name": "Freunde Roulette",
+        "description": "Fordere 3 Freunde zu einer Gruppen-Roulette heraus. Jeder dreht und spielt seine Wahl!",
+        "emoji": "🎉",
+        "deadline": "Dieser Sonntag",
+        "difficulty": "Leicht"
+      },
+      {
+        "id": "aram-only",
+        "name": "Nur ARAM",
+        "description": "Spiele 5 Spiele in Howling Abyss diese Woche. Der Champion ist immer zufällig!",
+        "emoji": "🏟️",
+        "deadline": "Dieser Sonntag",
+        "difficulty": "Mittel"
+      },
+      {
+        "id": "champion-rotation",
+        "name": "Champion-Drehung",
+        "description": "Spiele mit jedem kostenlosen Champion in dieser Wochen-Drehung. Eine Runde pro Stück!",
+        "emoji": "🔄",
+        "deadline": "Dieser Sonntag",
+        "difficulty": "Schwer"
+      }
+    ]
+  },
+  "createChallenge": "Eigene Challenge erstellen",
+  "shareCode": "Code teilen",
+  "joinChallenge": "Beitreten & Drehen",
+  "back": "Zurück",
+  "sectionLabel": "Wöchentliche Challenge",
+  "startPlaying": "Spielen",
+  "browseMore": "Blog durchsuchen",
+  "aramNote": "In ARAM ist der Champion immer zufällig - einfach einloggen und spielen!",
+  "noChampions": "Keine wöchentlichen Challenges verfügbar",
+
+  "sectionTitle": "Herausforderungen",
+  "sectionDescription": "Aktiviere zeitlich begrenzte Herausforderungen, um Bonus-XP bei Siegen zu verdienen",
+  "activate": "Aktivieren",
+  "activated": "Herausforderung aktiviert: {name}",
+  "activationFailed": "Aktivierung der Herausforderung fehlgeschlagen",
+  "hasActiveChallenge": "Aktive Herausforderung existiert bereits",
+  "loginRequired": "Bitte melde dich an, um Herausforderungen zu aktivieren",
+  "difficulty": {
+    "easy": "Leicht",
+    "medium": "Mittel",
+    "hard": "Schwer"
+  },
+  "category": {
+    "mastery": "Meisterschaft",
+    "region": "Region",
+    "class": "Klasse"
+  },
+  "requirement": {
+    "lowMastery": "Spiele mit einem Champion mit weniger als {threshold} Meisterschaftspunkten",
+    "region": "Gewinne mit einem Champion aus {region}",
+    "class": "Gewinne mit einem {class}-Champion"
+  },
+  "duration": "Dauer",
+  "xpMultiplier": "XP-Multiplikator",
+  "timeRemaining": "VERBLEIBENDE ZEIT",
+  "expiresAt": "Läuft ab um {time}",
+  "validWins": "Gültige Siege",
+  "bonusXP": "Bonus-XP",
+  "totalXP": "Gesamt-XP",
+  "xpMultiplierActive": "XP-Multiplikator aktiv:",
+  "onValidWins": "bei gültigen Siegen",
+  "challengeExpired": "Herausforderung abgelaufen",
+  "challengeExpiredDesc": "Diese Herausforderung ist abgelaufen. Starte eine neue, um weiterhin Bonus-XP zu verdienen.",
+  "history": "Herausforderungsverlauf",
+  "noHistory": "Kein Herausforderungsverlauf",
+  "noHistoryDesc": "Schließe Herausforderungen ab, um sie hier zu sehen",
+  "started": "Gestartet",
+  "ended": "Beendet",
+  "wins": "Siege",
+  "status": {
+    "completed": "Abgeschlossen",
+    "expired": "Abgelaufen",
+    "failed": "Fehlgeschlagen"
+  },
+  "result": {
+    "completed": "{wins} gültige Siege • +{bonusXp} Bonus-XP verdient",
+    "expired": "Herausforderung ohne Abschluss abgelaufen",
+    "failed": "Herausforderung fehlgeschlagen"
+  }
 }

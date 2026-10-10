@@ -1,27 +1,18 @@
-import type { Metadata } from "next"
-import Link from "next/link"
-import { notFound } from "next/navigation"
+import type { Metadata } from 'next'
+import { notFound } from 'next/navigation'
 import { getTranslations } from 'next-intl/server'
-import { setRequestLocale } from 'next-intl/server'
 import { getHreflangAlternates } from '@/lib/seo-utils'
+import { getGraphSchema, getBreadcrumbSchema } from '@/lib/seo-utils'
 import { routing } from '@/i18n/routing'
-import { BLOG_SLUGS, blogKeywords, BLOG_META, getLaneForSlug, getTagsForSlug } from "@/lib/blog-posts"
-
-type BlogSection = {
-  heading: string
-  paragraphs: string[]
-  bullets?: string[]
-}
-
-type BlogPost = {
-  slug: string
-  title: string
-  description: string
-  excerpt: string
-  ctaLabel: string
-  heroIntro: string[]
-  sections: BlogSection[]
-}
+import Link from 'next/link'
+import Script from 'next/script'
+import BlogPostContent from '@/components/blog/BlogPostContent'
+import TableOfContents from '@/components/blog/TableOfContents'
+import BlogPostCard from '@/components/blog/BlogPostCard'
+import { getPostMeta, getAvailableLocales, getRelatedSlugs } from '@/lib/blog/meta'
+import { relatedPosts, formatDate, readingTime } from '@/lib/blog/content'
+import type { BlogPost } from '@/lib/blog/content'
+import { CATEGORIES } from '@/lib/blog/categories'
 
 type BlogPostPageProps = {
   params: Promise<{
@@ -33,8 +24,12 @@ type BlogPostPageProps = {
 export async function generateStaticParams() {
   const params: { locale: string; slug: string }[] = []
   for (const locale of routing.locales) {
-    for (const slug of BLOG_SLUGS) {
-      params.push({ locale, slug })
+    for (const slug of routing.locales) {
+      // Actually we need post slugs. Let's import from meta.
+      const { BLOG_SLUGS } = await import('@/lib/blog/meta')
+      for (const s of BLOG_SLUGS) {
+        params.push({ locale, slug: s })
+      }
     }
   }
   return params
@@ -44,12 +39,11 @@ export async function generateMetadata(
   props: BlogPostPageProps
 ): Promise<Metadata> {
   const { locale, slug } = await props.params
-  setRequestLocale(locale)
   const tAll = await getTranslations()
 
   let blogPosts: BlogPost[] = []
   try {
-    blogPosts = tAll.raw('blogContent') as BlogPost[]
+    blogPosts = tAll.raw('blog-content') as BlogPost[]
   } catch {
     return {}
   }
@@ -57,52 +51,62 @@ export async function generateMetadata(
   const post = blogPosts.find((p: BlogPost) => p.slug === slug)
   if (!post) return {}
 
-  const meta = BLOG_META[slug] || { date: "2026-01-15", author: "League Roulette Team", lane: "all-lanes", tags: [] }
-  const tags = getTagsForSlug(slug)
-  const lane = getLaneForSlug(slug)
+  const meta = getPostMeta(slug)
+  const availableLocales = getAvailableLocales(slug)
+  const publishedDate = meta?.publishedAt ?? ''
+  const updatedDate = meta?.updatedAt ?? ''
+  const related = relatedPosts(blogPosts, slug)
 
   return {
-    title: `${post.title} | League Roulette Blog`,
-    description: post.description,
-    keywords: blogKeywords[slug] || [],
-    authors: [{ name: meta.author, url: `https://leagueroulette.com/about` }],
+    title: meta?.seoTitle ?? `${post.title} | League Roulette Blog`,
+    description: meta?.seoDescription ?? post.description,
+    keywords: meta?.keywords,
+    authors: [{ name: meta?.author ?? 'League Roulette Team', url: 'https://leagueroulette.com/about' }],
     alternates: {
       canonical: locale === 'en' ? `/blog/${slug}` : `/${locale}/blog/${slug}`,
-      languages: getHreflangAlternates(`/blog/${slug}`),
+      languages: availableLocales.reduce((acc, l) => {
+        acc[l] = l === 'en'
+          ? `https://leagueroulette.com/blog/${slug}`
+          : `https://leagueroulette.com/${l}/blog/${slug}`
+        return acc
+      }, {} as Record<string, string>),
     },
     openGraph: {
       title: post.title,
       description: post.description,
-      url: locale === 'en' ? `/blog/${slug}` : `/${locale}/blog/${slug}`,
-      type: "article",
-      siteName: "League Roulette",
-      publishedTime: meta.date,
-      authors: [`https://leagueroulette.com/about`],
-      images: [{ url: "https://leagueroulette.com/og-image.png", width: 1200, height: 630, alt: post.title }],
+      url: `https://leagueroulette.com${locale === 'en' ? `/blog/${slug}` : `/${locale}/blog/${slug}`}`,
+      type: 'article',
+      siteName: 'League Roulette',
+      publishedTime: publishedDate || new Date().toISOString(),
+      modifiedTime: updatedDate || new Date().toISOString(),
+      authors: ['https://leagueroulette.com/about'],
+      images: [{ url: 'https://leagueroulette.com/og-image.png', width: 1200, height: 630, alt: post.title }],
+      locale: locale === 'en' ? 'en_US' : locale.replace('-CN', '-CN'),
     },
     twitter: {
-      card: "summary_large_image",
+      card: 'summary_large_image',
       title: post.title,
       description: post.description,
       images: ['https://leagueroulette.com/og-image.png'],
       creator: '@LeagueRoulette',
     },
     other: {
-      'article:section': lane,
-      'article:tag': tags.join(', '),
+      'article:section': meta?.category ?? '',
+      'article:tag': getRelatedSlugs(slug).join(', '),
+      'article:published_time': publishedDate || new Date().toISOString(),
+      'article:modified_time': updatedDate || publishedDate || new Date().toISOString(),
     },
   }
 }
 
 export default async function BlogPostPage(props: BlogPostPageProps) {
   const { locale, slug } = await props.params
-  setRequestLocale(locale)
   const t = await getTranslations('blog')
   const tAll = await getTranslations()
 
   let blogPosts: BlogPost[] = []
   try {
-    blogPosts = tAll.raw('blogContent') as BlogPost[]
+    blogPosts = tAll.raw('blog-content') as BlogPost[]
   } catch {
     blogPosts = []
   }
@@ -112,176 +116,234 @@ export default async function BlogPostPage(props: BlogPostPageProps) {
     notFound()
   }
 
-  const meta = BLOG_META[slug] || { date: "2026-01-15", author: "League Roulette Team", lane: "all-lanes", tags: [] }
-  const lane = getLaneForSlug(slug)
-  const tags = getTagsForSlug(slug)
+  const meta = getPostMeta(slug)
+  const availableLocales = getAvailableLocales(slug)
+  const category = meta?.category
+  const catInfo = category ? CATEGORIES.find(c => c.slug === category) : undefined
+  const publishedDate = meta?.publishedAt ? formatDate(meta.publishedAt, locale) : new Date().toISOString().split('T')[0]
+  const updatedDate = meta?.updatedAt ? formatDate(meta.updatedAt, locale) : null
+  const rt = readingTime(post)
+  const related = relatedPosts(blogPosts, slug)
 
-  const relatedPosts = blogPosts.filter((entry: BlogPost) => {
-    if (entry.slug === post.slug) return false
-    const entryLane = getLaneForSlug(entry.slug)
-    return entryLane === lane || entryLane === 'all-lanes' || lane === 'all-lanes'
-  }).slice(0, 4)
+  // TOC items
+  const tocItems = post.sections
+    .filter(s => s.heading.trim())
+    .map((section, i) => ({
+      id: `section-${i}`,
+      text: section.heading,
+      level: 2 as const
+    }))
 
+  // Schema
   const articleSchema = {
-    "@context": "https://schema.org",
-    "@type": "Article",
+    '@context': 'https://schema.org',
+    '@type': 'Article',
     headline: post.title,
     description: post.description,
     author: {
-      "@type": "Person",
-      name: meta.author,
-      url: "https://leagueroulette.com/about",
+      '@type': 'Person',
+      name: meta?.author ?? 'League Roulette Team',
+      url: 'https://leagueroulette.com/about',
     },
     publisher: {
-      "@type": "Organization",
-      name: "League Roulette",
+      '@type': 'Organization',
+      name: 'League Roulette',
       logo: {
-        "@type": "ImageObject",
-        url: "https://leagueroulette.com/og-image.png",
+        '@type': 'ImageObject',
+        url: 'https://leagueroulette.com/og-image.png',
       },
     },
-    datePublished: meta.date,
-    dateModified: new Date().toISOString().split("T")[0],
-    mainEntityOfPage: `https://leagueroulette.com/blog/${post.slug}`,
-    keywords: (blogKeywords[slug] || []).join(", "),
-    image: "https://leagueroulette.com/og-image.png",
-    articleSection: lane,
-    tags: tags,
+    datePublished: publishedDate,
+    dateModified: updatedDate ?? meta?.publishedAt,
+    mainEntityOfPage: `https://leagueroulette.com${locale === 'en' ? `/blog/${slug}` : `/${locale}/blog/${slug}`}`,
+    keywords: meta?.keywords?.join(', '),
+    image: 'https://leagueroulette.com/og-image.png',
+    articleSection: category,
+    wordCount: post.sections.reduce((acc, s) =>
+      acc + (s.paragraphs ?? []).join(' ').split(/\s+/).length, 0) + post.heroIntro.join(' ').split(/\s+/).length,
   }
 
-  const isTutorial = slug.startsWith('how-to-');
-  const howToSchema = isTutorial ? {
-    "@context": "https://schema.org",
-    "@type": "HowTo",
-    name: post.title,
-    description: post.description,
-    totalTime: "PT15M",
-    step: post.sections.map((section: { heading: string; paragraphs: string[] }) => ({
-      "@type": "HowToStep",
-      name: section.heading,
-      text: section.paragraphs.join(' '),
-    })),
-  } : null;
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: t('home'), path: '/' },
+    { name: t('blog'), path: '/blog' },
+    { name: post.title, path: `/blog/${slug}` },
+  ])
 
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://leagueroulette.com" },
-      { "@type": "ListItem", position: 2, name: "Blog", item: "https://leagueroulette.com/blog" },
-      { "@type": "ListItem", position: 3, name: post.title, item: `https://leagueroulette.com/blog/${post.slug}` },
-    ],
-  };
-
-  const allSchema: any[] = [
-    { "@context": "https://schema.org", "@type": "WebSite", name: "League Roulette", url: "https://leagueroulette.com" },
-    { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: breadcrumbSchema.itemListElement },
-  ];
-  if (isTutorial && howToSchema) allSchema.push(howToSchema);
-  allSchema.push(articleSchema);
-  const graphSchema = { "@context": "https://schema.org", "@graph": allSchema };
+  const graphSchema = getGraphSchema([articleSchema, breadcrumbSchema])
 
   return (
     <main className="min-h-screen bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 px-6 py-12">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(graphSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      {isTutorial && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />}
+      <Script
+        id="article-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(graphSchema) }}
+      />
+      <Script
+        id="breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
 
-      <article className="mx-auto max-w-4xl">
+      <article className="mx-auto max-w-5xl">
+        {/* Back link */}
         <Link
           href="/blog"
           className="mb-8 inline-flex items-center gap-2 text-sm text-neutral-400 transition hover:text-white"
         >
-          <span aria-hidden="true">←</span>
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+          </svg>
           {t('backToBlog')}
         </Link>
 
-        <header className="mb-10 rounded-3xl border border-neutral-800 bg-neutral-900/80 p-8">
-          <p className="mb-3 text-sm uppercase tracking-[0.3em] text-[#C89B3C]">
-            {t('guideLabel')}
-          </p>
-          <h1 className="mb-6 text-4xl font-semibold tracking-tight text-white md:text-5xl">
+        {/* Language switcher for this post */}
+        {availableLocales.length > 1 && (
+          <div className="mb-6 flex items-center gap-2 flex-wrap">
+            <span className="text-sm text-neutral-500">{t('availableIn')}</span>
+            {availableLocales.map(l => (
+              <Link
+                key={l}
+                href={l === 'en' ? `/blog/${slug}` : `/${l}/blog/${slug}`}
+                className={`px-2.5 py-1 rounded-full text-xs font-medium transition ${l === locale
+                  ? 'bg-[#C89B3C] text-neutral-950'
+                  : 'bg-neutral-800 text-neutral-300 hover:bg-neutral-700 hover:text-white'
+                }`}
+              >
+                {l.toUpperCase()}
+              </Link>
+            ))}
+          </div>
+        )}
+
+        <header className="mb-10">
+          <div className="mb-4 flex flex-wrap items-center gap-2 text-sm text-neutral-500">
+            {catInfo && (
+              <Link
+                href={`/blog/${category}`}
+                className="px-3 py-1 rounded-full bg-[#C89B3C]/20 text-[#C89B3C] font-medium hover:bg-[#C89B3C]/30 transition"
+              >
+                {catInfo.name}
+              </Link>
+            )}
+            <time dateTime={meta?.publishedAt ?? ''}>
+              {t('published')}: {publishedDate}
+            </time>
+            {updatedDate && (
+              <>
+                <span aria-hidden="true">·</span>
+                <time dateTime={meta?.updatedAt ?? ''}>
+                  {t('updated')}: {updatedDate}
+                </time>
+              </>
+            )}
+            <span aria-hidden="true">·</span>
+            <span className="flex items-center gap-1">
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              {rt} {t('readTime', { n: rt })}
+            </span>
+            {meta?.author && (
+              <>
+                <span aria-hidden="true">·</span>
+                <span>{t('by')} {meta.author}</span>
+              </>
+            )}
+          </div>
+
+          <h1 className="mb-4 text-4xl font-semibold tracking-tight text-white md:text-5xl lg:text-6xl">
             {post.title}
           </h1>
-          <div className="space-y-5 text-lg leading-8 text-neutral-300">
-            {post.heroIntro.map((paragraph: string) => (
-              <p key={paragraph}>{paragraph}</p>
+
+          <div className="space-y-4 text-lg leading-8 text-neutral-300 max-w-3xl">
+            {post.heroIntro.map((paragraph, i) => (
+              <p key={i}>{paragraph}</p>
             ))}
           </div>
         </header>
 
-        <div className="space-y-8">
-          {post.sections.map((section: BlogSection) => (
-            <section
-              key={section.heading}
-              className="rounded-3xl border border-neutral-800 bg-neutral-900 p-8"
-            >
-              <h2 className="mb-4 text-3xl font-semibold text-white">
-                {section.heading}
-              </h2>
-              <div className="space-y-4 text-lg leading-8 text-neutral-300">
-                {section.paragraphs.map((paragraph: string) => (
-                  <p key={paragraph}>{paragraph}</p>
-                ))}
-              </div>
-              {section.bullets ? (
-                <ul className="mt-6 space-y-3 text-neutral-300">
-                  {section.bullets.map((bullet: string) => (
-                    <li key={bullet} className="flex gap-3 text-lg leading-8">
-                      <span className="text-[#C89B3C]">•</span>
-                      <span>{bullet}</span>
-                    </li>
-                  ))}
-                </ul>
-              ) : null}
-            </section>
-          ))}
+        {/* Hero visual placeholder */}
+        <div className="mb-10 relative aspect-video rounded-3xl overflow-hidden bg-gradient-to-br from-[#C89B3C]/20 via-neutral-900/50 to-cyan-500/10">
+          <div className="absolute inset-0 flex items-center justify-center">
+            <span className="text-8xl opacity-30">
+              {catInfo?.name.includes('Champion') ? '⚔️' :
+                catInfo?.name.includes('Guide') ? '📖' :
+                catInfo?.name.includes('Tier') ? '🏆' :
+                catInfo?.name.includes('Beginner') ? '🌱' :
+                catInfo?.name.includes('Ranked') ? '📈' :
+                catInfo?.name.includes('Mechanic') ? '⚙️' :
+                '🎲'}
+            </span>
+          </div>
         </div>
 
-        <section className="mt-10 rounded-3xl border border-[#C89B3C]/30 bg-gradient-to-r from-[#C89B3C]/10 to-transparent p-8">
-          <h2 className="mb-3 text-3xl font-semibold text-white">
-            {t('ctaTitle')}
-          </h2>
-          <p className="mb-6 max-w-3xl text-lg leading-8 text-neutral-300">
-            {t('ctaDesc')}
-          </p>
-          <div className="flex flex-wrap gap-4">
-            <Link
-              href="/"
-              className="rounded-xl bg-[#C89B3C] px-5 py-3 font-semibold text-neutral-950 transition hover:bg-[#d9aa44]"
-            >
-              {post.ctaLabel}
-            </Link>
-            <Link
-              href="/blog"
-              className="rounded-xl bg-neutral-800 px-5 py-3 font-semibold text-white transition hover:bg-neutral-700"
-            >
-              {t('browseMore')}
-            </Link>
-          </div>
-        </section>
+        <div className="lg:grid lg:grid-cols-12 lg:gap-8">
+          {/* Main content */}
+          <div className="lg:col-span-8">
+            <BlogPostContent post={post} locale={locale} />
 
-        <section className="mt-10">
-          <h2 className="mb-5 text-2xl font-semibold text-white">
-            {t('relatedReading')}
-          </h2>
-          <div className="grid gap-5 md:grid-cols-2">
-            {relatedPosts.map((relatedPost: BlogPost) => (
-              <Link
-                key={relatedPost.slug}
-                href={`/blog/${relatedPost.slug}`}
-                className="rounded-2xl border border-neutral-800 bg-neutral-900 p-6 transition hover:border-[#C89B3C]/40 hover:bg-neutral-900/80"
-              >
-                <h3 className="mb-2 text-xl font-semibold text-white">
-                  {relatedPost.title}
-                </h3>
-                <p className="leading-7 text-neutral-400">
-                  {relatedPost.excerpt}
+            {/* Mid-article CTA */}
+            {post.sections.length >= 3 && (
+              <section className="my-12 rounded-3xl border border-[#C89B3C]/30 bg-gradient-to-r from-[#C89B3C]/10 to-transparent p-8">
+                <h2 className="mb-3 text-2xl font-semibold text-white">
+                  {t('ctaMidTitle')}
+                </h2>
+                <p className="mb-6 max-w-3xl text-lg leading-8 text-neutral-300">
+                  {t('ctaMidDesc')}
                 </p>
-              </Link>
-            ))}
+                <Link
+                  href="/"
+                  className="inline-flex items-center rounded-xl bg-[#C89B3C] px-6 py-3 font-semibold text-neutral-950 transition hover:bg-[#d9aa44]"
+                >
+                  {t('tryApp')}
+                </Link>
+              </section>
+            )}
+
+            {/* Final CTA */}
+            <section className="my-12 rounded-3xl border border-neutral-800 bg-neutral-900/80 p-8">
+              <h2 className="mb-3 text-2xl font-semibold text-white">
+                {t('ctaTitle')}
+              </h2>
+              <p className="mb-6 max-w-3xl text-lg leading-8 text-neutral-300">
+                {t('ctaDesc')}
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <Link
+                  href="/"
+                  className="rounded-xl bg-[#C89B3C] px-6 py-3 font-semibold text-neutral-950 transition hover:bg-[#d9aa44]"
+                >
+                  {t('tryApp')}
+                </Link>
+                <Link
+                  href="/blog"
+                  className="rounded-xl bg-neutral-800 px-6 py-3 font-semibold text-white transition hover:bg-neutral-700"
+                >
+                  {t('browseMore')}
+                </Link>
+              </div>
+            </section>
+
+            {/* Related Articles */}
+            {related.length > 0 && (
+              <section className="mt-10">
+                <h2 className="mb-5 text-2xl font-semibold text-white">
+                  {t('relatedReading')}
+                </h2>
+                <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+                  {related.map((relatedPost, idx) => (
+                    <BlogPostCard key={relatedPost.slug} post={relatedPost} locale={locale} index={idx} />
+                  ))}
+                </div>
+              </section>
+            )}
           </div>
-        </section>
+
+          {/* Sidebar - TOC */}
+          <aside className="hidden lg:block lg:col-span-4">
+            <TableOfContents items={tocItems} />
+          </aside>
+        </div>
       </article>
     </main>
   )

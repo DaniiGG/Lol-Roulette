@@ -1,0 +1,1459 @@
+[
+    {
+        "slug": "what-champion-should-i-play",
+        "title": "¿Qué campeón debería jugar en League of Legends?",
+        "description": "¿No sabes qué main elegir? Descubre cómo juega cada rol, qué estilos encajan con cada lane y cómo encontrar un campeón que de verdad te divierta.",
+        "keywords": [
+            "que campeon deberia jugar lol",
+            "generador de campeones aleatorios league of legends",
+            "campeon aleatorio lol",
+            "que campeon debo mainear",
+            "que campeon juega league roulette"
+        ],
+        "excerpt": "Un análisis práctico de cada rol, los estilos que encajan con cada uno y cómo encontrar el campeón que de verdad te va a hacer disfrutar.",
+        "ctaLabel": "Gira un Campeón Aleatorio",
+        "ctaHref": "/",
+        "heroIntro": [
+            "Todos los jugadores de League of Legends acaban chocando contra el mismo muro: hay más de 160 campeones y elegir uno para mainear parece imposible.",
+            "No hay una respuesta única. Un campeón que en unas manos es una máquina, en otras es injugable. Lo importante es casar el campeón con tu forma natural de jugar."
+        ],
+        "sections": [
+            {
+                "heading": "Descubre tu estilo de juego primero",
+                "paragraphs": [
+                    "Antes de mirar campeones, sé honesto con tres cosas: ¿te gusta hacer daño, controlar el mapa o mantener vivos a tus compañeros? ¿Prefieres la agresión constante o los juegos lentos y pacientes? Y cuando ganas, ¿quieres ser quien lo ha llevado todo o quien lo ha hecho posible a los otros cuatro?"
+                ],
+                "bullets": [
+                    "Me gusta clavar skillshots y sentir mi precisión",
+                    "Me gustan los duelos 1v1 y la presión de lane",
+                    "Me gusta montar jugadas y proteger al equipo",
+                    "Me gustan las builds lentas que explotan en late game",
+                    "Me gusta el tempo, los ganks y el movimiento constante por el mapa"
+                ]
+            },
+            {
+                "heading": "Qué exige realmente cada rol",
+                "paragraphs": [
+                    "Cada rol recompensa a un tipo de jugador diferente. Ninguno es objetivamente mejor, pero un encaje malo entre tu estilo y el rol va a hacer que mejorar se sienta como un castigo."
+                ],
+                "table": {
+                    "headers": [
+                        "Rol",
+                        "Te va a gustar si",
+                        "La habilidad central"
+                    ],
+                    "rows": [
+                        [
+                            "Top",
+                            "Disfrutas de los duelos y del split",
+                            "Presión de lane y split push"
+                        ],
+                        [
+                            "Jungle",
+                            "Te gusta el tempo y el control del mapa",
+                            "Timing de ganks y objetivos"
+                        ],
+                        [
+                            "Mid",
+                            "Quieres máxima influencia en el mapa",
+                            "Control de oleadas y roaming"
+                        ],
+                        [
+                            "ADC",
+                            "Amas los números constantes y el late game",
+                            "Farming y posicionamiento"
+                        ],
+                        [
+                            "Support",
+                            "Te gusta la utilidad y el juego de equipo",
+                            "Visión y setup de pelear"
+                        ]
+                    ]
+                }
+            },
+            {
+                "heading": "Por qué los picks aleatorios ganan a la teoría infinita",
+                "paragraphs": [
+                    "La mayoría de jugadores leen demasiado y juegan demasiado poco. Leer 10 guías de un campeón sirve; jugar uno aleatorio cada semana sirve más, porque la habilidad número uno que separa rangos es la adaptabilidad: leer un campeón que nunca has jugado y llevarlo bien para no perder la partida.",
+                    "Eso es exactamente lo que entrena un reto de campeón aleatorio: giras, te sale un pick y aprendes a hacerlo funcionar en vez de esperar a tu comodidad."
+                ]
+            },
+            {
+                "heading": "Un experimento simple de 10 partidas",
+                "paragraphs": [
+                    "Si de verdad estás atascado, haz esto: elige un rol, toma cinco campeones de ese rol y juega dos partidas con cada uno. Después de diez partidas, quédate con el campeón que más te haya divertido y el que se te haya dado más natural, descarta el resto y profundiza en el ganador."
+                ],
+                "bullets": [
+                    "A esta altura, la diversión pesa más que la winrate",
+                    "Anota una cosa a mejorar por campeón",
+                    "Diez partidas te dirán más de tu rol que diez horas de lectura"
+                ]
+            },
+            {
+                "heading": "¿Sigue la indecisión? Que decida la ruleta",
+                "paragraphs": [
+                    "Si la indecisión en sí es el problema, elimina la decisión. League Roulette elige un campeón aleatorio por ti, filtrado por lane si quieres, y te da variedad sin el coste mental de elegir. Diez partidas aleatorias te enseñarán más sobre tu estilo que un mes de análisis."
+                ]
+            }
+        ],
+        "faq": [
+            {
+                "q": "¿Existe un único campeón ideal para principiantes?",
+                "a": "No. El mejor campeón es el que sea lo suficientemente simple de aprender y lo suficientemente divertido para seguir jugando. Para sugerencias por rol, mira nuestra guía de mejores campeones para principiantes."
+            },
+            {
+                "q": "¿Puedo mainear más de un campeón?",
+                "a": "Sí. Un pool sano para ranked son tres o cinco campeones por rol. Varios mains son una fortaleza, no un defecto, siempre que sigas mejorando en cada uno."
+            },
+            {
+                "q": "¿Debo mainear un campeón meta para ganar más?",
+                "a": "Los campeones meta van bien en el pool, pero tu main debe ser el campeón en el que más rápido mejoras. La constancia vence al meta-riding."
+            },
+            {
+                "q": "¿Puedo dejar que una app elija por mí?",
+                "a": "Es una forma legítima de salir del pool de comodidades. League Roulette te da un campeón aleatorio por lane, gratis y sin cuenta, y puedes verificar tus partidas para ver qué picks aleatorias de verdad disfrutas."
+            }
+        ]
+    },
+    {
+        "slug": "lol-random-challenge",
+        "title": "El reto aleatorio de LoL: cómo hacer tus próximas partidas más divertidas",
+        "description": "¿Te sientes atascado con los mismos campeones? Así funciona el reto de campeón aleatorio, por qué te hace mejorar y cómo poner tus propias reglas.",
+        "keywords": [
+            "reto aleatorio lol",
+            "reto de campeon aleatorio league of legends",
+            "ruleta de campeones lol",
+            "reto de campeon random league",
+            "retos divertidos lol con amigos"
+        ],
+        "excerpt": "Juega un campeón aleatorio tus próximas diez partidas. Así funciona el reto y por qué es de las formas más rápidas de salir de la rutina.",
+        "ctaLabel": "Gira tu Campeón de Reto",
+        "ctaHref": "/",
+        "heroIntro": [
+            "Todo jugador de League tiene un pool de comodidades, y los pools de comodidades se aburren rápido. Los mismos cinco campeones, los mismos picks, los mismos ping.",
+            "El reto aleatorio lo arregla. En vez de elegir quién quieres, giras y juegas lo que te salga. Sin excusas y sin poder escaparte con la teoría."
+        ],
+        "sections": [
+            {
+                "heading": "Las reglas básicas",
+                "paragraphs": [
+                    "Mantenlo simple para que el reto siga siendo divertido. La versión clásica es: tus próximas diez partidas, gira antes de cada una, juega el campeón que te salga y sin rerolls."
+                ],
+                "bullets": [
+                    "Diez partidas, una lane (o cualquier lane si te animas)",
+                    "Gira justo antes de la selección de campeones, no cinco minutos antes",
+                    "Sin rerolls: ese es todo el punto",
+                    "Anota cada pick y cómo fue la partida"
+                ]
+            },
+            {
+                "heading": "Por qué las partidas aleatorias de verdad te hacen mejorar",
+                "paragraphs": [
+                    "Jugar campeones que no conoces te obliga a leer el kit sobre la marcha: ¿qué rol tiene este campeón, cuál es su amenaza, qué debería estar haciendo a nivel seis? Esa habilidad se transfiere a todas tus partidas, porque cada enemigo que enfrentas es un campeón contra el que no te has preparado.",
+                    "También entrena tu gestión de la presión. Cuando el campeón se siente incómodo, el instinto es el tilt. Mantener la cabeza fría con un off-main es el mismo músculo que usas en cola normal."
+                ]
+            },
+            {
+                "heading": "Sube el nivel del reto",
+                "paragraphs": [
+                    "Cuando la versión básica deje de dar miedo, añade restricciones:"
+                ],
+                "bullets": [
+                    "Lane aleatoria + campeón aleatorio, sin filtros",
+                    "Variante con banlist: bana tres campeones antes de girar",
+                    "Racha de victorias: sigue girando hasta perder y luego empiezas de nuevo",
+                    "Regla del ganador: el pick con más kills se convierte en tu comodidad durante una semana"
+                ]
+            },
+            {
+                "heading": "Que se mantenga divertido, no tóxico",
+                "paragraphs": [
+                    "El reto se convierte en castigo en el momento en que dejas de disfrutarlo. Limita las rachas, para tras dos derrotas seguidas y termina cada sesión eligiendo el campeón que más te haya divertido. Ese se convierte en tu próximo pick en cola normal, y de repente tu pool es más amplio sin hacer ningún esfuerzo."
+                ]
+            }
+        ]
+    },
+    {
+        "slug": "fun-lol-challenges",
+        "title": "Ideas de retos divertidos en League of Legends para jugar solo",
+        "description": "¿Harto de las mismas partidas cada día? Doce retos estructurados en LoL que añaden objetivos, variedad y motivo para abrir el cliente, sin necesidad de amigos.",
+        "keywords": [
+            "formas divertidas de jugar league of legends",
+            "retos divertidos lol",
+            "ideas de retos league of legends",
+            "retos de campeon aleatorio lol",
+            "partidas de lol con amigos"
+        ],
+        "excerpt": "Doce retos estructurados que convierten las partidas de cola normal en algo con reglas, objetivos y un motivo real para abrir el cliente.",
+        "ctaLabel": "Empieza un Reto",
+        "ctaHref": "/",
+        "heroIntro": [
+            "La cola normal en piloto automático es cómo mueren las rutinas. Un buen reto es un envoltorio para las partidas normales: misma cola, reglas nuevas.",
+            "Aquí tienes doce ideas de reto que puedes empezar hoy, organizadas por lo que entrenan."
+        ],
+        "sections": [
+            {
+                "heading": "Retos basados en campeones",
+                "bullets": [
+                    "Semana de nuevos campeones: cada partida, un campeón que no hayas jugado esa semana",
+                    "Solo cuerpo a cuerpo: una semana con campeones melee en tu lane",
+                    "Partidas de una habilidad: gana tres partidas usando solo tu Q",
+                    "Solo Flash: hechizos limitados a Flash y Cura, cada partida"
+                ]
+            },
+            {
+                "heading": "Retos basados en objetivos",
+                "bullets": [
+                    "80 CS a los 10 minutos, tres partidas seguidas",
+                    "Morir como máximo dos veces por partida, cinco partidas",
+                    "First blood o nada: pierdes la carrera del first blood y la cuenta como derrota",
+                    "Gana una partida con un off-main de menos de cinco partidas jugadas"
+                ]
+            },
+            {
+                "heading": "Retos de experimentación",
+                "bullets": [
+                    "Semana de intercambio: juega la lane opuesta durante cinco partidas (el top prueba mid, el support prueba jungle, etc.)",
+                    "Fin de semana ARAM: solo Howling Abyss durante todo el fin de semana",
+                    "Cinco seguidas: un campeón, cinco victorias, da lo que tarden. Cuando lo logres, tienes un main nuevo",
+                    "Reto diario: un giro aleatorio al día, toda la semana"
+                ]
+            },
+            {
+                "heading": "Hazlo un hábito",
+                "paragraphs": [
+                    "El truco es llevar una hoja de puntuación: fecha, reto, resultado y una frase sobre qué pasó. Tras dos semanas, la propia lista se convierte en motivación. Combina cualquiera de estos con un giro de campeón aleatorio y tienes una sesión que nunca se parece a la anterior."
+                ]
+            }
+        ]
+    },
+    {
+        "slug": "what-is-my-main",
+        "title": "Cómo elegir tu main en League of Legends",
+        "description": "Un marco simple para elegir tu main: casa el rol con tu estilo, prueba de tres a cinco campeones de forma seria y comprométete hasta mejorar.",
+        "keywords": [
+            "cual es mi main league of legends",
+            "como elegir tu campeon principal",
+            "encuentra tu main campeon",
+            "test de rol league of legends",
+            "que campeon debo mainear"
+        ],
+        "excerpt": "Cambiar de main constantemente es la causa más común de estancamiento. Este es el proceso de tres pasos para elegir un main y mantenerlo.",
+        "ctaLabel": "Prueba un Campeón Nuevo",
+        "ctaHref": "/",
+        "heroIntro": [
+            "Elegir un main se siente como elegir una identidad, así que la mayoría elige uno, lo odia en la segunda semana y elige otro. El resultado: veinte campeones y cero profundidad.",
+            "Un main es un compromiso con plan de salida. Así es como haces ese compromiso a propósito."
+        ],
+        "sections": [
+            {
+                "heading": "Por qué la gente cambia tanto de main",
+                "paragraphs": [
+                    "Cambiar de campeón suele ser respuesta a perder, no al campeón. Tras tres derrotas echas la culpa al pick en vez de a tu jugada, agarras un main nuevo y reinicias. El main nuevo hereda tus problemas porque los problemas nunca fueron el campeón."
+                ]
+            },
+            {
+                "heading": "Paso 1: elige un rol que puedas defender",
+                "paragraphs": [
+                    "Antes del campeón, elige el rol. Sé honesto sobre lo que podrías justificarle a un amigo: ¿cuánto tiempo quieres jugar antes de que funcione? ¿Aceptas un rol dependiente del farming que solo brilla en late? ¿Tienes paciencia para un jungle de sustain o reflejos para un asesino?"
+                ],
+                "bullets": [
+                    "Inversión de tiempo: hay roles que premian 100 horas y otros que premian 1.000",
+                    "Suelo de habilidad: ¿qué tan mal puedes jugar y seguir estando bien?",
+                    "Tipo de kills: ¿quieres burst, presión lenta o impacto de equipo?"
+                ]
+            },
+            {
+                "heading": "Paso 2: prueba a los campeones de verdad",
+                "paragraphs": [
+                    "Elige tres o cinco campeones de ese rol y da a cada uno una prueba real, no dos partidas con tilt. Diez partidas por campeón, con un objetivo escrito por partida. Campeón A: aprender a controlar oleadas. Campeón B: aprender cuándo roamear. Al final, ordénalos por cuánto mejoraste, no por winrate."
+                ]
+            },
+            {
+                "heading": "Paso 3: comprométete a 30 partidas",
+                "paragraphs": [
+                    "El campeón que elegiste ahora tiene treinta partidas antes de que puedas cambiar. Ese número importa porque la mejora se ve hacia el décimo-vigésimo partido. Treinta partidas es tiempo suficiente para saber si el campeón encaja contigo o si solo lo jugaste mal durante una semana."
+                ]
+            },
+            {
+                "heading": "Cuándo sí toca moverse",
+                "paragraphs": [
+                    "Moverse está bien cuando puedes nombrar una razón: el campeón ya no da gusto, hay un estancamiento real tras un bloque completo de treinta partidas o el propio rol dejó de encajar con tu vida. Moverse por dos derrotas no es una razón. Si quieres explorar picks nuevos mientras decides, un giro de campeón aleatorio es la forma más barata de comprobar si un campeón nuevo despierta interés."
+                ]
+            }
+        ]
+    },
+    {
+        "slug": "fun-lol-challenges-with-friends",
+        "title": "Retos de LoL con amigos: 12 ideas para su próxima sesión",
+        "description": "Doce formatos de reto listos para usar y jugar League con tus amigos: intercambio de roles, eventos de equipo, rachas de victorias y formatos de pick aleatorio.",
+        "keywords": [
+            "retos divertidos lol con amigos",
+            "retos lol con amigos",
+            "retos de campeon aleatorio",
+            "retos de equipo league",
+            "mejores modos de fiesta lol"
+        ],
+        "excerpt": "Jugar con amigos debería ser otro juego. Doce formatos de reto que convierten una sesión normal en algo por lo que apetece agendar.",
+        "ctaLabel": "Gira para Todo el Equipo",
+        "ctaHref": "/",
+        "heroIntro": [
+            "Los mismos cinco amigos, los mismos picks de comodidad, el mismo resultado. Si la cola de grupo se siente como un trayecto diario, el problema es el formato, no los compañeros.",
+            "Aquí van doce formatos de reto que funcionan con dos, tres o un equipo completo de cinco."
+        ],
+        "sections": [
+            {
+                "heading": "Formatos de equipo",
+                "bullets": [
+                    "Todos aleatorio: los cinco jugadores giran antes de la selección. Nadie tiene reroll. Es lo más cercano a una sesión garantizada de risas",
+                    "Intercambio de roles: cada uno juega el rol del compañero de su izquierda. El support juega top, el jungler juega support, etc.",
+                    "Solo lo que poseen: el equipo solo puede jugar campeones que todos posean. Obliga al pool a solaparse",
+                    "Una vida: el equipo tiene un límite compartido de dos deaths. Dos muertes de equipo y la sesión termina"
+                ]
+            },
+            {
+                "heading": "Formatos de competición",
+                "bullets": [
+                    "Duelo del mismo campeón: dos amigos eligen el mismo campeón, juegan la misma lane y la sesión termina cuando uno gane dos a uno",
+                    "Deathless: gana quien menos muera. El ganador elige el próximo formato",
+                    "Guerra de assists: más assists en tres partidas. Los supports suelen ganar, y ese es el punto",
+                    "Carrera de first blood: en toda la sesión, quien más first bloods tenga se lleva el trofeo (o el último trozo de pizza)"
+                ]
+            },
+            {
+                "heading": "Formatos de historia",
+                "bullets": [
+                    "Pick a ciegas: antes de la partida el equipo escribe una mini 'historia' de quién va a llevar. Tras tres partidas, compárenla con la realidad",
+                    "Intercambio de builds: dos amigos acuerdan una build antes de la partida y la juegan sin importar el campeón. El caos es la función",
+                    "Héroe off-main: el equipo elige a un amigo para jugar el campeón aleatorio más complejo. El equipo juega para protegerle"
+                ]
+            },
+            {
+                "heading": "Organiza una noche de retos bien",
+                "paragraphs": [
+                    "Elijan un formato, acuerden una regla de parada (tres partidas, dos victorias o medianoche) y mantengan la puntuación en el chat. El formato importa menos que el acuerdo: cuando todos saben cuándo termina, las partidas se mantienen divertidas."
+                ]
+            }
+        ]
+    },
+    {
+        "slug": "best-champions-for-top-lane",
+        "title": "Mejores campeones de Top Lane: cómo elegir el top que te va",
+        "description": "Encuentra el mejor top para tu estilo: duelist, bruiser, split pusher o team fighter. Los factores que importan más que la winrate.",
+        "keywords": [
+            "mejores campeones top lane",
+            "top lane campeones parche actual",
+            "campeones carry top lane",
+            "como escalar ranked top lane",
+            "mejores top solo queue"
+        ],
+        "excerpt": "Top lane recompensa el compromiso. Así se elige un top que encaje con tu estilo en vez de lo que diga la tier list de la semana.",
+        "ctaLabel": "Gira un Campeón de Top",
+        "ctaHref": "/",
+        "heroIntro": [
+            "Top lane es el rol más solitario de League. Estás uno contra uno durante veinte minutos antes de que llegue el equipo, lo que significa que tu pick de campeón y tu jugada de oleadas deciden la mayor parte de la fase de lane.",
+            "Las tablas de winrate cambian cada parche. Los arquetipos de abajo no. Elige primero el arquetipo que encaja contigo y luego el campeón."
+        ],
+        "sections": [
+            {
+                "heading": "Elige un arquetipo primero",
+                "table": {
+                    "headers": [
+                        "Arquetipo",
+                        "Qué hace",
+                        "Elígelo cuando"
+                    ],
+                    "rows": [
+                        [
+                            "Duelist",
+                            "Gana los 1v1 tempranos",
+                            "Tienes apoyo del jungler temprano"
+                        ],
+                        [
+                            "Bruiser de sustain",
+                            "Trashea y aguanta",
+                            "Enfrentas lanes de poke o burst corto"
+                        ],
+                        [
+                            "Split pusher",
+                            "Aplica presión 1v1",
+                            "Tu equipo necesita presión de mapa en late"
+                        ],
+                        [
+                            "Team fighter",
+                            "Inicia y sobrevive a los fights",
+                            "Tu equipo carece de initiate o frontline"
+                        ]
+                    ]
+                }
+            },
+            {
+                "heading": "Cómo juega cada arquetipo",
+                "paragraphs": [
+                    "Los duelists viven sus primeros diez minutos. Trashean fuerte, obligan al enemigo a ward y dependen del jungler para convertir la presión en kills. Si tu jungle es pasiva, un duelist puede sentirse mal aunque estés ganando la lane."
+                ],
+                "bullets": [
+                    "El bruiser de sustain es el anti-duelist: sobrevive a la ventana de burst y aguanta",
+                    "El split pusher gana forzando números: el enemigo debe responder o perder torres",
+                    "El team fighter es el top de late: su valor crece cuando llega el fight"
+                ]
+            },
+            {
+                "heading": "El matchup importa más que la tier",
+                "paragraphs": [
+                    "Un campeón B-tier que counterea el pick del jugador enemigo de la lane superará a un S-tier que se quede apegado al muro. Antes de bloquear, piensa en qué es probable que pique el top enemigo y si tu campeón tiene respuesta temprana. Nuestra guía de matchups de lane cubre el marco para leer cualquier 1v1."
+                ]
+            },
+            {
+                "heading": "Ruta de práctica para top lane",
+                "bullets": [
+                    "Domina el control de oleadas antes que el trashing: freeze, slow push, fast push",
+                    "Aprende cuándo llevarte el Teleport: cuándo salir y cuándo quedarse",
+                    "Revisa tus partidas a los 10: la diferencia de CS y el ritmo de first blood dicen más que el rank"
+                ]
+            },
+            {
+                "heading": "Amplía tu pool de top a propósito",
+                "paragraphs": [
+                    "Un pool de top sano es uno de cada arquetipo. Cuando quieras probar uno nuevo, no solo entres en cola: usa un giro aleatorio filtrado a top lane durante una semana. Los tops aleatorios te fuerzan a aprender a leer lanes en vez de memorizar matchups, que es la mejora de verdad."
+                ]
+            }
+        ]
+    },
+    {
+        "slug": "mid-lane-champions-guide",
+        "title": "Guía de campeones de Mid Lane: elige el mid que te va",
+        "description": "¿Control mage, asesino o mage de escalado? Guía práctica de arquetipos de mid y cómo elegir el campeón que encaja con tu estilo de juego.",
+        "keywords": [
+            "campeones mid lane",
+            "mejores campeones mid lane",
+            "guia control mage",
+            "picks asesino mid lane",
+            "como jugar mid lane league"
+        ],
+        "excerpt": "Mid lane tiene más arquetipos que cualquier otro rol. Así encuentras el que encaja contigo.",
+        "ctaLabel": "Gira un Campeón de Mid",
+        "ctaHref": "/",
+        "heroIntro": [
+            "Mid lane es la posición más influyente del mapa porque está cerca de todo: ambos flancos, ambas entradas del river y el centro de cada teamfight.",
+            "Esa influencia solo existe si eliges el tipo de mid correcto. Tres arquetipos dominan el rol y no son intercambiables."
+        ],
+        "sections": [
+            {
+                "heading": "Los tres arquetipos de mid",
+                "table": {
+                    "headers": [
+                        "Arquetipo",
+                        "Fortaleza",
+                        "Debilidad"
+                    ],
+                    "rows": [
+                        [
+                            "Control mage",
+                            "Control de oleada y velocidad de roam",
+                            "Necesita setups para brillar"
+                        ],
+                        [
+                            "Asesino",
+                            "Burst y picks tempranos",
+                            "Deja de contar cuando la partida va a macro"
+                        ],
+                        [
+                            "Mage de escalado",
+                            "Daño en late game",
+                            "Se siente impotente temprano"
+                        ]
+                    ]
+                }
+            },
+            {
+                "heading": "Control mages",
+                "paragraphs": [
+                    "El control mage es el mid del jugador de equipo. Limpia rápido, roamea rápido y bloquea objetivos en los fights. Su poder viene de la oleada: cuando congelas o empujas a demanda, eres libre de influir en el mapa mientras las otras lanes están atascadas."
+                ],
+                "bullets": [
+                    "Ideal para jugadores que les gusta la macro y la coordinación",
+                    "Combina bien con junglers que roamean por mid a menudo",
+                    "Aprende los timings del roam: oleada empujada y luego mueves"
+                ]
+            },
+            {
+                "heading": "Asesinos",
+                "paragraphs": [
+                    "El asesino es el lado opuesto: gana la fase de lane con burst y el early game con picks. El intercambio es que escala peor que el control mage, así que una partida que se alarga en macro de teamfights suele estar ya perdida."
+                ],
+                "bullets": [
+                    "Ideal para jugadores a los que les gustan los kills y el first blood",
+                    "Necesita presión temprana del jungler para seguir contando",
+                    "Aprende cuándo retroceder: un fallo y el asesino muere"
+                ]
+            },
+            {
+                "heading": "Mages de escalado y poke",
+                "paragraphs": [
+                    "El mage de escalado es la pick de paciencia: puede perder la fase de lane y aun así llevar la partida a los 25 minutos. El poke mage es el término medio: gana haciendo que el enemigo dude y impidiendo que la partida quede limpia."
+                ],
+                "bullets": [
+                    "Ideal para jugadores que odian el duelo 1v1",
+                    "Mide tu oro a los 15: el escalado solo funciona si la brecha crece",
+                    "Conoce tu punto de snowball: el item o nivel donde la partida da la vuelta"
+                ]
+            },
+            {
+                "heading": "De la lane al mapa: dónde mid gana de verdad los juegos",
+                "paragraphs": [
+                    "La fase de lane es donde aprendes al campeón. El mid game es donde lo usas. Tres hábitos separan a los mids efectivos de los pasivos: empujar la oleada en los timers de objetivos, poner wards en el river antes de que el jungler pida y llegar a los fights con la cantidad correcta de cooldown."
+                ]
+            },
+            {
+                "heading": "Elige tu main mid a propósito",
+                "paragraphs": [
+                    "Prueba un campeón de cada arquetipo durante cinco partidas. Anota cuál te hizo mirar el minimapa más. Ese es tu main. Si quieres una rotación forzada, un giro aleatorio de mid durante una semana sacará el arquetipo que de verdad disfrutas sin el sesgo del meta."
+                ]
+            }
+        ]
+    },
+    {
+        "slug": "adc-champions-guide",
+        "title": "Mejores campeones ADC: el archer que encaja con tu estilo",
+        "description": "De los hyper carries a los marksmen de poke: cómo elegir el mejor ADC para tu nivel y estilo, más los fundamentos que comparten todos los marksmen.",
+        "keywords": [
+            "mejores campeones adc",
+            "guia carry adc",
+            "campeones hyper carry",
+            "picks adc ranked",
+            "como escalar con adc"
+        ],
+        "excerpt": "ADC es el rol donde los fundamentos son el campeón. Así se elige el marksman correcto y las habilidades que hacen funcionar a cualquiera.",
+        "ctaLabel": "Gira un Campeón ADC",
+        "ctaHref": "/",
+        "heroIntro": [
+            "El ADC es la fuente principal de daño del equipo en late game, lo que suena glamoroso y en la práctica es farming. Cada minion que fallas en lane es un punto que tu equipo no tendrá en el fight que decida la partida.",
+            "Elegir el marksman correcto importa, pero los fundamentos que construyes con él importan más."
+        ],
+        "sections": [
+            {
+                "heading": "Arquetipos de ADC",
+                "table": {
+                    "headers": [
+                        "Arquetipo",
+                        "Estilo",
+                        "Ojo con"
+                    ],
+                    "rows": [
+                        [
+                            "Hyper carry",
+                            "Dios del daño en late",
+                            "Morir a un solo pick temprano"
+                        ],
+                        [
+                            "Poke / zona",
+                            "Controla el espacio a distancia",
+                            "Necesita un fight para conectar"
+                        ],
+                        [
+                            "Movilidad",
+                            "Se reubica y kitea",
+                            "Depende de outplayear el dive"
+                        ],
+                        [
+                            "Marksman duelista",
+                            "Gana 1v1s en lane",
+                            "Deja de contar cuando la partida es teamfight"
+                        ]
+                    ]
+                }
+            },
+            {
+                "heading": "Empieza por los fundamentos",
+                "paragraphs": [
+                    "Antes de elegir campeón, interioriza las dos habilidades que aplican a todos los marksmen: last hit bajo presión y posicionamiento en fights. Nuestra guía de farming cubre el lado de CS; el posicionamiento es lo que la mayoría de ADCs nunca formalizan."
+                ],
+                "bullets": [
+                    "Conoce tu ventaja de rango: cuánto más lejos alcanzas que el enemigo",
+                    "Conoce tu escape: la herramienta que te saca cuando algo sale mal",
+                    "Conoce tu item de snowball: la compra que cambia la partida"
+                ]
+            },
+            {
+                "heading": "Qué ADC para qué jugador",
+                "bullets": [
+                    "Nuevo en el rol: elige un marksman con autosdefensa incorporada. Un botón de seguridad cambia cómo juegas cada oleada",
+                    "Te gusta el duelo: un marksman duelista se te dará en casa, pero solo si tu CS es fiable",
+                    "Te gusta la macro: un marksman de poke o zona recompensa el awareness del mapa por encima del aim",
+                    "Te gusta el outplay: la movilidad es para ti, pero el techo de habilidad es real"
+                ]
+            },
+            {
+                "heading": "El posicionamiento es tu build real",
+                "paragraphs": [
+                    "Todos los marksmen tienen el mismo trabajo en un fight: estar en rango para hacer daño y fuera de rango para no morir. El campeón te da las herramientas; la decisión es el posicionamiento. Vigila tus muertes a los 15: más de dos muertes en la mayoría de partidas es un problema de posicionamiento, no de campeón."
+                ]
+            },
+            {
+                "heading": "Emparejamiento con tu support",
+                "paragraphs": [
+                    "El trabajo de tu support es dar forma a la lane para que puedas farmear y escalar. Los supports de engage hacen la lane peligrosa; los de peel la hacen segura. Conoce cuál estás jugando y ajusta: con engage, prepárate para seguir; con peel, mantén el rango y déjale montarlo. Nuestra guía de campeones de support explica el otro lado de este emparejamiento."
+                ]
+            }
+        ]
+    },
+    {
+        "slug": "best-support-champions",
+        "title": "Mejores campeones de Support: engage, peel y visión",
+        "description": "¿Engage, peel o utilidad? Guía práctica de arquetipos de support y cómo elegir el campeón de support que encaja con tu equipo y tu estilo.",
+        "keywords": [
+            "mejores campeones support",
+            "support parche actual",
+            "guia support engage",
+            "picks support peel",
+            "mejor support ranked"
+        ],
+        "excerpt": "Support es el rol donde el trabajo invisible decide los resultados visibles. Así eliges un support que encaje con cómo te gusta jugar.",
+        "ctaLabel": "Gira un Campeón de Support",
+        "ctaHref": "/",
+        "heroIntro": [
+            "Support es el rol más infravalorado de League y el más divertido si te gusta tomar decisiones en vez de farmear. No tendrás la KDA más alta, pero la winrate de tu equipo sigue tus wards más que tus kills.",
+            "Tres arquetipos cubren casi todos los supports y le piden cosas muy distintas al jugador."
+        ],
+        "sections": [
+            {
+                "heading": "Arquetipos de support",
+                "table": {
+                    "headers": [
+                        "Arquetipo",
+                        "Trabajo en la partida",
+                        "Te divierte si te gusta"
+                    ],
+                    "rows": [
+                        [
+                            "Engage",
+                            "Arrancar el fight",
+                            "Montar kills y clavar la jugada"
+                        ],
+                        [
+                            "Peel",
+                            "Terminar el fight",
+                            "Proteger a tu carry y outplayear a los divers"
+                        ],
+                        [
+                            "Utilidad / zona",
+                            "Dar forma al fight",
+                            "Slows, control de masas y hacer espacio"
+                        ],
+                        [
+                            "Roamer",
+                            "Influenciar el mapa",
+                            "Wards, scouting y jugar dos lanes"
+                        ]
+                    ]
+                }
+            },
+            {
+                "heading": "Supports de engage",
+                "paragraphs": [
+                    "El support de engage es el dedo en el gatillo del equipo. El fight entero puede depender de un solo golpe, lo que hace el rol tan gratificante como exigente. Tu éxito se mide en assists y en cuántos de los kills de tu equipo arrancaste tú."
+                ],
+                "bullets": [
+                    "Aprende tu rango: cuándo puedes conectar y cuándo no",
+                    "Coordina el setup: quién divea, quién sigue, quién peela después",
+                    "Si el engage falla, el plan es peel, no perseguir"
+                ]
+            },
+            {
+                "heading": "Supports de peel",
+                "paragraphs": [
+                    "El support de peel gana impidiendo que el enemigo llegue a tu carry. El rol es defensivo en superficie y profundamente agresivo por debajo: estás decidiendo qué dives vale la pena responder y cuáles ignorar."
+                ],
+                "bullets": [
+                    "Conoce los escapes de tu carry para saber cuándo comprometerte",
+                    "Pon wards en el river: el peel no sirve si nunca ves venir el dive",
+                    "Tu métrica a vigilar es el número de muertes de tu carry, no tu KDA"
+                ]
+            },
+            {
+                "heading": "El meta invisible: la visión",
+                "paragraphs": [
+                    "Todo support, sea cual sea su arquetipo, tiene el mismo trabajo base: poner wards. Los timings que importan son tras el first blood, antes y después del dragón y alrededor del barón. Un equipo que ve el mapa primero gana objetivos que no debería perder, y eso compone más rápido que cualquier mecánica individual."
+                ],
+                "bullets": [
+                    "Barrer el ward del river antes de limpiar el trinket",
+                    "Cambiar el trinket por timers, no por intuición",
+                    "Los wards profundos se pagan solos: un objetivo salvado es un ciclo completo de trinket en visión"
+                ]
+            },
+            {
+                "heading": "Elige tu main de support",
+                "paragraphs": [
+                    "Si te gusta iniciar, ve a engage. Si te gusta proteger, ve a peel. Si te gusta controlar el mapa más que el fight, ve a utilidad o roamer. Prueba cada uno cinco partidas y quédate con el campeón en el que miraste el minimapa más. Un giro aleatorio de support durante una semana es una forma rápida de comparar arquetipos sin la presión de un pick de comodidad."
+                ]
+            }
+        ]
+    },
+    {
+        "slug": "aram-champion-pool",
+        "title": "Cómo montar un pool de campeones para ARAM",
+        "description": "ARAM premia la adaptabilidad. Aprende qué rasgos hacen fuerte a un campeón en Howling Abyss y cómo construir un pool de 10-15 campeones que cubra cada partida.",
+        "keywords": [
+            "pool de campeones aram",
+            "mejores campeones aram",
+            "como ganar partidas aram",
+            "guia aram",
+            "tips de estrategia aram"
+        ],
+        "excerpt": "Howling Abyss es una lane, un equipo y sin lanes. Así se monta el pool de campeones que lo gana.",
+        "ctaLabel": "Gira un Campeón ARAM",
+        "ctaHref": "/",
+        "heroIntro": [
+            "ARAM elimina las lanes, los objetivos en el sentido habitual y la construcción lenta de una partida normal. Lo que queda es adaptabilidad pura de teamfight: ¿puedes leer el comp enemigo y jugar un campeón que lo responda?",
+            "Un buen pool de ARAM no es una lista de campeones fuertes. Es una estructura de roles que puedes cubrir bajo demanda."
+        ],
+        "sections": [
+            {
+                "heading": "Qué hace fuerte a un campeón en ARAM",
+                "bullets": [
+                    "Daño en área: daño o utilidad que golpea a más de un objetivo",
+                    "Sustain: lifesteal, curación o armadura que sobrevive a un teamfight entero",
+                    "Utilidad de equipo: control de masas, peel o rescates que escalan con el tamaño del equipo",
+                    "Ramp rápido: poder cuando llega el primer fight real, no en el segundo item"
+                ]
+            },
+            {
+                "heading": "Estructura tu pool por huecos",
+                "table": {
+                    "headers": [
+                        "Hueco",
+                        "Cantidad",
+                        "Qué cubre"
+                    ],
+                    "rows": [
+                        [
+                            "Engage / iniciación",
+                            "3",
+                            "Arrancar el primer fight de la partida"
+                        ],
+                        [
+                            "Sustain / frontline",
+                            "3",
+                            "Sobrevivir a los teamfights que pierdes"
+                        ],
+                        [
+                            "Poke / zona",
+                            "3",
+                            "Desgastar comps que escalan"
+                        ],
+                        [
+                            "Movilidad / pick",
+                            "2",
+                            "Convertir un fight malo en bueno"
+                        ],
+                        [
+                            "Flex / escala",
+                            "2",
+                            "Respuestas a comps enemigas concretas"
+                        ]
+                    ]
+                },
+                "paragraphs": [
+                    "De diez a quince campeones en total, con al menos dos opciones para cada hueco. Cuando el enemigo bloquea su comp, deberías poder mirar el tablero y cubrir un hueco sin cinco segundos de debate."
+                ]
+            },
+            {
+                "heading": "Constrúyelo por capas",
+                "paragraphs": [
+                    "Empieza con cinco campeones que ya conoces de otros modos, porque ya sabes cómo escalan. Luego añade uno nuevo por semana, idealmente de un hueco en el que vayas justo. Registra victorias y derrotas por campeón: tras veinte partidas de ARAM sabrás qué picks de verdad llevan y cuáles solo se sienten bien."
+                ]
+            },
+            {
+                "heading": "En partida: adapta, no te aferres",
+                "paragraphs": [
+                    "El comp enemigo te dice qué jugar. Si tienen tres divers, un pick de peel vale más que tu favorito. Si escalan en late, un pick de poke o engage que nieve temprano gana la guerra de timing. La única mala decisión en ARAM es la que se toma por el campeón que querías jugar y no por el que necesita la partida."
+                ],
+                "bullets": [
+                    "Primeros diez minutos: comprueba tu build contra el comp enemigo una vez",
+                    "Si vas por detrás, elige utilidad, no daño: la partida necesita un rescate, no un kill",
+                    "Si vas por delante, elige el snowball: duplica la ventaja"
+                ]
+            },
+            {
+                "heading": "Usa los picks aleatorios para probar el pool",
+                "paragraphs": [
+                    "Cuando añades un campeón nuevo al pool, pruébalo primero en ARAM: los teamfights constantes del modo exponen si un pick funciona más rápido que cualquier otro modo. Un giro aleatorio de ARAM es la forma más rápida de saber si un campeón merece estar en tu pool."
+                ]
+            }
+        ]
+    },
+    {
+        "slug": "champions-that-counter",
+        "title": "Cómo encontrar campeones que counterean en League of Legends",
+        "description": "Aprende cómo funcionan los counters, los factores de matchup que vencen a las stats brutas y un proceso repetible para pikear contra tu rival de lane antes de que empiece la partida.",
+        "keywords": [
+            "campeones que counterean",
+            "counters de lane league of legends",
+            "counterpicks league",
+            "como counterear",
+            "matchups de campeones"
+        ],
+        "excerpt": "Que te countereen en lane frustra y es evitable. Así es el proceso repetible para encontrar el pick que responde a tu rival.",
+        "ctaLabel": "Encuentra un Counter Pick",
+        "ctaHref": "/",
+        "heroIntro": [
+            "Un counter pick no es una garantía. Es una ventaja inicial: saber que, siendo todo lo demás igual, tu lane es ligeramente más difícil de ganar para el enemigo que la suya para ti.",
+            "Los jugadores que usan bien los counters no son los que tienen el pool más grande. Son los que tienen un proceso repetible."
+        ],
+        "sections": [
+            {
+                "heading": "Qué significa realmente un counter",
+                "paragraphs": [
+                    "En fase de lane, un counter significa que ganas el primer intercambio. Puede venir del rango, de durar más que su burst, de limpiar oleadas más rápido o de un power spike que llega antes que el suyo. El objetivo no es ganar cada trade. Es hacer el estilo de juego preferido del enemigo lo suficientemente incómodo para que tenga que ajustarse, y entonces tú controlas el ritmo."
+                ]
+            },
+            {
+                "heading": "Los cuatro factores de cualquier matchup",
+                "bullets": [
+                    "Rango: quién puede golpear al otro sin recibir",
+                    "Timing del power spike: quién llega a su nivel o item primero",
+                    "Limpieza de oleada: quién controla la oleada y cuándo",
+                    "Rango de engage: qué tan cerca tiene que llegar el enemigo para amenazarte"
+                ],
+                "paragraphs": [
+                    "Antes de bloquear un campeón, comprueba estos cuatro contra el pick probable del enemigo. Si ganas dos de cuatro, tienes el matchup favorable. Si no ganas ninguno, toca outplayear, que es una petición mucho más dura."
+                ]
+            },
+            {
+                "heading": "Matchups por rol",
+                "bullets": [
+                    "Top: el dive counterea al sustain y el sustain counterea al dive. El estado de la oleada decide quién elige el momento",
+                    "Mid: el poke counterea al asesino, porque el asesino tiene que entrar. El counter es rango y spacing",
+                    "Bot: el pick del ADC es solo la mitad de la imagen. El emparejamiento de support decide si la lane es segura o peligrosa",
+                    "Jungle: el counter suele ser el counter al nivel seis del jungler enemigo, no al top o mid de la lane"
+                ]
+            },
+            {
+                "heading": "Un proceso de counterpick repetible",
+                "paragraphs": [
+                    "Antes de la selección de campeones, gasta treinta segundos en esto: ¿a quién es probable que drafte el equipo enemigo y cuál es el único campeón que responde a la mayor amenaza? Luego comprueba que tu pick siga funcionando con los picks de tus compañeros, porque un counter que deja al equipo sin engage no es un counter real."
+                ],
+                "bullets": [
+                    "Identifica la mayor amenaza probable del enemigo",
+                    "Encuentra el pick que gana el early game contra ella",
+                    "Comprueba la sinergia de equipo: ¿tu pick encaja con el comp o solo con el 1v1?",
+                    "Si nada encaja, toma tu pick de comodidad y compénsalo en la jugada"
+                ]
+            },
+            {
+                "heading": "Cuándo outplayear en vez de outpikear",
+                "paragraphs": [
+                    "A veces la respuesta correcta no es un counter pick. Es tu main, jugado mejor que el que está frente a ti. Si el counter es un campeón que has jugado cinco veces, el riesgo de maljugarlo suele superar la ventaja de lane que da. Nuestra guía de matchups de lane tiene el marco completo para leer el 1v1 una vez que la partida ha empezado."
+                ]
+            }
+        ]
+    },
+    {
+        "slug": "how-to-improve-at-league",
+        "title": "Cómo mejorar en League of Legends: una hoja de ruta práctica",
+        "description": "Deja de estancarte. Un plan de mejora realista que cubre fundamentos, repaso, mentalidad y el orden correcto en el que trabajar tus habilidades.",
+        "keywords": [
+            "como mejorar en league of legends",
+            "consejos para mejorar lol",
+            "escalar ranked",
+            "guia de macro",
+            "ejercicios de mecanica lol"
+        ],
+        "excerpt": "La mayoría de estancamientos no son problema de habilidad. Son problema de foco. Esta es una hoja de ruta que de verdad mueve la aguja.",
+        "ctaLabel": "Aplícalo en una Partida Aleatoria",
+        "ctaHref": "/",
+        "heroIntro": [
+            "Mejorar en League se siente abrumador porque el juego es ancho: mecánica, macro, items, matchups, comunicación. La mayoría de jugadores intenta arreglar todo a la vez y acaba sin arreglar nada.",
+            "Los jugadores que escalan de forma constante hacen lo contrario: un foco por bloque de partidas, fundamentos primero y repaso a propósito."
+        ],
+        "sections": [
+            {
+                "heading": "Por qué los jugadores se estancan",
+                "paragraphs": [
+                    "Un estancamiento es casi siempre una de tres cosas: sin foco (juegas mucho pero nunca el mismo problema dos veces), sin repaso (no ves los errores que te cuestan) o tilt (colas por emoción en vez de por intención). La solución a las tres es estructura, no más horas en cola."
+                ]
+            },
+            {
+                "heading": "Arregla primero la base: CS y awareness del mapa",
+                "paragraphs": [
+                    "Antes de cualquier mecánica avanzada, dos números deciden la mayoría de partidas: tu creep score por minuto y la frecuencia con la que miras el minimapa. Nuestra guía de farming cubre el lado de CS. El del mapa es un solo hábito: haz que el minimapa sea lo primero que mires tras cualquier acción, cada diez segundos. No a veces. Cada diez segundos."
+                ],
+                "bullets": [
+                    "Apunta a 8 CS por minuto en solo queue",
+                    "Vigila tus muertes: cada death son 300-500 de oro más el tiempo",
+                    "Un objetivo fallado es un minuto entero de ventaja de mapa para el enemigo"
+                ]
+            },
+            {
+                "heading": "Revisa una partida a la semana, a propósito",
+                "paragraphs": [
+                    "No hace falta ver todas las partidas. Elige una de cada bloque de cinco y responde tres preguntas: ¿dónde morí para nada, qué objetivo me perdí y qué jugada repetiría? Veinte minutos de repaso valen más que cinco horas de replay sin ver."
+                ]
+            },
+            {
+                "heading": "Un foco por bloque de partidas",
+                "paragraphs": [
+                    "Elige una mecánica y haz cinco partidas con ella como único objetivo. Control de oleadas en este bloque. Timing del roam en el siguiente. Timings de items en el que sigue. Cuando el bloque termine, anota qué mejoró y cambia. La rotación impide que la mejora se convierta en un arrastre."
+                ],
+                "bullets": [
+                    "Control de oleadas: freeze, slow push, fast push",
+                    "Roaming: cuándo salir de la lane y cuándo volver",
+                    "Objetivos: timings de dragón y barón según posición"
+                ]
+            },
+            {
+                "heading": "El juego mental",
+                "paragraphs": [
+                    "La meta-habilidad del escalado es decidir cuándo parar. Dos derrotas seguidas, a caminar. No evitas el problema; proteges la siguiente sesión del tilt de esta. Lleva una nota de una línea tras cada sesión: qué salió bien, qué no y cuál es el foco de la próxima vez."
+                ],
+                "bullets": [
+                    "Para tras dos derrotas seguidas, sin excepciones",
+                    "No entres en cola justo después de una derrota grande: descansa primero",
+                    "La nota es para ti, no para nadie: una línea, dos minutos"
+                ]
+            },
+            {
+                "heading": "Usa la variedad como herramienta de entrenamiento",
+                "paragraphs": [
+                    "Una partida de campeón aleatorio es una herramienta de entrenamiento barata: te obliga a aplicar los fundamentos (CS, mapa, oleadas) a un campeón que no conoces, que es exactamente la transferencia que buscas. Una partida aleatoria por semana mantiene los fundamentos honestos sin convertir toda tu rutina en un experimento."
+                ]
+            }
+        ],
+        "faq": [
+            {
+                "q": "¿Cuánto se nota la mejora?",
+                "a": "Con una mecánica enfocada por bloque de cinco partidas, la mayoría de jugadores nota la diferencia en dos a tres semanas. El estancamiento se rompe cuando el foco es lo suficientemente específico como para medirse."
+            },
+            {
+                "q": "¿El ranked me hace mejorar más rápido?",
+                "a": "El ranked da feedback más claro y una meta medible, que ayuda. Pero el ranked no arregla fundamentos: los mismos hábitos de CS y mapa aplican en cualquier cola."
+            },
+            {
+                "q": "¿Sirve ver a los pros?",
+                "a": "Sí, para la macro y el juego de objetivos. Menos para los fundamentos mecánicos, que se aprenden en tus propias partidas a tu rank. Mira el 'por qué', practica el 'cómo'."
+            },
+            {
+                "q": "¿Qué modo es el mejor para practicar?",
+                "a": "Normal y ranked sirven. El ARAM es útil para el sentido del teamfight y para probar campeones nuevos, pero los fundamentos de lane que necesitas vienen de partidas estándar en Summoner's Rift."
+            }
+        ]
+    },
+    {
+        "slug": "understanding-lane-matchups",
+        "title": "Cómo entender los matchups de lane en League of Legends",
+        "description": "Un marco para leer cualquier matchup de lane: rango, power spikes, estado de oleada y cuándo jugar agresivo o defensivo antes del primer fight.",
+        "keywords": [
+            "matchups de lane league of legends",
+            "matchups de campeones",
+            "como jugar los matchups",
+            "counters de lane lol",
+            "guia de matchups"
+        ],
+        "excerpt": "La mayoría de lanes se deciden antes del primer kill. Así es el marco para leer el matchup antes del primer trade.",
+        "ctaLabel": "Revisa tus Matchups",
+        "ctaHref": "/",
+        "heroIntro": [
+            "La fase de lane es un puzle con reloj. El enemigo tiene un campeón, tú tienes un campeón y la oleada es el tercer jugador. Los que ganan lanes son los que leen los tres antes del primer trade.",
+            "No hace falta memorizar matchups 160 contra 160. Hace falta una forma repetible de leerlos."
+        ],
+        "sections": [
+            {
+                "heading": "Las cinco preguntas antes del primer trade",
+                "bullets": [
+                    "¿Quién tiene rango y durante cuánto tiempo?",
+                    "¿Quién llega a su power spike primero y cuándo?",
+                    "¿Quién limpia la oleada más rápido?",
+                    "¿Qué tan cerca tiene que llegar el enemigo para amenazarme?",
+                    "¿Dónde está el jungler y a qué lado ayuda?"
+                ],
+                "paragraphs": [
+                    "Responde esas cinco y tienes un plan de lane. Las respuestas cambian según se mueve la oleada y suben los niveles, así que repásalas a nivel 2, 4 y 6."
+                ]
+            },
+            {
+                "heading": "El estado de oleada: la variable oculta",
+                "paragraphs": [
+                    "Los mismos dos campeones juegan muy distinto con una oleada empujada que con una congelada. Una oleada empujada le da al enemigo presión de torre y te quita seguridad; una congelada te da seguridad y obliga al enemigo a venir a ti. Controlar la oleada suele valer más que ganar un trade."
+                ],
+                "bullets": [
+                    "Oleada empujada: puedes roamear, pero el enemigo puede golpear tu torre",
+                    "Oleada congelada: estás seguro, pero también atascado",
+                    "El objetivo es elegir el estado de oleada, no reaccionar a él"
+                ]
+            },
+            {
+                "heading": "El timing del power spike",
+                "paragraphs": [
+                    "Cada campeón tiene un momento en el que se vuelve mucho más peligroso: un nivel, un item o un cooldown. En la mayoría de lanes ese momento es el nivel 6. El jugador que conoce el timing de ambos power spikes decide cuándo ocurre el primer fight real, y esa decisión suele valer más que cualquier trade."
+                ],
+                "bullets": [
+                    "Si spikes primero tú: fuerza el fight a tu manera antes de que spikeen",
+                    "Si spikean primero ellos: congela la oleada y sobrevive a la ventana",
+                    "Si ambos spikean juntos: el estado de oleada decide quién elige"
+                ]
+            },
+            {
+                "heading": "Ganar sin ganar trades",
+                "paragraphs": [
+                    "Un matchup malo no es una lane perdida. Las herramientas para ganar un 1v1 perdido son la oleada, el Teleport y el jungle. Un slow push que obliga al enemigo a overextender, un TP que aparece al otro lado del mapa y un ping al jungler en el momento justo pueden voltear un 1v1 que el pool de campeones dice que deberías perder."
+                ],
+                "bullets": [
+                    "Slow push para forzar el overextend y luego retroceder",
+                    "Usa el TP como número, no como escape",
+                    "Pingea al jungler justo cuando la oleada está a tu favor"
+                ]
+            },
+            {
+                "heading": "Aplícalo en la práctica",
+                "paragraphs": [
+                    "Antes de elegir, repasa las cinco preguntas contra el campeón probable del enemigo. Durante la lane, repásalas en cada power spike. Si el matchup es realmente malo, el objetivo cambia de ganar trades a sobrevivir y farmear: la lane es una parte del juego, y el jugador que farmea una lane perdida aun así gana la partida. Nuestra guía de counterpicks cubre la parte que ocurre antes de que empiece la partida."
+                ]
+            }
+        ]
+    },
+    {
+        "slug": "champion-rotation-guide",
+        "title": "Cómo sacarle más partido a la rotación de campeones gratis",
+        "description": "La rotación semanal de campeones gratis es datos de campeones gratis. Aprende a evaluarla, qué picks probar y cuándo vale la pena probar antes de comprar.",
+        "keywords": [
+            "guia rotacion de campeones",
+            "campeones gratis esta semana",
+            "semana gratis league",
+            "que campeon gratis jugar",
+            "maximizar semana de campeones gratis"
+        ],
+        "excerpt": "Cada semana la rotación gratis te da una muestra de campeones que no posees. Así es como sacarle provecho de verdad.",
+        "ctaLabel": "Gira un Campeón Gratis",
+        "ctaHref": "/",
+        "heroIntro": [
+            "La mayoría de jugadores ve la rotación gratis como una lista de campeones que pueden jugar esta semana. Es algo mejor: es una muestra rotativa del pool de campeones, gratis, que puedes usar para probar antes de comprometerte.",
+            "Así se convierte la rotación semanal en conocimiento real de campeones."
+        ],
+        "sections": [
+            {
+                "heading": "Por qué importa la rotación",
+                "paragraphs": [
+                    "La rotación elige campeones de distintos roles y estilos, lo que significa que obtienes un experimento gratis con campeones con los que normalmente no entrarías a cola. El valor no es la winrate de la semana; son los datos de qué campeones encajan con tu estilo antes de gastar en ellos."
+                ]
+            },
+            {
+                "heading": "Cómo evaluar una semana gratis",
+                "bullets": [
+                    "Brecha de habilidad: ¿cuáles de estos campeones están en tu rango de comodidad y cuáles son un estirón?",
+                    "Fuerza del parche: ¿este campeón está fuerte ahora o es un pick de museo?",
+                    "Necesidad de lane: ¿este campeón cubre un rol en el que andas justo?",
+                    "Factor diversión: ¿con cuál entrarías a cola de verdad?"
+                ],
+                "paragraphs": [
+                    "Puntúa cada campeón de la rotación con esos cuatro criterios y elige los dos o tres con la suma más alta. El resto es ruido para tu semana."
+                ]
+            },
+            {
+                "heading": "El protocolo de probar antes de comprar",
+                "paragraphs": [
+                    "Cuando un campeón de la rotación es candidato para tu pool, haz una prueba de dos partidas. Partida 1: juega con un objetivo claro (aprender la oleada, aprender el combo). Partida 2: juega en la situación en la que de verdad entrarías a cola (ranked, tu lane, tu comp). Tras dos partidas sabrás si el campeón encaja o se descarta."
+                ],
+                "bullets": [
+                    "La partida 1 es para el campeón, no para ganar",
+                    "La partida 2 es para las condiciones reales: presión de ranked, comps reales",
+                    "Anota una línea: qué fue difícil, qué fue fácil, ¿lo comprarías?"
+                ]
+            },
+            {
+                "heading": "Usa los picks aleatorios como segunda opinión",
+                "paragraphs": [
+                    "Cuando la rotación está justa en tu lane, un giro aleatorio filtrado a esa lane es un desempate útil: obtienes un pick que no habrías elegido y aprendes cómo se siente la lane con un campeón fuera de tu rango habitual. Es la forma más barata de comprobar si un campeón de la rotación encaja de verdad o solo hizo buena primera impresión."
+                ]
+            }
+        ]
+    },
+    {
+        "slug": "best-champions-for-beginners",
+        "title": "Mejores campeones para principiantes en League of Legends",
+        "description": "¿Nuevo en League? Estos campeones para principiantes tienen mecánicas indulgentes en cada rol, para que aprendas el juego sin pelear también con tu kit.",
+        "keywords": [
+            "mejores campeones para principiantes",
+            "campeones faciles league",
+            "empezar league of legends",
+            "campeones amables con el principiante",
+            "guia nuevo jugador lol"
+        ],
+        "excerpt": "¿Empiezas tu viaje en League of Legends? Estos son los campeones que te dejan concentrarte en el juego en vez de en el botoneo.",
+        "ctaLabel": "Gira un Campeón de Principiante",
+        "ctaHref": "/",
+        "heroIntro": [
+            "League of Legends tiene una curva de aprendizaje pronunciada, pero no todos los campeones la comparten. Hay campeones construidos para ser indulgentes: combos simples, autosustain y condiciones de victoria claras que no dependen de outplayear al enemigo.",
+            "Empezar con uno de esos significa aprender el juego mientras el campeón hace por ti las partes difíciles."
+        ],
+        "sections": [
+            {
+                "heading": "Qué hace indulgente a un campeón",
+                "bullets": [
+                    "Cooldowns cortos: recuperas tus herramientas rápido cuando fallas",
+                    "Autosustain: sobrevives a un trade malo sin morir",
+                    "Combos simples: dos o tres botones, no cinco",
+                    "Condición de victoria clara: siempre sabes qué hacer a continuación"
+                ]
+            },
+            {
+                "heading": "Por rol",
+                "table": {
+                    "headers": [
+                        "Rol",
+                        "Picks amables",
+                        "Qué vas a aprender"
+                    ],
+                    "rows": [
+                        [
+                            "Top",
+                            "Garen, Camille",
+                            "Duelos y control de oleada"
+                        ],
+                        [
+                            "Jungle",
+                            "Warwick, Nidalee",
+                            "Pathing y timing de ganks"
+                        ],
+                        [
+                            "Mid",
+                            "Annie, Galio",
+                            "Timing de habilidades y roaming"
+                        ],
+                        [
+                            "ADC",
+                            "Lucian, Teemo",
+                            "Last hit y posicionamiento"
+                        ],
+                        [
+                            "Support",
+                            "Soraka, Lulu",
+                            "Wards y juego de proteger primero"
+                        ]
+                    ]
+                },
+                "paragraphs": [
+                    "No son los campeones más fuertes del juego; son los que permiten a un jugador nuevo equivocarse y seguir siendo parte de la partida. Cuando tus fundamentos mejoren, podrás graduarte a picks más exigentes."
+                ]
+            },
+            {
+                "heading": "Tus diez primeras partidas: en qué concentrarte",
+                "bullets": [
+                    "Last hit antes que kill: un minion fallado es oro que no recuperas",
+                    "Mira el minimapa cada diez segundos: la mayoría de muertes tempranas son 'no miré'",
+                    "No persigas un kill que no está: la oleada vale más que el kill",
+                    "Compra el item correcto: la tienda es parte de la lección"
+                ]
+            },
+            {
+                "heading": "Cuándo tocar pasar al siguiente",
+                "paragraphs": [
+                    "Estás listo para graduarte de un campeón de principiante cuando puedas nombrar tres cosas que haces bien y una que sigues haciendo mal. En ese punto, el siguiente campeón debe enseñar la pieza que falta: si tu control de oleada es flojo, el pick siguiente es uno que lo recompense. Nuestra hoja de ruta de mejora y nuestra guía de farming son las dos mejores siguientes lecturas."
+                ]
+            },
+            {
+                "heading": "Usa los picks aleatorios para encontrar tu main",
+                "paragraphs": [
+                    "Cuando ya te sientas cómodo, un giro de campeón aleatorio es una forma rápida de averiguar qué roles y estilos encajan contigo de verdad. Diez partidas aleatorias por rol te dirán más sobre tu estilo natural que un mes de guías."
+                ]
+            }
+        ],
+        "faq": [
+            {
+                "q": "¿Estos campeones son realmente fuertes?",
+                "a": "Son lo bastante fuertes para aprender, que es el punto. Varios siguen siendo competitivos en buenas manos; el objetivo es aprender el juego primero y perseguir el meta después."
+            },
+            {
+                "q": "¿Tengo que aprender los cinco roles?",
+                "a": "No. Elige el o los dos roles que se te den más naturales y profundiza allí. Un jugador fuerte de dos roles supera a un jugador flojo de cinco."
+            },
+            {
+                "q": "¿Qué hago si sigo muriendo con mi campeón de principiante?",
+                "a": "La muerte es dato. Tras cada death pregúntate: ¿fue fallo mecánico, error de posicionamiento o fallo de lectura del mapa? El primero se arregla con práctica; los otros dos son hábitos que arregla nuestra guía de mejora."
+            },
+            {
+                "q": "¿Debería empezar en ARAM en vez de en Summoner's Rift?",
+                "a": "El ARAM es un buen calentamiento y un sitio de baja presión para aprender campeones, pero los fundamentos de lane (CS, oleadas, mapa) solo vienen de partidas estándar. Usa el ARAM para aprender picks y el Rift para aprender el juego."
+            }
+        ]
+    },
+    {
+        "slug": "how-to-climb-ranked",
+        "title": "Cómo escalar el ranked en League of Legends",
+        "description": "El escalado del ranked no es solo winrate. Estructura de sesiones, hábitos y los errores que te mantienen atascado, y cómo arreglar cada uno.",
+        "keywords": [
+            "como escalar ranked league",
+            "guia para escalar ranked",
+            "escalar league of legends",
+            "escalar la escalera ranked",
+            "tips ranked fin de temporada"
+        ],
+        "excerpt": "Escalar ranked es un sistema, no una racha. Estos son los hábitos que de verdad mueven la escalera.",
+        "ctaLabel": "Empieza tu Escalada",
+        "ctaHref": "/",
+        "heroIntro": [
+            "La mayoría de la frustración del ranked viene de tratar el escalado como una racha: gana, gana, pierde, tilt. Los que escalan de forma estable lo tratan como un programa de entrenamiento: sesiones estructuradas, un foco y una regla de parada.",
+            "La diferencia no es la habilidad. Es la estructura."
+        ],
+        "sections": [
+            {
+                "heading": "Qué de verdad te sube",
+                "paragraphs": [
+                    "El ranked mide tu winrate a lo largo del tiempo, pero la winrate es un indicador rezagado. Lo que la mueve es la calidad de decisión (¿tomas las jugadas correctas?), la constancia (¿apareces en el mismo estado?) y el foco (¿cada sesión apunta a una mejora?). Arregla eso y la winrate sigue."
+                ],
+                "bullets": [
+                    "Calidad de decisión: las jugadas que ganan o pierden la partida",
+                    "Constancia: la misma preparación y el mismo estado cada sesión",
+                    "Foco: una mecánica o hábito por bloque de partidas"
+                ]
+            },
+            {
+                "heading": "Una estructura de sesión que funciona",
+                "bullets": [
+                    "Cuatro a seis partidas por sesión, no diez",
+                    "Un objetivo de foco para toda la sesión",
+                    "Descanso tras dos derrotas seguidas, siempre",
+                    "Para cuando el objetivo se cumpla, aunque estés ganando"
+                ],
+                "paragraphs": [
+                    "La estructura importa más que la longitud. Seis partidas enfocadas con un objetivo valen más que diez sin rumbo, siempre."
+                ]
+            },
+            {
+                "heading": "Los tres asesinos del ranked",
+                "paragraphs": [
+                    "Casi cada estancamiento del ranked viene de tres sitios. El tilt: colar por emoción tras perder, lo que garantiza la siguiente derrota. Un pool demasiado estrecho: un main que el enemigo lee y counterea. Y el no repasar: jugar cien partidas sin mirar ni una."
+                ],
+                "bullets": [
+                    "Tilt: la solución es la regla de parada, no la fuerza de voluntad",
+                    "Pool estrecho: añade un off-main por semana, aunque solo sea para conocer el kit",
+                    "Sin repaso: una partida a la semana, tres preguntas, veinte minutos"
+                ]
+            },
+            {
+                "heading": "Por rango",
+                "bullets": [
+                    "Iron a Silver: solo fundamentos. CS, mapa, no morir para nada",
+                    "Gold a Platino: objetivos y estado de oleada. Deja de perder torres que deberías mantener",
+                    "Diamante y arriba: tempo y maestría de rol. Los fundamentos son el mínimo"
+                ],
+                "paragraphs": [
+                    "El error en cada rango es practicar el rango de arriba. Un jugador de Silver que practica tempo de Diamante está practicando lo equivocado. Domina primero el juego de tu rango actual."
+                ]
+            },
+            {
+                "heading": "Fin de temporada sin drama",
+                "paragraphs": [
+                    "La última semana de temporada es cuando la mayoría de jugadores pierde más LP. La solución es simple: conoce tu colchón de LP actual, pon un punto de parada (digamos, dos LP de margen) y cuando llegues, para. Proteger el rango que ganaste es parte del escalado, no una salida barata."
+                ]
+            },
+            {
+                "heading": "Usa la variedad para seguir subiendo",
+                "paragraphs": [
+                    "Una partida de campeón aleatorio entre bloques de ranked es un reset útil: te recuerda que los fundamentos aplican a cada campeón, no solo a tu main. Una partida aleatoria por semana impide que el escalado se convierta en una rutina de un solo campeón."
+                ]
+            }
+        ],
+        "faq": [
+            {
+                "q": "¿Cuál es el mejor rango para hacer grinding?",
+                "a": "El rango donde te sientes cómodo pero no seguro: lo bastante alto como para que importen los fundamentos y lo bastante bajo como para que tus victorias sigan siendo aprendibles. Para la mayoría de jugadores, eso es Gold a Platino."
+            },
+            {
+                "q": "¿Debería duo queue para escalar más rápido?",
+                "a": "El duo queue ayuda a aprender comunicación y juego de equipo, pero no arregla fundamentos individuales. Escala en solo hasta que los hábitos de solo queue sean sólidos y luego usa el duo para añadir trabajo en equipo."
+            },
+            {
+                "q": "¿Cuántas partidas de ranked al día son demasiadas?",
+                "a": "No hay un número duro, pero la señal es la calidad: cuando tu calidad de decisión baja, la sesión terminó aunque no lo parezca. La mayoría de jugadores debería parar antes de llegar a ese punto."
+            },
+            {
+                "q": "¿Jugar una cuenta nueva en un rango bajo es buena forma de practicar?",
+                "a": "Sí, es una herramienta de práctica legítima: consigues el ritmo del rango bajo con tu conocimiento de rango alto. Úsala para trabajar un foco, no para farmear LP."
+            }
+        ]
+    },
+    {
+        "slug": "lol-tier-list-current-patch",
+        "title": "Tier Lists de LoL: cómo leerlas (y cuándo están mal)",
+        "description": "Cómo se construyen las tier lists de campeones, qué significan de verdad las tiers S, A, B y C y cómo usar el meta sin que te elijan por ti.",
+        "keywords": [
+            "tier list lol parche actual",
+            "tier list de campeones",
+            "mejores campeones por rol",
+            "tier list high elo",
+            "tier list league of legends"
+        ],
+        "excerpt": "Las tier lists son el contenido del meta más buscado y peor usado. Así se lee una correctamente, con una nota de qué está al día y qué no.",
+        "ctaLabel": "Ver los Datos en Vivo",
+        "ctaHref": "/tierlist",
+        "heroIntro": [
+            "Una tier list es una instantánea, no un manual. Dice qué campeones están fuertes ahora, en un conjunto de datos concreto y para un rango de elo concreto. No dice qué campeón deberías mainear.",
+            "La diferencia entre ambas es la diferencia entre usar el meta y ser usado por él."
+        ],
+        "sections": [
+            {
+                "heading": "Qué entra en una tier list",
+                "paragraphs": [
+                    "La mayoría de tier lists combinan winrate, pick rate y cobertura de rol, filtrado por rango de elo y parche. Los sesgos merecen conocerse: la inflación de pick rate (un campeón elegido a menudo parece fuerte porque se juega a menudo), el desajuste de elo (un campeón S-tier en Diamante puede ser inútil en Silver) y la antigüedad del parche (una lista de hace tres parches describe otro juego)."
+                ],
+                "bullets": [
+                    "Winrate: qué tan a menudo gana el campeón cuando lo eligen",
+                    "Pick rate: qué tan a menudo los jugadores lo buscan",
+                    "Rango de elo: los datos son tan buenos como el rango de donde salen",
+                    "Parche: la lista es tan fresca como su última actualización"
+                ]
+            },
+            {
+                "heading": "Cómo leer las tiers",
+                "table": {
+                    "headers": [
+                        "Tier",
+                        "Qué significa",
+                        "Cómo usarla"
+                    ],
+                    "rows": [
+                        [
+                            "S",
+                            "Pick fuerte por defecto",
+                            "Seguro como main si encaja con tu estilo"
+                        ],
+                        [
+                            "A",
+                            "Fuerte en condiciones concretas",
+                            "Bueno por razón de matchup o comp"
+                        ],
+                        [
+                            "B",
+                            "Jugable, con matices",
+                            "Júgalo cuando el matchup o la diversión lo justifiquen"
+                        ],
+                        [
+                            "C",
+                            "Off-meta o de nicho",
+                            "Júgalo por gusto o por un counter concreto"
+                        ]
+                    ]
+                },
+                "paragraphs": [
+                    "Las tiers describen fuerza, no vale la pena jugar. Un campeón C-tier que maineas mejor que nadie en tu rango es un campeón S-tier para ti. La lista es un punto de partida, no una sentencia."
+                ]
+            },
+            {
+                "heading": "Cuándo una tier list va mal para ti",
+                "bullets": [
+                    "Tu rango de elo es distinto del conjunto de datos de la lista",
+                    "Tu estilo no encaja con los picks fuertes",
+                    "La lista es más antigua que los últimos dos parches",
+                    "La lista rankea por winrate bruta sin contexto de matchup"
+                ],
+                "paragraphs": [
+                    "Si alguna de esas es cierta, la lista es una pista, no una respuesta. El campeón que escala para ti es el que sea lo bastante fuerte y lo bastante tuyo, no el que esté arriba de la tabla."
+                ]
+            },
+            {
+                "heading": "Tier lists frente a conocimiento de matchups",
+                "paragraphs": [
+                    "Una tier list dice qué campeones son fuertes en abstracto. El conocimiento de matchups dice cuál lo es contra el enemigo concreto que vas a enfrentar. En una partida real, el segundo vale más, porque el enemigo no es un enemigo promedio. Nuestras guías de counterpicks y de matchups de lane cubren esa mitad de la ecuación."
+                ]
+            },
+            {
+                "heading": "Dónde ver los datos en vivo",
+                "paragraphs": [
+                    "Como el meta se mueve con cada parche, los datos de tier más útiles son los más frescos. League Roulette mantiene una tier list que se actualiza con los datos de campeones de la app, así que el ranking que ves ahí refleja el parche actual en vez de una entrada de blog de hace un mes. Usa el blog para el marco y los datos en vivo para el estado actual."
+                ]
+            }
+        ]
+    },
+    {
+        "slug": "how-to-farm-in-league",
+        "title": "Cómo farmear en League of Legends: last hit y control de oleadas",
+        "description": "Domina los fundamentos de CS: last hit bajo presión, freeze y slow push, y los números a vigilar para que tu economía compense en cada partida.",
+        "keywords": [
+            "como farmear league of legends",
+            "guia de last hit",
+            "control de oleadas league",
+            "ejercicios de farming",
+            "mejorar cs league"
+        ],
+        "excerpt": "Farming es la habilidad que más compone en League. Así se construye desde cero.",
+        "ctaLabel": "Practica en una Partida Aleatoria",
+        "ctaHref": "/",
+        "heroIntro": [
+            "El farming es la habilidad que más compone en League of Legends. Cada minion que lasthitas es oro y experiencia que tendrás en cada fight de los próximos veinte minutos. Cada minion que fallas es una brecha que el enemigo mantiene.",
+            "También es la habilidad más fácil de medir, lo que la convierte en el mejor sitio para empezar a mejorar."
+        ],
+        "sections": [
+            {
+                "heading": "Por qué el CS decide la mayoría de partidas",
+                "paragraphs": [
+                    "Hacia el minuto diez, un jugador constante está en unos 200 de CS. Un jugador que pierde oleadas cada partida anda por 150 o menos, y esa diferencia es la que separa al equipo que compra sus items a tiempo del equipo que siempre va con un item de retraso. La brecha compone: el equipo adelante gana el siguiente fight, que gana el siguiente objetivo, que gana la siguiente oleada."
+                ]
+            },
+            {
+                "heading": "Last hit bajo presión",
+                "paragraphs": [
+                    "La habilidad no es golpear al minion. Es golpearlo mientras el enemigo intenta impedírtelo. Tres hábitos marcan la diferencia."
+                ],
+                "bullets": [
+                    "Resetea tu ataque: autoataque y muévete al siguiente minion antes de que aterrice el swing",
+                    "Limpieza prioritaria bajo torre: la torre te protege, úsala para farmear seguro",
+                    "Fuerza el kill: un trade a tiempo puede empujar al minion enemigo a morir a tu manera"
+                ]
+            },
+            {
+                "heading": "Básicas de control de oleadas",
+                "table": {
+                    "headers": [
+                        "Estado de oleada",
+                        "Cuándo usarlo",
+                        "Qué hace por ti"
+                    ],
+                    "rows": [
+                        [
+                            "Freeze",
+                            "Cuando vas por delante y quieres seguridad",
+                            "Mantiene la oleada cerca; farmeas y roameas"
+                        ],
+                        [
+                            "Slow push",
+                            "Cuando quieres presión de torre",
+                            "Construye una oleada grande que llega a la torre a tu timing"
+                        ],
+                        [
+                            "Fast push",
+                            "Cuando quieres roamear o volver a la lane",
+                            "Limpia la oleada rápido y quedas libre para moverte"
+                        ]
+                    ]
+                },
+                "paragraphs": [
+                    "Los mismos tres estados cubren casi cualquier decisión de lane. El objetivo es ser quien elige el estado, no quien reacciona al del enemigo."
+                ]
+            },
+            {
+                "heading": "Números que vale la pena vigilar",
+                "bullets": [
+                    "8 CS por minuto en solo queue es una meta sana",
+                    "Alrededor de 200 de CS a los 10 minutos en una partida normal",
+                    "Cada death cuesta 300-500 de oro más el tiempo muerto",
+                    "Un objetivo fallado es un minuto entero de ventaja de mapa para el enemigo"
+                ],
+                "paragraphs": [
+                    "Vigila uno de estos por sesión, no todos. Elige el número que te salga peor y que sea el foco de la sesión."
+                ]
+            },
+            {
+                "heading": "El bucle de práctica",
+                "paragraphs": [
+                    "Diez minutos al día de last hit en partidas personalizadas construye el músculo. Luego una sesión a la semana donde el CS sea el único objetivo: olvida los kills, solo llega al número. Tras un mes de ese bucle, el CS que perdías en cola simplemente ha desaparecido. Nuestra hoja de ruta de mejora combina bien con esto: una mecánica por bloque y repaso a propósito."
+                ],
+                "bullets": [
+                    "Last hit personalizado: 10 minutos al día, sin presión",
+                    "Una sesión enfocada en CS por semana",
+                    "Vigila el número, no la victoria, el primer mes"
+                ]
+            }
+        ]
+    }
+]

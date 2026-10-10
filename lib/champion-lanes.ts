@@ -111,6 +111,7 @@ export const CHAMPION_LANES: Record<string, string[]> = {
   "Katarina": ["mid"],
   "LeBlanc": ["mid"],
   "Lissandra": ["mid"],
+  "Locke": ["mid"],
   "Lux": ["mid", "support"],
   "Malzahar": ["mid"],
   "Naafiri": ["mid"],

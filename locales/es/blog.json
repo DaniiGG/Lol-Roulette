@@ -11,5 +11,55 @@
     "ctaDesc": "Únete a League Roulette",
     "browseMore": "Explorar más",
     "relatedReading": "Lecturas relacionadas",
-    "blog": "Blog"
+    "blog": "Blog",
+    "heroTitle": "Guías, builds y consejos de campeones de League of Legends",
+    "heroDesc": "Guías prácticas, análisis honestos y nuevas ideas para cada rol, desde tu primera partida hasta tu escalada ranked. Actualizadas con el meta y conectadas con las herramientas que ya usas.",
+    "featuredLabel": "Destacado",
+    "latestLabel": "Artículos recientes",
+    "categoriesLabel": "Explora por tema",
+    "searchLabel": "Buscar",
+    "searchPlaceholder": "Busca guías, campeones, consejos...",
+    "searchNoResults": "Sin resultados para",
+    "allLabel": "Todos",
+    "readTime": "{n} min de lectura",
+    "published": "Publicado",
+    "updated": "Actualizado",
+    "availableIn": "Disponible en",
+    "onThisPage": "En esta página",
+    "tryApp": "Prueba League Roulette",
+    "tryAppDesc": "¿No sabes qué jugar? Deja que League Roulette elija tu próximo campeón.",
+    "ctaMidTitle": "¿Atascado en tu main?",
+    "ctaMidDesc": "Un pick aleatorio rompe la rutina. Deja que League Roulette elija por ti.",
+    "backToAll": "Todos los artículos",
+    "categoryCount": "{n} artículos",
+    "categories": {
+        "champions": {
+            "name": "Guías de campeones",
+            "desc": "Arquetipos, picks y consejos por rol para top, jungle, mid, bot y support."
+        },
+        "guides": {
+            "name": "Guías",
+            "desc": "Mecánicas y procesos que mejoran tu jugada: matchups, rotación, fundamentos."
+        },
+        "tier-lists": {
+            "name": "Tier Lists",
+            "desc": "Cómo leer el meta: tiers, datos y cuándo la lista no te sirve."
+        },
+        "beginners": {
+            "name": "Principiantes",
+            "desc": "Empezar en League sin pelearte con el kit: picks indulgentes y primeros pasos."
+        },
+        "ranked": {
+            "name": "Ranked",
+            "desc": "Estructura de sesión, hábitos y errores que frenan tu escalada."
+        },
+        "mechanics": {
+            "name": "Mecánicas",
+            "desc": "Farming, oleadas y micro: los fundamentos que componen cada partida."
+        },
+        "league-roulette": {
+            "name": "League Roulette",
+            "desc": "Retos y picks aleatorios: cómo convertir la ruleta en mejora real."
+        }
+    }
 }

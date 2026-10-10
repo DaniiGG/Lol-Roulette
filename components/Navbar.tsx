@@ -18,6 +18,7 @@ const navLinks = [
     { href: '/', label: t('play'), icon: '🎮' },
     { href: '/leaderboard', label: t('leaderboard'), icon: '🏆' },
     { href: '/challenges', label: t('challenges'), icon: '⚡' },
+    {href: '/mastery', label: t('mastery'), icon: '📚'},
     { href: '/howtoplay', label: t('howToPlay'), icon: '📖' },
   ]
 

@@ -11,5 +11,55 @@
     "ctaDesc": "Feeling inspired? Try our random champion generator and put your new knowledge to the test.",
     "browseMore": "Browse more blog posts",
     "relatedReading": "Related reading",
-    "blog": "Blog"
+    "blog": "Blog",
+    "heroTitle": "LoL 攻略、出装与英雄技巧",
+    "heroDesc": "面向每个位置的实用攻略、客观分析与新玩法思路——从第一把到排位上分。紧跟版本 meta，并与你已经在使用的工具联动。",
+    "featuredLabel": "精选",
+    "latestLabel": "最新文章",
+    "categoriesLabel": "按主题浏览",
+    "searchLabel": "搜索",
+    "searchPlaceholder": "搜索攻略、英雄、技巧…",
+    "searchNoResults": "没有找到",
+    "allLabel": "全部",
+    "readTime": "约 {n} 分钟",
+    "published": "发布于",
+    "updated": "更新于",
+    "availableIn": "可用语言",
+    "onThisPage": "本页目录",
+    "tryApp": "试试 League Roulette",
+    "tryAppDesc": "不知道玩什么？让 League Roulette 帮你选出下一位英雄。",
+    "ctaMidTitle": "主玩英雄玩腻了？",
+    "ctaMidDesc": "随机选人打破日常套路。让 League Roulette 替你做出选择。",
+    "backToAll": "全部文章",
+    "categoryCount": "{n} 篇文章",
+    "categories": {
+        "champions": {
+            "name": "英雄攻略",
+            "desc": "按位置整理的英雄原型、常用与技巧：上单、打野、中单、ADC 与辅助。"
+        },
+        "guides": {
+            "name": "攻略",
+            "desc": "提升实力的机制与流程：对线、轮换、基本功。"
+        },
+        "tier-lists": {
+            "name": "梯队表",
+            "desc": "如何读懂版本：梯队、数据，以及梯队表失效的时候。"
+        },
+        "beginners": {
+            "name": "新手入门",
+            "desc": "不与技能组较劲地开始 LoL：易上手英雄与第一步。"
+        },
+        "ranked": {
+            "name": "排位",
+            "desc": "排位的节奏结构、习惯与让你卡段的错误。"
+        },
+        "mechanics": {
+            "name": "机制",
+            "desc": "补刀、兵线与微操：每局都在生效的基本功。"
+        },
+        "league-roulette": {
+            "name": "League Roulette",
+            "desc": "随机选人挑战：把轮盘变成真正的成长。"
+        }
+    }
 }

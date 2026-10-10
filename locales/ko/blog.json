@@ -11,5 +11,55 @@
     "ctaDesc": "League Roulette에 참여하세요",
     "browseMore": "더 둘러보기",
     "relatedReading": "관련 글",
-    "blog": "Blog"
+    "blog": "Blog",
+    "heroTitle": "LoL 가이드, 빌드 & 챔피언 팁",
+    "heroDesc": "롤마다 실용적인 가이드, 솔직한 분석, 새로운 아이디어. 첫 게임부터 랭크 상승까지. 메타 업데이트에 맞춰 이미 쓰는 도구와 연결해 둡니다.",
+    "featuredLabel": "추천",
+    "latestLabel": "최근 기사",
+    "categoriesLabel": "주제로 둘러보기",
+    "searchLabel": "검색",
+    "searchPlaceholder": "가이드·챔피언·팁 검색...",
+    "searchNoResults": "검색 결과 없음:",
+    "allLabel": "전체",
+    "readTime": "{n}분 읽기",
+    "published": "게시일",
+    "updated": "수정일",
+    "availableIn": "이용 가능한 언어",
+    "onThisPage": "이 페이지에서",
+    "tryApp": "League Roulette 써보기",
+    "tryAppDesc": "무엇을 플레이할지 모르겠다면, 다음 챔피언은 League Roulette이 고르게 하세요.",
+    "ctaMidTitle": "메인에 고착됐나요?",
+    "ctaMidDesc": "무작정 픽이 루틴을 깨줍니다. League Roulette이 대신 골라주세요.",
+    "backToAll": "전체 기사",
+    "categoryCount": "기사 {n}개",
+    "categories": {
+        "champions": {
+            "name": "챔피언 가이드",
+            "desc": "역할별 아키타입, 픽, 팁: 탑, 정글, 미드, 봇, 서포트."
+        },
+        "guides": {
+            "name": "가이드",
+            "desc": "실력을 올려주는 메커니즘과 과정: matchup, 로테이션, 기본기."
+        },
+        "tier-lists": {
+            "name": "티어 리스트",
+            "desc": "메타 읽는 법: 티어, 데이터, 그리고 리스트가 쓸모없는 순간."
+        },
+        "beginners": {
+            "name": "초보자",
+            "desc": "킷과 씨름하지 않고 League를 시작하기: 낮은 장벽의 픽과 첫걸음."
+        },
+        "ranked": {
+            "name": "랭크",
+            "desc": "세션 구조, 습관, 상승을 막는 실수."
+        },
+        "mechanics": {
+            "name": "메커니크",
+            "desc": "팜, 웨이브, 미크로: 매 게임에서 발효되는 기본기."
+        },
+        "league-roulette": {
+            "name": "League Roulette",
+            "desc": "무작정 픽 챌린지: 룰렛을 진짜 성장으로 바꾸는 법."
+        }
+    }
 }

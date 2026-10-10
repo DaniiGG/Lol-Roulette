@@ -11,5 +11,55 @@
     "ctaDesc": "انضم إلى مجتمع League Roulette",
     "browseMore": "تصفح المزيد",
     "relatedReading": "قراءات ذات صلة",
-    "blog": "Blog"
+    "blog": "Blog",
+    "heroTitle": "أدلة وبيلدات ونصائح أبطال League of Legends",
+    "heroDesc": "أدلة عملية وتحليلات صادقة وأفكار جديدة لكل دور، من أول مباراة حتى تصعيدك في الرانك. محدّثة مع المیتا ومربوطة بالأدوات التي تستخدمها بالفعل.",
+    "featuredLabel": "مميز",
+    "latestLabel": "أحدث المقالات",
+    "categoriesLabel": "تصفّح حسب الموضوع",
+    "searchLabel": "بحث",
+    "searchPlaceholder": "ابحث عن أدلة وأبطال ونصائح...",
+    "searchNoResults": "لا نتائج لـ",
+    "allLabel": "الكل",
+    "readTime": "{n} دقائق قراءة",
+    "published": "نُشر في",
+    "updated": "عُدّل في",
+    "availableIn": "متوفر بـ",
+    "onThisPage": "في هذه الصفحة",
+    "tryApp": "جرّب League Roulette",
+    "tryAppDesc": "لا تعرف من تلعب؟ دع League Roulette يختار بطلك القادم.",
+    "ctaMidTitle": "مثبّت على بطلك المفضل؟",
+    "ctaMidDesc": "الاختيار العشوائي يكسر الروتين. دع League Roulette يختار عنك.",
+    "backToAll": "كل المقالات",
+    "categoryCount": "{n} مقالات",
+    "categories": {
+        "champions": {
+            "name": "أدلة الأبطال",
+            "desc": "أنماط وخيارات ونصائح حسب الدور: طوب، جول، ميد، بوت وسبورت."
+        },
+        "guides": {
+            "name": "أدلة",
+            "desc": "ميكانيكيات وعمليات تحسّن لعبك: matchups والدوران والأساسيات."
+        },
+        "tier-lists": {
+            "name": "قوائم التير",
+            "desc": "كيف تقرأ الميتا: تيرز وبيانات ومتى لا تفيدك القائمة."
+        },
+        "beginners": {
+            "name": "للمبتدئين",
+            "desc": "ابدأ League دون صراع مع الكيت: خيارات ميسّرة وخطوات أولى."
+        },
+        "ranked": {
+            "name": "الرانك",
+            "desc": "هيكل الجلسة والعادات والأخطاء التي توقف تصعيدك."
+        },
+        "mechanics": {
+            "name": "الميكانيك",
+            "desc": "الفارم والموجات والميكرو: أساسيات تحدث في كل مباراة."
+        },
+        "league-roulette": {
+            "name": "League Roulette",
+            "desc": "تحديات الاختيار العشوائي: كيف تحوّل القرطاس إلى تقدّم حقيقي."
+        }
+    }
 }

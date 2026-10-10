@@ -11,5 +11,55 @@
     "ctaDesc": "Feeling inspired? Try our random champion generator and put your new knowledge to the test.",
     "browseMore": "Browse more blog posts",
     "relatedReading": "Related reading",
-    "blog": "Blog"
+    "blog": "Blog",
+    "heroTitle": "League of Legends guides, builds & champion tips",
+    "heroDesc": "Practical guides, honest takes and fresh ideas for every role - from your first game to your ranked climb. Updated with the meta, linked to the tools you already use.",
+    "featuredLabel": "Featured",
+    "latestLabel": "Latest articles",
+    "categoriesLabel": "Browse by topic",
+    "searchLabel": "Search",
+    "searchPlaceholder": "Search guides, champions, tips...",
+    "searchNoResults": "No results for",
+    "allLabel": "All",
+    "readTime": "{n} min read",
+    "published": "Published",
+    "updated": "Updated",
+    "availableIn": "Available in",
+    "onThisPage": "On this page",
+    "tryApp": "Try League Roulette",
+    "tryAppDesc": "Not sure what to play? Let League Roulette choose your next champion.",
+    "ctaMidTitle": "Feeling stuck on your main?",
+    "ctaMidDesc": "A random pick breaks the routine. Let League Roulette choose your next champion.",
+    "backToAll": "All articles",
+    "categoryCount": "{n} articles",
+    "categories": {
+        "champions": {
+            "name": "Champion Guides",
+            "desc": "Archetypes, picks and tips by role for top, jungle, mid, bot and support."
+        },
+        "guides": {
+            "name": "Guides",
+            "desc": "Mechanics and processes that upgrade your game: matchups, rotation, fundamentals."
+        },
+        "tier-lists": {
+            "name": "Tier Lists",
+            "desc": "How to read the meta: tiers, data, and when a list does not help you."
+        },
+        "beginners": {
+            "name": "Beginner Guides",
+            "desc": "Start League without fighting the kit: forgiving picks and first steps."
+        },
+        "ranked": {
+            "name": "Ranked",
+            "desc": "Session structure, habits and the mistakes that stall your climb."
+        },
+        "mechanics": {
+            "name": "Mechanics",
+            "desc": "Farming, waves and micro: the fundamentals that compound in every game."
+        },
+        "league-roulette": {
+            "name": "League Roulette",
+            "desc": "Random pick challenges: how to turn the roulette into real improvement."
+        }
+    }
 }

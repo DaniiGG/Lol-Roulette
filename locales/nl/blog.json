@@ -11,5 +11,55 @@
     "ctaDesc": "Sluit je aan bij League Roulette",
     "browseMore": "Verder verkennen",
     "relatedReading": "Gerelateerde artikelen",
-    "blog": "Blog"
+    "blog": "Blog",
+    "heroTitle": "LoL-gidsen, builds & champion-tips",
+    "heroDesc": "Praktische gidsen, eerlijke analyses en verse ideeën voor elke rol – van je eerste game tot je ranked-climb. Bijgewerkt met de meta en gekoppeld aan de tools die je al gebruikt.",
+    "featuredLabel": "In de schijnwerpers",
+    "latestLabel": "Nieuwste artikelen",
+    "categoriesLabel": "Bladeren op onderwerp",
+    "searchLabel": "Zoeken",
+    "searchPlaceholder": "Zoek gidsen, champions, tips...",
+    "searchNoResults": "Geen resultaten voor",
+    "allLabel": "Alles",
+    "readTime": "{n} min leestijd",
+    "published": "Gepubliceerd",
+    "updated": "Bijgewerkt",
+    "availableIn": "Beschikbaar in",
+    "onThisPage": "Op deze pagina",
+    "tryApp": "Probeer League Roulette",
+    "tryAppDesc": "Weet je niet wie je moet spelen? Laat League Roulette je volgende champion kiezen.",
+    "ctaMidTitle": "Vastgelopen op je main?",
+    "ctaMidDesc": "Een willekeurige pick doorbreekt de routine. Laat League Roulette voor je kiezen.",
+    "backToAll": "Alle artikelen",
+    "categoryCount": "{n} artikelen",
+    "categories": {
+        "champions": {
+            "name": "Champion-guides",
+            "desc": "Archtypes, picks en tips per rol: top, jungle, mid, bot en support."
+        },
+        "guides": {
+            "name": "Gidsen",
+            "desc": "Mecanica's en processen die je spel verbeteren: matchups, rotatie, fundamenten."
+        },
+        "tier-lists": {
+            "name": "Tier Lists",
+            "desc": "De meta lezen: tiers, data en wanneer een lijst je niet helpt."
+        },
+        "beginners": {
+            "name": "Beginners",
+            "desc": "Start in League zonder te worstelen met je kit: toegankelijke picks en eerste stappen."
+        },
+        "ranked": {
+            "name": "Ranked",
+            "desc": "Sessiestructuur, gewoonten en fouten die je climb vertragen."
+        },
+        "mechanics": {
+            "name": "Mecanica's",
+            "desc": "Farmen, golven en micro: de fundamenten die in elke game werken."
+        },
+        "league-roulette": {
+            "name": "League Roulette",
+            "desc": "Willekeurige-pick challenges: hoe je van de roulette echte groei maakt."
+        }
+    }
 }

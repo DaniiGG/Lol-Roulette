@@ -65,7 +65,7 @@ export default async function LanePage({ params }: { params: Promise<{ locale: s
   const tAll = await getTranslations()
 
   let allPosts: BlogPost[] = []
-  try { allPosts = tAll.raw('blogContent') as BlogPost[] } catch { allPosts = [] }
+  try { allPosts = tAll.raw('blog-content') as BlogPost[] } catch { allPosts = [] }
 
   const lanePosts = allPosts.filter(p => {
     const laneKey = lane === 'adc' ? 'adc' : lane

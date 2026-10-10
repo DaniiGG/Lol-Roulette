@@ -3,7 +3,7 @@ import {routing} from './routing';
 
 async function loadMessages(locale: string) {
   const common = (await import(`../locales/${locale}/common.json`)).default;
-  const extraFiles = ['challenges', 'tierlist', 'modes', 'popular', 'champion-guides', 'blog'];
+  const extraFiles = ['challenges', 'tierlist', 'modes', 'popular', 'champion-guides', 'blog', 'blog-content'];
   const extra: Record<string, any> = {};
   for (const file of extraFiles) {
     try {

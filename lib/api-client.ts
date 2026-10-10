@@ -84,3 +84,34 @@ export function unlockAchievement(token: string, data: {
 }) {
   return api('/api/achievements', { action: 'unlock', ...data }, token)
 }
+
+// Challenge Sessions API
+export function getChallengeSessions(token: string) {
+  return api('/api/challenge-sessions', { action: 'get' }, token)
+}
+
+export function startChallengeSession(token: string, data: {
+  challenge_id: string
+  duration_hours: number
+}) {
+  return api('/api/challenge-sessions', { action: 'start', ...data }, token)
+}
+
+export function validateChallengeMatch(token: string, data: {
+  match_id: string
+  champion_name: string
+  champion_id: string | number
+  won: boolean
+  game_mode: string
+  game_duration: number
+  stats: any
+  game_end_timestamp?: string
+}) {
+  return api('/api/challenge-sessions', { action: 'validate_match', ...data }, token)
+}
+
+export function completeChallengeSession(token: string, data: {
+  session_id: string
+}) {
+  return api('/api/challenge-sessions', { action: 'complete', ...data }, token)
+}

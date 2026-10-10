@@ -1,57 +1,108 @@
 {
-    "weeklyChallenge": {
-        "title": "Weekly Challenge",
-        "subtitle": "Complete this week's challenge to earn bragging rights",
-        "challenges": [
-            {
-                "id": "support-only",
-                "name": "Support Only",
-                "description": "Play 3 games this week playing only support champions. No carries allowed!",
-                "emoji": "👩",
-                "deadline": "This Sunday",
-                "difficulty": "Medium"
-            },
-            {
-                "id": "low-mastery",
-                "name": "Low Mastery",
-                "description": "Play with champions you have less than 10 games on. Expand your pool!",
-                "emoji": "🎯",
-                "deadline": "This Sunday",
-                "difficulty": "Hard"
-            },
-            {
-                "id": "friends-roulette",
-                "name": "Friends Roulette",
-                "description": "Challenge 3 friends to a group roulette. Everyone spins and plays their pick!",
-                "emoji": "🎉",
-                "deadline": "This Sunday",
-                "difficulty": "Easy"
-            },
-            {
-                "id": "aram-only",
-                "name": "ARAM Only",
-                "description": "Play 5 games in Howling Abyss this week. The champion is always random!",
-                "emoji": "🏟️",
-                "deadline": "This Sunday",
-                "difficulty": "Medium"
-            },
-            {
-                "id": "champion-rotation",
-                "name": "Champion Rotation",
-                "description": "Play with every free champion in this week's rotation. One game each!",
-                "emoji": "🔄",
-                "deadline": "This Sunday",
-                "difficulty": "Hard"
-            }
-        ]
-    },
-    "createChallenge": "Create Your Own Challenge",
-    "shareCode": "Share Code",
-    "joinChallenge": "Join Challenge",
-    "back": "Back",
-    "sectionLabel": "Weekly Challenge",
-    "startPlaying": "Start Playing",
-    "browseMore": "Browse Blog",
-    "aramNote": "aramNote",
-    "noChampions": "noChampions"
+  "weeklyChallenge": {
+    "title": "Weekly Challenge",
+    "subtitle": "Complete this week's challenge to earn bragging rights",
+    "challenges": [
+      {
+        "id": "support-only",
+        "name": "Support Only",
+        "description": "Play 3 games this week playing only support champions. No carries allowed!",
+        "emoji": "👩",
+        "deadline": "This Sunday",
+        "difficulty": "Medium"
+      },
+      {
+        "id": "low-mastery",
+        "name": "Low Mastery",
+        "description": "Play with champions you have less than 10 games on. Expand your pool!",
+        "emoji": "🎯",
+        "deadline": "This Sunday",
+        "difficulty": "Hard"
+      },
+      {
+        "id": "friends-roulette",
+        "name": "Friends Roulette",
+        "description": "Challenge 3 friends to a group roulette. Everyone spins and plays their pick!",
+        "emoji": "🎉",
+        "deadline": "This Sunday",
+        "difficulty": "Easy"
+      },
+      {
+        "id": "aram-only",
+        "name": "ARAM Only",
+        "description": "Play 5 games in Howling Abyss this week. The champion is always random!",
+        "emoji": "🏟️",
+        "deadline": "This Sunday",
+        "difficulty": "Medium"
+      },
+      {
+        "id": "champion-rotation",
+        "name": "Champion Rotation",
+        "description": "Play with every free champion in this week's rotation. One game each!",
+        "emoji": "🔄",
+        "deadline": "This Sunday",
+        "difficulty": "Hard"
+      }
+    ]
+  },
+  "createChallenge": "Create Your Own Challenge",
+  "shareCode": "Share Code",
+  "joinChallenge": "Join Challenge",
+  "back": "Back",
+  "sectionLabel": "Weekly Challenge",
+  "startPlaying": "Start Playing",
+  "browseMore": "Browse Blog",
+  "aramNote": "In ARAM the champion is always random - just log in and play!",
+  "noChampions": "No weekly challenges available",
+  
+  "sectionTitle": "Challenges",
+  "sectionDescription": "Activate time-limited challenges to earn bonus XP on victories",
+  "activate": "Activate",
+  "activated": "Challenge activated: {name}",
+  "activationFailed": "Failed to activate challenge",
+  "hasActiveChallenge": "Active Challenge Exists",
+  "loginRequired": "Please log in to activate challenges",
+  "difficulty": {
+    "easy": "Easy",
+    "medium": "Medium",
+    "hard": "Hard"
+  },
+  "category": {
+    "mastery": "Mastery",
+    "region": "Region",
+    "class": "Class"
+  },
+  "requirement": {
+    "lowMastery": "Play with a champion with less than {threshold} mastery points",
+    "region": "Win using a champion from {region}",
+    "class": "Win using a {class} champion"
+  },
+  "duration": "Duration",
+  "xpMultiplier": "XP Multiplier",
+  "category": "Category",
+  "timeRemaining": "TIME REMAINING",
+  "expiresAt": "Expires at {time}",
+  "validWins": "Valid Wins",
+  "bonusXP": "Bonus XP",
+  "totalXP": "Total XP",
+  "xpMultiplierActive": "XP Multiplier Active:",
+  "onValidWins": "on valid wins",
+  "challengeExpired": "Challenge Expired",
+  "challengeExpiredDesc": "This challenge has expired. Start a new one to continue earning bonus XP.",
+  "history": "Challenge History",
+  "noHistory": "No challenge history yet",
+  "noHistoryDesc": "Complete challenges to see them here",
+  "started": "Started",
+  "ended": "Ended",
+  "wins": "wins",
+  "status": {
+    "completed": "Completed",
+    "expired": "Expired",
+    "failed": "Failed"
+  },
+  "result": {
+    "completed": "{wins} valid wins • +{bonusXp} bonus XP earned",
+    "expired": "Challenge expired without completion",
+    "failed": "Challenge failed"
+  }
 }

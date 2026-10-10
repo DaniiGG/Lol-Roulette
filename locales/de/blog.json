@@ -11,5 +11,55 @@
     "ctaDesc": "Trete dem League Roulette bei",
     "browseMore": "Mehr durchsuchen",
     "relatedReading": "Ähnliche Artikel",
-    "blog": "Blog"
+    "blog": "Blog",
+    "heroTitle": "League of Legends Guides, Builds & Champion-Tipps",
+    "heroDesc": "Praktische Guides, ehrliche Analysen und neue Ideen für jede Rolle – vom ersten Game bis zum Ranked-Climb. Auf dem aktuellen Stand des Metas, verknüpft mit den Tools, die du ohnehin nutzt.",
+    "featuredLabel": "Empfohlen",
+    "latestLabel": "Neueste Artikel",
+    "categoriesLabel": "Nach Thema stöbern",
+    "searchLabel": "Suchen",
+    "searchPlaceholder": "Guides, Champions, Tipps durchsuchen...",
+    "searchNoResults": "Keine Ergebnisse für",
+    "allLabel": "Alle",
+    "readTime": "{n} Min. Lesezeit",
+    "published": "Veröffentlicht",
+    "updated": "Aktualisiert",
+    "availableIn": "Verfügbar in",
+    "onThisPage": "Auf dieser Seite",
+    "tryApp": "League Roulette testen",
+    "tryAppDesc": "Keine Ahnung, wen du spielen sollst? Lass League Roulette deinen nächsten Champion wählen.",
+    "ctaMidTitle": "Am Main festgefahren?",
+    "ctaMidDesc": "Ein zufälliger Pick bricht die Routine. Lass League Roulette für dich wählen.",
+    "backToAll": "Alle Artikel",
+    "categoryCount": "{n} Artikel",
+    "categories": {
+        "champions": {
+            "name": "Champion-Guides",
+            "desc": "Archetypen, Picks und Tipps nach Rolle: Top, Jungle, Mid, Bot und Support."
+        },
+        "guides": {
+            "name": "Guides",
+            "desc": "Mechaniken und Prozesse, die dein Spiel verbessern: Matchups, Rotation, Fundament."
+        },
+        "tier-lists": {
+            "name": "Tier Lists",
+            "desc": "Das Meta lesen: Tiers, Daten und wann eine Liste nicht weiterhilft."
+        },
+        "beginners": {
+            "name": "Für Anfänger",
+            "desc": "In League anfangen ohne mit dem Kit zu ringen: zugängliche Picks und erste Schritte."
+        },
+        "ranked": {
+            "name": "Ranked",
+            "desc": "Sessionstruktur, Gewohnheiten und Fehler, die dein Climbing bremsen."
+        },
+        "mechanics": {
+            "name": "Mechaniken",
+            "desc": "Farming, Wellen und Micro: die Grundlagen, die in jedem Game wirken."
+        },
+        "league-roulette": {
+            "name": "League Roulette",
+            "desc": "Challenges und zufällige Picks: die Roulette in echten Fortschritt verwandeln."
+        }
+    }
 }

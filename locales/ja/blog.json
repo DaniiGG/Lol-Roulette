@@ -11,5 +11,55 @@
     "ctaDesc": "League Rouletteに参加する",
     "browseMore": "さらに閲覧",
     "relatedReading": "関連記事",
-    "blog": "Blog"
+    "blog": "Blog",
+    "heroTitle": "LoL ガイド、ビルド、チャンピオン解説",
+    "heroDesc": "ロールごとに実用的なガイド、率直な分析、新しいアイデア。初プレイからランクの壁打ちまで。メタの更新に合わせて、今すぐ使えるツールとつなげています。",
+    "featuredLabel": "注目記事",
+    "latestLabel": "最新記事",
+    "categoriesLabel": "カテゴリーから探す",
+    "searchLabel": "検索",
+    "searchPlaceholder": "ガイド / チャンピオン / Tips を検索...",
+    "searchNoResults": "見つかりませんでした：",
+    "allLabel": "すべて",
+    "readTime": "約{n}分",
+    "published": "公開日",
+    "updated": "更新日",
+    "availableIn": "対応言語",
+    "onThisPage": "このページの内容",
+    "tryApp": "League Roulette を試す",
+    "tryAppDesc": "何を出すか迷ったら、次のチャンピオンは League Roulette に任せよう。",
+    "ctaMidTitle": "メインが定まらない？",
+    "ctaMidDesc": "ランダムピックでルーティンを打破しよう。League Roulette が代わりに選んでくれる。",
+    "backToAll": "すべての記事",
+    "categoryCount": "記事 {n} 本",
+    "categories": {
+        "champions": {
+            "name": "チャンピオンガイド",
+            "desc": "役割別のアーキタイプ、ピック、アドバイス：トップ・ジャングル・ミッド・ボット・サポート。"
+        },
+        "guides": {
+            "name": "ガイド",
+            "desc": "マッチアップ、ロテーション、基本戦術など、実力を底上げするプロセス。"
+        },
+        "tier-lists": {
+            "name": "ティアリスト",
+            "desc": "メタの読み方：ティア、データ、そしてリストが当てはまらない場面。"
+        },
+        "beginners": {
+            "name": "初心者ガイド",
+            "desc": "キットと格闘せずに League を始める：扱いやすいピックと最初の一歩。"
+        },
+        "ranked": {
+            "name": "ランクド",
+            "desc": "セッションの立て方、習慣、伸びを止めるミスと、その直し方。"
+        },
+        "mechanics": {
+            "name": "メカニクス",
+            "desc": "ファーム、ウェーブ、ミクロ：すべての試合で効く基本戦。"
+        },
+        "league-roulette": {
+            "name": "League Roulette",
+            "desc": "ランダムピックの課題：ルーレットを成長に変える方法。"
+        }
+    }
 }

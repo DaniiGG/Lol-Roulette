@@ -2,10 +2,10 @@
 
 import { useState, useEffect, useRef } from "react"
 import Link from "next/link"
-import { useTranslations } from "next-intl"
+import { useTranslations, useLocale } from "next-intl"
 import { useSearchParams } from "next/navigation"
 import { supabase } from "@/lib/supabase"
-import { ACHIEVEMENTS, checkAchievement } from "@/lib/achievements"
+import { ACHIEVEMENTS, checkAchievement, calculateLevel } from "@/lib/achievements"
 import {
   createChallenge, rerollChallenge, completeChallengeById, failChallenge,
   resetStreak
@@ -31,12 +31,14 @@ import MatchSimulator from "@/components/MatchSimulator"
 import { AutoVerifier } from "@/lib/auto-verify"
 import RSOLoginModal from "@/components/RSOLoginmodal"
 import ChampionPoolModal from "@/components/ChampionPoolModal"
+import ChallengesSection from "@/components/ChallengesSection"
 import { loadChampionPool, getPoolForLane, type ChampionPool } from "@/lib/champion-pool"
 
 import Script from "next/script"
 
 export default function Home() {
   const t = useTranslations('home')
+  const locale = useLocale()
   const searchParams = useSearchParams()
   const urlChallenge = searchParams.get('challenge')
 
@@ -401,6 +403,22 @@ export default function Home() {
     setActiveChallengeId(null)
   }
 
+  // Listen for challenge XP gains from ChallengesSection
+  useEffect(() => {
+    const handleChallengeXpGained = (event: CustomEvent) => {
+      const { xpGained } = event.detail
+      if (user && xpGained) {
+        const newXp = (user.xp || 0) + xpGained.total
+        const newLevel = calculateLevel(newXp)
+        setUser((prev: any) => prev ? { ...prev, xp: newXp, level: newLevel } : null)
+        console.log(`🎁 Challenge XP gained: +${xpGained.total} (base: ${xpGained.base}, bonus: ${xpGained.bonus})`)
+      }
+    }
+
+    window.addEventListener('challenge-xp-gained', handleChallengeXpGained as EventListener)
+    return () => window.removeEventListener('challenge-xp-gained', handleChallengeXpGained as EventListener)
+  }, [user])
+
   const checkAndUnlockAchievements = async (stats: any) => {
     if (!user) return
 
@@ -585,6 +603,15 @@ export default function Home() {
                     {challengeLane !== 'all' ? `${t('lane') || 'Lane'}: ${challengeLane}` : ''}
                   </p>
                 </div>
+              )}
+
+              {/* Challenges Section */}
+              {user && (
+                <ChallengesSection 
+                  user={user} 
+                  sessionToken={sessionToken} 
+                  locale={locale} 
+                />
               )}
 
               {/* Lane Selector */}

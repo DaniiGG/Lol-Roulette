@@ -1,0 +1,110 @@
+import { getPostMeta, getRelatedSlugs } from '@/lib/blog/meta'
+import { readingTime, postsByCategory, sortByPublishedDesc, formatDate } from '@/lib/blog/content'
+import BlogPostCard from './BlogPostCard'
+import Link from 'next/link'
+import type { BlogPost } from '@/lib/blog/content'
+import { CATEGORIES } from '@/lib/blog/categories'
+
+interface CategoryViewProps {
+  posts: BlogPost[]
+  locale: string
+  categorySlug: string
+  t: ReturnType<typeof import('next-intl').useTranslations>
+}
+
+export default function CategoryView({ posts, locale, categorySlug, t }: CategoryViewProps) {
+  const category = CATEGORIES.find(c => c.slug === categorySlug)
+  const catPosts = postsByCategory(posts, categorySlug as any)
+  const sortedPosts = sortByPublishedDesc(catPosts)
+  const otherCategories = CATEGORIES.filter(c => c.slug !== categorySlug)
+
+  return (
+    <main className="min-h-screen bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 px-6 py-12">
+      <div className="mx-auto max-w-6xl">
+        <Link
+          href="/blog"
+          className="mb-8 inline-flex items-center gap-2 text-sm text-neutral-400 transition hover:text-white"
+        >
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+          </svg>
+          {t('backToBlog')}
+        </Link>
+
+        <header className="mb-12">
+          <p className="mb-3 text-sm uppercase tracking-[0.3em] text-[#C89B3C]">
+            {t('categoryLabel')}
+          </p>
+          <h1 className="mb-4 text-4xl font-semibold tracking-tight text-white md:text-5xl">
+            {t(`categories.${categorySlug}.name`)}
+          </h1>
+          <p className="max-w-3xl text-lg leading-8 text-neutral-300">
+            {t(`categories.${categorySlug}.desc`)}
+          </p>
+        </header>
+
+        <div className="mb-8 flex flex-wrap gap-2" role="group" aria-label={t('filterByCategory')}>
+          <Link
+            href="/blog"
+            className={`px-4 py-2 rounded-full text-sm font-medium transition ${'bg-[#C89B3C] text-neutral-950'}`}
+          >
+            {t('allLabel')}
+          </Link>
+          {otherCategories.map(cat => (
+            <Link
+              key={cat.slug}
+              href={`/blog/${cat.slug}`}
+              className="px-4 py-2 rounded-full text-sm font-medium transition capitalize bg-neutral-800 text-neutral-300 hover:bg-neutral-700 hover:text-white"
+            >
+              {t(`categories.${cat.slug}.name`)}
+            </Link>
+          ))}
+        </div>
+
+        {sortedPosts.length > 0 ? (
+          <>
+            {catPosts.length > 1 && (
+              <article
+                key="featured"
+                className="mb-10"
+              >
+                <BlogPostCard post={sortedPosts[0]} locale={locale} featured={true} index={-1} />
+              </article>
+            )}
+            <section>
+              <h2 className="mb-5 text-2xl font-semibold text-white">
+                {t('latestLabel')}
+              </h2>
+              <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                {sortedPosts.slice(catPosts.length > 1 ? 1 : 0).map((post, idx) => (
+                  <BlogPostCard key={post.slug} post={post} locale={locale} index={idx} />
+                ))}
+              </div>
+            </section>
+          </>
+        ) : (
+          <div className="text-center py-16 rounded-3xl border border-neutral-800 bg-neutral-900/50">
+            <p className="text-neutral-400 text-lg">
+              {t('noPostsInCategory')}
+            </p>
+          </div>
+        )}
+
+        <section className="mt-12 rounded-3xl border border-[#C89B3C]/30 bg-gradient-to-r from-[#C89B3C]/10 to-transparent p-8">
+          <h2 className="mb-3 text-2xl font-semibold text-white">
+            {t('ctaMidTitle')}
+          </h2>
+          <p className="mb-6 max-w-3xl text-lg leading-8 text-neutral-300">
+            {t('ctaMidDesc')}
+          </p>
+          <Link
+            href="/"
+            className="inline-flex items-center rounded-xl bg-[#C89B3C] px-6 py-3 font-semibold text-neutral-950 transition hover:bg-[#d9aa44]"
+          >
+            {t('tryApp')}
+          </Link>
+        </section>
+      </div>
+    </main>
+  )
+}
