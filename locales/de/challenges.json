@@ -103,5 +103,7 @@
     "completed": "{wins} gültige Siege • +{bonusXp} Bonus-XP verdient",
     "expired": "Herausforderung ohne Abschluss abgelaufen",
     "failed": "Herausforderung fehlgeschlagen"
-  }
+  },
+  "dailyRegion": "Tägliche Region",
+  "dailyRegionDesc": "Nur diese Regions-Herausforderung ist heute verfügbar. Ändert sich um Mitternacht UTC."
 }

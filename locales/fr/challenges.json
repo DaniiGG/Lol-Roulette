@@ -103,5 +103,7 @@
     "completed": "{wins} victoires valides • +{bonusXp} XP bonus gagnés",
     "expired": "Défi expiré sans être terminé",
     "failed": "Défi échoué"
-  }
+  },
+  "dailyRegion": "Région Quotidienne",
+  "dailyRegionDesc": "Seul ce défi de région est disponible aujourd'hui. Change à minuit UTC."
 }

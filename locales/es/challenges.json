@@ -104,5 +104,7 @@
     "completed": "{wins} victorias válidas • +{bonusXp} XP extra ganados",
     "expired": "Desafío expirado sin completarse",
     "failed": "Desafío fallido"
-  }
+  },
+  "dailyRegion": "Región del Día",
+  "dailyRegionDesc": "Solo este desafío de región está disponible hoy. Cambia a medianoche UTC."
 }

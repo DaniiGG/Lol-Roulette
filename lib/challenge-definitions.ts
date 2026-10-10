@@ -54,6 +54,24 @@ export const CHAMPION_CLASSES = [
 
 export const MASTERY_THRESHOLDS = [5000, 10000, 25000, 50000] as const;
 
+// Daily rotation: one region per day
+export function getDailyRegionChallenge(): string {
+  const regions = REGIONS.filter(r => r !== 'Runeterra'); // Exclude generic Runeterra
+  const dayOfYear = Math.floor(Date.now() / (1000 * 60 * 60 * 24));
+  const regionIndex = dayOfYear % regions.length;
+  return regions[regionIndex];
+}
+
+// Get available challenges for today (mastery + daily region + all classes)
+export function getAvailableChallenges(): ChallengeDefinition[] {
+  const dailyRegion = getDailyRegionChallenge();
+  return CHALLENGE_DEFINITIONS.filter(c => 
+    c.type === 'low_mastery' || 
+    c.type === 'class' ||
+    (c.type === 'region' && c.config.region?.region === dailyRegion)
+  );
+}
+
 export const CHALLENGE_DEFINITIONS: ChallengeDefinition[] = [
   {
     id: 'low_mastery_5k',

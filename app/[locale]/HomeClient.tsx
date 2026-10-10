@@ -607,32 +607,31 @@ export default function Home() {
               </div>
 
               {/* Challenge Active Banner */}
-              {activeChallengeId && (
+              {(activeChallengeId || activeChallengeSession) && (
                 <div className="mx-auto mb-4 max-w-4xl rounded-2xl border border-[#C89B3C]/40 bg-[#C89B3C]/10 p-4 text-center">
                   <p className="text-sm font-semibold text-[#C89B3C]">⚡ Active Challenge</p>
                   <p className="text-lg text-white">
-                    {t('challengeActive') || 'Challenge Active - Lane is locked'}
+                    {activeChallengeSession?.definition?.name || t('challengeActive') || 'Challenge Active - Lane is locked'}
                   </p>
                   <p className="text-sm text-neutral-400">
-                    {challengeLane !== 'all' ? `${t('lane') || 'Lane'}: ${challengeLane}` : ''}
+                    {activeChallengeSession?.challenge_config?.region?.region && `Región: ${activeChallengeSession.challenge_config.region.region}`}
+                    {activeChallengeSession?.challenge_config?.class?.class && `Clase: ${activeChallengeSession.challenge_config.class.class}`}
+                    {activeChallengeSession?.challenge_config?.low_mastery?.mastery_threshold && `Maestría < ${activeChallengeSession.challenge_config.low_mastery.mastery_threshold.toLocaleString()}`}
+                    {challengeLane !== 'all' && !activeChallengeSession ? `${t('lane') || 'Lane'}: ${challengeLane}` : ''}
                   </p>
+                  {activeChallengeSession && (
+                    <p className="text-xs text-neutral-500 mt-1">
+                      Expira: {new Date(activeChallengeSession.expires_at).toLocaleTimeString()}
+                    </p>
+                  )}
                 </div>
-              )}
-
-              {/* Challenges Section */}
-              {user && (
-                <ChallengesSection 
-                  user={user} 
-                  sessionToken={sessionToken} 
-                  locale={locale} 
-                />
               )}
 
               {/* Lane Selector */}
               <LaneSelector
                 selectedLane={selectedLane}
                 onLaneChange={setSelectedLane}
-                disabled={!!activeChallengeId || !!(user && rerollCount > MAX_REROLLS)}
+                disabled={!!activeChallengeId || !!activeChallengeSession || !!(user && rerollCount > MAX_REROLLS)}
               />
 
               {/* Champion Pool Toggle */}

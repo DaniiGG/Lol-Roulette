@@ -104,5 +104,7 @@
     "completed": "{wins} valid wins • +{bonusXp} bonus XP earned",
     "expired": "Challenge expired without completion",
     "failed": "Challenge failed"
-  }
+  },
+  "dailyRegion": "Daily Region",
+  "dailyRegionDesc": "Only this region challenge is available today. Changes at midnight UTC."
 }

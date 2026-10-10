@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { supabaseAdmin } from "@/lib/supabase-admin";
 import { verifyAuth } from "@/lib/verify-jwt";
-import { getChallengeById } from "@/lib/challenge-definitions";
+import { getChallengeById, getAvailableChallenges } from "@/lib/challenge-definitions";
 import { calculateLevel } from "@/lib/achievements";
 
 export async function GET(request: Request) {
@@ -88,6 +88,13 @@ export async function POST(request: Request) {
         const definition = getChallengeById(challenge_id);
         if (!definition) {
           return NextResponse.json({ error: "Invalid challenge" }, { status: 400 });
+        }
+
+        // Check if challenge is currently available (daily rotation)
+        const availableChallenges = getAvailableChallenges();
+        const isAvailable = availableChallenges.some(c => c.id === challenge_id);
+        if (!isAvailable) {
+          return NextResponse.json({ error: "This challenge is not available today" }, { status: 400 });
         }
 
         // Check if user already has an active challenge (server-side enforcement)

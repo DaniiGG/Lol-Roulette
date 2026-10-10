@@ -4,7 +4,7 @@ import { useEffect, useState, useCallback } from "react"
 import { useTranslations } from "next-intl"
 import { supabase } from "@/lib/supabase"
 import { startChallengeSession, getChallengeSessions, validateChallengeMatch } from "@/lib/api-client"
-import { CHALLENGE_DEFINITIONS, getChallengesByCategory } from "@/lib/challenge-definitions"
+import { CHALLENGE_DEFINITIONS, getChallengesByCategory, getAvailableChallenges, getDailyRegionChallenge } from "@/lib/challenge-definitions"
 import ChallengeCard from "./ChallengeCard"
 import ActiveChallengeDisplay from "./ActiveChallengeDisplay"
 import ChallengeHistory from "./ChallengeHistory"
@@ -112,10 +112,11 @@ export default function ChallengesSection({ user, sessionToken, locale }: {
     }
   }
 
+  const availableChallenges = getAvailableChallenges()
   const categories = [
-    { id: 'mastery', label: t('category.mastery') || 'Mastery', challenges: getChallengesByCategory('Mastery') },
-    { id: 'region', label: t('category.region') || 'Region', challenges: getChallengesByCategory('Region') },
-    { id: 'class', label: t('category.class') || 'Class', challenges: getChallengesByCategory('Class') }
+    { id: 'mastery', label: t('category.mastery') || 'Mastery', challenges: availableChallenges.filter(c => c.category === 'Mastery') },
+    { id: 'region', label: t('category.region') || 'Region', challenges: availableChallenges.filter(c => c.category === 'Region') },
+    { id: 'class', label: t('category.class') || 'Class', challenges: availableChallenges.filter(c => c.category === 'Class') }
   ]
 
   if (loading) {
@@ -143,6 +144,8 @@ export default function ChallengesSection({ user, sessionToken, locale }: {
     )
   }
 
+  const dailyRegion = getDailyRegionChallenge()
+
   return (
     <section className="space-y-8" aria-labelledby="challenges-heading">
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
@@ -152,6 +155,20 @@ export default function ChallengesSection({ user, sessionToken, locale }: {
         </h2>
         <p className="text-sm text-neutral-400">
           {t('sectionDescription') || 'Activate time-limited challenges to earn bonus XP on victories'}
+        </p>
+      </div>
+
+      {/* Daily Region Banner */}
+      <div className="rounded-2xl border border-[#C89B3C]/30 bg-gradient-to-r from-[#C89B3C]/10 to-transparent p-4">
+        <div className="flex items-center gap-2">
+          <span className="text-2xl">🌍</span>
+          <div>
+            <p className="text-xs font-semibold text-[#C89B3C] uppercase tracking-wider">{t('dailyRegion') || 'Región del Día'}</p>
+            <p className="text-lg font-bold text-white">{dailyRegion}</p>
+          </div>
+        </div>
+        <p className="text-sm text-neutral-400 mt-2">
+          {t('dailyRegionDesc') || 'Only this region challenge is available today. Changes at midnight UTC.'}
         </p>
       </div>
 
