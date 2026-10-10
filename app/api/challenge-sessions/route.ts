@@ -79,23 +79,15 @@ export async function POST(request: Request) {
 
     switch (action) {
       case "start": {
-        const { challenge_id, duration_hours } = body;
+        const { challenge_id } = body;
         
-        if (!challenge_id || !duration_hours) {
-          return NextResponse.json({ error: "challenge_id and duration_hours are required" }, { status: 400 });
-        }
-
-        if (![3, 5].includes(duration_hours)) {
-          return NextResponse.json({ error: "Invalid duration. Must be 3 or 5 hours" }, { status: 400 });
+        if (!challenge_id) {
+          return NextResponse.json({ error: "challenge_id is required" }, { status: 400 });
         }
 
         const definition = getChallengeById(challenge_id);
         if (!definition) {
           return NextResponse.json({ error: "Invalid challenge" }, { status: 400 });
-        }
-
-        if (!definition.availableDurations.includes(duration_hours)) {
-          return NextResponse.json({ error: "This duration is not available for this challenge" }, { status: 400 });
         }
 
         // Check if user already has an active challenge (server-side enforcement)
@@ -113,8 +105,9 @@ export async function POST(request: Request) {
           }, { status: 409 });
         }
 
-        // Create the challenge session
+        // Create the challenge session (fixed 3 hours)
         const now = new Date();
+        const duration_hours = 3;
         const expiresAt = new Date(now.getTime() + duration_hours * 60 * 60 * 1000);
 
         const { data: session, error: insertError } = await supabaseAdmin

@@ -51,6 +51,7 @@ export default function Home() {
   // Challenge state
   const [activeChallengeId, setActiveChallengeId] = useState<string | null>(urlChallenge || null)
   const [challengeLane, setChallengeLane] = useState<string>('all')
+  const [activeChallengeSession, setActiveChallengeSession] = useState<any>(null)
 
   // Roulette state (PÚBLICO - no requiere login)
   const [champ, setChamp] = useState<any>(null)
@@ -158,7 +159,20 @@ export default function Home() {
     if (achievements) {
       setUserAchievements(achievements.map(a => a.achievement_type))
     }
-    // Cargar challenge activo (si existe)
+    // Cargar challenge session activo (nuevo sistema de desafíos)
+    const { data: activeSession } = await supabase
+      .from('challenge_sessions')
+      .select('*')
+      .eq('user_id', userId)
+      .eq('status', 'active')
+      .gt('expires_at', new Date().toISOString())
+      .order('created_at', { ascending: false })
+      .limit(1)
+      .maybeSingle()
+    if (activeSession) {
+      setActiveChallengeSession(activeSession)
+    }
+    // Cargar challenge activo (sistema antiguo - para compatibilidad)
     const { data: pendingChallenge, error: challengeError } = await supabase
       .from('challenges')
       .select('*')
@@ -654,6 +668,14 @@ export default function Home() {
                 rerollsUsed={user ? rerollCount : 0}
                 maxRerolls={MAX_REROLLS}
                 championPool={activePoolChamps}
+                challengeFilter={activeChallengeSession ? {
+                  type: activeChallengeSession.challenge_type,
+                  value: activeChallengeSession.challenge_type === 'region' 
+                    ? activeChallengeSession.challenge_config.region?.region
+                    : activeChallengeSession.challenge_type === 'class'
+                      ? activeChallengeSession.challenge_config.class?.class
+                      : activeChallengeSession.challenge_config.low_mastery?.mastery_threshold
+                } : null}
               />
 
               {/* Champion Stats & Build */}

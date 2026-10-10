@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState, useCallback } from 'react'
 import { getChampionsByLane, normalizeChampionName } from '@/lib/champion-lanes'
+import { championHasRegion, championHasClass } from '@/lib/champion-metadata'
 import SlotLever from './SlotLever'
 
 interface Champion {
@@ -11,6 +12,11 @@ interface Champion {
   tags?: string[]
 }
 
+interface ChallengeFilter {
+  type: 'region' | 'class' | 'low_mastery'
+  value: string | number
+}
+
 interface RouletteWheelProps {
   lane?: string
   onResult: (champion: Champion) => void
@@ -18,6 +24,7 @@ interface RouletteWheelProps {
   rerollsUsed?: number
   maxRerolls?: number
   championPool?: string[] | null
+  challengeFilter?: ChallengeFilter | null
 }
 
 const DDV = '16.18.1'
@@ -38,6 +45,7 @@ export default function RouletteWheel({
   onResult,
   disabled = false,
   championPool = null,
+  challengeFilter = null,
 }: RouletteWheelProps) {
 
   const [allChampions, setAllChampions] = useState<Champion[]>([])
@@ -116,6 +124,19 @@ export default function RouletteWheel({
           )
         }
 
+        // Apply challenge filter (region, class, or mastery)
+        if (challengeFilter) {
+          if (challengeFilter.type === 'region') {
+            pool = pool.filter(champ => championHasRegion(champ.name, challengeFilter.value as string))
+          } else if (challengeFilter.type === 'class') {
+            pool = pool.filter(champ => championHasClass(champ.name, challengeFilter.value as string))
+          } else if (challengeFilter.type === 'low_mastery') {
+            // For low mastery, we can't filter client-side without mastery data
+            // This would need to be handled server-side or via mastery API
+            // For now, we'll show all champions and validate server-side
+          }
+        }
+
         setAllChampions(pool.sort(() => Math.random() - 0.5))
       } catch (err) {
         console.error(err)
@@ -123,7 +144,7 @@ export default function RouletteWheel({
 
       setLoadingChamps(false)
     })()
-  }, [lane, championPool])
+  }, [lane, championPool, challengeFilter])
 
   /* ───────── PRELOAD IMAGES ───────── */
 

@@ -1,6 +1,6 @@
 export type ChallengeType = 'low_mastery' | 'region' | 'class';
 
-export type ChallengeDuration = 3 | 5;
+export type ChallengeDuration = 3;
 
 export interface ChallengeConfig {
   low_mastery?: {
@@ -65,7 +65,7 @@ export const CHALLENGE_DEFINITIONS: ChallengeDefinition[] = [
     config: {
       low_mastery: { mastery_threshold: 5000 }
     },
-    availableDurations: [3, 5],
+    availableDurations: [3],
     defaultDuration: 3,
     xpMultiplier: 2.0
   },
@@ -79,8 +79,8 @@ export const CHALLENGE_DEFINITIONS: ChallengeDefinition[] = [
     config: {
       low_mastery: { mastery_threshold: 10000 }
     },
-    availableDurations: [3, 5],
-    defaultDuration: 5,
+    availableDurations: [3],
+    defaultDuration: 3,
     xpMultiplier: 2.0
   },
   {
@@ -93,7 +93,7 @@ export const CHALLENGE_DEFINITIONS: ChallengeDefinition[] = [
     config: {
       low_mastery: { mastery_threshold: 25000 }
     },
-    availableDurations: [3, 5],
+    availableDurations: [3],
     defaultDuration: 3,
     xpMultiplier: 2.0
   },
@@ -107,8 +107,8 @@ export const CHALLENGE_DEFINITIONS: ChallengeDefinition[] = [
     config: {
       region: { region: 'Demacia' }
     },
-    availableDurations: [3, 5],
-    defaultDuration: 5,
+    availableDurations: [3],
+    defaultDuration: 3,
     xpMultiplier: 2.0
   },
   {
@@ -121,8 +121,8 @@ export const CHALLENGE_DEFINITIONS: ChallengeDefinition[] = [
     config: {
       region: { region: 'Noxus' }
     },
-    availableDurations: [3, 5],
-    defaultDuration: 5,
+    availableDurations: [3],
+    defaultDuration: 3,
     xpMultiplier: 2.0
   },
   {
@@ -135,8 +135,8 @@ export const CHALLENGE_DEFINITIONS: ChallengeDefinition[] = [
     config: {
       region: { region: 'Ionia' }
     },
-    availableDurations: [3, 5],
-    defaultDuration: 5,
+    availableDurations: [3],
+    defaultDuration: 3,
     xpMultiplier: 2.0
   },
   {
@@ -149,8 +149,8 @@ export const CHALLENGE_DEFINITIONS: ChallengeDefinition[] = [
     config: {
       region: { region: 'Freljord' }
     },
-    availableDurations: [3, 5],
-    defaultDuration: 5,
+    availableDurations: [3],
+    defaultDuration: 3,
     xpMultiplier: 2.0
   },
   {
@@ -163,8 +163,8 @@ export const CHALLENGE_DEFINITIONS: ChallengeDefinition[] = [
     config: {
       region: { region: 'Piltover' }
     },
-    availableDurations: [3, 5],
-    defaultDuration: 5,
+    availableDurations: [3],
+    defaultDuration: 3,
     xpMultiplier: 2.0
   },
   {
@@ -177,8 +177,8 @@ export const CHALLENGE_DEFINITIONS: ChallengeDefinition[] = [
     config: {
       region: { region: 'Zaun' }
     },
-    availableDurations: [3, 5],
-    defaultDuration: 5,
+    availableDurations: [3],
+    defaultDuration: 3,
     xpMultiplier: 2.0
   },
   {
@@ -191,8 +191,8 @@ export const CHALLENGE_DEFINITIONS: ChallengeDefinition[] = [
     config: {
       region: { region: 'Shurima' }
     },
-    availableDurations: [3, 5],
-    defaultDuration: 5,
+    availableDurations: [3],
+    defaultDuration: 3,
     xpMultiplier: 2.0
   },
   {
@@ -205,8 +205,8 @@ export const CHALLENGE_DEFINITIONS: ChallengeDefinition[] = [
     config: {
       region: { region: 'Targon' }
     },
-    availableDurations: [3, 5],
-    defaultDuration: 5,
+    availableDurations: [3],
+    defaultDuration: 3,
     xpMultiplier: 2.0
   },
   {
@@ -219,8 +219,8 @@ export const CHALLENGE_DEFINITIONS: ChallengeDefinition[] = [
     config: {
       region: { region: 'Ixtal' }
     },
-    availableDurations: [3, 5],
-    defaultDuration: 5,
+    availableDurations: [3],
+    defaultDuration: 3,
     xpMultiplier: 2.0
   },
   {
@@ -233,8 +233,8 @@ export const CHALLENGE_DEFINITIONS: ChallengeDefinition[] = [
     config: {
       region: { region: 'Shadow Isles' }
     },
-    availableDurations: [3, 5],
-    defaultDuration: 5,
+    availableDurations: [3],
+    defaultDuration: 3,
     xpMultiplier: 2.0
   },
   {
@@ -247,8 +247,8 @@ export const CHALLENGE_DEFINITIONS: ChallengeDefinition[] = [
     config: {
       region: { region: 'Bilgewater' }
     },
-    availableDurations: [3, 5],
-    defaultDuration: 5,
+    availableDurations: [3],
+    defaultDuration: 3,
     xpMultiplier: 2.0
   },
   {
@@ -261,8 +261,8 @@ export const CHALLENGE_DEFINITIONS: ChallengeDefinition[] = [
     config: {
       region: { region: 'Void' }
     },
-    availableDurations: [3, 5],
-    defaultDuration: 5,
+    availableDurations: [3],
+    defaultDuration: 3,
     xpMultiplier: 2.0
   },
   {
@@ -275,8 +275,8 @@ export const CHALLENGE_DEFINITIONS: ChallengeDefinition[] = [
     config: {
       region: { region: 'Runeterra' }
     },
-    availableDurations: [3, 5],
-    defaultDuration: 5,
+    availableDurations: [3],
+    defaultDuration: 3,
     xpMultiplier: 2.0
   },
   {
@@ -289,7 +289,7 @@ export const CHALLENGE_DEFINITIONS: ChallengeDefinition[] = [
     config: {
       class: { class: 'Assassin' }
     },
-    availableDurations: [3, 5],
+    availableDurations: [3],
     defaultDuration: 3,
     xpMultiplier: 2.0
   },
@@ -303,8 +303,8 @@ export const CHALLENGE_DEFINITIONS: ChallengeDefinition[] = [
     config: {
       class: { class: 'Tank' }
     },
-    availableDurations: [3, 5],
-    defaultDuration: 5,
+    availableDurations: [3],
+    defaultDuration: 3,
     xpMultiplier: 2.0
   },
   {
@@ -317,8 +317,8 @@ export const CHALLENGE_DEFINITIONS: ChallengeDefinition[] = [
     config: {
       class: { class: 'Fighter' }
     },
-    availableDurations: [3, 5],
-    defaultDuration: 5,
+    availableDurations: [3],
+    defaultDuration: 3,
     xpMultiplier: 2.0
   },
   {
@@ -331,7 +331,7 @@ export const CHALLENGE_DEFINITIONS: ChallengeDefinition[] = [
     config: {
       class: { class: 'Mage' }
     },
-    availableDurations: [3, 5],
+    availableDurations: [3],
     defaultDuration: 3,
     xpMultiplier: 2.0
   },
@@ -345,8 +345,8 @@ export const CHALLENGE_DEFINITIONS: ChallengeDefinition[] = [
     config: {
       class: { class: 'Marksman' }
     },
-    availableDurations: [3, 5],
-    defaultDuration: 5,
+    availableDurations: [3],
+    defaultDuration: 3,
     xpMultiplier: 2.0
   },
   {
@@ -359,7 +359,7 @@ export const CHALLENGE_DEFINITIONS: ChallengeDefinition[] = [
     config: {
       class: { class: 'Support' }
     },
-    availableDurations: [3, 5],
+    availableDurations: [3],
     defaultDuration: 3,
     xpMultiplier: 2.0
   }

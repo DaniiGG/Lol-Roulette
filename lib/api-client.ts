@@ -92,7 +92,6 @@ export function getChallengeSessions(token: string) {
 
 export function startChallengeSession(token: string, data: {
   challenge_id: string
-  duration_hours: number
 }) {
   return api('/api/challenge-sessions', { action: 'start', ...data }, token)
 }

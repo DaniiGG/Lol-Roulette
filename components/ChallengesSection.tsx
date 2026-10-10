@@ -72,7 +72,7 @@ export default function ChallengesSection({ user, sessionToken, locale }: {
     }
   }, [user, loadSessions])
 
-  const handleActivate = async (challengeId: string, duration: number) => {
+  const handleActivate = async (challengeId: string) => {
     if (!sessionToken || !user) {
       setError(t('loginRequired') || 'Please log in to activate challenges')
       return
@@ -82,7 +82,7 @@ export default function ChallengesSection({ user, sessionToken, locale }: {
     setError(null)
 
     try {
-      const result = await startChallengeSession(sessionToken, { challenge_id: challengeId, duration_hours: duration })
+      const result = await startChallengeSession(sessionToken, { challenge_id: challengeId })
       setSuccess(t('activated', { name: result.session.definition?.name || 'Challenge' }) || 'Challenge activated!')
       setActiveSession(result.session)
       setTimeout(() => setSuccess(null), 3000)
