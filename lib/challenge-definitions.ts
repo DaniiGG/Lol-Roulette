@@ -54,22 +54,52 @@ export const CHAMPION_CLASSES = [
 
 export const MASTERY_THRESHOLDS = [5000, 10000, 25000, 50000] as const;
 
-// Daily rotation: one region per day
+// ─────────────────────────────────────────────
+// 1 DAILY + 3 WEEKLY ROTATION
+// ─────────────────────────────────────────────
+
+// Daily: 1 region (rotates daily at midnight UTC)
 export function getDailyRegionChallenge(): string {
-  const regions = REGIONS.filter(r => r !== 'Runeterra'); // Exclude generic Runeterra
+  const regions = REGIONS.filter(r => r !== 'Runeterra');
   const dayOfYear = Math.floor(Date.now() / (1000 * 60 * 60 * 24));
   const regionIndex = dayOfYear % regions.length;
   return regions[regionIndex];
 }
 
-// Get available challenges for today (mastery + daily region + all classes)
+// Weekly: 3 challenges (rotate weekly on Monday 00:00 UTC)
+// Returns: { mastery, class, region }
+export function getWeeklyChallenges(): { mastery: ChallengeDefinition; class: ChallengeDefinition; region: ChallengeDefinition } {
+  const regions = REGIONS.filter(r => r !== 'Runeterra');
+  const masteryOptions = CHALLENGE_DEFINITIONS.filter(c => c.type === 'low_mastery');
+  const classOptions = CHALLENGE_DEFINITIONS.filter(c => c.type === 'class');
+  const regionOptions = CHALLENGE_DEFINITIONS.filter(c => c.type === 'region');
+
+  const weekOfYear = Math.floor(Date.now() / (1000 * 60 * 60 * 24 * 7));
+  
+  return {
+    mastery: masteryOptions[weekOfYear % masteryOptions.length],
+    class: classOptions[weekOfYear % classOptions.length],
+    region: regionOptions[weekOfYear % regionOptions.length]
+  };
+}
+
+// Get all available challenges for today
+// = 1 daily region + 3 weekly (mastery, class, region) = 4 total
 export function getAvailableChallenges(): ChallengeDefinition[] {
   const dailyRegion = getDailyRegionChallenge();
-  return CHALLENGE_DEFINITIONS.filter(c => 
-    c.type === 'low_mastery' || 
-    c.type === 'class' ||
-    (c.type === 'region' && c.config.region?.region === dailyRegion)
-  );
+  const weeklies = getWeeklyChallenges();
+  
+  const weeklyIds = new Set([weeklies.mastery.id, weeklies.class.id, weeklies.region.id]);
+  
+  return CHALLENGE_DEFINITIONS.filter(c => {
+    // Weekly challenges (3): 1 mastery, 1 class, 1 region
+    if (weeklyIds.has(c.id)) return true;
+    
+    // Daily region (1)
+    if (c.type === 'region' && c.config.region?.region === dailyRegion) return true;
+    
+    return false;
+  });
 }
 
 export const CHALLENGE_DEFINITIONS: ChallengeDefinition[] = [

@@ -79,7 +79,7 @@
   },
   "duration": "Duration",
   "xpMultiplier": "XP Multiplier",
-  "category": "Category",
+  "categoryLabel": "Category",
   "timeRemaining": "TIME REMAINING",
   "expiresAt": "Expires at {time}",
   "validWins": "Valid Wins",
@@ -106,5 +106,13 @@
     "failed": "Challenge failed"
   },
   "dailyRegion": "Daily Region",
-  "dailyRegionDesc": "Only this region challenge is available today. Changes at midnight UTC."
+  "dailyRegionDesc": "Only this region challenge is available today. Changes at midnight UTC.",
+  "weeklyChallenges": "Weekly Challenges",
+  "changesMonday": "Changes Monday",
+  "durationShort": "3h",
+  "toastAnnouncement": "🎉 New Challenges System is live! Try the Daily Region + 3 Weekly challenges. More updates coming soon!",
+  "developmentNoticeTitle": "In development",
+  "developmentNoticeDescription": "Challenges are still in development. Some features may fail or behave unexpectedly.",
+  "activeChallenge": "Active challenge",
+  "requirementLabel": "Requirement"
 }

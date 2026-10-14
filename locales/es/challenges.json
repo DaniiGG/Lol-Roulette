@@ -79,7 +79,7 @@
   },
   "duration": "Duración",
   "xpMultiplier": "Multiplicador XP",
-  "category": "Categoría",
+  "categoryLabel": "Categoría",
   "timeRemaining": "TIEMPO RESTANTE",
   "expiresAt": "Expira a las {time}",
   "validWins": "Victorias Válidas",
@@ -106,5 +106,13 @@
     "failed": "Desafío fallido"
   },
   "dailyRegion": "Región del Día",
-  "dailyRegionDesc": "Solo este desafío de región está disponible hoy. Cambia a medianoche UTC."
+  "dailyRegionDesc": "Solo este desafío de región está disponible hoy. Cambia a medianoche UTC.",
+  "weeklyChallenges": "Desafíos Semanales",
+  "changesMonday": "Cambian el lunes",
+  "durationShort": "3h",
+  "toastAnnouncement": "🎉 ¡Nuevo sistema de Desafíos activo! Prueba la Región Diaria + 3 Desafíos Semanales. ¡Más novedades pronto!",
+  "developmentNoticeTitle": "En desarrollo",
+  "developmentNoticeDescription": "Los desafíos todavía están en desarrollo. Algunas funciones pueden fallar o no comportarse como se espera.",
+  "activeChallenge": "Desafío activo",
+  "requirementLabel": "Requisito"
 }

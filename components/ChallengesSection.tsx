@@ -2,23 +2,22 @@
 
 import { useEffect, useState, useCallback } from "react"
 import { useTranslations } from "next-intl"
+import { useRouter } from "@/i18n/navigation"
 import { supabase } from "@/lib/supabase"
 import { startChallengeSession, getChallengeSessions, validateChallengeMatch } from "@/lib/api-client"
-import { CHALLENGE_DEFINITIONS, getChallengesByCategory, getAvailableChallenges, getDailyRegionChallenge } from "@/lib/challenge-definitions"
+import { CHALLENGE_DEFINITIONS, getChallengesByCategory, getAvailableChallenges, getDailyRegionChallenge, getWeeklyChallenges } from "@/lib/challenge-definitions"
 import ChallengeCard from "./ChallengeCard"
 import ActiveChallengeDisplay from "./ActiveChallengeDisplay"
-import ChallengeHistory from "./ChallengeHistory"
 import { ChallengeSessionWithDefinition } from "@/lib/supabase"
 import Cookies from "js-cookie"
 
-export default function ChallengesSection({ user, sessionToken, locale }: { 
+export default function ChallengesSection({ user, sessionToken }: { 
   user: any
   sessionToken: string | null
-  locale: string
 }) {
   const t = useTranslations('challenges')
+  const router = useRouter()
   const [activeSession, setActiveSession] = useState<ChallengeSessionWithDefinition | null>(null)
-  const [history, setHistory] = useState<ChallengeSessionWithDefinition[]>([])
   const [loading, setLoading] = useState(true)
   const [activating, setActivating] = useState<string | null>(null)
   const [error, setError] = useState<string | null>(null)
@@ -33,7 +32,6 @@ export default function ChallengesSection({ user, sessionToken, locale }: {
     try {
       const data = await getChallengeSessions(sessionToken)
       setActiveSession(data.activeSession)
-      setHistory(data.history || [])
     } catch (err: any) {
       console.error("Failed to load challenge sessions:", err)
       setError(err.message)
@@ -86,6 +84,7 @@ export default function ChallengesSection({ user, sessionToken, locale }: {
       setSuccess(t('activated', { name: result.session.definition?.name || 'Challenge' }) || 'Challenge activated!')
       setActiveSession(result.session)
       setTimeout(() => setSuccess(null), 3000)
+      router.push('/')
     } catch (err: any) {
       setError(err.message || t('activationFailed') || 'Failed to activate challenge')
     } finally {
@@ -113,11 +112,14 @@ export default function ChallengesSection({ user, sessionToken, locale }: {
   }
 
   const availableChallenges = getAvailableChallenges()
-  const categories = [
-    { id: 'mastery', label: t('category.mastery') || 'Mastery', challenges: availableChallenges.filter(c => c.category === 'Mastery') },
-    { id: 'region', label: t('category.region') || 'Region', challenges: availableChallenges.filter(c => c.category === 'Region') },
-    { id: 'class', label: t('category.class') || 'Class', challenges: availableChallenges.filter(c => c.category === 'Class') }
-  ]
+  const weeklies = getWeeklyChallenges()
+  const weeklyIds = new Set([weeklies.mastery.id, weeklies.class.id, weeklies.region.id])
+  const dailyRegion = getDailyRegionChallenge()
+
+  // Daily region challenge (1)
+  const dailyRegionChallenge = availableChallenges.find(c => c.type === 'region' && c.config.region?.region === dailyRegion)
+  // Weekly challenges (3)
+  const weeklyChallenges = availableChallenges.filter(c => weeklyIds.has(c.id))
 
   if (loading) {
     return (
@@ -144,8 +146,6 @@ export default function ChallengesSection({ user, sessionToken, locale }: {
     )
   }
 
-  const dailyRegion = getDailyRegionChallenge()
-
   return (
     <section className="space-y-8" aria-labelledby="challenges-heading">
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
@@ -158,27 +158,67 @@ export default function ChallengesSection({ user, sessionToken, locale }: {
         </p>
       </div>
 
-      {/* Daily Region Banner */}
-      <div className="rounded-2xl border border-[#C89B3C]/30 bg-gradient-to-r from-[#C89B3C]/10 to-transparent p-4">
-        <div className="flex items-center gap-2">
-          <span className="text-2xl">🌍</span>
-          <div>
-            <p className="text-xs font-semibold text-[#C89B3C] uppercase tracking-wider">{t('dailyRegion') || 'Región del Día'}</p>
-            <p className="text-lg font-bold text-white">{dailyRegion}</p>
-          </div>
-        </div>
-        <p className="text-sm text-neutral-400 mt-2">
-          {t('dailyRegionDesc') || 'Only this region challenge is available today. Changes at midnight UTC.'}
-        </p>
-      </div>
-
-      {/* Active Challenge Display */}
       {activeSession && (
-        <ActiveChallengeDisplay 
+        <ActiveChallengeDisplay
           session={activeSession}
           onComplete={loadSessions}
         />
       )}
+
+      {/* Available Challenges: 1 Daily Region + 3 Weekly */}
+      <div className="space-y-8">
+        {/* Daily Region Challenge */}
+        {dailyRegionChallenge && (
+          <div className="space-y-4">
+            <div className="rounded-2xl border border-[#C89B3C]/30 bg-gradient-to-r from-[#C89B3C]/10 to-transparent p-4">
+              <div className="flex items-center gap-2">
+                <span className="text-2xl">🌍</span>
+                <div>
+                  <p className="text-xs font-semibold text-[#C89B3C] uppercase tracking-wider">{t('dailyRegion') || 'Región del Día'}</p>
+                  <p className="text-lg font-bold text-white">{dailyRegion}</p>
+                </div>
+              </div>
+              <p className="text-sm text-neutral-400 mt-2">
+                {t('dailyRegionDesc') || 'Only this region challenge is available today. Changes at midnight UTC.'}
+              </p>
+            </div>
+            <div className="grid gap-6 md:grid-cols-1">
+              <ChallengeCard
+                key={dailyRegionChallenge.id}
+                challenge={dailyRegionChallenge}
+                onActivate={handleActivate}
+                disabled={activating === dailyRegionChallenge.id}
+                hasActiveChallenge={!!activeSession}
+              />
+            </div>
+          </div>
+        )}
+
+        {/* Weekly Challenges Section */}
+        {weeklyChallenges.length > 0 && (
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold text-white flex items-center gap-2">
+              <span className="text-[#C89B3C]">📅</span>
+              {t('weeklyChallenges') || 'Weekly Challenges'}
+              <span className="text-xs px-2 py-0.5 rounded bg-[#C89B3C]/20 text-[#C89B3C] font-medium">
+                {t('changesMonday') || 'Changes Monday'}
+              </span>
+            </h3>
+            <div className="grid gap-6 md:grid-cols-3">
+              {weeklyChallenges.map((challenge) => (
+                <ChallengeCard
+                  key={challenge.id}
+                  challenge={challenge}
+                  onActivate={handleActivate}
+                  disabled={activating === challenge.id}
+                  hasActiveChallenge={!!activeSession}
+                />
+              ))}
+            </div>
+          </div>
+        )}
+
+      </div>
 
       {/* Error/Success Messages */}
       {error && (
@@ -194,37 +234,6 @@ export default function ChallengesSection({ user, sessionToken, locale }: {
         </div>
       )}
 
-      {/* Available Challenges */}
-      <div className="space-y-8">
-        {categories.map((category) => (
-          category.challenges.length > 0 && (
-            <div key={category.id} className="space-y-4">
-              <h3 className="text-lg font-semibold text-white flex items-center gap-2">
-                <span className="text-[#C89B3C]">◆</span>
-                {category.label}
-              </h3>
-              <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                {category.challenges.map((challenge) => (
-                  <ChallengeCard
-                    key={challenge.id}
-                    challenge={challenge}
-                    onActivate={handleActivate}
-                    disabled={activating === challenge.id}
-                    hasActiveChallenge={!!activeSession}
-                  />
-                ))}
-              </div>
-            </div>
-          )
-        ))}
-      </div>
-
-      {/* Challenge History */}
-      {history.length > 0 && (
-        <div className="pt-8 border-t border-neutral-800">
-          <ChallengeHistory sessions={history} locale={locale} />
-        </div>
-      )}
     </section>
   )
 }

@@ -17,7 +17,7 @@ export default function Navbar() {
 const navLinks = [
     { href: '/', label: t('play'), icon: '🎮' },
     { href: '/leaderboard', label: t('leaderboard'), icon: '🏆' },
-    { href: '/challenges', label: t('challenges'), icon: '⚡' },
+    { href: '/challenges', label: t('challenges'), icon: '⚡', isNew: true },
     {href: '/mastery', label: t('mastery'), icon: '📚'},
     { href: '/howtoplay', label: t('howToPlay'), icon: '📖' },
   ]
@@ -69,6 +69,7 @@ const navLinks = [
                 <span className="relative z-10 flex items-center gap-1.5">
                   <span>{link.icon}</span>
                   <span className="tracking-wide">{link.label}</span>
+                  {link.isNew && <span className="rounded-sm bg-amber-300 px-1.5 py-0.5 text-[9px] font-black leading-none text-zinc-950">NEW</span>}
                 </span>
               </Link>
             ))}
@@ -116,6 +117,7 @@ const navLinks = [
               >
                 <span className="mr-3">{link.icon}</span>
                 {link.label}
+                {link.isNew && <span className="ml-2 inline-flex rounded-sm bg-amber-300 px-1.5 py-0.5 text-[9px] font-black leading-none text-zinc-950">NEW</span>}
               </Link>
             ))}
             <div className="space-y-1 border-t border-zinc-800/60 pt-3 mt-3">

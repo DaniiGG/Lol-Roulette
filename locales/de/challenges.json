@@ -105,5 +105,12 @@
     "failed": "Herausforderung fehlgeschlagen"
   },
   "dailyRegion": "Tägliche Region",
-  "dailyRegionDesc": "Nur diese Regions-Herausforderung ist heute verfügbar. Ändert sich um Mitternacht UTC."
+  "dailyRegionDesc": "Nur diese Regions-Herausforderung ist heute verfügbar. Ändert sich um Mitternacht UTC.",
+  "weeklyChallenges": "Wöchentliche Herausforderungen",
+  "changesMonday": "Ändern sich montags",
+  "durationShort": "3h",
+  "developmentNoticeTitle": "In Entwicklung",
+  "developmentNoticeDescription": "Die Herausforderungen befinden sich noch in der Entwicklung. Einige Funktionen können ausfallen oder sich unerwartet verhalten.",
+  "activeChallenge": "Aktive Herausforderung",
+  "requirementLabel": "Anforderung"
 }

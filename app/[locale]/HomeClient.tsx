@@ -8,7 +8,7 @@ import { supabase } from "@/lib/supabase"
 import { ACHIEVEMENTS, checkAchievement, calculateLevel } from "@/lib/achievements"
 import {
   createChallenge, rerollChallenge, completeChallengeById, failChallenge,
-  resetStreak
+  resetStreak, validateChallengeMatch
 } from "@/lib/api-client"
 import confetti from "canvas-confetti"
 import Cookies from 'js-cookie'
@@ -31,13 +31,15 @@ import MatchSimulator from "@/components/MatchSimulator"
 import { AutoVerifier } from "@/lib/auto-verify"
 import RSOLoginModal from "@/components/RSOLoginmodal"
 import ChampionPoolModal from "@/components/ChampionPoolModal"
-import ChallengesSection from "@/components/ChallengesSection"
+import Toast from "@/components/Toast"
 import { loadChampionPool, getPoolForLane, type ChampionPool } from "@/lib/champion-pool"
+import { getChallengesByType } from "@/lib/challenge-definitions"
 
 import Script from "next/script"
 
 export default function Home() {
   const t = useTranslations('home')
+  const tChallenges = useTranslations('challenges')
   const locale = useLocale()
   const searchParams = useSearchParams()
   const urlChallenge = searchParams.get('challenge')
@@ -52,6 +54,25 @@ export default function Home() {
   const [activeChallengeId, setActiveChallengeId] = useState<string | null>(urlChallenge || null)
   const [challengeLane, setChallengeLane] = useState<string>('all')
   const [activeChallengeSession, setActiveChallengeSession] = useState<any>(null)
+  const activeChallengeType = activeChallengeSession?.challenge_type
+  const activeChallengeDefinition = activeChallengeSession
+    ? getChallengesByType(activeChallengeType).find((definition) =>
+        JSON.stringify(definition.config) === JSON.stringify(activeChallengeSession.challenge_config)
+      )
+    : null
+  const activeChallengeTitle = activeChallengeSession?.definition?.name || activeChallengeDefinition?.name || (
+    activeChallengeType === 'region' ? tChallenges('category.region') :
+      activeChallengeType === 'class' ? tChallenges('category.class') :
+        activeChallengeType === 'low_mastery' ? tChallenges('category.mastery') :
+          t('challengeActive')
+  )
+  const activeChallengeRequirement = activeChallengeType === 'region'
+    ? tChallenges('requirement.region', { region: activeChallengeSession.challenge_config.region?.region || '' })
+    : activeChallengeType === 'class'
+      ? tChallenges('requirement.class', { class: activeChallengeSession.challenge_config.class?.class || '' })
+      : activeChallengeType === 'low_mastery'
+        ? tChallenges('requirement.lowMastery', { threshold: (activeChallengeSession.challenge_config.low_mastery?.mastery_threshold || 10000).toLocaleString(locale) })
+        : null
 
   // Roulette state (PÚBLICO - no requiere login)
   const [champ, setChamp] = useState<any>(null)
@@ -77,6 +98,9 @@ export default function Home() {
 
   // Info modal
   const [showInfoModal, setShowInfoModal] = useState(false)
+
+  // Toast announcement for challenges update
+  const [showChallengesToast, setShowChallengesToast] = useState(true)
 
 // Auto-verification
    const [autoVerifier, setAutoVerifier] = useState<AutoVerifier | null>(null)
@@ -196,6 +220,22 @@ export default function Home() {
     }
   }
 
+  // Mostrar toast de anuncio de challenges (solo una vez por sesión)
+  useEffect(() => {
+    if (showChallengesToast) {
+      const hasSeenToast = sessionStorage.getItem('challengesToastAnnouncementShown')
+      if (!hasSeenToast) {
+        const timer = setTimeout(() => {
+          setShowChallengesToast(false)
+          sessionStorage.setItem('challengesToastAnnouncementShown', 'true')
+        }, 15000) // Auto-hide after 15s
+        return () => clearTimeout(timer)
+      } else {
+        setShowChallengesToast(false)
+      }
+    }
+  }, [showChallengesToast])
+
   // SPIN: llamado por RouletteWheel al terminar la animación
   const handleRouletteResult = async (champData: { id: string; key: string | number; name: string }) => {
     setVerificationResult(null)
@@ -313,6 +353,10 @@ export default function Home() {
     if (!user || !champ || !sessionToken) return
 
     setVerifying(true)
+    const challengeStartDates = [activeChallengeSession?.started_at, activeChallengeRef.current?.created_at]
+      .filter((date): date is string => typeof date === 'string')
+      .sort((first, second) => Date.parse(first) - Date.parse(second))
+    const challengeCreatedAt = challengeStartDates[challengeStartDates.length - 1]
 
     try {
       const res = await fetch('/api/verify', {
@@ -325,7 +369,7 @@ export default function Home() {
           puuid: user.puuid,
           region: user.region,
           championId: champ.key,
-          challengeCreatedAt: activeChallengeRef.current?.created_at
+          challengeCreatedAt
         })
       })
 
@@ -364,31 +408,66 @@ export default function Home() {
   }
 
   const handleVictory = async (matchData: any) => {
-    if (!user || !activeChallengeRef.current) return
+    if (!user || !sessionToken || (!activeChallengeRef.current && !activeChallengeSession)) return
 
     confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 } })
 
-    try {
-      const result = await completeChallengeById(sessionToken!, {
-        challenge_id: activeChallengeRef.current.id,
-        match_id: matchData.matchId
-      })
+    let normalXpAwarded = false
+    if (activeChallengeRef.current) {
+      try {
+        const result = await completeChallengeById(sessionToken, {
+          challenge_id: activeChallengeRef.current.id,
+          match_id: matchData.matchId
+        })
 
-      setUser(result.user)
+        setUser(result.user)
+        normalXpAwarded = result.success === true
 
-      // Reset reroll count after successful verification
+        const unlockedTypes = (result.achievements || []).map((achievement: any) => achievement.achievement_type)
+        if (unlockedTypes.length > 0) {
+          setNewAchievements(unlockedTypes)
+          setUserAchievements([...userAchievements, ...unlockedTypes])
+          confetti({ particleCount: 150, spread: 100, origin: { y: 0.5 } })
+        }
+      } catch (error) {
+        console.error('❌ Error completing roulette challenge:', error)
+      }
+
       setRerollCount(0)
       activeChallengeRef.current = null
       setActiveChallengeId(null)
+    }
 
-      const unlockedTypes = (result.achievements || []).map((achievement: any) => achievement.achievement_type)
-      if (unlockedTypes.length > 0) {
-        setNewAchievements(unlockedTypes)
-        setUserAchievements([...userAchievements, ...unlockedTypes])
-        confetti({ particleCount: 150, spread: 100, origin: { y: 0.5 } })
+    if (activeChallengeSession) {
+      try {
+        const challengeResult = await validateChallengeMatch(sessionToken, {
+          match_id: matchData.matchId,
+          champion_name: matchData.championPlayed,
+          champion_id: matchData.championIdPlayed,
+          won: matchData.won,
+          game_mode: matchData.gameMode,
+          game_duration: matchData.gameDuration,
+          stats: matchData.stats,
+          game_end_timestamp: matchData.gameEndTimestamp,
+          base_xp_already_awarded: normalXpAwarded
+        })
+
+        if (challengeResult.success) {
+          setActiveChallengeSession(challengeResult.session)
+          if (challengeResult.xpGained?.total) {
+            window.dispatchEvent(new CustomEvent('challenge-xp-gained', {
+              detail: { xpGained: challengeResult.xpGained }
+            }))
+          }
+          setVerificationResult((previous: any) => previous
+            ? { ...previous, challengeBonusXp: challengeResult.xpGained?.bonus || 0 }
+            : previous)
+        } else {
+          console.info('Verified match did not meet the active challenge requirements:', challengeResult.message)
+        }
+      } catch (error) {
+        console.error('❌ Error validating active challenge match:', error)
       }
-    } catch (error) {
-      console.error('❌ Error in handleVictory:', error)
     }
   }
 
@@ -421,17 +500,19 @@ export default function Home() {
   useEffect(() => {
     const handleChallengeXpGained = (event: CustomEvent) => {
       const { xpGained } = event.detail
-      if (user && xpGained) {
-        const newXp = (user.xp || 0) + xpGained.total
-        const newLevel = calculateLevel(newXp)
-        setUser((prev: any) => prev ? { ...prev, xp: newXp, level: newLevel } : null)
+      if (xpGained) {
+        setUser((prev: any) => {
+          if (!prev) return null
+          const newXp = (prev.xp || 0) + xpGained.total
+          return { ...prev, xp: newXp, level: calculateLevel(newXp) }
+        })
         console.log(`🎁 Challenge XP gained: +${xpGained.total} (base: ${xpGained.base}, bonus: ${xpGained.bonus})`)
       }
     }
 
     window.addEventListener('challenge-xp-gained', handleChallengeXpGained as EventListener)
     return () => window.removeEventListener('challenge-xp-gained', handleChallengeXpGained as EventListener)
-  }, [user])
+  }, [])
 
   const checkAndUnlockAchievements = async (stats: any) => {
     if (!user) return
@@ -608,21 +689,26 @@ export default function Home() {
 
               {/* Challenge Active Banner */}
               {(activeChallengeId || activeChallengeSession) && (
-                <div className="mx-auto mb-4 max-w-4xl rounded-2xl border border-[#C89B3C]/40 bg-[#C89B3C]/10 p-4 text-center">
-                  <p className="text-sm font-semibold text-[#C89B3C]">⚡ Active Challenge</p>
-                  <p className="text-lg text-white">
-                    {activeChallengeSession?.definition?.name || t('challengeActive') || 'Challenge Active - Lane is locked'}
-                  </p>
-                  <p className="text-sm text-neutral-400">
-                    {activeChallengeSession?.challenge_config?.region?.region && `Región: ${activeChallengeSession.challenge_config.region.region}`}
-                    {activeChallengeSession?.challenge_config?.class?.class && `Clase: ${activeChallengeSession.challenge_config.class.class}`}
-                    {activeChallengeSession?.challenge_config?.low_mastery?.mastery_threshold && `Maestría < ${activeChallengeSession.challenge_config.low_mastery.mastery_threshold.toLocaleString()}`}
-                    {challengeLane !== 'all' && !activeChallengeSession ? `${t('lane') || 'Lane'}: ${challengeLane}` : ''}
-                  </p>
+                <div className="mx-auto mb-4 flex max-w-4xl flex-col gap-2 rounded-xl border border-[#C89B3C]/40 bg-[#C89B3C]/10 p-3 sm:flex-row sm:items-center sm:justify-between">
+                  <div className="flex min-w-0 items-start gap-2.5">
+                    <span className="mt-0.5 text-[#C89B3C]" aria-hidden="true">⚡</span>
+                    <div className="min-w-0">
+                      <p className="text-[10px] font-semibold uppercase tracking-wider text-[#C89B3C]">
+                        {tChallenges('activeChallenge')}
+                      </p>
+                      <p className="truncate text-sm font-semibold text-white">{activeChallengeTitle}</p>
+                      {activeChallengeRequirement ? (
+                        <p className="truncate text-xs text-neutral-400">{activeChallengeRequirement}</p>
+                      ) : challengeLane !== 'all' ? (
+                        <p className="text-xs text-neutral-400">{t('lane')}: {challengeLane}</p>
+                      ) : null}
+                    </div>
+                  </div>
                   {activeChallengeSession && (
-                    <p className="text-xs text-neutral-500 mt-1">
-                      Expira: {new Date(activeChallengeSession.expires_at).toLocaleTimeString()}
-                    </p>
+                    <div className="shrink-0 text-xs text-neutral-400 sm:text-right">
+                      <p>{activeChallengeSession.valid_wins} {tChallenges('validWins')} · +{activeChallengeSession.bonus_xp} {tChallenges('bonusXP')}</p>
+                      <p>x{activeChallengeSession.xp_multiplier} {tChallenges('xpMultiplier')} · {tChallenges('expiresAt', { time: new Date(activeChallengeSession.expires_at).toLocaleTimeString(locale) })}</p>
+                    </div>
                   )}
                 </div>
               )}
@@ -868,6 +954,13 @@ export default function Home() {
         </div>
       )}
 
+      {/* Challenges Update Toast */}
+      {showChallengesToast && (
+        <Toast 
+          message={tChallenges('toastAnnouncement')} 
+          onClose={() => { setShowChallengesToast(false); sessionStorage.setItem('challengesToastAnnouncementShown', 'true'); }}
+        />
+      )}
 
     </main>
   )

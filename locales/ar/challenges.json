@@ -1,57 +1,116 @@
 {
-    "weeklyChallenge": {
-        "title": "التحدي الأسبوعي",
-        "subtitle": "أكمل تحدي الأسبوع لكسب الحقوق",
-        "challenges": [
-            {
-                "id": "support-only",
-                "name": "دعم فقط",
-                "description": "العب 3 مباريات هذا الأسبوع باللعب فقط مع أبطال الدعم. لا يسمح بالحمل!",
-                "emoji": "👩",
-                "deadline": "هذا الأحد",
-                "difficulty": "متوسط"
-            },
-            {
-                "id": "low-mastery",
-                "name": "إتقان منخفض",
-                "description": "العب بأبطال لديك أقل من 10 مباريات عليهم. وسّع مجموعتك!",
-                "emoji": "🎯",
-                "deadline": "هذا الأحد",
-                "difficulty": "صعب"
-            },
-            {
-                "id": "friends-roulette",
-                "name": "دوران الأصدقاء",
-                "description": "تحدي 3 أصدقاء لدورة جماعية. كل واحد يدور ويلعب اختياره!",
-                "emoji": "🎉",
-                "deadline": "هذا الأحد",
-                "difficulty": "سهل"
-            },
-            {
-                "id": "aram-only",
-                "name": "ARAM فقط",
-                "description": "العب 5 مباريات في Howling Abyss هذا الأسبوع. البطل دائمًا عشوائي!",
-                "emoji": "🏟️",
-                "deadline": "هذا الأحد",
-                "difficulty": "متوسط"
-            },
-            {
-                "id": "champion-rotation",
-                "name": "دوران الأبطال",
-                "description": "العب مع كل بطل مجاني في دوران هذا الأسبوع. لعبة واحدة لكل واحد!",
-                "emoji": "🔄",
-                "deadline": "هذا الأحد",
-                "difficulty": "صعب"
-            }
-        ]
-    },
-    "aramNote": "في ARAM البطل دائمًا عشوائي - فقط تصفح واللعب!",
-    "noChampions": "لا توجد تحديات أسبوعية متاحة",
-    "createChallenge": "إنشاء تحدي خاص بك",
-    "shareCode": "مشاركة الكود",
-    "joinChallenge": "انضم والدوران",
-    "back": "رجوع",
-    "sectionLabel": "تحدي أسبوعي",
-    "startPlaying": "ابدأ اللعب",
-    "browseMore": "تصفح المدونة"
+  "weeklyChallenge": {
+    "title": "التحدي الأسبوعي",
+    "subtitle": "أكمل تحدي الأسبوع لكسب الحقوق",
+    "challenges": [
+      {
+        "id": "support-only",
+        "name": "دعم فقط",
+        "description": "العب 3 مباريات هذا الأسبوع باللعب فقط مع أبطال الدعم. لا يسمح بالحمل!",
+        "emoji": "👩",
+        "deadline": "هذا الأحد",
+        "difficulty": "متوسط"
+      },
+      {
+        "id": "low-mastery",
+        "name": "إتقان منخفض",
+        "description": "العب بأبطال لديك أقل من 10 مباريات عليهم. وسّع مجموعتك!",
+        "emoji": "🎯",
+        "deadline": "هذا الأحد",
+        "difficulty": "صعب"
+      },
+      {
+        "id": "friends-roulette",
+        "name": "دوران الأصدقاء",
+        "description": "تحدي 3 أصدقاء لدورة جماعية. كل واحد يدور ويلعب اختياره!",
+        "emoji": "🎉",
+        "deadline": "هذا الأحد",
+        "difficulty": "سهل"
+      },
+      {
+        "id": "aram-only",
+        "name": "ARAM فقط",
+        "description": "العب 5 مباريات في Howling Abyss هذا الأسبوع. البطل دائمًا عشوائي!",
+        "emoji": "🏟️",
+        "deadline": "هذا الأحد",
+        "difficulty": "متوسط"
+      },
+      {
+        "id": "champion-rotation",
+        "name": "دوران الأبطال",
+        "description": "العب مع كل بطل مجاني في دوران هذا الأسبوع. لعبة واحدة لكل واحد!",
+        "emoji": "🔄",
+        "deadline": "这个周日",
+        "difficulty": "صعب"
+      }
+    ]
+  },
+  "aramNote": "في ARAM البطل دائمًا عشوائي - فقط تصفح واللعب!",
+  "noChampions": "لا توجد تحديات أسبوعية متاحة",
+  "createChallenge": "إنشاء تحدي خاص بك",
+  "shareCode": "مشاركة الكود",
+  "joinChallenge": "انضم والدوران",
+  "back": "رجوع",
+  "sectionLabel": "تحدي أسبوعي",
+  "startPlaying": "ابدأ اللعب",
+  "browseMore": "تصفح المدونة",
+
+  "sectionTitle": "التحديات",
+  "sectionDescription": "فعّل تحديات محدودة الوقت لكسب XP إضافي في الانتصارات",
+  "activate": "تفعيل",
+  "activated": "تم تفعيل التحدي: {name}",
+  "activationFailed": "فشل تفعيل التحدي",
+  "hasActiveChallenge": "لديك بالفعل تحدي نشط",
+  "loginRequired": "سجل الدخول لتفعيل التحديات",
+  "difficulty": {
+    "easy": "سهل",
+    "medium": "متوسط",
+    "hard": "صعب"
+  },
+  "category": {
+    "mastery": "الإتقان",
+    "region": "المنطقة",
+    "class": "الصنف"
+  },
+  "requirement": {
+    "lowMastery": "العب ببطل لديه أقل من {threshold} نقاط إتقان",
+    "region": "اربح ببطل من {region}",
+    "class": "اربح ببطل من صنف {class}"
+  },
+  "duration": "المدة",
+  "xpMultiplier": "مضاعف XP",
+  "timeRemaining": "الوقت المتبقي",
+  "expiresAt": "ينتهي في {time}",
+  "validWins": "انتصارات صالحة",
+  "bonusXP": "XP إضافي",
+  "totalXP": "إجمالي XP",
+  "xpMultiplierActive": "مضاعف XP نشط:",
+  "onValidWins": "في انتصارات صالحة",
+  "challengeExpired": "التحدي منتهي الصلاحية",
+  "challengeExpiredDesc": "انتهى هذا التحدي. ابدأ تحدياً جديداً لمواصلة كسب XP الإضافي.",
+  "history": "سجل التحديات",
+  "noHistory": "لا يوجد سجل تحديات",
+  "noHistoryDesc": "أكمل التحديات لرؤيتها هنا",
+  "started": "بدأ",
+  "ended": "انتهى",
+  "wins": "انتصارات",
+  "status": {
+    "completed": "مكتمل",
+    "expired": "منتهي",
+    "failed": "فاشل"
+  },
+  "result": {
+    "completed": "{wins} انتصارات صالحة • +{bonusXp} XP إضافي مكتسب",
+    "expired": "التحدي انتهى دون إكمال",
+    "failed": "التحدي فشل"
+  },
+  "dailyRegion": "منطقة اليوم",
+  "dailyRegionDesc": "تحدي هذه المنطقة فقط متاح اليوم. يتغير عند منتصف الليل UTC.",
+  "weeklyChallenges": "التحديات الأسبوعية",
+  "changesMonday": "تتغير يوم الاثنين",
+  "durationShort": "3h",
+  "developmentNoticeTitle": "قيد التطوير",
+  "developmentNoticeDescription": "لا تزال التحديات قيد التطوير. قد تتعطل بعض الميزات أو لا تعمل كما هو متوقع.",
+  "activeChallenge": "تحدٍ نشط",
+  "requirementLabel": "المتطلب"
 }

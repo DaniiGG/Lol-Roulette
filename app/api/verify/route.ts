@@ -1,6 +1,7 @@
 // app/api/verify/route.ts
 import { NextResponse } from 'next/server'
 import { verifyAuth } from '@/lib/verify-jwt'
+import { evaluateMatchVerification } from '@/lib/match-verification'
 
 const RIOT_API_KEY = process.env.RIOT_API_KEY!
 
@@ -130,21 +131,22 @@ export async function POST(request: Request) {
     const expectedChampId = Number(championId)
     const playedChampId = Number(participant.championId)
     
-    const playedCorrectChampion = playedChampId === expectedChampId
     const won = participant.win
+    const verification = evaluateMatchVerification(expectedChampId, playedChampId, won)
     
-    console.log('  Match?', playedCorrectChampion, `(${playedChampId} === ${expectedChampId})`)
+    console.log('  Match?', verification.playedCorrectChampion, `(${playedChampId} === ${expectedChampId})`)
 
     return NextResponse.json({
-      success: playedCorrectChampion && won,
-      playedCorrectChampion,
-      won,
+      ...verification,
       championPlayed: participant.championName,
       championIdExpected: expectedChampId,
       championIdPlayed: playedChampId,
       matchId: relevantMatchId,
       gameMode: relevantMatch.info.gameMode,
       gameDuration: relevantMatch.info.gameDuration,
+      gameEndTimestamp: new Date(
+        relevantMatch.info.gameEndTimestamp ?? relevantMatch.info.gameCreation
+      ).toISOString(),
       stats: {
         kills: participant.kills,
         deaths: participant.deaths,

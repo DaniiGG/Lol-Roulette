@@ -1,57 +1,116 @@
 {
-    "weeklyChallenge": {
-        "title": "Wekelijks Challenge",
-        "subtitle": "Voltooi de weekly challenge om roem te verdienen",
-        "challenges": [
-            {
-                "id": "support-only",
-                "name": "Alleen Support",
-                "description": "Speel 3 games deze week alleen met support-champions. Geen carries toegestaan!",
-                "emoji": "👩",
-                "deadline": "Deze Zondag",
-                "difficulty": "Gemiddeld"
-            },
-            {
-                "id": "low-mastery",
-                "name": "Lage Meesterschap",
-                "description": "Speel met champions waar je minder dan 10 games op hebt. Breid je pool uit!",
-                "emoji": "🎯",
-                "deadline": "Deze Zondag",
-                "difficulty": "Moeilijk"
-            },
-            {
-                "id": "friends-roulette",
-                "name": "Vrienden Roulette",
-                "description": "Daag 3 vrienden uit voor een groeps-roulette. Iedereen draait en speelt zijn keuze!",
-                "emoji": "🎉",
-                "deadline": "Deze Zondag",
-                "difficulty": "Gemakkelijk"
-            },
-            {
-                "id": "aram-only",
-                "name": "Alleen ARAM",
-                "description": "Speel 5 games in Howling Abyss deze week. De champion is altijd willekeurig!",
-                "emoji": "🏟️",
-                "deadline": "Deze Zondag",
-                "difficulty": "Gemiddeld"
-            },
-            {
-                "id": "champion-rotation",
-                "name": "Champion Rotatie",
-                "description": "Speel met elke gratis champion in deze week-roatie. Eén ronde elk!",
-                "emoji": "🔄",
-                "deadline": "Deze Zondag",
-                "difficulty": "Moeilijk"
-            }
-        ]
-    },
-    "createChallenge": "Maak je eigen challenge",
-    "shareCode": "Code delen",
-    "joinChallenge": "Mee doen & Draaien",
-    "back": "Terug",
-    "sectionLabel": "Wekelijks Challenge",
-    "startPlaying": "Beginnen",
-    "browseMore": "Blog doorzoeken",
-    "aramNote": "In ARAM is de champion altijd willekeurig - gewoon inloggen en spelen!",
-    "noChampions": "Geen wekelijks challenges beschikbaar"
+  "weeklyChallenge": {
+    "title": "Wekelijks Challenge",
+    "subtitle": "Voltooi de weekly challenge om roem te verdienen",
+    "challenges": [
+      {
+        "id": "support-only",
+        "name": "Alleen Support",
+        "description": "Speel 3 games deze week alleen met support-champions. Geen carries toegestaan!",
+        "emoji": "👩",
+        "deadline": "Deze Zondag",
+        "difficulty": "Gemiddeld"
+      },
+      {
+        "id": "low-mastery",
+        "name": "Lage Meesterschap",
+        "description": "Speel met champions waar je minder dan 10 games op hebt. Breid je pool uit!",
+        "emoji": "🎯",
+        "deadline": "Deze Zondag",
+        "difficulty": "Moeilijk"
+      },
+      {
+        "id": "friends-roulette",
+        "name": "Vrienden Roulette",
+        "description": "Daag 3 vrienden uit voor een groeps-roulette. Iedereen draait en speelt zijn keuze!",
+        "emoji": "🎉",
+        "deadline": "Deze Zondag",
+        "difficulty": "Gemakkelijk"
+      },
+      {
+        "id": "aram-only",
+        "name": "Alleen ARAM",
+        "description": "Speel 5 games in Howling Abyss deze week. De champion is altijd willekeurig!",
+        "emoji": "🏟️",
+        "deadline": "Deze Zondag",
+        "difficulty": "Gemiddeld"
+      },
+      {
+        "id": "champion-rotation",
+        "name": "Champion Rotatie",
+        "description": "Speel met elke gratis champion in deze week-roatie. Eén ronde elk!",
+        "emoji": "🔄",
+        "deadline": "Deze Zondag",
+        "difficulty": "Moeilijk"
+      }
+    ]
+  },
+  "createChallenge": "Maak je eigen challenge",
+  "shareCode": "Code delen",
+  "joinChallenge": "Mee doen & Draaien",
+  "back": "Terug",
+  "sectionLabel": "Wekelijks Challenge",
+  "startPlaying": "Beginnen",
+  "browseMore": "Blog doorzoeken",
+  "aramNote": "In ARAM is de champion altijd willekeurig - gewoon inloggen en spelen!",
+  "noChampions": "Geen wekelijks challenges beschikbaar",
+
+  "sectionTitle": "Challenges",
+  "sectionDescription": "Activeer tijdsgebonden challenges om bonus XP te verdienen bij overwinningen",
+  "activate": "Activeren",
+  "activated": "Challenge geactiveerd: {name}",
+  "activationFailed": "Challenge activeren mislukt",
+  "hasActiveChallenge": "Actieve challenge bestaat al",
+  "loginRequired": "Log in om challenges te activeren",
+  "difficulty": {
+    "easy": "Gemakkelijk",
+    "medium": "Gemiddeld",
+    "hard": "Moeilijk"
+  },
+  "category": {
+    "mastery": "Meesterschap",
+    "region": "Regio",
+    "class": "Klasse"
+  },
+  "requirement": {
+    "lowMastery": "Speel met een champion met minder dan {threshold} meesterschapspunten",
+    "region": "Win met een champion uit {region}",
+    "class": "Win met een {class} champion"
+  },
+  "duration": "Duur",
+  "xpMultiplier": "XP Vermenigvuldiger",
+  "timeRemaining": "TIJD OVER",
+  "expiresAt": "Verloopt om {time}",
+  "validWins": "Geldige Overwinningen",
+  "bonusXP": "Bonus XP",
+  "totalXP": "Totaal XP",
+  "xpMultiplierActive": "XP Vermenigvuldiger Actief:",
+  "onValidWins": "bij geldige overwinningen",
+  "challengeExpired": "Challenge Verlopen",
+  "challengeExpiredDesc": "Deze challenge is verlopen. Start een nieuwe om door te gaan met bonus XP.",
+  "history": "Challenge Geschiedenis",
+  "noHistory": "Geen challenge geschiedenis",
+  "noHistoryDesc": "Voltooi challenges om ze hier te zien",
+  "started": "Gestart",
+  "ended": "Beeindigd",
+  "wins": "overwinningen",
+  "status": {
+    "completed": "Voltooid",
+    "expired": "Verlopen",
+    "failed": "Mislukt"
+  },
+  "result": {
+    "completed": "{wins} geldige overwinningen • +{bonusXp} bonus XP verdiend",
+    "expired": "Challenge verlopen zonder voltooiing",
+    "failed": "Challenge mislukt"
+  },
+  "dailyRegion": "Dagelijkse Regio",
+  "dailyRegionDesc": "Alleen deze regio challenge is vandaag beschikbaar. Verandert om middernacht UTC.",
+  "weeklyChallenges": "Wekelijkse Challenges",
+  "changesMonday": "Veranderen op maandag",
+  "durationShort": "3u",
+  "developmentNoticeTitle": "In ontwikkeling",
+  "developmentNoticeDescription": "De uitdagingen zijn nog in ontwikkeling. Sommige functies kunnen uitvallen of anders werken dan verwacht.",
+  "activeChallenge": "Actieve uitdaging",
+  "requirementLabel": "Vereiste"
 }

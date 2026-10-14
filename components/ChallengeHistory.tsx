@@ -3,13 +3,14 @@
 import { useTranslations } from "next-intl"
 import { ChallengeSessionWithDefinition } from "@/lib/supabase"
 import { formatDistanceToNow } from "date-fns"
-import { es, de, fr, it, pt, pl, ru, ja, ko, zhCN, nl, ar } from "date-fns/locale"
+import { 
+  es, de, fr, it, pt, pl, ru, ja, ko, zhCN, nl, ar, enUS 
+} from "date-fns/locale"
 
 const localeMap: Record<string, any> = {
+  en: enUS,
   es, de, fr, it, pt, pl, ru, ja, ko, 'zh-CN': zhCN, nl, ar
 }
-
-const defaultLocale = {} as any // Use default locale (en)
 
 interface ChallengeHistoryProps {
   sessions: ChallengeSessionWithDefinition[]
@@ -18,7 +19,7 @@ interface ChallengeHistoryProps {
 
 export default function ChallengeHistory({ sessions, locale }: ChallengeHistoryProps) {
   const t = useTranslations('challenges')
-  const dateLocale = localeMap[locale] || defaultLocale
+  const dateLocale = localeMap[locale] || localeMap.en
 
   if (sessions.length === 0) {
     return (

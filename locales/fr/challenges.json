@@ -105,5 +105,12 @@
     "failed": "Défi échoué"
   },
   "dailyRegion": "Région Quotidienne",
-  "dailyRegionDesc": "Seul ce défi de région est disponible aujourd'hui. Change à minuit UTC."
+  "dailyRegionDesc": "Seul ce défi de région est disponible aujourd'hui. Change à minuit UTC.",
+  "weeklyChallenges": "Défis Hebdomadaires",
+  "changesMonday": "Changent le lundi",
+  "durationShort": "3h",
+  "developmentNoticeTitle": "En développement",
+  "developmentNoticeDescription": "Les défis sont encore en développement. Certaines fonctionnalités peuvent échouer ou ne pas fonctionner comme prévu.",
+  "activeChallenge": "Défi actif",
+  "requirementLabel": "Condition requise"
 }

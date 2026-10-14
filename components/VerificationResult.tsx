@@ -10,6 +10,7 @@ interface VerificationResultProps {
     playedCorrectChampion?: boolean;
     won?: boolean;
     championPlayed?: string;
+    challengeBonusXp?: number;
     stats?: {
       kills: number;
       deaths: number;
@@ -23,6 +24,7 @@ interface VerificationResultProps {
 
 export default function VerificationResult({ result, championName }: VerificationResultProps) {
   const t = useTranslations('verificationResult');
+  const tChallenges = useTranslations('challenges');
 
   if (result.pending) {
     return (
@@ -122,6 +124,12 @@ export default function VerificationResult({ result, championName }: Verificatio
               <span className="text-emerald-400/60 text-sm">{t('xpLabel')}</span>
             </div>
           </div>
+        )}
+
+        {isWin && result.challengeBonusXp && result.challengeBonusXp > 0 && (
+          <p className="mt-3 text-center text-sm font-semibold text-emerald-300">
+            +{result.challengeBonusXp} {tChallenges('bonusXP')}
+          </p>
         )}
       </div>
     </div>

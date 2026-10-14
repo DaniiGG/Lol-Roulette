@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server'
 import { verifyAuth } from '@/lib/verify-jwt'
 
 const RIOT_API_KEY = process.env.RIOT_API_KEY!
-const MATCH_COUNT = 30
+const MATCH_COUNT = 50
 
 function getPlatformRegion(region: string): string {
   const mapping: Record<string, string> = {

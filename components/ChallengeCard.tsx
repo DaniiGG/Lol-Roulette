@@ -37,7 +37,7 @@ export default function ChallengeCard({ challenge, onActivate, disabled = false,
         </div>
 
         <div className="flex items-center justify-between text-sm">
-          <span className="text-neutral-400">{t('category') || 'Category'}</span>
+          <span className="text-neutral-400">{t('categoryLabel') || 'Category'}</span>
           <span className="font-medium text-neutral-200">{t(`category.${challenge.category.toLowerCase()}`) || challenge.category}</span>
         </div>
       </div>

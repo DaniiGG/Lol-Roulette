@@ -1,57 +1,116 @@
 {
-    "weeklyChallenge": {
-        "title": "주간 챌린지",
-        "subtitle": "이번 주 챌린지를 완료하여 명예를 얻으세요",
-        "challenges": [
-            {
-                "id": "support-only",
-                "name": "서포트 전용",
-                "description": "이번 주 3판 서포트 챔피언만으로 플레이합니다. 캐리 불가!",
-                "emoji": "👩",
-                "deadline": "이번 일요일",
-                "difficulty": "보통"
-            },
-            {
-                "id": "low-mastery",
-                "name": "낮은 마스터리",
-                "description": "10경기 미만의 챔피언으로 플레이하세요. 풀을 확장하세요!",
-                "emoji": "🎯",
-                "deadline": "이번 일요일",
-                "difficulty": "어려움"
-            },
-            {
-                "id": "friends-roulette",
-                "name": "친구 룰렛",
-                "description": "3명의 친구와 단체 룰렛에 도전하세요. 모두 돌리고 각자의 선택을 플레이!",
-                "emoji": "🎉",
-                "deadline": "이번 일요일",
-                "difficulty": "쉬움"
-            },
-            {
-                "id": "aram-only",
-                "name": "ARAM 전용",
-                "description": "이번 주 Howling Abyss에서 5판 플레이하세요. 챔피언은 항상 랜덤!",
-                "emoji": "🏟️",
-                "deadline": "이번 일요일",
-                "difficulty": "보통"
-            },
-            {
-                "id": "champion-rotation",
-                "name": "챔피언 로테이션",
-                "description": "이번 주 무료 챔피언 모두로 플레이하세요. 하나씩!",
-                "emoji": "🔄",
-                "deadline": "이번 일요일",
-                "difficulty": "어려움"
-            }
-        ]
-    },
-    "createChallenge": "나만의 챌린지 만들기",
-    "shareCode": "코드 공유",
-    "joinChallenge": "참료하여 회전",
-    "back": "뒤로",
-    "sectionLabel": "주간 챌린지",
-    "startPlaying": "플레이 시작",
-    "browseMore": "블로그 둘러보기",
-    "aramNote": "ARAM에서는 챔피언이 항상 랜덤입니다 - 들어가서 플레이하세요!",
-    "noChampions": "주간 챌린지가 없습니다"
+  "weeklyChallenge": {
+    "title": "주간 챌린지",
+    "subtitle": "이번 주 챌린지를 완료하여 명예를 얻으세요",
+    "challenges": [
+      {
+        "id": "support-only",
+        "name": "서포트 전용",
+        "description": "이번 주 3판 서포트 챔피언만으로 플레이합니다. 캐리 불가!",
+        "emoji": "👩",
+        "deadline": "이번 일요일",
+        "difficulty": "보통"
+      },
+      {
+        "id": "low-mastery",
+        "name": "낮은 마스터리",
+        "description": "10경기 미만의 챔피언으로 플레이하세요. 풀을 확장하세요!",
+        "emoji": "🎯",
+        "deadline": "이번 일요일",
+        "difficulty": "어려움"
+      },
+      {
+        "id": "friends-roulette",
+        "name": "친구 룰렛",
+        "description": "3명의 친구와 단체 룰렛에 도전하세요. 모두 돌리고 각자의 선택을 플레이!",
+        "emoji": "🎉",
+        "deadline": "이번 일요일",
+        "difficulty": "쉬움"
+      },
+      {
+        "id": "aram-only",
+        "name": "ARAM 전용",
+        "description": "이번 주 Howling Abyss에서 5판 플레이하세요. 챔피언은 항상 랜덤!",
+        "emoji": "🏟️",
+        "deadline": "이번 일요일",
+        "difficulty": "보통"
+      },
+      {
+        "id": "champion-rotation",
+        "name": "챔피언 로테이션",
+        "description": "이번 주 무료 챔피언 모두로 플레이하세요. 하나씩!",
+        "emoji": "🔄",
+        "deadline": "이번 일요일",
+        "difficulty": "어려움"
+      }
+    ]
+  },
+  "createChallenge": "나만의 챌린지 만들기",
+  "shareCode": "코드 공유",
+  "joinChallenge": "참여하여 회전",
+  "back": "뒤로",
+  "sectionLabel": "주간 챌린지",
+  "startPlaying": "플레이 시작",
+  "browseMore": "블로그 둘러보기",
+  "aramNote": "ARAM에서는 챔피언이 항상 랜덤입니다 - 들어가서 플레이하세요!",
+  "noChampions": "주간 챌린지가 없습니다",
+
+  "sectionTitle": "챌린지",
+  "sectionDescription": "시간 제한 챌린지를 활성화하여 승리 시 보너스 XP 획득",
+  "activate": "활성화",
+  "activated": "챌린지 활성화: {name}",
+  "activationFailed": "챌린지 활성화 실패",
+  "hasActiveChallenge": "이미 활성 챌린지가 있습니다",
+  "loginRequired": "로그인하여 챌린지 활성화",
+  "difficulty": {
+    "easy": "쉬움",
+    "medium": "보통",
+    "hard": "어려움"
+  },
+  "category": {
+    "mastery": "마스터리",
+    "region": "지역",
+    "class": "직업"
+  },
+  "requirement": {
+    "lowMastery": "마스터리 {threshold} 포인트 미만 챔피언으로 플레이",
+    "region": "{region} 지역의 챔피언으로 승리",
+    "class": "{class} 직업의 챔피언으로 승리"
+  },
+  "duration": "지속시간",
+  "xpMultiplier": "XP 배율",
+  "timeRemaining": "남은 시간",
+  "expiresAt": "{time}에 만료",
+  "validWins": "유효한 승리",
+  "bonusXP": "보너스 XP",
+  "totalXP": "총 XP",
+  "xpMultiplierActive": "XP 배율 활성화:",
+  "onValidWins": "유효한 승리로",
+  "challengeExpired": "챌린지 만료",
+  "challengeExpiredDesc": "이 챌린지는 만료되었습니다. 새 챌린지를 시작하여 보너스 XP를 계속 획득하세요.",
+  "history": "챌린지 기록",
+  "noHistory": "챌린지 기록 없음",
+  "noHistoryDesc": "챌린지를 완료하여 여기에서 확인하세요",
+  "started": "시작됨",
+  "ended": "종료됨",
+  "wins": "승리",
+  "status": {
+    "completed": "완료",
+    "expired": "만료",
+    "failed": "실패"
+  },
+  "result": {
+    "completed": "{wins} 유효한 승리 • +{bonusXp} 보너스 XP 획득",
+    "expired": "미완료로 챌린지 만료",
+    "failed": "챌린지 실패"
+  },
+  "dailyRegion": "오늘의 지역",
+  "dailyRegionDesc": "이 지역 챌린지만 오늘 이용 가능. UTC 자정에 변경.",
+  "weeklyChallenges": "주간 챌린지",
+  "changesMonday": "월요일에 변경",
+  "durationShort": "3시간",
+  "developmentNoticeTitle": "개발 중",
+  "developmentNoticeDescription": "챌린지는 아직 개발 중입니다. 일부 기능이 실패하거나 예상과 다르게 작동할 수 있습니다.",
+  "activeChallenge": "진행 중인 챌린지",
+  "requirementLabel": "조건"
 }

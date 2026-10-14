@@ -7,6 +7,7 @@ import { supabase } from "@/lib/supabase"
 import { getChallengeSessions } from "@/lib/api-client"
 import ChallengesSection from "@/components/ChallengesSection"
 import Cookies from "js-cookie"
+import { AlertTriangle } from "lucide-react"
 
 export default function ChallengesClient() {
   const t = useTranslations('challenges')
@@ -54,6 +55,14 @@ export default function ChallengesClient() {
           <span aria-hidden="true">←</span> {t('back') || 'Back'}
         </Link>
 
+        <div role="status" className="mb-8 flex items-start gap-3 border border-amber-400/40 bg-amber-400/10 px-4 py-4 text-amber-100">
+          <AlertTriangle className="mt-0.5 h-5 w-5 shrink-0 text-amber-300" aria-hidden="true" />
+          <div>
+            <p className="font-semibold">{t('developmentNoticeTitle')}</p>
+            <p className="mt-1 text-sm leading-6 text-amber-100/80">{t('developmentNoticeDescription')}</p>
+          </div>
+        </div>
+
         <div className="mb-10">
           <p className="mb-3 text-sm uppercase tracking-[0.3em] text-[#C89B3C]">
             {t('sectionLabel') || 'Challenges'}
@@ -69,7 +78,6 @@ export default function ChallengesClient() {
         <ChallengesSection 
           user={user} 
           sessionToken={sessionToken} 
-          locale={locale} 
         />
       </div>
     </main>

@@ -73,7 +73,7 @@ export default function ActiveChallengeDisplay({ session, onComplete }: ActiveCh
             <span className="relative z-10 text-[10px] font-bold text-[#C89B3C]">LIVE</span>
           </span>
           <span className="text-sm font-semibold text-[#C89B3C] uppercase tracking-wider">
-            {t('activeChallenge') || 'ACTIVE CHALLENGE'}
+            {t('activeChallenge')}
           </span>
         </div>
         <span className="rounded-full px-3 py-1 text-xs font-semibold bg-[#C89B3C]/20 text-[#C89B3C]">
@@ -93,7 +93,7 @@ export default function ActiveChallengeDisplay({ session, onComplete }: ActiveCh
       {/* Requirement */}
       <div className="mb-4 rounded-lg bg-neutral-900/50 p-3 border border-neutral-800">
         <p className="text-xs font-medium text-neutral-400 uppercase tracking-wider mb-1">
-          {t('requirement') || 'REQUIREMENT'}
+          {t('requirementLabel')}
         </p>
         <p className="text-sm text-white">{requirementText}</p>
       </div>

@@ -1,57 +1,116 @@
 {
-    "weeklyChallenge": {
-        "title": "Wyzwanie Tygodniowe",
-        "subtitle": "Ukończ wyzwanie tygodniowe, aby zyskać uznanie",
-        "challenges": [
-            {
-                "id": "support-only",
-                "name": "Tylko Support",
-                "description": "Zagraj 3 mecze ten tydzień grając tylko z championami support. Bez carry!",
-                "emoji": "👩",
-                "deadline": "Ta Niedziela",
-                "difficulty": "Średni"
-            },
-            {
-                "id": "low-mastery",
-                "name": "Niska Biegłość",
-                "description": "Graj z championami, na których masz mniej niż 10 meczy. Rozszerz swój pool!",
-                "emoji": "🎯",
-                "deadline": "Ta Niedziela",
-                "difficulty": "Trudny"
-            },
-            {
-                "id": "friends-roulette",
-                "name": "Ruleta Przyjaciół",
-                "description": "Zaskocz 3 przyjaciół na grupową ruletę. Każdy kręci i gra swoją wybór!",
-                "emoji": "🎉",
-                "deadline": "Ta Niedziela",
-                "difficulty": "Łatwy"
-            },
-            {
-                "id": "aram-only",
-                "name": "Tylko ARAM",
-                "description": "Zagraj 5 meczy w Howling Abyss ten tydzień. Champion zawsze losowy!",
-                "emoji": "🏟️",
-                "deadline": "Ta Niedziela",
-                "difficulty": "Średni"
-            },
-            {
-                "id": "champion-rotation",
-                "name": "Rotacja Championów",
-                "description": "Graj z każdym darmowym champion w rotacji tego tygodnia. Jedna gra na każdego!",
-                "emoji": "🔄",
-                "deadline": "Ta Niedziela",
-                "difficulty": "Trudny"
-            }
-        ]
-    },
-    "createChallenge": "Stwórz swoje wyzwanie",
-    "shareCode": "Udostępnij kod",
-    "joinChallenge": "Dołącz i Kręć",
-    "back": "Wstecz",
-    "sectionLabel": "Wyzwanie Tygodniowe",
-    "startPlaying": "Zaczynamy",
-    "browseMore": "Przeglądaj Blog",
-    "aramNote": "W ARAM champion jest zawsze losowy - po prostu wpisz i graj!",
-    "noChampions": "Brak wyzwań tygodniowych"
+  "weeklyChallenge": {
+    "title": "Wyzwanie Tygodniowe",
+    "subtitle": "Ukończ wyzwanie tygodniowe, aby zyskać uznanie",
+    "challenges": [
+      {
+        "id": "support-only",
+        "name": "Tylko Support",
+        "description": "Zagraj 3 mecze ten tydzień grając tylko z championami support. Bez carry!",
+        "emoji": "👩",
+        "deadline": "Ta Niedziela",
+        "difficulty": "Średni"
+      },
+      {
+        "id": "low-mastery",
+        "name": "Niska Biegłość",
+        "description": "Graj z championami, na których masz mniej niż 10 meczy. Rozszerz swój pool!",
+        "emoji": "🎯",
+        "deadline": "Ta Niedziela",
+        "difficulty": "Trudny"
+      },
+      {
+        "id": "friends-roulette",
+        "name": "Ruleta Przyjaciół",
+        "description": "Zaskocz 3 przyjaciół na grupową ruletę. Każdy kręci i gra swoją wybór!",
+        "emoji": "🎉",
+        "deadline": "Ta Niedziela",
+        "difficulty": "Łatwy"
+      },
+      {
+        "id": "aram-only",
+        "name": "Tylko ARAM",
+        "description": "Zagraj 5 meczy w Howling Abyss ten tydzień. Champion zawsze losowy!",
+        "emoji": "🏟️",
+        "deadline": "Ta Niedziela",
+        "difficulty": "Średni"
+      },
+      {
+        "id": "champion-rotation",
+        "name": "Rotacja Championów",
+        "description": "Graj z każdym darmowym champion w rotacji tego tygodnia. Jedna gra na każdego!",
+        "emoji": "🔄",
+        "deadline": "Ta Niedziela",
+        "difficulty": "Trudny"
+      }
+    ]
+  },
+  "createChallenge": "Stwórz swoje wyzwanie",
+  "shareCode": "Udostępnij kod",
+  "joinChallenge": "Dołącz i Kręć",
+  "back": "Wstecz",
+  "sectionLabel": "Wyzwanie Tygodniowe",
+  "startPlaying": "Zaczynamy",
+  "browseMore": "Przeglądaj Blog",
+  "aramNote": "W ARAM champion jest zawsze losowy - po prostu wpisz i graj!",
+  "noChampions": "Brak wyzwań tygodniowych",
+
+  "sectionTitle": "Wyzwania",
+  "sectionDescription": "Aktywuj ograniczone czasowo wyzwania, aby zdobywać dodatkowe XP za zwycięstwa",
+  "activate": "Aktywuj",
+  "activated": "Wyzwanie aktywowane: {name}",
+  "activationFailed": "Błąd aktywacji wyzwania",
+  "hasActiveChallenge": "Masz już aktywne wyzwanie",
+  "loginRequired": "Zaloguj się, aby aktywować wyzwania",
+  "difficulty": {
+    "easy": "Łatwy",
+    "medium": "Średni",
+    "hard": "Trudny"
+  },
+  "category": {
+    "mastery": "Biegłość",
+    "region": "Region",
+    "class": "Klasa"
+  },
+  "requirement": {
+    "lowMastery": "Graj championem z mniej niż {threshold} punktami biegłości",
+    "region": "Wygraj z championem z {region}",
+    "class": "Wygraj z championem klasy {class}"
+  },
+  "duration": "Czas trwania",
+  "xpMultiplier": "Mnożnik XP",
+  "timeRemaining": "POZOSTAŁY CZAS",
+  "expiresAt": "Wygaśnie o {time}",
+  "validWins": "Prawidłowe zwycięstwa",
+  "bonusXP": "Bonus XP",
+  "totalXP": "Całkowite XP",
+  "xpMultiplierActive": "Mnożnik XP aktywny:",
+  "onValidWins": "na prawidłowych zwycięstwach",
+  "challengeExpired": "Wyzwanie wygasło",
+  "challengeExpiredDesc": "To wyzwanie wygasło. Zacznij nowe, aby kontynuować zdobywanie bonusowego XP.",
+  "history": "Historia Wyzwań",
+  "noHistory": "Brak historii wyzwań",
+  "noHistoryDesc": "Ukończ wyzwania, aby je zobaczyć tutaj",
+  "started": "Rozpoczęto",
+  "ended": "Zakończono",
+  "wins": "zwycięstwa",
+  "status": {
+    "completed": "Ukończone",
+    "expired": "Wygasłe",
+    "failed": "Nieudane"
+  },
+  "result": {
+    "completed": "{wins} prawidłowych zwycięstw • +{bonusXp} bonus XP zdobyte",
+    "expired": "Wyzwanie wygasło bez ukończenia",
+    "failed": "Wyzwanie nieudane"
+  },
+  "dailyRegion": "Region Dnia",
+  "dailyRegionDesc": "Tylko to wyzwanie regionu jest dostępne dzisiaj. Zmienia się o północy UTC.",
+  "weeklyChallenges": "Wyzwania Tygodniowe",
+  "changesMonday": "Zmieniają się w poniedziałek",
+  "durationShort": "3h",
+  "developmentNoticeTitle": "W trakcie rozwoju",
+  "developmentNoticeDescription": "Wyzwania są nadal w fazie rozwoju. Niektóre funkcje mogą nie działać lub działać niezgodnie z oczekiwaniami.",
+  "activeChallenge": "Aktywne wyzwanie",
+  "requirementLabel": "Wymaganie"
 }

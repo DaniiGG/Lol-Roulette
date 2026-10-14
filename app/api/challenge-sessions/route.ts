@@ -156,6 +156,7 @@ export async function POST(request: Request) {
 
       case "validate_match": {
         const { match_id, champion_name, champion_id, won, game_mode, game_duration, stats, game_end_timestamp } = body;
+        const baseXpAlreadyAwarded = body.base_xp_already_awarded === true;
         
         if (!match_id || !champion_name || !champion_id) {
           return NextResponse.json({ error: "Missing required match data" }, { status: 400 });
@@ -276,7 +277,7 @@ export async function POST(request: Request) {
         const newTotalBaseXp = activeSession.total_base_xp + baseXp;
 
         // Add processed match to prevent duplicates
-        const processedMatches = (activeSession as any).processed_matches || [];
+        const processedMatches: string[] = activeSession.processed_matches || [];
         processedMatches.push(match_id);
 
         const { data: updatedSession, error: updateError } = await supabaseAdmin
@@ -306,7 +307,8 @@ export async function POST(request: Request) {
           .single();
 
         if (user) {
-          const totalXpGained = baseXp + bonusXp;
+          const baseXpGained = baseXpAlreadyAwarded ? 0 : baseXp;
+          const totalXpGained = baseXpGained + bonusXp;
           const newXp = (user.xp || 0) + totalXpGained;
           const newLevel = calculateLevel(newXp);
 
@@ -320,9 +322,9 @@ export async function POST(request: Request) {
           success: true,
           session: updatedSession,
           xpGained: {
-            base: baseXp,
+            base: baseXpAlreadyAwarded ? 0 : baseXp,
             bonus: bonusXp,
-            total: baseXp + bonusXp
+            total: (baseXpAlreadyAwarded ? 0 : baseXp) + bonusXp
           }
         });
       }

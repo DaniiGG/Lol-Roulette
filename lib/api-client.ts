@@ -86,8 +86,18 @@ export function unlockAchievement(token: string, data: {
 }
 
 // Challenge Sessions API
-export function getChallengeSessions(token: string) {
-  return api('/api/challenge-sessions', { action: 'get' }, token)
+export async function getChallengeSessions(token: string) {
+  const res = await fetch(`${BASE}/api/challenge-sessions`, {
+    method: 'GET',
+    headers: {
+      'Authorization': `Bearer ${token}`
+    }
+  })
+  if (!res.ok) {
+    const err = await res.json().catch(() => ({ error: res.statusText }))
+    throw new Error(err.error || `API error: ${res.status}`)
+  }
+  return res.json()
 }
 
 export function startChallengeSession(token: string, data: {
@@ -105,6 +115,7 @@ export function validateChallengeMatch(token: string, data: {
   game_duration: number
   stats: any
   game_end_timestamp?: string
+  base_xp_already_awarded?: boolean
 }) {
   return api('/api/challenge-sessions', { action: 'validate_match', ...data }, token)
 }

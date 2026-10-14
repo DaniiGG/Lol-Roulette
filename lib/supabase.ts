@@ -64,6 +64,7 @@ export type ChallengeSession = {
   valid_wins: number
   bonus_xp: number
   total_base_xp: number
+  processed_matches: string[]
   created_at: string
   updated_at: string
 }
