@@ -21,6 +21,7 @@ interface RouletteWheelProps {
   lane?: string
   onResult: (champion: Champion) => void
   disabled?: boolean
+  profileLoading?: boolean
   rerollsUsed?: number
   maxRerolls?: number
   championPool?: string[] | null
@@ -44,6 +45,7 @@ export default function RouletteWheel({
   lane = 'all',
   onResult,
   disabled = false,
+  profileLoading = false,
   championPool = null,
   challengeFilter = null,
 }: RouletteWheelProps) {
@@ -59,6 +61,9 @@ export default function RouletteWheel({
 
   const stripRef = useRef<Champion[]>([])
   const prevCellIndexRef = useRef(0)
+  const championPoolKey = championPool?.join('\0') ?? null
+  const challengeFilterType = challengeFilter?.type ?? null
+  const challengeFilterValue = challengeFilter?.value ?? null
 
   /* ───────── AUDIO POOL PARA TICKS ───────── */
   const audioPoolRef = useRef<HTMLAudioElement[]>([])
@@ -87,6 +92,8 @@ export default function RouletteWheel({
   /* ───────── LOAD CHAMPIONS ───────── */
 
   useEffect(() => {
+    let cancelled = false
+
     ; (async () => {
       setLoadingChamps(true)
 
@@ -115,9 +122,10 @@ export default function RouletteWheel({
           })
         }
 
-        if (championPool && championPool.length > 0) {
+        const poolNames = championPoolKey?.split('\0')
+        if (poolNames && poolNames.length > 0) {
           pool = pool.filter(champ =>
-            championPool.some(p =>
+            poolNames.some(p =>
               normalizeChampionName(p).toLowerCase() ===
               normalizeChampionName(champ.name).toLowerCase()
             )
@@ -125,26 +133,30 @@ export default function RouletteWheel({
         }
 
         // Apply challenge filter (region, class, or mastery)
-        if (challengeFilter) {
-          if (challengeFilter.type === 'region') {
-            pool = pool.filter(champ => championHasRegion(champ.name, challengeFilter.value as string))
-          } else if (challengeFilter.type === 'class') {
-            pool = pool.filter(champ => championHasClass(champ.name, challengeFilter.value as string))
-          } else if (challengeFilter.type === 'low_mastery') {
+        if (challengeFilterType) {
+          if (challengeFilterType === 'region') {
+            pool = pool.filter(champ => championHasRegion(champ.name, challengeFilterValue as string))
+          } else if (challengeFilterType === 'class') {
+            pool = pool.filter(champ => championHasClass(champ.name, challengeFilterValue as string))
+          } else if (challengeFilterType === 'low_mastery') {
             // For low mastery, we can't filter client-side without mastery data
             // This would need to be handled server-side or via mastery API
             // For now, we'll show all champions and validate server-side
           }
         }
 
-        setAllChampions(pool.sort(() => Math.random() - 0.5))
+        if (!cancelled) setAllChampions(pool.sort(() => Math.random() - 0.5))
       } catch (err) {
         console.error(err)
       }
 
-      setLoadingChamps(false)
+      if (!cancelled) setLoadingChamps(false)
     })()
-  }, [lane, championPool, challengeFilter])
+
+    return () => {
+      cancelled = true
+    }
+  }, [lane, championPoolKey, challengeFilterType, challengeFilterValue])
 
   /* ───────── PRELOAD IMAGES ───────── */
 
@@ -356,7 +368,7 @@ export default function RouletteWheel({
   return (
     <div className="w-full flex justify-center items-center relative">
       <div className="relative">
-        <div className="relative overflow-hidden rounded-2xl border border-neutral-800 shadow-2xl shadow-black/60">
+        <div className="relative overflow-hidden rounded-2xl border border-[#C89B3C]/35 shadow-[inset_0_0_0_1px_rgba(200,155,60,0.08),0_14px_36px_rgba(0,0,0,0.5)]">
           {/* Fade izquierdo */}
           <div className="pointer-events-none absolute left-0 top-0 h-full w-32 bg-gradient-to-r from-black to-transparent z-10" />
           {/* Fade derecho */}
@@ -372,6 +384,15 @@ export default function RouletteWheel({
             className="block"
             style={{ width: "50vw", height: CELL_H + 40 }}
           />
+
+          {(loadingChamps || profileLoading) && (
+            <div className="absolute inset-0 z-30 flex items-center justify-center bg-neutral-950/90" role="status" aria-label="Loading champions">
+              <svg className="h-8 w-8 animate-spin text-[#C89B3C]" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
+              </svg>
+            </div>
+          )}
 
           {winner && !isSpinning && (
             <div className="absolute inset-0 z-40 flex items-center justify-center bg-black/75 backdrop-blur-sm animate-fadeIn">
@@ -394,7 +415,7 @@ export default function RouletteWheel({
         <div className="absolute top-1/2 -translate-y-1/2 left-full ml-6">
           <SlotLever
             onActivate={spin}
-            disabled={isSpinning || loadingChamps || disabled}
+            disabled={isSpinning || loadingChamps || profileLoading || disabled}
             isSpinning={isSpinning}
           />
         </div>

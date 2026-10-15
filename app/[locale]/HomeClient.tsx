@@ -47,6 +47,7 @@ export default function Home() {
   // User state
   const [user, setUser] = useState<any>(null)
   const [sessionToken, setSessionToken] = useState<string | null>(null)
+  const [profileLoading, setProfileLoading] = useState(true)
   const [showLoginModal, setShowLoginModal] = useState(false)
   const [showAchievementsModal, setShowAchievementsModal] = useState(false)
 
@@ -140,7 +141,9 @@ export default function Home() {
   useEffect(() => {
     const token = Cookies.get('session_token')
     if (token) {
-      verifyAndLoadSession(token)
+      void verifyAndLoadSession(token).finally(() => setProfileLoading(false))
+    } else {
+      setProfileLoading(false)
     }
   }, [])
 
@@ -162,7 +165,7 @@ export default function Home() {
       const { user: userData } = await response.json()
       setUser(userData)
       setSessionToken(token)
-      loadUserData(userData.id)
+      await loadUserData(userData.id)
 
     } catch (error) {
       Cookies.remove('session_token')
@@ -750,6 +753,7 @@ export default function Home() {
                 lane={selectedLane}
                 onResult={handleRouletteResult}
                 disabled={!!(user && rerollCount > MAX_REROLLS)}
+                profileLoading={profileLoading}
                 rerollsUsed={user ? rerollCount : 0}
                 maxRerolls={MAX_REROLLS}
                 championPool={activePoolChamps}
