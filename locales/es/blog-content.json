@@ -1455,5 +1455,225 @@
                 ]
             }
         ]
+    },
+    {
+        "slug": "worlds-2026-guide",
+        "title": "LoL Worlds 2026: Todo lo que necesitas saber sobre el Campeonato Mundial",
+        "description": "Descubre todo sobre LoL Worlds 2026, desde el formato del torneo y los mejores equipos hasta las grandes historias y lo que los fans deberían ver.",
+        "keywords": [
+            "LoL Worlds 2026",
+            "Campeonato Mundial de League of Legends 2026",
+            "LoL Worlds 2026",
+            "Equipos de Worlds 2026",
+            "Esports de League of Legends",
+            "Formato de LoL Worlds"
+        ],
+        "excerpt": "Worlds 2026 está aquí: la etapa Play-In, la etapa Suiza y la etapa Eliminatoria, los mejores equipos a seguir, el formato y cómo convertir el torneo en tu propio desafío de League of Legends.",
+        "ctaLabel": "Gira un Campeón Aleatorio",
+        "ctaHref": "/",
+        "heroIntro": [
+            "Cada año, los mejores equipos de League of Legends de todo el mundo se reúnen para luchar por un objetivo máximo: convertirse en campeones mundiales. Ahora, Worlds 2026 está aquí, reuniendo a los nombres más grandes del LoL profesional para el torneo más importante de la temporada.",
+            "Ya sea que sigas la Liga competitiva cada semana o simplemente quieras entender de qué se trata todo el bombo, este es el momento perfecto para involucrarte."
+        ],
+        "sections": [
+            {
+                "heading": "¿Qué es el Campeonato Mundial de League of Legends?",
+                "paragraphs": [
+                    "El Campeonato Mundial de League of Legends, comúnmente conocido como Worlds, es el torneo internacional anual más grande del LoL profesional.",
+                    "Durante la temporada, los equipos compiten en sus ligas regionales para ganar un lugar en Worlds. Los equipos más fuertes de regiones que incluyen Corea, China, Europa, Norteamérica y Asia-Pacífico finalmente se enfrentan en el escenario internacional.",
+                    "El objetivo es simple: derrotar a los mejores equipos del mundo y levantar la Copa del Invocador.",
+                    "Pero Worlds es más que solo ganar juegos. Es donde los jugadores construyen sus legados, los equipos hacen historia en los esports y las estrategias que dominan el juego profesional pueden influir en cómo millones de personas abordan sus propias partidas rankeadas.",
+                    "Para muchos fans, es también el torneo donde surgen nuevas estrellas y las leyendas establecidas demuestran que aún pueden competir al más alto nivel."
+                ]
+            },
+            {
+                "heading": "¿Cuándo es Worlds 2026?",
+                "paragraphs": [
+                    "Worlds 2026 se celebra del 15 de octubre al 14 de noviembre, con el torneo teniendo lugar en tres ciudades de Estados Unidos.",
+                    "La competición progresa a través de varias etapas, reduciendo gradualmente el campo hasta que solo quedan dos equipos para la gran final.",
+                    "El calendario y los horarios de los partidos se pueden consultar en el sitio web oficial de LoL Esports (lolesports.com/)."
+                ],
+                "bullets": [
+                    "15-18 de octubre: Etapa Play-In en Los Ángeles.",
+                    "23-31 de octubre: Etapa Suiza en Allen, Texas.",
+                    "3-8 de noviembre: Etapa Eliminatoria, cuartos de final y semifinales en Allen, Texas.",
+                    "14 de noviembre: Gran Final en Brooklyn, Nueva York."
+                ]
+            },
+            {
+                "heading": "¿Qué equipos compiten en Worlds 2026?",
+                "paragraphs": [
+                    "Worlds reúne a equipos de todo el ecosistema competitivo de League of Legends. El alineamiento de este año cuenta con 19 equipos, lo que brinda la oportunidad de ver diferentes estilos de juego regionales chocar en el mismo escenario.",
+                    "Para conocer el alineamiento completo, consulta el primer oficial de Worlds 2026 (lolesports.com/en-GB/news/worlds-2026-primer)."
+                ]
+            },
+            {
+                "heading": "T1 — La legendaria organización coreana",
+                "paragraphs": [
+                    "T1 es uno de los nombres más reconocibles en los esports de League of Legends. Con una historia de éxito internacional y una enorme base de fans global, la organización siempre atrae la atención cuando llega Worlds.",
+                    "Para los fans, seguir a T1 significa ver a un equipo con enormes expectativas y un legado que proteger."
+                ]
+            },
+            {
+                "heading": "Gen.G — La potencia competitiva de Corea",
+                "paragraphs": [
+                    "Gen.G entra en la conversación cada vez que se discuten los equipos más fuertes del mundo. Los equipos coreanos son reconocidos por su preparación, su juego macro disciplinado y su capacidad para castigar errores.",
+                    "Ver a Gen.G es una oportunidad para observar cómo el juego coordinado y la toma de decisiones estratégicas pueden controlar una partida."
+                ]
+            },
+            {
+                "heading": "G2 Esports — El contendiente internacional de Europa",
+                "paragraphs": [
+                    "G2 representa a la LEC europea y se ha ganado una reputación por estrategias creativas, jugadas agresivas y series entretenidas.",
+                    "Los fans europeos también tendrán un motivo para seguir a Movistar KOI, otro representante de la región compitiendo en el escenario internacional."
+                ]
+            },
+            {
+                "heading": "Los desafiantes chinos y otros regionales",
+                "paragraphs": [
+                    "Los equipos de la LPL de China, Asia-Pacífico, Norteamérica y Brasil traen diferentes enfoques al draft, las peleas y el control de objetivos.",
+                    "Esa diversidad es uno de los aspectos más interesantes de Worlds. Una estrategia que funciona de manera consistente en una región puede ser desafiada por un estilo completamente diferente de otra."
+                ]
+            },
+            {
+                "heading": "¿Cómo funciona el formato de Worlds 2026?",
+                "paragraphs": [
+                    "El torneo está diseñado para poner a prueba a los equipos en múltiples etapas en lugar de depender de un solo partido."
+                ]
+            },
+            {
+                "heading": "1. Etapa Play-In",
+                "paragraphs": [
+                    "La etapa Play-In brinda a cuatro equipos otra oportunidad de asegurar un lugar en el torneo principal.",
+                    "Los equipos compiten en un bracket de doble eliminación, lo que significa que tienen una segunda oportunidad después de su primera derrota. Los partidos son series al mejor de cinco, por lo que los equipos necesitan ganar tres juegos para avanzar.",
+                    "Con la clasificación en juego, cada draft y cada pelea de equipo puede tener un gran impacto."
+                ]
+            },
+            {
+                "heading": "2. Etapa Suiza",
+                "paragraphs": [
+                    "La etapa Suiza reúne a 16 equipos para una serie de rondas contra oponentes con registros de victorias y derrotas similares.",
+                    "El objetivo es asegurar tres victorias para avanzar a la etapa Eliminatoria. Tres derrotas significan eliminación.",
+                    "Este formato crea enfrentamientos fascinantes porque los equipos con registros similares se enfrentan entre sí a medida que avanza la competición. Una sola victoria puede acercar a un equipo a la clasificación, mientras que una derrota puede dejarlo al borde de la eliminación."
+                ]
+            },
+            {
+                "heading": "3. Etapa Eliminatoria y Gran Final",
+                "paragraphs": [
+                    "Los ocho equipos que sobreviven la etapa Suiza entran en la etapa Eliminatoria de eliminación simple.",
+                    "A partir de este momento, cada serie es decisiva. Ganas, y el viaje continúa. Pierdes, y el torneo termina.",
+                    "Los equipos restantes luchan a través de cuartos de final y semifinales antes de que los dos finalistas se encuentren en Brooklyn el 14 de noviembre.",
+                    "La final es la culminación de toda una temporada de competición, y el equipo que gana se gana el título de campeón mundial."
+                ]
+            },
+            {
+                "heading": "¿Qué deberías ver en Worlds 2026?",
+                "paragraphs": [
+                    "No necesitas conocer a cada jugador profesional ni entender cada detalle estratégico para disfrutar de Worlds. Algunos elementos clave pueden hacer que las partidas sean mucho más interesantes."
+                ]
+            },
+            {
+                "heading": "El draft de campeones",
+                "paragraphs": [
+                    "Antes de que comience cada juego, los equipos seleccionan sus campeones y bannean a otros.",
+                    "El draft es una de las partes más importantes del League of Legends profesional. Los equipos deben equilibrar picks cómodos, composición de equipo, counters y el meta competitivo actual.",
+                    "Presta atención a qué campeones se priorizan repetidamente y cuáles los equipos están dispuestos a dejar disponibles para sus oponentes.",
+                    "Un campeón que parece débil en una partida de solitario ordinaria puede ser extremadamente valioso cuando se juega como parte de una composición profesional coordinada."
+                ]
+            },
+            {
+                "heading": "Peleas de equipo y control de objetivos",
+                "paragraphs": [
+                    "Las peleas de dragón, los setups de Barón y los compromisos finales pueden decidir toda una serie.",
+                    "Los equipos profesionales a menudo pasan varios minutos preparándose para un solo objetivo, controlando la visión y posicionándose antes de que siquiera comience la pelea.",
+                    "Observa cómo los equipos se mueven por el mapa antes de que aparezca un objetivo importante. A veces, la jugada ganadora sucede mucho antes de que alguien aterrice la primera habilidad."
+                ]
+            },
+            {
+                "heading": "Picks inesperados",
+                "paragraphs": [
+                    "Una de las cosas más entretenidas de Worlds es ver a los equipos experimentar con campeones o estrategias que otros equipos no han preparado.",
+                    "Un pick inusual puede disruptar el draft de un oponente o forzarlos a adaptarse a un estilo de juego diferente.",
+                    "Estos momentos son especialmente interesantes para jugadores ordinarios porque demuestran que League of Legends no siempre se trata de seguir ciegamente una tier list. Los matchups, la ejecución y la composición del equipo importan."
+                ]
+            },
+            {
+                "heading": "¿Puedes usar las estrategias de Worlds en tus propias partidas rankeadas?",
+                "paragraphs": [
+                    "Absolutamente, aunque el juego profesional y el solitario son entornos muy diferentes.",
+                    "Los equipos profesionales se comunican constantemente y coordinan sus movimientos alrededor de objetivos específicos. En las partidas rankeadas, es posible que no tengas el mismo nivel de trabajo en equipo.",
+                    "Aún así, hay varias lecciones útiles que puedes tomar de Worlds."
+                ],
+                "bullets": [
+                    "Aprende por qué se eligen los campeones: no copies solo el campeón de un jugador profesional. Entiende el papel del campeón en la composición del equipo.",
+                    "Presta atención al timing de los objetivos: prepararte para dragones y Barón antes de que aparezcan puede darle a tu equipo una gran ventaja.",
+                    "Mejora tu pool de campeones: ver diferentes roles y estilos de juego puede ayudarte a descubrir campeones que se adapten a ti.",
+                    "Adapta en lugar de ir al piloto automático: la mejor elección depende del matchup, de la composición de tu equipo y de lo que el juego requiera."
+                ],
+                "paragraphs": [
+                    "También puedes convertir el torneo en tu propio desafío personal.",
+                    "En lugar de jugar siempre el mismo campeón cómodo, ¿por qué no experimentar con un pick que viste durante Worlds o probar un campeón completamente desconocido?",
+                    "Si quieres facilitarlo, usa League Roulette (leagueroulette.com/) para aleatorizar la selección de tu próximo campeón. Podrías descubrir un nuevo main, encontrar un estilo de juego diferente o simplemente hacer tu próxima sesión rankeada más interesante."
+                ]
+            },
+            {
+                "heading": "Convierte Worlds 2026 en tu propio desafío de League of Legends",
+                "paragraphs": [
+                    "Ver a jugadores profesionales es una cosa. Ponerte a prueba con un campeón diferente es otra.",
+                    "Aquí tienes un desafío sencillo para intentar mientras Worlds está ocurriendo:"
+                ],
+                "bullets": [
+                    "1. Ve una partida de Worlds y elige un rol que te interese.",
+                    "2. Elige un campeón que nunca hayas jugado seriamente en ese rol.",
+                    "3. Juega tres partidas con ese campeón.",
+                    "4. Concéntrate en aprender sus habilidades, matchups y su papel en las peleas de equipo.",
+                    "5. Decide si merece un lugar permanente en tu pool de campeones."
+                ],
+                "paragraphs": [
+                    "¿Quieres hacerlo completamente aleatorio? Usa League Roulette (leagueroulette.com/) para seleccionar tu próximo campeón y aceptar cualquier resultado que te dé.",
+                    "No necesitas ganar todas las partidas para que el desafío valga la pena. El objetivo es salir de tus hábitos habituales y descubrir nuevas formas de jugar.",
+                    "Y si tu pick aleatorio resulta ser sorprendentemente efectivo, quizás hayas encontrado tu próximo main."
+                ]
+            },
+            {
+                "heading": "Reflexiones finales",
+                "paragraphs": [
+                    "Worlds 2026 es una oportunidad para ver a los mejores equipos de League of Legends competir, descubrir nuevas estrategias y ver qué jugadores se elevan cuando la presión es más alta.",
+                    "Ya sea que sigas cada partido o te sintonices para las series más grandes, presta atención a los drafts de campeones, las estrategias detrás de cada victoria y los picks inesperados que hacen que el LoL competitivo sea tan entretenido.",
+                    "Y no tienes que dejar toda la emoción a los profesionales.",
+                    "Elige un nuevo campeón, desafíate a ti mismo y haz que tu próxima partida de League sea impredecible con League Roulette (leagueroulette.com/). El próximo campeón que descubras podría convertirse en tu nuevo favorito."
+                ]
+            },
+            {
+                "heading": "Fuentes",
+                "bullets": [
+                    "Primer oficial de Worlds 2026 — LoL Esports (lolesports.com/en-GB/news/worlds-2026-primer)",
+                    "Calendario oficial de LoL Esports (lolesports.com/)",
+                    "Resumen del torneo de Worlds 2026 (lolesports.com/en-US/tournament/115660540725177488/overview)"
+                ]
+            }
+        ],
+        "faq": [
+            {
+                "q": "¿Cuándo comienza y termina LoL Worlds 2026?",
+                "a": "Worlds 2026 se celebra del 15 de octubre al 14 de noviembre de 2026. El torneo comienza con la etapa Play-In y concluye con la gran final en Brooklyn, Nueva York."
+            },
+            {
+                "q": "¿Cuántos equipos compiten en Worlds 2026?",
+                "a": "Un total de 19 equipos participan en este Campeonato Mundial, representando varias regiones competitivas alrededor del mundo."
+            },
+            {
+                "q": "¿Dónde puedo ver Worlds 2026?",
+                "a": "Puedes encontrar el calendario oficial y la información de transmisión a través de LoL Esports (lolesports.com/). Consulta las transmisiones regionales disponibles para cobertura en tu idioma preferido."
+            },
+            {
+                "q": "¿Por qué es Worlds importante en League of Legends?",
+                "a": "Worlds es el campeonato internacional principal de la temporada. Reúne a los mejores equipos de diferentes regiones para competir por el título mundial y suele mostrar el nivel más alto de League of Legends profesional."
+            },
+            {
+                "q": "¿Cómo puedo descubrir nuevos campeones para jugar?",
+                "a": "Puedes explorar guías de campeones, ver partidas profesionales para inspirarte o usar League Roulette (leagueroulette.com/) para aleatorizar tu próximo campeón y probar algo diferente."
+            }
+        ]
     }
 ]

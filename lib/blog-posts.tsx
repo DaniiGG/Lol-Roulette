@@ -17,6 +17,7 @@ export const BLOG_SLUGS = [
   "how-to-farm-in-league",
   "understanding-lane-matchups",
   "champion-rotation-guide",
+  "worlds-2026-guide",
 ]
 
 export const blogKeywords: Record<string, string[]> = {
@@ -38,6 +39,7 @@ export const blogKeywords: Record<string, string[]> = {
   "how-to-farm-in-league": ["how to farm in league of legends","last hitting guide"],
   "understanding-lane-matchups": ["lane matchups league of legends","champion matchups"],
   "champion-rotation-guide": ["champion rotation guide","free champions this week"],
+  "worlds-2026-guide": ["lol worlds 2026","league of legends worlds 2026","lol world championship"],
 }
 
 export const BLOG_META: Record<string, { date: string; author: string; lane: string; tags: string[] }> = {
@@ -59,6 +61,7 @@ export const BLOG_META: Record<string, { date: string; author: string; lane: str
   "how-to-farm-in-league": { date: "2026-05-12", author: "League Roulette Team", lane: "all-lanes", tags: ["farming", "cs", "last-hitting"] },
   "understanding-lane-matchups": { date: "2026-05-20", author: "League Roulette Team", lane: "all-lanes", tags: ["matchups", "lane", "strategy"] },
   "champion-rotation-guide": { date: "2026-05-28", author: "League Roulette Team", lane: "all-lanes", tags: ["champion-rotation", "free-champions"] },
+  "worlds-2026-guide": { date: "2026-10-17", author: "League Roulette Team", lane: "all-lanes", tags: ["esports", "worlds", "tournament"] },
 }
 
 export function getLaneForSlug(slug: string): string {

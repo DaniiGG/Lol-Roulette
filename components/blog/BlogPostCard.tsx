@@ -36,25 +36,28 @@ export default function BlogPostCard({ post, locale, featured = false, index = 0
     >
       <div className="relative w-full md:w-72 md:flex-shrink-0 aspect-video overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#C89B3C]/20 via-transparent to-cyan-500/10" />
-        {post.sections.some(s => s.table) && (
-          <div className="absolute inset-0 flex items-center justify-center p-8 opacity-20">
-            <svg className="w-16 h-16 text-[#C89B3C]/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 10h18M3 14h18M3 18h18" />
-            </svg>
+        {meta?.image ? (
+          <Image
+            src={meta.image}
+            alt={meta.imageAlt ?? post.title}
+            fill
+            sizes={featured ? '(max-width: 768px) 100vw, 288px' : '(max-width: 768px) 100vw, 33vw'}
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
+          />
+        ) : (
+          <div className="absolute inset-0 flex items-center justify-center">
+            <span className="text-6xl opacity-30 group-hover:opacity-50 transition-opacity">
+              {catInfo?.name.includes('Champion') ? '⚔️' :
+                catInfo?.name.includes('Guide') ? '📖' :
+                catInfo?.name.includes('Tier') ? '🏆' :
+                catInfo?.name.includes('Beginner') ? '🌱' :
+                catInfo?.name.includes('Ranked') ? '📈' :
+                catInfo?.name.includes('Mechanic') ? '⚙️' :
+                '🎲'}
+            </span>
           </div>
         )}
         <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/90 via-transparent to-transparent" />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <span className="text-6xl opacity-30 group-hover:opacity-50 transition-opacity">
-            {catInfo?.name.includes('Champion') ? '⚔️' :
-              catInfo?.name.includes('Guide') ? '📖' :
-              catInfo?.name.includes('Tier') ? '🏆' :
-              catInfo?.name.includes('Beginner') ? '🌱' :
-              catInfo?.name.includes('Ranked') ? '📈' :
-              catInfo?.name.includes('Mechanic') ? '⚙️' :
-              '🎲'}
-          </span>
-        </div>
         <div className="absolute bottom-3 left-3 right-3 flex flex-wrap gap-1.5">
           <span className="px-2.5 py-1 rounded-full bg-neutral-900/90 backdrop-blur text-xs font-medium text-[#C89B3C] border border-[#C89B3C]/30">
             {catInfo?.name ?? 'Article'}

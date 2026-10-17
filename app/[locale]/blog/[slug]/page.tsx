@@ -5,6 +5,7 @@ import { getHreflangAlternates } from '@/lib/seo-utils'
 import { getGraphSchema, getBreadcrumbSchema } from '@/lib/seo-utils'
 import { routing } from '@/i18n/routing'
 import Link from 'next/link'
+import Image from 'next/image'
 import Script from 'next/script'
 import BlogPostContent from '@/components/blog/BlogPostContent'
 import TableOfContents from '@/components/blog/TableOfContents'
@@ -52,6 +53,9 @@ export async function generateMetadata(
   if (!post) return {}
 
   const meta = getPostMeta(slug)
+  const imageUrl = meta?.image
+    ? new URL(meta.image, 'https://leagueroulette.com').toString()
+    : 'https://leagueroulette.com/og-image.png'
   const availableLocales = getAvailableLocales(slug)
   const publishedDate = meta?.publishedAt ?? ''
   const updatedDate = meta?.updatedAt ?? ''
@@ -80,14 +84,14 @@ export async function generateMetadata(
       publishedTime: publishedDate || new Date().toISOString(),
       modifiedTime: updatedDate || new Date().toISOString(),
       authors: ['https://leagueroulette.com/about'],
-      images: [{ url: 'https://leagueroulette.com/og-image.png', width: 1200, height: 630, alt: post.title }],
+      images: [{ url: imageUrl, width: 1200, height: 630, alt: meta?.imageAlt ?? post.title }],
       locale: locale === 'en' ? 'en_US' : locale.replace('-CN', '-CN'),
     },
     twitter: {
       card: 'summary_large_image',
       title: post.title,
       description: post.description,
-      images: ['https://leagueroulette.com/og-image.png'],
+      images: [imageUrl],
       creator: '@LeagueRoulette',
     },
     other: {
@@ -117,6 +121,9 @@ export default async function BlogPostPage(props: BlogPostPageProps) {
   }
 
   const meta = getPostMeta(slug)
+  const imageUrl = meta?.image
+    ? new URL(meta.image, 'https://leagueroulette.com').toString()
+    : 'https://leagueroulette.com/og-image.png'
   const availableLocales = getAvailableLocales(slug)
   const category = meta?.category
   const catInfo = category ? CATEGORIES.find(c => c.slug === category) : undefined
@@ -157,7 +164,7 @@ export default async function BlogPostPage(props: BlogPostPageProps) {
     dateModified: updatedDate ?? meta?.publishedAt,
     mainEntityOfPage: `https://leagueroulette.com${locale === 'en' ? `/blog/${slug}` : `/${locale}/blog/${slug}`}`,
     keywords: meta?.keywords?.join(', '),
-    image: 'https://leagueroulette.com/og-image.png',
+    image: imageUrl,
     articleSection: category,
     wordCount: post.sections.reduce((acc, s) =>
       acc + (s.paragraphs ?? []).join(' ').split(/\s+/).length, 0) + post.heroIntro.join(' ').split(/\s+/).length,
@@ -262,19 +269,30 @@ export default async function BlogPostPage(props: BlogPostPageProps) {
           </div>
         </header>
 
-        {/* Hero visual placeholder */}
+        {/* Article cover */}
         <div className="mb-10 relative aspect-video rounded-3xl overflow-hidden bg-gradient-to-br from-[#C89B3C]/20 via-neutral-900/50 to-cyan-500/10">
-          <div className="absolute inset-0 flex items-center justify-center">
-            <span className="text-8xl opacity-30">
-              {catInfo?.name.includes('Champion') ? '⚔️' :
-                catInfo?.name.includes('Guide') ? '📖' :
-                catInfo?.name.includes('Tier') ? '🏆' :
-                catInfo?.name.includes('Beginner') ? '🌱' :
-                catInfo?.name.includes('Ranked') ? '📈' :
-                catInfo?.name.includes('Mechanic') ? '⚙️' :
-                '🎲'}
-            </span>
-          </div>
+          {meta?.image ? (
+            <Image
+              src={meta.image}
+              alt={meta.imageAlt ?? post.title}
+              fill
+              priority
+              sizes="(max-width: 1024px) 100vw, 1024px"
+              className="object-cover"
+            />
+          ) : (
+            <div className="absolute inset-0 flex items-center justify-center">
+              <span className="text-8xl opacity-30">
+                {catInfo?.name.includes('Champion') ? '⚔️' :
+                  catInfo?.name.includes('Guide') ? '📖' :
+                  catInfo?.name.includes('Tier') ? '🏆' :
+                  catInfo?.name.includes('Beginner') ? '🌱' :
+                  catInfo?.name.includes('Ranked') ? '📈' :
+                  catInfo?.name.includes('Mechanic') ? '⚙️' :
+                  '🎲'}
+              </span>
+            </div>
+          )}
         </div>
 
         <div className="lg:grid lg:grid-cols-12 lg:gap-8">

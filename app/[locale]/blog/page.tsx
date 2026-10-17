@@ -115,7 +115,7 @@ export default async function BlogIndexPage({ params }: { params: Promise<{ loca
                   {cat.name}
                 </div>
                 <h3 className="text-xl font-semibold text-white group-hover:text-[#C89B3C] transition-colors">
-                  {cat.count} {cat.count === 1 ? t('articleSingular') : t('articlePlural')}
+                  {t('categoryCount', { n: cat.count })}
                 </h3>
                 <p className="mt-2 text-sm text-neutral-400 line-clamp-2">
                   {t(`categories.${cat.slug}.desc`)}

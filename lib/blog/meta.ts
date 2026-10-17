@@ -21,6 +21,9 @@ export type BlogPostMeta = {
   /** Optional SEO overrides. */
   seoTitle?: string
   seoDescription?: string
+  /** Public URL for the post's cover image, e.g. /images/blog/post-slug.webp. */
+  image?: string
+  imageAlt?: string
 }
 
 /**
@@ -301,6 +304,27 @@ export const BLOG_POST_META: Record<string, BlogPostMeta> = {
     ],
     translatedIn: ['en', 'es'],
     related: ['how-to-improve-at-league', 'adc-champions-guide', 'mid-lane-champions-guide'],
+  },
+  'worlds-2026-guide': {
+    publishedAt: '2026-10-17',
+    author: 'League Roulette Team',
+    category: 'guides',
+    lane: 'all-lanes',
+    keywords: [
+      'lol worlds 2026',
+      'league of legends worlds 2026',
+      'lol world championship',
+      'worlds 2026 teams',
+      'league of legends esports',
+      'lol worlds format',
+    ],
+    translatedIn: ['en', 'es'],
+    related: ['how-to-improve-at-league', 'how-to-climb-ranked', 'lol-tier-list-current-patch'],
+    seoTitle: 'LoL Worlds 2026: Everything You Need to Know',
+    seoDescription:
+      'Discover everything about LoL Worlds 2026, from the tournament format and top teams to the biggest storylines and what fans should watch.',
+    image: '/images/blog/worlds20262.webp',
+    imageAlt: 'LoL Worlds 2026: Everything You Need to Know About the World Championship',
   },
 }
 
