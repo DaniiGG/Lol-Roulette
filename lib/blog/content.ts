@@ -6,12 +6,55 @@ export type BlogTable = {
   rows: string[][]
 }
 
+export type PatchChangeRow = {
+  /** Data Dragon champion asset id, e.g. "Azir", "LeeSin", "MonkeyKing". */
+  championId: string
+  name: string
+  role?: string
+  ability: string
+  before: string
+  after: string
+  change: string
+  impact: string
+  type: 'buff' | 'nerf'
+}
+
+export type ItemChangeRow = {
+  /** Data Dragon numeric item id as a string, e.g. "2520". */
+  itemId: string
+  name: string
+  stat: string
+  before: string
+  after: string
+  change?: string
+  impact: string
+  type: 'buff' | 'nerf' | 'adjustment'
+}
+
+export type BlogPatchTable = {
+  kind: 'champion-buffs' | 'champion-nerfs' | 'item-changes'
+  headers: string[]
+  rows: (PatchChangeRow | ItemChangeRow)[]
+}
+
+export type BlogCta = {
+  label: string
+  href: string
+}
+
+export type BlogSource = {
+  label: string
+  url: string
+}
+
 export type BlogSection = {
   heading: string
   /** Optional: some sections are list or table driven. */
   paragraphs?: string[]
   bullets?: string[]
   table?: BlogTable
+  patchTable?: BlogPatchTable
+  cta?: BlogCta
 }
 
 export type BlogFaqItem = {
@@ -30,6 +73,7 @@ export type BlogPost = {
   heroIntro: string[]
   sections: BlogSection[]
   faq?: BlogFaqItem[]
+  sources?: BlogSource[]
 }
 
 const WORDS_PER_MINUTE = 200
@@ -44,6 +88,17 @@ export function postWordCount(post: BlogPost): number {
     if (s.table) {
       for (const h of s.table.headers) words += h.split(/\s+/).length
       for (const row of s.table.rows) for (const cell of row) words += cell.split(/\s+/).length
+    }
+    if (s.patchTable) {
+      for (const h of s.patchTable.headers) words += h.split(/\s+/).length
+      for (const row of s.patchTable.rows) {
+        const r = row as Record<string, string>
+        for (const v of Object.values(r)) words += v.split(/\s+/).length
+      }
+    }
+    if (s.cta) {
+      words += s.cta.label.split(/\s+/).length
+      for (const p of s.paragraphs ?? []) words += p.split(/\s+/).length
     }
   }
   for (const f of post.faq ?? []) {

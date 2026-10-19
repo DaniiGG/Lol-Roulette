@@ -12,7 +12,7 @@ export type BlogPostMeta = {
   updatedAt?: string
   author: string
   category: BlogCategorySlug
-  lane: string
+  lane?: string
   keywords: string[]
   /** Locales with a real (fully localized) translation of this post. */
   translatedIn: string[]
@@ -326,6 +326,25 @@ export const BLOG_POST_META: Record<string, BlogPostMeta> = {
     image: '/images/blog/worlds20262.webp',
     imageAlt: 'LoL Worlds 2026: Everything You Need to Know About the World Championship',
   },
+  'lol-patch-26-21': {
+    publishedAt: '2026-10-19',
+    updatedAt: '2026-10-19',
+    author: 'League Roulette Team',
+    category: 'guides',
+    keywords: [
+      'lol patch 26.21',
+      'league of legends patch 26.21',
+      'lol patch notes 26.21',
+      'lol champion buffs and nerfs',
+      'patch 26.21 item changes',
+    ],
+    translatedIn: ['en', 'es'],
+    related: ['worlds-2026-guide', 'lol-tier-list-current-patch', 'how-to-climb-ranked'],
+    seoTitle: undefined,
+    seoDescription: undefined,
+    image: '/images/blog/parche21oct.jpg',
+    imageAlt: 'Patch 26.21 of League of Legends: buffs, nerfs y object changes',
+  },
 }
 
 export const BLOG_SLUGS = Object.keys(BLOG_POST_META)
@@ -362,7 +381,7 @@ export function getTagsForSlug(slug: string): string[] {
   if (!meta) return []
   const tags: string[] = []
   if (meta.category !== 'league-roulette') tags.push(meta.category)
-  if (meta.lane !== ALL_LANES) tags.push(meta.lane)
+  if (meta.lane && meta.lane !== ALL_LANES) tags.push(meta.lane)
   const postSlug = slug
   if (postSlug.includes('beginner')) tags.push('beginner')
   if (postSlug.includes('tier-list')) tags.push('meta')
