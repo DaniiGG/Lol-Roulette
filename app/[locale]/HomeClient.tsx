@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect, useRef } from "react"
+import { useState, useEffect, useRef, useSyncExternalStore } from "react"
 import Link from "next/link"
 import { useTranslations, useLocale } from "next-intl"
 import { useSearchParams } from "next/navigation"
@@ -12,7 +12,7 @@ import {
 } from "@/lib/api-client"
 import confetti from "canvas-confetti"
 import Cookies from 'js-cookie'
-import { Info } from 'lucide-react'
+import { History, Trash2 } from 'lucide-react'
 import InfoModal from "@/components/InfoModal"
 
 // Components
@@ -37,10 +37,87 @@ import { getChallengesByType } from "@/lib/challenge-definitions"
 
 import Script from "next/script"
 
+type GuestPick = {
+  id: string
+  name: string
+  lane: string
+  createdAt: string
+}
+
+const GUEST_PICK_STORAGE_KEY = 'league-roulette-guest-picks'
+const GUEST_PICK_CHANGE_EVENT = 'league-roulette-guest-picks-changed'
+const MAX_GUEST_PICKS = 6
+let guestPicksMemorySnapshot = '[]'
+const GUEST_PICK_LANE_LABELS: Record<string, string> = {
+  all: 'allLanes',
+  top: 'top',
+  jungle: 'jungle',
+  mid: 'mid',
+  adc: 'adc',
+  support: 'support',
+  aram: 'islandLife'
+}
+
+function subscribeToGuestPicks(onStoreChange: () => void) {
+  const handleStorage = (event: StorageEvent) => {
+    if (event.key === GUEST_PICK_STORAGE_KEY) onStoreChange()
+  }
+  window.addEventListener('storage', handleStorage)
+  window.addEventListener(GUEST_PICK_CHANGE_EVENT, onStoreChange)
+  return () => {
+    window.removeEventListener('storage', handleStorage)
+    window.removeEventListener(GUEST_PICK_CHANGE_EVENT, onStoreChange)
+  }
+}
+
+function getGuestPicksSnapshot() {
+  try {
+    const storedPicks = localStorage.getItem(GUEST_PICK_STORAGE_KEY)
+    if (storedPicks !== null) {
+      guestPicksMemorySnapshot = storedPicks
+      return storedPicks
+    }
+  } catch {
+    return guestPicksMemorySnapshot
+  }
+  return guestPicksMemorySnapshot
+}
+
+function parseGuestPicks(snapshot: string): GuestPick[] {
+  try {
+    const picks = JSON.parse(snapshot)
+    if (!Array.isArray(picks)) return []
+    return picks.filter((pick): pick is GuestPick =>
+      typeof pick?.id === 'string' &&
+      typeof pick?.name === 'string' &&
+      typeof pick?.lane === 'string' &&
+      typeof pick?.createdAt === 'string'
+    ).slice(0, MAX_GUEST_PICKS)
+  } catch {
+    return []
+  }
+}
+
+function saveGuestPicks(picks: GuestPick[]) {
+  guestPicksMemorySnapshot = JSON.stringify(picks)
+  try {
+    localStorage.setItem(GUEST_PICK_STORAGE_KEY, guestPicksMemorySnapshot)
+  } catch {
+    guestPicksMemorySnapshot = JSON.stringify(picks)
+  }
+  window.dispatchEvent(new Event(GUEST_PICK_CHANGE_EVENT))
+}
+
 export default function Home() {
   const t = useTranslations('home')
   const tChallenges = useTranslations('challenges')
+  const tLanes = useTranslations('laneSelector')
   const locale = useLocale()
+  const guestPicks = parseGuestPicks(useSyncExternalStore(
+    subscribeToGuestPicks,
+    getGuestPicksSnapshot,
+    () => '[]'
+  ))
   const searchParams = useSearchParams()
   const urlChallenge = searchParams.get('challenge')
 
@@ -114,7 +191,19 @@ export default function Home() {
     if (Object.keys(saved).length > 0) {
       setChampionPool(saved)
     }
+
   }, [])
+
+  const clearGuestPicks = () => {
+    guestPicksMemorySnapshot = '[]'
+    try {
+      localStorage.removeItem(GUEST_PICK_STORAGE_KEY)
+    } catch {
+      window.dispatchEvent(new Event(GUEST_PICK_CHANGE_EVENT))
+      return
+    }
+    window.dispatchEvent(new Event(GUEST_PICK_CHANGE_EVENT))
+  }
 
   // Challenge lane mapping
   const getLaneForChallenge = (challengeId: string): string => {
@@ -242,6 +331,16 @@ export default function Home() {
   // SPIN: llamado por RouletteWheel al terminar la animación
   const handleRouletteResult = async (champData: { id: string; key: string | number; name: string }) => {
     setVerificationResult(null)
+
+    if (!user) {
+      const nextPicks = [{
+        id: champData.id,
+        name: champData.name,
+        lane: selectedLane,
+        createdAt: new Date().toISOString()
+      }, ...guestPicks].slice(0, MAX_GUEST_PICKS)
+      saveGuestPicks(nextPicks)
+    }
 
     // Incrementar reroll count
     const newRerollCount = user ? rerollCount + 1 : 0
@@ -585,76 +684,39 @@ export default function Home() {
 
         <div className="max-w-7xl mx-auto">
 
-          {/* Header con Login/Logout */}
-          <div className="flex justify-between items-center mb-4">
-            {/* Left side buttons */}
-            <div className="flex items-center gap-2">
-              <button
-                onClick={() => setShowInfoModal(true)}
-                className="px-4 py-2 rounded-xl bg-neutral-800 text-neutral-400 hover:bg-neutral-700 hover:text-white transition text-sm flex items-center gap-2"
-              >
-                <Info className="w-4 h-4" />
-                <span>{t('howItWorks')}</span>
-              </button>
-              <a
-                href="/leaderboard"
-                className="px-4 py-2 rounded-xl bg-neutral-800 text-neutral-400 hover:bg-neutral-700 hover:text-white transition text-sm flex items-center gap-2"
-              >
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 013.138-3.138z" />
-                </svg>
-                <span>{t('leaderboard')}</span>
-              </a>
-            </div>
-
-            {/* Login/Logout */}
-            <div>
-              {user ? (
-                <div className="flex items-center gap-4">
-                  <span className="text-neutral-400 text-sm">
-                    {user.game_name}#{user.tag_line}
-                  </span>
-
-                  <button
-                    onClick={() => setShowAchievementsModal(true)}
-                    className="px-4 py-2 rounded-xl bg-neutral-800 text-neutral-300 hover:bg-neutral-700 hover:text-white transition text-sm"
-                  >
-                    🏆{t('achievements')} <span className="text-neutral-400 text-sm">
-                      {userAchievements.length}/{Object.keys(ACHIEVEMENTS).length}🏆
-                    </span>
-                  </button>
-
-<button
-                    onClick={handleLogout}
-                    className="px-4 py-2 rounded-xl bg-neutral-800 text-neutral-400 hover:bg-neutral-700 hover:text-white transition text-sm"
-                  >
-                    {t('logout')}
-                    </button>
-                </div>
-              ) : (
-                <button
-                  onClick={() => setShowLoginModal(true)}
-                  className="px-6 py-2 rounded-xl bg-white text-neutral-950 hover:bg-neutral-100 transition font-semibold text-sm"
-                >
-                  {t('loginToTrack')}
-                </button>
-              )}
-            </div>
-          </div>
-
           {/* User Stats (solo si está logueado) */}
           {user && (
-            <div className="mb-3">
-              <UserStats user={{
-                summoner_name: `${user.game_name}#${user.tag_line}`,
-                level: user.level,
-                xp: user.xp,
-                summoner_level: user.summoner_level,
-                profile_icon_id: user.profile_icon_id,
-                current_streak: user.current_streak,
-                longest_streak: user.longest_streak,
-                total_challenges_completed: user.total_challenges_completed
-              }} />
+            <div className="mb-3 flex flex-col md:flex-row md:items-center justify-between gap-3">
+              <div>
+                <UserStats user={{
+                  summoner_name: `${user.game_name}#${user.tag_line}`,
+                  level: user.level,
+                  xp: user.xp,
+                  summoner_level: user.summoner_level,
+                  profile_icon_id: user.profile_icon_id,
+                  current_streak: user.current_streak,
+                  longest_streak: user.longest_streak,
+                  total_challenges_completed: user.total_challenges_completed
+                }} />
+              </div>
+
+              <div className="flex items-center gap-2">
+                <button
+                  onClick={() => setShowAchievementsModal(true)}
+                  className="px-4 py-2 rounded-xl bg-neutral-800 text-neutral-300 hover:bg-neutral-700 hover:text-white transition text-sm"
+                >
+                  🏆{t('achievements')} <span className="text-neutral-400 text-sm">
+                    {userAchievements.length}/{Object.keys(ACHIEVEMENTS).length}🏆
+                  </span>
+                </button>
+
+                <button
+                  onClick={handleLogout}
+                  className="px-4 py-2 rounded-xl bg-neutral-800 text-neutral-400 hover:bg-neutral-700 hover:text-white transition text-sm"
+                >
+                  {t('logout')}
+                </button>
+              </div>
             </div>
           )}
 
@@ -767,6 +829,45 @@ export default function Home() {
                 } : null}
               />
 
+              {!user && (
+                <section className="rounded-2xl border border-neutral-800 bg-neutral-900/60 p-4 sm:p-5" aria-labelledby="guest-picks-heading">
+                  <div className="mb-4 flex items-center justify-between gap-3">
+                    <h2 id="guest-picks-heading" className="flex items-center gap-2 font-semibold text-white">
+                      <History className="h-4 w-4 text-[#C89B3C]" />
+                      {t('guestHistoryTitle')}
+                    </h2>
+                    {guestPicks.length > 0 && (
+                      <button
+                        type="button"
+                        onClick={clearGuestPicks}
+                        className="inline-flex items-center gap-1.5 rounded-lg px-2 py-1 text-xs text-neutral-400 transition hover:bg-neutral-800 hover:text-white"
+                      >
+                        <Trash2 className="h-3.5 w-3.5" />
+                        {t('clearGuestHistory')}
+                      </button>
+                    )}
+                  </div>
+                  {guestPicks.length > 0 ? (
+                    <ul className="flex gap-2 overflow-x-auto pb-2">
+                      {guestPicks.map((pick) => (
+                        <li key={pick.createdAt} className="shrink-0 rounded-xl border border-neutral-800 bg-neutral-950/50 p-1">
+                          <img
+                            src={`https://ddragon.leagueoflegends.com/cdn/16.18.1/img/champion/${pick.id}.png`}
+                            alt={pick.name}
+                            className="w-10 h-10 object-cover rounded-lg"
+                            onError={(e) => {
+                              ;(e.target as HTMLImageElement).style.display = 'none'
+                            }}
+                          />
+                        </li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <p className="text-sm text-neutral-500">{t('guestHistoryEmpty')}</p>
+                  )}
+                </section>
+              )}
+
               {/* Champion Stats & Build */}
               {champ && (
                 <ChampionStats championId={champ.id} championName={champ.name} />
@@ -830,26 +931,17 @@ export default function Home() {
 
                {/* CTA para login (solo si no está logueado y ya giró) */}
               {!user && champ && (
-                <div className="p-6 rounded-2xl bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/30">
-                  <div className="flex items-start gap-4">
-                    <svg className="w-8 h-8 text-blue-400 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                    </svg>
-                    <div className="flex-1">
-                      <h3 className="text-white font-bold text-lg mb-2">
-                        {t('trackProgress')}
-                      </h3>
-                      <p className="text-neutral-300 text-sm mb-4">
-                        {t('trackProgressDesc')}
-                      </p>
-                      <button
-                        onClick={() => setShowLoginModal(true)}
-                        className="px-6 py-3 rounded-xl bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold hover:from-blue-600 hover:to-purple-600 transition"
-                      >
-                        {t('loginWithRiot')}
-                      </button>
-                    </div>
+                <div className="flex flex-col gap-3 border-t border-neutral-800 py-4 sm:flex-row sm:items-center sm:justify-between">
+                  <div>
+                    <h3 className="font-semibold text-white">{t('trackProgress')}</h3>
+                    <p className="mt-1 text-sm text-neutral-400">{t('trackProgressDesc')}</p>
                   </div>
+                  <button
+                    onClick={() => setShowLoginModal(true)}
+                    className="shrink-0 rounded-xl border border-neutral-700 px-4 py-2.5 text-sm font-medium text-neutral-300 transition hover:border-neutral-500 hover:bg-neutral-800 hover:text-white"
+                  >
+                    {t('loginWithRiot')}
+                  </button>
                 </div>
               )}
 

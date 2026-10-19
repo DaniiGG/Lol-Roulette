@@ -8,13 +8,14 @@ import { useTranslations } from 'next-intl'
 interface HybridLoginModalProps {
   onClose: () => void
   onSuccess: (token: string, user: any) => void
+  initialMode?: LoginMode
 }
 
 type LoginMode = 'choose' | 'oauth' | 'manual'
 
-export default function HybridLoginModal({ onClose, onSuccess }: HybridLoginModalProps) {
+export default function HybridLoginModal({ onClose, onSuccess, initialMode }: HybridLoginModalProps) {
   const t = useTranslations('rsoLogin')
-  const [mode, setMode] = useState<LoginMode>('choose')
+  const [mode, setMode] = useState<LoginMode>(initialMode ?? 'choose')
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
 
@@ -126,7 +127,7 @@ const handleManualLogin = async () => {
 
   return (
     <div className="fixed inset-0 bg-black/90 backdrop-blur-sm flex items-center justify-center z-50 p-4">
-      <div className="bg-neutral-900 rounded-3xl border border-neutral-800 max-w-md w-full overflow-hidden">
+      <div className="bg-neutral-900 rounded-3xl border border-neutral-800 max-w-lg md:max-w-2xl w-full overflow-hidden">
         
         {/* Header */}
         <div className="relative p-6 bg-gradient-to-br from-[#C89B3C]/20 to-neutral-900">

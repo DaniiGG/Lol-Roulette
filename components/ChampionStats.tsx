@@ -42,6 +42,7 @@ export default function ChampionStats({ championId, championName }: ChampionStat
   const t = useTranslations('championStats')
   const [stats, setStats] = useState<any>(null)
   const [loading, setLoading] = useState(true)
+  const [itemMap, setItemMap] = useState<Record<string, number>>({})
 
   useEffect(() => {
     if (!championId) return
@@ -62,6 +63,24 @@ export default function ChampionStats({ championId, championName }: ChampionStat
     fetchStats()
   }, [championId])
 
+  useEffect(() => {
+    let cancelled = false
+    fetch(`https://ddragon.leagueoflegends.com/cdn/${DDV}/data/en_US/item.json`)
+      .then((res) => res.json())
+      .then((data: any) => {
+        if (cancelled) return
+        const map: Record<string, number> = {}
+        Object.entries(data.data).forEach(([id, item]: [string, any]) => {
+          map[item.name] = Number(id)
+        })
+        setItemMap(map)
+      })
+      .catch(() => {})
+    return () => {
+      cancelled = true
+    }
+  }, [])
+
   if (loading || !stats) {
     return (
       <div className="w-full mt-6 p-6 rounded-2xl bg-neutral-900/40 border border-neutral-800 flex items-center justify-center min-h-[200px]">
@@ -77,51 +96,35 @@ export default function ChampionStats({ championId, championName }: ChampionStat
   return (
     <div className="w-full mt-6 space-y-6 animate-fadeIn">
       <div className="p-6 rounded-3xl bg-neutral-900/60 border border-neutral-800/80 backdrop-blur-md">
-        <h3 className="text-2xl font-semibold text-white mb-6 flex items-center gap-3">
-          <span className="text-[#C89B3C]">{t('statistics', { champion: championName })}</span>
-        </h3>
-        
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <div className="p-4 rounded-2xl bg-neutral-950/50 border border-neutral-800/50">
-            <p className="text-neutral-400 text-xs uppercase tracking-wider mb-1">{t('health')}</p>
-            <p className="text-xl font-medium text-emerald-400">{stats.stats.hp} <span className="text-sm text-neutral-500">+{stats.stats.hpperlevel}{t('perLevel')}</span></p>
-          </div>
-          <div className="p-4 rounded-2xl bg-neutral-950/50 border border-neutral-800/50">
-            <p className="text-neutral-400 text-xs uppercase tracking-wider mb-1">{t('attackDamage')}</p>
-            <p className="text-xl font-medium text-orange-400">{stats.stats.attackdamage} <span className="text-sm text-neutral-500">+{stats.stats.attackdamageperlevel}{t('perLevel')}</span></p>
-          </div>
-          <div className="p-4 rounded-2xl bg-neutral-950/50 border border-neutral-800/50">
-            <p className="text-neutral-400 text-xs uppercase tracking-wider mb-1">{t('armor')}</p>
-            <p className="text-xl font-medium text-yellow-500">{stats.stats.armor} <span className="text-sm text-neutral-500">+{stats.stats.armorperlevel}{t('perLevel')}</span></p>
-          </div>
-          <div className="p-4 rounded-2xl bg-neutral-950/50 border border-neutral-800/50">
-            <p className="text-neutral-400 text-xs uppercase tracking-wider mb-1">{t('magicResist')}</p>
-            <p className="text-xl font-medium text-blue-400">{stats.stats.spellblock} <span className="text-sm text-neutral-500">+{stats.stats.spellblockperlevel}{t('perLevel')}</span></p>
-          </div>
-        </div>
-
-        <div className="mt-6 flex flex-wrap gap-2">
-          {stats.tags.map((tag: string) => (
-            <span key={tag} className="px-3 py-1 text-xs uppercase tracking-widest text-[#C89B3C] bg-[#C89B3C]/10 border border-[#C89B3C]/20 rounded-full">
-              {tag}
-            </span>
-          ))}
-        </div>
-      </div>
-
-      <div className="p-6 rounded-3xl bg-neutral-900/60 border border-neutral-800/80 backdrop-blur-md">
         <h3 className="text-2xl font-semibold text-white mb-2 flex items-center gap-3">
           <span className="text-blue-500">{t('recommendedBuild')}</span>
         </h3>
         <p className="text-neutral-400 text-sm mb-6">{t('buildForRole', { role: recommendedBuild.role })}</p>
 
         <div className="flex flex-wrap gap-3">
-          {recommendedBuild.items.map((item: string, i: number) => (
-            <div key={i} className="px-4 py-3 rounded-xl bg-neutral-950 border border-neutral-800 flex items-center gap-3">
-              <div className="w-2 h-2 rounded-full bg-blue-500"></div>
-              <span className="text-neutral-200 text-sm">{item}</span>
-            </div>
-          ))}
+          {recommendedBuild.items.map((item: string, i: number) => {
+            const baseName = item.split(' / ')[0].trim()
+            const itemId = itemMap[baseName]
+            return (
+              <div key={i} className="px-4 py-3 rounded-xl bg-neutral-950 border border-neutral-800 flex items-center gap-3">
+                {itemId ? (
+                  <img
+                    src={`https://ddragon.leagueoflegends.com/cdn/${DDV}/img/item/${itemId}.png`}
+                    alt={baseName}
+                    className="w-8 h-8 object-cover rounded border border-neutral-700"
+                    onError={(e) => {
+                      ;(e.target as HTMLImageElement).style.display = 'none'
+                    }}
+                  />
+                ) : (
+                  <div className="w-8 h-8 rounded border border-neutral-700 flex items-center justify-center">
+                    <div className="w-2 h-2 rounded-full bg-blue-500"></div>
+                  </div>
+                )}
+                <span className="text-neutral-200 text-sm">{item}</span>
+              </div>
+            )
+          })}
         </div>
       </div>
     </div>

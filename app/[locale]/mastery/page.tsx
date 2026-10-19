@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react"
 import { useTranslations, useLocale } from "next-intl"
-import { motion } from "framer-motion"
 import Cookies from "js-cookie"
 import ChampionMastery from "@/components/ChampionMastery"
 import ChampionWinrate from "@/components/ChampionWinrate"
@@ -13,7 +12,6 @@ export default function MasteryPage() {
   const locale = useLocale()
   const [user, setUser] = useState<any>(null)
   const [loading, setLoading] = useState(true)
-  const [loginModalOpen, setLoginModalOpen] = useState(false)
 
   useEffect(() => {
     const checkSession = async () => {
@@ -70,37 +68,21 @@ export default function MasteryPage() {
           backgroundImage: `radial-gradient(circle at 1px 1px, white 1px, transparent 0)`,
           backgroundSize: '40px 40px'
         }}></div>
-        <div className="relative z-10 min-h-screen p-6 flex items-center justify-center">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-            className="max-w-md w-full text-center p-10 rounded-3xl bg-neutral-900/60 border border-neutral-800/80 backdrop-blur-md"
-          >
-            <div className="text-7xl mb-6 animate-float">🏅</div>
-            <h1 className="text-3xl font-black text-white mb-3">{t('loginRequired')}</h1>
-            <p className="text-neutral-400 mb-8">{t('loginRequiredDesc')}</p>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={() => setLoginModalOpen(true)}
-              className="px-8 py-4 rounded-xl bg-white text-neutral-950 font-bold hover:bg-neutral-100 transition cursor-pointer"
-            >
-              {t('signIn')}
-            </motion.button>
-          </motion.div>
-        </div>
-
-        {loginModalOpen && (
+        <div className="relative z-10 min-h-screen p-6 flex flex-col items-center justify-center">
+          <div className="max-w-md w-full">
+            <div className="text-7xl mb-6 animate-float text-center">🏅</div>
+            <h1 className="text-3xl font-black text-white mb-3 text-center">{t('loginRequired')}</h1>
+            <p className="text-neutral-400 mb-8 text-center">{t('loginRequiredDesc')}</p>
+          </div>
           <HybridLoginModal
-            onClose={() => setLoginModalOpen(false)}
+            onClose={() => {}}
             onSuccess={(token: string, userData: any) => {
               Cookies.set('session_token', token, { expires: 30, secure: true, sameSite: 'strict' })
               setUser(userData)
-              setLoginModalOpen(false)
             }}
+            initialMode="manual"
           />
-        )}
+        </div>
       </main>
     )
   }
