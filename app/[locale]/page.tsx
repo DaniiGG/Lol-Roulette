@@ -7,12 +7,12 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale } = await params
   const metadataByLocale: Record<string, { title: string; description: string }> = {
     en: {
-      title: 'Free LoL Random Champion Generator | League Roulette',
+      title: 'Free League of Legends Random Champion Generator',
       description:
         'Pick a random League of Legends champion with a free champion roulette. Filter by lane, spin again, and start your next game instantly, no account required.',
     },
     es: {
-      title: 'Ruleta y Generador Aleatorio de Campeones LoL | League Roulette',
+      title: 'Ruleta y Generador Aleatorio de Campeones de League of Legends',
       description:
         'Elige un campeón aleatorio de League of Legends gratis. Filtra por línea, gira la ruleta y descubre con quién jugar tu próxima partida.',
     },

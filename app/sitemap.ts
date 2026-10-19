@@ -7,6 +7,10 @@ import { routing } from '@/i18n/routing'
 
 const baseUrl = 'https://leagueroulette.com'
 
+// El blog solo está publicado en inglés y español; el resto generaría
+// páginas inútiles (contenido en inglés o sin traducir) en el sitemap.
+const blogLocales = ['en', 'es'] as const
+
 const staticPages = [
   { path: '', priority: 1, freq: 'daily' as const },
   { path: 'howtoplay', priority: 0.9, freq: 'weekly' as const },
@@ -39,7 +43,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }
 
   // Blog posts with real lastModified dates
-  for (const locale of routing.locales) {
+  for (const locale of blogLocales) {
     const localePrefix = locale === routing.defaultLocale ? '' : `/${locale}`
     for (const slug of BLOG_SLUGS) {
       const meta = getPostMeta(slug)
@@ -54,7 +58,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }
 
   // Category pages
-  for (const locale of routing.locales) {
+  for (const locale of blogLocales) {
     const localePrefix = locale === routing.defaultLocale ? '' : `/${locale}`
     for (const cat of CATEGORIES) {
       const catSlug = cat.slug
