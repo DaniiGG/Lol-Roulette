@@ -3,8 +3,8 @@ import {routing} from './routing';
 
 async function loadMessages(locale: string) {
   const common = (await import(`../locales/${locale}/common.json`)).default;
-  const extraFiles = ['challenges', 'tierlist', 'modes', 'popular', 'champion-guides', 'blog', 'blog-content'];
-  const extra: Record<string, any> = {};
+  const extraFiles = ['challenges', 'tierlist', 'modes', 'popular', 'champion-guides', 'blog', 'blog-content', 'patch-tier-list'];
+  const extra: Record<string, unknown> = {};
   for (const file of extraFiles) {
     try {
       extra[file] = (await import(`../locales/${locale}/${file}.json`)).default;
@@ -19,7 +19,7 @@ async function loadMessages(locale: string) {
 
 export default getRequestConfig(async ({requestLocale}) => {
   let locale = await requestLocale;
-  if (!locale || !routing.locales.includes(locale as any)) {
+  if (!locale || !routing.locales.some((supported) => supported === locale)) {
     locale = routing.defaultLocale;
   }
 

@@ -637,6 +637,23 @@
         "sortRecent": "Reciente",
         "toNextLevel": "para siguiente nivel"
     },
+    "masteryTree": {
+        "searchPlaceholder": "Busca en tu árbol de campeones...",
+        "searchMatches": "{count} coincidencias",
+        "noResults": "No se encontró ningún campeón",
+        "resetView": "Restablecer vista",
+        "zoomIn": "Acercar",
+        "zoomOut": "Alejar",
+        "legend": "Tamaño del nodo = puntos de maestría (escala logarítmica)",
+        "legendLevels": "Nivel de maestría",
+        "shareOfTotal": "{percent}% de tu maestría total",
+        "rankOf": "Puesto n.º {rank} de {total}",
+        "centerChampion": "Centrar campeón",
+        "clickHint": "Arrastra para explorar · Desplázate para hacer zoom · Haz clic en un campeón",
+        "close": "Cerrar",
+        "loadError": "No pudimos construir tu árbol de maestría",
+        "retry": "Reintentar"
+    },
     "mastery": {
         "title": "Maestría de campeones",
         "subtitle": "Ver niveles de maestría y puntos",

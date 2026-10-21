@@ -1,6 +1,6 @@
 import Image from 'next/image'
-import { getPostMeta } from '@/lib/blog/meta'
-import { readingTime, formatDate } from '@/lib/blog/content'
+import { championIconUrl } from '@/lib/champion-data'
+import { findChampionImageId } from '@/lib/champion-portraits'
 import type {
   BlogPost,
   BlogSection,
@@ -19,7 +19,7 @@ interface BlogPostContentProps {
   locale: string
 }
 
-const DD_VERSION = '16.18.1'
+const DD_VERSION = '16.21.1'
 const CHAMPION_IMG = (id: string) => `https://ddragon.leagueoflegends.com/cdn/${DD_VERSION}/img/champion/${id}.png`
 const ITEM_IMG = (id: string) => `https://ddragon.leagueoflegends.com/cdn/${DD_VERSION}/img/item/${id}.png`
 
@@ -53,11 +53,27 @@ function renderTable(table: BlogTable) {
         <tbody>
           {table.rows.map((row, ri) => (
             <tr key={ri} className={`${ri % 2 === 0 ? 'bg-neutral-900/50' : 'bg-neutral-900'} border-b border-neutral-800/50`}>
-              {row.map((cell, ci) => (
-                <td key={ci} className="px-4 py-3 text-neutral-300">
-                  {cell}
-                </td>
-              ))}
+              {row.map((cell, ci) => {
+                const championId = ci === 0 ? findChampionImageId(cell) : undefined
+                return (
+                  <td key={ci} className="px-4 py-3 text-neutral-300">
+                    {championId ? (
+                      <span className="inline-flex items-center gap-2">
+                        <Image
+                          src={championIconUrl(championId)}
+                          alt=""
+                          width={28}
+                          height={28}
+                          className="h-7 w-7 rounded border border-neutral-700"
+                        />
+                        <span className="font-medium text-white">{cell}</span>
+                      </span>
+                    ) : (
+                      cell
+                    )}
+                  </td>
+                )
+              })}
             </tr>
           ))}
         </tbody>
@@ -205,11 +221,11 @@ function renderCtaBox(cta: BlogCta, paragraphs: string[] | undefined, locale: st
   )
 }
 
-function renderSources(sources: BlogSource[]) {
+function renderSources(sources: BlogSource[], locale: string) {
   return (
     <section className="mt-10 rounded-xl border border-neutral-800 bg-neutral-900/80 p-6" aria-labelledby="sources-heading">
       <h2 id="sources-heading" className="mb-4 text-xl font-semibold text-white">
-        Sources
+        {locale === 'es' ? 'Fuentes' : 'Sources'}
       </h2>
       <ul className="space-y-2 text-sm text-neutral-400">
         {sources.map((s, i) => (
@@ -243,7 +259,12 @@ function renderBullets(bullets: string[]) {
 }
 
 function renderFaq(faq: BlogFaqItem[], locale: string) {
-  const t = { q: 'Q', a: 'A' }
+  const isEs = locale === 'es'
+  const t = {
+    title: isEs ? 'Preguntas frecuentes' : 'Frequently asked questions',
+    q: isEs ? 'P' : 'Q',
+    a: isEs ? 'R' : 'A',
+  }
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -262,13 +283,13 @@ function renderFaq(faq: BlogFaqItem[], locale: string) {
       />
       <section className="mt-10 rounded-3xl border border-neutral-800 bg-neutral-900 p-8" aria-labelledby="faq-heading">
         <h2 id="faq-heading" className="mb-6 text-2xl font-semibold text-white">
-          {t.q}
+          {t.title}
         </h2>
         <div className="space-y-4">
           {faq.map((item, i) => (
             <details key={i} className="group rounded-xl border border-neutral-800 bg-neutral-900/50 p-5">
               <summary className="flex items-center gap-3 font-semibold text-white cursor-pointer list-none">
-                <span className="text-[#C89B3C]">Q:</span>
+                <span className="text-[#C89B3C]">{t.q}:</span>
                 {item.q}
                 <svg className="ml-auto w-5 h-5 text-neutral-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -285,21 +306,66 @@ function renderFaq(faq: BlogFaqItem[], locale: string) {
   )
 }
 
+function renderSubsections(subsections: NonNullable<BlogSection['subsections']>) {
+  return (
+    <div className="mt-8 space-y-8">
+      {subsections.map((subsection, index) => {
+        const championId = findChampionImageId(subsection.heading)
+
+        return (
+        <section key={`${subsection.heading}-${index}`} className="scroll-mt-24">
+          <h3 className="mb-3 flex items-center gap-3 text-xl font-semibold text-white md:text-2xl">
+            {championId ? (
+              <Image
+                src={championIconUrl(championId)}
+                alt=""
+                width={40}
+                height={40}
+                className="h-10 w-10 rounded-lg border border-neutral-700"
+              />
+            ) : null}
+            <span>{subsection.heading}</span>
+          </h3>
+          {subsection.paragraphs?.length ? (
+            <div className="space-y-4 text-lg leading-relaxed text-neutral-300">
+              {subsection.paragraphs.map((paragraph, pi) => (
+                <p key={pi}>{paragraph}</p>
+              ))}
+            </div>
+          ) : null}
+          {subsection.bullets?.length ? renderBullets(subsection.bullets) : null}
+        </section>
+        )
+      })}
+    </div>
+  )
+}
+
+function renderLinks(links: NonNullable<BlogSection['links']>) {
+  return (
+    <ul className="mt-6 grid gap-3 sm:grid-cols-2">
+      {links.map((link) => (
+        <li key={link.href}>
+          <Link
+            href={link.href}
+            className="group block h-full rounded-xl border border-neutral-800 bg-neutral-900/60 p-4 transition hover:border-[#C89B3C]/50 hover:bg-neutral-900"
+          >
+            <span className="font-semibold text-[#C89B3C] group-hover:text-[#e8c77e]">
+              {link.label}
+            </span>
+            {link.description ? (
+              <span className="mt-1 block text-sm leading-6 text-neutral-400">
+                {link.description}
+              </span>
+            ) : null}
+          </Link>
+        </li>
+      ))}
+    </ul>
+  )
+}
+
 export default function BlogPostContent({ post, locale }: BlogPostContentProps) {
-  const meta = getPostMeta(post.slug)
-  const rt = readingTime(post)
-  const publishedDate = formatDate(meta?.publishedAt ?? '', locale)
-  const updatedDate = meta?.updatedAt ? formatDate(meta.updatedAt, locale) : null
-
-  // Generate TOC items from sections
-  const tocItems = post.sections
-    .filter(s => s.heading.trim())
-    .map((section, i) => ({
-      id: `section-${i}`,
-      text: section.heading,
-      level: 2 as const
-    }))
-
   return (
     <article className="prose prose-invert prose-neutral max-w-none">
       <div className="space-y-8">
@@ -320,13 +386,15 @@ export default function BlogPostContent({ post, locale }: BlogPostContentProps) 
               </div>
             )}
             {section.bullets?.length && renderBullets(section.bullets)}
+            {section.subsections?.length ? renderSubsections(section.subsections) : null}
+            {section.links?.length ? renderLinks(section.links) : null}
             {section.table && renderTable(section.table)}
             {section.patchTable && renderPatchTable(section.patchTable, locale)}
             {section.cta && renderCtaBox(section.cta, section.paragraphs, locale)}
           </section>
         ))}
         {post.faq?.length && renderFaq(post.faq, locale)}
-        {post.sources?.length && renderSources(post.sources)}
+        {post.sources?.length && renderSources(post.sources, locale)}
       </div>
     </article>
   )

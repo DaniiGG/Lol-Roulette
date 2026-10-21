@@ -775,6 +775,23 @@
         "sortRecent": "Neueste",
         "toNextLevel": "bis zur nächsten Stufe"
     },
+    "masteryTree": {
+        "searchPlaceholder": "Suche in deinem Champion-Baum...",
+        "searchMatches": "{count} Treffer",
+        "noResults": "Kein Champion gefunden",
+        "resetView": "Ansicht zurücksetzen",
+        "zoomIn": "Vergrößern",
+        "zoomOut": "Verkleinern",
+        "legend": "Knotengröße = Meisterschaftspunkte (logarithmische Skala)",
+        "legendLevels": "Meisterschaftsstufe",
+        "shareOfTotal": "{percent} % deiner gesamten Meisterschaft",
+        "rankOf": "Platz #{rank} von {total}",
+        "centerChampion": "Champion zentrieren",
+        "clickHint": "Ziehen zum Erkunden · Scrollen zum Zoomen · Champion anklicken",
+        "close": "Schließen",
+        "loadError": "Dein Meisterschaftsbaum konnte nicht erstellt werden",
+        "retry": "Erneut versuchen"
+    },
     "mastery": {
         "title": "Champion-Meisterschaft",
         "subtitle": "Meisterschaftsstufen und Punkte anzeigen",

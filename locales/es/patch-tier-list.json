@@ -1,0 +1,1058 @@
+{
+  "patch": "26.21",
+  "lastReviewed": "2026-10-21",
+  "ui": {
+    "kicker": "Explorador de meta · Parche 26.21",
+    "title": "Tier list del parche 26.21 por línea",
+    "subtitle": "Una tabla estática con los picks recomendados, los cambios del parche y los campeones en observación para cada línea.",
+    "patch": "Parche",
+    "reviewed": "Última revisión",
+    "editorial": "Tier list editorial",
+    "provisional": "Clasificación provisional: el parche acaba de publicarse y los datos específicos por línea todavía son limitados.",
+    "roleNav": "Elige una línea",
+    "search": "Buscar campeón",
+    "searchPlaceholder": "Buscar por nombre...",
+    "filters": "Filtros",
+    "tier": "Tier",
+    "difficulty": "Dificultad",
+    "playstyle": "Estilo de juego",
+    "all": "Todos",
+    "clear": "Limpiar filtros",
+    "showing": "Mostrando {shown} de {total} campeones",
+    "noResults": "Ningún campeón coincide con estos filtros.",
+    "noResultsHint": "Prueba a quitar un filtro o busca otro nombre.",
+    "noTierPicks": "Sin candidatos confirmados en este tier para esta línea.",
+    "emptyTierNote": "La falta de datos específicos por línea nos impide subir picks a S+ o S.",
+    "tierRowEmpty": "Sin picks confirmados",
+    "championCount": "{n} picks",
+    "core": "Recomendado",
+    "watch": "Vigilar",
+    "rising": "Al alza",
+    "openProfile": "Abrir ficha de {name}",
+    "tapHint": "Toca una tarjeta para ver el análisis completo.",
+    "details": "Ver ficha",
+    "close": "Cerrar",
+    "why": "Por qué jugarlo",
+    "patchChanges": "Cambios del parche 26.21",
+    "strengths": "Puntos fuertes",
+    "weaknesses": "Puntos débiles",
+    "profile": "Perfil de jugador",
+    "statsTitle": "Datos verificados",
+    "statsSource": "Fuente",
+    "statsScope": "Ranked Solo/Duo · todos los rangos",
+    "winRate": "Tasa de victoria",
+    "winRateDelta": "Cambio de win rate",
+    "pickRateDelta": "Cambio de pick rate",
+    "before": "Antes",
+    "after": "Después",
+    "percentagePoint": "pp",
+    "noStats": "No hay datos verificados de este campeón en la muestra inicial del parche. No mostramos cifras inventadas.",
+    "editorialNote": "Valoración editorial",
+    "verifiedNote": "Dato verificado",
+    "compare": "Comparar",
+    "compareAdd": "Añadir a la comparación",
+    "compareRemove": "Quitar de la comparación",
+    "compareTitle": "Comparador de campeones",
+    "compareEmpty": "Selecciona dos o tres campeones con el botón + de cada tarjeta.",
+    "compareLimit": "Puedes comparar un máximo de 3 campeones.",
+    "compareSelected": "{n} seleccionados",
+    "compareOpen": "Abrir comparación",
+    "compareClear": "Vaciar",
+    "compareHint": "Los datos verificados aparecen separados de la valoración editorial.",
+    "attribute": "Atributo",
+    "patchType": "Tipo de cambio",
+    "tierLabel": "Tier {tier}",
+    "roleLabel": "Línea: {role}",
+    "patchBadge": "Cambio: {type}",
+    "finderTitle": "Encuentra tu mejor pick",
+    "finderIntro": "Responde cuatro preguntas y te propondremos tres campeones. Las sugerencias salen de reglas editoriales basadas en tier, dificultad, estilo y rango; no son un análisis estadístico por rango.",
+    "finderRole": "Línea",
+    "finderRank": "Rango aproximado",
+    "finderDifficulty": "Dificultad preferida",
+    "finderPlaystyle": "Estilo preferido",
+    "finderButton": "Encontrar mi pick",
+    "finderResults": "Tus tres mejores opciones",
+    "finderRuleNote": "Reglas transparentes: priorizamos el tier, la dificultad, el estilo y el encaje con tu rango. No usamos win rates por rango porque no disponemos de una muestra fiable.",
+    "finderReasonRank": "Encaja con tu rango {rank}.",
+    "finderReasonDifficulty": "Su dificultad {difficulty} se ajusta a lo que buscas.",
+    "finderReasonStyle": "Comparte el estilo {style}.",
+    "finderReasonFallback": "Es una opción equilibrada dentro de esta línea.",
+    "finderNoResults": "No hay campeones suficientes con esos filtros. Prueba otra combinación.",
+    "randomTitle": "¿Qué debería jugar hoy?",
+    "randomIntro": "Elige una línea y deja que la ruleta decida. El resultado sale de los campeones evaluados en esta tier list.",
+    "randomButton": "Girar campeón",
+    "randomRolling": "Girando...",
+    "randomAgain": "Volver a girar",
+    "randomCTA": "Probar League Roulette",
+    "randomHint": "La ruleta real de League Roulette también permite filtrar por línea y verificar tus partidas.",
+    "sources": "Fuentes",
+    "sourceStats": "Datos de win rate y pick rate",
+    "sourcePatch": "Notas oficiales del parche",
+    "sourceMethod": "Metodología editorial",
+    "statSample": "206.610 partidas de Ranked Solo/Duo analizadas por ggez.gg",
+    "selectCompare": "Seleccionar {name} para comparar",
+    "removeCompare": "Quitar {name} de la comparación",
+    "oneMoment": "Un momento...",
+    "filterAllTiers": "Todos los tiers",
+    "filterAllDifficulties": "Todas las dificultades",
+    "filterAllPlaystyles": "Todos los estilos",
+    "resultsLabel": "Resultados de la búsqueda",
+    "comparisonSelected": "Campeones seleccionados para comparar",
+    "recommendation": "Recomendación {n}"
+  },
+  "roles": {
+    "top": "Top",
+    "jungle": "Jungla",
+    "mid": "Mid",
+    "adc": "ADC",
+    "support": "Support"
+  },
+  "roleDescriptions": {
+    "top": "Duelos, presión lateral y tanques",
+    "jungle": "Tempo, objetivos y ganks",
+    "mid": "Control de oleadas y rotaciones",
+    "adc": "Daño sostenido y posicionamiento",
+    "support": "Visión, iniciación y protección"
+  },
+  "tiers": {
+    "S+": "S+ · Excepcional",
+    "S": "S · Dominante",
+    "A": "A · Recomendado",
+    "B": "B · Viable / en observación",
+    "C": "C · Situacional"
+  },
+  "tierDescriptions": {
+    "S+": "Reservado para picks con evidencia sólida y consistente en su línea.",
+    "S": "Sin candidatos confirmados: los datos iniciales no permiten aislar un dominador por línea.",
+    "A": "Nuestras recomendaciones principales del parche, siempre provisionales.",
+    "B": "Picks viables con condiciones, nerfs recientes o muestras que aún deben confirmarse.",
+    "C": "Opciones que han perdido poder o dependen mucho del contexto y de los enfrentamientos."
+  },
+  "difficulties": {
+    "low": "Baja",
+    "medium": "Media",
+    "high": "Alta"
+  },
+  "playstyles": {
+    "frontline": "Primera línea",
+    "engage": "Iniciación",
+    "scaling": "Escalado",
+    "poke": "Poke",
+    "assassin": "Asesino",
+    "splitpush": "Splitpush",
+    "utility": "Utilidad",
+    "sustain": "Sostenibilidad",
+    "zone": "Control de zona"
+  },
+  "ranks": {
+    "low": "Hierro – Bronce",
+    "mid": "Plata – Oro",
+    "high": "Platino – Esmeralda",
+    "elite": "Diamante o superior"
+  },
+  "patchTypes": {
+    "buff": "Mejora",
+    "nerf": "Debilitamiento",
+    "adjustment": "Ajuste",
+    "none": "Sin cambios directos"
+  },
+  "championPoolNote": "Los retratos proceden de Data Dragon (16.21.1). La lista de campeones es una selección editorial basada en las notas oficiales y en los datos iniciales del parche, no el roster completo.",
+  "sources": [
+    {
+      "label": "Notas oficiales del parche 26.21 — Riot Games",
+      "url": "https://www.leagueoflegends.com/en-us/news/game-updates/league-of-legends-patch-26-21-notes/"
+    },
+    {
+      "label": "Patch 26.21 en números — ggez.gg",
+      "url": "https://ggez.gg/news/patch-26-21"
+    },
+    {
+      "label": "Tier list y estadísticas — Mobalytics",
+      "url": "https://mobalytics.gg/lol/tier-list/stats"
+    }
+  ],
+  "champions": [
+    {
+      "id": "Sion",
+      "name": "Sion",
+      "role": "top",
+      "tier": "A",
+      "difficulty": "medium",
+      "playstyles": [
+        "frontline",
+        "engage",
+        "sustain"
+      ],
+      "category": "core",
+      "rising": true,
+      "why": "Recibe más vida por nivel y una definitiva cargada más potente. Sigue siendo un tanque con iniciación y capacidad para crear espacio en las peleas.",
+      "changes": "Vida por nivel: 87 → 95. R (Embestida imparable): el daño aumenta hasta un 200 % durante los primeros 3 s de canalización. La herramienta también muestra los ratios correctos de daño de ataque adicional.",
+      "strengths": [
+        "Aguanta bien las fases de lado y las peleas largas.",
+        "Su definitiva castiga malas posiciones y abre peleas.",
+        "No necesita ganar la línea para aportar utilidad."
+      ],
+      "weaknesses": [
+        "Sufre contra daño porcentual y composiciones muy móviles.",
+        "Su R es fácil de esquivar si se usa sin preparación."
+      ],
+      "profile": "Jugadores que prefieren tanques resistentes, iniciar peleas y jugar por objetivos.",
+      "stats": {
+        "winRateDelta": 2.4,
+        "note": "Datos de ggez.gg para todos los rangos; no son específicos de Top."
+      }
+    },
+    {
+      "id": "Darius",
+      "name": "Darius",
+      "role": "top",
+      "tier": "A",
+      "difficulty": "medium",
+      "playstyles": [
+        "frontline",
+        "splitpush",
+        "sustain"
+      ],
+      "category": "core",
+      "why": "El Q tiene 4 s de enfriamiento en su último rango, lo que mejora los intercambios prolongados. Su presión en línea sigue siendo alta si castigas errores.",
+      "changes": "Q (Diezmar): enfriamiento 9/8/7/6/5 s → 9/8/7/6/4 s.",
+      "strengths": [
+        "Domina los duelos cuerpo a cuerpo.",
+        "Convierte errores en línea en ventajas grandes.",
+        "Es una amenaza importante en peleas extendidas."
+      ],
+      "weaknesses": [
+        "Se le puede kitea con rango y control de masas.",
+        "Depende de acertar el filo exterior del Q."
+      ],
+      "profile": "Jugadores agresivos que entienden los intercambios y quieren presionar la línea.",
+      "stats": {
+        "winRateDelta": -1.2,
+        "note": "Datos de ggez.gg para todos los rangos; el cambio es pequeño y no invalida la mejora de Q."
+      }
+    },
+    {
+      "id": "Volibear",
+      "name": "Volibear",
+      "role": "top",
+      "tier": "A",
+      "difficulty": "low",
+      "playstyles": [
+        "frontline",
+        "sustain",
+        "engage"
+      ],
+      "category": "core",
+      "why": "Alternativa sólida para duelos, resistencia y presión. No tiene cambios directos, así que su valor depende más de su rendimiento y del encaje en la composición.",
+      "changes": "Sin cambios directos en el 26.21. Se mantiene como pick editorial para jugadores que quieren un bruiser de línea.",
+      "strengths": [
+        "Buen duelo temprano y presión sobre torres.",
+        "Iniciación fiable con R.",
+        "Perdona errores gracias a su curación."
+      ],
+      "weaknesses": [
+        "Puede quedarse sin recursos si se retrasa.",
+        "Sufre contra composiciones de kite."
+      ],
+      "profile": "Jugadores que quieren un bruiser resistente con un plan sencillo de lado y objetivo."
+    },
+    {
+      "id": "Garen",
+      "name": "Garen",
+      "role": "top",
+      "tier": "A",
+      "difficulty": "low",
+      "playstyles": [
+        "frontline",
+        "splitpush"
+      ],
+      "category": "core",
+      "why": "Pick accesible para jugadores que buscan consistencia y un plan de juego claro. Su inclusión es editorial y no implica una mejora en el parche.",
+      "changes": "Sin cambios directos en el 26.21.",
+      "strengths": [
+        "Muy fácil de ejecutar.",
+        "Buen push y recuperación fuera de combate.",
+        "Su R ejecuta objetivos con poca vida."
+      ],
+      "weaknesses": [
+        "Poca presión a distancia.",
+        "Puede ser kiteado por composiciones móviles."
+      ],
+      "profile": "Jugadores nuevos o que quieren un campeón directo para centrarse en los fundamentos."
+    },
+    {
+      "id": "Yone",
+      "name": "Yone",
+      "role": "top",
+      "tier": "B",
+      "difficulty": "high",
+      "playstyles": [
+        "assassin",
+        "splitpush",
+        "scaling"
+      ],
+      "category": "watch",
+      "why": "Sigue siendo un duelista fuerte, pero su Q pierde ratio de AD. Lo dejamos en B: el nerf es moderado y su techo mecánico continúa siendo alto.",
+      "changes": "Q (Acero mortal): ratio de AD 110% → 105%. Sin cambios en el resto del kit.",
+      "strengths": [
+        "Alto techo mecánico y presión lateral.",
+        "Puede iniciar o rematar peleas con R."
+      ],
+      "weaknesses": [
+        "Castiga mucho los errores propios.",
+        "El nerf reduce ligeramente su daño sostenido."
+      ],
+      "profile": "Jugadores con experiencia en duelistas y ganas de invertir tiempo en mecánicas.",
+      "stats": {
+        "winRateDelta": -1.3,
+        "note": "Datos de ggez.gg para todos los rangos."
+      }
+    },
+    {
+      "id": "Varus",
+      "name": "Varus",
+      "role": "top",
+      "tier": "C",
+      "difficulty": "medium",
+      "playstyles": [
+        "poke",
+        "zone"
+      ],
+      "category": "watch",
+      "why": "Los ajustes de Q y W buscan limitar su variante de Top. En esta línea lo dejamos en C provisional: el cambio golpea justo su patrón de maxear W, aunque los datos globales no sean específicos de Top.",
+      "changes": "Q: el daño máximo escala mejor con la canalización. W: menos daño por impacto y por acumulación, pero mejores ratios de AD/AP y más recompensa por cargar Q.",
+      "strengths": [
+        "Poke y presión a distancia.",
+        "Útil en composiciones de asedio."
+      ],
+      "weaknesses": [
+        "La variante de Top pierde poder con el ajuste.",
+        "Frágil ante dive y campeones móviles."
+      ],
+      "profile": "Jugadores de poke que quieran adaptar la build; no es un pick de Top para todos.",
+      "stats": {
+        "winRateDelta": 2.1,
+        "note": "Dato global de todos los rangos: puede reflejar sobre todo su variante de bot, no la de Top."
+      }
+    },
+    {
+      "id": "Taliyah",
+      "name": "Taliyah",
+      "role": "jungle",
+      "tier": "A",
+      "difficulty": "medium",
+      "playstyles": [
+        "zone",
+        "poke",
+        "scaling"
+      ],
+      "category": "core",
+      "rising": true,
+      "why": "Recibe más daño en E y mantiene el 225 % de daño contra monstruos. Puede limpiar campamentos con más seguridad y castigar agrupaciones con control de masas.",
+      "changes": "E (Terremoto hilado): daño 60/105/150/195/240 (+60 % AP) → 70/115/160/205/250 (+70 % AP). Detonación: 25/40/55/70/85 (+30 % AP) → 30/45/60/75/90 (+30 % AP). Sigue infligiendo un 225 % de daño a monstruos.",
+      "strengths": [
+        "Control de zona excelente.",
+        "Limpieza de jungla más cómoda tras la mejora.",
+        "Buenas rotaciones y ganks con muro."
+      ],
+      "weaknesses": [
+        "Necesita posicionarse bien para acertar los combos.",
+        "Puede sufrir contra junglas de invasión agresiva."
+      ],
+      "profile": "Jugadores que disfrutan magos de jungla, control de zonas y rotaciones.",
+      "stats": {
+        "winRateDelta": 1.5,
+        "note": "Datos de ggez.gg para todos los rangos."
+      }
+    },
+    {
+      "id": "Shyvana",
+      "name": "Shyvana",
+      "role": "jungle",
+      "tier": "A",
+      "difficulty": "low",
+      "playstyles": [
+        "scaling",
+        "frontline",
+        "sustain"
+      ],
+      "category": "core",
+      "why": "Sin cambios directos, conserva un perfil claro de limpieza rápida, escalado y daño sostenido. Es una opción sencilla para jugadores que quieren convertir tempo en objetivos.",
+      "changes": "Sin cambios directos en el 26.21. La recomendación es editorial y se apoya en su perfil de campeona, no en una mejora del parche.",
+      "strengths": [
+        "Limpieza de campamentos rápida.",
+        "Buen escalado con dragones.",
+        "Presión directa sobre objetivos."
+      ],
+      "weaknesses": [
+        "Poca presión antes de tener su forma.",
+        "Los ganks dependen mucho de la posición enemiga."
+      ],
+      "profile": "Jugadores que prefieren farmear, escalar y jugar por objetivos."
+    },
+    {
+      "id": "MonkeyKing",
+      "name": "Wukong",
+      "role": "jungle",
+      "tier": "A",
+      "difficulty": "medium",
+      "playstyles": [
+        "engage",
+        "frontline",
+        "assassin"
+      ],
+      "category": "core",
+      "why": "Recibe más regeneración de vida, pero pierde armadura temprana por acumulación de su pasiva. Mantiene una iniciación muy valiosa y un buen impacto en peleas grupales.",
+      "changes": "Regeneración de vida: 3,5 + 0,65/nivel → 5,5 + 0,65/nivel. Pasiva (Piel de piedra): armadura por acumulación 6–10 → 4,5–10 según el nivel del campeón.",
+      "strengths": [
+        "Iniciación fiable con W y R.",
+        "Buen daño en peleas grupales.",
+        "Flexible entre jungla y línea."
+      ],
+      "weaknesses": [
+        "Pierde aguante en los primeros niveles.",
+        "Su daño cae si no consigue ventaja temprana."
+      ],
+      "profile": "Jugadores que quieren iniciar peleas y marcar el ritmo del mapa.",
+      "stats": {
+        "winRateDelta": -0.8,
+        "note": "Datos de ggez.gg para todos los rangos. Vigila su rendimiento con más partidas."
+      }
+    },
+    {
+      "id": "Nunu",
+      "name": "Nunu & Willump",
+      "role": "jungle",
+      "tier": "B",
+      "difficulty": "low",
+      "playstyles": [
+        "engage",
+        "frontline",
+        "sustain"
+      ],
+      "category": "watch",
+      "why": "La definitiva hace más daño máximo, pero la muestra inicial del parche no acompaña: ggez.gg registra una caída de 2,6 puntos de win rate. Lo bajamos de A provisional a B hasta tener más datos.",
+      "changes": "R (Cero absoluto): daño máximo 625/925/1275 (+300 % AP) → 750/1100/1450 (+300 % AP).",
+      "strengths": [
+        "Control de objetivos con Q y Smite.",
+        "Puede decidir peleas con una R bien canalizada.",
+        "Buen engage con bola de nieve."
+      ],
+      "weaknesses": [
+        "La R necesita canalización y puede interrumpirse.",
+        "La muestra inicial no confirma la mejora."
+      ],
+      "profile": "Jugadores que prefieren un jungla sencillo, orientado a objetivos y peleas agrupadas.",
+      "stats": {
+        "winRateDelta": -2.6,
+        "note": "Datos de ggez.gg para todos los rangos; la muestra inicial es corta."
+      }
+    },
+    {
+      "id": "LeeSin",
+      "name": "Lee Sin",
+      "role": "jungle",
+      "tier": "B",
+      "difficulty": "high",
+      "playstyles": [
+        "assassin",
+        "engage",
+        "frontline"
+      ],
+      "category": "watch",
+      "why": "Recibe un enfriamiento mayor en W y menos daño en R. Aun así, los datos iniciales no lo hunden: mantiene un 0,2 de win rate adicional. Sigue siendo competitivo en manos expertas, pero ya no es un pick automático.",
+      "changes": "W (Salvaguarda): enfriamiento 7 s → 8 s. E (Tempestad): deja de revelar a enemigos invisibles que se oculten después del impacto. R (Patada dragón): daño 175/400/625 → 150/350/550 (+200 % de AD adicional).",
+      "strengths": [
+        "Movilidad y presión temprana.",
+        "Capacidad de iniciar o rematar peleas.",
+        "Mucho impacto si dominas sus combos."
+      ],
+      "weaknesses": [
+        "El nerf reduce su flexibilidad.",
+        "Requiere una inversión mecánica alta."
+      ],
+      "profile": "Jugadores experimentados que quieran un jungla de tempo y jugadas.",
+      "stats": {
+        "winRateDelta": 0.2,
+        "note": "Datos de ggez.gg para todos los rangos; el campeón aguantó el nerf en la muestra inicial."
+      }
+    },
+    {
+      "id": "Nidalee",
+      "name": "Nidalee",
+      "role": "jungle",
+      "tier": "B",
+      "difficulty": "high",
+      "playstyles": [
+        "assassin",
+        "poke",
+        "scaling"
+      ],
+      "category": "watch",
+      "why": "Pierde daño en W y velocidad de ataque en E, pero los datos iniciales incluso suben 2,2 puntos. Su techo sigue siendo alto en rangos altos, aunque el nerf castiga su claridad y sus intercambios.",
+      "changes": "W (Zarpazo): daño 55/88,75/122,5/156,25/190 → 50/80/110/140/170 (+50 % de AD adicional, +30 % AP). E (Impulso primigenio): velocidad de ataque 30/40/50/60/70 % → 20/30/40/50/60 %.",
+      "strengths": [
+        "Limpieza rápida y presión constante.",
+        "Mucho daño si acierta la lanza.",
+        "Excelente en manos con experiencia."
+      ],
+      "weaknesses": [
+        "Menos velocidad de ataque temprana.",
+        "Muy castigada si falla sus habilidades."
+      ],
+      "profile": "Jugadores de jungla agresivos con buen manejo de la forma de felino.",
+      "stats": {
+        "winRateDelta": 2.2,
+        "note": "Datos de ggez.gg para todos los rangos; el rendimiento puede variar mucho por habilidad."
+      }
+    },
+    {
+      "id": "Rammus",
+      "name": "Rammus",
+      "role": "jungle",
+      "tier": "C",
+      "difficulty": "low",
+      "playstyles": [
+        "engage",
+        "frontline"
+      ],
+      "category": "watch",
+      "why": "Pierde escalado de resistencias en W y es el campeón que más cae en la muestra inicial: 3,5 puntos de win rate. Sigue siendo útil contra composiciones muy dependientes de daño físico, pero ya no es un pick general.",
+      "changes": "W (Bola defensiva): armadura adicional 27/32/37/42/47 (+30–60 % de armadura) → 25/30/35/40/45 (+30–50 %). Resistencia mágica adicional: 20/25/30/35/40 (+30–60 % de RM) → 20/25/30/35/40 (+30–50 %).",
+      "strengths": [
+        "Muy bueno contra composiciones de AD.",
+        "Iniciación sencilla con Q y control de masas."
+      ],
+      "weaknesses": [
+        "El nerf reduce su aguante en peleas largas.",
+        "Predecible y fácil de contrarrestar con daño mágico."
+      ],
+      "profile": "Jugadores que quieren un tanque directo como respuesta a composiciones físicas.",
+      "stats": {
+        "winRateBefore": 52.6,
+        "winRateAfter": 49.1,
+        "winRateDelta": -3.5,
+        "note": "Datos de ggez.gg para todos los rangos; es el mayor descenso entre los campeones modificados."
+      }
+    },
+    {
+      "id": "XinZhao",
+      "name": "Xin Zhao",
+      "role": "jungle",
+      "tier": "B",
+      "difficulty": "low",
+      "playstyles": [
+        "frontline",
+        "engage",
+        "sustain"
+      ],
+      "category": "watch",
+      "rising": true,
+      "why": "Recibe mejores ratios en Q y E y los datos iniciales lo sitúan 3,1 puntos por encima. No lo subimos a A porque la muestra es corta, pero es uno de los picks a seguir del parche.",
+      "changes": "Q (Golpe de tres garras): daño por golpe +40 % → +45 % de AD adicional. E (Carga audaz): la velocidad de ataque escala con 1 % por cada 4 % de velocidad de ataque permanente, en lugar de 1 % por cada 5 %.",
+      "strengths": [
+        "Iniciación temprana muy directa.",
+        "Buen duelo y presión de objetivos.",
+        "Perdona errores con su R."
+      ],
+      "weaknesses": [
+        "Pierde valor si no consigue ventaja temprana.",
+        "Puede ser kiteado en peleas abiertas."
+      ],
+      "profile": "Jugadores que quieren un jungla sencillo con impacto temprano.",
+      "stats": {
+        "winRateBefore": 49,
+        "winRateAfter": 52.1,
+        "winRateDelta": 3.1,
+        "note": "Datos de ggez.gg para todos los rangos."
+      }
+    },
+    {
+      "id": "Orianna",
+      "name": "Orianna",
+      "role": "mid",
+      "tier": "A",
+      "difficulty": "medium",
+      "playstyles": [
+        "scaling",
+        "zone",
+        "utility"
+      ],
+      "category": "core",
+      "rising": true,
+      "why": "Mejora los ratios de AP de Q y W, así que su combo principal pega más en fases avanzadas. Mantiene control de oleadas, utilidad y una definitiva capaz de decidir peleas.",
+      "changes": "Q (Orden: atacar): ratio de AP 55 % → 60 %. W (Orden: disonancia): ratio de AP 80 % → 85 %.",
+      "strengths": [
+        "Control de oleadas y de zonas.",
+        "Muy buena en peleas coordinadas.",
+        "Escalado de daño más alto."
+      ],
+      "weaknesses": [
+        "Necesita gestionar bien la posición de la bola.",
+        "Puede sufrir contra asesinos móviles."
+      ],
+      "profile": "Jugadores que prefieren magos de control y jugar alrededor del equipo.",
+      "stats": {
+        "winRateDelta": 1,
+        "note": "Datos de ggez.gg para todos los rangos."
+      }
+    },
+    {
+      "id": "Ryze",
+      "name": "Ryze",
+      "role": "mid",
+      "tier": "A",
+      "difficulty": "high",
+      "playstyles": [
+        "scaling",
+        "zone",
+        "sustain"
+      ],
+      "category": "core",
+      "why": "Recibe mejoras en Q, velocidad de movimiento y daño de W. Los cambios buscan recompensar a quienes llegan a las fases avanzadas y dominan sus combinaciones.",
+      "changes": "Q (Sobrecarga): daño adicional contra objetivos con Flux 15/40/65/90 % → 10/40/70/100 %. Velocidad de movimiento adicional 28/32/36/40/44 % → 30/35/40/45/50 %. W (Prisión rúnica): ratio de AP 60 % → 70 %.",
+      "strengths": [
+        "Daño sostenido y movilidad.",
+        "Presión en el mapa con su R.",
+        "Muy fuerte si llega a late game."
+      ],
+      "weaknesses": [
+        "Requiere dominar sus combos.",
+        "La fase temprana sigue siendo exigente."
+      ],
+      "profile": "Jugadores dispuestos a invertir tiempo en combos y control de oleadas.",
+      "stats": {
+        "winRateDelta": 0.2,
+        "note": "Datos de ggez.gg para todos los rangos; la mejora de escalado puede tardar en reflejarse."
+      }
+    },
+    {
+      "id": "Fizz",
+      "name": "Fizz",
+      "role": "mid",
+      "tier": "A",
+      "difficulty": "medium",
+      "playstyles": [
+        "assassin",
+        "engage"
+      ],
+      "category": "core",
+      "why": "Sin cambios directos, sigue siendo un asesino eficaz para castigar errores de posicionamiento y eliminar objetivos prioritarios. Su recomendación es editorial.",
+      "changes": "Sin cambios directos en el 26.21.",
+      "strengths": [
+        "Mucho daño de explosión.",
+        "Movilidad con E para entrar y salir.",
+        "Buen roaming."
+      ],
+      "weaknesses": [
+        "Depende de acertar la R para iniciar.",
+        "Puede quedarse sin recursos tras el combo."
+      ],
+      "profile": "Jugadores que prefieren asesinos y crear ventajas con rotaciones."
+    },
+    {
+      "id": "Gwen",
+      "name": "Gwen",
+      "role": "mid",
+      "tier": "A",
+      "difficulty": "medium",
+      "playstyles": [
+        "scaling",
+        "splitpush",
+        "sustain"
+      ],
+      "category": "core",
+      "why": "Sin cambios directos, conserva un perfil de daño sostenido y buen rendimiento en peleas prolongadas. La incluimos como recomendación editorial y conviene vigilar su muestra.",
+      "changes": "Sin cambios directos en el 26.21.",
+      "strengths": [
+        "Daño sostenido en peleas largas.",
+        "Buena presión lateral.",
+        "Se protege con su W."
+      ],
+      "weaknesses": [
+        "Sufre contra poke a distancia.",
+        "Necesita tiempo para escalar."
+      ],
+      "profile": "Jugadores que prefieren campeones de escalado y peleas extendidas."
+    },
+    {
+      "id": "Azir",
+      "name": "Azir",
+      "role": "mid",
+      "tier": "B",
+      "difficulty": "high",
+      "playstyles": [
+        "scaling",
+        "zone",
+        "poke"
+      ],
+      "category": "watch",
+      "rising": true,
+      "why": "Recibe más maná por nivel y los datos iniciales suben 3,5 puntos. Es un pick en observación: su dificultad y su dependencia del posicionamiento impiden subirlo a A con la muestra actual.",
+      "changes": "Maná por nivel: 40 → 50.",
+      "strengths": [
+        "Control de zona y presión a distancia.",
+        "Escalado excelente.",
+        "Muy fuerte en manos expertas."
+      ],
+      "weaknesses": [
+        "Dificultad muy alta.",
+        "Necesita proteger a sus soldados y su posición."
+      ],
+      "profile": "Jugadores con experiencia en magos de control y ganas de practicar.",
+      "stats": {
+        "winRateBefore": 46.9,
+        "winRateAfter": 50.4,
+        "winRateDelta": 3.5,
+        "note": "Datos de ggez.gg para todos los rangos."
+      }
+    },
+    {
+      "id": "Qiyana",
+      "name": "Qiyana",
+      "role": "mid",
+      "tier": "B",
+      "difficulty": "high",
+      "playstyles": [
+        "assassin",
+        "engage"
+      ],
+      "category": "watch",
+      "why": "Pierde daño en Q, aunque la muestra inicial apenas se mueve (-0,2). Sigue siendo una asesina peligrosa en manos expertas, pero el nerf reduce su margen de error.",
+      "changes": "Q (Ira elemental / Filo de Ixtal): daño 80/110/140/170/200 (+90 % de AD adicional) → 70/100/130/160/190 (+90 % de AD adicional).",
+      "strengths": [
+        "Mucho daño de explosión.",
+        "Control de zonas con sus elementos.",
+        "Buen roaming."
+      ],
+      "weaknesses": [
+        "El nerf reduce su daño en intercambios.",
+        "Requiere ejecución precisa."
+      ],
+      "profile": "Jugadores de asesinos con buena mecánica y lectura del mapa.",
+      "stats": {
+        "winRateDelta": -0.2,
+        "note": "Datos de ggez.gg para todos los rangos."
+      }
+    },
+    {
+      "id": "Viktor",
+      "name": "Viktor",
+      "role": "mid",
+      "tier": "C",
+      "difficulty": "medium",
+      "playstyles": [
+        "scaling",
+        "zone",
+        "poke"
+      ],
+      "category": "watch",
+      "why": "Pierde velocidad de movimiento y parte del escudo de Q, y los datos iniciales bajan 2,4 puntos. Sigue teniendo un late game fuerte, pero su fase temprana es más vulnerable.",
+      "changes": "Velocidad de movimiento: 335 → 330. Q (Poder de síntesis): escudo 40–140 (+25 % AP) → 30–130 (+20 % AP).",
+      "strengths": [
+        "Escalado y daño de área.",
+        "Control de zonas con su W.",
+        "Muy bueno en peleas largas."
+      ],
+      "weaknesses": [
+        "Más vulnerable en los primeros niveles.",
+        "Necesita tiempo y protección."
+      ],
+      "profile": "Jugadores pacientes que quieran escalar y jugar alrededor del equipo.",
+      "stats": {
+        "winRateDelta": -2.4,
+        "note": "Datos de ggez.gg para todos los rangos."
+      }
+    },
+    {
+      "id": "MissFortune",
+      "name": "Miss Fortune",
+      "role": "adc",
+      "tier": "A",
+      "difficulty": "low",
+      "playstyles": [
+        "poke",
+        "zone",
+        "scaling"
+      ],
+      "category": "core",
+      "rising": true,
+      "why": "Recibe más daño en E y en R, compensando en parte el ajuste de Hubris. Su presión en línea y su definitiva siguen castigando a los equipos que se agrupan.",
+      "changes": "E (Lluvia de plomo): daño 70/100/130/160/190 (+120 % AP) → 90/120/150/180/210 (+120 % AP). R (Tiempo de balas): daño crítico 130 % (+0,3 % por 1 % de daño crítico adicional) → 145 % (+0,45 %).",
+      "strengths": [
+        "Presión de línea muy clara.",
+        "R devastadora contra agrupaciones.",
+        "Fácil de ejecutar."
+      ],
+      "weaknesses": [
+        "Necesita posicionarse bien para la R.",
+        "Puede sufrir contra dive."
+      ],
+      "profile": "Jugadores que quieren una tiradora directa con una fase de líneas clara.",
+      "stats": {
+        "winRateDelta": 0.2,
+        "pickRateDelta": 4.6,
+        "note": "Datos de ggez.gg para todos los rangos; el pick rate sube con fuerza."
+      }
+    },
+    {
+      "id": "KogMaw",
+      "name": "Kog'Maw",
+      "role": "adc",
+      "tier": "A",
+      "difficulty": "medium",
+      "playstyles": [
+        "scaling",
+        "poke",
+        "sustain"
+      ],
+      "category": "core",
+      "why": "Sin cambios directos, mantiene un perfil de daño sostenido y capacidad para fundir objetivos resistentes cuando recibe tiempo y protección.",
+      "changes": "Sin cambios directos en el 26.21.",
+      "strengths": [
+        "Daño sostenido muy alto.",
+        "Buen contra tanques.",
+        "Presión a distancia."
+      ],
+      "weaknesses": [
+        "Muy dependiente de la protección del equipo.",
+        "Poca movilidad."
+      ],
+      "profile": "Jugadores que prefieren escalar y posicionarse con cuidado."
+    },
+    {
+      "id": "Jinx",
+      "name": "Jinx",
+      "role": "adc",
+      "tier": "A",
+      "difficulty": "medium",
+      "playstyles": [
+        "scaling",
+        "zone"
+      ],
+      "category": "core",
+      "why": "Pierde AD por nivel y vida base, pero conserva su identidad de carry de escalado y su capacidad para aprovechar reinicios. La caída inicial es de 1,4 puntos: no es motivo para descartarla.",
+      "changes": "AD: 59 + 3,25/nivel → 59 + 3/nivel. Vida: 630 + 105/nivel → 610 + 105/nivel.",
+      "strengths": [
+        "Escalado y reinicios en peleas.",
+        "Buen control de oleadas.",
+        "Daño de área con cohetes."
+      ],
+      "weaknesses": [
+        "Menos margen de error tras el nerf.",
+        "Necesita protección."
+      ],
+      "profile": "Jugadores que quieran una carry de late game con paciencia.",
+      "stats": {
+        "winRateDelta": -1.4,
+        "pickRateDelta": -2,
+        "note": "Datos de ggez.gg para todos los rangos."
+      }
+    },
+    {
+      "id": "Caitlyn",
+      "name": "Caitlyn",
+      "role": "adc",
+      "tier": "A",
+      "difficulty": "medium",
+      "playstyles": [
+        "poke",
+        "zone"
+      ],
+      "category": "core",
+      "why": "Pierde escalado en la pasiva, pero gana daño base en Q. El cambio traslada poder hacia la fase de líneas, donde su alcance sigue marcando diferencias.",
+      "changes": "Pasiva (Tiro en la cabeza): 60–100 % de AD (+1 % por 1 % de crítico) → 60–80 % de AD (+0,8 %). Q (Pazmaker de Piltover): daño base 50/90/130/170/210 → 50/95/140/185/230.",
+      "strengths": [
+        "Alcance y presión en línea.",
+        "Trampas y control de zona.",
+        "Buena transición a objetivos."
+      ],
+      "weaknesses": [
+        "Menos daño de pasiva en late game.",
+        "Depende de mantener distancia."
+      ],
+      "profile": "Jugadores que quieran ganar la línea con rango y presión.",
+      "stats": {
+        "winRateDelta": -1.2,
+        "note": "Datos de ggez.gg para todos los rangos."
+      }
+    },
+    {
+      "id": "Tristana",
+      "name": "Tristana",
+      "role": "adc",
+      "tier": "B",
+      "difficulty": "medium",
+      "playstyles": [
+        "assassin",
+        "scaling",
+        "splitpush"
+      ],
+      "category": "watch",
+      "why": "Pierde velocidad de ataque en los primeros rangos de Q y los datos iniciales caen 2,3 puntos. Sigue siendo útil para presionar torres, pero su dominio temprano de línea se reduce.",
+      "changes": "Q (Fuego rápido): velocidad de ataque 60/75/90/105/120 % → 40/60/80/100/120 %.",
+      "strengths": [
+        "Push y presión sobre torres.",
+        "Movilidad y capacidad de escapar.",
+        "Buen escalado."
+      ],
+      "weaknesses": [
+        "Menos presión temprana tras el nerf.",
+        "Riesgo alto al saltar sobre objetivos."
+      ],
+      "profile": "Jugadores que quieran una carry móvil con plan de splitpush.",
+      "stats": {
+        "winRateDelta": -2.3,
+        "pickRateDelta": -1.6,
+        "note": "Datos de ggez.gg para todos los rangos."
+      }
+    },
+    {
+      "id": "Varus",
+      "name": "Varus",
+      "role": "adc",
+      "tier": "B",
+      "difficulty": "medium",
+      "playstyles": [
+        "poke",
+        "zone",
+        "scaling"
+      ],
+      "category": "watch",
+      "why": "Los ajustes reparten poder entre Q y W para limitar su variante de Top y permitir ajustes más específicos en bot. En ADC sube 2,1 puntos en la muestra inicial, pero la build y el maxeo cambian.",
+      "changes": "Q (Flecha perforante): el daño escala mejor con la canalización. W (Carcaj de la plaga): menos daño por impacto y por acumulación, pero mejores ratios de AD/AP y más recompensa por cargar Q.",
+      "strengths": [
+        "Poke y presión a distancia.",
+        "Útil en composiciones de asedio.",
+        "Buena sinergia con engage."
+      ],
+      "weaknesses": [
+        "Sin movilidad.",
+        "Depende de acertar habilidades."
+      ],
+      "profile": "Jugadores de poke que quieran adaptar la build al parche.",
+      "stats": {
+        "winRateDelta": 2.1,
+        "note": "Datos de ggez.gg para todos los rangos."
+      }
+    },
+    {
+      "id": "Zyra",
+      "name": "Zyra",
+      "role": "support",
+      "tier": "A",
+      "difficulty": "medium",
+      "playstyles": [
+        "poke",
+        "zone",
+        "engage"
+      ],
+      "category": "core",
+      "rising": true,
+      "why": "Recibe un enfriamiento menor en la carga de semillas de W. Los datos iniciales de ggez.gg muestran una subida de 4,3 puntos de win rate (de 50,5 % a 54,8 %), aunque es una muestra de todos los rangos y no una garantía futura.",
+      "changes": "W (Crecimiento descontrolado): enfriamiento de munición 18/16/14/12/10 s → 16/14,5/13/11,5/10 s.",
+      "strengths": [
+        "Control de zona con plantas.",
+        "Mucho poke en línea.",
+        "Puede iniciar con E y R."
+      ],
+      "weaknesses": [
+        "Frágil si la alcanzan.",
+        "Necesita colocar bien las semillas."
+      ],
+      "profile": "Jugadores que prefieren supports de daño y control de espacio.",
+      "stats": {
+        "winRateBefore": 50.5,
+        "winRateAfter": 54.8,
+        "winRateDelta": 4.3,
+        "note": "Datos de ggez.gg para todos los rangos; muestra inicial."
+      }
+    },
+    {
+      "id": "Velkoz",
+      "name": "Vel'Koz",
+      "role": "support",
+      "tier": "A",
+      "difficulty": "medium",
+      "playstyles": [
+        "poke",
+        "zone"
+      ],
+      "category": "core",
+      "rising": true,
+      "why": "Gana daño en la pasiva y los datos iniciales suben 2,5 puntos. Recompensa acertar combinaciones y puede presionar desde una distancia segura.",
+      "changes": "Pasiva (Descomposición orgánica): 35–180 (+60 % AP) → 35–205 (+65 % AP).",
+      "strengths": [
+        "Poke de largo alcance.",
+        "Mucho daño si acierta combos.",
+        "Control de zona con E."
+      ],
+      "weaknesses": [
+        "Sin movilidad.",
+        "Depende de skillshots."
+      ],
+      "profile": "Jugadores que prefieren poke y daño mágico a distancia.",
+      "stats": {
+        "winRateDelta": 2.5,
+        "note": "Datos de ggez.gg para todos los rangos."
+      }
+    },
+    {
+      "id": "Taric",
+      "name": "Taric",
+      "role": "support",
+      "tier": "A",
+      "difficulty": "medium",
+      "playstyles": [
+        "utility",
+        "frontline",
+        "sustain"
+      ],
+      "category": "core",
+      "rising": true,
+      "why": "Sus habilidades funcionan ahora de forma más fiable cuando el aliado vinculado se vuelve inalcanzable durante el lanzamiento. Los datos iniciales suben 2,8 puntos, aunque su valor principal sigue siendo la utilidad coordinada.",
+      "changes": "Q, E y R ahora se lanzan correctamente sobre aliados inalcanzables. E (Deslumbramiento) mantiene la excepción para aliados que desaparecen de la pantalla. Se actualiza la descripción de la habilidad.",
+      "strengths": [
+        "Protección y curación.",
+        "R que puede salvar peleas enteras.",
+        "Buena sinergia con carries de autoataque."
+      ],
+      "weaknesses": [
+        "Necesita coordinación.",
+        "Poca presión a distancia."
+      ],
+      "profile": "Jugadores que prefieren proteger y jugar en equipo.",
+      "stats": {
+        "winRateBefore": 51.7,
+        "winRateAfter": 54.5,
+        "winRateDelta": 2.8,
+        "note": "Datos de ggez.gg para todos los rangos."
+      }
+    },
+    {
+      "id": "Leona",
+      "name": "Leona",
+      "role": "support",
+      "tier": "A",
+      "difficulty": "low",
+      "playstyles": [
+        "engage",
+        "frontline",
+        "utility"
+      ],
+      "category": "core",
+      "why": "Sigue siendo una opción directa para iniciar peleas y encadenar control de masas. Su inclusión es editorial y no implica una mejora directa en el 26.21.",
+      "changes": "Sin cambios directos en el 26.21.",
+      "strengths": [
+        "Iniciación muy fiable.",
+        "Mucho control de masas.",
+        "Buena en peleas tempranas."
+      ],
+      "weaknesses": [
+        "Poco daño por sí misma.",
+        "Puede quedar atrapada tras entrar."
+      ],
+      "profile": "Jugadores que quieren iniciar y marcar el ritmo de la botlane."
+    }
+  ]
+}

@@ -5,6 +5,7 @@ import { setRequestLocale } from 'next-intl/server'
 import { getHreflangAlternates } from '@/lib/seo-utils'
 import { routing } from '@/i18n/routing'
 import { BLOG_SLUGS, blogKeywords } from "@/lib/blog-posts"
+import { getPostHref } from '@/lib/blog/meta'
 
 type BlogPost = {
   slug: string
@@ -90,7 +91,7 @@ export default async function LanePage({ params }: { params: Promise<{ locale: s
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <div className="mx-auto max-w-6xl">
         <div className="mb-8">
-          <Link href="/blog" className="mb-4 inline-flex items-center gap-2 text-sm text-neutral-400 transition hover:text-white">
+          <Link href={locale === 'en' ? '/blog' : `/${locale}/blog`} className="mb-4 inline-flex items-center gap-2 text-sm text-neutral-400 transition hover:text-white">
             <span aria-hidden="true">←</span> {t('back') || 'Back'}
           </Link>
           <h1 className="mb-3 text-4xl font-semibold tracking-tight text-white md:text-5xl">{meta?.title || lane}</h1>
@@ -101,7 +102,7 @@ export default async function LanePage({ params }: { params: Promise<{ locale: s
             <article key={post.slug} className="flex h-full flex-col rounded-3xl border border-neutral-800 bg-neutral-900 p-6">
               <h2 className="mb-3 text-2xl font-semibold text-white">{post.title}</h2>
               <p className="mb-4 leading-7 text-neutral-400">{post.excerpt}</p>
-              <Link href={`/blog/${post.slug}`} className="inline-flex w-fit items-center rounded-xl bg-[#C89B3C] px-4 py-3 font-semibold text-neutral-950 transition hover:bg-[#d9aa44]">
+              <Link href={getPostHref(post.slug, locale)} className="inline-flex w-fit items-center rounded-xl bg-[#C89B3C] px-4 py-3 font-semibold text-neutral-950 transition hover:bg-[#d9aa44]">
                 {post.ctaLabel || 'Read More'}
               </Link>
             </article>

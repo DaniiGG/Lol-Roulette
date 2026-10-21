@@ -1,8 +1,7 @@
 // app/sitemap.ts
 import { MetadataRoute } from 'next'
-import { BLOG_SLUGS } from '@/lib/blog/meta'
+import { BLOG_SLUGS, getLocalizedSlug, getPostMeta } from '@/lib/blog/meta'
 import { CATEGORIES } from '@/lib/blog/categories'
-import { getPostMeta } from '@/lib/blog/meta'
 import { routing } from '@/i18n/routing'
 
 const baseUrl = 'https://leagueroulette.com'
@@ -49,7 +48,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       const meta = getPostMeta(slug)
       const lastMod = meta?.updatedAt ? new Date(meta.updatedAt) : new Date(meta?.publishedAt ?? '')
       entries.push({
-        url: `${baseUrl}${localePrefix}/blog/${slug}`,
+        url: `${baseUrl}${localePrefix}/blog/${getLocalizedSlug(slug, locale)}`,
         lastModified: lastMod,
         changeFrequency: 'weekly' as const,
         priority: 0.7,
@@ -63,18 +62,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     for (const cat of CATEGORIES) {
       const catSlug = cat.slug
       // Use the most recent post in this category for lastmod
-      const { getPostMeta: getMeta } = require('@/lib/blog/meta')
-      const { BLOG_SLUGS: slugs } = require('@/lib/blog/meta')
-      let newestDate = new Date()
-      for (const slug of slugs) {
-        const m = getMeta(slug)
-        if (m?.category === catSlug && m.updatedAt) {
-          const d = new Date(m.updatedAt)
-          if (d > newestDate) newestDate = d
-        } else if (m?.publishedAt) {
-          const d = new Date(m.publishedAt)
-          if (d > newestDate) newestDate = d
-        }
+      let newestDate = new Date(0)
+      for (const slug of BLOG_SLUGS) {
+        const m = getPostMeta(slug)
+        if (m?.category !== catSlug) continue
+        const dateValue = m.updatedAt ?? m.publishedAt
+        if (!dateValue) continue
+        const d = new Date(dateValue)
+        if (d > newestDate) newestDate = d
       }
       entries.push({
         url: `${baseUrl}${localePrefix}/blog/${catSlug}`,

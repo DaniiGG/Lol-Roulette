@@ -1,5 +1,579 @@
 [
   {
+    "slug": "lol-patch-26-21-tier-list",
+    "title": "LoL Patch 26.21 Tier List: Best Champions by Role",
+    "description": "Explore the LoL 26.21 tier list for Top, Jungle, Mid, ADC and Support. Compare the strongest picks and find champions to climb ranked.",
+    "keywords": [
+      "lol patch 26.21 tier list",
+      "best champions patch 26.21",
+      "best champions to climb ranked",
+      "lol top lane tier list",
+      "best jungle champions lol",
+      "best mid lane champions",
+      "best adc lol",
+      "best support champions lol"
+    ],
+    "excerpt": "Editorial Patch 26.21 tier list with the strongest picks for all five roles, the official changes, early data and tier tables by role and champion portraits.",
+    "ctaLabel": "Try League Roulette",
+    "ctaHref": "/",
+    "heroIntro": [
+      "League of Legends Patch 26.21 is live. Riot published the official notes on October 20 and the patch reached live servers on October 21, with buffs for Sion, Taliyah, Nunu & Willump, Orianna, Ryze, Miss Fortune, Zyra, Vel'Koz, Azir and Xin Zhao, plus nerfs for Jinx, Caitlyn, Lee Sin, Rammus, Nidalee, Tristana, Viktor, Qiyana and Yone.",
+      "This tier list covers Top, Jungle, Mid, ADC and Support. We compared Riot's official notes with the first public Ranked Solo/Duo data from ggez.gg: 25 changed champions and 206,610 games analyzed. The data covers all ranks and is not role-specific, so we use it as context rather than an automatic ranking.",
+      "Important: these tiers are editorial and provisional. The patch just launched and per-role samples are still small. That is why no champion sits in S+ or S: we would rather be honest about the uncertainty than invent a meta dominator."
+    ],
+    "sections": [
+      {
+        "heading": "Patch 26.21 tier list summary",
+        "paragraphs": [
+          "The official changes mix clear buffs with adjustments aimed at specific builds. Sion gains health and ultimate damage; Taliyah improves her clear and combo; Zyra and Vel'Koz get more tools to punish from range. On the other side, Jinx, Caitlyn, Lee Sin, Rammus, Nidalee, Tristana, Viktor and Qiyana lose some power.",
+          "Our read does not turn every buff into a tier promotion. For example, Nunu & Willump gains maximum R damage, but the early ggez.gg sample shows a 2.6 percentage point win rate drop, so we move him from provisional A to B. Lee Sin and Nidalee, by contrast, held up better than expected after their nerfs and stay in B as picks to watch."
+        ],
+        "table": {
+          "headers": [
+            "Role",
+            "Recommended picks",
+            "What to watch"
+          ],
+          "rows": [
+            [
+              "Top",
+              "Sion, Darius, Volibear, Garen",
+              "Sion and Darius receive favorable changes; Yone and Varus drop to B and C."
+            ],
+            [
+              "Jungle",
+              "Taliyah, Shyvana, Wukong",
+              "Taliyah and Xin Zhao rise in the data; Nunu, Rammus, Lee Sin and Nidalee remain on watch."
+            ],
+            [
+              "Mid",
+              "Orianna, Ryze, Fizz, Gwen",
+              "Orianna and Ryze gain ratios; Azir rises while Qiyana and Viktor fall."
+            ],
+            [
+              "ADC",
+              "Miss Fortune, Kog'Maw, Jinx, Caitlyn",
+              "Miss Fortune receives compensation; Jinx and Caitlyn lose power but remain provisional A."
+            ],
+            [
+              "Support",
+              "Zyra, Vel'Koz, Taric, Leona",
+              "Zyra and Vel'Koz lead the gains; Taric improves his reliability."
+            ]
+          ]
+        },
+        "subsections": [
+          {
+            "heading": "How to read the tiers",
+            "paragraphs": [
+              "The list uses five levels. The top two are intentionally empty in this patch because role-specific evidence does not yet justify such a strong label."
+            ],
+            "bullets": [
+              "S+ and S: reserved for picks with strong, consistent role evidence. There are no confirmed candidates in 26.21.",
+              "A: our main recommendations. They are editorial and provisional, not a win rate promise.",
+              "B: viable picks with conditions, recent nerfs or samples that still need confirmation.",
+              "C: situational options that depend heavily on context or lost power this patch."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "How this tier list was built",
+        "paragraphs": [
+          "We started with Riot Games' official Patch 26.21 notes. We then reviewed the first public ggez.gg data, which compares champion win rates between 26.20 and 26.21 across 206,610 Ranked Solo/Duo games. That sample covers all ranks, so it cannot prove that a champion is better in Top than in Jungle or that it performs the same in Iron and Diamond.",
+          "The final placement is an editorial decision. A champion can be in A because their kit fits the role even when the data is inconclusive, and a nerf does not automatically push a pick out of the list. When no verified data exists, we say so and do not display invented numbers."
+        ],
+        "bullets": [
+          "Ability and stat changes: Riot Games' official Patch 26.21 notes.",
+          "Early win rate and pick rate: ggez.gg, Ranked Solo/Duo, all ranks, 206,610 games.",
+          "Tier criteria: verified impact of the change, champion profile, difficulty, role fit and team composition context.",
+          "Review date: October 21, 2026."
+        ],
+        "links": [
+          {
+            "label": "Patch 26.21: every buff, nerf and item change",
+            "href": "/blog/lol-patch-26-21",
+            "description": "The full ability-by-ability breakdown with before and after values."
+          }
+        ]
+      },
+      {
+        "heading": "Top lane: best champions in Patch 26.21",
+        "paragraphs": [
+          "Top remains a lane of duels and side-lane pressure. The changes favor Sion and Darius, while Yone and Varus lose some power in this role. Our four main picks are Sion, Darius, Volibear and Garen."
+        ],
+        "subsections": [
+          {
+            "heading": "Sion — provisional A",
+            "paragraphs": [
+              "Sion gains health growth per level, from 87 to 95, and more bonus damage on his fully charged ultimate. The changes may help him regain consistency in longer games.",
+              "Why play him: he offers durability, engage and the ability to create space in teamfights. He is ideal for players who prefer resilient champions and contributing to fights without relying only on lane kills.",
+              "Early data: ggez.gg shows a 2.4 percentage point win rate increase across all ranks. The sample is not Top-specific, so we keep him in A rather than promoting him to S."
+            ]
+          },
+          {
+            "heading": "Darius — provisional A",
+            "paragraphs": [
+              "His Q cooldown at max rank drops from 5 to 4 seconds. That is a meaningful improvement for extended trades, though it does not guarantee a higher overall performance.",
+              "Why play him: he can punish mistakes in lane and become a major threat in prolonged fights. He is ideal for aggressive players who understand melee matchups.",
+              "Early data: ggez.gg shows a 1.2 percentage point win rate drop. The change is small and does not invalidate the Q buff, but it reinforces that a buff is not an automatic tier promotion."
+            ]
+          },
+          {
+            "heading": "Volibear — provisional A",
+            "paragraphs": [
+              "Volibear remains an interesting option for players who want dueling, durability and pressure. He receives no relevant direct change this patch, so his placement depends more on performance and team fit than on the patch notes.",
+              "Why play him: he is a resilient bruiser with a straightforward game plan and strong tower pressure."
+            ]
+          },
+          {
+            "heading": "Garen — provisional A",
+            "paragraphs": [
+              "Garen is an accessible alternative for players who want consistency and a simple game plan. His recommendation is editorial and does not imply a direct buff in 26.21.",
+              "Why play him: he forgives mistakes, has clear waveclear and his ultimate executes low-health targets."
+            ]
+          },
+          {
+            "heading": "Yone — provisional B",
+            "paragraphs": [
+              "Yone loses AD ratio on his Q (110% to 105%). The nerf slightly reduces his sustained damage, but his mechanical ceiling and side-lane pressure remain high. We keep him in B, not C, because the early sample only drops 1.3 points and the change is moderate."
+            ]
+          },
+          {
+            "heading": "Varus — provisional C in Top",
+            "paragraphs": [
+              "The Q and W adjustments aim to limit his Top lane variant, where he usually maxes W. Q now scales better with charge time and W distributes its damage differently. The global ggez.gg number rises 2.1 points, but that may mostly reflect his bot lane variant: we do not use it to justify a high Top tier."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Jungle: best champions in Patch 26.21",
+        "paragraphs": [
+          "Jungle receives changes for Taliyah, Nunu, Rammus, Lee Sin, Nidalee and Xin Zhao. Taliyah and Xin Zhao start with positive signals, while Rammus is the biggest drop in the early sample. Our main recommendation leans on Taliyah, Shyvana and Wukong, with Nunu, Lee Sin, Nidalee and Xin Zhao on the watchlist."
+        ],
+        "subsections": [
+          {
+            "heading": "Taliyah — provisional A, with upside",
+            "paragraphs": [
+              "Taliyah gains more E damage on both the initial hit and the detonation. The ability also still deals 225% damage to monsters.",
+              "Why play her: she can use crowd control and damage to clear camps and create gank opportunities. She is ideal for players who prefer jungle mages, zone control and good rotations.",
+              "Early data: +1.5 percentage points of win rate on ggez.gg across all ranks."
+            ]
+          },
+          {
+            "heading": "Shyvana — provisional A",
+            "paragraphs": [
+              "Shyvana receives no direct changes. Her recommendation is editorial and based on her fast clear, scaling and sustained damage profile, not on a patch buff.",
+              "Why play her: she combines camp clearing, scaling and direct objective pressure."
+            ]
+          },
+          {
+            "heading": "Wukong — provisional A",
+            "paragraphs": [
+              "Wukong receives a health regeneration compensation but loses some passive armor per stack at early levels. The early data drops 0.8 points, a small move that does not take him out of A.",
+              "Why play him: he offers engage and considerable teamfight impact. Keep an eye on the balance between his jungle performance and his lane presence."
+            ]
+          },
+          {
+            "heading": "Nunu & Willump — provisional B (down from A)",
+            "paragraphs": [
+              "His ultimate's maximum damage increases at all ranks: from 625/925/1275 to 750/1100/1450, while keeping the AP scaling. In theory that is a clear improvement for punishing grouped enemies.",
+              "However, the early ggez.gg sample shows a 2.6 percentage point win rate drop. It could be noise from a short sample, but there is not enough evidence to keep him in A. We leave him in B and will revisit once more games are available."
+            ]
+          },
+          {
+            "heading": "Lee Sin — provisional B",
+            "paragraphs": [
+              "Lee Sin receives a longer W cooldown and less ultimate damage, plus an adjustment so his E no longer reveals enemies who stealth after the hit. Despite the nerfs, he held up in the early sample: +0.2 percentage points of win rate. He remains competitive in expert hands, but is no longer an automatic pick."
+            ]
+          },
+          {
+            "heading": "Nidalee — provisional B",
+            "paragraphs": [
+              "Nidalee loses W damage and E attack speed. The early data, surprisingly, rises 2.2 points. Her ceiling remains high at ranks with strong mechanics, but the nerf hurts her clear and trades. We keep her in B with a watch tag."
+            ]
+          },
+          {
+            "heading": "Rammus — provisional C",
+            "paragraphs": [
+              "Rammus loses part of his W resistance scaling. He is the biggest drop in the early sample: from 52.6% to 49.1% win rate, 3.5 points lower. He remains a useful answer against heavily physical compositions, but he is not a general pick for climbing."
+            ]
+          },
+          {
+            "heading": "Xin Zhao — rising B (added after reviewing the notes)",
+            "paragraphs": [
+              "The official notes include Q and E ratio buffs for Xin Zhao. The early sample places him 3.1 points higher (from 49.0% to 52.1%). We do not move him to A because the sample is short, but he is one of the picks to follow this patch."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Mid lane: best champions in Patch 26.21",
+        "paragraphs": [
+          "Mid mixes scaling buffs with nerfs to popular picks. Orianna and Ryze gain late-game damage; Azir receives more mana and rises in the data; Qiyana and Viktor lose power. Our four main picks are Orianna, Ryze, Fizz and Gwen."
+        ],
+        "subsections": [
+          {
+            "heading": "Orianna — provisional A",
+            "paragraphs": [
+              "Orianna receives better AP ratios on Q and W, increasing her late-game damage potential. The early data rises 1.0 point.",
+              "Why play her: she offers wave control, utility and an ultimate that can decide fights. She is ideal for players who prefer control mages and playing around their team."
+            ]
+          },
+          {
+            "heading": "Ryze — provisional A",
+            "paragraphs": [
+              "Ryze receives improvements to his Q scaling, movement speed and W damage. These changes aim to reward players who reach the later stages of the game.",
+              "Why play him: he can combine sustained damage, mobility and map pressure. He is ideal for players willing to invest time in mastering his combos and wave control."
+            ]
+          },
+          {
+            "heading": "Fizz — provisional A",
+            "paragraphs": [
+              "Fizz receives no direct buff this patch. His recommendation is editorial: he remains an effective assassin for punishing positioning mistakes and removing priority targets.",
+              "Why play him: he can create advantages through roams, kills and pressure on the enemy mid laner."
+            ]
+          },
+          {
+            "heading": "Gwen — provisional A",
+            "paragraphs": [
+              "Gwen also receives no direct changes. Her inclusion is based on her sustained damage profile and strong performance in extended fights. The per-role sample should be watched before treating her as a universal advantage."
+            ]
+          },
+          {
+            "heading": "Azir — rising B",
+            "paragraphs": [
+              "Azir receives more mana growth (from 40 to 50 per level). The early data rises 3.5 points, the second-largest increase among changed champions. We keep him in B because of his difficulty and because the sample is not Mid-specific, but he is clearly a pick on the rise."
+            ]
+          },
+          {
+            "heading": "Qiyana — provisional B",
+            "paragraphs": [
+              "Qiyana receives a Q damage reduction. The early sample barely moves (-0.2 points), so the nerf does not destroy her, but it reduces her margin for error. She remains a dangerous assassin in expert hands."
+            ]
+          },
+          {
+            "heading": "Viktor — provisional C",
+            "paragraphs": [
+              "Viktor loses movement speed and part of his Q shield. The early data drops 2.4 points. He keeps a strong late game, but his early phase is more vulnerable."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "ADC: best champions in Patch 26.21",
+        "paragraphs": [
+          "Bot lane receives compensation for Miss Fortune and adjustments for Jinx, Caitlyn, Tristana and Varus. Our four main picks are Miss Fortune, Kog'Maw, Jinx and Caitlyn, all provisional A. Tristana and Varus move to B."
+        ],
+        "subsections": [
+          {
+            "heading": "Miss Fortune — provisional A, with upside",
+            "paragraphs": [
+              "Miss Fortune receives increased E damage and ultimate damage. The changes partially compensate for the power loss associated with the Hubris adjustment.",
+              "Why play her: she can provide lane pressure and heavy damage in fights where enemies group up. She is ideal for players who prefer a marksman with a clear lane phase and a fight-changing ultimate.",
+              "Early data: +0.2 percentage points of win rate and +4.6 percentage points of pick rate on ggez.gg. The popularity increase is much more pronounced than the performance increase."
+            ]
+          },
+          {
+            "heading": "Kog'Maw — provisional A",
+            "paragraphs": [
+              "Kog'Maw receives no important direct change in 26.21. He remains an editorial recommendation for his sustained damage and ability to shred durable targets when he gets time and protection.",
+              "Why play him: he is ideal for players who prefer scaling and careful positioning in fights."
+            ]
+          },
+          {
+            "heading": "Jinx — provisional A",
+            "paragraphs": [
+              "Jinx loses attack damage per level and base health, aimed at curbing her dominance in the meta. The early sample drops 1.4 points and pick rate falls 2.0, but she remains a scaling carry capable of capitalizing on resets in fights.",
+              "She does not need to be discarded automatically: she keeps her identity and stays in provisional A, albeit with less margin for error."
+            ]
+          },
+          {
+            "heading": "Caitlyn — provisional A",
+            "paragraphs": [
+              "Caitlyn loses part of her passive damage scaling but receives more base Q damage. The change aims to shift some of her power from late game to earlier stages.",
+              "Why play her: she can use her range and lane pressure to generate early advantages. The early sample drops 1.2 points, a moderate move."
+            ]
+          },
+          {
+            "heading": "Tristana — provisional B",
+            "paragraphs": [
+              "Tristana loses attack speed at early Q ranks. The early data drops 2.3 points and pick rate falls 1.6. She remains useful for pressuring towers, but her early lane dominance is reduced."
+            ]
+          },
+          {
+            "heading": "Varus — provisional B",
+            "paragraphs": [
+              "Varus receives a power redistribution between Q and W, intended to limit his Top lane variant and allow more specific Bot adjustments. In ADC the early sample rises 2.1 points, but his build and skill order change. Later statistics will determine whether he keeps his position."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Support: best champions in Patch 26.21",
+        "paragraphs": [
+          "Support has the clearest signals of the patch: Zyra rises 4.3 percentage points of win rate, Vel'Koz 2.5 and Taric 2.8 in the early ggez.gg sample. Leona remains an editorial recommendation for her reliable engage."
+        ],
+        "subsections": [
+          {
+            "heading": "Zyra — provisional A, with upside",
+            "paragraphs": [
+              "Zyra receives a reduced cooldown on her W seed charge at several ranks. Early ggez.gg data shows a 4.3 percentage point win rate increase, from 50.5% to 54.8%. It is an early all-ranks sample, not a guarantee of future performance.",
+              "Why play her: she can control zones, apply pressure with plants and punish enemies who position poorly. She is ideal for players who prefer damage-oriented supports and space control."
+            ]
+          },
+          {
+            "heading": "Vel'Koz — provisional A, with upside",
+            "paragraphs": [
+              "Vel'Koz receives more passive damage, going from 35–180 (+60% AP) to 35–205 (+65% AP). The early sample rises 2.5 points.",
+              "Why play him: he rewards landing ability combos and can pressure from range. He is ideal for players who prefer poke and ranged magic damage."
+            ]
+          },
+          {
+            "heading": "Taric — provisional A",
+            "paragraphs": [
+              "Taric receives behavior improvements on his abilities when a linked ally becomes unreachable during their cast. This makes some interactions more reliable. The early sample rises 2.8 points.",
+              "Why play him: he offers protection, healing and utility in coordinated fights."
+            ]
+          },
+          {
+            "heading": "Leona — provisional A",
+            "paragraphs": [
+              "Leona remains an option for players who want engage and crowd control. Her inclusion is editorial: it should not be read as a direct buff this patch.",
+              "What to watch in Support: the Zyra and Vel'Koz changes may increase interest in damage supports, while Taric continues to offer a protection-oriented alternative. Final placement will depend on Support-specific data and matchups."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "The most important Patch 26.21 changes",
+        "paragraphs": [
+          "This table summarizes the changes most likely to affect the tier list. Values come from Riot's official notes. Win rates quoted in the article are early ggez.gg data across all ranks.",
+          "Items also change: Bastion Breaker, Dawncore, Gluttonous Greaves and Hubris. The Hubris adjustment matters for Miss Fortune, because part of her buff compensates for that item's power loss on marksmen."
+        ],
+        "table": {
+          "headers": [
+            "Champion",
+            "Main change",
+            "Potential impact"
+          ],
+          "rows": [
+            [
+              "Sion",
+              "Health per level 87 → 95; R up to +200% damage when charged",
+              "More durability and more reward for charging the ultimate."
+            ],
+            [
+              "Taliyah",
+              "E with more base damage and +70% AP; 225% damage to monsters",
+              "Better clear and combo potential."
+            ],
+            [
+              "Nunu & Willump",
+              "Max R 625/925/1275 → 750/1100/1450",
+              "Bigger threat on well-executed ultimates."
+            ],
+            [
+              "Zyra",
+              "W: seed cooldown 18/16/14/12/10 s → 16/14.5/13/11.5/10 s",
+              "More opportunities to set up zones and plants."
+            ],
+            [
+              "Vel'Koz",
+              "Passive 35–180 (+60% AP) → 35–205 (+65% AP)",
+              "More reward for landing combos."
+            ],
+            [
+              "Miss Fortune",
+              "E +20 damage; R 145% crit damage",
+              "More lane and teamfight damage potential."
+            ],
+            [
+              "Lee Sin",
+              "W 7 → 8 s; R 150/350/550 (+200% bonus AD)",
+              "Less flexibility and execution damage."
+            ],
+            [
+              "Rammus",
+              "W: resistances with 30–50% scaling",
+              "Less bonus resistance in extended fights."
+            ],
+            [
+              "Nidalee",
+              "W with less damage; E 20/30/40/50/60% attack speed",
+              "Less power in trades and clears."
+            ],
+            [
+              "Jinx",
+              "AD 59 + 3/level; base health 610",
+              "Less margin for error and reduced damage scaling."
+            ],
+            [
+              "Tristana",
+              "Q 40/60/80/100/120% attack speed",
+              "Less early lane pressure."
+            ],
+            [
+              "Caitlyn",
+              "Passive 60–80% AD; Q 50/95/140/185/230",
+              "Power shifted toward the lane phase."
+            ],
+            [
+              "Varus",
+              "Damage adjustments between Q and W",
+              "Changes to build variants and his Top and Bot presence."
+            ],
+            [
+              "Qiyana",
+              "Q 70/100/130/160/190 (+90% bonus AD)",
+              "Less damage in trades."
+            ],
+            [
+              "Viktor",
+              "Movement speed 330; Q shield 30–130 (+20% AP)",
+              "Less safety and mobility early game."
+            ]
+          ]
+        }
+      },
+      {
+        "heading": "How to choose the best champion to climb",
+        "paragraphs": [
+          "The tier list is a starting point, not a guarantee of wins. Before picking a champion, consider three factors:"
+        ],
+        "bullets": [
+          "Your mastery of the champion: playing them consistently is usually more useful than picking a high-tier character you barely know.",
+          "Your role and playstyle: look for champions that match your strengths, whether that is engaging fights, scaling, pressuring lanes or protecting teammates.",
+          "Team composition and matchups: even a strong pick can feel awkward against certain opponents or in teams that do not complement their strengths.",
+          "The data sample: a 1-2 point win rate change in a short sample can be noise. Do not overhaul your pool because of one week of statistics."
+        ],
+        "subsections": [
+          {
+            "heading": "A small champion pool usually performs better",
+            "paragraphs": [
+              "To improve in ranked, it usually helps to keep a small set of main champions and one or two alternatives for unfavorable situations. Consistency lets you automate the fundamentals and focus on the map, waves and team decisions.",
+              "If you want to go deeper, the ranked climbing guide and the main champion guide complement this tier list with long-term habits and criteria."
+            ]
+          }
+        ],
+        "links": [
+          {
+            "label": "How to climb ranked in League of Legends",
+            "href": "/blog/how-to-climb-ranked",
+            "description": "Habits, session structure and mistakes that hold back your ranked progress."
+          },
+          {
+            "label": "Which champion should you play based on your style",
+            "href": "/blog/what-champion-should-i-play",
+            "description": "A practical guide to choosing a champion based on how you play."
+          }
+        ]
+      },
+      {
+        "heading": "Try League Roulette",
+        "paragraphs": [
+          "Do you always end up playing the same champions? Use League Roulette to discover a different option and step out of your comfort zone. Choose your role, generate a champion and try something new in your next game.",
+          "The real roulette also lets you filter by role and verify your matches, so you can turn a random pick into a deliberate way to expand your pool."
+        ],
+        "cta": {
+          "label": "Try League Roulette",
+          "href": "/"
+        }
+      },
+      {
+        "heading": "Keep reading",
+        "paragraphs": [
+          "These guides complement the tier list with more context on the patch, scaling and champion selection."
+        ],
+        "links": [
+          {
+            "label": "Current patch tier list",
+            "href": "/blog/lol-tier-list-current-patch",
+            "description": "How to read the meta and what to look for beyond a list of tiers."
+          },
+          {
+            "label": "Best Top Lane champions",
+            "href": "/blog/best-champions-for-top-lane",
+            "description": "A broader lane guide with playstyles and selection criteria."
+          },
+          {
+            "label": "Best champions for beginners",
+            "href": "/blog/best-champions-for-beginners",
+            "description": "Accessible picks to learn the fundamentals without fighting the kit."
+          },
+          {
+            "label": "Mid Lane champions guide",
+            "href": "/blog/mid-lane-champions-guide",
+            "description": "Control mages, assassins and carries for the mid lane."
+          }
+        ]
+      },
+      {
+        "heading": "Methodology and data: what we can and cannot claim",
+        "paragraphs": [
+          "This tier list analyzes Patch 26.21, Riot Games' official notes and the first public ranked game data. Balance changes are used to identify champions that deserve a new evaluation; they are not considered sufficient proof to assign a tier on their own.",
+          "Early win rate data can change and should not be automatically extrapolated to every rank, region or role. The ggez.gg sample is Ranked Solo/Duo and covers all ranks; it is not specific to Top, Jungle, Mid, ADC or Support. That is why role recommendations are presented as editorial and provisional until sufficient, comparable samples are available.",
+          "We also do not show win rates, pick rates or ban rates for champions that are not in the patch's early sample. When no verifiable data exists, the profile says so explicitly."
+        ],
+        "bullets": [
+          "We do not invent win rates, pick rates, ban rates, game counts or rank-specific results.",
+          "We do not assume a buff automatically raises a tier or a nerf automatically lowers it.",
+          "The S+, S, A, B and C labels are an editorial assessment, not a definitive statistical ranking.",
+          "The review date for this page is October 21, 2026."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "q": "What is the best tier list for Patch 26.21?",
+        "a": "There is no single correct tier list. Ours is an editorial and provisional ranking based on Riot's official notes and early Ranked Solo/Duo data from ggez.gg. This patch has no champions in S+ or S because role-specific samples are still missing."
+      },
+      {
+        "q": "Which champions became stronger in Patch 26.21?",
+        "a": "Sion, Taliyah, Orianna, Ryze, Miss Fortune, Zyra, Vel'Koz, Azir and Xin Zhao start with positive signals. Zyra is the biggest rise in the early sample (+4.3 percentage points of win rate), followed by Azir (+3.5) and Xin Zhao (+3.1). Nunu & Willump receives an R buff, but his early data drops, so we treat him cautiously."
+      },
+      {
+        "q": "Is Jinx still worth playing after the nerf?",
+        "a": "Yes, she remains a valid option. She loses 1.4 percentage points of win rate and 2.0 of pick rate in the early sample, but keeps her identity as a scaling carry and her ability to capitalize on resets. We keep her in provisional A, with less margin for error than before."
+      },
+      {
+        "q": "Who are the best junglers in Patch 26.21?",
+        "a": "Our main picks are Taliyah, Shyvana and Wukong. Taliyah rises 1.5 points thanks to the E buff. Xin Zhao is a rising pick (+3.1) that we keep in B because of the short sample. Nunu, Lee Sin and Nidalee are on watch; Rammus drops to C after losing 3.5 percentage points of win rate."
+      },
+      {
+        "q": "Is the win rate data from my rank?",
+        "a": "No. The quoted data is from Ranked Solo/Duo across all ranks, not specific to your elo or role. It serves as early context, but it cannot prove that a champion performs the same in Iron, Diamond or Challenger."
+      },
+      {
+        "q": "How are the A, B and C tiers chosen?",
+        "a": "A tier contains our main recommendations. B includes viable picks with conditions, recent nerfs or samples that need confirmation. C groups situational options that lost power or depend heavily on context. It is always an editorial assessment, not a win rate promise."
+      },
+      {
+        "q": "Which champion should I pick to climb?",
+        "a": "Prioritize a champion you have mastered and that fits your playstyle. Keep a small pool of two or three picks and use the tier list as a reference, not an obligation. If you do not know where to start, the tier table on this page helps you compare options by role."
+      },
+      {
+        "q": "When will this tier list be updated?",
+        "a": "The page was reviewed on October 21, 2026, when the patch went live. We will update it when more games and role-specific data are available to confirm or correct the provisional placements."
+      }
+    ],
+    "sources": [
+      {
+        "label": "League of Legends Patch 26.21 notes — Riot Games",
+        "url": "https://www.leagueoflegends.com/en-us/news/game-updates/league-of-legends-patch-26-21-notes/"
+      },
+      {
+        "label": "Patch 26.21 by the numbers: Ranked Solo/Duo win rates and pick rates — ggez.gg",
+        "url": "https://ggez.gg/news/patch-26-21"
+      },
+      {
+        "label": "Champion statistics and tier list — Mobalytics",
+        "url": "https://mobalytics.gg/lol/tier-list/stats"
+      }
+    ]
+  },
+  {
     "slug": "what-champion-should-i-play",
     "title": "What Champion Should I Play in League of Legends?",
     "description": "Not sure what to main? Learn how each role plays, which playstyles fit each lane, and how to find a champion you will actually enjoy.",

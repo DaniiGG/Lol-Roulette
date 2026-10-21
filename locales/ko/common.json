@@ -639,6 +639,23 @@
         "sortRecent": "Recent",
         "toNextLevel": "to next level"
     },
+    "masteryTree": {
+        "searchPlaceholder": "챔피언 트리 검색...",
+        "searchMatches": "{count}개 일치",
+        "noResults": "챔피언을 찾을 수 없습니다",
+        "resetView": "보기 초기화",
+        "zoomIn": "확대",
+        "zoomOut": "축소",
+        "legend": "노드 크기 = 숙련도 점수(로그 스케일)",
+        "legendLevels": "숙련도 레벨",
+        "shareOfTotal": "총 숙련도의 {percent}%",
+        "rankOf": "순위 #{rank} / {total}",
+        "centerChampion": "챔피언 중앙 정렬",
+        "clickHint": "드래그로 탐색 · 스크롤로 확대/축소 · 챔피언 클릭",
+        "close": "닫기",
+        "loadError": "숙련도 트리를 만들 수 없습니다",
+        "retry": "다시 시도"
+    },
     "championWinrate": {
         "loading": "경기 이력을 로드하는 중...",
         "noData": "경기 이력이 없습니다. 먼저 플레이하세요!",

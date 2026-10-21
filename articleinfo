@@ -1,289 +1,487 @@
-1. English version
-League of Legends Patch 26.21 Preview: Champion Buffs, Nerfs and Item Changes
-Suggested slug: lol-patch-26-21-preview
-
-SEO title: LoL Patch 26.21 Preview: All Buffs, Nerfs & Item Changes
-
-Meta description: Explore the LoL Patch 26.21 preview, including champion buffs and nerfs, item changes, updated stats and the expected release date.
-
-Introduction
-League of Legends Patch 26.21 is scheduled for October 21, 2026, according to Riot's patch calendar. This update is expected to be the first post-Worlds patch, shifting the focus toward Ranked balance and the end-of-season climb.
-
-The preview includes buffs for champions such as Azir, Orianna and Ryze, nerfs for popular picks including Caitlyn, Lee Sin and Yone, and several major item adjustments.
-
-Important: These are preview changes, not final patch notes. Riot may modify the numbers before release. 
-
-League of Legends Support
-+1
-
-
-
-Patch 26.21 at a glance
-Category	Champions / items
-Champion buffs	Azir, Darius, Miss Fortune, Nunu & Willump, Orianna, Ryze, Sion, Taliyah, Vel'Koz, Xin Zhao, Zyra
-Champion nerfs	Caitlyn, Jinx, Lee Sin, Nidalee, Qiyana, Rammus, Tristana, Viktor, Wukong, Yone
-Champion adjustments	Locke, Varus, Taric, Twisted Fate, Zaahen
-Item buffs	Dawncore
-Item nerfs	Bastionbreaker, Gluttonous Greaves
-Item adjustments	Hubris
-Champion buffs: planned stat changes
-Champion	Ability / stat	Before	Planned change
-Azir	Mana growth	40 per level	50 per level
-Darius	Q cooldown	9 / 8 / 7 / 6 / 5 sec	9 / 7.75 / 6.5 / 5.25 / 4 sec
-Miss Fortune	E damage	70–190 (+120% AP)	90–210 (+120% AP)
-Miss Fortune	R critical damage	130% (+0.3% per 1% bonus crit damage)	145% (+0.45% per 1% bonus crit damage)
-Nunu & Willump	R maximum damage	625 / 925 / 1,275 (+300% AP)	750 / 1,100 / 1,450 (+300% AP)
-Orianna	Q AP ratio	55%	60%
-Orianna	W AP ratio	80%	85%
-Ryze	Q damage bonus vs. Flux-marked targets	15 / 40 / 65 / 90%	10 / 40 / 70 / 100%
-Ryze	Q bonus movement speed	28 / 32 / 36 / 40 / 44%	30 / 35 / 40 / 45 / 50%
-Ryze	W AP ratio	60%	70%
-Sion	Health growth	87	95
-Sion	Fully charged R damage increase	Up to +166.67% base damage and +100% ratio	Up to +200% for both
-Taliyah	E damage	60–240 (+60% AP)	70–250 (+70% AP)
-Taliyah	E detonation damage	25–85 (+30% AP)	30–90 (+30% AP)
-Vel'Koz	Passive damage	35–180 (+60% AP)	35–205 (+65% AP)
-Xin Zhao	Q damage per strike	15–75 (+40% bonus AD)	15–75 (+45% bonus AD)
-Xin Zhao	E attack speed scaling	1% per 5% bonus attack speed	1% per 4% bonus attack speed
-Zyra	W seed recharge cooldown	18–10 sec	16–10 sec
-Source for the planned numbers: GameRiv — Patch 26.21 full preview. 
+# Tier List LoL Parche 26.21: Mejores Campeones por Línea
 
-GameRiv
+**SEO title:** Tier List LoL Parche 26.21: Mejores Campeones por Línea
 
+**Meta description:** Descubre la tier list de LoL 26.21 para Top, Jungla, Mid, ADC y Support. Compara los mejores picks y encuentra campeones para subir de elo.
 
+**URL recomendada:** `/es/blog/tier-list-lol-parche-26-21`
 
-Champion nerfs: planned stat changes
-Champion	Ability / stat	Before	Planned change
-Caitlyn	Passive Headshot damage	60–100% AD	60–80% AD
-Caitlyn	Headshot scaling per 1% crit chance / bonus crit damage	1%	0.8%
-Caitlyn	Q base damage	50–210	50–230
-Jinx	AD growth	3.25	3.0
-Jinx	Base health	630	610
-Lee Sin	W cooldown	7 sec	8 sec
-Lee Sin	R kick damage	175–625 (+200% bonus AD)	150–550 (+200% bonus AD)
-Lee Sin	R collision damage	175–625 (+200% bonus AD) (+12–18% of kicked target's health)	150–550 (+200% bonus AD)
-Nidalee	Cougar W damage	55–190 (+50% bonus AD) (+30% AP)	50–170 (+50% bonus AD) (+30% AP)
-Nidalee	Human E attack speed	30–70%	20–60%
-Qiyana	Q damage	80–200 (+90% bonus AD)	70–190 (+90% bonus AD)
-Rammus	W bonus armor	27–47 (+30–60% armor)	25–45 (+30–50% armor)
-Rammus	W bonus magic resistance	20–40 (+30–60% MR)	20–40 (+30–50% MR)
-Tristana	Q attack speed	60–120%	40–120%
-Viktor	Q shield	40–140 (+25% AP)	30–130 (+20% AP)
-Viktor	Base movement speed	335	330
-Wukong	Health regeneration per 5 sec	3.5 (+0.65 per level)	5.5 (+0.65 per level)
-Wukong	Passive armor per stack	6–10	4.5–10
-Yone	Q damage AD ratio	110% AD	105% AD
-Reading the table: Wukong's health regeneration is increased despite his passive armor being reduced, so his changes are not a straightforward nerf to every stat. Caitlyn's Q damage is also increased in the preview while some Headshot scaling is reduced. 
+**Fecha de publicación:** 21 de octubre de 2026
 
-GameRiv
+**Última actualización:** Actualizar automáticamente al revisar la clasificación.
 
+---
 
+## Tier List LoL 26.21: los mejores campeones para cada línea
 
-Item changes
-Item	Stat	Before	Planned change
-Dawncore	AP per 100% base mana regeneration	10	15
-Bastionbreaker	Lethality	22	18
-Bastionbreaker	Shaped Charge damage — melee	50 (+1.5 per lethality)	40 (+1.5 per lethality)
-Bastionbreaker	Shaped Charge damage — ranged	25 (+0.75 per lethality)	20 (+0.75 per lethality)
-Bastionbreaker	Sabotage duration	90 sec	25,000 sec
-Gluttonous Greaves	Total cost	1,000 gold	1,100 gold
-Hubris	Base bonus AD — melee	12	15
-Hubris	Base bonus AD — ranged	12	10
-Hubris	Bonus AD per stack — melee	3	3
-Hubris	Bonus AD per stack — ranged	3	2
-The Bastionbreaker duration is listed as 25,000 seconds in the preview, effectively lasting for a normal game. It is described as an attempt to give the item's structure/objective-focused effect more value while reducing some of its combat power. 
+¿Qué campeones merece la pena jugar en el parche 26.21 de League of Legends? Esta actualización trae cambios importantes para varias posiciones, con mejoras para campeones como Sion, Taliyah, Nunu y Zyra, además de debilitaciones para picks populares como Lee Sin, Rammus, Jinx y Tristana.
 
-GameRiv
+En esta tier list encontrarás recomendaciones para Top, Jungla, Mid, ADC y Support, junto con una explicación de los cambios que pueden afectar al metajuego. La clasificación combina el análisis de las notas oficiales con los primeros datos de partidas clasificatorias disponibles.
 
+**Importante:** el parche acaba de publicarse y la clasificación es provisional. Los resultados iniciales pueden variar según el rango, la región y el tamaño de la muestra. La posición de cada campeón debe revisarse cuando haya más partidas disponibles.
 
+## Resumen de la tier list del parche 26.21
 
-Other champion adjustments
-- Locke: Mana costs and damage values are being adjusted to make mistakes more costly while keeping his overall power relatively neutral.
-- Varus: Power is being shifted away from W-max builds and toward Q-max builds.
-- Taric: Q and R should work when cast on untargetable allies.
-- Twisted Fate: R should reveal untargetable units.
-- Zaahen: A bug affecting Q1 and Q2 damage when he becomes invisible mid-strike is being fixed.
-These changes are also part of the preview and should be verified against Riot's final patch notes before publication. 
+| Línea | Picks recomendados | Qué tener en cuenta |
+|---|---|---|
+| Top | Sion, Darius, Volibear, Garen | Sion y Darius reciben cambios favorables; Yone pierde algo de daño. |
+| Jungla | Taliyah, Shyvana, Wukong, Nunu & Willump | Taliyah y Nunu reciben mejoras; Rammus, Lee Sin y Nidalee son ajustados a la baja. |
+| Mid | Orianna, Ryze, Fizz, Gwen | Orianna y Ryze mejoran su potencial de escalado; Qiyana y Viktor reciben nerfs. |
+| ADC | Miss Fortune, Kog'Maw, Jinx, Caitlyn | Miss Fortune recibe compensaciones; Jinx y Caitlyn pierden parte de su poder. |
+| Support | Zyra, Vel'Koz, Taric, Leona | Zyra y Vel'Koz reciben mejoras; Taric mantiene una utilidad destacada. |
 
-GameRiv
+Esta tabla es una **clasificación editorial provisional**, no un ranking estadístico definitivo de todos los campeones. Las recomendaciones deben ajustarse con datos específicos de cada posición, rango y región.
 
+## Top: mejores campeones del parche 26.21
 
+### Sion — A provisional
 
-What could Patch 26.21 mean for Ranked?
-The preview points to several areas worth watching:
-- Mid lane: Azir, Orianna and Ryze are receiving changes intended to give them more room to perform outside professional play.
-- Bot lane: Caitlyn is losing some Headshot scaling, while Miss Fortune is receiving buffs.
-- Jungle: Lee Sin, Nidalee and Qiyana are among the targeted champions.
-- Item builds: Hubris changes the balance between melee and ranged users, while Dawncore gains more AP conversion from mana regeneration.
-These are gameplay implications based on the listed changes, not guaranteed predictions of win rates or the final meta.
-Frequently asked questions
-When does LoL Patch 26.21 release?
+Sion recibe más crecimiento de vida por nivel, pasando de 87 a 95, y una mejora en el daño adicional de su definitiva cuando mantiene la carga. Estos cambios pueden ayudarle a recuperar consistencia en partidas largas.
 
-Riot's 2026 schedule lists October 21, 2026. The date may change, so check the official schedule close to release. 
+**Por qué jugarlo:** ofrece resistencia, iniciación y capacidad para crear espacio en las peleas de equipo.
 
-League of Legends Support
+**Ideal para:** jugadores que prefieren campeones resistentes y contribuir a las peleas sin depender exclusivamente de conseguir asesinatos en línea.
 
+### Darius — A provisional
 
+El enfriamiento de su Q en el último rango baja de 5 a 4 segundos. Es una mejora relevante para los intercambios prolongados, aunque no garantiza que su rendimiento global aumente.
 
+**Por qué jugarlo:** puede castigar errores en línea y convertirse en una amenaza importante en combates extendidos.
 
-Are these final Patch 26.21 changes?
+**Ideal para:** jugadores agresivos que dominan los enfrentamientos cuerpo a cuerpo.
 
-No. They are preview values and may change before the final patch goes live.
+### Volibear — A provisional
 
-Which champions are getting buffed?
+Volibear sigue siendo una alternativa interesante para quienes buscan duelos, resistencia y capacidad de presión. No recibe un cambio directo relevante en este parche, por lo que su posición dependerá más de sus resultados estadísticos que de las notas de actualización.
 
-The preview lists Azir, Darius, Miss Fortune, Nunu & Willump, Orianna, Ryze, Sion, Taliyah, Vel'Koz, Xin Zhao and Zyra.
+### Garen — A provisional
 
-Which items are changing?
+Garen es una alternativa accesible para jugadores que buscan consistencia y un plan de juego sencillo. Su recomendación es editorial y no implica que haya recibido una mejora directa en 26.21.
 
-Dawncore, Bastionbreaker, Gluttonous Greaves and Hubris are listed for changes.
+**Qué vigilar en Top:** el debilitamiento de Yone reduce parte del daño de su Q, mientras que los ajustes de Varus también afectan a su variante de línea superior. Conviene reevaluar ambos picks con estadísticas específicas de Top antes de asignarles un tier definitivo.
 
-Want to try a different champion? Use League Roulette to get a random champion and make your next game less predictable.
+## Jungla: mejores campeones del parche 26.21
 
-2. Versión en español
-Avance del parche 26.21 de LoL: mejoras, nerfeos y cambios en objetos
-Slug sugerido: parche-26-21-lol-avance
+### Taliyah — A provisional, con potencial al alza
 
-Título SEO: Parche 26.21 de LoL: todos los buffs, nerfs y cambios
+Taliyah recibe más daño en su E, tanto en el impacto inicial como en la detonación. Además, la habilidad inflige un 225 % de daño a monstruos.
 
-Meta descripción: Descubre el avance del parche 26.21 de League of Legends: campeones mejorados y debilitados, cambios en objetos y estadísticas antes y después.
+**Por qué jugarla:** puede aprovechar el control de masas y el daño para despejar campamentos y crear oportunidades de gank.
 
-Introducción
-El parche 26.21 de League of Legends está programado para el 21 de octubre de 2026, según el calendario de Riot. Se espera que sea la primera actualización posterior a Worlds, con cambios centrados en el equilibrio de las clasificatorias y la recta final de la temporada.
+**Ideal para:** jugadores que prefieren magos de jungla, control de zonas y buenas rotaciones.
 
-El avance incluye mejoras para campeones como Azir, Orianna y Ryze; debilitaciones para selecciones populares como Caitlyn, Lee Sin y Yone; y cambios importantes en varios objetos.
+### Shyvana — A provisional
 
-Importante: estos valores pertenecen al avance del parche, no a las notas definitivas. Riot podría modificarlos antes de su lanzamiento. 
+Shyvana aparece entre los picks con resultados sólidos en los primeros datos de la versión. Su recomendación se basa en el rendimiento observado de la campeona, no en una mejora directa del parche.
 
-League of Legends Support
-+1
+**Por qué jugarla:** permite combinar limpieza de campamentos, escalado y daño sostenido.
 
+### Wukong — A provisional
 
+Wukong recibe una compensación de regeneración de vida, pero pierde parte de la armadura por acumulación de su pasiva en los primeros niveles.
 
-Resumen del parche 26.21
-Categoría	Campeones / objetos
-Campeones mejorados	Azir, Darius, Miss Fortune, Nunu y Willump, Orianna, Ryze, Sion, Taliyah, Vel'Koz, Xin Zhao y Zyra
-Campeones debilitados	Caitlyn, Jinx, Lee Sin, Nidalee, Qiyana, Rammus, Tristana, Viktor, Wukong y Yone
-Campeones ajustados	Locke, Varus, Taric, Twisted Fate y Zaahen
-Objetos mejorados	Dawncore
-Objetos debilitados	Bastionbreaker y Gluttonous Greaves
-Objeto ajustado	Hubris
-Mejoras de campeones: estadísticas previstas
-Campeón	Habilidad / estadística	Antes	Cambio previsto
-Azir	Crecimiento de maná	40 por nivel	50 por nivel
-Darius	Enfriamiento de la Q	9 / 8 / 7 / 6 / 5 s	9 / 7,75 / 6,5 / 5,25 / 4 s
-Miss Fortune	Daño de la E	70–190 (+120% PH)	90–210 (+120% PH)
-Miss Fortune	Daño crítico de la R	130% (+0,3% por cada 1% de daño crítico adicional)	145% (+0,45% por cada 1% de daño crítico adicional)
-Nunu y Willump	Daño máximo de la R	625 / 925 / 1.275 (+300% PH)	750 / 1.100 / 1.450 (+300% PH)
-Orianna	Ratio de PH de la Q	55%	60%
-Orianna	Ratio de PH de la W	80%	85%
-Ryze	Bonus de daño de la Q contra objetivos marcados con Flujo	15 / 40 / 65 / 90%	10 / 40 / 70 / 100%
-Ryze	Velocidad de movimiento adicional de la Q	28 / 32 / 36 / 40 / 44%	30 / 35 / 40 / 45 / 50%
-Ryze	Ratio de PH de la W	60%	70%
-Sion	Crecimiento de vida	87	95
-Sion	Aumento de daño de la R al cargarla por completo	Hasta +166,67% de daño base y +100% del ratio	Hasta +200% en ambos
-Taliyah	Daño de la E	60–240 (+60% PH)	70–250 (+70% PH)
-Taliyah	Daño de detonación de la E	25–85 (+30% PH)	30–90 (+30% PH)
-Vel'Koz	Daño de la pasiva	35–180 (+60% PH)	35–205 (+65% PH)
-Xin Zhao	Daño de cada golpe de la Q	15–75 (+40% DA adicional)	15–75 (+45% DA adicional)
-Xin Zhao	Escalado de velocidad de ataque de la E	1% por cada 5% de velocidad de ataque adicional	1% por cada 4%
-Zyra	Enfriamiento de recarga de semillas de la W	18–10 s	16–10 s
-Fuente para los valores previstos: GameRiv — avance completo del parche 26.21. 
+**Por qué jugarlo:** ofrece iniciación y un impacto considerable en las peleas grupales.
 
-GameRiv
+**Qué vigilar:** el balance entre su rendimiento en jungla y su presencia en línea puede cambiar con estos ajustes.
 
+### Nunu & Willump — A provisional
 
+El daño máximo de su definitiva aumenta en todos los rangos: de 625/925/1275 a 750/1100/1450, manteniendo el escalado de AP.
 
-Debilitaciones de campeones: estadísticas previstas
-Campeón	Habilidad / estadística	Antes	Cambio previsto
-Caitlyn	Daño adicional de la pasiva Disparo a la cabeza	60–100% DA	60–80% DA
-Caitlyn	Escalado de Disparo a la cabeza por probabilidad de crítico y daño crítico adicional	1%	0,8%
-Caitlyn	Daño base de la Q	50–210	50–230
-Jinx	Crecimiento de DA	3,25	3,0
-Jinx	Vida base	630	610
-Lee Sin	Enfriamiento de la W	7 s	8 s
-Lee Sin	Daño de impacto de la R	175–625 (+200% DA adicional)	150–550 (+200% DA adicional)
-Lee Sin	Daño de colisión de la R	175–625 (+200% DA adicional) (+12–18% de la vida del objetivo golpeado)	150–550 (+200% DA adicional)
-Nidalee	Daño de la W en forma de puma	55–190 (+50% DA adicional) (+30% PH)	50–170 (+50% DA adicional) (+30% PH)
-Nidalee	Velocidad de ataque de la E en forma humana	30–70%	20–60%
-Qiyana	Daño de la Q	80–200 (+90% DA adicional)	70–190 (+90% DA adicional)
-Rammus	Armadura adicional de la W	27–47 (+30–60% de armadura)	25–45 (+30–50% de armadura)
-Rammus	Resistencia mágica adicional de la W	20–40 (+30–60% de RM)	20–40 (+30–50% de RM)
-Tristana	Velocidad de ataque de la Q	60–120%	40–120%
-Viktor	Escudo de la Q	40–140 (+25% PH)	30–130 (+20% PH)
-Viktor	Velocidad de movimiento base	335	330
-Wukong	Regeneración de vida cada 5 s	3,5 (+0,65 por nivel)	5,5 (+0,65 por nivel)
-Wukong	Armadura por acumulación de la pasiva	6–10	4,5–10
-Yone	Ratio de DA de la Q	110% DA	105% DA
-Ojo: no todos los cambios son una debilitación directa de cada estadística. Por ejemplo, Wukong gana regeneración de vida, pero pierde parte de la armadura de su pasiva. En Caitlyn también aumenta el daño base de la Q mientras se reduce parte del escalado de su pasiva. 
+**Por qué jugarlo:** puede castigar agrupaciones de enemigos y aprovechar los errores de posicionamiento.
 
-GameRiv
+**Qué vigilar en Jungla:** Rammus pierde parte del escalado de sus resistencias en la W. Lee Sin recibe un enfriamiento mayor en la W y menos daño en la definitiva. Nidalee también pierde daño en la W y velocidad de ataque en la E. Aunque estos nerfs reducen parte de su poder, no significa que los tres dejen de ser competitivos.
 
+## Mid: mejores campeones del parche 26.21
 
+### Orianna — A provisional
 
-Cambios en objetos
-Objeto	Estadística	Antes	Cambio previsto
-Dawncore	PH por cada 100% de regeneración de maná base	10	15
-Bastionbreaker	Letalidad	22	18
-Bastionbreaker	Daño de Carga Moldeada — cuerpo a cuerpo	50 (+1,5 por letalidad)	40 (+1,5 por letalidad)
-Bastionbreaker	Daño de Carga Moldeada — distancia	25 (+0,75 por letalidad)	20 (+0,75 por letalidad)
-Bastionbreaker	Duración de Sabotaje	90 s	25.000 s
-Gluttonous Greaves	Coste total	1.000 de oro	1.100 de oro
-Hubris	DA adicional base — cuerpo a cuerpo	12	15
-Hubris	DA adicional base — distancia	12	10
-Hubris	DA adicional por acumulación — cuerpo a cuerpo	3	3
-Hubris	DA adicional por acumulación — distancia	3	2
-La duración prevista de Sabotaje en Bastionbreaker aumenta a 25.000 segundos, lo que equivale prácticamente a toda una partida normal. La idea es aumentar el valor estratégico del objeto contra estructuras y objetivos, reduciendo parte de su poder de combate. 
+Orianna recibe mejores escalados de AP en la Q y la W, lo que aumenta su potencial de daño en fases avanzadas de la partida.
 
-GameRiv
+**Por qué jugarla:** ofrece control de oleadas, utilidad y una definitiva capaz de decidir peleas.
 
+**Ideal para:** jugadores que prefieren magos de control y jugar alrededor de su equipo.
 
+### Ryze — A provisional
 
-Otros ajustes de campeones
-- Locke: se modifican costes de maná y valores de daño para que los errores tengan más consecuencias, intentando mantener un poder general similar.
-- Varus: se desplaza poder de las configuraciones que maximizan la W hacia las que maximizan la Q.
-- Taric: se busca que la Q y la R funcionen correctamente al lanzarse sobre aliados que no pueden ser seleccionados como objetivo.
-- Twisted Fate: la R debería revelar unidades que no pueden ser seleccionadas como objetivo.
-- Zaahen: se corrige un error por el que el daño de Q1 y Q2 podía no aplicarse si se volvía invisible durante el golpe.
-Estos cambios también forman parte del avance y deberán comprobarse con las notas definitivas de Riot antes de publicarse como cambios confirmados. 
+Ryze recibe mejoras en el escalado de su Q, su velocidad de movimiento y el daño de su W. Estos cambios buscan recompensar mejor a quienes llegan a las fases avanzadas de la partida.
 
-GameRiv
+**Por qué jugarlo:** puede combinar daño sostenido, movilidad y presión en el mapa.
 
+**Ideal para:** jugadores dispuestos a invertir tiempo en dominar sus combinaciones y el control de oleadas.
 
+### Fizz — A provisional
 
-¿Qué puede significar el parche 26.21 para las clasificatorias?
-El avance apunta a varios cambios interesantes:
-- Línea central: Azir, Orianna y Ryze reciben ajustes para mejorar su margen de rendimiento fuera del juego profesional.
-- Línea inferior: Caitlyn pierde parte del escalado de su pasiva, mientras Miss Fortune recibe mejoras.
-- Jungla: Lee Sin, Nidalee y Qiyana están entre los campeones afectados.
-- Construcciones de objetos: Hubris diferencia más entre campeones cuerpo a cuerpo y a distancia, mientras Dawncore aumenta su conversión de regeneración de maná en poder de habilidad.
-Estas son posibles consecuencias de los cambios anunciados, no predicciones garantizadas sobre porcentajes de victoria o sobre el metajuego final.
-Preguntas frecuentes
-¿Cuándo sale el parche 26.21 de LoL?
+Fizz aparece entre los campeones con resultados competitivos en los datos de la versión. No recibe una mejora directa en este parche.
 
-El calendario de Riot señala el 21 de octubre de 2026. La fecha puede cambiar, así que conviene revisar el calendario oficial antes del lanzamiento. 
+**Por qué jugarlo:** puede castigar errores de posicionamiento y eliminar objetivos prioritarios.
 
-League of Legends Support
+**Ideal para:** jugadores que prefieren asesinos y buscan crear ventajas mediante rotaciones y asesinatos.
 
+### Gwen — A provisional
 
+Los primeros datos disponibles muestran resultados competitivos para Gwen en Mid, aunque su muestra y su porcentaje de elección deben considerarse antes de interpretarlos como una ventaja universal.
 
+**Por qué jugarla:** puede aportar daño sostenido y buen rendimiento en combates prolongados.
 
-¿Son definitivos los cambios del parche 26.21?
+**Qué vigilar en Mid:** Qiyana recibe una reducción de daño en la Q y Viktor pierde velocidad de movimiento y parte del escudo de su Q. Azir, por el contrario, recibe más crecimiento de maná. Estos cambios pueden modificar los enfrentamientos, pero el impacto definitivo debe comprobarse con más partidas.
 
-No. Son valores del avance y pueden cambiar antes de que se publique la versión definitiva.
+## ADC: mejores campeones del parche 26.21
 
-¿Qué campeones reciben mejoras?
+### Miss Fortune — A provisional, con potencial al alza
 
-El avance incluye a Azir, Darius, Miss Fortune, Nunu y Willump, Orianna, Ryze, Sion, Taliyah, Vel'Koz, Xin Zhao y Zyra.
+Miss Fortune recibe una mejora del daño de su E y de su definitiva. Los cambios compensan parcialmente la pérdida de poder asociada al ajuste de Hubris.
 
-¿Qué objetos cambian?
+**Por qué jugarla:** puede aportar presión en línea y mucho daño en peleas donde los enemigos se agrupan.
 
-Dawncore, Bastionbreaker, Gluttonous Greaves y Hubris aparecen en la lista de cambios.
+**Ideal para:** jugadores que prefieren una tiradora con una fase de líneas clara y una definitiva capaz de cambiar una pelea.
 
-¿Quieres probar un campeón diferente? Usa League Roulette para conseguir un campeón aleatorio y hacer que tu próxima partida sea menos predecible.
+### Kog'Maw — A provisional
 
-### Sources
+Kog'Maw aparece entre los campeones con buenos resultados en los datos disponibles de la versión, aunque no recibe un cambio directo importante en 26.21.
 
-- [Official Worlds 2026 Primer — LoL Esports](https://lolesports.com/en-GB/news/worlds-2026-primer)
-- [Official LoL Esports Schedule](https://lolesports.com/)
-- [Worlds 2026 Tournament Overview](https://lolesports.com/en-US/tournament/115660540725177488/overview)
+**Por qué jugarlo:** ofrece daño sostenido y capacidad para eliminar objetivos resistentes cuando consigue tiempo y protección.
+
+**Ideal para:** jugadores que prefieren escalar y posicionarse cuidadosamente en las peleas.
+
+### Jinx — A provisional
+
+Jinx pierde daño de ataque por nivel y vida base, con el objetivo de frenar su dominio en el metajuego.
+
+**Por qué seguir considerándola:** mantiene un perfil de carry de escalado con capacidad para aprovechar los reinicios en las peleas.
+
+**Qué vigilar:** su popularidad y rendimiento después del nerf. No es necesario descartarla automáticamente.
+
+### Caitlyn — A provisional
+
+Caitlyn pierde parte del escalado de daño de su pasiva, pero recibe más daño base en la Q. El cambio busca trasladar parte de su poder desde el final de la partida hacia etapas anteriores.
+
+**Por qué jugarla:** puede aprovechar el alcance y la presión en línea para generar ventajas tempranas.
+
+**Qué vigilar en ADC:** Tristana pierde velocidad de ataque en los primeros rangos de la Q. Varus recibe una redistribución de poder entre Q y W, con la intención de limitar su variante de Top y permitir ajustes más específicos para Bot. Las estadísticas posteriores al parche determinarán si estos campeones mantienen su posición.
+
+## Support: mejores campeones del parche 26.21
+
+### Zyra — A provisional, con potencial al alza
+
+Zyra recibe una reducción del enfriamiento de la carga de semillas de su W en varios rangos. Los primeros datos de ggez.gg registraron un aumento de win rate de 5,9 puntos porcentuales, aunque se trata de una muestra inicial de todos los rangos y no de una garantía de rendimiento futuro.
+
+**Por qué jugarla:** puede controlar zonas, ejercer presión con sus plantas y castigar a los rivales que se posicionan mal.
+
+**Ideal para:** jugadores que prefieren supports de daño mágico y control de espacio.
+
+### Vel'Koz — A provisional, con potencial al alza
+
+Vel'Koz recibe más daño en su pasiva, que pasa de 35–180 (+60 % AP) a 35–205 (+65 % AP).
+
+**Por qué jugarlo:** recompensa acertar combinaciones de habilidades y puede presionar desde la distancia.
+
+**Ideal para:** jugadores que prefieren poke y daño mágico a distancia.
+
+### Taric — A provisional
+
+Taric recibe mejoras de comportamiento en sus habilidades cuando un aliado vinculado se vuelve inalcanzable durante su lanzamiento. Esto hace que algunas interacciones sean más fiables.
+
+**Por qué jugarlo:** ofrece protección, curación y utilidad en peleas coordinadas.
+
+### Leona — A provisional
+
+Leona sigue siendo una opción para jugadores que buscan iniciación y control de masas. Su inclusión es editorial: no debe interpretarse como una mejora directa de este parche.
+
+**Qué vigilar en Support:** los cambios de Zyra y Vel'Koz pueden aumentar el interés por los supports de daño, mientras que Taric continúa ofreciendo una alternativa orientada a la protección. La clasificación final dependerá de los datos específicos de Support y de los enfrentamientos.
+
+## Los cambios más importantes del parche 26.21
+
+| Campeón | Cambio principal | Posible impacto |
+|---|---|---|
+| Sion | Más vida por nivel y mejora de la definitiva | Mayor resistencia y recompensa por cargar la definitiva. |
+| Taliyah | Más daño en E y daño adicional a monstruos | Mejor potencial de limpieza y de combo. |
+| Nunu & Willump | Más daño máximo en R | Mayor amenaza en definitivas bien ejecutadas. |
+| Zyra | Menor enfriamiento de semillas en W | Más oportunidades para preparar zonas y plantas. |
+| Vel'Koz | Más daño de pasiva | Mayor recompensa al acertar combinaciones. |
+| Miss Fortune | Más daño en E y R | Mayor potencial de daño en línea y peleas. |
+| Lee Sin | Mayor enfriamiento en W y menos daño en R | Menor flexibilidad y daño de ejecución. |
+| Rammus | Menor escalado de resistencias en W | Menor resistencia adicional en ciertas configuraciones. |
+| Nidalee | Menos daño en W y velocidad de ataque en E | Menor potencia en intercambios y limpieza. |
+| Jinx | Menos AD por nivel y menos vida base | Menor margen de error y escalado de daño reducido. |
+| Tristana | Menos velocidad de ataque en los primeros rangos de Q | Menor presión inicial en línea. |
+| Caitlyn | Menor escalado de la pasiva, más daño base en Q | Redistribución del poder hacia la fase de líneas. |
+| Varus | Ajustes de daño entre Q y W | Cambios en sus variantes de construcción y en su presencia en Top y Bot. |
+| Qiyana | Menos daño en Q | Menor daño en los intercambios. |
+| Viktor | Menos velocidad de movimiento y escudo en Q | Menor seguridad y movilidad en el inicio de la partida. |
+
+Fuente de los cambios: [notas oficiales del parche 26.21 de Riot Games](https://www.leagueoflegends.com/en-us/news/game-updates/league-of-legends-patch-26-21-notes/).
+
+## Cómo elegir el mejor campeón para subir de elo
+
+La tier list es un punto de partida, no una garantía de victorias. Antes de elegir un campeón, ten en cuenta tres factores:
+
+1. **Tu dominio del campeón:** jugar de forma consistente suele ser más útil que escoger un personaje de tier alto que apenas conoces.
+2. **Tu posición y estilo de juego:** busca campeones que encajen con tus fortalezas, ya sea iniciar peleas, escalar, presionar líneas o proteger a tus compañeros.
+3. **La composición y los enfrentamientos:** incluso un pick fuerte puede resultar incómodo contra ciertos rivales o en equipos que no complementan sus puntos fuertes.
+
+Para mejorar en clasificatorias, suele ser útil mantener una selección reducida de campeones principales y una o dos alternativas para situaciones desfavorables.
+
+## Encuentra tu próximo campeón con League Roulette
+
+¿Siempre acabas jugando los mismos campeones? Utiliza League Roulette para descubrir una opción diferente y salir de tu zona de confort.
+
+Elige tu línea, genera un campeón y prueba algo nuevo en tu próxima partida.
+
+**CTA: Probar League Roulette**
+
+## Metodología y fuentes
+
+Esta tier list analiza el parche 26.21, las notas oficiales de Riot Games y los primeros datos públicos de partidas clasificatorias. Los cambios de equilibrio se utilizan para identificar campeones que merecen una nueva evaluación; no se consideran prueba suficiente para asignar un tier por sí solos.
+
+Los datos iniciales de win rate pueden cambiar y no deben extrapolarse automáticamente a todos los rangos o regiones. Las recomendaciones por línea se presentan como editoriales y provisionales hasta disponer de muestras suficientes y comparables.
+
+Fuentes:
+- [Notas oficiales de LoL 26.21 — Riot Games](https://www.leagueoflegends.com/en-us/news/game-updates/league-of-legends-patch-26-21-notes/)
+- [Primeros cambios estadísticos del parche — ggez.gg](https://ggez.gg/news/patch-26-21)
+- [Estadísticas y tier list — Mobalytics](https://mobalytics.gg/lol/tier-list/stats)
+
+---
+
+# LoL Patch 26.21 Tier List: Best Champions for Every Role
+
+**SEO title:** LoL Patch 26.21 Tier List: Best Champions for Every Role
+
+**Meta description:** Explore the LoL Patch 26.21 tier list for Top, Jungle, Mid, ADC and Support. Compare champion picks and find your next ranked main.
+
+**Recommended URL:** `/en/blog/lol-patch-26-21-tier-list`
+
+**Publication date:** October 21, 2026
+
+**Last updated:** Update automatically whenever the rankings are reviewed.
+
+---
+
+## LoL Patch 26.21 Tier List: the best champions for every role
+
+Which champions are worth playing in League of Legends Patch 26.21? This update brings significant changes across several roles, including buffs for Sion, Taliyah, Nunu and Zyra, as well as nerfs affecting popular picks such as Lee Sin, Rammus, Jinx and Tristana.
+
+This tier list covers Top, Jungle, Mid, ADC and Support, with explanations of the balance changes that may influence the meta. The recommendations combine Riot's official patch notes with the first available ranked data.
+
+**Important:** the patch has only just launched, so these rankings are provisional. Early results may vary by rank, region and sample size. Champion placements should be reviewed as more role-specific matches become available.
+
+## Patch 26.21 tier list overview
+
+| Role | Recommended picks | What to watch |
+|---|---|---|
+| Top | Sion, Darius, Volibear, Garen | Sion and Darius receive favorable changes; Yone loses some damage. |
+| Jungle | Taliyah, Shyvana, Wukong, Nunu & Willump | Taliyah and Nunu are buffed; Rammus, Lee Sin and Nidalee are toned down. |
+| Mid | Orianna, Ryze, Fizz, Gwen | Orianna and Ryze gain scaling; Qiyana and Viktor are nerfed. |
+| ADC | Miss Fortune, Kog'Maw, Jinx, Caitlyn | Miss Fortune receives compensation buffs; Jinx and Caitlyn lose some power. |
+| Support | Zyra, Vel'Koz, Taric, Leona | Zyra and Vel'Koz are buffed; Taric remains a utility-focused option. |
+
+This is a **provisional editorial tier list**, not a definitive statistical ranking of every champion. Recommendations should be refined using data for each role, rank and region.
+
+## Top: best champions in Patch 26.21
+
+### Sion — Provisional A tier
+
+Sion gains more health per level, increasing from 87 to 95, and receives an improvement to the bonus damage on his ultimate when charging it. These changes may help him become more consistent in longer games.
+
+**Why play him:** he offers durability, engage and the ability to create space in teamfights.
+
+**Best for:** players who prefer durable champions and want to contribute to teamfights without relying entirely on winning lane.
+
+### Darius — Provisional A tier
+
+Darius's Q cooldown at the final rank decreases from 5 to 4 seconds. This is a meaningful improvement for extended trades, although it does not guarantee a higher overall win rate.
+
+**Why play him:** he can punish lane mistakes and become a major threat in prolonged fights.
+
+**Best for:** aggressive players who understand melee matchups.
+
+### Volibear — Provisional A tier
+
+Volibear remains an interesting option for players who want dueling power, durability and lane pressure. He did not receive a major direct change in this patch, so his placement depends more on statistical performance than on the patch notes.
+
+### Garen — Provisional A tier
+
+Garen is an accessible alternative for players looking for consistency and a straightforward game plan. This is an editorial recommendation, not a claim that he received a direct buff in Patch 26.21.
+
+**Top lane watchlist:** Yone loses some damage on Q, while Varus's adjustments also affect his top-lane variant. Both picks should be reevaluated using Top-specific statistics before assigning a definitive tier.
+
+## Jungle: best champions in Patch 26.21
+
+### Taliyah — Provisional A tier, with upward potential
+
+Taliyah receives more damage on E, including its detonation. The ability also deals 225% damage to monsters.
+
+**Why play her:** she can use crowd control and damage to clear camps and create gank opportunities.
+
+**Best for:** players who enjoy mage junglers, zone control and map rotations.
+
+### Shyvana — Provisional A tier
+
+Shyvana appears among the champions with solid results in the available version data. Her recommendation is based on observed performance rather than a direct buff in this patch.
+
+**Why play her:** she combines camp clearing, scaling and sustained damage.
+
+### Wukong — Provisional A tier
+
+Wukong receives compensation through increased health regeneration but loses some early passive armor per stack.
+
+**Why play him:** he offers engage and substantial impact in teamfights.
+
+**What to watch:** the balance between his jungle performance and his lane presence may shift following these changes.
+
+### Nunu & Willump — Provisional A tier
+
+The maximum damage on Nunu's ultimate increases at all ranks, from 625/925/1275 to 750/1100/1450, while its AP scaling remains unchanged.
+
+**Why play them:** they can punish grouped enemies and exploit poor positioning.
+
+**Jungle watchlist:** Rammus loses some defensive scaling on W. Lee Sin receives a longer W cooldown and lower ultimate damage. Nidalee also loses W damage and E attack speed. These nerfs reduce some of their power but do not automatically make them uncompetitive.
+
+## Mid: best champions in Patch 26.21
+
+### Orianna — Provisional A tier
+
+Orianna gains better AP ratios on Q and W, increasing her damage potential later in the game.
+
+**Why play her:** she offers wave control, utility and an ultimate that can decide teamfights.
+
+**Best for:** players who prefer control mages and coordinated team play.
+
+### Ryze — Provisional A tier
+
+Ryze receives improvements to Q scaling, movement speed and W damage. These changes are intended to reward players who reach the later stages of the game.
+
+**Why play him:** he combines sustained damage, mobility and map pressure.
+
+**Best for:** players willing to invest time in mastering his combos and wave management.
+
+### Fizz — Provisional A tier
+
+Fizz appears among the champions with competitive results in the available patch data. He did not receive a direct buff in this update.
+
+**Why play him:** he can punish poor positioning and eliminate priority targets.
+
+**Best for:** players who enjoy assassins and creating advantages through roaming and kills.
+
+### Gwen — Provisional A tier
+
+The available early data shows competitive results for Gwen in Mid, although her sample size and pick rate should be considered before treating those results as universally representative.
+
+**Why play her:** she can provide sustained damage and perform well in extended fights.
+
+**Mid watchlist:** Qiyana receives a Q damage reduction, while Viktor loses movement speed and part of his Q shield. Azir, meanwhile, gains mana growth. These changes may alter matchups, but their final impact needs to be confirmed with more games.
+
+## ADC: best champions in Patch 26.21
+
+### Miss Fortune — Provisional A tier, with upward potential
+
+Miss Fortune receives more E damage and increased ultimate damage. These changes partly compensate for the loss of power associated with the Hubris adjustment.
+
+**Why play her:** she can apply lane pressure and deal substantial damage when enemies group together.
+
+**Best for:** players who prefer a marksman with a clear laning plan and a teamfight-changing ultimate.
+
+### Kog'Maw — Provisional A tier
+
+Kog'Maw appears among the champions with strong results in the available version data, although he did not receive a major direct change in Patch 26.21.
+
+**Why play him:** he provides sustained damage and can shred durable targets when given enough time and protection.
+
+**Best for:** players who prefer scaling and careful positioning in fights.
+
+### Jinx — Provisional A tier
+
+Jinx loses attack damage per level and base health, with the goal of reducing her dominance in the meta.
+
+**Why keep considering her:** she retains her scaling-carry identity and can take over fights through resets.
+
+**What to watch:** her popularity and performance following the nerf. There is no need to discard her automatically.
+
+### Caitlyn — Provisional A tier
+
+Caitlyn loses some passive damage scaling but gains more base damage on Q. The change shifts some of her power from late game toward the laning phase.
+
+**Why play her:** she can use her range and lane pressure to create early advantages.
+
+**ADC watchlist:** Tristana loses attack speed on the early ranks of Q. Varus receives a redistribution of power between Q and W, intended to limit his Top variant and allow more targeted tuning for Bot. Post-patch statistics will determine whether these champions maintain their positions.
+
+## Support: best champions in Patch 26.21
+
+### Zyra — Provisional A tier, with upward potential
+
+Zyra receives a lower seed-ammunition cooldown on W at several ranks. Early data from ggez.gg recorded a 5.9 percentage-point increase in win rate, although this is an initial all-rank sample rather than a guarantee of future performance.
+
+**Why play her:** she can control zones, pressure lanes with plants and punish poor positioning.
+
+**Best for:** players who prefer damage-oriented supports and area control.
+
+### Vel'Koz — Provisional A tier, with upward potential
+
+Vel'Koz gains passive damage, increasing from 35–180 (+60% AP) to 35–205 (+65% AP).
+
+**Why play him:** he rewards accurate ability combos and can pressure enemies from range.
+
+**Best for:** players who prefer long-range poke and magic damage.
+
+### Taric — Provisional A tier
+
+Taric receives behavior improvements when casting abilities on a linked ally who becomes untargetable during the cast. This makes some interactions more reliable.
+
+**Why play him:** he offers protection, healing and utility in coordinated fights.
+
+### Leona — Provisional A tier
+
+Leona remains an option for players who want engage and crowd control. Her inclusion is editorial and does not imply a direct buff in this patch.
+
+**Support watchlist:** Zyra and Vel'Koz may increase interest in damage-oriented supports, while Taric remains an alternative focused on protection. Final placements should be based on Support-specific data and matchups.
+
+## The most important changes in Patch 26.21
+
+| Champion | Main change | Potential impact |
+|---|---|---|
+| Sion | More health per level and an ultimate improvement | More durability and greater reward for charging the ultimate. |
+| Taliyah | More E damage and bonus monster damage | Better clear and combo potential. |
+| Nunu & Willump | Higher maximum R damage | More threat from well-executed ultimates. |
+| Zyra | Lower W seed cooldown | More opportunities to set up zones and plants. |
+| Vel'Koz | More passive damage | Greater reward for landing ability combos. |
+| Miss Fortune | More E and R damage | Higher damage potential in lane and teamfights. |
+| Lee Sin | Longer W cooldown and lower R damage | Less flexibility and execution damage. |
+| Rammus | Lower defensive scaling on W | Less bonus durability in certain builds. |
+| Nidalee | Lower W damage and E attack speed | Reduced power in trades and clearing. |
+| Jinx | Lower attack damage per level and base health | Less room for error and reduced damage scaling. |
+| Tristana | Lower attack speed on early Q ranks | Less early lane pressure. |
+| Caitlyn | Lower passive scaling, higher base Q damage | Power shifted toward laning. |
+| Varus | Damage adjustments between Q and W | Changes to build options and his Top and Bot presence. |
+| Qiyana | Lower Q damage | Less damage in trades. |
+| Viktor | Lower movement speed and Q shield | Less safety and mobility in the early game. |
+
+Source: [Official League of Legends Patch 26.21 notes — Riot Games](https://www.leagueoflegends.com/en-us/news/game-updates/league-of-legends-patch-26-21-notes/).
+
+## How to choose the best champion for climbing
+
+A tier list is a starting point, not a guarantee of wins. Before choosing a champion, consider three factors:
+
+1. **Champion mastery:** playing consistently is usually more valuable than picking a high-tier champion you barely know.
+2. **Your role and playstyle:** choose champions that match your strengths, whether that means engaging fights, scaling, pressuring lanes or protecting teammates.
+3. **Team composition and matchups:** even a strong pick can struggle against certain opponents or in a team that does not complement its strengths.
+
+For ranked improvement, it is often useful to maintain a small pool of main champions and one or two alternatives for unfavorable situations.
+
+## Find your next champion with League Roulette
+
+Always picking the same champions? Use League Roulette to discover a different option and step outside your comfort zone.
+
+Choose your role, generate a champion and try something new in your next game.
+
+**CTA: Try League Roulette**
+
+## Methodology and sources
+
+This tier list covers Patch 26.21 and uses Riot Games' official patch notes alongside the first publicly available ranked data. Balance changes help identify champions worth reevaluating; they are not sufficient evidence by themselves to assign a tier.
+
+Early win-rate data can change and should not automatically be generalized across ranks or regions. Role-specific recommendations are presented as provisional editorial guidance until sufficiently large and comparable samples are available.
+
+Sources:
+- [Official LoL Patch 26.21 notes — Riot Games](https://www.leagueoflegends.com/en-us/news/game-updates/league-of-legends-patch-26-21-notes/)
+- [Early patch statistics — ggez.gg](https://ggez.gg/news/patch-26-21)
+- [Champion statistics and tier list — Mobalytics](https://mobalytics.gg/lol/tier-list/stats)

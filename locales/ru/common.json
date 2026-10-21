@@ -639,6 +639,23 @@
         "sortRecent": "Recent",
         "toNextLevel": "to next level"
     },
+    "masteryTree": {
+        "searchPlaceholder": "Ищите в своём дереве чемпионов...",
+        "searchMatches": "Совпадений: {count}",
+        "noResults": "Чемпион не найден",
+        "resetView": "Сбросить вид",
+        "zoomIn": "Увеличить",
+        "zoomOut": "Уменьшить",
+        "legend": "Размер узла = очки мастерства (логарифмическая шкала)",
+        "legendLevels": "Уровень мастерства",
+        "shareOfTotal": "{percent}% от общего мастерства",
+        "rankOf": "Место #{rank} из {total}",
+        "centerChampion": "Центрировать чемпиона",
+        "clickHint": "Перетаскивайте для навигации · Прокручивайте для масштаба · Нажмите на чемпиона",
+        "close": "Закрыть",
+        "loadError": "Не удалось построить дерево мастерства",
+        "retry": "Повторить"
+    },
     "championWinrate": {
         "loading": "Загрузка истории матчей...",
         "noData": "История матчей не найдена. Сначала играйте!",

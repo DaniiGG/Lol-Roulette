@@ -21,9 +21,18 @@ export type BlogPostMeta = {
   /** Optional SEO overrides. */
   seoTitle?: string
   seoDescription?: string
+  /** Locale-specific SEO overrides (take precedence over the fields above). */
+  seoTitleByLocale?: Record<string, string>
+  seoDescriptionByLocale?: Record<string, string>
+  /**
+   * Locale-specific public slug. The content keeps a canonical `slug`,
+   * while each locale can expose an SEO-friendly translated URL.
+   */
+  localizedSlugs?: Record<string, string>
   /** Public URL for the post's cover image, e.g. /images/blog/post-slug.webp. */
   image?: string
   imageAlt?: string
+  imageAltByLocale?: Record<string, string>
 }
 
 /**
@@ -345,6 +354,49 @@ export const BLOG_POST_META: Record<string, BlogPostMeta> = {
     image: '/images/blog/parche21oct.jpg',
     imageAlt: 'Patch 26.21 of League of Legends: buffs, nerfs y object changes',
   },
+  'lol-patch-26-21-tier-list': {
+    publishedAt: '2026-10-21',
+    updatedAt: '2026-10-21',
+    author: 'League Roulette Team',
+    category: 'tier-lists',
+    lane: 'all-lanes',
+    keywords: [
+      'lol patch 26.21 tier list',
+      'best champions patch 26.21',
+      'best champions for climbing ranked',
+      'best top laners',
+      'best jungle champions',
+      'best mid laners',
+      'best adc champions',
+      'best support champions',
+      'tier list lol parche 26.21',
+      'mejores campeones lol parche 26.21',
+      'mejores campeones para subir de elo',
+    ],
+    translatedIn: ['en', 'es'],
+    related: ['lol-patch-26-21', 'how-to-climb-ranked', 'lol-tier-list-current-patch'],
+    seoTitle: 'LoL Patch 26.21 Tier List: Best Champions for Every Role',
+    seoDescription:
+      'Explore the LoL Patch 26.21 tier list for Top, Jungle, Mid, ADC and Support. Compare champion picks and find your next ranked main.',
+    seoTitleByLocale: {
+      en: 'LoL Patch 26.21 Tier List: Best Champions for Every Role',
+      es: 'Tier List LoL Parche 26.21: Mejores Campeones por Línea',
+    },
+    seoDescriptionByLocale: {
+      en: 'Explore the LoL Patch 26.21 tier list for Top, Jungle, Mid, ADC and Support. Compare champion picks and find your next ranked main.',
+      es: 'Descubre la tier list de LoL 26.21 para Top, Jungla, Mid, ADC y Support. Compara los mejores picks y encuentra campeones para subir de elo.',
+    },
+    localizedSlugs: {
+      es: 'tier-list-lol-parche-26-21',
+    },
+    image: '/images/blog/tierlist21oct.jpg',
+    imageAlt:
+      'League of Legends Patch 26.21 tier list with champion portraits for every role',
+    imageAltByLocale: {
+      en: 'League of Legends Patch 26.21 tier list with champion portraits for every role',
+      es: 'Tier list del parche 26.21 de League of Legends con retratos de campeones para cada línea',
+    },
+  },
 }
 
 export const BLOG_SLUGS = Object.keys(BLOG_POST_META)
@@ -374,6 +426,41 @@ export function getRelatedSlugs(slug: string): string[] {
  */
 export function getAvailableLocales(slug: string): string[] {
   return BLOG_POST_META[slug]?.translatedIn ?? ['en']
+}
+
+/** Public slug for a locale, falling back to the canonical slug. */
+export function getLocalizedSlug(slug: string, locale: string): string {
+  return BLOG_POST_META[slug]?.localizedSlugs?.[locale] ?? slug
+}
+
+/** Localized public path for a blog post. */
+export function getPostHref(slug: string, locale: string): string {
+  const localized = getLocalizedSlug(slug, locale)
+  return locale === 'en' ? `/blog/${localized}` : `/${locale}/blog/${localized}`
+}
+
+/**
+ * Resolve a URL slug and locale back to the canonical content slug.
+ * Supports both localized slugs and the canonical slug.
+ */
+export function resolvePostSlug(slug: string, locale: string): string | undefined {
+  if (BLOG_POST_META[slug]) return slug
+  return BLOG_SLUGS.find((canonical) => getLocalizedSlug(canonical, locale) === slug)
+}
+
+export function getSeoTitle(slug: string, locale: string): string | undefined {
+  const meta = BLOG_POST_META[slug]
+  return meta?.seoTitleByLocale?.[locale] ?? meta?.seoTitle
+}
+
+export function getSeoDescription(slug: string, locale: string): string | undefined {
+  const meta = BLOG_POST_META[slug]
+  return meta?.seoDescriptionByLocale?.[locale] ?? meta?.seoDescription
+}
+
+export function getImageAlt(slug: string, locale: string): string | undefined {
+  const meta = BLOG_POST_META[slug]
+  return meta?.imageAltByLocale?.[locale] ?? meta?.imageAlt
 }
 
 export function getTagsForSlug(slug: string): string[] {

@@ -1,0 +1,1058 @@
+{
+  "patch": "26.21",
+  "lastReviewed": "2026-10-21",
+  "ui": {
+    "kicker": "Meta explorer · Patch 26.21",
+    "title": "Patch 26.21 tier list by role",
+    "subtitle": "A static table with the recommended picks, patch changes and watchlist champions for every role.",
+    "patch": "Patch",
+    "reviewed": "Last reviewed",
+    "editorial": "Editorial tier list",
+    "provisional": "Provisional rankings: the patch has just launched and role-specific data is still limited.",
+    "roleNav": "Choose a role",
+    "search": "Search champion",
+    "searchPlaceholder": "Search by name...",
+    "filters": "Filters",
+    "tier": "Tier",
+    "difficulty": "Difficulty",
+    "playstyle": "Playstyle",
+    "all": "All",
+    "clear": "Clear filters",
+    "showing": "Showing {shown} of {total} champions",
+    "noResults": "No champion matches these filters.",
+    "noResultsHint": "Try removing a filter or searching for another name.",
+    "noTierPicks": "No confirmed picks in this tier for this role.",
+    "emptyTierNote": "Without role-specific data we will not promote picks to S+ or S.",
+    "tierRowEmpty": "No confirmed picks",
+    "championCount": "{n} picks",
+    "core": "Recommended",
+    "watch": "Watchlist",
+    "rising": "Rising",
+    "openProfile": "Open {name} details",
+    "tapHint": "Tap a card to read the full breakdown.",
+    "details": "View details",
+    "close": "Close",
+    "why": "Why play them",
+    "patchChanges": "Patch 26.21 changes",
+    "strengths": "Strengths",
+    "weaknesses": "Weaknesses",
+    "profile": "Player profile",
+    "statsTitle": "Verified data",
+    "statsSource": "Source",
+    "statsScope": "Ranked Solo/Duo · all ranks",
+    "winRate": "Win rate",
+    "winRateDelta": "Win-rate change",
+    "pickRateDelta": "Pick-rate change",
+    "before": "Before",
+    "after": "After",
+    "percentagePoint": "pp",
+    "noStats": "There is no verified data for this champion in the initial patch sample. We do not display invented numbers.",
+    "editorialNote": "Editorial assessment",
+    "verifiedNote": "Verified data",
+    "compare": "Compare",
+    "compareAdd": "Add to comparison",
+    "compareRemove": "Remove from comparison",
+    "compareTitle": "Champion comparison",
+    "compareEmpty": "Select two or three champions with the + button on each card.",
+    "compareLimit": "You can compare up to 3 champions.",
+    "compareSelected": "{n} selected",
+    "compareOpen": "Open comparison",
+    "compareClear": "Clear",
+    "compareHint": "Verified data is kept separate from the editorial assessment.",
+    "attribute": "Attribute",
+    "patchType": "Change type",
+    "tierLabel": "Tier {tier}",
+    "roleLabel": "Role: {role}",
+    "patchBadge": "Change: {type}",
+    "finderTitle": "Find your best pick",
+    "finderIntro": "Answer four questions and we will suggest three champions. The suggestions use transparent editorial rules based on tier, difficulty, playstyle and rank; they are not a rank-specific statistical model.",
+    "finderRole": "Role",
+    "finderRank": "Approximate rank",
+    "finderDifficulty": "Preferred difficulty",
+    "finderPlaystyle": "Preferred playstyle",
+    "finderButton": "Find my pick",
+    "finderResults": "Your three best options",
+    "finderRuleNote": "Transparent rules: we prioritise tier, difficulty, playstyle and rank fit. We do not use rank-specific win rates because we do not have a reliable sample.",
+    "finderReasonRank": "Fits your {rank} rank band.",
+    "finderReasonDifficulty": "Its {difficulty} difficulty matches what you asked for.",
+    "finderReasonStyle": "Shares the {style} playstyle.",
+    "finderReasonFallback": "It is a well-rounded option in this role.",
+    "finderNoResults": "There are not enough champions for that combination. Try another setup.",
+    "randomTitle": "What should I play today?",
+    "randomIntro": "Choose a role and let the roulette decide. The result comes from the champions reviewed in this tier list.",
+    "randomButton": "Spin a champion",
+    "randomRolling": "Spinning...",
+    "randomAgain": "Spin again",
+    "randomCTA": "Try League Roulette",
+    "randomHint": "The real League Roulette also lets you filter by role and verify your matches.",
+    "sources": "Sources",
+    "sourceStats": "Win-rate and pick-rate data",
+    "sourcePatch": "Official patch notes",
+    "sourceMethod": "Editorial methodology",
+    "statSample": "206,610 Ranked Solo/Duo games analysed by ggez.gg",
+    "selectCompare": "Select {name} for comparison",
+    "removeCompare": "Remove {name} from comparison",
+    "oneMoment": "One moment...",
+    "filterAllTiers": "All tiers",
+    "filterAllDifficulties": "All difficulties",
+    "filterAllPlaystyles": "All playstyles",
+    "resultsLabel": "Search results",
+    "comparisonSelected": "Champions selected for comparison",
+    "recommendation": "Recommendation {n}"
+  },
+  "roles": {
+    "top": "Top",
+    "jungle": "Jungle",
+    "mid": "Mid",
+    "adc": "ADC",
+    "support": "Support"
+  },
+  "roleDescriptions": {
+    "top": "Duels, side pressure and tanks",
+    "jungle": "Tempo, objectives and ganks",
+    "mid": "Wave control and roams",
+    "adc": "Sustained damage and positioning",
+    "support": "Vision, engage and peel"
+  },
+  "tiers": {
+    "S+": "S+ · Exceptional",
+    "S": "S · Dominant",
+    "A": "A · Recommended",
+    "B": "B · Viable / watchlist",
+    "C": "C · Situational"
+  },
+  "tierDescriptions": {
+    "S+": "Reserved for picks with strong, consistent role-specific evidence.",
+    "S": "No confirmed candidates: the initial data cannot isolate a clear role dominator.",
+    "A": "Our main recommendations for this patch, always provisional.",
+    "B": "Viable picks with conditions, recent nerfs or samples that still need confirmation.",
+    "C": "Options that have lost power or depend heavily on context and matchups."
+  },
+  "difficulties": {
+    "low": "Low",
+    "medium": "Medium",
+    "high": "High"
+  },
+  "playstyles": {
+    "frontline": "Frontline",
+    "engage": "Engage",
+    "scaling": "Scaling",
+    "poke": "Poke",
+    "assassin": "Assassin",
+    "splitpush": "Splitpush",
+    "utility": "Utility",
+    "sustain": "Sustain",
+    "zone": "Zone control"
+  },
+  "ranks": {
+    "low": "Iron – Bronze",
+    "mid": "Silver – Gold",
+    "high": "Platinum – Emerald",
+    "elite": "Diamond or higher"
+  },
+  "patchTypes": {
+    "buff": "Buff",
+    "nerf": "Nerf",
+    "adjustment": "Adjustment",
+    "none": "No direct changes"
+  },
+  "championPoolNote": "Portraits come from Data Dragon (16.21.1). The champion list is an editorial selection based on the official patch notes and the first patch data, not the full roster.",
+  "sources": [
+    {
+      "label": "Official League of Legends Patch 26.21 notes — Riot Games",
+      "url": "https://www.leagueoflegends.com/en-us/news/game-updates/league-of-legends-patch-26-21-notes/"
+    },
+    {
+      "label": "Patch 26.21 in numbers — ggez.gg",
+      "url": "https://ggez.gg/news/patch-26-21"
+    },
+    {
+      "label": "Champion statistics and tier list — Mobalytics",
+      "url": "https://mobalytics.gg/lol/tier-list/stats"
+    }
+  ],
+  "champions": [
+    {
+      "id": "Sion",
+      "name": "Sion",
+      "role": "top",
+      "tier": "A",
+      "difficulty": "medium",
+      "playstyles": [
+        "frontline",
+        "engage",
+        "sustain"
+      ],
+      "category": "core",
+      "rising": true,
+      "why": "He gains more health per level and a harder-hitting fully charged ultimate. He remains a tank with engage and the ability to create space in fights.",
+      "changes": "Health growth: 87 → 95. R (Unstoppable Onslaught): damage increases by up to 200% during the first 3 seconds of channeling. The tooltip also now shows the correct bonus AD ratios.",
+      "strengths": [
+        "Holds up in long side lanes and extended fights.",
+        "His ultimate punishes poor positioning and starts fights.",
+        "He does not need to win lane to provide value."
+      ],
+      "weaknesses": [
+        "Struggles against percentage damage and highly mobile teams.",
+        "His R is easy to dodge when used without setup."
+      ],
+      "profile": "Players who prefer durable tanks, starting fights and playing around objectives.",
+      "stats": {
+        "winRateDelta": 2.4,
+        "note": "ggez.gg data for all ranks; not Top-specific."
+      }
+    },
+    {
+      "id": "Darius",
+      "name": "Darius",
+      "role": "top",
+      "tier": "A",
+      "difficulty": "medium",
+      "playstyles": [
+        "frontline",
+        "splitpush",
+        "sustain"
+      ],
+      "category": "core",
+      "why": "His Q cooldown drops to 4 seconds at max rank, which improves extended trades. His lane pressure remains high if you punish mistakes.",
+      "changes": "Q (Decimate): cooldown 9/8/7/6/5s → 9/8/7/6/4s.",
+      "strengths": [
+        "Dominates melee duels.",
+        "Turns lane mistakes into large advantages.",
+        "A major threat in extended fights."
+      ],
+      "weaknesses": [
+        "Can be kited by range and crowd control.",
+        "Depends on hitting the Q blade."
+      ],
+      "profile": "Aggressive players who understand trades and want to pressure lane.",
+      "stats": {
+        "winRateDelta": -1.2,
+        "note": "ggez.gg data for all ranks; the change is small and does not invalidate the Q buff."
+      }
+    },
+    {
+      "id": "Volibear",
+      "name": "Volibear",
+      "role": "top",
+      "tier": "A",
+      "difficulty": "low",
+      "playstyles": [
+        "frontline",
+        "sustain",
+        "engage"
+      ],
+      "category": "core",
+      "why": "A solid option for dueling, durability and pressure. He received no direct changes, so his value depends more on performance and team fit.",
+      "changes": "No direct changes in 26.21. He remains an editorial pick for players who want a lane bruiser.",
+      "strengths": [
+        "Good early duels and tower pressure.",
+        "Reliable engage with R.",
+        "Forgiving thanks to his healing."
+      ],
+      "weaknesses": [
+        "Can fall behind on resources if set back.",
+        "Struggles against kiting compositions."
+      ],
+      "profile": "Players who want a durable bruiser with a straightforward side-lane and objective plan."
+    },
+    {
+      "id": "Garen",
+      "name": "Garen",
+      "role": "top",
+      "tier": "A",
+      "difficulty": "low",
+      "playstyles": [
+        "frontline",
+        "splitpush"
+      ],
+      "category": "core",
+      "why": "An accessible pick for players who want consistency and a clear game plan. His inclusion is editorial and does not imply a buff this patch.",
+      "changes": "No direct changes in 26.21.",
+      "strengths": [
+        "Very easy to execute.",
+        "Good push and out-of-combat recovery.",
+        "His R executes low-health targets."
+      ],
+      "weaknesses": [
+        "Little ranged pressure.",
+        "Can be kited by mobile compositions."
+      ],
+      "profile": "New players or anyone who wants a direct champion to focus on fundamentals."
+    },
+    {
+      "id": "Yone",
+      "name": "Yone",
+      "role": "top",
+      "tier": "B",
+      "difficulty": "high",
+      "playstyles": [
+        "assassin",
+        "splitpush",
+        "scaling"
+      ],
+      "category": "watch",
+      "why": "He remains a strong duelist, but his Q loses AD ratio. We place him in B: the nerf is moderate and his mechanical ceiling is still high.",
+      "changes": "Q (Mortal Steel): AD ratio 110% → 105%. No other kit changes.",
+      "strengths": [
+        "High mechanical ceiling and side-lane pressure.",
+        "Can start or finish fights with R."
+      ],
+      "weaknesses": [
+        "Punishes his own mistakes heavily.",
+        "The nerf slightly lowers his sustained damage."
+      ],
+      "profile": "Experienced duelists willing to invest time in mechanics.",
+      "stats": {
+        "winRateDelta": -1.3,
+        "note": "ggez.gg data for all ranks."
+      }
+    },
+    {
+      "id": "Varus",
+      "name": "Varus",
+      "role": "top",
+      "tier": "C",
+      "difficulty": "medium",
+      "playstyles": [
+        "poke",
+        "zone"
+      ],
+      "category": "watch",
+      "why": "The Q and W adjustments are aimed at limiting his Top variant. We keep him in provisional C here: the change hits his W-max pattern, even though the overall data is not Top-specific.",
+      "changes": "Q: max damage now scales better with channel time. W: less on-hit and per-stack damage, but better AD/AP ratios and more reward for charging Q.",
+      "strengths": [
+        "Poke and ranged pressure.",
+        "Useful in siege compositions."
+      ],
+      "weaknesses": [
+        "His Top variant loses power with the adjustment.",
+        "Fragile against dives and mobile champions."
+      ],
+      "profile": "Poke players willing to adapt their build; not a Top pick for everyone.",
+      "stats": {
+        "winRateDelta": 2.1,
+        "note": "All-rank data: it may mostly reflect his bot-lane variant, not Top."
+      }
+    },
+    {
+      "id": "Taliyah",
+      "name": "Taliyah",
+      "role": "jungle",
+      "tier": "A",
+      "difficulty": "medium",
+      "playstyles": [
+        "zone",
+        "poke",
+        "scaling"
+      ],
+      "category": "core",
+      "rising": true,
+      "why": "She gains E damage and keeps the 225% monster damage. She can clear camps more safely and punish grouped enemies with crowd control.",
+      "changes": "E (Threaded Volley): damage 60/105/150/195/240 (+60% AP) → 70/115/160/205/250 (+70% AP). Detonation: 25/40/55/70/85 (+30% AP) → 30/45/60/75/90 (+30% AP). It still deals 225% damage to monsters.",
+      "strengths": [
+        "Excellent zone control.",
+        "More comfortable jungle clear after the buff.",
+        "Strong rotations and ganks with her wall."
+      ],
+      "weaknesses": [
+        "Needs good positioning to land combos.",
+        "Can struggle against aggressive invading junglers."
+      ],
+      "profile": "Players who enjoy mage junglers, zone control and rotations.",
+      "stats": {
+        "winRateDelta": 1.5,
+        "note": "ggez.gg data for all ranks."
+      }
+    },
+    {
+      "id": "Shyvana",
+      "name": "Shyvana",
+      "role": "jungle",
+      "tier": "A",
+      "difficulty": "low",
+      "playstyles": [
+        "scaling",
+        "frontline",
+        "sustain"
+      ],
+      "category": "core",
+      "why": "With no direct changes, she keeps a clear profile: fast clearing, scaling and sustained damage. She is a straightforward option for turning tempo into objectives.",
+      "changes": "No direct changes in 26.21. This is an editorial recommendation based on her profile, not a patch buff.",
+      "strengths": [
+        "Fast jungle clear.",
+        "Good scaling with dragons.",
+        "Direct objective pressure."
+      ],
+      "weaknesses": [
+        "Limited pressure before her form comes online.",
+        "Ganks depend heavily on enemy positioning."
+      ],
+      "profile": "Players who prefer farming, scaling and playing around objectives."
+    },
+    {
+      "id": "MonkeyKing",
+      "name": "Wukong",
+      "role": "jungle",
+      "tier": "A",
+      "difficulty": "medium",
+      "playstyles": [
+        "engage",
+        "frontline",
+        "assassin"
+      ],
+      "category": "core",
+      "why": "He gains health regeneration but loses early armor per passive stack. His engage and teamfight impact remain valuable.",
+      "changes": "Health regeneration: 3.5 + 0.65/level → 5.5 + 0.65/level. Passive (Stone Skin): armor per stack 6–10 → 4.5–10 based on champion level.",
+      "strengths": [
+        "Reliable engage with W and R.",
+        "Good teamfight damage.",
+        "Flexible between jungle and lane."
+      ],
+      "weaknesses": [
+        "Loses durability in the first levels.",
+        "Damage falls off without an early lead."
+      ],
+      "profile": "Players who want to start fights and set the pace of the map.",
+      "stats": {
+        "winRateDelta": -0.8,
+        "note": "ggez.gg data for all ranks. Keep watching as the sample grows."
+      }
+    },
+    {
+      "id": "Nunu",
+      "name": "Nunu & Willump",
+      "role": "jungle",
+      "tier": "B",
+      "difficulty": "low",
+      "playstyles": [
+        "engage",
+        "frontline",
+        "sustain"
+      ],
+      "category": "watch",
+      "why": "Their ultimate deals more maximum damage, but the initial patch sample does not follow: ggez.gg records a 2.6-point win-rate drop. We move them from provisional A to B until more data arrives.",
+      "changes": "R (Absolute Zero): maximum damage 625/925/1275 (+300% AP) → 750/1100/1450 (+300% AP).",
+      "strengths": [
+        "Objective control with Q and Smite.",
+        "Can decide fights with a well-channelled R.",
+        "Strong engage with Snowball."
+      ],
+      "weaknesses": [
+        "R requires channeling and can be interrupted.",
+        "The initial sample does not confirm the buff."
+      ],
+      "profile": "Players who prefer a straightforward jungler focused on objectives and grouped fights.",
+      "stats": {
+        "winRateDelta": -2.6,
+        "note": "ggez.gg data for all ranks; the initial sample is short."
+      }
+    },
+    {
+      "id": "LeeSin",
+      "name": "Lee Sin",
+      "role": "jungle",
+      "tier": "B",
+      "difficulty": "high",
+      "playstyles": [
+        "assassin",
+        "engage",
+        "frontline"
+      ],
+      "category": "watch",
+      "why": "He receives a longer W cooldown and lower R damage. Even so, the early data does not sink him: he gains 0.2 points of win rate. He remains competitive in expert hands, but is no longer an automatic pick.",
+      "changes": "W (Safeguard): cooldown 7s → 8s. E (Tempest): no longer reveals invisible enemies who stealth after being hit. R (Dragon's Rage): damage 175/400/625 → 150/350/550 (+200% bonus AD).",
+      "strengths": [
+        "Mobility and early pressure.",
+        "Can start or finish fights.",
+        "Huge impact if you master his combos."
+      ],
+      "weaknesses": [
+        "The nerf reduces his flexibility.",
+        "Requires a high mechanical investment."
+      ],
+      "profile": "Experienced players who want a tempo-driven, playmaking jungler.",
+      "stats": {
+        "winRateDelta": 0.2,
+        "note": "ggez.gg data for all ranks; he held up after the nerf in the initial sample."
+      }
+    },
+    {
+      "id": "Nidalee",
+      "name": "Nidalee",
+      "role": "jungle",
+      "tier": "B",
+      "difficulty": "high",
+      "playstyles": [
+        "assassin",
+        "poke",
+        "scaling"
+      ],
+      "category": "watch",
+      "why": "She loses W damage and E attack speed, but the initial data actually rises 2.2 points. Her ceiling remains high in skilled hands, although the nerf hurts her clear and trading.",
+      "changes": "W (Pounce): damage 55/88.75/122.5/156.25/190 → 50/80/110/140/170 (+50% bonus AD, +30% AP). E (Primal Surge): attack speed 30/40/50/60/70% → 20/30/40/50/60%.",
+      "strengths": [
+        "Fast clearing and constant pressure.",
+        "High damage when she lands her spear.",
+        "Excellent in experienced hands."
+      ],
+      "weaknesses": [
+        "Less early attack speed.",
+        "Heavily punished when she misses her abilities."
+      ],
+      "profile": "Aggressive junglers with strong cougar-form control.",
+      "stats": {
+        "winRateDelta": 2.2,
+        "note": "ggez.gg data for all ranks; performance can vary heavily by skill."
+      }
+    },
+    {
+      "id": "Rammus",
+      "name": "Rammus",
+      "role": "jungle",
+      "tier": "C",
+      "difficulty": "low",
+      "playstyles": [
+        "engage",
+        "frontline"
+      ],
+      "category": "watch",
+      "why": "He loses defensive scaling on W and is the biggest faller in the initial sample: 3.5 points of win rate. He remains useful against heavily physical teams, but is no longer a general-purpose pick.",
+      "changes": "W (Defensive Ball Curl): bonus armor 27/32/37/42/47 (+30–60% armor) → 25/30/35/40/45 (+30–50%). Bonus magic resistance: 20/25/30/35/40 (+30–60% MR) → 20/25/30/35/40 (+30–50%).",
+      "strengths": [
+        "Very good against AD compositions.",
+        "Simple engage with Q and crowd control."
+      ],
+      "weaknesses": [
+        "The nerf lowers his durability in long fights.",
+        "Predictable and easy to counter with magic damage."
+      ],
+      "profile": "Players who want a straightforward tank as an answer to physical damage.",
+      "stats": {
+        "winRateBefore": 52.6,
+        "winRateAfter": 49.1,
+        "winRateDelta": -3.5,
+        "note": "ggez.gg data for all ranks; the largest drop among changed champions."
+      }
+    },
+    {
+      "id": "XinZhao",
+      "name": "Xin Zhao",
+      "role": "jungle",
+      "tier": "B",
+      "difficulty": "low",
+      "playstyles": [
+        "frontline",
+        "engage",
+        "sustain"
+      ],
+      "category": "watch",
+      "rising": true,
+      "why": "He gains better Q and E ratios and the initial data places him 3.1 points higher. We are not moving him to A because the sample is short, but he is one of the picks to watch this patch.",
+      "changes": "Q (Three Talon Strike): damage per strike +40% → +45% bonus AD. E (Audacious Charge): attack speed now scales with 1% per 4% permanent bonus attack speed instead of 1% per 5%.",
+      "strengths": [
+        "Very direct early engage.",
+        "Good dueling and objective pressure.",
+        "His R is forgiving."
+      ],
+      "weaknesses": [
+        "Loses value without an early lead.",
+        "Can be kited in open fights."
+      ],
+      "profile": "Players who want a straightforward jungler with early impact.",
+      "stats": {
+        "winRateBefore": 49,
+        "winRateAfter": 52.1,
+        "winRateDelta": 3.1,
+        "note": "ggez.gg data for all ranks."
+      }
+    },
+    {
+      "id": "Orianna",
+      "name": "Orianna",
+      "role": "mid",
+      "tier": "A",
+      "difficulty": "medium",
+      "playstyles": [
+        "scaling",
+        "zone",
+        "utility"
+      ],
+      "category": "core",
+      "rising": true,
+      "why": "She gains AP ratios on Q and W, so her main combo hits harder later in the game. She keeps wave control, utility and a fight-deciding ultimate.",
+      "changes": "Q (Command: Attack): AP ratio 55% → 60%. W (Command: Dissonance): AP ratio 80% → 85%.",
+      "strengths": [
+        "Wave and zone control.",
+        "Excellent in coordinated fights.",
+        "Higher damage scaling."
+      ],
+      "weaknesses": [
+        "Needs good ball positioning.",
+        "Can struggle against mobile assassins."
+      ],
+      "profile": "Players who prefer control mages and playing around their team.",
+      "stats": {
+        "winRateDelta": 1,
+        "note": "ggez.gg data for all ranks."
+      }
+    },
+    {
+      "id": "Ryze",
+      "name": "Ryze",
+      "role": "mid",
+      "tier": "A",
+      "difficulty": "high",
+      "playstyles": [
+        "scaling",
+        "zone",
+        "sustain"
+      ],
+      "category": "core",
+      "why": "He gains Q scaling, movement speed and W damage. The changes are meant to reward players who reach the later stages of the game and master his combos.",
+      "changes": "Q (Overload): bonus damage against Flux targets 15/40/65/90% → 10/40/70/100%. Bonus move speed 28/32/36/40/44% → 30/35/40/45/50%. W (Rune Prison): AP ratio 60% → 70%.",
+      "strengths": [
+        "Sustained damage and mobility.",
+        "Map pressure with his R.",
+        "Very strong if he reaches late game."
+      ],
+      "weaknesses": [
+        "Requires mastery of his combos.",
+        "The early game remains demanding."
+      ],
+      "profile": "Players willing to invest time in combos and wave management.",
+      "stats": {
+        "winRateDelta": 0.2,
+        "note": "ggez.gg data for all ranks; the scaling buff may take time to show."
+      }
+    },
+    {
+      "id": "Fizz",
+      "name": "Fizz",
+      "role": "mid",
+      "tier": "A",
+      "difficulty": "medium",
+      "playstyles": [
+        "assassin",
+        "engage"
+      ],
+      "category": "core",
+      "why": "With no direct changes, he remains an effective assassin for punishing poor positioning and removing priority targets. This is an editorial recommendation.",
+      "changes": "No direct changes in 26.21.",
+      "strengths": [
+        "High burst damage.",
+        "Mobility with E to get in and out.",
+        "Good roaming."
+      ],
+      "weaknesses": [
+        "Relies on landing R to start.",
+        "Can run out of resources after his combo."
+      ],
+      "profile": "Players who enjoy assassins and creating advantages through roams."
+    },
+    {
+      "id": "Gwen",
+      "name": "Gwen",
+      "role": "mid",
+      "tier": "A",
+      "difficulty": "medium",
+      "playstyles": [
+        "scaling",
+        "splitpush",
+        "sustain"
+      ],
+      "category": "core",
+      "why": "With no direct changes, she keeps a sustained-damage profile and performs well in extended fights. We include her as an editorial recommendation and her sample should be watched.",
+      "changes": "No direct changes in 26.21.",
+      "strengths": [
+        "Sustained damage in long fights.",
+        "Good side-lane pressure.",
+        "Her W protects her."
+      ],
+      "weaknesses": [
+        "Struggles against ranged poke.",
+        "Needs time to scale."
+      ],
+      "profile": "Players who prefer scaling champions and extended fights."
+    },
+    {
+      "id": "Azir",
+      "name": "Azir",
+      "role": "mid",
+      "tier": "B",
+      "difficulty": "high",
+      "playstyles": [
+        "scaling",
+        "zone",
+        "poke"
+      ],
+      "category": "watch",
+      "rising": true,
+      "why": "He gains mana per level and the initial data rises 3.5 points. He stays on the watchlist: his difficulty and positioning requirements prevent an A placement with this sample.",
+      "changes": "Mana growth per level: 40 → 50.",
+      "strengths": [
+        "Zone control and ranged pressure.",
+        "Excellent scaling.",
+        "Very strong in expert hands."
+      ],
+      "weaknesses": [
+        "Very high difficulty.",
+        "Needs to protect his soldiers and his position."
+      ],
+      "profile": "Experienced control-mage players willing to practise.",
+      "stats": {
+        "winRateBefore": 46.9,
+        "winRateAfter": 50.4,
+        "winRateDelta": 3.5,
+        "note": "ggez.gg data for all ranks."
+      }
+    },
+    {
+      "id": "Qiyana",
+      "name": "Qiyana",
+      "role": "mid",
+      "tier": "B",
+      "difficulty": "high",
+      "playstyles": [
+        "assassin",
+        "engage"
+      ],
+      "category": "watch",
+      "why": "She loses Q damage, although the initial sample barely moves (-0.2). She remains a dangerous assassin in expert hands, but the nerf reduces her margin for error.",
+      "changes": "Q (Elemental Wrath / Edge of Ixtal): damage 80/110/140/170/200 (+90% bonus AD) → 70/100/130/160/190 (+90% bonus AD).",
+      "strengths": [
+        "High burst damage.",
+        "Zone control with her elements.",
+        "Good roaming."
+      ],
+      "weaknesses": [
+        "The nerf lowers her trading damage.",
+        "Requires precise execution."
+      ],
+      "profile": "Assassin players with strong mechanics and map awareness.",
+      "stats": {
+        "winRateDelta": -0.2,
+        "note": "ggez.gg data for all ranks."
+      }
+    },
+    {
+      "id": "Viktor",
+      "name": "Viktor",
+      "role": "mid",
+      "tier": "C",
+      "difficulty": "medium",
+      "playstyles": [
+        "scaling",
+        "zone",
+        "poke"
+      ],
+      "category": "watch",
+      "why": "He loses movement speed and part of his Q shield, and the initial data drops 2.4 points. He still has a strong late game, but his early game is more vulnerable.",
+      "changes": "Move speed: 335 → 330. Q (Siphon Power): shield 40–140 (+25% AP) → 30–130 (+20% AP).",
+      "strengths": [
+        "Scaling and area damage.",
+        "Zone control with his W.",
+        "Excellent in long fights."
+      ],
+      "weaknesses": [
+        "More vulnerable in the early levels.",
+        "Needs time and protection."
+      ],
+      "profile": "Patient players who want to scale and play around their team.",
+      "stats": {
+        "winRateDelta": -2.4,
+        "note": "ggez.gg data for all ranks."
+      }
+    },
+    {
+      "id": "MissFortune",
+      "name": "Miss Fortune",
+      "role": "adc",
+      "tier": "A",
+      "difficulty": "low",
+      "playstyles": [
+        "poke",
+        "zone",
+        "scaling"
+      ],
+      "category": "core",
+      "rising": true,
+      "why": "She gains E and R damage, partly compensating for the Hubris adjustment. Her lane pressure and ultimate still punish grouped teams.",
+      "changes": "E (Make It Rain): damage 70/100/130/160/190 (+120% AP) → 90/120/150/180/210 (+120% AP). R (Bullet Time): critical damage 130% (+0.3% per 1% bonus crit damage) → 145% (+0.45%).",
+      "strengths": [
+        "Very clear lane pressure.",
+        "Devastating R against grouped enemies.",
+        "Easy to execute."
+      ],
+      "weaknesses": [
+        "Needs good positioning for R.",
+        "Can struggle against dive."
+      ],
+      "profile": "Players who want a straightforward marksman with a clear laning plan.",
+      "stats": {
+        "winRateDelta": 0.2,
+        "pickRateDelta": 4.6,
+        "note": "ggez.gg data for all ranks; pick rate is rising sharply."
+      }
+    },
+    {
+      "id": "KogMaw",
+      "name": "Kog'Maw",
+      "role": "adc",
+      "tier": "A",
+      "difficulty": "medium",
+      "playstyles": [
+        "scaling",
+        "poke",
+        "sustain"
+      ],
+      "category": "core",
+      "why": "With no direct changes, he keeps a sustained-damage profile and can shred durable targets when he gets time and protection.",
+      "changes": "No direct changes in 26.21.",
+      "strengths": [
+        "Very high sustained damage.",
+        "Good against tanks.",
+        "Ranged pressure."
+      ],
+      "weaknesses": [
+        "Heavily dependent on team protection.",
+        "Low mobility."
+      ],
+      "profile": "Players who prefer scaling and careful positioning."
+    },
+    {
+      "id": "Jinx",
+      "name": "Jinx",
+      "role": "adc",
+      "tier": "A",
+      "difficulty": "medium",
+      "playstyles": [
+        "scaling",
+        "zone"
+      ],
+      "category": "core",
+      "why": "She loses AD per level and base health, but keeps her scaling-carry identity and reset potential. The initial drop is 1.4 points: not a reason to discard her.",
+      "changes": "AD: 59 + 3.25/level → 59 + 3/level. Health: 630 + 105/level → 610 + 105/level.",
+      "strengths": [
+        "Scaling and resets in fights.",
+        "Good wave control.",
+        "Area damage with rockets."
+      ],
+      "weaknesses": [
+        "Less room for error after the nerf.",
+        "Needs protection."
+      ],
+      "profile": "Players who want a patient late-game carry.",
+      "stats": {
+        "winRateDelta": -1.4,
+        "pickRateDelta": -2,
+        "note": "ggez.gg data for all ranks."
+      }
+    },
+    {
+      "id": "Caitlyn",
+      "name": "Caitlyn",
+      "role": "adc",
+      "tier": "A",
+      "difficulty": "medium",
+      "playstyles": [
+        "poke",
+        "zone"
+      ],
+      "category": "core",
+      "why": "She loses passive scaling but gains base Q damage. The change shifts power toward the laning phase, where her range still matters.",
+      "changes": "Passive (Headshot): 60–100% AD (+1% per 1% crit) → 60–80% AD (+0.8%). Q (Piltover Peacemaker): base damage 50/90/130/170/210 → 50/95/140/185/230.",
+      "strengths": [
+        "Range and lane pressure.",
+        "Traps and zone control.",
+        "Good transition to objectives."
+      ],
+      "weaknesses": [
+        "Less passive damage in late game.",
+        "Depends on keeping her distance."
+      ],
+      "profile": "Players who want to win lane with range and pressure.",
+      "stats": {
+        "winRateDelta": -1.2,
+        "note": "ggez.gg data for all ranks."
+      }
+    },
+    {
+      "id": "Tristana",
+      "name": "Tristana",
+      "role": "adc",
+      "tier": "B",
+      "difficulty": "medium",
+      "playstyles": [
+        "assassin",
+        "scaling",
+        "splitpush"
+      ],
+      "category": "watch",
+      "why": "She loses attack speed on the early ranks of Q and the initial data drops 2.3 points. She is still useful for tower pressure, but her early lane dominance is reduced.",
+      "changes": "Q (Rapid Fire): attack speed 60/75/90/105/120% → 40/60/80/100/120%.",
+      "strengths": [
+        "Push and tower pressure.",
+        "Mobility and escape tools.",
+        "Good scaling."
+      ],
+      "weaknesses": [
+        "Less early pressure after the nerf.",
+        "High risk when jumping onto targets."
+      ],
+      "profile": "Players who want a mobile carry with a splitpush plan.",
+      "stats": {
+        "winRateDelta": -2.3,
+        "pickRateDelta": -1.6,
+        "note": "ggez.gg data for all ranks."
+      }
+    },
+    {
+      "id": "Varus",
+      "name": "Varus",
+      "role": "adc",
+      "tier": "B",
+      "difficulty": "medium",
+      "playstyles": [
+        "poke",
+        "zone",
+        "scaling"
+      ],
+      "category": "watch",
+      "why": "The adjustments redistribute power between Q and W to limit his Top variant and allow more targeted bot tuning. In ADC he gains 2.1 points in the initial sample, but his build and skill order change.",
+      "changes": "Q (Piercing Arrow): damage now scales better with channel time. W (Blighted Quiver): less on-hit and per-stack damage, but better AD/AP ratios and more reward for charging Q.",
+      "strengths": [
+        "Poke and ranged pressure.",
+        "Useful in siege compositions.",
+        "Good synergy with engage."
+      ],
+      "weaknesses": [
+        "No mobility.",
+        "Relies on landing abilities."
+      ],
+      "profile": "Poke players willing to adapt their build to the patch.",
+      "stats": {
+        "winRateDelta": 2.1,
+        "note": "ggez.gg data for all ranks."
+      }
+    },
+    {
+      "id": "Zyra",
+      "name": "Zyra",
+      "role": "support",
+      "tier": "A",
+      "difficulty": "medium",
+      "playstyles": [
+        "poke",
+        "zone",
+        "engage"
+      ],
+      "category": "core",
+      "rising": true,
+      "why": "She receives a lower W seed-ammunition cooldown. Early ggez.gg data shows a 4.3-point win-rate increase (from 50.5% to 54.8%), although this is an all-rank sample and not a guarantee of future performance.",
+      "changes": "W (Rampant Growth): seed ammo cooldown 18/16/14/12/10s → 16/14.5/13/11.5/10s.",
+      "strengths": [
+        "Zone control with plants.",
+        "Strong lane poke.",
+        "Can engage with E and R."
+      ],
+      "weaknesses": [
+        "Fragile if she gets caught.",
+        "Needs good seed placement."
+      ],
+      "profile": "Players who prefer damage supports and space control.",
+      "stats": {
+        "winRateBefore": 50.5,
+        "winRateAfter": 54.8,
+        "winRateDelta": 4.3,
+        "note": "ggez.gg data for all ranks; initial sample."
+      }
+    },
+    {
+      "id": "Velkoz",
+      "name": "Vel'Koz",
+      "role": "support",
+      "tier": "A",
+      "difficulty": "medium",
+      "playstyles": [
+        "poke",
+        "zone"
+      ],
+      "category": "core",
+      "rising": true,
+      "why": "He gains passive damage and the initial data rises 2.5 points. He rewards accurate combos and can pressure from a safe distance.",
+      "changes": "Passive (Organic Deconstruction): 35–180 (+60% AP) → 35–205 (+65% AP).",
+      "strengths": [
+        "Long-range poke.",
+        "High damage when he lands combos.",
+        "Zone control with E."
+      ],
+      "weaknesses": [
+        "No mobility.",
+        "Relies on skillshots."
+      ],
+      "profile": "Players who prefer poke and ranged magic damage.",
+      "stats": {
+        "winRateDelta": 2.5,
+        "note": "ggez.gg data for all ranks."
+      }
+    },
+    {
+      "id": "Taric",
+      "name": "Taric",
+      "role": "support",
+      "tier": "A",
+      "difficulty": "medium",
+      "playstyles": [
+        "utility",
+        "frontline",
+        "sustain"
+      ],
+      "category": "core",
+      "rising": true,
+      "why": "His abilities now behave more reliably when his linked ally becomes untargetable during the cast. The initial data rises 2.8 points, although his main value remains coordinated utility.",
+      "changes": "Q, E and R now cast correctly on untargetable allies. E (Dazzle) keeps the exception for allies who vanish from the screen. The tooltip was updated.",
+      "strengths": [
+        "Protection and healing.",
+        "An R that can save entire fights.",
+        "Good synergy with auto-attack carries."
+      ],
+      "weaknesses": [
+        "Needs coordination.",
+        "Little ranged pressure."
+      ],
+      "profile": "Players who prefer protecting allies and playing as a team.",
+      "stats": {
+        "winRateBefore": 51.7,
+        "winRateAfter": 54.5,
+        "winRateDelta": 2.8,
+        "note": "ggez.gg data for all ranks."
+      }
+    },
+    {
+      "id": "Leona",
+      "name": "Leona",
+      "role": "support",
+      "tier": "A",
+      "difficulty": "low",
+      "playstyles": [
+        "engage",
+        "frontline",
+        "utility"
+      ],
+      "category": "core",
+      "why": "She remains a straightforward option for starting fights and chaining crowd control. Her inclusion is editorial and does not imply a direct buff in 26.21.",
+      "changes": "No direct changes in 26.21.",
+      "strengths": [
+        "Very reliable engage.",
+        "Lots of crowd control.",
+        "Strong in early fights."
+      ],
+      "weaknesses": [
+        "Low damage on her own.",
+        "Can get stuck after going in."
+      ],
+      "profile": "Players who want to engage and set the pace of bot lane."
+    }
+  ]
+}

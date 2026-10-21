@@ -639,6 +639,23 @@
         "sortRecent": "Recent",
         "toNextLevel": "to next level"
     },
+    "masteryTree": {
+        "searchPlaceholder": "チャンピオンツリーを検索...",
+        "searchMatches": "{count}件一致",
+        "noResults": "チャンピオンが見つかりません",
+        "resetView": "表示をリセット",
+        "zoomIn": "ズームイン",
+        "zoomOut": "ズームアウト",
+        "legend": "ノードの大きさ = マスタリーポイント（対数スケール）",
+        "legendLevels": "マスタリーレベル",
+        "shareOfTotal": "総マスタリーの{percent}%",
+        "rankOf": "順位 #{rank} / {total}",
+        "centerChampion": "チャンピオンを中央に",
+        "clickHint": "ドラッグで移動 · スクロールでズーム · チャンピオンをクリック",
+        "close": "閉じる",
+        "loadError": "マスタリーツリーを表示できませんでした",
+        "retry": "再試行"
+    },
     "championWinrate": {
         "loading": "試合履歴を読み込み中...",
         "noData": "試合履歴が見つかりません。先にプレイしてください！",

@@ -587,6 +587,23 @@
         "sortRecent": "Recent",
         "toNextLevel": "to next level"
     },
+    "masteryTree": {
+        "searchPlaceholder": "搜索你的英雄树...",
+        "searchMatches": "{count} 个结果",
+        "noResults": "未找到英雄",
+        "resetView": "重置视图",
+        "zoomIn": "放大",
+        "zoomOut": "缩小",
+        "legend": "节点大小 = 熟练度点数（对数比例）",
+        "legendLevels": "熟练度等级",
+        "shareOfTotal": "占总熟练度的 {percent}%",
+        "rankOf": "排名 #{rank} / {total}",
+        "centerChampion": "将英雄居中",
+        "clickHint": "拖动探索 · 滚轮缩放 · 点击英雄",
+        "close": "关闭",
+        "loadError": "无法生成你的熟练度树",
+        "retry": "重试"
+    },
     "championWinrate": {
         "loading": "Loading your match history...",
         "noData": "No match history found. Play some games first!",

@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 import { useTranslations, useLocale } from "next-intl"
 import Cookies from "js-cookie"
-import ChampionMastery from "@/components/ChampionMastery"
+import ChampionMasteryTree from "@/components/ChampionMasteryTree"
 import ChampionWinrate from "@/components/ChampionWinrate"
 import HybridLoginModal from "@/components/RSOLoginmodal"
 
@@ -95,14 +95,14 @@ export default function MasteryPage() {
       }}></div>
 
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-1/3 w-[500px] h-[500px] bg-[#C89B3C]/5 rounded-full blur-[120px]"></div>
+        <div className="absolute top-20 left-1/3 w-[500px] h-[500px] bg-violet-600/10 rounded-full blur-[120px]"></div>
         <div className="absolute bottom-40 right-1/4 w-[400px] h-[400px] bg-cyan-500/5 rounded-full blur-[100px]"></div>
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-neutral-700/5 rounded-full blur-[150px]"></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#C89B3C]/5 rounded-full blur-[150px]"></div>
       </div>
 
-      <div className="relative z-10 min-h-screen p-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="mb-12">
+      <div className="relative z-10 min-h-screen p-4 sm:p-6">
+        <div className="max-w-[1600px] mx-auto">
+          <div className="mb-8">
             <div className="flex items-center justify-between mb-6">
               <div>
                 <h1 className="text-5xl md:text-6xl font-black text-white tracking-tight leading-none">
@@ -117,7 +117,7 @@ export default function MasteryPage() {
             </div>
 
             {user && user.puuid && user.region && (
-              <ChampionMastery puuid={user.puuid} region={user.region} />
+              <ChampionMasteryTree puuid={user.puuid} region={user.region} />
             )}
 
             {user && user.puuid && user.region && (

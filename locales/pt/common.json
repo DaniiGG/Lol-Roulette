@@ -640,6 +640,23 @@
         "sortRecent": "Recente",
         "toNextLevel": "para próximo nível"
     },
+    "masteryTree": {
+        "searchPlaceholder": "Pesquise na sua árvore de campeões...",
+        "searchMatches": "{count} resultados",
+        "noResults": "Nenhum campeão encontrado",
+        "resetView": "Redefinir visualização",
+        "zoomIn": "Aumentar zoom",
+        "zoomOut": "Diminuir zoom",
+        "legend": "Tamanho do nó = pontos de maestria (escala logarítmica)",
+        "legendLevels": "Nível de maestria",
+        "shareOfTotal": "{percent}% da sua maestria total",
+        "rankOf": "Posição #{rank} de {total}",
+        "centerChampion": "Centralizar campeão",
+        "clickHint": "Arraste para explorar · Role para dar zoom · Clique em um campeão",
+        "close": "Fechar",
+        "loadError": "Não foi possível criar sua árvore de maestria",
+        "retry": "Tentar novamente"
+    },
     "championWinrate": {
         "loading": "Carregando histórico de partidas...",
         "noData": "Nenhum histórico encontrado. Jogue primeiro!",

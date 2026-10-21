@@ -639,6 +639,23 @@
         "sortRecent": "Recent",
         "toNextLevel": "to next level"
     },
+    "masteryTree": {
+        "searchPlaceholder": "Szukaj w swoim drzewie championów...",
+        "searchMatches": "{count} wyników",
+        "noResults": "Nie znaleziono championa",
+        "resetView": "Resetuj widok",
+        "zoomIn": "Przybliż",
+        "zoomOut": "Oddal",
+        "legend": "Rozmiar węzła = punkty mistrzostwa (skala logarytmiczna)",
+        "legendLevels": "Poziom mistrzostwa",
+        "shareOfTotal": "{percent}% twojego całkowitego mistrzostwa",
+        "rankOf": "Miejsce #{rank} z {total}",
+        "centerChampion": "Wyśrodkuj championa",
+        "clickHint": "Przeciągnij, aby eksplorować · Przewiń, aby powiększyć · Kliknij championa",
+        "close": "Zamknij",
+        "loadError": "Nie udało się zbudować twojego drzewa mistrzostwa",
+        "retry": "Spróbuj ponownie"
+    },
     "championWinrate": {
         "loading": "Ładowanie historii meczy...",
         "noData": "Nie znaleziono historii meczy. Najpierw graj!",

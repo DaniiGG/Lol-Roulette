@@ -852,7 +852,7 @@ export default function Home() {
                       {guestPicks.map((pick) => (
                         <li key={pick.createdAt} className="shrink-0 rounded-xl border border-neutral-800 bg-neutral-950/50 p-1">
                           <img
-                            src={`https://ddragon.leagueoflegends.com/cdn/16.18.1/img/champion/${pick.id}.png`}
+                            src={`https://ddragon.leagueoflegends.com/cdn/16.21.1/img/champion/${pick.id}.png`}
                             alt={pick.name}
                             className="w-10 h-10 object-cover rounded-lg"
                             onError={(e) => {

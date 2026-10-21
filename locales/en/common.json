@@ -723,6 +723,23 @@
         "sortRecent": "Recent",
         "toNextLevel": "to next level"
     },
+    "masteryTree": {
+        "searchPlaceholder": "Search your champion tree...",
+        "searchMatches": "{count} matches",
+        "noResults": "No champion found",
+        "resetView": "Reset view",
+        "zoomIn": "Zoom in",
+        "zoomOut": "Zoom out",
+        "legend": "Node size = mastery points (log scale)",
+        "legendLevels": "Mastery level",
+        "shareOfTotal": "{percent}% of your total mastery",
+        "rankOf": "Rank #{rank} of {total}",
+        "centerChampion": "Center on champion",
+        "clickHint": "Drag to explore · Scroll to zoom · Click a champion",
+        "close": "Close",
+        "loadError": "We couldn't build your mastery tree",
+        "retry": "Try again"
+    },
     "mastery": {
         "title": "Champion Mastery",
         "subtitle": "View your mastery levels and points across all champions",

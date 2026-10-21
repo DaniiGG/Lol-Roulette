@@ -640,6 +640,23 @@
         "sortRecent": "Recenti",
         "toNextLevel": "al prossimo livello"
     },
+    "masteryTree": {
+        "searchPlaceholder": "Cerca nel tuo albero dei campioni...",
+        "searchMatches": "{count} risultati",
+        "noResults": "Nessun campione trovato",
+        "resetView": "Ripristina vista",
+        "zoomIn": "Zoom avanti",
+        "zoomOut": "Zoom indietro",
+        "legend": "Dimensione del nodo = punti maestria (scala logaritmica)",
+        "legendLevels": "Livello maestria",
+        "shareOfTotal": "{percent}% della tua maestria totale",
+        "rankOf": "Posizione #{rank} di {total}",
+        "centerChampion": "Centra campione",
+        "clickHint": "Trascina per esplorare · Scorri per lo zoom · Clicca un campione",
+        "close": "Chiudi",
+        "loadError": "Impossibile creare il tuo albero della maestria",
+        "retry": "Riprova"
+    },
     "championWinrate": {
         "loading": "Caricamento storico partite...",
         "noData": "Nessuno storico trovato. Gioca prima!",

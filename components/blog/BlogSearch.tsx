@@ -4,6 +4,7 @@ import { useState, useMemo } from 'react'
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 import type { BlogPost } from '@/lib/blog/content'
+import { getPostMeta, getPostHref } from '@/lib/blog/meta'
 
 interface BlogSearchProps {
   posts: BlogPost[]
@@ -18,7 +19,7 @@ export default function BlogSearch({ posts, locale }: BlogSearchProps) {
   const categories = useMemo(() => {
     const cats = new Set<string>()
     posts.forEach(p => {
-      const meta = require('@/lib/blog/meta').getPostMeta(p.slug)
+      const meta = getPostMeta(p.slug)
       if (meta?.category) cats.add(meta.category)
     })
     return Array.from(cats).sort()
@@ -36,7 +37,6 @@ export default function BlogSearch({ posts, locale }: BlogSearchProps) {
       )
     }
     if (selectedCategory !== 'all') {
-      const { getPostMeta } = require('@/lib/blog/meta')
       result = result.filter(p => getPostMeta(p.slug)?.category === selectedCategory)
     }
     return result.slice(0, 8)
@@ -94,7 +94,7 @@ export default function BlogSearch({ posts, locale }: BlogSearchProps) {
               {filteredPosts.map(post => (
                 <li key={post.slug}>
                   <Link
-                    href={`/blog/${post.slug}`}
+                    href={getPostHref(post.slug, locale)}
                     className="flex items-start gap-3 p-3 rounded-xl bg-neutral-900/50 border border-neutral-800/50 hover:border-[#C89B3C]/30 hover:bg-neutral-900 transition"
                     onClick={() => setQuery('')}
                   >

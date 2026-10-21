@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
-import { notFound } from 'next/navigation'
+import { notFound, redirect } from 'next/navigation'
 import { getTranslations } from 'next-intl/server'
-import { getHreflangAlternates } from '@/lib/seo-utils'
 import { getGraphSchema, getBreadcrumbSchema } from '@/lib/seo-utils'
 import { routing } from '@/i18n/routing'
 import Link from 'next/link'
@@ -10,10 +9,26 @@ import Script from 'next/script'
 import BlogPostContent from '@/components/blog/BlogPostContent'
 import TableOfContents from '@/components/blog/TableOfContents'
 import BlogPostCard from '@/components/blog/BlogPostCard'
-import { getPostMeta, getAvailableLocales, getRelatedSlugs } from '@/lib/blog/meta'
-import { relatedPosts, formatDate, readingTime } from '@/lib/blog/content'
+import PatchTierList from '@/components/blog/PatchTierList'
+import {
+  BLOG_SLUGS,
+  getPostMeta,
+  getAvailableLocales,
+  getRelatedSlugs,
+  getLocalizedSlug,
+  getPostHref,
+  resolvePostSlug,
+  getSeoTitle,
+  getSeoDescription,
+  getImageAlt,
+} from '@/lib/blog/meta'
+import { relatedPosts, formatDate, readingTime, postWordCount } from '@/lib/blog/content'
 import type { BlogPost } from '@/lib/blog/content'
 import { CATEGORIES } from '@/lib/blog/categories'
+import { TIER_ORDER, ROLE_ORDER } from '@/lib/patch-tier-list'
+import type { PatchTierListData } from '@/lib/patch-tier-list'
+
+const TIER_LIST_SLUG = 'lol-patch-26-21-tier-list'
 
 type BlogPostPageProps = {
   params: Promise<{
@@ -25,11 +40,11 @@ type BlogPostPageProps = {
 export async function generateStaticParams() {
   const params: { locale: string; slug: string }[] = []
   for (const locale of routing.locales) {
-    for (const slug of routing.locales) {
-      // Actually we need post slugs. Let's import from meta.
-      const { BLOG_SLUGS } = await import('@/lib/blog/meta')
-      for (const s of BLOG_SLUGS) {
-        params.push({ locale, slug: s })
+    for (const canonicalSlug of BLOG_SLUGS) {
+      const localizedSlug = getLocalizedSlug(canonicalSlug, locale)
+      params.push({ locale, slug: localizedSlug })
+      if (localizedSlug !== canonicalSlug) {
+        params.push({ locale, slug: canonicalSlug })
       }
     }
   }
@@ -40,6 +55,9 @@ export async function generateMetadata(
   props: BlogPostPageProps
 ): Promise<Metadata> {
   const { locale, slug } = await props.params
+  const canonicalSlug = resolvePostSlug(slug, locale)
+  if (!canonicalSlug) return {}
+
   const tAll = await getTranslations()
 
   let blogPosts: BlogPost[] = []
@@ -49,54 +67,59 @@ export async function generateMetadata(
     return {}
   }
 
-  const post = blogPosts.find((p: BlogPost) => p.slug === slug)
+  const post = blogPosts.find((p: BlogPost) => p.slug === canonicalSlug)
   if (!post) return {}
 
-  const meta = getPostMeta(slug)
+  const meta = getPostMeta(canonicalSlug)
   const imageUrl = meta?.image
     ? new URL(meta.image, 'https://leagueroulette.com').toString()
     : 'https://leagueroulette.com/og-image.png'
-  const availableLocales = getAvailableLocales(slug)
+  const availableLocales = getAvailableLocales(canonicalSlug)
   const publishedDate = meta?.publishedAt ?? ''
   const updatedDate = meta?.updatedAt ?? ''
-  const related = relatedPosts(blogPosts, slug)
+  const title = getSeoTitle(canonicalSlug, locale) ?? `${post.title} | League Roulette Blog`
+  const description = getSeoDescription(canonicalSlug, locale) ?? post.description
+  const imageAlt = getImageAlt(canonicalSlug, locale) ?? post.title
+  const canonicalPath = getPostHref(canonicalSlug, locale)
+  const schemaLocale = locale === 'en' ? 'en_US' : locale
 
   return {
-    title: meta?.seoTitle ?? `${post.title} | League Roulette Blog`,
-    description: meta?.seoDescription ?? post.description,
+    title,
+    description,
     keywords: meta?.keywords,
     authors: [{ name: meta?.author ?? 'League Roulette Team', url: 'https://leagueroulette.com/about' }],
     alternates: {
-      canonical: locale === 'en' ? `/blog/${slug}` : `/${locale}/blog/${slug}`,
-      languages: availableLocales.reduce((acc, l) => {
-        acc[l] = l === 'en'
-          ? `https://leagueroulette.com/blog/${slug}`
-          : `https://leagueroulette.com/${l}/blog/${slug}`
-        return acc
-      }, {} as Record<string, string>),
+      canonical: canonicalPath,
+      languages: {
+        ...availableLocales.reduce((acc, l) => {
+          acc[l] = `https://leagueroulette.com${getPostHref(canonicalSlug, l)}`
+          return acc
+        }, {} as Record<string, string>),
+        'x-default': `https://leagueroulette.com${getPostHref(canonicalSlug, 'en')}`,
+      },
     },
     openGraph: {
-      title: post.title,
-      description: post.description,
-      url: `https://leagueroulette.com${locale === 'en' ? `/blog/${slug}` : `/${locale}/blog/${slug}`}`,
+      title,
+      description,
+      url: `https://leagueroulette.com${canonicalPath}`,
       type: 'article',
       siteName: 'League Roulette',
       publishedTime: publishedDate || new Date().toISOString(),
       modifiedTime: updatedDate || new Date().toISOString(),
       authors: ['https://leagueroulette.com/about'],
-      images: [{ url: imageUrl, width: 1200, height: 630, alt: meta?.imageAlt ?? post.title }],
-      locale: locale === 'en' ? 'en_US' : locale.replace('-CN', '-CN'),
+      images: [{ url: imageUrl, width: 1200, height: 630, alt: imageAlt }],
+      locale: schemaLocale,
     },
     twitter: {
       card: 'summary_large_image',
-      title: post.title,
-      description: post.description,
+      title,
+      description,
       images: [imageUrl],
       creator: '@LeagueRoulette',
     },
     other: {
       'article:section': meta?.category ?? '',
-      'article:tag': getRelatedSlugs(slug).join(', '),
+      'article:tag': getRelatedSlugs(canonicalSlug).join(', '),
       'article:published_time': publishedDate || new Date().toISOString(),
       'article:modified_time': updatedDate || publishedDate || new Date().toISOString(),
     },
@@ -105,6 +128,17 @@ export async function generateMetadata(
 
 export default async function BlogPostPage(props: BlogPostPageProps) {
   const { locale, slug } = await props.params
+  const canonicalSlug = resolvePostSlug(slug, locale)
+
+  if (!canonicalSlug) {
+    notFound()
+  }
+
+  const localizedSlug = getLocalizedSlug(canonicalSlug, locale)
+  if (slug !== localizedSlug) {
+    redirect(getPostHref(canonicalSlug, locale))
+  }
+
   const t = await getTranslations('blog')
   const tAll = await getTranslations()
 
@@ -115,22 +149,37 @@ export default async function BlogPostPage(props: BlogPostPageProps) {
     blogPosts = []
   }
 
-  const post = blogPosts.find((p: BlogPost) => p.slug === slug)
+  const post = blogPosts.find((p: BlogPost) => p.slug === canonicalSlug)
   if (!post) {
     notFound()
   }
 
-  const meta = getPostMeta(slug)
+  const meta = getPostMeta(canonicalSlug)
   const imageUrl = meta?.image
     ? new URL(meta.image, 'https://leagueroulette.com').toString()
     : 'https://leagueroulette.com/og-image.png'
-  const availableLocales = getAvailableLocales(slug)
+  const availableLocales = getAvailableLocales(canonicalSlug)
   const category = meta?.category
   const catInfo = category ? CATEGORIES.find(c => c.slug === category) : undefined
   const publishedDate = meta?.publishedAt ? formatDate(meta.publishedAt, locale) : new Date().toISOString().split('T')[0]
   const updatedDate = meta?.updatedAt ? formatDate(meta.updatedAt, locale) : null
   const rt = readingTime(post)
-  const related = relatedPosts(blogPosts, slug)
+  const related = relatedPosts(blogPosts, canonicalSlug)
+  const postPath = getPostHref(canonicalSlug, locale)
+  const blogPath = locale === 'en' ? '/blog' : `/${locale}/blog`
+  const categoryHref = category
+    ? (locale === 'en' ? `/blog/${category}` : `/${locale}/blog/${category}`)
+    : blogPath
+  const isTierList = canonicalSlug === TIER_LIST_SLUG
+
+  let tierListData: PatchTierListData | null = null
+  if (isTierList) {
+    try {
+      tierListData = tAll.raw('patch-tier-list') as PatchTierListData
+    } catch {
+      tierListData = null
+    }
+  }
 
   // TOC items
   const tocItems = post.sections
@@ -145,8 +194,9 @@ export default async function BlogPostPage(props: BlogPostPageProps) {
   const articleSchema = {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: post.title,
-    description: post.description,
+    headline: getSeoTitle(canonicalSlug, locale) ?? post.title,
+    description: getSeoDescription(canonicalSlug, locale) ?? post.description,
+    inLanguage: locale,
     author: {
       '@type': 'Person',
       name: meta?.author ?? 'League Roulette Team',
@@ -160,23 +210,55 @@ export default async function BlogPostPage(props: BlogPostPageProps) {
         url: 'https://leagueroulette.com/og-image.png',
       },
     },
-    datePublished: publishedDate,
-    dateModified: updatedDate ?? meta?.publishedAt,
-    mainEntityOfPage: `https://leagueroulette.com${locale === 'en' ? `/blog/${slug}` : `/${locale}/blog/${slug}`}`,
+    datePublished: meta?.publishedAt ?? publishedDate,
+    dateModified: meta?.updatedAt ?? meta?.publishedAt ?? publishedDate,
+    mainEntityOfPage: `https://leagueroulette.com${postPath}`,
     keywords: meta?.keywords?.join(', '),
     image: imageUrl,
     articleSection: category,
-    wordCount: post.sections.reduce((acc, s) =>
-      acc + (s.paragraphs ?? []).join(' ').split(/\s+/).length, 0) + post.heroIntro.join(' ').split(/\s+/).length,
+    wordCount: postWordCount(post),
   }
 
   const breadcrumbSchema = getBreadcrumbSchema([
-    { name: t('home'), path: '/' },
-    { name: t('blog'), path: '/blog' },
-    { name: post.title, path: `/blog/${slug}` },
+    { name: t('home'), path: locale === 'en' ? '/' : `/${locale}` },
+    { name: t('blog'), path: blogPath },
+    { name: post.title, path: postPath },
   ])
 
-  const graphSchema = getGraphSchema([articleSchema, breadcrumbSchema])
+  const tierListSchema = tierListData
+    ? {
+        '@type': 'ItemList',
+        name: `${tierListData.patch} — ${t('blog')}`,
+        numberOfItems: ROLE_ORDER.reduce(
+          (total, role) =>
+            total +
+            TIER_ORDER.reduce(
+              (roleTotal, tier) =>
+                roleTotal + tierListData!.champions.filter((c) => c.role === role && c.tier === tier).length,
+              0
+            ),
+          0
+        ),
+        itemListElement: ROLE_ORDER.flatMap((role) =>
+          TIER_ORDER.flatMap((tier) =>
+            tierListData!.champions
+              .filter((champion) => champion.role === role && champion.tier === tier)
+              .map((champion) => ({
+                '@type': 'ListItem',
+                name: `${champion.name} — ${tierListData!.roles[role]} (${tier})`,
+                item: {
+                  '@type': 'Thing',
+                  name: champion.name,
+                },
+              }))
+          )
+        ).map((item, index) => ({ ...item, position: index + 1 })),
+      }
+    : null
+
+  const graphSchema = getGraphSchema(
+    tierListSchema ? [articleSchema, breadcrumbSchema, tierListSchema] : [articleSchema, breadcrumbSchema]
+  )
 
   return (
     <main className="min-h-screen bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 px-6 py-12">
@@ -194,7 +276,7 @@ export default async function BlogPostPage(props: BlogPostPageProps) {
       <article className="mx-auto max-w-5xl">
         {/* Back link */}
         <Link
-          href="/blog"
+          href={blogPath}
           className="mb-8 inline-flex items-center gap-2 text-sm text-neutral-400 transition hover:text-white"
         >
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -210,7 +292,7 @@ export default async function BlogPostPage(props: BlogPostPageProps) {
             {availableLocales.map(l => (
               <Link
                 key={l}
-                href={l === 'en' ? `/blog/${slug}` : `/${l}/blog/${slug}`}
+                href={getPostHref(canonicalSlug, l)}
                 className={`px-2.5 py-1 rounded-full text-xs font-medium transition ${l === locale
                   ? 'bg-[#C89B3C] text-neutral-950'
                   : 'bg-neutral-800 text-neutral-300 hover:bg-neutral-700 hover:text-white'
@@ -226,7 +308,7 @@ export default async function BlogPostPage(props: BlogPostPageProps) {
           <div className="mb-4 flex flex-wrap items-center gap-2 text-sm text-neutral-500">
             {catInfo && (
               <Link
-                href={`/blog/${category}`}
+                href={categoryHref}
                 className="px-3 py-1 rounded-full bg-[#C89B3C]/20 text-[#C89B3C] font-medium hover:bg-[#C89B3C]/30 transition"
               >
                 {catInfo.name}
@@ -274,7 +356,7 @@ export default async function BlogPostPage(props: BlogPostPageProps) {
           {meta?.image ? (
             <Image
               src={meta.image}
-              alt={meta.imageAlt ?? post.title}
+              alt={getImageAlt(canonicalSlug, locale) ?? post.title}
               fill
               priority
               sizes="(max-width: 1024px) 100vw, 1024px"
@@ -295,6 +377,10 @@ export default async function BlogPostPage(props: BlogPostPageProps) {
           )}
         </div>
 
+        {isTierList && tierListData ? (
+          <PatchTierList data={tierListData} locale={locale} />
+        ) : null}
+
         <div className="lg:grid lg:grid-cols-12 lg:gap-8">
           {/* Main content */}
           <div className="lg:col-span-8">
@@ -310,7 +396,7 @@ export default async function BlogPostPage(props: BlogPostPageProps) {
                   {t('ctaMidDesc')}
                 </p>
                 <Link
-                  href="/"
+                  href={locale === 'en' ? '/' : `/${locale}`}
                   className="inline-flex items-center rounded-xl bg-[#C89B3C] px-6 py-3 font-semibold text-neutral-950 transition hover:bg-[#d9aa44]"
                 >
                   {t('tryApp')}
@@ -328,13 +414,13 @@ export default async function BlogPostPage(props: BlogPostPageProps) {
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link
-                  href="/"
+                  href={locale === 'en' ? '/' : `/${locale}`}
                   className="rounded-xl bg-[#C89B3C] px-6 py-3 font-semibold text-neutral-950 transition hover:bg-[#d9aa44]"
                 >
                   {t('tryApp')}
                 </Link>
                 <Link
-                  href="/blog"
+                  href={blogPath}
                   className="rounded-xl bg-neutral-800 px-6 py-3 font-semibold text-white transition hover:bg-neutral-700"
                 >
                   {t('browseMore')}

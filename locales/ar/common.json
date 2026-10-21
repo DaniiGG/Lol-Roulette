@@ -641,6 +641,23 @@
         "sortRecent": "Recent",
         "toNextLevel": "to next level"
     },
+    "masteryTree": {
+        "searchPlaceholder": "ابحث في شجرة الأبطال...",
+        "searchMatches": "{count} نتائج",
+        "noResults": "لم يتم العثور على بطل",
+        "resetView": "إعادة ضبط العرض",
+        "zoomIn": "تكبير",
+        "zoomOut": "تصغير",
+        "legend": "حجم العقدة = نقاط الإتقان (مقياس لوغاريتمي)",
+        "legendLevels": "مستوى الإتقان",
+        "shareOfTotal": "{percent}% من إجمالي إتقانك",
+        "rankOf": "الترتيب #{rank} من {total}",
+        "centerChampion": "توسيط البطل",
+        "clickHint": "اسحب للاستكشاف · مرر للتكبير · انقر على بطل",
+        "close": "إغلاق",
+        "loadError": "تعذر إنشاء شجرة الإتقان",
+        "retry": "إعادة المحاولة"
+    },
     "championWinrate": {
         "loading": "جاري تحميل سجل المباريات...",
         "noData": "لم يتم العثور على سجل مباريات. العب بعض المباريات أولاً!",

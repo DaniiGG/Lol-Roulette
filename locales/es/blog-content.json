@@ -1,5 +1,579 @@
 [
   {
+    "slug": "lol-patch-26-21-tier-list",
+    "title": "Tier List LoL Parche 26.21: Mejores Campeones por Línea",
+    "description": "Descubre la tier list de LoL 26.21 para Top, Jungla, Mid, ADC y Support. Compara los mejores picks y encuentra campeones para subir de elo.",
+    "keywords": [
+      "tier list lol parche 26.21",
+      "mejores campeones lol parche 26.21",
+      "mejores campeones para subir de elo",
+      "tier list top lol",
+      "mejores junglas lol",
+      "mejores campeones mid",
+      "mejores adc lol",
+      "mejores supports lol"
+    ],
+    "excerpt": "Tier list editorial del parche 26.21 con los mejores picks para las cinco líneas, los cambios oficiales, datos iniciales y tablas de tiers por línea y retratos de campeones.",
+    "ctaLabel": "Probar League Roulette",
+    "ctaHref": "/es",
+    "heroIntro": [
+      "El parche 26.21 de League of Legends ya está disponible. Riot publicó las notas oficiales el 20 de octubre y el parche llegó a los servidores el 21, con mejoras para Sion, Taliyah, Nunu & Willump, Orianna, Ryze, Miss Fortune, Zyra, Vel'Koz, Azir y Xin Zhao, además de debilitamientos para Jinx, Caitlyn, Lee Sin, Rammus, Nidalee, Tristana, Viktor, Qiyana y Yone.",
+      "Esta tier list cubre Top, Jungla, Mid, ADC y Support. Comparamos las notas oficiales de Riot con los primeros datos públicos de Ranked Solo/Duo de ggez.gg: 25 campeones modificados y 206.610 partidas analizadas. Los datos son de todos los rangos, no específicos de cada línea, así que los usamos como contexto y no como una clasificación automática.",
+      "Importante: la clasificación es editorial y provisional. El parche acaba de publicarse y las muestras por rol siguen siendo pequeñas. Por eso no colocamos a ningún campeón en S+ o S: preferimos ser honestos sobre la incertidumbre antes que inventar un dominador del meta."
+    ],
+    "sections": [
+      {
+        "heading": "Resumen de la tier list del parche 26.21",
+        "paragraphs": [
+          "Los cambios oficiales mezclan mejoras claras con ajustes que buscan limitar variantes concretas. Sion gana vida y daño en su definitiva; Taliyah mejora su limpieza y su combo; Zyra y Vel'Koz reciben más herramientas para castigar desde la distancia. En el otro lado, Jinx, Caitlyn, Lee Sin, Rammus, Nidalee, Tristana, Viktor y Qiyana pierden parte de su poder.",
+          "Nuestra lectura no convierte automáticamente cada buff en una subida de tier. Por ejemplo, Nunu & Willump recibe más daño en R, pero la muestra inicial de ggez.gg registra una caída de 2,6 puntos de win rate, así que lo bajamos de A provisional a B. Lee Sin y Nidalee, en cambio, aguantaron mejor de lo esperado tras sus nerfs y se quedan en B como picks de observación."
+        ],
+        "table": {
+          "headers": [
+            "Línea",
+            "Picks recomendados",
+            "Qué vigilar"
+          ],
+          "rows": [
+            [
+              "Top",
+              "Sion, Darius, Volibear, Garen",
+              "Sion y Darius reciben cambios favorables; Yone y Varus bajan a B y C."
+            ],
+            [
+              "Jungla",
+              "Taliyah, Shyvana, Wukong",
+              "Taliyah y Xin Zhao suben en datos; Nunu, Rammus, Lee Sin y Nidalee quedan en observación."
+            ],
+            [
+              "Mid",
+              "Orianna, Ryze, Fizz, Gwen",
+              "Orianna y Ryze mejoran ratios; Azir sube y Qiyana y Viktor bajan."
+            ],
+            [
+              "ADC",
+              "Miss Fortune, Kog'Maw, Jinx, Caitlyn",
+              "Miss Fortune recibe compensaciones; Jinx y Caitlyn pierden poder, pero siguen en A provisional."
+            ],
+            [
+              "Support",
+              "Zyra, Vel'Koz, Taric, Leona",
+              "Zyra y Vel'Koz lideran la subida; Taric mejora su fiabilidad."
+            ]
+          ]
+        },
+        "subsections": [
+          {
+            "heading": "Cómo leer los tiers",
+            "paragraphs": [
+              "La lista usa cinco niveles. Los dos primeros están vacíos a propósito en este parche porque faltan datos por línea que justifiquen una etiqueta tan rotunda."
+            ],
+            "bullets": [
+              "S+ y S: reservados para picks con evidencia sólida y consistente en su rol. No hay candidatos confirmados en 26.21.",
+              "A: nuestras recomendaciones principales. Son editoriales y provisionales, no una promesa de win rate.",
+              "B: picks viables con condiciones, nerfs recientes o muestras que todavía deben confirmarse.",
+              "C: opciones situacionales que dependen mucho del contexto o que han perdido poder con el parche."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Cómo se hizo esta tier list",
+        "paragraphs": [
+          "Partimos de las notas oficiales del parche 26.21 de Riot Games. Después revisamos los primeros datos públicos de ggez.gg, que compara el win rate de los campeones modificados entre 26.20 y 26.21 sobre 206.610 partidas de Ranked Solo/Duo. Esa muestra es de todos los rangos, así que no permite afirmar que un campeón sea mejor en Top que en Jungla ni que funcione igual en Hierro que en Diamante.",
+          "La colocación final es una decisión editorial. Un campeón puede estar en A porque su kit encaja bien en el rol aunque sus datos no sean concluyentes, y un nerf no expulsa automáticamente a un pick de la lista. Cuando no hay datos verificados, lo decimos y no mostramos cifras inventadas."
+        ],
+        "bullets": [
+          "Cambios de habilidades y estadísticas: notas oficiales de Riot Games del parche 26.21.",
+          "Win rate y pick rate inicial: ggez.gg, Ranked Solo/Duo, todos los rangos, 206.610 partidas.",
+          "Criterios de tier: impacto verificado del cambio, perfil del campeón, dificultad, encaje en el rol y contexto de composición.",
+          "Fecha de revisión: 21 de octubre de 2026."
+        ],
+        "links": [
+          {
+            "label": "Parche 26.21: todos los buffs, nerfs y cambios de objetos",
+            "href": "/es/blog/lol-patch-26-21",
+            "description": "El desglose completo, habilidad por habilidad, con los valores antes y después."
+          }
+        ]
+      },
+      {
+        "heading": "Top: mejores campeones del parche 26.21",
+        "paragraphs": [
+          "Top sigue siendo una línea de duelos y presión lateral. Los cambios favorecen a Sion y Darius, mientras que Yone y Varus pierden parte de su poder en esta posición. Nuestros cuatro picks principales son Sion, Darius, Volibear y Garen."
+        ],
+        "subsections": [
+          {
+            "heading": "Sion — A provisional",
+            "paragraphs": [
+              "Sion recibe más crecimiento de vida por nivel, de 87 a 95, y una mejora en el daño adicional de su definitiva cuando mantiene la carga. Los cambios pueden ayudarle a recuperar consistencia en partidas largas.",
+              "Por qué jugarlo: ofrece resistencia, iniciación y capacidad para crear espacio en las peleas de equipo. Es ideal para jugadores que prefieren campeones resistentes y contribuir a las peleas sin depender exclusivamente de conseguir asesinatos en línea.",
+              "Dato inicial: ggez.gg registra una subida de 2,4 puntos de win rate en todos los rangos. La muestra no es específica de Top, así que lo mantenemos en A y no lo subimos a S."
+            ]
+          },
+          {
+            "heading": "Darius — A provisional",
+            "paragraphs": [
+              "El enfriamiento de su Q en el último rango baja de 5 a 4 segundos. Es una mejora relevante para los intercambios prolongados, aunque no garantiza que su rendimiento global aumente.",
+              "Por qué jugarlo: puede castigar errores en línea y convertirse en una amenaza importante en combates extendidos. Es ideal para jugadores agresivos que dominan los enfrentamientos cuerpo a cuerpo.",
+              "Dato inicial: ggez.gg muestra una caída de 1,2 puntos de win rate. El cambio es pequeño y no invalida la mejora de Q, pero refuerza la idea de que un buff no equivale a una subida automática."
+            ]
+          },
+          {
+            "heading": "Volibear — A provisional",
+            "paragraphs": [
+              "Volibear sigue siendo una alternativa interesante para quienes buscan duelos, resistencia y capacidad de presión. No recibe un cambio directo relevante en este parche, por lo que su posición depende más de su rendimiento y del encaje en la composición que de las notas de actualización.",
+              "Por qué jugarlo: es un bruiser resistente con un plan de juego sencillo y buena presión sobre torres."
+            ]
+          },
+          {
+            "heading": "Garen — A provisional",
+            "paragraphs": [
+              "Garen es una alternativa accesible para jugadores que buscan consistencia y un plan de juego sencillo. Su recomendación es editorial y no implica que haya recibido una mejora directa en 26.21.",
+              "Por qué jugarlo: perdona errores, tiene un push claro y su definitiva ejecuta objetivos con poca vida."
+            ]
+          },
+          {
+            "heading": "Yone — B provisional",
+            "paragraphs": [
+              "Yone pierde ratio de AD en su Q (110 % a 105 %). El nerf reduce ligeramente su daño sostenido, pero su techo mecánico y su presión lateral siguen siendo altos. Lo dejamos en B, no en C, porque la muestra inicial solo cae 1,3 puntos y el cambio es moderado."
+            ]
+          },
+          {
+            "heading": "Varus — C provisional en Top",
+            "paragraphs": [
+              "Los ajustes de Q y W buscan limitar su variante de Top, donde suele maxear W. La Q ahora escala mejor con la canalización y la W reparte su daño de otra forma. El dato global de ggez.gg sube 2,1 puntos, pero puede reflejar sobre todo su variante de bot: no lo usamos para justificar un tier alto en Top."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Jungla: mejores campeones del parche 26.21",
+        "paragraphs": [
+          "La jungla recibe cambios para Taliyah, Nunu, Rammus, Lee Sin, Nidalee y Xin Zhao. Taliyah y Xin Zhao empiezan con señales positivas, mientras que Rammus es el mayor descenso de la muestra inicial. Nuestra recomendación principal se apoya en Taliyah, Shyvana y Wukong, con Nunu, Lee Sin, Nidalee y Xin Zhao en la lista de seguimiento."
+        ],
+        "subsections": [
+          {
+            "heading": "Taliyah — A provisional, con potencial al alza",
+            "paragraphs": [
+              "Taliyah recibe más daño en su E, tanto en el impacto inicial como en la detonación. Además, la habilidad sigue infligiendo un 225 % de daño a monstruos.",
+              "Por qué jugarla: puede aprovechar el control de masas y el daño para despejar campamentos y crear oportunidades de gank. Es ideal para jugadores que prefieren magos de jungla, control de zonas y buenas rotaciones.",
+              "Dato inicial: +1,5 puntos de win rate en ggez.gg para todos los rangos."
+            ]
+          },
+          {
+            "heading": "Shyvana — A provisional",
+            "paragraphs": [
+              "Shyvana no recibe cambios directos. Su recomendación es editorial y se basa en su perfil de limpieza rápida, escalado y daño sostenido, no en una mejora del parche.",
+              "Por qué jugarla: permite combinar limpieza de campamentos, escalado y presión directa sobre objetivos."
+            ]
+          },
+          {
+            "heading": "Wukong — A provisional",
+            "paragraphs": [
+              "Wukong recibe una compensación de regeneración de vida, pero pierde parte de la armadura por acumulación de su pasiva en los primeros niveles. Los datos iniciales caen 0,8 puntos, un movimiento pequeño que no lo saca de A.",
+              "Por qué jugarlo: ofrece iniciación y un impacto considerable en las peleas grupales. Conviene vigilar el equilibrio entre su rendimiento en jungla y su presencia en línea."
+            ]
+          },
+          {
+            "heading": "Nunu & Willump — B provisional (bajado desde A)",
+            "paragraphs": [
+              "El daño máximo de su definitiva aumenta en todos los rangos: de 625/925/1275 a 750/1100/1450, manteniendo el escalado de AP. En teoría es una mejora clara para castigar agrupaciones.",
+              "Sin embargo, la muestra inicial de ggez.gg registra una caída de 2,6 puntos de win rate. Podría ser ruido de una muestra corta, pero no hay evidencia suficiente para mantenerlo en A. Lo dejamos en B y lo revisaremos cuando haya más partidas."
+            ]
+          },
+          {
+            "heading": "Lee Sin — B provisional",
+            "paragraphs": [
+              "Lee Sin recibe un enfriamiento mayor en la W y menos daño en la definitiva, además de un ajuste para que su E no revele a enemigos que se ocultan después del impacto. A pesar de los nerfs, el campeón aguantó en la muestra inicial: +0,2 puntos de win rate. Sigue siendo competitivo en manos expertas, pero ya no es un pick automático."
+            ]
+          },
+          {
+            "heading": "Nidalee — B provisional",
+            "paragraphs": [
+              "Nidalee pierde daño en la W y velocidad de ataque en la E. Los datos iniciales, sorprendentemente, suben 2,2 puntos. Su techo sigue siendo alto en rangos con buena mecánica, pero el nerf castiga su limpieza y sus intercambios. La dejamos en B con etiqueta de seguimiento."
+            ]
+          },
+          {
+            "heading": "Rammus — C provisional",
+            "paragraphs": [
+              "Rammus pierde parte del escalado de resistencias de su W. Es el mayor descenso de la muestra inicial: de 52,6 % a 49,1 % de win rate, 3,5 puntos menos. Sigue siendo una respuesta útil contra composiciones muy físicas, pero no es un pick general para escalar."
+            ]
+          },
+          {
+            "heading": "Xin Zhao — B al alza (añadido tras revisar las notas)",
+            "paragraphs": [
+              "Las notas oficiales incluyen mejoras en los ratios de Q y E de Xin Zhao. La muestra inicial lo sitúa 3,1 puntos por encima (de 49,0 % a 52,1 %). No lo subimos a A porque la muestra es corta, pero es uno de los picks a seguir del parche."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Mid: mejores campeones del parche 26.21",
+        "paragraphs": [
+          "Mid mezcla mejoras de escalado con nerfs a picks populares. Orianna y Ryze ganan daño en fases avanzadas; Azir recibe más maná y sube en datos; Qiyana y Viktor pierden poder. Nuestros cuatro picks principales son Orianna, Ryze, Fizz y Gwen."
+        ],
+        "subsections": [
+          {
+            "heading": "Orianna — A provisional",
+            "paragraphs": [
+              "Orianna recibe mejores escalados de AP en la Q y la W, lo que aumenta su potencial de daño en fases avanzadas. Los datos iniciales suben 1,0 punto.",
+              "Por qué jugarla: ofrece control de oleadas, utilidad y una definitiva capaz de decidir peleas. Es ideal para jugadores que prefieren magos de control y jugar alrededor de su equipo."
+            ]
+          },
+          {
+            "heading": "Ryze — A provisional",
+            "paragraphs": [
+              "Ryze recibe mejoras en el escalado de su Q, su velocidad de movimiento y el daño de su W. Estos cambios buscan recompensar mejor a quienes llegan a las fases avanzadas de la partida.",
+              "Por qué jugarlo: puede combinar daño sostenido, movilidad y presión en el mapa. Es ideal para jugadores dispuestos a invertir tiempo en dominar sus combinaciones y el control de oleadas."
+            ]
+          },
+          {
+            "heading": "Fizz — A provisional",
+            "paragraphs": [
+              "Fizz no recibe una mejora directa en este parche. Su recomendación es editorial: sigue siendo un asesino eficaz para castigar errores de posicionamiento y eliminar objetivos prioritarios.",
+              "Por qué jugarlo: puede crear ventajas mediante rotaciones, asesinatos y presión sobre el mid enemigo."
+            ]
+          },
+          {
+            "heading": "Gwen — A provisional",
+            "paragraphs": [
+              "Gwen tampoco recibe cambios directos. Su inclusión se apoya en su perfil de daño sostenido y buen rendimiento en combates prolongados. La muestra por línea debe vigilarse antes de tratarla como una ventaja universal."
+            ]
+          },
+          {
+            "heading": "Azir — B al alza",
+            "paragraphs": [
+              "Azir recibe más crecimiento de maná (de 40 a 50 por nivel). Los datos iniciales suben 3,5 puntos, el segundo mayor ascenso entre los campeones modificados. Lo dejamos en B por su dificultad y porque la muestra no es específica de Mid, pero es un pick claramente al alza."
+            ]
+          },
+          {
+            "heading": "Qiyana — B provisional",
+            "paragraphs": [
+              "Qiyana recibe una reducción de daño en la Q. La muestra inicial apenas se mueve (-0,2 puntos), así que el nerf no la destruye, pero reduce su margen de error. Sigue siendo una asesina peligrosa en manos expertas."
+            ]
+          },
+          {
+            "heading": "Viktor — C provisional",
+            "paragraphs": [
+              "Viktor pierde velocidad de movimiento y parte del escudo de su Q. Los datos iniciales caen 2,4 puntos. Conserva un late game fuerte, pero su fase temprana es más vulnerable."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "ADC: mejores campeones del parche 26.21",
+        "paragraphs": [
+          "La botlane recibe compensaciones para Miss Fortune y ajustes para Jinx, Caitlyn, Tristana y Varus. Nuestros cuatro picks principales son Miss Fortune, Kog'Maw, Jinx y Caitlyn, todos en A provisional. Tristana y Varus pasan a B."
+        ],
+        "subsections": [
+          {
+            "heading": "Miss Fortune — A provisional, con potencial al alza",
+            "paragraphs": [
+              "Miss Fortune recibe una mejora del daño de su E y de su definitiva. Los cambios compensan parcialmente la pérdida de poder asociada al ajuste de Hubris.",
+              "Por qué jugarla: puede aportar presión en línea y mucho daño en peleas donde los enemigos se agrupan. Es ideal para jugadores que prefieren una tiradora con una fase de líneas clara y una definitiva capaz de cambiar una pelea.",
+              "Dato inicial: +0,2 puntos de win rate y +4,6 puntos de pick rate en ggez.gg. La subida de popularidad es mucho más marcada que la de rendimiento."
+            ]
+          },
+          {
+            "heading": "Kog'Maw — A provisional",
+            "paragraphs": [
+              "Kog'Maw no recibe un cambio directo importante en 26.21. Se mantiene como recomendación editorial por su daño sostenido y su capacidad para eliminar objetivos resistentes cuando consigue tiempo y protección.",
+              "Por qué jugarlo: es ideal para jugadores que prefieren escalar y posicionarse cuidadosamente en las peleas."
+            ]
+          },
+          {
+            "heading": "Jinx — A provisional",
+            "paragraphs": [
+              "Jinx pierde daño de ataque por nivel y vida base, con el objetivo de frenar su dominio en el metajuego. La muestra inicial cae 1,4 puntos y el pick rate baja 2,0, pero sigue siendo una carry de escalado capaz de aprovechar los reinicios en las peleas.",
+              "No es necesario descartarla automáticamente: mantiene su identidad y sigue en A provisional, aunque con menos margen de error."
+            ]
+          },
+          {
+            "heading": "Caitlyn — A provisional",
+            "paragraphs": [
+              "Caitlyn pierde parte del escalado de daño de su pasiva, pero recibe más daño base en la Q. El cambio busca trasladar parte de su poder desde el final de la partida hacia etapas anteriores.",
+              "Por qué jugarla: puede aprovechar el alcance y la presión en línea para generar ventajas tempranas. La muestra inicial cae 1,2 puntos, un movimiento moderado."
+            ]
+          },
+          {
+            "heading": "Tristana — B provisional",
+            "paragraphs": [
+              "Tristana pierde velocidad de ataque en los primeros rangos de la Q. Los datos iniciales caen 2,3 puntos y el pick rate baja 1,6. Sigue siendo útil para presionar torres, pero su dominio temprano de línea se reduce."
+            ]
+          },
+          {
+            "heading": "Varus — B provisional",
+            "paragraphs": [
+              "Varus recibe una redistribución de poder entre Q y W, con la intención de limitar su variante de Top y permitir ajustes más específicos para Bot. En ADC la muestra inicial sube 2,1 puntos, pero la build y el orden de habilidades cambian. Las estadísticas posteriores determinarán si mantiene su posición."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Support: mejores campeones del parche 26.21",
+        "paragraphs": [
+          "Support es la línea con las señales más claras del parche: Zyra sube 4,3 puntos de win rate, Vel'Koz 2,5 y Taric 2,8 en la muestra inicial de ggez.gg. Leona se mantiene como recomendación editorial por su iniciación fiable."
+        ],
+        "subsections": [
+          {
+            "heading": "Zyra — A provisional, con potencial al alza",
+            "paragraphs": [
+              "Zyra recibe una reducción del enfriamiento de la carga de semillas de su W en varios rangos. Los primeros datos de ggez.gg muestran una subida de 4,3 puntos de win rate, de 50,5 % a 54,8 %. Es una muestra inicial de todos los rangos, no una garantía de rendimiento futuro.",
+              "Por qué jugarla: puede controlar zonas, ejercer presión con sus plantas y castigar a los rivales que se posicionan mal. Es ideal para jugadores que prefieren supports de daño mágico y control de espacio."
+            ]
+          },
+          {
+            "heading": "Vel'Koz — A provisional, con potencial al alza",
+            "paragraphs": [
+              "Vel'Koz recibe más daño en su pasiva, que pasa de 35–180 (+60 % AP) a 35–205 (+65 % AP). La muestra inicial sube 2,5 puntos.",
+              "Por qué jugarlo: recompensa acertar combinaciones de habilidades y puede presionar desde la distancia. Es ideal para jugadores que prefieren poke y daño mágico a distancia."
+            ]
+          },
+          {
+            "heading": "Taric — A provisional",
+            "paragraphs": [
+              "Taric recibe mejoras de comportamiento en sus habilidades cuando un aliado vinculado se vuelve inalcanzable durante su lanzamiento. Esto hace que algunas interacciones sean más fiables. La muestra inicial sube 2,8 puntos.",
+              "Por qué jugarlo: ofrece protección, curación y utilidad en peleas coordinadas."
+            ]
+          },
+          {
+            "heading": "Leona — A provisional",
+            "paragraphs": [
+              "Leona sigue siendo una opción para jugadores que buscan iniciación y control de masas. Su inclusión es editorial: no debe interpretarse como una mejora directa de este parche.",
+              "Qué vigilar en Support: los cambios de Zyra y Vel'Koz pueden aumentar el interés por los supports de daño, mientras que Taric continúa ofreciendo una alternativa orientada a la protección. La clasificación final dependerá de los datos específicos de Support y de los enfrentamientos."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Los cambios más importantes del parche 26.21",
+        "paragraphs": [
+          "Esta tabla resume los cambios que más pueden afectar a la tier list. Los valores proceden de las notas oficiales de Riot. Las tasas de victoria citadas en el artículo son datos iniciales de ggez.gg para todos los rangos.",
+          "Los objetos también cambian: Bastion Breaker, Dawncore, Gluttonous Greaves y Hubris. El ajuste de Hubris es relevante para Miss Fortune, porque parte de su mejora compensa precisamente la pérdida de poder de ese objeto en tiradores."
+        ],
+        "table": {
+          "headers": [
+            "Campeón",
+            "Cambio principal",
+            "Posible impacto"
+          ],
+          "rows": [
+            [
+              "Sion",
+              "Vida por nivel 87 → 95; R hasta +200 % de daño con la carga",
+              "Más resistencia y recompensa por cargar la definitiva."
+            ],
+            [
+              "Taliyah",
+              "E con más daño base y +70 % AP; 225 % de daño a monstruos",
+              "Mejor limpieza y potencial de combo."
+            ],
+            [
+              "Nunu & Willump",
+              "R máximo 625/925/1275 → 750/1100/1450",
+              "Mayor amenaza en definitivas bien ejecutadas."
+            ],
+            [
+              "Zyra",
+              "W: enfriamiento de semillas 18/16/14/12/10 s → 16/14,5/13/11,5/10 s",
+              "Más oportunidades para preparar zonas y plantas."
+            ],
+            [
+              "Vel'Koz",
+              "Pasiva 35–180 (+60 % AP) → 35–205 (+65 % AP)",
+              "Mayor recompensa al acertar combinaciones."
+            ],
+            [
+              "Miss Fortune",
+              "E +20 de daño; R 145 % de daño crítico",
+              "Mayor potencial de daño en línea y peleas."
+            ],
+            [
+              "Lee Sin",
+              "W 7 → 8 s; R 150/350/550 (+200 % AD adicional)",
+              "Menor flexibilidad y daño de ejecución."
+            ],
+            [
+              "Rammus",
+              "W: resistencias con 30–50 % de escalado",
+              "Menor resistencia adicional en peleas largas."
+            ],
+            [
+              "Nidalee",
+              "W con menos daño; E 20/30/40/50/60 % de velocidad de ataque",
+              "Menor potencia en intercambios y limpieza."
+            ],
+            [
+              "Jinx",
+              "AD 59 + 3/nivel; vida base 610",
+              "Menos margen de error y escalado de daño reducido."
+            ],
+            [
+              "Tristana",
+              "Q 40/60/80/100/120 % de velocidad de ataque",
+              "Menor presión inicial en línea."
+            ],
+            [
+              "Caitlyn",
+              "Pasiva 60–80 % de AD; Q 50/95/140/185/230",
+              "Redistribución del poder hacia la fase de líneas."
+            ],
+            [
+              "Varus",
+              "Ajustes de daño entre Q y W",
+              "Cambios en sus variantes de construcción y en su presencia en Top y Bot."
+            ],
+            [
+              "Qiyana",
+              "Q 70/100/130/160/190 (+90 % AD adicional)",
+              "Menor daño en los intercambios."
+            ],
+            [
+              "Viktor",
+              "Velocidad de movimiento 330; escudo de Q 30–130 (+20 % AP)",
+              "Menor seguridad y movilidad al inicio de la partida."
+            ]
+          ]
+        }
+      },
+      {
+        "heading": "Cómo elegir el mejor campeón para subir de elo",
+        "paragraphs": [
+          "La tier list es un punto de partida, no una garantía de victorias. Antes de elegir un campeón, ten en cuenta tres factores:"
+        ],
+        "bullets": [
+          "Tu dominio del campeón: jugar de forma consistente suele ser más útil que escoger un personaje de tier alto que apenas conoces.",
+          "Tu posición y estilo de juego: busca campeones que encajen con tus fortalezas, ya sea iniciar peleas, escalar, presionar líneas o proteger a tus compañeros.",
+          "La composición y los enfrentamientos: incluso un pick fuerte puede resultar incómodo contra ciertos rivales o en equipos que no complementan sus puntos fuertes.",
+          "La muestra de datos: un cambio de 1-2 puntos de win rate en una muestra corta puede ser ruido. No cambies toda tu pool por una sola semana de estadísticas."
+        ],
+        "subsections": [
+          {
+            "heading": "Una pool pequeña suele rendir mejor",
+            "paragraphs": [
+              "Para mejorar en clasificatorias, suele ser útil mantener una selección reducida de campeones principales y una o dos alternativas para situaciones desfavorables. La consistencia permite automatizar los fundamentos y concentrarte en el mapa, las oleadas y las decisiones de equipo.",
+              "Si quieres profundizar, la guía para subir de elo y la guía de elección de main complementan esta tier list con hábitos y criterios a largo plazo."
+            ]
+          }
+        ],
+        "links": [
+          {
+            "label": "Cómo subir de elo en League of Legends",
+            "href": "/es/blog/how-to-climb-ranked",
+            "description": "Hábitos, estructura de sesión y errores que frenan tu progreso en clasificatorias."
+          },
+          {
+            "label": "Qué campeón deberías jugar según tu estilo",
+            "href": "/es/blog/what-champion-should-i-play",
+            "description": "Una guía práctica para elegir campeón a partir de tu forma de jugar."
+          }
+        ]
+      },
+      {
+        "heading": "Prueba League Roulette",
+        "paragraphs": [
+          "¿Siempre acabas jugando los mismos campeones? Utiliza League Roulette para descubrir una opción diferente y salir de tu zona de confort. Elige tu línea, genera un campeón y prueba algo nuevo en tu próxima partida.",
+          "La ruleta real también te permite filtrar por línea y verificar tus partidas, así que puedes convertir el pick aleatorio en una forma de ampliar tu pool con intención."
+        ],
+        "cta": {
+          "label": "Probar League Roulette",
+          "href": "/es"
+        }
+      },
+      {
+        "heading": "Sigue leyendo",
+        "paragraphs": [
+          "Estas guías complementan la tier list con más contexto sobre el parche, el escalado y la elección de campeones."
+        ],
+        "links": [
+          {
+            "label": "Tier list del parche actual",
+            "href": "/es/blog/lol-tier-list-current-patch",
+            "description": "Cómo leer el meta y qué mirar más allá de una lista de tiers."
+          },
+          {
+            "label": "Mejores campeones de Top Lane",
+            "href": "/es/blog/best-champions-for-top-lane",
+            "description": "Una guía más amplia de la línea, con estilos y criterios de elección."
+          },
+          {
+            "label": "Mejores campeones para principiantes",
+            "href": "/es/blog/best-champions-for-beginners",
+            "description": "Picks accesibles para aprender los fundamentos sin pelear con el kit."
+          },
+          {
+            "label": "Guía de campeones de Mid Lane",
+            "href": "/es/blog/mid-lane-champions-guide",
+            "description": "Magos de control, asesinos y carries para la línea central."
+          }
+        ]
+      },
+      {
+        "heading": "Metodología y datos: qué podemos afirmar y qué no",
+        "paragraphs": [
+          "Esta tier list analiza el parche 26.21, las notas oficiales de Riot Games y los primeros datos públicos de partidas clasificatorias. Los cambios de equilibrio se utilizan para identificar campeones que merecen una nueva evaluación; no se consideran prueba suficiente para asignar un tier por sí solos.",
+          "Los datos iniciales de win rate pueden cambiar y no deben extrapolarse automáticamente a todos los rangos, regiones o roles. La muestra de ggez.gg es de Ranked Solo/Duo y de todos los rangos; no es una muestra específica de Top, Jungla, Mid, ADC o Support. Por eso las recomendaciones por línea se presentan como editoriales y provisionales hasta disponer de muestras suficientes y comparables.",
+          "Tampoco mostramos tasas de victoria, pick rate o ban rate de campeones que no aparecen en la muestra inicial del parche. Cuando no hay un dato verificable, la ficha lo indica expresamente."
+        ],
+        "bullets": [
+          "No inventamos win rates, pick rates, ban rates, recuentos de partidas ni resultados por rango.",
+          "No asumimos que un buff sube automáticamente el tier ni que un nerf lo baja automáticamente.",
+          "Las etiquetas S+, S, A, B y C son una valoración editorial, no una clasificación estadística definitiva.",
+          "La fecha de revisión de esta página es el 21 de octubre de 2026."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "q": "¿Cuál es la mejor tier list del parche 26.21?",
+        "a": "No existe una única tier list correcta. La nuestra es una clasificación editorial y provisional basada en las notas oficiales de Riot y en los primeros datos de Ranked Solo/Duo de ggez.gg. En este parche no colocamos ningún campeón en S+ o S porque faltan muestras específicas por línea."
+      },
+      {
+        "q": "¿Qué campeones se han vuelto más fuertes en el parche 26.21?",
+        "a": "Sion, Taliyah, Orianna, Ryze, Miss Fortune, Zyra, Vel'Koz, Azir y Xin Zhao empiezan con señales positivas. Zyra es la mayor subida de la muestra inicial (+4,3 puntos de win rate), seguida de Azir (+3,5) y Xin Zhao (+3,1). Nunu & Willump recibe una mejora en R, pero sus datos iniciales bajan, así que lo tratamos con cautela."
+      },
+      {
+        "q": "¿Merece la pena jugar Jinx después del nerf?",
+        "a": "Sí, sigue siendo una opción válida. Pierde 1,4 puntos de win rate y 2,0 de pick rate en la muestra inicial, pero conserva su identidad de carry de escalado y su capacidad para aprovechar reinicios. La mantenemos en A provisional, con menos margen de error que antes."
+      },
+      {
+        "q": "¿Cuáles son los mejores junglas del parche 26.21?",
+        "a": "Nuestros picks principales son Taliyah, Shyvana y Wukong. Taliyah sube 1,5 puntos por la mejora de E. Xin Zhao es un pick al alza (+3,1) que dejamos en B por la muestra corta. Nunu, Lee Sin y Nidalee quedan en observación; Rammus baja a C tras perder 3,5 puntos de win rate."
+      },
+      {
+        "q": "¿Los datos de win rate son de mi rango?",
+        "a": "No. Los datos citados son de Ranked Solo/Duo y de todos los rangos, no específicos de tu elo ni de tu línea. Sirven como contexto inicial, pero no permiten afirmar que un campeón rinda igual en Hierro, Diamante o Challenger."
+      },
+      {
+        "q": "¿Cómo se eligen los tiers A, B y C?",
+        "a": "El tier A reúne nuestras recomendaciones principales. El B incluye picks viables con condiciones, nerfs recientes o muestras que deben confirmarse. El C agrupa opciones situacionales que han perdido poder o dependen mucho del contexto. Siempre es una valoración editorial, no una promesa de win rate."
+      },
+      {
+        "q": "¿Qué campeón elijo para subir de elo?",
+        "a": "Prioriza un campeón que domines y que encaje con tu estilo. Mantén una pool pequeña de dos o tres picks y usa la tier list como referencia, no como una obligación. Si no sabes por dónde empezar, la tabla de tiers de esta página te ayuda a comparar opciones por línea."
+      },
+      {
+        "q": "¿Cuándo se actualizará esta tier list?",
+        "a": "La página se revisó el 21 de octubre de 2026, coincidiendo con la publicación del parche. La actualizaremos cuando haya más partidas y datos específicos por línea que permitan confirmar o corregir las colocaciones provisionales."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Notas oficiales del parche 26.21 de League of Legends — Riot Games",
+        "url": "https://www.leagueoflegends.com/en-us/news/game-updates/league-of-legends-patch-26-21-notes/"
+      },
+      {
+        "label": "Patch 26.21 en números: win rates y pick rates de Ranked Solo/Duo — ggez.gg",
+        "url": "https://ggez.gg/news/patch-26-21"
+      },
+      {
+        "label": "Estadísticas y tier list de campeones — Mobalytics",
+        "url": "https://mobalytics.gg/lol/tier-list/stats"
+      }
+    ]
+  },
+  {
     "slug": "what-champion-should-i-play",
     "title": "¿Qué campeón debería jugar en League of Legends?",
     "description": "¿No sabes qué main elegir? Descubre cómo juega cada rol, qué estilos encajan con cada lane y cómo encontrar un campeón que de verdad te divierta.",

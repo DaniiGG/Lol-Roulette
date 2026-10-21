@@ -640,6 +640,23 @@
         "sortRecent": "Recent",
         "toNextLevel": "naar volgend niveau"
     },
+    "masteryTree": {
+        "searchPlaceholder": "Zoek in je kampioenenboom...",
+        "searchMatches": "{count} resultaten",
+        "noResults": "Geen kampioen gevonden",
+        "resetView": "Weergave resetten",
+        "zoomIn": "Inzoomen",
+        "zoomOut": "Uitzoomen",
+        "legend": "Knooppuntgrootte = meesterschapspunten (logaritmische schaal)",
+        "legendLevels": "Meesterschapsniveau",
+        "shareOfTotal": "{percent}% van je totale meesterschap",
+        "rankOf": "Rang #{rank} van {total}",
+        "centerChampion": "Kampioen centreren",
+        "clickHint": "Sleep om te verkennen · Scroll om te zoomen · Klik op een kampioen",
+        "close": "Sluiten",
+        "loadError": "Je meesterschapsboom kon niet worden gemaakt",
+        "retry": "Opnieuw proberen"
+    },
     "championWinrate": {
         "loading": "Wedstrijdgeschiedenis wordt geladen...",
         "noData": "Geen wedstrijdgeschiedenis gevonden. Speel eerst!",

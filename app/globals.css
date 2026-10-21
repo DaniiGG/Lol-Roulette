@@ -201,3 +201,138 @@ body::before {
 .text-cyan-glow {
   text-shadow: 0 0 10px var(--cyan-glow), 0 0 20px var(--cyan-glow), 0 0 40px rgba(0, 229, 255, 0.3);
 }
+
+/* ─── CHAMPION MASTERY TREE ─── */
+@keyframes tree-edge-draw {
+  0% { opacity: 0; stroke-dashoffset: 1; }
+  18% { opacity: 1; }
+  100% { opacity: 1; stroke-dashoffset: 0; }
+}
+
+@keyframes tree-node-in {
+  0% { opacity: 0; transform: scale(0.28); }
+  65% { opacity: 1; }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes tree-aura-spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes tree-pulse {
+  0%, 100% { opacity: 0.45; transform: scale(0.98); }
+  50% { opacity: 1; transform: scale(1.03); }
+}
+
+@keyframes tree-loader-pulse {
+  0%, 100% { opacity: 0.25; transform: scale(0.92); }
+  50% { opacity: 0.85; transform: scale(1); }
+}
+
+.tree-edge {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  opacity: 0;
+  animation: tree-edge-draw 1.15s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.tree-node-enter {
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: tree-node-in 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.tree-node-hover {
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), filter 0.28s ease;
+}
+
+.mastery-node {
+  cursor: pointer;
+  outline: none;
+  transition: opacity 0.32s ease;
+}
+
+.mastery-node:hover .tree-node-hover,
+.mastery-node:focus-visible .tree-node-hover,
+.tree-node-hover.is-selected {
+  transform: scale(1.08);
+}
+
+.mastery-node:focus-visible .tree-node-hover {
+  filter: drop-shadow(0 0 14px rgba(0, 229, 255, 0.7));
+}
+
+.mastery-node.is-dimmed {
+  opacity: 0.14;
+}
+
+.mastery-node.is-dimmed:hover {
+  opacity: 0.72;
+}
+
+.mastery-node.is-match .tree-node-hover {
+  filter: drop-shadow(0 0 12px rgba(240, 199, 94, 0.5));
+}
+
+.tree-aura {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: tree-aura-spin 28s linear infinite;
+}
+
+.tree-pulse {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: tree-pulse 2.8s ease-in-out infinite;
+}
+
+.tree-node-glow {
+  filter: drop-shadow(0 0 10px rgba(240, 199, 94, 0.3));
+}
+
+.tree-loader span {
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(192, 132, 252, 0.2);
+  border-radius: 9999px;
+  animation: tree-loader-pulse 2.6s ease-in-out infinite;
+}
+
+.tree-loader span:nth-child(2) {
+  inset: 14px;
+  border-color: rgba(56, 189, 248, 0.22);
+  animation-delay: 0.18s;
+}
+
+.tree-loader span:nth-child(3) {
+  inset: 28px;
+  border-color: rgba(240, 199, 94, 0.24);
+  animation-delay: 0.36s;
+}
+
+.tree-loader .tree-loader-core {
+  inset: 44px;
+  border: 0;
+  background: radial-gradient(circle, rgba(240, 199, 94, 0.9), rgba(124, 58, 237, 0.15) 70%);
+  filter: blur(1px);
+  animation-delay: 0.5s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tree-edge,
+  .tree-node-enter,
+  .tree-aura,
+  .tree-pulse,
+  .tree-loader span {
+    animation: none !important;
+    opacity: 1;
+    transform: none;
+  }
+
+  .tree-edge {
+    stroke-dashoffset: 0;
+  }
+}

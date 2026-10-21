@@ -28,7 +28,7 @@ interface RouletteWheelProps {
   challengeFilter?: ChallengeFilter | null
 }
 
-const DDV = '16.18.1'
+const DDV = '16.21.1'
 const SPLASH_BASE = 'https://ddragon.leagueoflegends.com/cdn/img/champion/splash/'
 const LOADING_BASE = 'https://ddragon.leagueoflegends.com/cdn/img/champion/loading/'
 

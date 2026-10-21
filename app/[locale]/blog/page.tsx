@@ -106,7 +106,7 @@ export default async function BlogIndexPage({ params }: { params: Promise<{ loca
             {categoryCounts.map((cat, idx) => (
               <Link
                 key={cat.slug}
-                href={`/blog/${cat.slug}`}
+                href={locale === 'en' ? `/blog/${cat.slug}` : `/${locale}/blog/${cat.slug}`}
                 className="group p-6 rounded-2xl border border-neutral-800 bg-neutral-900/80 transition hover:border-[#C89B3C]/40 hover:bg-neutral-900"
                 style={{ animationDelay: `${200 + idx * 30}ms` }}
               >

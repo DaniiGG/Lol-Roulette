@@ -47,11 +47,25 @@ export type BlogSource = {
   url: string
 }
 
+export type BlogSubsection = {
+  heading: string
+  paragraphs?: string[]
+  bullets?: string[]
+}
+
+export type BlogInternalLink = {
+  label: string
+  href: string
+  description?: string
+}
+
 export type BlogSection = {
   heading: string
   /** Optional: some sections are list or table driven. */
   paragraphs?: string[]
   bullets?: string[]
+  subsections?: BlogSubsection[]
+  links?: BlogInternalLink[]
   table?: BlogTable
   patchTable?: BlogPatchTable
   cta?: BlogCta
@@ -85,6 +99,14 @@ export function postWordCount(post: BlogPost): number {
     words += s.heading.split(/\s+/).length
     for (const p of s.paragraphs ?? []) words += p.split(/\s+/).length
     for (const b of s.bullets ?? []) words += b.split(/\s+/).length
+    for (const sub of s.subsections ?? []) {
+      words += sub.heading.split(/\s+/).length
+      for (const p of sub.paragraphs ?? []) words += p.split(/\s+/).length
+      for (const b of sub.bullets ?? []) words += b.split(/\s+/).length
+    }
+    for (const link of s.links ?? []) {
+      words += `${link.label} ${link.description ?? ''}`.split(/\s+/).length
+    }
     if (s.table) {
       for (const h of s.table.headers) words += h.split(/\s+/).length
       for (const row of s.table.rows) for (const cell of row) words += cell.split(/\s+/).length

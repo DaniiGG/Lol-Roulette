@@ -1,9 +1,8 @@
-import { getPostMeta, getRelatedSlugs } from '@/lib/blog/meta'
-import { readingTime, postsByCategory, sortByPublishedDesc, formatDate } from '@/lib/blog/content'
+import { postsByCategory, sortByPublishedDesc } from '@/lib/blog/content'
 import BlogPostCard from './BlogPostCard'
 import Link from 'next/link'
 import type { BlogPost } from '@/lib/blog/content'
-import { CATEGORIES } from '@/lib/blog/categories'
+import { CATEGORIES, isCategorySlug } from '@/lib/blog/categories'
 
 interface CategoryViewProps {
   posts: BlogPost[]
@@ -13,8 +12,9 @@ interface CategoryViewProps {
 }
 
 export default function CategoryView({ posts, locale, categorySlug, t }: CategoryViewProps) {
-  const category = CATEGORIES.find(c => c.slug === categorySlug)
-  const catPosts = postsByCategory(posts, categorySlug as any)
+  const blogPath = locale === 'en' ? '/blog' : `/${locale}/blog`
+  const categoryHref = (slug: string) => (locale === 'en' ? `/blog/${slug}` : `/${locale}/blog/${slug}`)
+  const catPosts = isCategorySlug(categorySlug) ? postsByCategory(posts, categorySlug) : []
   const sortedPosts = sortByPublishedDesc(catPosts)
   const otherCategories = CATEGORIES.filter(c => c.slug !== categorySlug)
 
@@ -22,7 +22,7 @@ export default function CategoryView({ posts, locale, categorySlug, t }: Categor
     <main className="min-h-screen bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 px-6 py-12">
       <div className="mx-auto max-w-6xl">
         <Link
-          href="/blog"
+          href={blogPath}
           className="mb-8 inline-flex items-center gap-2 text-sm text-neutral-400 transition hover:text-white"
         >
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -45,7 +45,7 @@ export default function CategoryView({ posts, locale, categorySlug, t }: Categor
 
         <div className="mb-8 flex flex-wrap gap-2" role="group" aria-label={t('filterByCategory')}>
           <Link
-            href="/blog"
+            href={blogPath}
             className={`px-4 py-2 rounded-full text-sm font-medium transition ${'bg-[#C89B3C] text-neutral-950'}`}
           >
             {t('allLabel')}
@@ -53,7 +53,7 @@ export default function CategoryView({ posts, locale, categorySlug, t }: Categor
           {otherCategories.map(cat => (
             <Link
               key={cat.slug}
-              href={`/blog/${cat.slug}`}
+              href={categoryHref(cat.slug)}
               className="px-4 py-2 rounded-full text-sm font-medium transition capitalize bg-neutral-800 text-neutral-300 hover:bg-neutral-700 hover:text-white"
             >
               {t(`categories.${cat.slug}.name`)}
