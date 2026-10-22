@@ -330,8 +330,16 @@ export const BLOG_POST_META: Record<string, BlogPostMeta> = {
     translatedIn: ['en', 'es'],
     related: ['how-to-improve-at-league', 'how-to-climb-ranked', 'lol-tier-list-current-patch'],
     seoTitle: 'LoL Worlds 2026: Everything You Need to Know',
+    seoTitleByLocale: {
+      en: 'LoL Worlds 2026: Everything You Need to Know',
+      es: 'LoL Worlds 2026: Todo lo que Necesitas Saber',
+    },
     seoDescription:
       'Discover everything about LoL Worlds 2026, from the tournament format and top teams to the biggest storylines and what fans should watch.',
+    seoDescriptionByLocale: {
+      en: 'Discover everything about LoL Worlds 2026, from the tournament format and top teams to the biggest storylines and what fans should watch.',
+      es: 'Descubre todo sobre Worlds 2026 de LoL: formato del torneo, mejores equipos, grandes historias y qué partidos seguir. Guía completa del Mundial.',
+    },
     image: '/images/blog/worlds20262.webp',
     imageAlt: 'LoL Worlds 2026: Everything You Need to Know About the World Championship',
   },
@@ -349,8 +357,14 @@ export const BLOG_POST_META: Record<string, BlogPostMeta> = {
     ],
     translatedIn: ['en', 'es'],
     related: ['worlds-2026-guide', 'lol-tier-list-current-patch', 'how-to-climb-ranked'],
-    seoTitle: undefined,
-    seoDescription: undefined,
+    seoTitleByLocale: {
+      en: 'LoL Patch 26.21: All Champion Buffs, Nerfs & Item Changes',
+      es: 'Parche 26.21 de LoL: Todos los Buffs, Nerfs y Cambios de Objetos',
+    },
+    seoDescriptionByLocale: {
+      en: 'Every verified change in LoL Patch 26.21: champion buffs and nerfs, item changes, before-and-after stats and the October 21, 2026 release date.',
+      es: 'Todos los cambios verificados del parche 26.21 de LoL: buffs y nerfs de campeones, cambios de objetos, estadísticas antes y después y fecha de lanzamiento.',
+    },
     image: '/images/blog/parche21oct.jpg',
     imageAlt: 'Patch 26.21 of League of Legends: buffs, nerfs y object changes',
   },
