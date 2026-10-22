@@ -4,6 +4,15 @@ import createNextIntlPlugin from 'next-intl/plugin';
 const withNextIntl = createNextIntlPlugin('./i18n/request.ts');
 
 const nextConfig: NextConfig = {
+  async redirects() {
+    return [
+      {
+        source: '/es/blog/tier-list-lol-parche-26-21',
+        destination: '/es/blog/lol-patch-26-21-tier-list',
+        statusCode: 301,
+      },
+    ];
+  },
   images: {
     remotePatterns: [
       {

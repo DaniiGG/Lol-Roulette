@@ -386,9 +386,6 @@ export const BLOG_POST_META: Record<string, BlogPostMeta> = {
       en: 'Explore the LoL Patch 26.21 tier list for Top, Jungle, Mid, ADC and Support. Compare champion picks and find your next ranked main.',
       es: 'Descubre la tier list de LoL 26.21 para Top, Jungla, Mid, ADC y Support. Compara los mejores picks y encuentra campeones para subir de elo.',
     },
-    localizedSlugs: {
-      es: 'tier-list-lol-parche-26-21',
-    },
     image: '/images/blog/tierlist21oct.jpg',
     imageAlt:
       'League of Legends Patch 26.21 tier list with champion portraits for every role',
@@ -445,7 +442,13 @@ export function getPostHref(slug: string, locale: string): string {
  */
 export function resolvePostSlug(slug: string, locale: string): string | undefined {
   if (BLOG_POST_META[slug]) return slug
-  return BLOG_SLUGS.find((canonical) => getLocalizedSlug(canonical, locale) === slug)
+  return BLOG_SLUGS.find((canonical) => {
+    const meta = BLOG_POST_META[canonical]
+    return (
+      getLocalizedSlug(canonical, locale) === slug ||
+      Object.values(meta.localizedSlugs ?? {}).includes(slug)
+    )
+  })
 }
 
 export function getSeoTitle(slug: string, locale: string): string | undefined {
