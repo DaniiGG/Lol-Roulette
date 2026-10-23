@@ -5,6 +5,7 @@ import { routing } from '@/i18n/routing'
 import BlogSearch from '@/components/blog/BlogSearch'
 import BlogPostCard from '@/components/blog/BlogPostCard'
 import Link from 'next/link'
+import Breadcrumbs from '@/components/Breadcrumbs'
 import { postsByCategory, sortByPublishedDesc, formatDate } from '@/lib/blog/content'
 import { CATEGORIES } from '@/lib/blog/categories'
 import type { BlogPost } from '@/lib/blog/content'
@@ -60,8 +61,15 @@ export default async function BlogIndexPage({ params }: { params: Promise<{ loca
   })).filter(c => c.count > 0)
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 px-6 py-12">
+    <main className="min-h-screen bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 px-6 pt-10 pb-12">
       <div className="mx-auto max-w-6xl">
+        <Breadcrumbs
+          items={[
+            { label: 'League Roulette', href: '/' },
+            { label: t('blog') },
+          ]}
+        />
+
         {/* Hero */}
         <section className="mb-16 animate-slide-up">
           <p className="mb-3 text-sm uppercase tracking-[0.3em] text-[#C89B3C]">

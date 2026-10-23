@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@200;300;400;500;600;700;800&display=swap');
+﻿@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@200;300;400;500;600;700;800&display=swap');
 @import "tailwindcss";
 @tailwind base;
 @tailwind components;
@@ -44,13 +44,13 @@ body {
   overflow-x: hidden;
 }
 
-/* ─── SCROLLBAR ─── */
+/* â”€â”€â”€ SCROLLBAR â”€â”€â”€ */
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: var(--surface); }
 ::-webkit-scrollbar-thumb { background: var(--surface-border); border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--gold-dim); }
 
-/* ─── TEXTURE OVERLAY ─── */
+/* â”€â”€â”€ TEXTURE OVERLAY â”€â”€â”€ */
 body::before {
   content: '';
   position: fixed;
@@ -66,7 +66,7 @@ body::before {
   );
 }
 
-/* ─── KEYFRAMES ─── */
+/* â”€â”€â”€ KEYFRAMES â”€â”€â”€ */
 @keyframes neon-pulse {
   0%, 100% { opacity: 1; filter: brightness(1); }
   50% { opacity: 0.85; filter: brightness(1.2); }
@@ -140,7 +140,7 @@ body::before {
   50% { border-color: var(--gold); box-shadow: 0 0 20px var(--gold-glow), 0 0 40px var(--gold-glow); }
 }
 
-/* ─── HERO TITLE ANIMATIONS ─── */
+/* â”€â”€â”€ HERO TITLE ANIMATIONS â”€â”€â”€ */
 @keyframes title-rise {
   0% { opacity: 0; transform: translateY(40px); }
   100% { opacity: 1; transform: translateY(0); }
@@ -171,7 +171,7 @@ body::before {
 }
 .animate-sparkle { animation: sparkle-drift 2s ease-in-out infinite; }
 
-/* ─── UTILITY CLASSES ─── */
+/* â”€â”€â”€ UTILITY CLASSES â”€â”€â”€ */
 .animate-neon-pulse { animation: neon-pulse 3s ease-in-out infinite; }
 .animate-scanline { animation: scanline 8s linear infinite; }
 .animate-slide-up { animation: slide-up-fade 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
@@ -194,6 +194,11 @@ body::before {
 .stagger-children > *:nth-child(5) { animation-delay: 0.25s; }
 .stagger-children > *:nth-child(6) { animation-delay: 0.3s; }
 
+/* Quiz transitions */
+.quiz-enter {
+  animation: slide-up-fade 0.32s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
 /* Gold text glow */
 .text-glow {
   text-shadow: 0 0 10px var(--gold-glow), 0 0 20px var(--gold-glow), 0 0 40px rgba(200, 155, 60, 0.3);
@@ -202,7 +207,7 @@ body::before {
   text-shadow: 0 0 10px var(--cyan-glow), 0 0 20px var(--cyan-glow), 0 0 40px rgba(0, 229, 255, 0.3);
 }
 
-/* ─── CHAMPION MASTERY TREE ─── */
+/* â”€â”€â”€ CHAMPION MASTERY TREE â”€â”€â”€ */
 @keyframes tree-edge-draw {
   0% { opacity: 0; stroke-dashoffset: 1; }
   18% { opacity: 1; }
@@ -322,6 +327,7 @@ body::before {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .quiz-enter,
   .tree-edge,
   .tree-node-enter,
   .tree-aura,

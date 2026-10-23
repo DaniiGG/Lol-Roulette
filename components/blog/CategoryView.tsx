@@ -3,6 +3,7 @@ import BlogPostCard from './BlogPostCard'
 import Link from 'next/link'
 import type { BlogPost } from '@/lib/blog/content'
 import { CATEGORIES, isCategorySlug } from '@/lib/blog/categories'
+import Breadcrumbs from '@/components/Breadcrumbs'
 
 interface CategoryViewProps {
   posts: BlogPost[]
@@ -19,17 +20,15 @@ export default function CategoryView({ posts, locale, categorySlug, t }: Categor
   const otherCategories = CATEGORIES.filter(c => c.slug !== categorySlug)
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 px-6 py-12">
+    <main className="min-h-screen bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 px-6 pt-10 pb-12">
       <div className="mx-auto max-w-6xl">
-        <Link
-          href={blogPath}
-          className="mb-8 inline-flex items-center gap-2 text-sm text-neutral-400 transition hover:text-white"
-        >
-          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-          </svg>
-          {t('backToBlog')}
-        </Link>
+        <Breadcrumbs
+          items={[
+            { label: 'League Roulette', href: '/' },
+            { label: t('blog'), href: '/blog' },
+            { label: t(`categories.${categorySlug}.name`) },
+          ]}
+        />
 
         <header className="mb-12">
           <p className="mb-3 text-sm uppercase tracking-[0.3em] text-[#C89B3C]">

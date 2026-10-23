@@ -6,6 +6,7 @@ import { getHreflangAlternates } from '@/lib/seo-utils'
 import { routing } from '@/i18n/routing'
 import { BLOG_SLUGS, blogKeywords } from "@/lib/blog-posts"
 import { getPostHref } from '@/lib/blog/meta'
+import Breadcrumbs from '@/components/Breadcrumbs'
 
 type BlogPost = {
   slug: string
@@ -86,14 +87,20 @@ export default async function LanePage({ params }: { params: Promise<{ locale: s
   }
 
   const meta = LANE_META[lane]
+  const laneLabel = (meta?.title || lane).replace(' | League Roulette', '')
   return (
-    <main className="min-h-screen bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 px-6 py-12">
+    <main className="min-h-screen bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 px-6 pt-10 pb-12">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <div className="mx-auto max-w-6xl">
+        <Breadcrumbs
+          items={[
+            { label: 'League Roulette', href: '/' },
+            { label: t('blog'), href: '/blog' },
+            { label: laneLabel },
+          ]}
+        />
+
         <div className="mb-8">
-          <Link href={locale === 'en' ? '/blog' : `/${locale}/blog`} className="mb-4 inline-flex items-center gap-2 text-sm text-neutral-400 transition hover:text-white">
-            <span aria-hidden="true">←</span> {t('back') || 'Back'}
-          </Link>
           <h1 className="mb-3 text-4xl font-semibold tracking-tight text-white md:text-5xl">{meta?.title || lane}</h1>
           <p className="max-w-2xl text-lg leading-8 text-neutral-300">{meta?.description}</p>
         </div>

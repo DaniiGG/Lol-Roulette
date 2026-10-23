@@ -6,6 +6,7 @@ import { supabase } from '@/lib/supabase'
 import Cookies from 'js-cookie'
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
+import Breadcrumbs from '@/components/Breadcrumbs'
 
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
@@ -135,24 +136,20 @@ export default function LeaderboardPage() {
   }
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 p-6">
+    <main className="min-h-screen bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 px-6 pb-12 pt-10">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <div className="max-w-4xl mx-auto">
-        
-        <div className="mb-8">
-          <Link 
-            href="/"
-            className="inline-flex items-center gap-2 text-neutral-400 hover:text-white transition mb-4"
-          >
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-            </svg>
-            {t('backToGame')}
-          </Link>
+        <Breadcrumbs
+          items={[
+            { label: 'League Roulette', href: '/' },
+            { label: t('title') },
+          ]}
+        />
 
+        <div className="mb-8">
           <h1 className="text-5xl font-bold text-white mb-2">{t('title')}</h1>
           <p className="text-neutral-400">{t('subtitle')}</p>
         </div>

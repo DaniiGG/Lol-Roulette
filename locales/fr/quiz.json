@@ -1,0 +1,378 @@
+{
+  "navLabel": "Trouve ton main",
+  "meta": {
+    "title": "Trouve ton main : ce que ton champion LoL dit de toi",
+    "description": "Fais un test de personnalité League of Legends drôle et découvre quel champion correspond à ton style. Huit questions absurdes, trois recommandations et zéro inscription.",
+    "keywords": [
+      "test de personnalité League of Legends",
+      "trouve ton main",
+      "test champion LoL",
+      "quel champion jouer",
+      "test main League",
+      "personnalité LoL"
+    ]
+  },
+  "intro": {
+    "eyebrow": "League Roulette présente",
+    "title": "Trouve ton main",
+    "h1": "Quel champion de League of Legends devrais-tu jouer ?",
+    "subtitle": "Après quelques décisions douteuses, on te dira qui tu es vraiment.",
+    "lead": "Des situations absurdes de League, zéro question sérieuse et une recommandation de champion qui va t'expliquer un peu trop de choses sur toi.",
+    "start": "Commencer le test",
+    "noLogin": "2 minutes · 8 questions · sans compte · sans jugement (bon, un peu quand même)",
+    "rouletteLink": "Pas envie de te découvrir ? Fais plutôt tourner la roulette.",
+    "howTitle": "Comment ton main est choisi",
+    "howText": "Chaque réponse note discrètement douze traits de jeu : agressivité, ambition mécanique, patience, créativité, esprit d'équipe, instinct de carry, duels, confort à distance, contrôle, foi dans le late game, mobilité et protection. On compare ton profil à une sélection de champions. Mêmes réponses, même résultat. Pas de win rate, pas de tier list, pas de statistiques inventées.",
+    "howDisclaimer": "C'est du divertissement, pas une évaluation psychologique. Ton main est une compatibilité d'ambiance, pas un diagnostic.",
+    "faqTitle": "Des questions que personne n'a posées",
+    "faq": [
+      {
+        "q": "Est-ce scientifiquement exact ?",
+        "a": "Non. C'est un test de personnalité basé sur des situations de League. La seule partie validée par des pairs, c'est l'écran gris."
+      },
+      {
+        "q": "Comment les trois champions sont-ils choisis ?",
+        "a": "Tes réponses créent un profil de jeu caché. On le compare à des profils de champions, puis on choisit un main, une alternative sous un autre angle et un joker qui reste crédible."
+      },
+      {
+        "q": "Faut-il un compte ?",
+        "a": "Non. Réponds, laisse-toi charrier gentiment et partage le résultat. Le compte sert uniquement à la roulette principale et au suivi des parties."
+      },
+      {
+        "q": "Est-ce que ça va améliorer mes ranked ?",
+        "a": "Ça améliorera ta capacité à justifier ton pick en sélection. Les résultats peuvent varier. Ton jungler est peut-être encore en train de farm."
+      }
+    ]
+  },
+  "links": {
+    "title": "Continue l'exploration",
+    "tierlist": "Tier list des champions",
+    "guides": "Guides des champions",
+    "howToPlay": "Comment fonctionne League Roulette"
+  },
+  "ui": {
+    "questionProgress": "{current} / {total}",
+    "questionLabel": "Question {current} sur {total}",
+    "progressLabel": "Progression du test",
+    "back": "Retour",
+    "answerHint": "Choisis celle qui te semble dangereusement exacte.",
+    "selected": "Choisie",
+    "viewResult": "Voir mon main",
+    "restart": "Refaire le test",
+    "share": "Partager mon résultat",
+    "copy": "Copier le lien du résultat",
+    "copied": "Lien copié !",
+    "copyFailed": "Copie automatique impossible. Copie le lien ci-dessous.",
+    "shareUnsupported": "Le partage n'est pas disponible ici. Copie le lien et envoie-le à la main.",
+    "shareMessage": "J'ai découvert mon main League sur League Roulette. Et toi, c'est qui ?",
+    "shareTitle": "Mon main League est {champion}",
+    "invalidShare": "Ce lien de résultat était incomplet ou invalide, donc on a recommencé. Les champions te pardonnent.",
+    "review": "Revoir mes réponses",
+    "main": "Ton main",
+    "alternate": "Ton alternative",
+    "wildcard": "Ton joker",
+    "match": "{percent}% de compatibilité",
+    "basedOn": "D'après tes réponses",
+    "topTraits": "Ton profil très scientifique",
+    "whyThis": "Pourquoi ce champion ?",
+    "spin": "Pas convaincu par ton destin ? Fais tourner la roulette.",
+    "spinSub": "Laisse le hasard décider. Il n'a ni sentiments ni pitié.",
+    "resultAria": "Résultat de ton test",
+    "brand": "League Roulette",
+    "footerTagline": "Trouve ton main. Remets tes choix en question.",
+    "imageAlt": "Illustration de {champion}",
+    "shareCardCta": "Trouve ton main",
+    "shareCardFooter": "leagueroulette.com/find-your-main",
+    "backHome": "Retour à la roulette",
+    "lastQuestionHint": "La dernière. Rends-la douteuse.",
+    "resultReveal": "Le vide a consulté tes réponses.",
+    "copyLinkLabel": "Lien du résultat"
+  },
+  "traits": {
+    "aggression": "Agressivité",
+    "mechanics": "Ambition mécanique",
+    "patience": "Patience",
+    "creativity": "Créativité",
+    "teamwork": "Esprit d'équipe",
+    "carry": "Énergie de protagoniste",
+    "dueling": "Instinct de duel",
+    "ranged": "Confort à distance",
+    "control": "Contrôle",
+    "scaling": "Foi dans le late game",
+    "mobility": "Mobilité",
+    "protection": "Protection",
+    "insights": {
+      "aggression": "Tu considères chaque cooldown comme une autorisation d'entrer.",
+      "mechanics": "Tu préfères rater un play spectaculaire que réussir un play ennuyeux.",
+      "patience": "Tu peux attendre. Tu préfères juste ne pas l'annoncer.",
+      "creativity": "Si le play évident est disponible, tu supposes que c'est un piège.",
+      "teamwork": "Tu veux vraiment que tes coéquipiers survivent. Une position radicale en SoloQ.",
+      "carry": "Tu vois un fight et tu penses : « je pourrais être le personnage principal ici ».",
+      "dueling": "Tu prends le « 1v1 » comme une invitation personnelle, pas comme un avertissement.",
+      "ranged": "L'espace personnel n'est pas une préférence. C'est un build.",
+      "control": "Tu aimes que les fights arrivent là où tu les as prévus, pas là où ils ont eu lieu.",
+      "scaling": "Tu crois que les 20 premières minutes ne sont que le tutoriel.",
+      "mobility": "Les murs sont des suggestions. Les timers de mort, des conséquences.",
+      "protection": "Tu préfères sauver un idiot que venger trois personnes. Franchement ? Respect."
+    }
+  },
+  "roles": {
+    "top": "Top",
+    "jungle": "Jungle",
+    "mid": "Mid",
+    "adc": "ADC",
+    "support": "Support"
+  },
+  "classes": {
+    "Fighter": "Combattant",
+    "Assassin": "Assassin",
+    "Mage": "Mage",
+    "Marksman": "Tireur",
+    "Tank": "Tank",
+    "Support": "Support"
+  },
+  "champions": {
+    "yasuo": {
+      "title": "Le syndrome du protagoniste",
+      "quote": "L'écran gris n'est pas une mort. C'est ton écran de chargement personnel."
+    },
+    "zed": {
+      "title": "Le projet de groupe edgy",
+      "quote": "Tu avais dit que tu partagerais le kill. Tu as partagé l'écran gris."
+    },
+    "katarina": {
+      "title": "Le timer de respawn humain",
+      "quote": "Ton plan a trois étapes : entrer, tout appuyer, t'excuser après."
+    },
+    "jinx": {
+      "title": "Le rapport d'incident ambulant",
+      "quote": "Tu ne commences pas les fights. Tu crées des situations qui nécessitent une équipe d'urgence."
+    },
+    "vayne": {
+      "title": "L'auditrice du 1v9",
+      "quote": "Tu tiens un tableur mental de chaque ennemi qui a touché tes sbires. Il est sans pitié."
+    },
+    "ezreal": {
+      "title": "Le personnage principal avec une carte",
+      "quote": "Tu es perdu, mais confiant, et honnêtement c'est la moitié du combat."
+    },
+    "ahri": {
+      "title": "L'offensive de charme",
+      "quote": "Tu rends le chaos élégant, puis tu pars avant que quiconque puisse poser une question."
+    },
+    "orianna": {
+      "title": "L'obsédée du contrôle avec une balle",
+      "quote": "Ton équipe a un plan. C'est ton plan. La balle est juste là pour le faire respecter."
+    },
+    "xerath": {
+      "title": "Le comptable de l'artillerie",
+      "quote": "Tu n'entres pas dans les fights. Tu les classes dans « réglés à trois écrans de distance »."
+    },
+    "thresh": {
+      "title": "Le cauchemar du quartier",
+      "quote": "Ton idée d'aider, c'est parfois d'envoyer quelqu'un dans le danger avec une lanterne."
+    },
+    "braum": {
+      "title": "Le mur de soutien émotionnel de l'équipe",
+      "quote": "Tu ne fais peut-être pas le highlight, mais tous ceux qui y sont te doivent la vie."
+    },
+    "leona": {
+      "title": "La baby-sitter solaire",
+      "quote": "Tu as vu ton équipe prendre une mauvaise décision et tu as décidé de la prendre avec elle. Fort."
+    },
+    "darius": {
+      "title": "Le ministre du dunk",
+      "quote": "Ton langage d'amour, c'est appliquer une hache à cinq stacks à un désaccord."
+    },
+    "teemo": {
+      "title": "Le criminel de guerre de la toplane",
+      "quote": "Tu n'es pas méchant. Tu aimes juste voir quelqu'un marcher sur un champignon et remettre sa vie en question."
+    },
+    "lulu": {
+      "title": "La marraine fée du chaos",
+      "quote": "Tu résous les problèmes en les transformant en problèmes plus petits et plus drôles."
+    },
+    "sion": {
+      "title": "Le train de marchandises mort-vivant",
+      "quote": "Tu as deux vitesses : mort et arriver quand même."
+    },
+    "garen": {
+      "title": "Le diplomate du spin gagnant",
+      "quote": "Ton plan est simple : cours vers le problème, tourne, et laisse la régénération gérer la paperasse."
+    },
+    "malphite": {
+      "title": "Le séisme à un bouton",
+      "quote": "Tu ne lances pas les combats. Tu planifies des séismes et tu laisses les autres remplir l'ordre du jour."
+    },
+    "fiora": {
+      "title": "La procureure des points vitaux",
+      "quote": "Tu ne discutes pas avec ton adversaire de lane. Tu déposes une plainte formelle dans ses points vitaux."
+    },
+    "leesin": {
+      "title": "Le best-of les yeux bandés",
+      "quote": "Tu n'as jamais vu une ward vers laquelle tu ne voulais pas sauter, ni un allié que tu ne voulais pas envoyer au danger d'un coup de pied."
+    },
+    "warwick": {
+      "title": "Le limier des mauvaises décisions",
+      "quote": "Tu ne gank pas. Tu suis l'odeur de quelqu'un qui est resté trop longtemps."
+    },
+    "sejuani": {
+      "title": "La nounou du pergélisol",
+      "quote": "Tu amènes toute l'équipe au combat, qu'elle l'ait demandé ou non. Souvent non."
+    },
+    "syndra": {
+      "title": "L'accumulatrice d'orbes",
+      "quote": "Tu ne poursuis pas les kills. Tu les collectionnes, tu les ranges proprement et tu les jettes sur le problème suivant."
+    },
+    "akali": {
+      "title": "L'introvertie au rideau de fumée",
+      "quote": "Ton style de communication, c'est une bombe fumigène et un dash très sûr de lui."
+    },
+    "veigar": {
+      "title": "Le petit tyran du scaling",
+      "quote": "Tu passes 25 minutes inoffensif, puis tu factures toute l'équipe ennemie d'un coup."
+    },
+    "caitlyn": {
+      "title": "La propriétaire des headshots",
+      "quote": "Tu ne te bats pas loyalement. Tu te bats à une distance qui exigerait une autorisation écrite."
+    },
+    "jhin": {
+      "title": "Le drame en quatre actes",
+      "quote": "Tu ne prends pas les combats. Tu les composes en quatre mouvements et tu critiques la posture de l'ennemi."
+    },
+    "kaisa": {
+      "title": "La carry évoluée",
+      "quote": "Tu es un investissement de scaling avec des ailes. Ton équipe doit juste survivre au rapport trimestriel."
+    },
+    "nami": {
+      "title": "La distributrice de bulles",
+      "quote": "Tu résous les problèmes en les rendant mouillés, confus et légèrement mieux placés."
+    },
+    "nautilus": {
+      "title": "Le crochet avec un corps",
+      "quote": "Ton langage amoureux, c'est un crochet, un ralentissement et une équipe qui arrive enfin à l'heure."
+    },
+    "rakan": {
+      "title": "L'instigateur à plumes",
+      "quote": "Tu n'es pas le personnage principal. Tu es son support extrêmement théâtral."
+    },
+    "soraka": {
+      "title": "La philanthrope des barres de vie",
+      "quote": "Tu soignerais un immeuble en feu s'il te le demandait gentiment. Tu as le mana pour ça."
+    }
+  },
+  "questions": {
+    "q1": {
+      "chapter": "L'incident de 2 h du matin",
+      "prompt": "Il est 2 h 37. Ton pote dit : « Une dernière et on y va. » Tu fais quoi ?",
+      "options": {
+        "q1a": "D'accord, mais je me lève tôt demain.",
+        "q1b": "Une de plus, mais c'est moi qui carry.",
+        "q1c": "Seulement si on joue une stratégie complètement absurde.",
+        "q1d": "Je pars. J'ai ma dignité, mon sommeil et mes responsabilités.",
+        "q1e": "J'accepte, mais je teste un champion que je n'ai jamais touché."
+      }
+    },
+    "q2": {
+      "chapter": "Le désastre de teamfight",
+      "prompt": "Ton équipe vient d'entrer dans un fight impossible, un par un. Il reste quatre ennemis et tu es derrière un mur. Tu fais quoi ?",
+      "options": {
+        "q2a": "J'y vais quand même. S'ils meurent, on meurt ensemble.",
+        "q2b": "J'attends mon moment et je supprime le carry ennemi.",
+        "q2c": "Je cherche un play tellement absurde qu'il finira en clip.",
+        "q2d": "J'essaie de sauver les survivants. Il faut bien un adulte.",
+        "q2e": "Je prends deux tours pendant qu'ils tournent leur documentaire nature."
+      }
+    },
+    "q3": {
+      "chapter": "L'origine du méchant",
+      "prompt": "Qu'est-ce qui te transforme instantanément en méchant de la partie ?",
+      "options": {
+        "q3a": "Le jungler ennemi apparaît dans ma lane pour la troisième fois.",
+        "q3b": "Quelqu'un vole un kill que j'avais déjà célébré.",
+        "q3c": "Mon équipe ignore un play que je prépare depuis 15 minutes.",
+        "q3d": "Je meurs avec une compétence prête.",
+        "q3e": "Personne ne protège le carry pendant que j'essaie de garder tout le monde en vie.",
+        "q3f": "L'ennemi croit qu'il peut gagner un duel contre moi."
+      }
+    },
+    "q4": {
+      "chapter": "Super-pouvoirs inutiles",
+      "prompt": "Choisis un pouvoir totalement inutile pour la Faille. La responsabilité n'est pas incluse.",
+      "options": {
+        "q4a": "Apparaître derrière n'importe qui au moment le plus inattendu.",
+        "q4b": "Avoir un bouclier pour absolument tout.",
+        "q4c": "Transformer un fight perdu en pentakill.",
+        "q4d": "Contrôler la carte comme si j'avais une vision rayon X.",
+        "q4e": "Ne jamais rater un skillshot important.",
+        "q4f": "Faire regretter aux ennemis de s'approcher."
+      }
+    },
+    "q5": {
+      "chapter": "Défauts compétitifs",
+      "prompt": "Tout le monde a des défauts. Le tien quand tu joues, c'est quoi ?",
+      "options": {
+        "q5a": "Si je peux entrer, j'entre. Sortir, c'est un problème pour plus tard.",
+        "q5b": "Je n'oublie jamais une humiliation. La revanche viendra.",
+        "q5c": "Mon play doit se dérouler exactement comme je l'ai imaginé.",
+        "q5d": "J'aime gagner, mais j'aime aussi que l'ennemi souffre un peu.",
+        "q5e": "Je passe tellement de temps à aider que j'oublie de farm.",
+        "q5f": "S'il existe une façon bizarre de gagner, je vais la trouver."
+      }
+    },
+    "q6": {
+      "chapter": "Le week-end annulé",
+      "prompt": "Tous tes plans du week-end sont annulés. Qu'est-ce que tu improvises ?",
+      "options": {
+        "q6a": "Apprendre un combo qui me prendra trois jours à exécuter.",
+        "q6b": "Jouer tranquillement et devenir MVP sans faire exprès.",
+        "q6c": "Transformer une partie normale en histoire que je raconterai pendant des années.",
+        "q6d": "Tester une stratégie douteuse qui marche étonnamment bien.",
+        "q6e": "Jouer avec des amis et faire en sorte que tout le monde s'amuse.",
+        "q6f": "Monter. Le repos, c'est après Challenger."
+      }
+    },
+    "q7": {
+      "chapter": "Main ennemi détecté",
+      "prompt": "L'ennemi vient de lock son main et spam sa maîtrise. Tu réagis comment ?",
+      "options": {
+        "q7a": "Parfait. Je veux qu'il soit confiant avant que je le détruise.",
+        "q7b": "Je choisis un truc qui lui donne envie de regretter d'exister dans cette lane.",
+        "q7c": "J'étudie ses mouvements et je le bats avec intelligence.",
+        "q7d": "Peu importe qui c'est. Mon plan reste le même.",
+        "q7e": "Je prends un truc bizarre. Qu'il essaie de comprendre ce qui se passe.",
+        "q7f": "Je lui souhaite bonne chance. Après tout, ce n'est qu'un jeu… en grande partie."
+      }
+    },
+    "q8": {
+      "chapter": "Titre légendaire",
+      "prompt": "Un narrateur doit te donner un titre légendaire. Lequel te représente le mieux ?",
+      "options": {
+        "q8a": "Le protagoniste d'un fight que personne n'avait demandé.",
+        "q8b": "Le cauchemar qui sort du brouillard.",
+        "q8c": "Le cerveau derrière une victoire inexplicable.",
+        "q8d": "Le gardien qui garde l'équipe en vie.",
+        "q8e": "Le monstre qui commence calme et finit inarrêtable.",
+        "q8f": "Le génie incompris qui joue un truc que personne ne sait contrer."
+      }
+    }
+  },
+  "result": {
+    "mainWhy": "{champion} est ton main parce que tes réponses penchent vers {traits}. En tant que {class} au poste de {role}, {champion} transforme ça en {playstyle}.",
+    "alternateWhy": "Mêmes instincts, autre angle. {champion} offre à ton {traits} un autre endroit où créer des problèmes depuis le poste de {role}.",
+    "wildcardWhy": "Ton joker. {champion} correspond toujours à ton {traits}, mais personne dans ton équipe n'a vu ce pick venir.",
+    "traitIntro": "Tes réponses tournaient sans arrêt autour de {traits}.",
+    "playstyleTitle": "Pourquoi {champion} colle à ton style",
+    "answerNotesTitle": "Là où tes réponses t'ont trahi",
+    "disclaimer": "Uniquement pour le divertissement. Ce n'est pas une évaluation psychologique, ni une statistique Riot, et encore moins une promesse que ton équipe suivra ton engage.",
+    "retakeHint": "Nouvelles réponses, nouveau destin. Les champions ne s'attachent pas émotionnellement.",
+    "playstyle": {
+      "Fighter": "entrer dans chaque fight juste avant qu'il commence officiellement",
+      "Assassin": "transformer une lane tranquille en affiche de personne disparue",
+      "Mage": "faire en sorte que le champ de bataille se produise exactement là où tu l'as prévu",
+      "Marksman": "supprimer des barres de vie depuis une distance irrespectueuse",
+      "Tank": "être la raison pour laquelle ton équipe survit à ses propres décisions",
+      "Support": "faire croire à tout le monde qu'il sait ce qu'il fait"
+    }
+  }
+}

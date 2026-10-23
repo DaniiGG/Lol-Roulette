@@ -10,6 +10,7 @@ import BlogPostContent from '@/components/blog/BlogPostContent'
 import TableOfContents from '@/components/blog/TableOfContents'
 import BlogPostCard from '@/components/blog/BlogPostCard'
 import PatchTierList from '@/components/blog/PatchTierList'
+import Breadcrumbs from '@/components/Breadcrumbs'
 import {
   BLOG_SLUGS,
   getPostMeta,
@@ -261,7 +262,7 @@ export default async function BlogPostPage(props: BlogPostPageProps) {
   )
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 px-6 py-12">
+    <main className="min-h-screen bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 px-6 pt-10 pb-12">
       <Script
         id="article-schema"
         type="application/ld+json"
@@ -274,16 +275,14 @@ export default async function BlogPostPage(props: BlogPostPageProps) {
       />
 
       <article className="mx-auto max-w-5xl">
-        {/* Back link */}
-        <Link
-          href={blogPath}
-          className="mb-8 inline-flex items-center gap-2 text-sm text-neutral-400 transition hover:text-white"
-        >
-          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-          </svg>
-          {t('backToBlog')}
-        </Link>
+        <Breadcrumbs
+          items={[
+            { label: 'League Roulette', href: '/' },
+            { label: t('blog'), href: '/blog' },
+            ...(catInfo ? [{ label: catInfo.name, href: `/blog/${category}` }] : []),
+            { label: post.title },
+          ]}
+        />
 
         {/* Language switcher for this post */}
         {availableLocales.length > 1 && (

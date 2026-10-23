@@ -2,8 +2,9 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { Mail, MessageSquare, Send, CheckCircle, ArrowLeft, Lightbulb } from 'lucide-react'
+import { Mail, MessageSquare, Send, CheckCircle, Lightbulb } from 'lucide-react'
 import { useTranslations } from 'next-intl'
+import Breadcrumbs from '@/components/Breadcrumbs'
 
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
@@ -44,14 +45,16 @@ export default function ContactPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-      <div className="max-w-4xl mx-auto px-6 py-16">
-        
+      <div className="max-w-4xl mx-auto px-6 pt-10 pb-16">
+        <Breadcrumbs
+          items={[
+            { label: 'League Roulette', href: '/' },
+            { label: t('title') },
+          ]}
+        />
+
         {/* Header */}
         <div className="mb-12">
-          <a href="/" className="text-neutral-400 hover:text-white transition text-sm mb-4 inline-flex items-center gap-2">
-            <ArrowLeft className="w-4 h-4" />
-            {t('backToHome')}
-          </a>
           <h1 className="text-5xl font-bold mb-4">{t('title')}</h1>
           <p className="text-xl text-neutral-400">
             {t('subtitle')}

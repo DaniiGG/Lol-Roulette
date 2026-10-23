@@ -8,39 +8,156 @@ interface ChampionStatsProps {
   championName: string
 }
 
-const DDV = '16.21.1'
-
-// Mapeo básico de builds por clase de campeón
-const CLASS_BUILDS: Record<string, { items: string[], role: string }> = {
-  Fighter: {
-    role: 'Fighter / Bruiser',
-    items: ['Trinity Force / Goredrinker', 'Black Cleaver', 'Sterak\'s Gage', 'Death\'s Dance', 'Guardian Angel', 'Plated Steelcaps / Mercury\'s Treads']
-  },
-  Tank: {
-    role: 'Tank',
-    items: ['Heartsteel / Jak\'Sho', 'Sunfire Aegis', 'Thornmail', 'Force of Nature', 'Gargoyle Stoneplate', 'Plated Steelcaps / Mercury\'s Treads']
-  },
-  Mage: {
-    role: 'Mage / AP Carry',
-    items: ['Luden\'s Echo / Liandry\'s Anguish', 'Shadowflame', 'Zhonya\'s Hourglass', 'Rabadon\'s Deathcap', 'Void Staff', 'Sorcerer\'s Shoes']
-  },
-  Assassin: {
-    role: 'Assassin',
-    items: ['Duskblade / Youmuu\'s Ghostblade', 'Axiom Arc', 'Edge of Night', 'Serylda\'s Grudge', 'Guardian Angel', 'Ionian Boots of Lucidity']
-  },
-  Marksman: {
-    role: 'Marksman / ADC',
-    items: ['Kraken Slayer / Galeforce', 'Infinity Edge', 'Rapid Firecannon', 'Lord Dominik\'s Regards', 'Bloodthirster', 'Berserker\'s Greaves']
-  },
-  Support: {
-    role: 'Support',
-    items: ['Locket of the Iron Solari / Shurelya\'s Battlesong', 'Redemption', 'Mikael\'s Blessing', 'Ardent Censer', 'Knight\'s Vow', 'Ionian Boots / Mobility Boots']
+interface ChampionStaticData {
+  tags?: string[]
+  partype?: string
+  info?: {
+    attack?: number
+    defense?: number
+    magic?: number
   }
 }
 
-export default function ChampionStats({ championId, championName }: ChampionStatsProps) {
+interface DDragonItem {
+  name: string
+  maps?: Record<string, boolean>
+}
+
+const DDV = '16.21.1'
+
+type Archetype =
+  | 'ad_bruiser'
+  | 'ap_bruiser'
+  | 'tank'
+  | 'ap_mage'
+  | 'ap_assassin'
+  | 'ad_assassin'
+  | 'crit_marksman'
+  | 'on_hit_marksman'
+  | 'ap_marksman'
+  | 'enchanter'
+  | 'tank_support'
+
+const BUILDS: Record<Archetype, { role: string; items: string[] }> = {
+  ad_bruiser: {
+    role: 'Fighter / Bruiser (AD)',
+    items: ['Trinity Force', 'Black Cleaver', "Sterak's Gage", "Death's Dance", 'Guardian Angel', 'Plated Steelcaps'],
+  },
+  ap_bruiser: {
+    role: 'Fighter / Bruiser (AP)',
+    items: ['Riftmaker', "Liandry's Torment", 'Cosmic Drive', "Rylai's Crystal Scepter", "Zhonya's Hourglass", "Sorcerer's Shoes"],
+  },
+  tank: {
+    role: 'Tank',
+    items: ['Heartsteel', 'Sunfire Aegis', 'Thornmail', 'Force of Nature', "Jak'Sho, The Protean", 'Plated Steelcaps'],
+  },
+  ap_mage: {
+    role: 'Mage / AP Carry',
+    items: ["Luden's Echo", 'Shadowflame', "Zhonya's Hourglass", "Rabadon's Deathcap", 'Void Staff', "Sorcerer's Shoes"],
+  },
+  ap_assassin: {
+    role: 'Assassin (AP)',
+    items: ['Hextech Rocketbelt', 'Shadowflame', "Zhonya's Hourglass", "Rabadon's Deathcap", 'Void Staff', "Sorcerer's Shoes"],
+  },
+  ad_assassin: {
+    role: 'Assassin (AD)',
+    items: ['Profane Hydra', 'Axiom Arc', 'Edge of Night', "Serylda's Grudge", 'Guardian Angel', 'Ionian Boots of Lucidity'],
+  },
+  crit_marksman: {
+    role: 'Marksman / ADC',
+    items: ['Kraken Slayer', 'Infinity Edge', 'Rapid Firecannon', "Lord Dominik's Regards", 'Bloodthirster', "Berserker's Greaves"],
+  },
+  on_hit_marksman: {
+    role: 'Marksman / On-hit',
+    items: ["Guinsoo's Rageblade", 'Kraken Slayer', 'Blade of The Ruined King', 'Terminus', "Wit's End", "Berserker's Greaves"],
+  },
+  ap_marksman: {
+    role: 'Marksman (AP)',
+    items: ["Nashor's Tooth", "Liandry's Torment", 'Shadowflame', "Rabadon's Deathcap", 'Void Staff', "Sorcerer's Shoes"],
+  },
+  enchanter: {
+    role: 'Support / Enchanter',
+    items: ['Moonstone Renewer', 'Redemption', "Mikael's Blessing", 'Ardent Censer', 'Staff of Flowing Water', 'Ionian Boots of Lucidity'],
+  },
+  tank_support: {
+    role: 'Support / Tank',
+    items: ['Locket of the Iron Solari', "Knight's Vow", "Zeke's Convergence", 'Redemption', 'Thornmail', 'Ionian Boots of Lucidity'],
+  },
+}
+
+const ENCHANTERS = new Set([
+  'Janna', 'Soraka', 'Lulu', 'Nami', 'Sona', 'Karma', 'Seraphine',
+  'Rakan', 'Yuumi', 'Renata', 'Milio', 'Ivern', 'Bard',
+])
+
+const MAGE_SUPPORTS = new Set([
+  'Brand', 'Zyra', 'Xerath', 'Velkoz', 'Lux', 'Morgana', 'Swain',
+  'Heimerdinger', 'Zilean',
+])
+
+const ARCHETYPE_OVERRIDES: Record<string, Archetype> = {
+  Gwen: 'ap_bruiser',
+  Vladimir: 'ap_bruiser',
+  Pyke: 'ad_assassin',
+  Qiyana: 'ad_assassin',
+  Jayce: 'ad_assassin',
+  Kayle: 'ap_marksman',
+  Teemo: 'ap_marksman',
+  Yasuo: 'crit_marksman',
+  Yone: 'crit_marksman',
+  Tryndamere: 'crit_marksman',
+  Nilah: 'crit_marksman',
+  MasterYi: 'on_hit_marksman',
+  KogMaw: 'on_hit_marksman',
+  Vayne: 'on_hit_marksman',
+  Kaisa: 'on_hit_marksman',
+  Belveth: 'on_hit_marksman',
+  Amumu: 'tank',
+  Zac: 'tank',
+}
+
+function chooseArchetype(champ: ChampionStaticData | null, championId: string): Archetype {
+  const override = ARCHETYPE_OVERRIDES[championId]
+  if (override) return override
+
+  const tags: string[] = champ?.tags ?? []
+  const info = champ?.info ?? {}
+  const attack = Number(info.attack ?? 0)
+  const magic = Number(info.magic ?? 0)
+  const defense = Number(info.defense ?? 0)
+  const primary = tags[0] ?? ''
+  const isMarksman = tags.includes('Marksman')
+  const isSupport = tags.includes('Support')
+  const isTank = tags.includes('Tank')
+  const isAssassin = tags.includes('Assassin')
+  const isMage = tags.includes('Mage')
+  const isAP = magic > attack + 1 || (magic > attack && (isMage || isAssassin))
+
+  if (isMarksman) return isAP ? 'ap_marksman' : 'crit_marksman'
+
+  if (isSupport) {
+    if (ENCHANTERS.has(championId)) return 'enchanter'
+    if (MAGE_SUPPORTS.has(championId)) return 'ap_mage'
+    if (isAssassin && !isAP) return 'ad_assassin'
+    if (primary === 'Mage' || isMage) return 'ap_mage'
+    if (isTank || defense >= 6) return 'tank_support'
+    return 'enchanter'
+  }
+
+  if (primary === 'Assassin') return isAP ? 'ap_assassin' : 'ad_assassin'
+  if (primary === 'Mage') return 'ap_mage'
+  if (primary === 'Fighter') return isAP ? 'ap_bruiser' : 'ad_bruiser'
+  if (primary === 'Tank') return isAP ? 'ap_bruiser' : 'tank'
+
+  if (isAssassin) return isAP ? 'ap_assassin' : 'ad_assassin'
+  if (isMage) return 'ap_mage'
+  if (isTank) return isAP ? 'ap_bruiser' : 'tank'
+  return isAP ? 'ap_mage' : 'ad_bruiser'
+}
+
+export default function ChampionStats({ championId }: ChampionStatsProps) {
   const t = useTranslations('championStats')
-  const [stats, setStats] = useState<any>(null)
+  const [stats, setStats] = useState<ChampionStaticData | null>(null)
   const [loading, setLoading] = useState(true)
   const [itemMap, setItemMap] = useState<Record<string, number>>({})
 
@@ -51,7 +168,7 @@ export default function ChampionStats({ championId, championName }: ChampionStat
       setLoading(true)
       try {
         const res = await fetch(`https://ddragon.leagueoflegends.com/cdn/${DDV}/data/en_US/champion/${championId}.json`)
-        const data = await res.json()
+        const data: { data: Record<string, ChampionStaticData> } = await res.json()
         setStats(data.data[championId])
       } catch (err) {
         console.error('Error fetching champion stats:', err)
@@ -67,11 +184,16 @@ export default function ChampionStats({ championId, championName }: ChampionStat
     let cancelled = false
     fetch(`https://ddragon.leagueoflegends.com/cdn/${DDV}/data/en_US/item.json`)
       .then((res) => res.json())
-      .then((data: any) => {
+      .then((data: { data: Record<string, DDragonItem> }) => {
         if (cancelled) return
         const map: Record<string, number> = {}
-        Object.entries(data.data).forEach(([id, item]: [string, any]) => {
-          map[item.name] = Number(id)
+        Object.entries(data.data).forEach(([id, item]) => {
+          if (item?.maps?.['11'] !== true) return
+          const numericId = Number(id)
+          const current = map[item.name]
+          if (current === undefined || numericId < current) {
+            map[item.name] = numericId
+          }
         })
         setItemMap(map)
       })
@@ -89,9 +211,11 @@ export default function ChampionStats({ championId, championName }: ChampionStat
     )
   }
 
-  // Determine primary class build
-  const primaryTag = stats.tags && stats.tags.length > 0 ? stats.tags[0] : 'Fighter'
-  const recommendedBuild = CLASS_BUILDS[primaryTag] || CLASS_BUILDS['Fighter']
+  const archetype = chooseArchetype(stats, championId)
+  const baseBuild = BUILDS[archetype]
+  const recommendedBuild = archetype === 'ap_mage' && stats.partype !== 'Mana'
+    ? { ...baseBuild, items: ['Hextech Rocketbelt', ...baseBuild.items.slice(1)] }
+    : baseBuild
 
   return (
     <div className="w-full mt-6 space-y-6 animate-fadeIn">
@@ -103,14 +227,13 @@ export default function ChampionStats({ championId, championName }: ChampionStat
 
         <div className="flex flex-wrap gap-3">
           {recommendedBuild.items.map((item: string, i: number) => {
-            const baseName = item.split(' / ')[0].trim()
-            const itemId = itemMap[baseName]
+            const itemId = itemMap[item]
             return (
               <div key={i} className="px-4 py-3 rounded-xl bg-neutral-950 border border-neutral-800 flex items-center gap-3">
                 {itemId ? (
                   <img
                     src={`https://ddragon.leagueoflegends.com/cdn/${DDV}/img/item/${itemId}.png`}
-                    alt={baseName}
+                    alt={item}
                     className="w-8 h-8 object-cover rounded border border-neutral-700"
                     onError={(e) => {
                       ;(e.target as HTMLImageElement).style.display = 'none'

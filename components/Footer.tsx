@@ -1,11 +1,13 @@
 'use client'
 
 import Link from 'next/link'
+import { Link as LocaleLink } from '@/i18n/navigation'
 import { useTranslations } from 'next-intl'
 
 export default function Footer() {
   const t = useTranslations('footer')
   const tNav = useTranslations('nav')
+  const tQuiz = useTranslations('quiz')
   const year = new Date().getFullYear()
 
   return (
@@ -22,6 +24,11 @@ export default function Footer() {
           <div>
             <h4 className="mb-4 text-sm font-semibold text-white">{t('quickLinks')}</h4>
             <ul className="space-y-2 text-sm">
+              <li>
+                <LocaleLink href="/find-your-main" className="text-neutral-400 transition hover:text-white">
+                  {tQuiz('navLabel')}
+                </LocaleLink>
+              </li>
               <li>
                 <Link href="/blog" className="text-neutral-400 transition hover:text-white">
                   {tNav('blog')}

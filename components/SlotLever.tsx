@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useCallback, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useTranslations } from 'next-intl'
 
 interface SlotLeverProps {
@@ -13,6 +13,16 @@ export default function SlotLever({ onActivate, disabled = false, isSpinning = f
   const t = useTranslations('slotLever')
   const leverRef = useRef<HTMLDivElement>(null);
   const [pulled, setPulled] = useState(false);
+  const onActivateRef = useRef(onActivate);
+  const disabledRef = useRef(disabled);
+
+  useEffect(() => {
+    onActivateRef.current = onActivate;
+  }, [onActivate]);
+
+  useEffect(() => {
+    disabledRef.current = disabled;
+  }, [disabled]);
 
   useEffect(() => {
     const lever = leverRef.current;
@@ -21,6 +31,7 @@ export default function SlotLever({ onActivate, disabled = false, isSpinning = f
     let angle = -35;
     let velocity = 0;
     let animating = false;
+    let rafId = 0;
 
     const audio = new Audio("/lever.m4a");
     audio.volume = 0.8;
@@ -33,11 +44,11 @@ export default function SlotLever({ onActivate, disabled = false, isSpinning = f
       if (!animating && angle < -35) { angle = -35; velocity = 0; }
 
       if (lever) lever.style.transform = `rotate(${angle}deg)`;
-      requestAnimationFrame(animate);
+      rafId = requestAnimationFrame(animate);
     }
 
     function trigger() {
-      if (animating || disabled) return;
+      if (animating || disabledRef.current) return;
       animating = true;
       setPulled(true);
       velocity = 14;
@@ -46,15 +57,18 @@ export default function SlotLever({ onActivate, disabled = false, isSpinning = f
       setTimeout(() => {
         animating = false;
         setPulled(false);
-        onActivate?.();
+        onActivateRef.current?.();
       }, 700);
     }
 
     const container = lever.closest(".slot-lever-root");
     container?.addEventListener("click", trigger);
     animate();
-    return () => container?.removeEventListener("click", trigger);
-  }, [onActivate, disabled]);
+    return () => {
+      cancelAnimationFrame(rafId);
+      container?.removeEventListener("click", trigger);
+    };
+  }, []);
 
   return (
     <div className="slot-lever-root cursor-pointer select-none relative">

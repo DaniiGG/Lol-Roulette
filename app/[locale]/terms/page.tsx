@@ -1,9 +1,9 @@
 // app/terms/page.tsx
 import type { Metadata } from "next"
 import Link from 'next/link'
-import { ArrowLeft } from 'lucide-react'
 import { getTranslations } from 'next-intl/server'
 import { getHreflangAlternates } from '@/lib/seo-utils'
+import Breadcrumbs from '@/components/Breadcrumbs'
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
@@ -38,15 +38,13 @@ export default async function TermsOfService() {
 
   return (
     <main className="min-h-screen bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950">
-      <div className="max-w-4xl mx-auto px-6 py-12">
-        {/* Back button */}
-        <Link 
-          href="/"
-          className="inline-flex items-center gap-2 text-neutral-400 hover:text-white transition mb-8"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          <span>{t('backToHome')}</span>
-        </Link>
+      <div className="max-w-4xl mx-auto px-6 pt-10 pb-12">
+        <Breadcrumbs
+          items={[
+            { label: 'League Roulette', href: '/' },
+            { label: t('title') },
+          ]}
+        />
 
         <script
           type="application/ld+json"

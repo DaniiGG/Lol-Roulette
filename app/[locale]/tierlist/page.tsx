@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import { getTranslations } from 'next-intl/server'
 import { setRequestLocale } from 'next-intl/server'
 import { getHreflangAlternates } from '@/lib/seo-utils'
-import Link from 'next/link'
+import Breadcrumbs from '@/components/Breadcrumbs'
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
@@ -58,14 +58,14 @@ export default async function TierListPage({ params }: { params: Promise<{ local
   }
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 px-6 py-12">
+    <main className="min-h-screen bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 px-6 pt-10 pb-12">
       <div className="mx-auto max-w-6xl">
-        <Link
-          href="/"
-          className="mb-6 inline-flex items-center gap-2 text-sm text-neutral-400 transition hover:text-white"
-        >
-          <span aria-hidden="true">←</span> {t('back') || 'Back'}
-        </Link>
+        <Breadcrumbs
+          items={[
+            { label: 'League Roulette', href: '/' },
+            { label: t('title') },
+          ]}
+        />
 
         <div className="mb-10">
           <p className="mb-3 text-sm uppercase tracking-[0.3em] text-[#C89B3C]">Tier List</p>

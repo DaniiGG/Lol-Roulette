@@ -2,6 +2,7 @@
 import type { Metadata } from "next"
 import { getTranslations } from 'next-intl/server'
 import { getHreflangAlternates } from '@/lib/seo-utils'
+import Breadcrumbs from '@/components/Breadcrumbs'
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
@@ -40,19 +41,14 @@ export default async function TipsPage() {
   const c = tAll.raw('tipsContent') as Record<string, string>
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 p-6">
+    <main className="min-h-screen bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 px-6 pb-12 pt-10">
       <div className="max-w-4xl mx-auto">
-        
-        {/* Back Button */}
-        <a 
-          href="/"
-          className="inline-flex items-center gap-2 text-neutral-400 hover:text-white transition mb-6"
-        >
-          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-          </svg>
-          {t('backToGame')}
-        </a>
+        <Breadcrumbs
+          items={[
+            { label: 'League Roulette', href: '/' },
+            { label: t('title') },
+          ]}
+        />
 
         <script
           type="application/ld+json"

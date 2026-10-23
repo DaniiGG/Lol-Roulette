@@ -32,8 +32,8 @@ const DDV = '16.21.1'
 const SPLASH_BASE = 'https://ddragon.leagueoflegends.com/cdn/img/champion/splash/'
 const LOADING_BASE = 'https://ddragon.leagueoflegends.com/cdn/img/champion/loading/'
 
-// Más lento que antes para que se vea elegante
-const SPIN_MS = 6200
+// Giro visual más pausado y respuesta algo más rápida
+const SPIN_MS = 3000
 const CELL_W = 200
 const CELL_H = 200
 
@@ -291,7 +291,7 @@ export default function RouletteWheel({
   prevCellIndexRef.current = 0
 
   const pool: Champion[] = []
-  for (let i = 0; i < 8; i++) {
+  for (let i = 0; i < 1; i++) {
     pool.push(...[...allChampions].sort(() => Math.random() - 0.5))
   }
   stripRef.current = pool

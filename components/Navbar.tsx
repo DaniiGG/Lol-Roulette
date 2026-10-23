@@ -11,6 +11,7 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const pathname = usePathname()
   const t = useTranslations('nav')
+  const tQuiz = useTranslations('quiz')
 
   const isActive = (path: string) => path === '/blog' ? pathname.startsWith('/blog') : pathname === path
 
@@ -18,6 +19,7 @@ const navLinks = [
     { href: '/', label: t('play'), icon: '🎮' },
     { href: '/leaderboard', label: t('leaderboard'), icon: '🏆' },
     { href: '/challenges', label: t('challenges'), icon: '⚡', isNew: true },
+    { href: '/find-your-main', label: tQuiz('navLabel'), icon: '✦' },
     {href: '/mastery', label: t('mastery'), icon: '📚'},
     { href: '/howtoplay', label: t('howToPlay'), icon: '📖' },
   ]

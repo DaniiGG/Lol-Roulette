@@ -12,6 +12,7 @@ const blogLocales = ['en', 'es'] as const
 
 const staticPages = [
   { path: '', priority: 1, freq: 'daily' as const },
+  { path: 'find-your-main', priority: 0.9, freq: 'weekly' as const },
   { path: 'howtoplay', priority: 0.9, freq: 'weekly' as const },
   { path: 'faq', priority: 0.8, freq: 'weekly' as const },
   { path: 'blog', priority: 0.8, freq: 'weekly' as const },

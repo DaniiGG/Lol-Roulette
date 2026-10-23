@@ -1,0 +1,378 @@
+{
+  "navLabel": "Vind je main",
+  "meta": {
+    "title": "Vind je main: wat je LoL-kampioen over je zegt",
+    "description": "Doe een grappige persoonlijkheidstest voor League of Legends en ontdek welke kampioen bij jouw stijl past. Acht absurde vragen, drie aanbevelingen, geen login.",
+    "keywords": [
+      "persoonlijkheidstest League of Legends",
+      "vind je main",
+      "kampioen test LoL",
+      "welke kampioen spelen",
+      "main test League",
+      "LoL persoonlijkheid"
+    ]
+  },
+  "intro": {
+    "eyebrow": "League Roulette presenteert",
+    "title": "Vind je main",
+    "h1": "Welke League of Legends-kampioen moet jij spelen?",
+    "subtitle": "Na acht twijfelachtige beslissingen vertellen we wie je echt bent.",
+    "lead": "Belachelijke League-situaties, nul serieuze vragen en een kampioenaanbeveling die iets te veel over je zegt.",
+    "start": "Start de test",
+    "noLogin": "2 minuten · 8 vragen · geen account · geen oordeel (oké, een beetje)",
+    "rouletteLink": "Geen zin in zelfontdekking? Draai aan het rad.",
+    "howTitle": "Hoe je main wordt gekozen",
+    "howText": "Elk antwoord geeft stiekem punten aan twaalf speelstijlen: agressie, mechanische ambitie, geduld, creativiteit, teamwork, carry-instinct, duels, comfort op afstand, controle, laatspelgeloof, mobiliteit en bescherming. We vergelijken je profiel met dat van een selectie kampioenen. Dezelfde antwoorden geven altijd hetzelfde resultaat. Geen winrate, geen tierlijst en geen verzonnen statistieken.",
+    "howDisclaimer": "Dit is entertainment, geen psychologische beoordeling. Je main is een vibe-match, geen diagnose.",
+    "faqTitle": "Vragen die niemand stelde",
+    "faq": [
+      {
+        "q": "Is dit wetenschappelijk accuraat?",
+        "a": "Nee. Het is een persoonlijkheidstest op basis van League-situaties. Het enige deel dat door experts is gecontroleerd, is het grijze scherm."
+      },
+      {
+        "q": "Hoe worden de drie kampioenen gekozen?",
+        "a": "Je antwoorden maken een verborgen speelprofiel. We vergelijken dat met kampioenprofielen en kiezen een main, een alternatief vanuit een andere hoek en een wildcard die nog steeds past."
+      },
+      {
+        "q": "Heb ik een account nodig?",
+        "a": "Nee. Antwoord, laat je liefdevol voor gek zetten en deel het resultaat. Een account is alleen voor het hoofdrad en matchtracking."
+      },
+      {
+        "q": "Word ik hier beter van in ranked?",
+        "a": "Je wordt in ieder geval beter in je pick uitleggen in de champ select. Resultaten kunnen variëren. Je jungler is misschien nog aan het farmen."
+      }
+    ]
+  },
+  "links": {
+    "title": "Blijf ontdekken",
+    "tierlist": "Kampioen-tierlijst",
+    "guides": "Kampioengidsen",
+    "howToPlay": "Hoe League Roulette werkt"
+  },
+  "ui": {
+    "questionProgress": "{current} / {total}",
+    "questionLabel": "Vraag {current} van {total}",
+    "progressLabel": "Voortgang van de test",
+    "back": "Terug",
+    "answerHint": "Kies degene die gevaarlijk accuraat voelt.",
+    "selected": "Gekozen",
+    "viewResult": "Bekijk mijn main",
+    "restart": "Opnieuw doen",
+    "share": "Deel mijn resultaat",
+    "copy": "Kopieer resultaatlink",
+    "copied": "Link gekopieerd!",
+    "copyFailed": "Automatisch kopiëren mislukt. Kopieer de link hieronder.",
+    "shareUnsupported": "Delen is hier niet beschikbaar. Kopieer de link en stuur hem handmatig.",
+    "shareMessage": "Ik heb mijn main gevonden op League Roulette. En jij?",
+    "shareTitle": "Mijn League-main is {champion}",
+    "invalidShare": "Die gedeelde link was onvolledig of ongeldig, dus we zijn opnieuw begonnen. De kampioenen vergeven je.",
+    "review": "Bekijk mijn antwoorden",
+    "main": "Jouw main",
+    "alternate": "Jouw alternatief",
+    "wildcard": "Jouw wildcard",
+    "match": "{percent}% match",
+    "basedOn": "Op basis van je antwoorden",
+    "topTraits": "Je zeer wetenschappelijke profiel",
+    "whyThis": "Waarom deze kampioen?",
+    "spin": "Niet overtuigd door je lot? Draai aan het rad.",
+    "spinSub": "Laat random beslissen. Het heeft geen gevoelens of genade.",
+    "resultAria": "Je testresultaat",
+    "brand": "League Roulette",
+    "footerTagline": "Vind je main. Betwijfel je keuzes.",
+    "imageAlt": "Splash art van {champion}",
+    "shareCardCta": "Vind je main",
+    "shareCardFooter": "leagueroulette.com/find-your-main",
+    "backHome": "Terug naar het rad",
+    "lastQuestionHint": "De laatste. Maak hem discutabel.",
+    "resultReveal": "De leegte heeft je antwoorden bekeken.",
+    "copyLinkLabel": "Resultaatlink"
+  },
+  "traits": {
+    "aggression": "Agressie",
+    "mechanics": "Mechanische ambitie",
+    "patience": "Geduld",
+    "creativity": "Creativiteit",
+    "teamwork": "Teamwork",
+    "carry": "Hoofdrolenergie",
+    "dueling": "Duelinstinct",
+    "ranged": "Comfort op afstand",
+    "control": "Controle",
+    "scaling": "Laatspelgeloof",
+    "mobility": "Mobiliteit",
+    "protection": "Bescherming",
+    "insights": {
+      "aggression": "Je ziet elke cooldown als een uitnodiging om naar binnen te gaan.",
+      "mechanics": "Je faalt liever spectaculair dan dat je saai slaagt.",
+      "patience": "Je kunt wachten. Je wilt het alleen niet aankondigen.",
+      "creativity": "Als de voor de hand liggende actie beschikbaar is, ga je ervan uit dat het een val is.",
+      "teamwork": "Je wilt echt dat je teamgenoten overleven. Een radicale positie in SoloQ.",
+      "carry": "Je ziet een fight en denkt: «hier kan ik de hoofdpersoon zijn».",
+      "dueling": "Je ziet «1v1» als een persoonlijke uitnodiging, niet als een waarschuwing.",
+      "ranged": "Persoonlijke ruimte is geen voorkeur. Het is een build.",
+      "control": "Je wilt dat fights gebeuren waar je ze plande, niet waar ze eindigden.",
+      "scaling": "Je gelooft dat de eerste 20 minuten alleen de tutorial zijn.",
+      "mobility": "Muren zijn suggesties. Death timers zijn gevolgen.",
+      "protection": "Je redt liever één idioot dan dat je drie mensen wreekt. Eerlijk? Respect."
+    }
+  },
+  "roles": {
+    "top": "Top",
+    "jungle": "Jungle",
+    "mid": "Mid",
+    "adc": "ADC",
+    "support": "Support"
+  },
+  "classes": {
+    "Fighter": "Vechter",
+    "Assassin": "Moordenaar",
+    "Mage": "Magiër",
+    "Marksman": "Schutter",
+    "Tank": "Tank",
+    "Support": "Support"
+  },
+  "champions": {
+    "yasuo": {
+      "title": "Hoofdrolpersoon-syndroom",
+      "quote": "Het grijze scherm is geen dood. Het is je persoonlijke laadscherm."
+    },
+    "zed": {
+      "title": "Edgy groepswerk",
+      "quote": "Je zei dat je de kill zou delen. Je deelde het grijze scherm."
+    },
+    "katarina": {
+      "title": "Menselijke respawn-timer",
+      "quote": "Je plan heeft drie stappen: naar binnen, alles indrukken, daarna sorry zeggen."
+    },
+    "jinx": {
+      "title": "Wandelend incidentrapport",
+      "quote": "Jij begint geen gevechten. Jij creëert situaties die een noodteam nodig hebben."
+    },
+    "vayne": {
+      "title": "De 1v9-auditor",
+      "quote": "Je houdt een mentale spreadsheet bij van elke vijand die je minions heeft aangeraakt. Genade kent ze niet."
+    },
+    "ezreal": {
+      "title": "De hoofdpersoon met een kaart",
+      "quote": "Je bent verdwaald maar zelfverzekerd, en eerlijk is dat de helft van de strijd."
+    },
+    "ahri": {
+      "title": "Het charme-offensief",
+      "quote": "Je laat chaos elegant lijken en vertrekt dan voordat iemand vragen kan stellen."
+    },
+    "orianna": {
+      "title": "De controlfreak met een bal",
+      "quote": "Je team heeft een plan. Het is jouw plan. De bal is er alleen om het af te dwingen."
+    },
+    "xerath": {
+      "title": "De artillerieboekhouder",
+      "quote": "Je gaat geen fights in. Je archiveert ze als «opgelost van drie schermen afstand»."
+    },
+    "thresh": {
+      "title": "De nachtmerrie van de buurt",
+      "quote": "Jouw idee van helpen is iemand met een lantaarn de gevaren in gooien."
+    },
+    "braum": {
+      "title": "De emotionele steunmuur van het team",
+      "quote": "Misschien haal je de highlight niet, maar iedereen erin heeft zijn leven aan je te danken."
+    },
+    "leona": {
+      "title": "De zon-aangedreven oppas",
+      "quote": "Je zag je team een slechte beslissing nemen en besloot mee te doen. Hardop."
+    },
+    "darius": {
+      "title": "Minister van de dunk",
+      "quote": "Jouw liefdestaal is een bijl met vijf stacks toepassen op een meningsverschil."
+    },
+    "teemo": {
+      "title": "De oorlogsmisdadiger van top lane",
+      "quote": "Je bent niet kwaadaardig. Je vindt het gewoon leuk om iemand op een mushroom te zien stappen en over zijn leven na te denken."
+    },
+    "lulu": {
+      "title": "De chaos-feeënmoeder",
+      "quote": "Je lost problemen op door ze te veranderen in kleinere en grappigere problemen."
+    },
+    "sion": {
+      "title": "De ondode goederentrein",
+      "quote": "Je hebt twee snelheden: dood en toch aankomend."
+    },
+    "garen": {
+      "title": "De spin-to-win-diplomaat",
+      "quote": "Je plan is simpel: ren naar het probleem, draai, en laat regeneratie de paperassen doen."
+    },
+    "malphite": {
+      "title": "De een-knop-aardbeving",
+      "quote": "Je begint geen gevechten. Je plant aardbevingen en laat iedereen de agenda invullen."
+    },
+    "fiora": {
+      "title": "De aanklager van vitale punten",
+      "quote": "Je discussieert niet met je lane-tegenstander. Je dient een formele klacht in bij zijn vitale punten."
+    },
+    "leesin": {
+      "title": "De geblinddoekte highlightshow",
+      "quote": "Je hebt nog nooit een ward gezien waar je niet naartoe wilde springen, of een teamgenoot die je niet gevaar in wilde schoppen."
+    },
+    "warwick": {
+      "title": "De bloedhond van slechte beslissingen",
+      "quote": "Je gankt geen lanes. Je volgt de geur van iemand die te lang bleef."
+    },
+    "sejuani": {
+      "title": "De permafrost-oppas",
+      "quote": "Je neemt het hele team mee naar het gevecht, of ze dat vroegen of niet. Meestal niet."
+    },
+    "syndra": {
+      "title": "De orbverzamelaar",
+      "quote": "Je jaagt geen kills. Je verzamelt ze, rangschikt ze netjes en gooit ze naar het volgende probleem."
+    },
+    "akali": {
+      "title": "De rookgordijn-introvert",
+      "quote": "Je communicatiestijl is een rookbom en een zeer zelfverzekerde dash."
+    },
+    "veigar": {
+      "title": "De kleine tiran van scaling",
+      "quote": "Je bent 25 minuten lang onschadelijk en stuurt dan in één keer de rekening naar het hele vijandelijke team."
+    },
+    "caitlyn": {
+      "title": "De headshot-verhuurder",
+      "quote": "Je vecht niet eerlijk. Je vecht vanaf een afstand waarvoor een schriftelijke toestemming nodig is."
+    },
+    "jhin": {
+      "title": "Het drama in vier bedrijven",
+      "quote": "Je neemt geen gevechten aan. Je componeert ze in vier delen en bekritiseert de houding van de vijand."
+    },
+    "kaisa": {
+      "title": "De geëvolueerde carry",
+      "quote": "Je bent een scaling-investering met vleugels. Je team hoeft alleen het kwartaalrapport te overleven."
+    },
+    "nami": {
+      "title": "De bubbelbezorger",
+      "quote": "Je lost problemen op door ze nat, verward en iets beter gepositioneerd te maken."
+    },
+    "nautilus": {
+      "title": "De haak met een lichaam",
+      "quote": "Jouw liefdestaal is een hook, een slow en een team dat eindelijk op tijd aankomt."
+    },
+    "rakan": {
+      "title": "De gevederde ophitser",
+      "quote": "Je bent niet de hoofdpersoon. Je bent de extreem theatrale support van de hoofdpersoon."
+    },
+    "soraka": {
+      "title": "De filantroop van healthbars",
+      "quote": "Je zou een brandend gebouw genezen als het lief vroeg. Je hebt de mana ervoor."
+    }
+  },
+  "questions": {
+    "q1": {
+      "chapter": "Het incident van 2 uur",
+      "prompt": "Het is 2:37 's nachts. Je vriend zegt: «Nog eentje en dan gaan we». Wat doe je?",
+      "options": {
+        "q1a": "Oké, maar ik moet morgen vroeg op.",
+        "q1b": "Nog één, maar deze carry ik.",
+        "q1c": "Alleen als we een totaal belachelijke strategie spelen.",
+        "q1d": "Ik ga. Ik heb waardigheid, slaap en verantwoordelijkheden.",
+        "q1e": "Ik doe mee, maar ik probeer een kampioen die ik nooit heb aangeraakt."
+      }
+    },
+    "q2": {
+      "chapter": "De teamfight-ramp",
+      "prompt": "Je team is net één voor één een onmogelijke fight ingelopen. Er zijn nog vier vijanden en jij staat achter een muur. Wat doe je?",
+      "options": {
+        "q2a": "Ik ga er toch in. Als zij sterven, sterven we samen.",
+        "q2b": "Ik wacht op mijn moment en wis de vijandelijke carry uit.",
+        "q2c": "Ik zoek een actie zo absurd dat het een clip wordt.",
+        "q2d": "Ik probeer de overlevenden te redden. Iemand moet volwassen zijn.",
+        "q2e": "Ik pak twee torens terwijl zij een natuurdocumentaire opnemen."
+      }
+    },
+    "q3": {
+      "chapter": "Oorsprong van de schurk",
+      "prompt": "Wat maakt jou meteen de schurk van de wedstrijd?",
+      "options": {
+        "q3a": "De vijandelijke jungler komt voor de derde keer naar mijn lane.",
+        "q3b": "Iemand steelt een kill die ik al aan het vieren was.",
+        "q3c": "Mijn team negeert een plan dat ik 15 minuten heb uitgedacht.",
+        "q3d": "Ik sterf met een skill off cooldown.",
+        "q3e": "Niemand beschermt de carry terwijl ik iedereen probeer te redden.",
+        "q3f": "De vijand denkt dat hij een duel van mij kan winnen."
+      }
+    },
+    "q4": {
+      "chapter": "Nutteloze superkrachten",
+      "prompt": "Kies een superkracht die volledig nutteloos is op de Rift. Verantwoordelijkheid is niet inbegrepen.",
+      "options": {
+        "q4a": "Achter iedereen verschijnen op het minst verwachte moment.",
+        "q4b": "Een schild hebben tegen werkelijk alles.",
+        "q4c": "Een verloren fight veranderen in een pentakill.",
+        "q4d": "De map beheersen alsof ik röntgenzicht heb.",
+        "q4e": "Nooit een belangrijke skillshot missen.",
+        "q4f": "Vijanden laten spijt krijgen dat ze in de buurt kwamen."
+      }
+    },
+    "q5": {
+      "chapter": "Competitieve zwaktes",
+      "prompt": "Iedereen heeft zwaktes. Wat is die van jou in-game?",
+      "options": {
+        "q5a": "Als ik kan ingaan, ga ik in. Eruit komen is voor later.",
+        "q5b": "Ik vergeet nooit een vernedering. De wraak komt.",
+        "q5c": "Mijn actie moet precies gaan zoals ik het in mijn hoofd had.",
+        "q5d": "Ik wil winnen, maar de vijand mag ook best een beetje lijden.",
+        "q5e": "Ik help zo veel dat ik vergeet te farmen.",
+        "q5f": "Als er een rare manier is om te winnen, vind ik die."
+      }
+    },
+    "q6": {
+      "chapter": "Het afgezegde weekend",
+      "prompt": "Al je weekendplannen zijn afgezegd. Wat improviseer je?",
+      "options": {
+        "q6a": "Een combo leren die drie dagen kost.",
+        "q6b": "Rustig spelen en per ongeluk MVP worden.",
+        "q6c": "Een normale wedstrijd veranderen in een verhaal dat ik jaren vertel.",
+        "q6d": "Een twijfelachtige strategie proberen die verrassend werkt.",
+        "q6e": "Met vrienden spelen en iedereen laten lachen.",
+        "q6f": "Klimmen. Rusten is voor na Challenger."
+      }
+    },
+    "q7": {
+      "chapter": "Vijandelijke main gespot",
+      "prompt": "De vijand heeft net zijn main gelockt en spamt mastery. Hoe reageer je?",
+      "options": {
+        "q7a": "Perfect. Laat hem zelfverzekerd zijn voordat ik hem verwoest.",
+        "q7b": "Ik kies iets waardoor hij spijt krijgt dat hij op deze lane bestaat.",
+        "q7c": "Ik bestudeer zijn bewegingen en win met mijn hoofd.",
+        "q7d": "Het maakt niet uit wie hij is. Mijn plan blijft hetzelfde.",
+        "q7e": "Ik kies iets raars. Laat hem zelf ontdekken wat er gebeurt.",
+        "q7f": "Ik wens hem succes. Het is tenslotte maar een spel… soort van."
+      }
+    },
+    "q8": {
+      "chapter": "Legendarische titel",
+      "prompt": "Een verteller moet je een legendarische titel geven. Welke past het best?",
+      "options": {
+        "q8a": "De hoofdpersoon van een fight die niemand vroeg.",
+        "q8b": "De nachtmerrie die uit de mist komt.",
+        "q8c": "Het brein achter een onverklaarbare overwinning.",
+        "q8d": "De bewaker die het team in leven houdt.",
+        "q8e": "Het monster dat rustig begint en daarna niet meer stopt.",
+        "q8f": "Het onbegrepen genie dat speelt wat niemand weet te counteren."
+      }
+    }
+  },
+  "result": {
+    "mainWhy": "{champion} is je main omdat je antwoorden naar {traits} neigen. Als {class} op de {role}-rol maakt {champion} daar {playstyle} van.",
+    "alternateWhy": "Dezelfde instincten, andere hoek. {champion} geeft je {traits} een andere plek om problemen te maken vanaf de {role}-rol.",
+    "wildcardWhy": "Je wildcard. {champion} past nog steeds bij je {traits}, maar niemand in je team zag deze pick aankomen.",
+    "traitIntro": "Je antwoorden bleven rond {traits} draaien.",
+    "playstyleTitle": "Waarom {champion} bij je stijl past",
+    "answerNotesTitle": "Waar je antwoorden je verraadden",
+    "disclaimer": "Alleen entertainment. Geen psychologische beoordeling, geen Riot-statistiek en zeker geen belofte dat je team je engage volgt.",
+    "retakeHint": "Nieuwe antwoorden, nieuw lot. Kampioenen hechten zich niet emotioneel.",
+    "playstyle": {
+      "Fighter": "elke fight binnenstormen net voordat hij officieel begint",
+      "Assassin": "een rustige lane veranderen in een vermist-poster",
+      "Mage": "het slagveld precies laten gebeuren waar jij het plande",
+      "Marksman": "healthbars wissen vanaf een respectloze afstand",
+      "Tank": "de reden zijn dat je team zijn eigen beslissingen overleeft",
+      "Support": "iedereen laten lijken alsof ze weten wat ze doen"
+    }
+  }
+}

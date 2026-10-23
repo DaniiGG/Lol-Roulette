@@ -6,6 +6,7 @@ import Cookies from "js-cookie"
 import ChampionMasteryTree from "@/components/ChampionMasteryTree"
 import ChampionWinrate from "@/components/ChampionWinrate"
 import HybridLoginModal from "@/components/RSOLoginmodal"
+import Breadcrumbs from "@/components/Breadcrumbs"
 
 export default function MasteryPage() {
   const t = useTranslations('mastery')
@@ -51,10 +52,20 @@ export default function MasteryPage() {
   if (loading) {
     return (
       <main className="min-h-screen relative overflow-hidden bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950">
-        <div className="relative z-10 min-h-screen p-6 flex items-center justify-center">
-          <div className="relative">
-            <div className="w-14 h-14 border-[3px] border-[#C89B3C]/20 border-t-[#C89B3C] rounded-full animate-spin"></div>
-            <div className="absolute inset-0 w-14 h-14 border-[3px] border-transparent border-r-[#00e5ff]/40 rounded-full animate-spin" style={{ animationDirection: 'reverse', animationDuration: '0.8s' }}></div>
+        <div className="relative z-10 min-h-screen px-4 pb-4 pt-10 sm:px-6 sm:pb-6">
+          <div className="mx-auto max-w-[1600px]">
+            <Breadcrumbs
+              items={[
+                { label: 'League Roulette', href: '/' },
+                { label: t('title') },
+              ]}
+            />
+          </div>
+          <div className="flex min-h-[calc(100vh-8rem)] items-center justify-center">
+            <div className="relative">
+              <div className="w-14 h-14 border-[3px] border-[#C89B3C]/20 border-t-[#C89B3C] rounded-full animate-spin"></div>
+              <div className="absolute inset-0 w-14 h-14 border-[3px] border-transparent border-r-[#00e5ff]/40 rounded-full animate-spin" style={{ animationDirection: 'reverse', animationDuration: '0.8s' }}></div>
+            </div>
           </div>
         </div>
       </main>
@@ -68,20 +79,30 @@ export default function MasteryPage() {
           backgroundImage: `radial-gradient(circle at 1px 1px, white 1px, transparent 0)`,
           backgroundSize: '40px 40px'
         }}></div>
-        <div className="relative z-10 min-h-screen p-6 flex flex-col items-center justify-center">
-          <div className="max-w-md w-full">
-            <div className="text-7xl mb-6 animate-float text-center">🏅</div>
-            <h1 className="text-3xl font-black text-white mb-3 text-center">{t('loginRequired')}</h1>
-            <p className="text-neutral-400 mb-8 text-center">{t('loginRequiredDesc')}</p>
+        <div className="relative z-10 min-h-screen px-4 pb-4 pt-10 sm:px-6 sm:pb-6">
+          <div className="mx-auto max-w-[1600px]">
+            <Breadcrumbs
+              items={[
+                { label: 'League Roulette', href: '/' },
+                { label: t('title') },
+              ]}
+            />
           </div>
-          <HybridLoginModal
-            onClose={() => {}}
-            onSuccess={(token: string, userData: any) => {
-              Cookies.set('session_token', token, { expires: 30, secure: true, sameSite: 'strict' })
-              setUser(userData)
-            }}
-            initialMode="manual"
-          />
+          <div className="flex min-h-[calc(100vh-8rem)] flex-col items-center justify-center">
+            <div className="max-w-md w-full">
+              <div className="text-7xl mb-6 animate-float text-center">🏅</div>
+              <h1 className="text-3xl font-black text-white mb-3 text-center">{t('loginRequired')}</h1>
+              <p className="text-neutral-400 mb-8 text-center">{t('loginRequiredDesc')}</p>
+            </div>
+            <HybridLoginModal
+              onClose={() => {}}
+              onSuccess={(token: string, userData: any) => {
+                Cookies.set('session_token', token, { expires: 30, secure: true, sameSite: 'strict' })
+                setUser(userData)
+              }}
+              initialMode="manual"
+            />
+          </div>
         </div>
       </main>
     )
@@ -100,8 +121,15 @@ export default function MasteryPage() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#C89B3C]/5 rounded-full blur-[150px]"></div>
       </div>
 
-      <div className="relative z-10 min-h-screen p-4 sm:p-6">
+      <div className="relative z-10 min-h-screen px-4 pb-4 pt-10 sm:px-6 sm:pb-6">
         <div className="max-w-[1600px] mx-auto">
+          <Breadcrumbs
+            items={[
+              { label: 'League Roulette', href: '/' },
+              { label: t('title') },
+            ]}
+          />
+
           <div className="mb-8">
             <div className="flex items-center justify-between mb-6">
               <div>
