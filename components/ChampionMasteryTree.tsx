@@ -535,12 +535,13 @@ export default function ChampionMasteryTree({
         !isMatch &&
         !isSelected &&
         !isHovered
-      const badgeRadius = clamp(node.radius * 0.27, 7, 13)
-      const badgeOffset = node.radius * 0.74
+      const badgeRadius = clamp(node.radius * 0.24, 7, 20)
+      const badgeOffset = node.radius * 0.72
       const showBadge = node.layer <= 2 || node.level >= 5
-      const showLabel = node.rank < 10 || node.layer <= 1
+      const showLabel = node.rank < 12 || node.layer <= 1
       const showPoints = node.rank < 3
-      const labelSize = node.layer === 0 ? 19 : node.layer === 1 ? 16 : 14
+      const labelSize =
+        node.tier === 'legend' ? 26 : node.tier === 'core' ? 17 : 14
       const auraWidth = node.tier === 'legend' ? 3 : node.tier === 'core' ? 2 : 1.4
 
       return (
@@ -581,6 +582,27 @@ export default function ChampionMasteryTree({
               {node.tier === 'legend' && (
                 <>
                   <circle
+                    r={node.radius + 52}
+                    fill="url(#tree-sun-glow)"
+                    pointerEvents="none"
+                  />
+                  <g pointerEvents="none">
+                    {Array.from({ length: 18 }).map((_, ray) => (
+                      <line
+                        key={ray}
+                        x1={0}
+                        y1={-(node.radius + 20)}
+                        x2={0}
+                        y2={-(node.radius + 38)}
+                        stroke="#f0c75e"
+                        strokeWidth={2}
+                        strokeLinecap="round"
+                        opacity={0.32}
+                        transform={`rotate(${ray * 20})`}
+                      />
+                    ))}
+                  </g>
+                  <circle
                     r={node.radius + 11}
                     fill="none"
                     stroke="url(#tree-gold-ring)"
@@ -591,7 +613,7 @@ export default function ChampionMasteryTree({
                   <circle
                     r={node.radius + 19}
                     fill="none"
-                    stroke="rgba(240, 199, 94, 0.12)"
+                    stroke="rgba(240, 199, 94, 0.14)"
                     strokeWidth={1}
                   />
                 </>
@@ -757,6 +779,27 @@ export default function ChampionMasteryTree({
 
   const extent = layout?.extent ?? 200
 
+  const galaxyStars = useMemo(() => {
+    const count = 160
+    return Array.from({ length: count }, (_, index) => {
+      const angle = index * 2.399963229728653
+      const radius = Math.sqrt((index + 0.5) / count) * extent * 1.2
+      const size = 0.5 + (((index * 37) % 9) / 9) * 1.7
+      const tint =
+        index % 13 === 0 ? '#f0c75e' : index % 7 === 0 ? '#67e8f9' : '#ffffff'
+      const opacity = 0.1 + (((index * 53) % 10) / 10) * 0.34
+
+      return {
+        id: index,
+        x: Math.cos(angle) * radius,
+        y: Math.sin(angle) * radius,
+        size,
+        tint,
+        opacity,
+      }
+    })
+  }, [extent])
+
   if (loading) {
     return (
       <section className="relative flex h-[76vh] min-h-[520px] max-h-[920px] w-full items-center justify-center overflow-hidden rounded-[2rem] border border-white/[0.08] bg-[#05030d]">
@@ -807,7 +850,7 @@ export default function ChampionMasteryTree({
       ref={containerRef}
       className="relative isolate h-[76vh] min-h-[540px] max-h-[960px] w-full overflow-hidden rounded-[2rem] border border-white/[0.08] bg-[#05030d] shadow-[0_40px_140px_-50px_rgba(124,58,237,0.55)]"
     >
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_46%,rgba(124,58,237,0.20),transparent_54%),radial-gradient(circle_at_12%_88%,rgba(34,211,238,0.08),transparent_42%),radial-gradient(circle_at_88%_12%,rgba(200,155,60,0.07),transparent_38%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(200,155,60,0.16),transparent_36%),radial-gradient(circle_at_16%_84%,rgba(34,211,238,0.09),transparent_44%),radial-gradient(circle_at_86%_16%,rgba(124,58,237,0.18),transparent_46%)]" />
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.045]"
         style={{
@@ -844,6 +887,11 @@ export default function ChampionMasteryTree({
             <stop offset="45%" stopColor="#4c1d95" stopOpacity="0.09" />
             <stop offset="100%" stopColor="#05030d" stopOpacity="0" />
           </radialGradient>
+          <radialGradient id="tree-sun-glow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stopColor="#f0c75e" stopOpacity="0.24" />
+            <stop offset="45%" stopColor="#c89b3c" stopOpacity="0.08" />
+            <stop offset="100%" stopColor="#c89b3c" stopOpacity="0" />
+          </radialGradient>
           <linearGradient id="tree-gold-ring" x1="0%" y1="0%" x2="100%" y2="100%">
             <stop offset="0%" stopColor="#f0c75e" stopOpacity="0.9" />
             <stop offset="45%" stopColor="#c89b3c" stopOpacity="0.25" />
@@ -865,22 +913,49 @@ export default function ChampionMasteryTree({
           transform={`translate(${view.x} ${view.y}) scale(${view.k})`}
           className="tree-viewport"
         >
-          <g pointerEvents="none" className="tree-rings">
-            <circle
-              r={layout.coreRadius}
-              fill="none"
-              stroke="rgba(192, 132, 252, 0.08)"
-              strokeWidth={1}
-              strokeDasharray="2 16"
-              className="tree-aura"
-            />
-            <circle
-              r={layout.coreRadius * 1.9}
-              fill="none"
-              stroke="rgba(56, 189, 248, 0.045)"
-              strokeWidth={1}
-              strokeDasharray="2 22"
-            />
+          <g pointerEvents="none" className="tree-stars">
+            {galaxyStars.map((star) => (
+              <circle
+                key={star.id}
+                cx={star.x}
+                cy={star.y}
+                r={star.size}
+                fill={star.tint}
+                opacity={star.opacity}
+              />
+            ))}
+          </g>
+
+          <g pointerEvents="none" className="tree-guides">
+            {layout.guides.map((guide, index) => (
+              <path
+                key={`guide-${index}`}
+                d={guide}
+                fill="none"
+                stroke={
+                  index % 2 === 0
+                    ? 'rgba(240, 199, 94, 0.16)'
+                    : 'rgba(56, 189, 248, 0.12)'
+                }
+                strokeWidth={1.4}
+                strokeDasharray="2 16"
+                strokeLinecap="round"
+              />
+            ))}
+            {layout.guides.map((guide, index) => (
+              <path
+                key={`guide-glow-${index}`}
+                d={guide}
+                fill="none"
+                stroke={
+                  index % 2 === 0
+                    ? 'rgba(200, 155, 60, 0.05)'
+                    : 'rgba(34, 211, 238, 0.04)'
+                }
+                strokeWidth={14}
+                strokeLinecap="round"
+              />
+            ))}
           </g>
 
           <g pointerEvents="none" className="tree-edges">

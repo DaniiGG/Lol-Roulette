@@ -6,9 +6,13 @@ import type {
   MasteryTreeNode,
 } from './types'
 
-const GAP = 16
-const MIN_RADIUS = 19
-const MAX_RADIUS = 76
+const GAP = 24
+const MIN_RADIUS = 11
+const SUN_RADIUS = 150
+const MAX_ORBIT_RADIUS = 104
+const SIZE_CURVE = 1.4
+const ANGLE_PER_UNIT = 0.0032
+const TAU = Math.PI * 2
 
 function clamp(value: number, min: number, max: number) {
   return Math.min(max, Math.max(min, value))
@@ -31,72 +35,11 @@ function randomFrom(seed: string): number {
   return ((state ^ (state >>> 14)) >>> 0) / 4294967296
 }
 
-function getRingRadius(
-  layer: number[],
-  nodes: MasteryTreeNode[],
-  previousRadius: number,
-  previousMaxNodeRadius: number,
-  maxNodeRadius: number,
-): number {
-  const separationRadius =
-    previousRadius + previousMaxNodeRadius + maxNodeRadius + GAP * 2 + 8
-
-  if (layer.length < 2) return separationRadius
-
-  const demands = layer.map((index, positionInLayer) => {
-    const next = nodes[layer[(positionInLayer + 1) % layer.length]]
-    return nodes[index].radius + next.radius + GAP + 12
-  })
-
-  let low = 0
-  let high = Math.max(...demands) * layer.length
-
-  for (let iteration = 0; iteration < 48; iteration++) {
-    const mid = (low + high) / 2
-    const totalAngle = demands.reduce(
-      (sum, demand) => sum + 2 * Math.asin(Math.min(1, demand / (2 * mid))),
-      0,
-    )
-    if (totalAngle <= Math.PI * 2) high = mid
-    else low = mid
-  }
-
-  return Math.max(separationRadius, high * 1.06)
-}
-
-function range(start: number, end: number): number[] {
-  return Array.from({ length: Math.max(0, end - start) }, (_, index) => start + index)
-}
-
-function getLayerCounts(total: number): number[][] {
-  if (total <= 0) return []
-
-  const layers: number[][] = [[0]]
-  if (total === 1) return layers
-
-  let coreCount = Math.min(7, total - 1)
-  if (total - 1 - coreCount <= 3) coreCount = total - 1
-
-  layers.push(range(1, 1 + coreCount))
-
-  let cursor = 1 + coreCount
-  let capacity = Math.max(10, Math.round(Math.max(coreCount, 1) * 1.7))
-
-  while (cursor < total) {
-    const count = Math.min(capacity, total - cursor)
-    layers.push(range(cursor, cursor + count))
-    cursor += count
-    capacity = Math.max(8, Math.round(capacity * 1.35))
-  }
-
-  return layers
-}
-
 function edgeColor(level: number): string {
-  if (level >= 7) return 'rgba(240, 199, 94, 0.42)'
-  if (level >= 6) return 'rgba(192, 132, 252, 0.34)'
-  if (level >= 5) return 'rgba(56, 189, 248, 0.29)'
-  return 'rgba(139, 124, 246, 0.22)'
+  if (level >= 7) return 'rgba(240, 199, 94, 0.5)'
+  if (level >= 6) return 'rgba(192, 132, 252, 0.4)'
+  if (level >= 5) return 'rgba(56, 189, 248, 0.34)'
+  return 'rgba(139, 124, 246, 0.26)'
 }
 
 function buildCurve(source: MasteryTreeNode, target: MasteryTreeNode, seed: string): string {
@@ -105,14 +48,27 @@ function buildCurve(source: MasteryTreeNode, target: MasteryTreeNode, seed: stri
   const length = Math.hypot(dx, dy) || 1
   const normalX = -dy / length
   const normalY = dx / length
-  const bend = (randomFrom(seed) - 0.5) * Math.min(length * 0.34, 86)
+  const bend = (randomFrom(seed) - 0.5) * Math.min(length * 0.16, 42)
 
-  const c1x = source.x + dx * 0.34 + normalX * bend
-  const c1y = source.y + dy * 0.34 + normalY * bend
-  const c2x = source.x + dx * 0.68 - normalX * bend * 0.45
-  const c2y = source.y + dy * 0.68 - normalY * bend * 0.45
+  const c1x = source.x + dx * 0.36 + normalX * bend
+  const c1y = source.y + dy * 0.36 + normalY * bend
+  const c2x = source.x + dx * 0.7 - normalX * bend * 0.4
+  const c2y = source.y + dy * 0.7 - normalY * bend * 0.4
 
   return `M ${source.x.toFixed(2)} ${source.y.toFixed(2)} C ${c1x.toFixed(2)} ${c1y.toFixed(2)}, ${c2x.toFixed(2)} ${c2y.toFixed(2)}, ${target.x.toFixed(2)} ${target.y.toFixed(2)}`
+}
+
+function buildGuide(armBase: number, startRadius: number, endRadius: number): string {
+  const steps = 96
+  const points: string[] = []
+
+  for (let step = 0; step <= steps; step++) {
+    const radius = startRadius + ((endRadius - startRadius) * step) / steps
+    const angle = armBase + radius * ANGLE_PER_UNIT
+    points.push(`${(Math.cos(angle) * radius).toFixed(1)} ${(Math.sin(angle) * radius).toFixed(1)}`)
+  }
+
+  return `M ${points.join(' L ')}`
 }
 
 export function buildMasteryTreeLayout(
@@ -125,23 +81,37 @@ export function buildMasteryTreeLayout(
     .sort((a, b) => b.championPoints - a.championPoints || a.championId - b.championId)
 
   if (!sorted.length) {
-    return { nodes: [], edges: [], extent: 160, totalPoints: 0, coreRadius: 0 }
+    return {
+      nodes: [],
+      edges: [],
+      extent: 160,
+      totalPoints: 0,
+      coreRadius: 0,
+      arms: 0,
+      guides: [],
+    }
   }
 
   const totalPoints = sorted.reduce((sum, entry) => sum + entry.championPoints, 0)
-  const logPoints = sorted.map((entry) => Math.log10(Math.max(1, entry.championPoints)))
-  const minLog = Math.min(...logPoints)
-  const maxLog = Math.max(...logPoints)
-  const logSpan = Math.max(0.0001, maxLog - minLog)
+  const maxPoints = sorted[0].championPoints
+  const arms = sorted.length <= 8 ? 3 : sorted.length <= 26 ? 4 : 5
+  const armOffset = randomFrom(`${seed}:galaxy`) * TAU
+  const armAngles = Array.from(
+    { length: arms },
+    (_, arm) => armOffset + (arm * TAU) / arms,
+  )
 
   const nodes: MasteryTreeNode[] = sorted.map((entry, rank) => {
     const meta = championMeta[entry.championId]
-    const normalized = clamp((logPoints[rank] - minLog) / logSpan, 0, 1)
-    const radius = clamp(
-      MIN_RADIUS + Math.pow(normalized, 0.92) * (MAX_RADIUS - MIN_RADIUS),
-      MIN_RADIUS,
-      MAX_RADIUS,
-    )
+    const ratio = clamp(entry.championPoints / maxPoints, 0, 1)
+    const radius =
+      rank === 0
+        ? SUN_RADIUS
+        : clamp(
+            MIN_RADIUS + Math.pow(ratio, SIZE_CURVE) * (MAX_ORBIT_RADIUS - MIN_RADIUS),
+            MIN_RADIUS,
+            MAX_ORBIT_RADIUS,
+          )
 
     return {
       id: entry.championId,
@@ -159,107 +129,41 @@ export function buildMasteryTreeLayout(
       layer: 0,
       rank,
       parentId: null,
-      tier: rank === 0 ? 'legend' : 'core',
+      tier: rank === 0 ? 'legend' : 'outer',
       delay: 0,
+      arm: rank === 0 ? -1 : (rank - 1) % arms,
     }
   })
 
-  const layers = getLayerCounts(nodes.length)
-  const initialPositions: Array<{ x: number; y: number }> = nodes.map(() => ({ x: 0, y: 0 }))
-  let previousRadius = 0
-  let previousMaxNodeRadius = 0
-  let coreRadius = 0
+  const armEdge = Array.from({ length: arms }, () => SUN_RADIUS + GAP)
+  const armDepth = Array.from({ length: arms }, () => 0)
+  const armLast = Array.from({ length: arms }, () => nodes[0].id)
+  const initialPositions: Array<{ x: number; y: number }> = nodes.map(() => ({
+    x: 0,
+    y: 0,
+  }))
 
-  layers.forEach((layer, layerIndex) => {
-    if (layerIndex === 0) {
-      nodes[layer[0]].layer = 0
-      nodes[layer[0]].x = 0
-      nodes[layer[0]].y = 0
-      initialPositions[layer[0]] = { x: 0, y: 0 }
-      previousMaxNodeRadius = nodes[layer[0]].radius
-      return
-    }
+  for (let rank = 1; rank < nodes.length; rank++) {
+    const node = nodes[rank]
+    const arm = node.arm
+    const distance = armEdge[arm] + node.radius
+    const angle = armAngles[arm] + distance * ANGLE_PER_UNIT
 
-    const maxNodeRadius = Math.max(...layer.map((index) => nodes[index].radius))
-    const ringRadius = getRingRadius(
-      layer,
-      nodes,
-      previousRadius,
-      previousMaxNodeRadius,
-      maxNodeRadius,
-    )
-    const radialJitter = Math.min(16, 4 + ringRadius * 0.02)
-    const startAngle = randomFrom(`${seed}:layer:${layerIndex}`) * Math.PI * 2
-    const angles =
-      layer.length < 2
-        ? [startAngle]
-        : layer.map((index, positionInLayer) => {
-            const next = nodes[layer[(positionInLayer + 1) % layer.length]]
-            return 2 * Math.asin(
-              Math.min(
-                1,
-                (nodes[index].radius + next.radius + GAP + 12) / (2 * ringRadius),
-              ),
-            )
-          })
-    const extraAngle =
-      angles.length > 1
-        ? Math.max(0, Math.PI * 2 - angles.reduce((sum, angle) => sum + angle, 0)) /
-          angles.length
-        : 0
-    let cursor = startAngle
+    node.x = Math.cos(angle) * distance
+    node.y = Math.sin(angle) * distance
+    node.parentId = armLast[arm]
+    node.layer = armDepth[arm] + 1
+    node.tier = node.layer === 1 ? 'core' : node.layer <= 3 ? 'branch' : 'outer'
+    node.delay = Math.min(1.8, 0.12 + node.layer * 0.06 + rank * 0.004)
 
-    if (layerIndex === 1) coreRadius = ringRadius
-
-    layer.forEach((index, positionInLayer) => {
-      const node = nodes[index]
-      const angle = cursor
-      const angleJitter =
-        (randomFrom(`${seed}:${node.id}:angle`) - 0.5) *
-        Math.min(0.1, extraAngle * 0.72 + 0.01)
-      const distance =
-        ringRadius +
-        (randomFrom(`${seed}:${node.id}:radius`) - 0.5) * radialJitter * 2
-      const finalX = Math.cos(angle + angleJitter) * distance
-      const finalY = Math.sin(angle + angleJitter) * distance
-
-      node.x = finalX
-      node.y = finalY
-      node.layer = layerIndex
-      node.delay = Math.min(
-        1.8,
-        0.18 + layerIndex * 0.14 + (positionInLayer / Math.max(1, layer.length)) * 0.36,
-      )
-      initialPositions[index] = { x: finalX, y: finalY }
-      cursor += (angles[positionInLayer] ?? 0) + extraAngle
-    })
-
-    previousRadius = ringRadius
-    previousMaxNodeRadius = maxNodeRadius
-  })
-
-  for (let layerIndex = 1; layerIndex < layers.length; layerIndex++) {
-    const previousLayer = layers[layerIndex - 1]
-    for (const index of layers[layerIndex]) {
-      const node = nodes[index]
-      let bestId: number | null = null
-      let bestDistance = Number.POSITIVE_INFINITY
-
-      for (const previousIndex of previousLayer) {
-        const parent = nodes[previousIndex]
-        const distance = Math.hypot(node.x - parent.x, node.y - parent.y)
-        if (distance < bestDistance) {
-          bestDistance = distance
-          bestId = parent.id
-        }
-      }
-
-      node.parentId = bestId
-    }
+    initialPositions[rank] = { x: node.x, y: node.y }
+    armEdge[arm] = distance + node.radius + GAP
+    armDepth[arm] += 1
+    armLast[arm] = node.id
   }
 
   const displacement = nodes.map(() => ({ x: 0, y: 0 }))
-  const iterations = 84
+  const iterations = 56
 
   for (let iteration = 0; iteration < iterations; iteration++) {
     for (const item of displacement) {
@@ -297,10 +201,10 @@ export function buildMasteryTreeLayout(
     for (let i = 1; i < nodes.length; i++) {
       const node = nodes[i]
       const initial = initialPositions[i]
-      displacement[i].x += (initial.x - node.x) * 0.028
-      displacement[i].y += (initial.y - node.y) * 0.028
-      node.x += displacement[i].x * 0.72
-      node.y += displacement[i].y * 0.72
+      displacement[i].x += (initial.x - node.x) * 0.06
+      displacement[i].y += (initial.y - node.y) * 0.06
+      node.x += displacement[i].x * 0.65
+      node.y += displacement[i].y * 0.65
     }
   }
 
@@ -319,32 +223,27 @@ export function buildMasteryTreeLayout(
       path: buildCurve(parent, node, `${seed}:edge:${parent.id}:${node.id}`),
       layer: node.layer,
       color: edgeColor(node.level),
-      width: node.layer <= 1 ? 2.1 : node.layer === 2 ? 1.55 : 1.05,
-      delay: Math.min(1.3, 0.08 + node.layer * 0.11),
+      width: node.layer <= 1 ? 2.2 : node.layer === 2 ? 1.6 : 1.05,
+      delay: Math.min(1.3, 0.08 + node.layer * 0.08),
     })
   }
 
-  for (const node of nodes) {
-    if (node.parentId === null) {
-      node.tier = 'legend'
-    } else if (node.layer === 1) {
-      node.tier = 'core'
-    } else if (node.layer <= 3) {
-      node.tier = 'branch'
-    } else {
-      node.tier = 'outer'
-    }
-  }
-
-  const maxExtent = nodes.reduce((extent, node) => {
-    return Math.max(extent, Math.abs(node.x) + node.radius, Math.abs(node.y) + node.radius)
+  const maxDistance = nodes.reduce((distance, node) => {
+    return Math.max(distance, Math.hypot(node.x, node.y) + node.radius)
   }, 0)
+
+  const guideEnd = maxDistance + 40
+  const guides = armAngles.map((angle) =>
+    buildGuide(angle, SUN_RADIUS * 0.72, Math.max(guideEnd, SUN_RADIUS * 1.6)),
+  )
 
   return {
     nodes,
     edges,
-    extent: Math.ceil(Math.max(180, maxExtent + 92)),
+    extent: Math.ceil(Math.max(220, maxDistance + 110)),
     totalPoints,
-    coreRadius,
+    coreRadius: SUN_RADIUS * 1.55,
+    arms,
+    guides,
   }
 }

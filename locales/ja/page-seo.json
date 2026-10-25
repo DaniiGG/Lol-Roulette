@@ -1,0 +1,62 @@
+{
+  "home": {
+    "title": "LoLランダムチャンピオン生成 & ルーレット",
+    "description": "無料のLeague of Legendsチャンピオンルーレットを回し、レーンで絞り込んで次の試合のチャンピオンをランダムに選べます。勝利を記録し、XPを獲得してランキングを上がりましょう。"
+  },
+  "about": {
+    "title": "League Rouletteについて",
+    "description": "League Rouletteの仕組み、ランダムチャンピオンが上達に役立つ理由、Riot APIによる試合確認、XP、実績、ランキングの連携を紹介します。"
+  },
+  "faq": {
+    "title": "LoLランダムチャンピオン生成FAQ",
+    "description": "無料のLoLランダムチャンピオン生成、チャンピオンルーレット、レーンフィルター、Riotの試合確認、XP、連勝、アカウントの安全性について回答します。"
+  },
+  "howToPlay": {
+    "title": "League Rouletteの遊び方",
+    "description": "チャンピオンルーレットの回し方、ランダムピックでのプレイ、Riot APIでの勝利確認、XP獲得、連勝、ウィークリーチャレンジの進め方を解説します。"
+  },
+  "tips": {
+    "title": "ランダムチャンピオンのコツと戦略",
+    "description": "ランダムなLeague of Legendsチャンピオンで勝つための実践的なコツ：ロールの基本、柔軟なビルド、マッチアップの計画、メンタル管理を紹介します。"
+  },
+  "contact": {
+    "title": "League Rouletteへのお問い合わせ",
+    "description": "League Rouletteチームへのサポート依頼、バグ報告、機能提案、提携の相談、ランダムチャンピオン生成へのフィードバックはこちらから。"
+  },
+  "privacy": {
+    "title": "プライバシーポリシー",
+    "description": "League Rouletteがアカウントデータ、Riot API情報、Cookie、分析データ、プライバシー設定をどのように扱うかを説明します。"
+  },
+  "terms": {
+    "title": "利用規約",
+    "description": "League Rouletteの利用ルール、許容される利用、Riot APIデータ、アカウント、チャレンジ、サービスの制限について説明します。"
+  },
+  "leaderboard": {
+    "title": "LoLランキング：トッププレイヤー",
+    "description": "XP、レベル、達成チャレンジ、連勝数でランク付けされたLeague Rouletteのトッププレイヤーを確認。自分の順位を追い、1位を目指しましょう。"
+  },
+  "mastery": {
+    "title": "チャンピオンマスタリー追跡",
+    "description": "League of Legendsのチャンピオンマスタリーレベル、ポイント、勝率を確認。得意なチャンピオンを見つけ、次のランダムピックを選びましょう。"
+  },
+  "modes": {
+    "title": "League of Legendsのゲームモード",
+    "description": "サモナーズリフトやARAMからURF、One for Allまで、League of Legendsのゲームモードを比較し、次のランダムチャレンジに最適なモードを選びましょう。"
+  },
+  "popular": {
+    "title": "人気のLoLチャンピオン",
+    "description": "ロールとティア別に、League of Legendsで最も選ばれているチャンピオンを紹介。次のランダムチャンピオン選びに役立つメモ付きです。"
+  },
+  "tierlist": {
+    "title": "ロール別LoLチャンピオンTierリスト",
+    "description": "トップ、ジャングル、ミッド、ADC、サポートの最新League of LegendsチャンピオンTierリストを確認。Sティアのピックを比較して次のメインを見つけましょう。"
+  },
+  "challenges": {
+    "title": "LoLランダムチャンピオンチャレンジ",
+    "description": "League of Legendsのウィークリーチャレンジを有効化し、確認済みの勝利でボーナスXPを獲得。ランダムピックを楽しい成長システムに変えましょう。"
+  },
+  "lane": {
+    "title": "{role}チャンピオンガイド",
+    "description": "{role}で強いチャンピオン、マッチアップのコツ、ランク・ノーマル・ARAM向けのランダムピック例を紹介します。"
+  }
+}

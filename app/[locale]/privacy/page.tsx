@@ -1,26 +1,22 @@
 // app/privacy/page.tsx
-import type { Metadata } from "next"
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import SlotLever from '@/components/SlotLever'
-import { getTranslations } from 'next-intl/server'
-import { getHreflangAlternates } from '@/lib/seo-utils'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
+import { buildPageMetadata } from '@/lib/seo/page-metadata'
 import Breadcrumbs from '@/components/Breadcrumbs'
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
-  return {
-    title: 'Privacy Policy - League Roulette',
-    description: 'League Roulette privacy policy. Learn how we collect, use, and protect your data when you use our free LoL random champion generator and challenge tracker.',
-    keywords: ['league roulette privacy policy', 'lol random champion privacy', 'league of legends data privacy', 'riot api privacy', 'privacy policy'],
-    alternates: {
-      canonical: locale === 'en' ? '/privacy' : `/${locale}/privacy`,
-      languages: getHreflangAlternates('/privacy'),
-    },
-    robots: {
-      index: true,
-      follow: true,
-    },
-  }
+  setRequestLocale(locale)
+  const t = await getTranslations('page-seo')
+
+  return buildPageMetadata({
+    locale,
+    path: '/privacy',
+    title: t('privacy.title'),
+    description: t('privacy.description'),
+  })
 }
 
 const baseUrl = 'https://leagueroulette.com'

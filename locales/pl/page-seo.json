@@ -1,0 +1,62 @@
+{
+  "home": {
+    "title": "Losowy generator bohaterów LoL i ruletka",
+    "description": "Zakręć darmową ruletką bohaterów League of Legends, filtruj według linii i wylosuj bohatera na następny mecz. Śledź zwycięstwa, zdobywaj XP i pnij się w rankingu."
+  },
+  "about": {
+    "title": "O League Roulette",
+    "description": "Dowiedz się, jak działa League Roulette, dlaczego losowi bohaterowie pomagają się rozwijać i jak łączą się weryfikacja Riot API, XP, osiągnięcia i ranking."
+  },
+  "faq": {
+    "title": "FAQ losowego generatora bohaterów LoL",
+    "description": "Odpowiedzi o darmowym generatorze losowych bohaterów LoL, ruletce, filtrach linii, weryfikacji Riot, XP, seriach zwycięstw i bezpieczeństwie konta."
+  },
+  "howToPlay": {
+    "title": "Jak grać w League Roulette",
+    "description": "Naucz się kręcić ruletką bohaterów, grać losowym wyborem, weryfikować zwycięstwo przez Riot API, zdobywać XP, budować serie i kończyć tygodniowe wyzwania."
+  },
+  "tips": {
+    "title": "Wskazówki i strategia dla losowych bohaterów",
+    "description": "Praktyczne porady, jak wygrywać losowymi bohaterami League of Legends: podstawy ról, elastyczne buildy, planowanie matchupów i nastawienie."
+  },
+  "contact": {
+    "title": "Kontakt z League Roulette",
+    "description": "Skontaktuj się z zespołem League Roulette w sprawie wsparcia, błędów, pomysłów na funkcje, współpracy lub opinii o generatorze losowych bohaterów."
+  },
+  "privacy": {
+    "title": "Polityka prywatności",
+    "description": "Sprawdź, jak League Roulette obsługuje dane konta, informacje z Riot API, pliki cookie, analitykę i Twoje opcje prywatności."
+  },
+  "terms": {
+    "title": "Warunki korzystania",
+    "description": "Poznaj zasady korzystania z League Roulette, w tym dozwolone użycie, dane Riot API, konta, wyzwania i ograniczenia usługi."
+  },
+  "leaderboard": {
+    "title": "Ranking LoL: najlepsi gracze",
+    "description": "Zobacz najlepszych graczy League Roulette według XP, poziomu, ukończonych wyzwań i serii zwycięstw. Śledź swoją pozycję i walcz o pierwsze miejsce."
+  },
+  "mastery": {
+    "title": "Tracker mistrzostwa bohaterów",
+    "description": "Sprawdź poziomy mistrzostwa, punkty i winrate bohaterów w League of Legends. Znajdź najsilniejszych bohaterów i wybierz następny losowy pick."
+  },
+  "modes": {
+    "title": "Tryby gry League of Legends",
+    "description": "Porównaj tryby League of Legends, od Summoner's Rift i ARAM po URF i One for All, i wybierz najlepszy do kolejnego losowego wyzwania."
+  },
+  "popular": {
+    "title": "Najpopularniejsi bohaterowie LoL",
+    "description": "Poznaj najczęściej wybieranych bohaterów League of Legends według roli i tieru, z krótkimi wskazówkami ułatwiającymi wybór kolejnego losowego bohatera."
+  },
+  "tierlist": {
+    "title": "Tier lista bohaterów LoL według ról",
+    "description": "Sprawdź aktualną tier listę bohaterów League of Legends dla topu, jungle, midu, ADC i supportu. Porównaj picki S i znajdź swojego kolejnego maina."
+  },
+  "challenges": {
+    "title": "Losowe wyzwania bohaterów LoL",
+    "description": "Aktywuj tygodniowe wyzwania League of Legends, zdobywaj bonusowe XP za zweryfikowane zwycięstwa i zamień losowe picki w zabawną progresję."
+  },
+  "lane": {
+    "title": "Poradnik bohaterów: {role}",
+    "description": "Odkryj mocnych bohaterów na {role}, wskazówki do matchupów i pomysły na losowe picki w ranked, normal i ARAM."
+  }
+}

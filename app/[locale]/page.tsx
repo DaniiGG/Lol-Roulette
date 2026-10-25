@@ -1,40 +1,19 @@
-import type { Metadata } from "next"
-import { setRequestLocale } from 'next-intl/server'
-import { getHreflangAlternates } from '@/lib/seo-utils'
+import type { Metadata } from 'next'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
+import { buildPageMetadata } from '@/lib/seo/page-metadata'
 import HomeClient from './HomeClient'
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
-  const metadataByLocale: Record<string, { title: string; description: string }> = {
-    en: {
-      title: 'Free League of Legends Random Champion Generator',
-      description:
-        'Pick a random League of Legends champion with a free champion roulette. Filter by lane, spin again, and start your next game instantly, no account required.',
-    },
-    es: {
-      title: 'Ruleta y Generador Aleatorio de Campeones de League of Legends',
-      description:
-        'Elige un campeón aleatorio de League of Legends gratis. Filtra por línea, gira la ruleta y descubre con quién jugar tu próxima partida.',
-    },
-  }
-  const pageMetadata = metadataByLocale[locale] ?? metadataByLocale.en
+  setRequestLocale(locale)
+  const t = await getTranslations('page-seo')
 
-  return {
-    title: pageMetadata.title,
-    description: pageMetadata.description,
-    openGraph: {
-      title: pageMetadata.title,
-      description: pageMetadata.description,
-    },
-    twitter: {
-      title: pageMetadata.title,
-      description: pageMetadata.description,
-    },
-    alternates: {
-      canonical: locale === 'en' ? '/' : `/${locale}`,
-      languages: getHreflangAlternates('/'),
-    },
-  }
+  return buildPageMetadata({
+    locale,
+    path: '/',
+    title: t('home.title'),
+    description: t('home.description'),
+  })
 }
 
 export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {

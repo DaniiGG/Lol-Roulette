@@ -782,7 +782,7 @@
         "resetView": "Ansicht zurücksetzen",
         "zoomIn": "Vergrößern",
         "zoomOut": "Verkleinern",
-        "legend": "Knotengröße = Meisterschaftspunkte (logarithmische Skala)",
+        "legend": "Knotengröße = Meisterschaftspunkte",
         "legendLevels": "Meisterschaftsstufe",
         "shareOfTotal": "{percent} % deiner gesamten Meisterschaft",
         "rankOf": "Platz #{rank} von {total}",

@@ -1,0 +1,62 @@
+{
+  "home": {
+    "title": "Willekeurige LoL-champion generator & roulette",
+    "description": "Draai de gratis League of Legends-championroulette, filter op lane en krijg een willekeurige champion voor je volgende wedstrijd. Volg overwinningen, verdien XP en klim op de ranglijst."
+  },
+  "about": {
+    "title": "Over League Roulette",
+    "description": "Ontdek hoe League Roulette werkt, waarom willekeurige champions je helpen beter te worden en hoe Riot API-matchverificatie, XP, prestaties en ranglijsten samenkomen."
+  },
+  "faq": {
+    "title": "FAQ willekeurige LoL-champion generator",
+    "description": "Antwoorden over de gratis LoL-champion generator, championroulette, lanefilters, Riot-matchverificatie, XP, reeksen en accountveiligheid."
+  },
+  "howToPlay": {
+    "title": "Hoe speel je League Roulette",
+    "description": "Leer de championroulette draaien, je willekeurige pick spelen, een overwinning verifiëren met de Riot API, XP verdienen, reeksen opbouwen en wekelijkse uitdagingen voltooien."
+  },
+  "tips": {
+    "title": "Tips & strategie voor willekeurige champions",
+    "description": "Praktische tips om te winnen met willekeurige League of Legends-champions: role fundamentals, flexibele builds, matchup-planning en mentale strategieën."
+  },
+  "contact": {
+    "title": "Contact met League Roulette",
+    "description": "Neem contact op met het League Roulette-team voor support, bugmeldingen, functie-ideeën, samenwerkingen of feedback over de willekeurige champion generator."
+  },
+  "privacy": {
+    "title": "Privacybeleid",
+    "description": "Lees hoe League Roulette omgaat met accountgegevens, Riot API-informatie, cookies, analytics en je privacykeuzes."
+  },
+  "terms": {
+    "title": "Servicevoorwaarden",
+    "description": "Lees de regels voor het gebruik van League Roulette, inclusief acceptabel gebruik, Riot API-gegevens, accounts, uitdagingen en servicelimieten."
+  },
+  "leaderboard": {
+    "title": "LoL-ranglijst: top spelers",
+    "description": "Bekijk de beste League Roulette-spelers op XP, level, voltooide uitdagingen en winreeksen. Volg je positie en strijd om de eerste plaats."
+  },
+  "mastery": {
+    "title": "Champion mastery tracker",
+    "description": "Bekijk je champion mastery-levels, punten en winrates in League of Legends. Vind je sterkste champions en kies je volgende willekeurige pick."
+  },
+  "modes": {
+    "title": "League of Legends-spelmodi",
+    "description": "Vergelijk de spelmodi van League of Legends, van Summoner's Rift en ARAM tot URF en One for All, en kies de beste voor je volgende willekeurige uitdaging."
+  },
+  "popular": {
+    "title": "Populairste LoL-champions",
+    "description": "Ontdek de meest gekozen League of Legends-champions per rol en tier, met korte notities om je volgende willekeurige champion te kiezen."
+  },
+  "tierlist": {
+    "title": "LoL-champion tierlijst per rol",
+    "description": "Bekijk de actuele League of Legends-champion tierlijst voor top, jungle, mid, ADC en support. Vergelijk S-tier picks en vind je volgende main."
+  },
+  "challenges": {
+    "title": "LoL willekeurige champion-uitdagingen",
+    "description": "Activeer wekelijkse League of Legends-uitdagingen, verdien bonus-XP bij geverifieerde overwinningen en maak van willekeurige picks een leuke progressie."
+  },
+  "lane": {
+    "title": "Championgids: {role}",
+    "description": "Ontdek sterke champions voor {role}, matchup-tips en ideeën voor willekeurige picks in ranked, normaal en ARAM."
+  }
+}

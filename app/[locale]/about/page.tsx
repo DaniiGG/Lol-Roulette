@@ -1,26 +1,20 @@
 // app/about/page.tsx
-import type { Metadata } from "next"
-import { getTranslations } from 'next-intl/server'
-import { getHreflangAlternates } from '@/lib/seo-utils'
+import type { Metadata } from 'next'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
+import { buildPageMetadata } from '@/lib/seo/page-metadata'
 import Breadcrumbs from '@/components/Breadcrumbs'
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
-  return {
-    title: 'About League Roulette - Free LoL Random Champion Generator & Randomizer',
-    description: 'Learn about League Roulette, the free random lol champion generator and League of Legends roulette. Track wins with the best league of legends randomizer and champion roulette.',
-    keywords: ['about league roulette', 'lol random champion generator about', 'league of legends challenge platform', 'free lol randomizer tool', 'league of legends randomizer about', 'random league champ generator platform'],
-    alternates: {
-      canonical: locale === 'en' ? '/about' : `/${locale}/about`,
-      languages: getHreflangAlternates('/about'),
-    },
-    openGraph: {
-      title: 'About League Roulette - Random Champion Challenge Platform',
-      description: 'Free random champion generator and League of Legends randomizer with match verification, XP tracking, achievements, and leaderboards.',
-      url: locale === 'en' ? '/about' : `/${locale}/about`,
-      siteName: 'League Roulette',
-    },
-  }
+  setRequestLocale(locale)
+  const t = await getTranslations('page-seo')
+
+  return buildPageMetadata({
+    locale,
+    path: '/about',
+    title: t('about.title'),
+    description: t('about.description'),
+  })
 }
 
 const baseUrl = 'https://leagueroulette.com'
@@ -36,10 +30,19 @@ const breadcrumbSchema = {
 
 export default async function AboutPage() {
   const t = await getTranslations('about')
+  const communityP3 = t('communityP3', { contactLink: '__CONTACT_LINK__' })
+  const [communityBefore, communityAfter] = communityP3.split('__CONTACT_LINK__')
 
   return (
     <main className="min-h-screen bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 px-6 pb-12 pt-10">
       <div className="max-w-4xl mx-auto">
+        <Breadcrumbs
+          items={[
+            { label: 'League Roulette', href: '/' },
+            { label: t('title') },
+          ]}
+        />
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
@@ -173,7 +176,7 @@ export default async function AboutPage() {
               {t('communityP2')}
             </p>
             <p className="text-neutral-300 text-lg leading-relaxed">
-              {t.rich('communityP3', { contactLink: (chunks) => <a href="/contact" className="text-[#C89B3C] hover:text-[#d9aa44] underline">{chunks}</a> })}
+              {communityBefore}<a href="/contact" className="text-[#C89B3C] hover:text-[#d9aa44] underline">{t('contactLink')}</a>{communityAfter}
             </p>
           </section>
 

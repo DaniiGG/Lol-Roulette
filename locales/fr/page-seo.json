@@ -1,0 +1,62 @@
+{
+  "home": {
+    "title": "Générateur aléatoire de champions LoL et roulette",
+    "description": "Tournez la roulette gratuite des champions de League of Legends, filtrez par voie et obtenez un champion aléatoire pour votre prochaine partie. Suivez vos victoires, gagnez de l'XP et grimpez au classement."
+  },
+  "about": {
+    "title": "À propos de League Roulette",
+    "description": "Découvrez comment fonctionne League Roulette, pourquoi les champions aléatoires vous aident à progresser et comment la vérification Riot API, l'XP, les succès et le classement s'articulent."
+  },
+  "faq": {
+    "title": "FAQ du générateur LoL aléatoire",
+    "description": "Réponses sur le générateur gratuit de champions aléatoires LoL, la roulette, les filtres par voie, la vérification Riot, l'XP, les séries et la sécurité du compte."
+  },
+  "howToPlay": {
+    "title": "Comment jouer à League Roulette",
+    "description": "Apprenez à lancer la roulette, jouer votre pick aléatoire, vérifier une victoire avec l'API Riot, gagner de l'XP, enchaîner les séries et relever les défis hebdomadaires."
+  },
+  "tips": {
+    "title": "Conseils et stratégie pour champions aléatoires",
+    "description": "Des conseils concrets pour gagner avec des champions aléatoires de League of Legends : fondamentaux par rôle, builds adaptables, matchups et mental."
+  },
+  "contact": {
+    "title": "Contacter League Roulette",
+    "description": "Contactez l'équipe League Roulette pour du support, signaler un bug, proposer une fonctionnalité, une collaboration ou donner votre avis sur le générateur."
+  },
+  "privacy": {
+    "title": "Politique de confidentialité",
+    "description": "Découvrez comment League Roulette gère les données de compte, les informations Riot API, les cookies, les statistiques et vos choix de confidentialité."
+  },
+  "terms": {
+    "title": "Conditions d'utilisation",
+    "description": "Consultez les règles d'utilisation de League Roulette : usage acceptable, données Riot API, comptes, défis et limites du service."
+  },
+  "leaderboard": {
+    "title": "Classement LoL : meilleurs joueurs",
+    "description": "Découvrez les meilleurs joueurs de League Roulette par XP, niveau, défis terminés et séries de victoires. Suivez votre position et visez la première place."
+  },
+  "mastery": {
+    "title": "Suivi de maîtrise des champions",
+    "description": "Consultez vos niveaux de maîtrise, points et taux de victoire sur League of Legends. Repérez vos champions les plus forts et choisissez votre prochain pick aléatoire."
+  },
+  "modes": {
+    "title": "Modes de jeu League of Legends",
+    "description": "Comparez les modes de League of Legends, de la Faille de l'invocateur et ARAM à URF et Un pour tous, et choisissez le meilleur pour votre prochain défi aléatoire."
+  },
+  "popular": {
+    "title": "Champions LoL les plus populaires",
+    "description": "Explorez les champions de League of Legends les plus choisis par rôle et par tier, avec des notes rapides pour vous aider à choisir votre prochain champion aléatoire."
+  },
+  "tierlist": {
+    "title": "Tier list des champions LoL par rôle",
+    "description": "Consultez la tier list actuelle des champions de League of Legends pour top, jungle, mid, ADC et support. Comparez les picks S et trouvez votre prochain main."
+  },
+  "challenges": {
+    "title": "Défis de champions aléatoires LoL",
+    "description": "Activez des défis hebdomadaires League of Legends, gagnez de l'XP bonus sur les victoires vérifiées et transformez les picks aléatoires en progression amusante."
+  },
+  "lane": {
+    "title": "Guide des champions : {role}",
+    "description": "Découvrez les meilleurs champions pour {role}, des conseils de matchup et des idées de picks aléatoires pour la ranked, les normales et l'ARAM."
+  }
+}

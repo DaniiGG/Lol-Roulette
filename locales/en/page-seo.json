@@ -1,0 +1,62 @@
+{
+  "home": {
+    "title": "LoL Random Champion Generator & Roulette",
+    "description": "Spin the free League of Legends champion roulette, filter by lane, and get a random champion for your next match. Track wins, earn XP, and climb the leaderboard."
+  },
+  "about": {
+    "title": "About League Roulette",
+    "description": "Learn how League Roulette works, why random champions help you improve, and how Riot API match verification, XP, achievements, and leaderboards fit together."
+  },
+  "faq": {
+    "title": "LoL Random Champion Generator FAQ",
+    "description": "Answers about the free LoL random champion generator, champion roulette, lane filters, Riot match verification, XP, streaks, and account safety."
+  },
+  "howToPlay": {
+    "title": "How to Play League Roulette",
+    "description": "Learn how to spin the champion roulette, play your random pick, verify a win with the Riot API, earn XP, build streaks, and complete weekly challenges."
+  },
+  "tips": {
+    "title": "LoL Random Champion Tips & Strategy",
+    "description": "Practical tips for winning with random League of Legends champions: role fundamentals, adaptable builds, matchup planning, and mental reset strategies."
+  },
+  "contact": {
+    "title": "Contact League Roulette",
+    "description": "Contact the League Roulette team for support, bug reports, feature ideas, partnership requests, or feedback about the random champion generator."
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "description": "Read how League Roulette handles account data, Riot API information, cookies, analytics, and your privacy choices."
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "description": "Read the rules for using League Roulette, including acceptable use, Riot API data, accounts, challenges, and service limitations."
+  },
+  "leaderboard": {
+    "title": "LoL Leaderboard: Top Players",
+    "description": "See the top League Roulette players ranked by XP, level, completed challenges, and win streaks. Track your position and compete for the top spot."
+  },
+  "mastery": {
+    "title": "Champion Mastery Tracker",
+    "description": "Check your League of Legends champion mastery levels, points, and win rates. Find your strongest champions and choose your next random pick."
+  },
+  "modes": {
+    "title": "League of Legends Game Modes",
+    "description": "Compare League of Legends game modes, from Summoner's Rift and ARAM to URF and One for All, and choose the best mode for your next random champion challenge."
+  },
+  "popular": {
+    "title": "Popular LoL Champions This Week",
+    "description": "Explore the most picked League of Legends champions by role and tier, with quick notes to help you choose your next random champion."
+  },
+  "tierlist": {
+    "title": "LoL Champion Tier List by Role",
+    "description": "Browse the current League of Legends champion tier list for top, jungle, mid, ADC, and support. Compare S-tier picks and find your next main."
+  },
+  "challenges": {
+    "title": "LoL Random Champion Challenges",
+    "description": "Activate weekly League of Legends challenges, earn bonus XP on verified wins, and turn random champion picks into a fun progression system."
+  },
+  "lane": {
+    "title": "{role} Champions Guide",
+    "description": "Discover strong {role} champions, matchup tips, and random pick ideas for ranked, normal, and ARAM games."
+  }
+}

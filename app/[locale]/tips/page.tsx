@@ -1,27 +1,20 @@
 // app/tips/page.tsx
-import type { Metadata } from "next"
-import { getTranslations } from 'next-intl/server'
-import { getHreflangAlternates } from '@/lib/seo-utils'
+import type { Metadata } from 'next'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
+import { buildPageMetadata } from '@/lib/seo/page-metadata'
 import Breadcrumbs from '@/components/Breadcrumbs'
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
-  return {
-    title: 'Random LoL Champion Tips - Master Champion Roulette Picks & Strategy',
-    description: 'Win more with random lol champion picks and the champion roulette. League of legends randomizer tips for every lane, champion archetypes, and mental game advice to master any LoL champion.',
-    keywords: ['roulette lol tips', 'random lol champion guide', 'lol strategy tips', 'league of legends champion guides', 'random champion tips', 'how to play any champion lol', 'league of legends fundamentals', 'champion roulette tips', 'random league champ generator tips', 'league of legends randomizer strategy'],
-    alternates: {
-      canonical: locale === 'en' ? '/tips' : `/${locale}/tips`,
-      languages: getHreflangAlternates('/tips'),
-    },
-    openGraph: {
-      title: 'LoL Strategy Tips & Champion Guides',
-      description: 'Learn to master random champions in League of Legends. Tips for all lanes, champion archetypes, and mental game strategies.',
-      url: locale === 'en' ? '/tips' : `/${locale}/tips`,
-      siteName: 'League Roulette',
-    },
-    robots: { index: false, follow: true },
-  }
+  setRequestLocale(locale)
+  const t = await getTranslations('page-seo')
+
+  return buildPageMetadata({
+    locale,
+    path: '/tips',
+    title: t('tips.title'),
+    description: t('tips.description'),
+  })
 }
 
 const baseUrl = 'https://leagueroulette.com'

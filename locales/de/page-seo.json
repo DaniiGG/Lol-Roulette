@@ -1,0 +1,62 @@
+{
+  "home": {
+    "title": "Zufälliger LoL-Champion-Generator & Roulette",
+    "description": "Dreh die kostenlose League-of-Legends-Champion-Roulette, filtere nach Lane und erhalte einen zufälligen Champion für dein nächstes Spiel. Verfolge Siege, sammle XP und steig im Ranking."
+  },
+  "about": {
+    "title": "Über League Roulette",
+    "description": "Erfahre, wie League Roulette funktioniert, warum zufällige Champions dir beim Verbessern helfen und wie Riot-API-Verifizierung, XP, Erfolge und Rangliste zusammenspielen."
+  },
+  "faq": {
+    "title": "FAQ zum zufälligen LoL-Champion-Generator",
+    "description": "Antworten zum kostenlosen LoL-Champion-Generator, zur Champion-Roulette, zu Lane-Filtern, Riot-Verifizierung, XP, Serien und Kontosicherheit."
+  },
+  "howToPlay": {
+    "title": "League Roulette spielen",
+    "description": "Lerne, die Champion-Roulette zu drehen, deinen Zufallspick zu spielen, einen Sieg per Riot-API zu verifizieren, XP zu sammeln, Serien aufzubauen und Wochenaufgaben zu meistern."
+  },
+  "tips": {
+    "title": "Tipps & Strategie für zufällige Champions",
+    "description": "Praktische Tipps, um mit zufälligen League-of-Legends-Champions zu gewinnen: Rollen-Grundlagen, anpassbare Builds, Matchup-Planung und mentale Strategien."
+  },
+  "contact": {
+    "title": "League Roulette kontaktieren",
+    "description": "Kontaktiere das League-Roulette-Team für Support, Bugmeldungen, Feature-Ideen, Partnerschaften oder Feedback zum Zufalls-Champion-Generator."
+  },
+  "privacy": {
+    "title": "Datenschutzerklärung",
+    "description": "Erfahre, wie League Roulette Kontodaten, Riot-API-Informationen, Cookies, Analysedaten und deine Datenschutzoptionen behandelt."
+  },
+  "terms": {
+    "title": "Nutzungsbedingungen",
+    "description": "Lies die Regeln für die Nutzung von League Roulette, einschließlich zulässiger Nutzung, Riot-API-Daten, Konten, Herausforderungen und Servicegrenzen."
+  },
+  "leaderboard": {
+    "title": "LoL-Rangliste: Top-Spieler",
+    "description": "Sieh die besten League-Roulette-Spieler nach XP, Level, abgeschlossenen Herausforderungen und Siegesserien. Verfolge deinen Platz und kämpfe um Rang 1."
+  },
+  "mastery": {
+    "title": "Champion-Meisterschaft tracker",
+    "description": "Prüfe deine Champion-Meisterschaftsstufen, Punkte und Siegquoten in League of Legends. Finde deine stärksten Champions und wähle deinen nächsten Zufallspick."
+  },
+  "modes": {
+    "title": "League of Legends Spielmodi",
+    "description": "Vergleiche die Spielmodi von League of Legends, von Kluft der Beschwörer und ARAM bis URF und Einer für alle, und wähle den besten für deine nächste Zufalls-Challenge."
+  },
+  "popular": {
+    "title": "Beliebteste LoL-Champions",
+    "description": "Entdecke die meistgewählten League-of-Legends-Champions nach Rolle und Tier, mit kurzen Hinweisen für deinen nächsten zufälligen Champion."
+  },
+  "tierlist": {
+    "title": "LoL-Champion-Tier-Liste nach Rolle",
+    "description": "Sieh dir die aktuelle League-of-Legends-Tier-Liste für Top, Jungle, Mid, ADC und Support an. Vergleiche S-Tier-Picks und finde deinen nächsten Main."
+  },
+  "challenges": {
+    "title": "LoL-Zufalls-Champion-Herausforderungen",
+    "description": "Aktiviere wöchentliche League-of-Legends-Herausforderungen, erhalte Bonus-XP für verifizierte Siege und mache Zufallspicks zu einem unterhaltsamen Fortschritt."
+  },
+  "lane": {
+    "title": "Champion-Guide: {role}",
+    "description": "Entdecke starke Champions für {role}, Matchup-Tipps und Ideen für Zufallspicks in Ranked, Normal und ARAM."
+  }
+}

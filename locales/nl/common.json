@@ -647,7 +647,7 @@
         "resetView": "Weergave resetten",
         "zoomIn": "Inzoomen",
         "zoomOut": "Uitzoomen",
-        "legend": "Knooppuntgrootte = meesterschapspunten (logaritmische schaal)",
+        "legend": "Knooppuntgrootte = meesterschapspunten",
         "legendLevels": "Meesterschapsniveau",
         "shareOfTotal": "{percent}% van je totale meesterschap",
         "rankOf": "Rang #{rank} van {total}",

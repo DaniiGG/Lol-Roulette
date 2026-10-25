@@ -1,0 +1,62 @@
+{
+  "home": {
+    "title": "LoL 랜덤 챔피언 생성기 & 룰렛",
+    "description": "무료 리그 오브 레전드 챔피언 룰렛을 돌리고 라인으로 필터링해 다음 경기에 쓸 챔피언을 무작위로 선택하세요. 승리를 기록하고 XP를 얻어 순위표를 올라가세요."
+  },
+  "about": {
+    "title": "League Roulette 소개",
+    "description": "League Roulette의 작동 방식, 무작위 챔피언이 실력 향상에 도움이 되는 이유, Riot API 경기 검증, XP, 업적, 순위표가 어떻게 연결되는지 알아보세요."
+  },
+  "faq": {
+    "title": "LoL 랜덤 챔피언 생성기 FAQ",
+    "description": "무료 LoL 랜덤 챔피언 생성기, 챔피언 룰렛, 라인 필터, Riot 경기 검증, XP, 연승, 계정 보안에 대한 답변을 확인하세요."
+  },
+  "howToPlay": {
+    "title": "League Roulette 플레이 방법",
+    "description": "챔피언 룰렛 돌리기, 무작위 픽 플레이, Riot API로 승리 검증, XP 획득, 연승 만들기, 주간 챌린지 완료 방법을 알아보세요."
+  },
+  "tips": {
+    "title": "랜덤 챔피언 팁 & 전략",
+    "description": "무작위 리그 오브 레전드 챔피언으로 승리하기 위한 실전 팁: 역할 기본기, 유연한 빌드, 맞대결 계획, 멘탈 관리 전략을 소개합니다."
+  },
+  "contact": {
+    "title": "League Roulette 문의",
+    "description": "League Roulette 팀에 지원, 버그 신고, 기능 제안, 제휴 문의 또는 랜덤 챔피언 생성기에 대한 피드백을 보내세요."
+  },
+  "privacy": {
+    "title": "개인정보 처리방침",
+    "description": "League Roulette가 계정 데이터, Riot API 정보, 쿠키, 분석 데이터, 개인정보 선택권을 어떻게 처리하는지 확인하세요."
+  },
+  "terms": {
+    "title": "서비스 약관",
+    "description": "League Roulette 사용 규칙, 허용되는 사용, Riot API 데이터, 계정, 챌린지, 서비스 제한에 대해 확인하세요."
+  },
+  "leaderboard": {
+    "title": "LoL 순위표: 상위 플레이어",
+    "description": "XP, 레벨, 완료한 챌린지, 연승 수로 순위가 매겨진 League Roulette 상위 플레이어를 확인하세요. 내 순위를 추적하고 1위를 노려보세요."
+  },
+  "mastery": {
+    "title": "챔피언 숙련도 추적",
+    "description": "리그 오브 레전드 챔피언 숙련도 레벨, 포인트, 승률을 확인하세요. 가장 강한 챔피언을 찾고 다음 랜덤 픽을 선택하세요."
+  },
+  "modes": {
+    "title": "리그 오브 레전드 게임 모드",
+    "description": "소환사의 협곡과 ARAM부터 URF, One for All까지 리그 오브 레전드 게임 모드를 비교하고 다음 랜덤 챌린지에 가장 좋은 모드를 고르세요."
+  },
+  "popular": {
+    "title": "이번 주 인기 LoL 챔피언",
+    "description": "역할과 티어별로 리그 오브 레전드에서 가장 많이 선택된 챔피언을 살펴보고, 다음 랜덤 챔피언 선택에 도움이 되는 간단한 메모를 확인하세요."
+  },
+  "tierlist": {
+    "title": "역할별 LoL 챔피언 티어 리스트",
+    "description": "탑, 정글, 미드, ADC, 서포터의 최신 리그 오브 레전드 챔피언 티어 리스트를 확인하세요. S티어 픽을 비교하고 다음 메인을 찾아보세요."
+  },
+  "challenges": {
+    "title": "LoL 랜덤 챔피언 챌린지",
+    "description": "리그 오브 레전드 주간 챌린지를 활성화하고 검증된 승리에서 보너스 XP를 획득하세요. 무작위 픽을 재미있는 성장 시스템으로 바꿔보세요."
+  },
+  "lane": {
+    "title": "{role} 챔피언 가이드",
+    "description": "{role}에 강한 챔피언, 맞대결 팁, 랭크·일반·ARAM용 랜덤 픽 아이디어를 확인하세요."
+  }
+}

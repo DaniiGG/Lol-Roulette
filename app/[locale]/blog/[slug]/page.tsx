@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { notFound, redirect } from 'next/navigation'
-import { getTranslations } from 'next-intl/server'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { getGraphSchema, getBreadcrumbSchema } from '@/lib/seo-utils'
 import { routing } from '@/i18n/routing'
 import Link from 'next/link'
@@ -56,6 +56,7 @@ export async function generateMetadata(
   props: BlogPostPageProps
 ): Promise<Metadata> {
   const { locale, slug } = await props.params
+  setRequestLocale(locale)
   const canonicalSlug = resolvePostSlug(slug, locale)
   if (!canonicalSlug) return {}
 
@@ -78,17 +79,18 @@ export async function generateMetadata(
   const availableLocales = getAvailableLocales(canonicalSlug)
   const publishedDate = meta?.publishedAt ?? ''
   const updatedDate = meta?.updatedAt ?? ''
-  const title = getSeoTitle(canonicalSlug, locale) ?? `${post.title} | League Roulette Blog`
+  const title = getSeoTitle(canonicalSlug, locale) ?? post.title
   const description = getSeoDescription(canonicalSlug, locale) ?? post.description
   const imageAlt = getImageAlt(canonicalSlug, locale) ?? post.title
   const canonicalPath = getPostHref(canonicalSlug, locale)
-  const schemaLocale = locale === 'en' ? 'en_US' : locale
+  const schemaLocale = locale === 'en' ? 'en_US' : locale === 'es' ? 'es_ES' : locale
+  const isTranslated = availableLocales.includes(locale)
 
   return {
     title,
     description,
-    keywords: meta?.keywords,
     authors: [{ name: meta?.author ?? 'League Roulette Team', url: 'https://leagueroulette.com/about' }],
+    robots: isTranslated ? undefined : { index: false, follow: true },
     alternates: {
       canonical: canonicalPath,
       languages: {

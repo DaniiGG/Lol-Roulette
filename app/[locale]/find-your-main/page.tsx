@@ -23,7 +23,6 @@ export async function generateMetadata({ params }: { params: Promise<PageParams>
   return {
     title: t('meta.title'),
     description: t('meta.description'),
-    keywords: t.raw('meta.keywords') as string[],
     alternates: {
       canonical: path,
       languages: getHreflangAlternates(PAGE_PATH),

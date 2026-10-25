@@ -1,0 +1,62 @@
+{
+  "home": {
+    "title": "Generatore casuale di campioni LoL e roulette",
+    "description": "Gira la roulette gratuita dei campioni di League of Legends, filtra per corsia e ottieni un campione casuale per la prossima partita. Monitora le vittorie, guadagna XP e scala la classifica."
+  },
+  "about": {
+    "title": "Informazioni su League Roulette",
+    "description": "Scopri come funziona League Roulette, perché i campioni casuali ti aiutano a migliorare e come si combinano verifica Riot API, XP, obiettivi e classifica."
+  },
+  "faq": {
+    "title": "FAQ generatore casuale LoL",
+    "description": "Risposte sul generatore gratuito di campioni casuali LoL, roulette, filtri per corsia, verifica Riot, XP, serie di vittorie e sicurezza dell'account."
+  },
+  "howToPlay": {
+    "title": "Come giocare a League Roulette",
+    "description": "Scopri come girare la roulette, giocare il pick casuale, verificare una vittoria con l'API Riot, guadagnare XP, creare serie e completare le sfide settimanali."
+  },
+  "tips": {
+    "title": "Consigli e strategia per campioni casuali",
+    "description": "Consigli pratici per vincere con campioni casuali di League of Legends: fondamentali per ruolo, build adattabili, pianificazione dei matchup e mentalità."
+  },
+  "contact": {
+    "title": "Contatta League Roulette",
+    "description": "Contatta il team di League Roulette per supporto, segnalazioni, idee per funzioni, collaborazioni o feedback sul generatore di campioni casuali."
+  },
+  "privacy": {
+    "title": "Informativa sulla privacy",
+    "description": "Scopri come League Roulette gestisce i dati dell'account, le informazioni Riot API, i cookie, le analisi e le tue scelte sulla privacy."
+  },
+  "terms": {
+    "title": "Termini di servizio",
+    "description": "Leggi le regole per usare League Roulette, inclusi uso accettabile, dati Riot API, account, sfide e limitazioni del servizio."
+  },
+  "leaderboard": {
+    "title": "Classifica LoL: migliori giocatori",
+    "description": "Scopri i migliori giocatori di League Roulette per XP, livello, sfide completate e serie di vittorie. Segui la tua posizione e competi per il primo posto."
+  },
+  "mastery": {
+    "title": "Monitor maestria campioni",
+    "description": "Controlla livelli di maestria, punti e percentuale di vittorie dei campioni in League of Legends. Trova i tuoi campioni più forti e scegli il prossimo pick casuale."
+  },
+  "modes": {
+    "title": "Modalità di gioco di League of Legends",
+    "description": "Confronta le modalità di League of Legends, dalla Landa degli Evocatori e ARAM a URF e Uno per Tutti, e scegli la migliore per la tua prossima sfida casuale."
+  },
+  "popular": {
+    "title": "Campioni LoL più popolari",
+    "description": "Esplora i campioni di League of Legends più scelti per ruolo e tier, con note rapide per aiutarti a scegliere il prossimo campione casuale."
+  },
+  "tierlist": {
+    "title": "Tier list campioni LoL per ruolo",
+    "description": "Consulta la tier list attuale dei campioni di League of Legends per top, jungla, mid, ADC e support. Confronta i pick S e trova il tuo prossimo main."
+  },
+  "challenges": {
+    "title": "Sfide campioni casuali LoL",
+    "description": "Attiva sfide settimanali di League of Legends, guadagna XP bonus sulle vittorie verificate e trasforma i pick casuali in una progressione divertente."
+  },
+  "lane": {
+    "title": "Guida ai campioni: {role}",
+    "description": "Scopri i campioni più forti per {role}, consigli sui matchup e idee per pick casuali in ranked, normal e ARAM."
+  }
+}

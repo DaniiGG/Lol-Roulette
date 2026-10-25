@@ -37,6 +37,7 @@ export interface MasteryTreeNode {
   parentId: number | null
   tier: MasteryNodeTier
   delay: number
+  arm: number
 }
 
 export interface MasteryTreeEdge {
@@ -56,4 +57,6 @@ export interface MasteryTreeLayout {
   extent: number
   totalPoints: number
   coreRadius: number
+  arms: number
+  guides: string[]
 }

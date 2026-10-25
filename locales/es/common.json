@@ -644,7 +644,7 @@
         "resetView": "Restablecer vista",
         "zoomIn": "Acercar",
         "zoomOut": "Alejar",
-        "legend": "Tamaño del nodo = puntos de maestría (escala logarítmica)",
+        "legend": "Tamaño del nodo = puntos de maestría",
         "legendLevels": "Nivel de maestría",
         "shareOfTotal": "{percent}% de tu maestría total",
         "rankOf": "Puesto n.º {rank} de {total}",

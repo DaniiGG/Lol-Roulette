@@ -1,0 +1,62 @@
+{
+  "home": {
+    "title": "LoL随机英雄生成器与轮盘",
+    "description": "免费旋转英雄联盟英雄轮盘，按位置筛选，为下一场比赛随机选择英雄。记录胜利、获取经验值并冲击排行榜。"
+  },
+  "about": {
+    "title": "关于 League Roulette",
+    "description": "了解 League Roulette 的运作方式、随机英雄为何能帮助你提升，以及 Riot API 对局验证、经验值、成就和排行榜如何配合。"
+  },
+  "faq": {
+    "title": "LoL随机英雄生成器常见问题",
+    "description": "解答关于免费 LoL 随机英雄生成器、英雄轮盘、位置筛选、Riot 对局验证、经验值、连胜和账号安全的问题。"
+  },
+  "howToPlay": {
+    "title": "如何游玩 League Roulette",
+    "description": "了解如何旋转英雄轮盘、使用随机英雄、通过 Riot API 验证胜利、获取经验值、建立连胜并完成每周挑战。"
+  },
+  "tips": {
+    "title": "随机英雄技巧与策略",
+    "description": "使用随机英雄联盟英雄取胜的实用技巧：各位置基础、灵活出装、对线规划以及心态调整策略。"
+  },
+  "contact": {
+    "title": "联系 League Roulette",
+    "description": "联系 League Roulette 团队获取支持、报告错误、提出功能建议、洽谈合作，或反馈随机英雄生成器的使用体验。"
+  },
+  "privacy": {
+    "title": "隐私政策",
+    "description": "了解 League Roulette 如何处理账号数据、Riot API 信息、Cookie、分析数据以及你的隐私选择。"
+  },
+  "terms": {
+    "title": "服务条款",
+    "description": "阅读 League Roulette 的使用规则，包括可接受使用、Riot API 数据、账号、挑战和服务限制。"
+  },
+  "leaderboard": {
+    "title": "LoL排行榜：顶尖玩家",
+    "description": "查看按经验值、等级、已完成挑战和连胜数排名的 League Roulette 顶尖玩家。跟踪你的位置并争夺第一名。"
+  },
+  "mastery": {
+    "title": "英雄精通追踪",
+    "description": "查看你的英雄联盟英雄精通等级、点数和胜率。找出最强英雄，并选择下一个随机英雄。"
+  },
+  "modes": {
+    "title": "英雄联盟游戏模式",
+    "description": "比较英雄联盟游戏模式，从召唤师峡谷和 ARAM 到 URF 和克隆大作战，为下一次随机挑战选择最佳模式。"
+  },
+  "popular": {
+    "title": "本周热门 LoL 英雄",
+    "description": "按位置和梯队浏览英雄联盟最热门英雄，并附有简短说明，帮助你选择下一个随机英雄。"
+  },
+  "tierlist": {
+    "title": "按位置划分的 LoL 英雄梯队",
+    "description": "查看上单、打野、中单、ADC 和辅助的最新英雄联盟英雄梯队。比较 S 级选择，找到你的下一个主玩英雄。"
+  },
+  "challenges": {
+    "title": "LoL随机英雄挑战",
+    "description": "激活英雄联盟每周挑战，在已验证的胜利中获取额外经验值，让随机英雄选择变成有趣的成长系统。"
+  },
+  "lane": {
+    "title": "{role}英雄指南",
+    "description": "发现适合{role}的强势英雄、对线技巧，以及排位、普通和 ARAM 的随机选择灵感。"
+  }
+}

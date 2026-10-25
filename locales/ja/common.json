@@ -646,7 +646,7 @@
         "resetView": "表示をリセット",
         "zoomIn": "ズームイン",
         "zoomOut": "ズームアウト",
-        "legend": "ノードの大きさ = マスタリーポイント（対数スケール）",
+        "legend": "ノードの大きさ = マスタリーポイント",
         "legendLevels": "マスタリーレベル",
         "shareOfTotal": "総マスタリーの{percent}%",
         "rankOf": "順位 #{rank} / {total}",

@@ -10,6 +10,7 @@ import Breadcrumbs from "@/components/Breadcrumbs"
 
 export default function MasteryPage() {
   const t = useTranslations('mastery')
+  const tm = useTranslations('championMastery')
   const locale = useLocale()
   const [user, setUser] = useState<any>(null)
   const [loading, setLoading] = useState(true)
@@ -79,7 +80,14 @@ export default function MasteryPage() {
           backgroundImage: `radial-gradient(circle at 1px 1px, white 1px, transparent 0)`,
           backgroundSize: '40px 40px'
         }}></div>
-        <div className="relative z-10 min-h-screen px-4 pb-4 pt-10 sm:px-6 sm:pb-6">
+
+        <div className="pointer-events-none absolute inset-0 overflow-hidden">
+          <div className="absolute -top-24 right-[12%] h-[420px] w-[420px] rounded-full bg-[#C89B3C]/15 blur-[130px]"></div>
+          <div className="absolute bottom-[8%] left-[6%] h-[360px] w-[360px] rounded-full bg-cyan-500/10 blur-[120px]"></div>
+          <div className="absolute top-1/3 left-1/2 h-[300px] w-[300px] -translate-x-1/2 rounded-full bg-violet-600/10 blur-[120px]"></div>
+        </div>
+
+        <div className="relative z-10 min-h-screen px-4 pb-16 pt-8 sm:px-6">
           <div className="mx-auto max-w-[1600px]">
             <Breadcrumbs
               items={[
@@ -88,20 +96,57 @@ export default function MasteryPage() {
               ]}
             />
           </div>
-          <div className="flex min-h-[calc(100vh-8rem)] flex-col items-center justify-center">
-            <div className="max-w-md w-full">
-              <div className="text-7xl mb-6 animate-float text-center">🏅</div>
-              <h1 className="text-3xl font-black text-white mb-3 text-center">{t('loginRequired')}</h1>
-              <p className="text-neutral-400 mb-8 text-center">{t('loginRequiredDesc')}</p>
+
+          <div className="mx-auto grid w-full max-w-6xl items-center gap-12 py-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16 lg:py-16">
+            <div className="text-center lg:text-left">
+              <span className="inline-flex items-center gap-2 rounded-full border border-[#C89B3C]/30 bg-[#C89B3C]/10 px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#f0c75e]">
+                <span className="relative flex h-2 w-2">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#f0c75e]/70"></span>
+                  <span className="relative inline-flex h-2 w-2 rounded-full bg-[#f0c75e]"></span>
+                </span>
+                {t('loginRequired')}
+              </span>
+
+              <h1
+                className="mt-5 bg-gradient-to-r from-[#f0c75e] via-[#C89B3C] to-[#f0c75e] bg-clip-text text-5xl uppercase leading-[0.95] tracking-[0.04em] text-transparent sm:text-6xl lg:text-7xl"
+                style={{ fontFamily: '"Bebas Neue", sans-serif' }}
+              >
+                {t('title')}
+              </h1>
+
+              <p className="mx-auto mt-4 max-w-md text-base leading-relaxed text-neutral-400 lg:mx-0">
+                {t('loginRequiredDesc')}
+              </p>
+
+              <div className="mt-8 flex flex-wrap justify-center gap-2.5 lg:justify-start">
+                <div className="flex items-center gap-2 rounded-xl border border-white/10 bg-white/[0.03] px-3.5 py-2 text-sm text-neutral-300 backdrop-blur-sm">
+                  <span className="text-[#f0c75e]">🎯</span>
+                  {tm('totalPoints')}
+                </div>
+                <div className="flex items-center gap-2 rounded-xl border border-white/10 bg-white/[0.03] px-3.5 py-2 text-sm text-neutral-300 backdrop-blur-sm">
+                  <span className="text-cyan-300">📈</span>
+                  {t('winrateSection')}
+                </div>
+                <div className="flex items-center gap-2 rounded-xl border border-white/10 bg-white/[0.03] px-3.5 py-2 text-sm text-neutral-300 backdrop-blur-sm">
+                  <span className="text-violet-300">⭐</span>
+                  {tm('mastery7Plus')}
+                </div>
+              </div>
+
             </div>
-            <HybridLoginModal
-              onClose={() => {}}
-              onSuccess={(token: string, userData: any) => {
-                Cookies.set('session_token', token, { expires: 30, secure: true, sameSite: 'strict' })
-                setUser(userData)
-              }}
-              initialMode="manual"
-            />
+
+            <div className="relative">
+              <div className="pointer-events-none absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-[#C89B3C]/20 via-transparent to-cyan-400/10 blur-2xl"></div>
+              <HybridLoginModal
+                variant="inline"
+                onClose={() => {}}
+                onSuccess={(token: string, userData: any) => {
+                  Cookies.set('session_token', token, { expires: 30, secure: true, sameSite: 'strict' })
+                  setUser(userData)
+                }}
+                initialMode="manual"
+              />
+            </div>
           </div>
         </div>
       </main>

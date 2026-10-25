@@ -1,27 +1,20 @@
 // app/how-to-play/page.tsx
-import type { Metadata } from "next"
-import { getTranslations } from 'next-intl/server'
-import { getHreflangAlternates } from '@/lib/seo-utils'
+import type { Metadata } from 'next'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
+import { buildPageMetadata } from '@/lib/seo/page-metadata'
 import Breadcrumbs from '@/components/Breadcrumbs'
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
-  return {
-    title: 'How to Play League Roulette - Random League Champion Generator Guide',
-    description: 'Learn how to use the random league champ generator and League of Legends roulette. Step-by-step tutorial for getting random lol champion picks, champion roulette spins, match verification, and rewards.',
-    keywords: ['random league champion generator tutorial', 'how to play league roulette', 'champion roulette guide', 'lol random champion generator tutorial', 'league roulette guide', 'how to use lol champion picker', 'random lol champion guide', 'league of legends challenge platform tutorial', 'league of legends randomizer guide', 'random league champ generator tutorial'],
-    alternates: {
-      canonical: locale === 'en' ? '/howtoplay' : `/${locale}/howtoplay`,
-      languages: getHreflangAlternates('/howtoplay'),
-    },
-    openGraph: {
-      title: 'How to Play League Roulette - Complete Guide',
-      description: 'Step-by-step tutorial for the free LoL random champion generator and league of legends randomizer. Learn to spin, verify matches, earn XP, and climb leaderboards.',
-      url: locale === 'en' ? '/howtoplay' : `/${locale}/howtoplay`,
-      siteName: 'League Roulette',
-    },
-    robots: { index: false, follow: true },
-  }
+  setRequestLocale(locale)
+  const t = await getTranslations('page-seo')
+
+  return buildPageMetadata({
+    locale,
+    path: '/howtoplay',
+    title: t('howToPlay.title'),
+    description: t('howToPlay.description'),
+  })
 }
 
 const baseUrl = 'https://leagueroulette.com'

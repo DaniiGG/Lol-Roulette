@@ -1,357 +1,426 @@
 // components/HybridLoginModal.tsx
 'use client'
 
-import { useState } from 'react'
+import { useState, useSyncExternalStore } from 'react'
+import { createPortal } from 'react-dom'
 import Cookies from 'js-cookie'
 import { useTranslations } from 'next-intl'
+import {
+  ArrowLeft,
+  ChevronDown,
+  Globe2,
+  ShieldCheck,
+  Sparkles,
+  User,
+  X,
+} from 'lucide-react'
 
 interface HybridLoginModalProps {
   onClose: () => void
   onSuccess: (token: string, user: any) => void
   initialMode?: LoginMode
+  variant?: 'modal' | 'inline'
 }
 
 type LoginMode = 'choose' | 'oauth' | 'manual'
 
-export default function HybridLoginModal({ onClose, onSuccess, initialMode }: HybridLoginModalProps) {
+const REGION_VALUES = [
+  { value: 'euw1', key: 'euw' },
+  { value: 'eun1', key: 'eune' },
+  { value: 'na1', key: 'na' },
+  { value: 'kr', key: 'kr' },
+  { value: 'br1', key: 'br' },
+  { value: 'la1', key: 'lan' },
+  { value: 'la2', key: 'las' },
+  { value: 'oc1', key: 'oce' },
+  { value: 'tr1', key: 'tr' },
+  { value: 'ru', key: 'ru' },
+  { value: 'jp1', key: 'jp' },
+] as const
+
+const displayFont = { fontFamily: '"Bebas Neue", sans-serif' }
+
+const subscribeToHydration = () => () => {}
+const getClientSnapshot = () => true
+const getServerSnapshot = () => false
+
+export default function HybridLoginModal({
+  onClose,
+  onSuccess,
+  initialMode,
+  variant = 'modal',
+}: HybridLoginModalProps) {
   const t = useTranslations('rsoLogin')
   const [mode, setMode] = useState<LoginMode>(initialMode ?? 'choose')
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
+  const mounted = useSyncExternalStore(
+    subscribeToHydration,
+    getClientSnapshot,
+    getServerSnapshot
+  )
 
-  // Manual login states
   const [riotId, setRiotId] = useState('')
   const [region, setRegion] = useState('euw1')
 
-  const REGIONS = [
-    { value: 'euw1', label: t('regions.euw') },
-    { value: 'eun1', label: t('regions.eune') },
-    { value: 'na1', label: t('regions.na') },
-    { value: 'kr', label: t('regions.kr') },
-    { value: 'br1', label: t('regions.br') },
-    { value: 'la1', label: t('regions.lan') },
-    { value: 'la2', label: t('regions.las') },
-    { value: 'oc1', label: t('regions.oce') },
-    { value: 'tr1', label: t('regions.tr') },
-    { value: 'ru', label: t('regions.ru') },
-    { value: 'jp1', label: t('regions.jp') }
-  ]
-
-  // OAuth Login
   const handleOAuthLogin = () => {
     window.location.href = '/api/auth/riot-oauth/authorize'
   }
 
-const handleManualLogin = async () => {
-  setError('')
-  setLoading(true)
+  const handleManualLogin = async () => {
+    setError('')
+    setLoading(true)
 
-  try {
-    if (!riotId.includes('#')) {
-      setError(t('errorInvalidFormat'))
-      setLoading(false)
-      return
-    }
+    try {
+      if (!riotId.includes('#')) {
+        setError(t('errorInvalidFormat'))
+        setLoading(false)
+        return
+      }
 
-    const [gameName, tagLine] = riotId.split('#')
+      const [gameName, tagLine] = riotId.split('#')
 
-    if (!gameName || !tagLine) {
-      setError(t('errorInvalidRiotId'))
-      setLoading(false)
-      return
-    }
+      if (!gameName || !tagLine) {
+        setError(t('errorInvalidRiotId'))
+        setLoading(false)
+        return
+      }
 
-    console.log('🔍 Step 1: Verifying Riot ID...')
-    
-    const verifyResponse = await fetch('/api/auth/verify-riot-id', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ gameName, tagLine, region })
-    })
-
-    if (!verifyResponse.ok) {
-      const errorData = await verifyResponse.json()
-      console.error('❌ Verify failed:', errorData)
-      setError(errorData.error || t('errorNotFound'))
-      setLoading(false)
-      return
-    }
-
-    const riotData = await verifyResponse.json()
-    console.log('✅ Riot ID verified:', riotData)
-
-    console.log('🔍 Step 2: Creating session...')
-    
-    const sessionResponse = await fetch('/api/auth/create-session', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        puuid: riotData.puuid,
-        gameName: riotData.gameName,
-        tagLine: riotData.tagLine,
-        summonerId: riotData.summonerId,
-        summonerName: riotData.summonerName,
-        summonerLevel: riotData.summonerLevel,
-        profileIconId: riotData.profileIconId,
-        region: region
+      const verifyResponse = await fetch('/api/auth/verify-riot-id', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ gameName, tagLine, region }),
       })
-    })
 
-    if (!sessionResponse.ok) {
-      const errorData = await sessionResponse.json()
-      console.error('❌ Session creation failed:', errorData)
-      
-      const errorMessage = errorData.details 
-        ? `${errorData.error}: ${errorData.details}` 
-        : errorData.error
-      
-      setError(errorMessage || t('errorSession'))
+      if (!verifyResponse.ok) {
+        const errorData = await verifyResponse.json()
+        setError(errorData.error || t('errorNotFound'))
+        setLoading(false)
+        return
+      }
+
+      const riotData = await verifyResponse.json()
+
+      const sessionResponse = await fetch('/api/auth/create-session', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          puuid: riotData.puuid,
+          gameName: riotData.gameName,
+          tagLine: riotData.tagLine,
+          summonerId: riotData.summonerId,
+          summonerName: riotData.summonerName,
+          summonerLevel: riotData.summonerLevel,
+          profileIconId: riotData.profileIconId,
+          region,
+        }),
+      })
+
+      if (!sessionResponse.ok) {
+        const errorData = await sessionResponse.json()
+
+        const errorMessage = errorData.details
+          ? `${errorData.error}: ${errorData.details}`
+          : errorData.error
+
+        setError(errorMessage || t('errorSession'))
+        setLoading(false)
+        return
+      }
+
+      const { token, user } = await sessionResponse.json()
+
+      Cookies.set('session_token', token, {
+        expires: 30,
+        secure: true,
+        sameSite: 'strict',
+      })
+
+      onSuccess(token, user)
+    } catch (error: any) {
+      setError(t('errorUnexpected', { message: error.message || t('errorSession') }))
+    } finally {
       setLoading(false)
-      return
     }
-
-    const { token, user } = await sessionResponse.json()
-    console.log('✅ Session created successfully!')
-
-    Cookies.set('session_token', token, { expires: 30, secure: true, sameSite: 'strict' })
-
-    onSuccess(token, user)
-
-  } catch (error: any) {
-    console.error('❌ Manual login error:', error)
-    setError(t('errorUnexpected', { message: error.message || t('errorSession') }))
-  } finally {
-    setLoading(false)
   }
-}
 
-  return (
-    <div className="fixed inset-0 bg-black/90 backdrop-blur-sm flex items-center justify-center z-50 p-4">
-      <div className="bg-neutral-900 rounded-3xl border border-neutral-800 max-w-lg md:max-w-2xl w-full overflow-hidden">
-        
-        {/* Header */}
-        <div className="relative p-6 bg-gradient-to-br from-[#C89B3C]/20 to-neutral-900">
+  const canSubmit = riotId.includes('#') && !loading
+
+  const card = (
+    <div
+      className={`relative w-full overflow-hidden rounded-3xl border border-white/10 bg-[#0a0616]/85 shadow-[0_35px_100px_-30px_rgba(200,155,60,0.45)] backdrop-blur-2xl ${
+        variant === 'inline' ? 'mx-auto max-w-md' : 'max-w-lg md:max-w-2xl'
+      }`}
+    >
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#C89B3C]/80 to-transparent" />
+      <div className="pointer-events-none absolute -top-28 left-1/2 h-56 w-56 -translate-x-1/2 rounded-full bg-[#C89B3C]/20 blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-24 -right-10 h-48 w-48 rounded-full bg-cyan-400/10 blur-3xl" />
+
+      <div className="relative px-6 pb-5 pt-8 text-center sm:px-8">
+        {variant === 'modal' && (
           <button
+            type="button"
             onClick={onClose}
-            className="absolute top-4 right-4 text-neutral-400 hover:text-white transition"
+            aria-label={t('back')}
+            className="absolute right-4 top-4 flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/5 text-zinc-400 transition hover:border-white/25 hover:bg-white/10 hover:text-white"
           >
-            ✕
+            <X className="h-4 w-4" />
           </button>
-          
-          <div className="text-center">
-            <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-[#C89B3C] flex items-center justify-center">
-              <svg className="w-10 h-10 text-neutral-950" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-              </svg>
-            </div>
-            <h2 className="text-2xl font-bold text-white mb-2">
-              {t('title')}
-            </h2>
-            <p className="text-neutral-400 text-sm">
-              {t('chooseMethod')}
-            </p>
+        )}
+
+        <div className="relative mx-auto mb-5 flex h-16 w-16 items-center justify-center">
+          <div className="absolute inset-0 rounded-2xl bg-[#C89B3C]/30 blur-xl" />
+          <div className="relative flex h-16 w-16 items-center justify-center rounded-2xl border border-[#C89B3C]/50 bg-gradient-to-br from-[#C89B3C]/35 via-[#C89B3C]/10 to-transparent shadow-[inset_0_1px_0_rgba(255,255,255,0.15)]">
+            <ShieldCheck className="h-8 w-8 text-[#f0c75e]" />
           </div>
         </div>
 
-        <div className="p-6">
-          {/* Choose Mode */}
-          {mode === 'choose' && (
-            <div className="space-y-4">
-              {/* OAuth Option (Recommended) */}
-              <button
-                onClick={() => setMode('oauth')}
-                className="w-full p-5 rounded-xl bg-gradient-to-br from-red-600/20 to-neutral-900 border-2 border-red-500/30 hover:border-red-500/50 transition group"
-              >
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-red-600 flex items-center justify-center flex-shrink-0">
-                    <svg className="w-7 h-7 text-white" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
-                    </svg>
-                  </div>
-                  <div className="flex-1 text-left">
-                    <div className="flex items-center gap-2 mb-1">
-                      <h3 className="text-white font-bold">{t('riotOauth')}</h3>
-                      <span className="px-2 py-0.5 rounded-full bg-green-500/20 text-green-400 text-xs font-semibold">
-                        {t('recommended')}
-                      </span>
-                    </div>
-                    <p className="text-neutral-400 text-sm">{t('oauthDesc')}</p>
-                  </div>
-                  <svg className="w-5 h-5 text-neutral-500 group-hover:text-white transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+        <h2
+          className="text-4xl uppercase leading-none tracking-[0.08em] text-white"
+          style={displayFont}
+        >
+          {t('title')}
+        </h2>
+        <p className="mt-2 text-sm text-zinc-400">
+          {mode === 'manual' ? t('manualDesc') : mode === 'oauth' ? t('oauthDesc') : t('chooseMethod')}
+        </p>
+      </div>
+
+      <div className="relative px-6 pb-7 sm:px-8">
+        {mode === 'choose' && (
+          <div className="space-y-3">
+            <button
+              type="button"
+              onClick={() => setMode('oauth')}
+              className="group relative w-full overflow-hidden rounded-2xl border border-red-500/25 bg-gradient-to-r from-red-600/20 via-red-600/5 to-transparent p-4 text-left transition hover:border-red-400/50 hover:from-red-600/30"
+            >
+              <span className="absolute inset-y-0 left-0 w-1 bg-gradient-to-b from-red-400 to-red-700" />
+              <div className="flex items-center gap-4 pl-2">
+                <div className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-xl bg-red-600 shadow-[0_0_25px_-5px_rgba(220,38,38,0.8)]">
+                  <svg className="h-6 w-6 text-white" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z" />
                   </svg>
                 </div>
-              </button>
-
-              {/* Manual Option */}
-              <button
-                onClick={() => setMode('manual')}
-                className="w-full p-5 rounded-xl bg-neutral-800 border-2 border-neutral-700 hover:border-neutral-600 transition group"
-              >
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-neutral-700 flex items-center justify-center flex-shrink-0">
-                    <svg className="w-6 h-6 text-neutral-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
-                    </svg>
+                <div className="min-w-0 flex-1">
+                  <div className="mb-1 flex flex-wrap items-center gap-2">
+                    <h3 className="font-bold text-white">{t('riotOauth')}</h3>
+                    <span className="inline-flex items-center gap-1 rounded-full border border-emerald-400/30 bg-emerald-500/15 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-emerald-300">
+                      <Sparkles className="h-3 w-3" />
+                      {t('recommended')}
+                    </span>
                   </div>
-                  <div className="flex-1 text-left">
-                    <h3 className="text-white font-bold mb-1">{t('manualRiotId')}</h3>
-                    <p className="text-neutral-400 text-sm">{t('manualDesc')}</p>
-                  </div>
-                  <svg className="w-5 h-5 text-neutral-500 group-hover:text-white transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
+                  <p className="text-sm text-zinc-400">{t('oauthDesc')}</p>
                 </div>
-              </button>
-
-              {/* Info Box */}
-              <div className="p-4 rounded-xl bg-blue-500/10 border border-blue-500/30">
-                <p className="text-blue-300 text-xs">
-                  {t('oauthExplanation')}
-                </p>
+                <ChevronDown className="h-5 w-5 -rotate-90 text-zinc-600 transition group-hover:translate-x-0.5 group-hover:text-white" />
               </div>
-            </div>
-          )}
+            </button>
 
-          {/* OAuth Mode */}
-          {mode === 'oauth' && (
-            <div className="space-y-4">
-              <button
-                onClick={() => setMode('choose')}
-                className="flex items-center gap-2 text-neutral-400 hover:text-white transition text-sm mb-4"
-              >
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-                </svg>
-                {t('back')}
-              </button>
-
-              {/* Trust Indicators */}
-              <div className="space-y-3 mb-6">
-                <div className="flex items-start gap-3 p-3 rounded-lg bg-green-500/10 border border-green-500/30">
-                  <svg className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  <div>
-                    <p className="text-green-400 font-semibold text-sm mb-1">{t('officialAuth')}</p>
-                    <p className="text-green-300/80 text-xs">{t('officialDesc')}</p>
-                  </div>
+            <button
+              type="button"
+              onClick={() => setMode('manual')}
+              className="group relative w-full overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] p-4 text-left transition hover:border-[#C89B3C]/50 hover:bg-white/[0.05]"
+            >
+              <span className="absolute inset-y-0 left-0 w-1 bg-gradient-to-b from-[#f0c75e] to-[#8a6b2a]" />
+              <div className="flex items-center gap-4 pl-2">
+                <div className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-xl border border-[#C89B3C]/30 bg-[#C89B3C]/15">
+                  <User className="h-5 w-5 text-[#f0c75e]" />
                 </div>
-
-                <div className="flex items-start gap-3 p-3 rounded-lg bg-blue-500/10 border border-blue-500/30">
-                  <svg className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                  </svg>
-                  <div>
-                    <p className="text-blue-400 font-semibold text-sm mb-1">{t('noPassword')}</p>
-                    <p className="text-blue-300/80 text-xs">{t('noPasswordDesc')}</p>
-                  </div>
+                <div className="min-w-0 flex-1">
+                  <h3 className="mb-1 font-bold text-white">{t('manualRiotId')}</h3>
+                  <p className="text-sm text-zinc-400">{t('manualDesc')}</p>
                 </div>
+                <ChevronDown className="h-5 w-5 -rotate-90 text-zinc-600 transition group-hover:translate-x-0.5 group-hover:text-white" />
               </div>
+            </button>
 
-              <button
-                onClick={handleOAuthLogin}
-                className="w-full py-4 rounded-xl bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-bold transition-all transform hover:scale-[1.02]"
-              >
-                <div className="flex items-center justify-center gap-3">
-                  <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
-                  </svg>
-                  <span>{t('continueOauth')}</span>
-                </div>
-              </button>
+            <div className="flex gap-3 rounded-2xl border border-cyan-400/20 bg-cyan-500/[0.06] p-4">
+              <ShieldCheck className="mt-0.5 h-5 w-5 flex-shrink-0 text-cyan-300" />
+              <p className="text-xs leading-relaxed text-cyan-100/70">{t('oauthExplanation')}</p>
             </div>
-          )}
+          </div>
+        )}
 
-          {/* Manual Mode */}
-          {mode === 'manual' && (
-            <div className="space-y-4">
-              <button
-                onClick={() => setMode('choose')}
-                className="flex items-center gap-2 text-neutral-400 hover:text-white transition text-sm mb-4"
-              >
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-                </svg>
-                {t('back')}
-              </button>
+        {mode === 'oauth' && (
+          <div className="space-y-4">
+            <button
+              type="button"
+              onClick={() => setMode('choose')}
+              className="mb-2 flex items-center gap-2 text-sm text-zinc-400 transition hover:text-white"
+            >
+              <ArrowLeft className="h-4 w-4" />
+              {t('back')}
+            </button>
 
+            <div className="flex items-start gap-3 rounded-2xl border border-emerald-400/25 bg-emerald-500/10 p-4">
+              <ShieldCheck className="mt-0.5 h-5 w-5 flex-shrink-0 text-emerald-400" />
               <div>
-                <label className="block text-white font-semibold mb-2 text-sm">
-                  {t('riotIdLabel')}
-                </label>
+                <p className="mb-1 text-sm font-semibold text-emerald-300">{t('officialAuth')}</p>
+                <p className="text-xs text-emerald-100/70">{t('officialDesc')}</p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-3 rounded-2xl border border-cyan-400/25 bg-cyan-500/10 p-4">
+              <ShieldCheck className="mt-0.5 h-5 w-5 flex-shrink-0 text-cyan-300" />
+              <div>
+                <p className="mb-1 text-sm font-semibold text-cyan-200">{t('noPassword')}</p>
+                <p className="text-xs text-cyan-100/70">{t('noPasswordDesc')}</p>
+              </div>
+            </div>
+
+            <button
+              type="button"
+              onClick={handleOAuthLogin}
+              className="group relative w-full overflow-hidden rounded-xl bg-gradient-to-r from-red-600 to-red-700 py-3.5 font-bold text-white shadow-[0_10px_35px_-12px_rgba(220,38,38,0.9)] transition hover:brightness-110"
+            >
+              <span className="absolute inset-0 -translate-x-full bg-white/20 transition-transform duration-700 group-hover:translate-x-full" />
+              <span className="relative flex items-center justify-center gap-3">
+                <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z" />
+                </svg>
+                {t('continueOauth')}
+              </span>
+            </button>
+          </div>
+        )}
+
+        {mode === 'manual' && (
+          <div className="space-y-4">
+            <button
+              type="button"
+              onClick={() => setMode('choose')}
+              className="mb-2 flex items-center gap-2 text-sm text-zinc-400 transition hover:text-white"
+            >
+              <ArrowLeft className="h-4 w-4" />
+              {t('back')}
+            </button>
+
+            <div>
+              <label
+                htmlFor="riot-id"
+                className="mb-2 block text-[11px] font-semibold uppercase tracking-[0.18em] text-zinc-400"
+              >
+                {t('riotIdLabel')}
+              </label>
+              <div className="relative">
+                <User className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-zinc-500" />
                 <input
+                  id="riot-id"
                   type="text"
                   placeholder={t('riotIdPlaceholder')}
                   value={riotId}
-                  onChange={(e) => setRiotId(e.target.value)}
-                  className="w-full px-4 py-3 rounded-xl bg-neutral-800 border border-neutral-700 text-white placeholder-neutral-500 focus:outline-none focus:border-[#C89B3C] transition"
+                  onChange={(event) => {
+                    setRiotId(event.target.value)
+                    setError('')
+                  }}
+                  onKeyDown={(event) => {
+                    if (event.key === 'Enter' && canSubmit) handleManualLogin()
+                  }}
+                  autoComplete="off"
+                  spellCheck={false}
+                  disabled={loading}
+                  className="w-full rounded-xl border border-white/10 bg-white/[0.03] py-3.5 pl-11 pr-4 text-base leading-normal text-white outline-none transition placeholder:text-zinc-500 focus:border-[#C89B3C]/60 focus:bg-white/[0.05] focus:ring-2 focus:ring-[#C89B3C]/20 disabled:opacity-60"
                 />
-                <p className="text-neutral-500 text-xs mt-2">
-                  {t('findRiotId')}
-                </p>
               </div>
+              <p className="mt-2 pl-1 text-xs text-zinc-500">{t('findRiotId')}</p>
+            </div>
 
-              <div>
-                <label className="block text-white font-semibold mb-2 text-sm">
-                  {t('regionLabel')}
-                </label>
+            <div>
+              <label
+                htmlFor="region"
+                className="mb-2 block text-[11px] font-semibold uppercase tracking-[0.18em] text-zinc-400"
+              >
+                {t('regionLabel')}
+              </label>
+              <div className="relative">
+                <Globe2 className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-zinc-500" />
                 <select
+                  id="region"
                   value={region}
-                  onChange={(e) => setRegion(e.target.value)}
-                  className="w-full px-4 py-3 rounded-xl bg-neutral-800 border border-neutral-700 text-white focus:outline-none focus:border-[#C89B3C] transition"
+                  onChange={(event) => setRegion(event.target.value)}
+                  disabled={loading}
+                  className="w-full appearance-none rounded-xl border border-white/10 bg-white/[0.03] py-3.5 pl-11 pr-11 text-base text-white outline-none transition focus:border-[#C89B3C]/60 focus:bg-white/[0.05] focus:ring-2 focus:ring-[#C89B3C]/20 disabled:opacity-60"
                 >
-                  {REGIONS.map((r) => (
-                    <option key={r.value} value={r.value}>
-                      {r.label}
+                  {REGION_VALUES.map((item) => (
+                    <option key={item.value} value={item.value} className="bg-neutral-900">
+                      {t(`regions.${item.key}`)}
                     </option>
                   ))}
                 </select>
+                <ChevronDown className="pointer-events-none absolute right-4 top-1/2 h-4 w-4 -translate-y-1/2 text-zinc-500" />
               </div>
+            </div>
 
-              {error && (
-                <div className="p-3 rounded-xl bg-red-500/10 border border-red-500/50">
-                  <p className="text-red-400 text-sm">{error}</p>
-                </div>
-              )}
+            {error && (
+              <div className="rounded-xl border border-red-500/40 bg-red-500/10 p-3">
+                <p className="text-sm text-red-300">{error}</p>
+              </div>
+            )}
 
-              <button
-                onClick={handleManualLogin}
-                disabled={loading || !riotId.includes('#')}
-                className="w-full py-4 rounded-xl bg-[#C89B3C] text-neutral-950 font-bold hover:bg-[#d9aa44] transition disabled:opacity-50 disabled:cursor-not-allowed"
-              >
+            <button
+              type="button"
+              onClick={handleManualLogin}
+              disabled={!canSubmit}
+              className="group relative w-full overflow-hidden rounded-xl bg-gradient-to-r from-[#C89B3C] via-[#e0b45a] to-[#C89B3C] py-3.5 font-bold text-neutral-950 shadow-[0_10px_35px_-12px_rgba(200,155,60,0.9)] transition hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:brightness-100"
+            >
+              <span className="absolute inset-0 -translate-x-full bg-white/25 transition-transform duration-700 group-hover:translate-x-full" />
+              <span className="relative flex items-center justify-center gap-2">
                 {loading ? (
-                  <div className="flex items-center justify-center gap-2">
-                    <svg className="animate-spin w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                  <>
+                    <svg
+                      className="h-5 w-5 animate-spin"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
+                      />
                     </svg>
                     {t('verifying')}
-                  </div>
+                  </>
                 ) : (
                   t('loginButton')
                 )}
-              </button>
+              </span>
+            </button>
 
-              {/* Info */}
-              <div className="p-4 rounded-xl bg-blue-500/10 border border-blue-500/30">
-                <div className="flex gap-2">
-                  <svg className="w-5 h-5 text-blue-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  <div>
-                    <p className="text-blue-300 text-xs mb-1">
-                      <strong>{t('howThisWorks')}</strong>
-                    </p>
-                    <p className="text-blue-300/80 text-xs">
-                      {t('howThisWorksDesc')}
-                    </p>
-                  </div>
-                </div>
+            <div className="flex gap-3 rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+              <ShieldCheck className="mt-0.5 h-5 w-5 flex-shrink-0 text-cyan-300" />
+              <div>
+                <p className="mb-1 text-xs font-semibold text-white">{t('howThisWorks')}</p>
+                <p className="text-xs leading-relaxed text-zinc-400">{t('howThisWorksDesc')}</p>
               </div>
             </div>
-          )}
-        </div>
+          </div>
+        )}
       </div>
     </div>
+  )
+
+  if (variant === 'inline') {
+    return card
+  }
+
+  if (!mounted) {
+    return null
+  }
+
+  return createPortal(
+    <div
+      role="dialog"
+      aria-modal="true"
+      onClick={(event) => {
+        if (event.target === event.currentTarget) onClose()
+      }}
+      className="fixed inset-0 z-[100] overflow-y-auto overscroll-contain bg-black/80 backdrop-blur-md"
+    >
+      <div className="flex min-h-full items-center justify-center p-4 sm:p-6">
+        {card}
+      </div>
+    </div>,
+    document.body
   )
 }

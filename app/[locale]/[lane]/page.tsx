@@ -1,10 +1,9 @@
-import type { Metadata } from "next"
-import Link from "next/link"
-import { getTranslations } from 'next-intl/server'
-import { setRequestLocale } from 'next-intl/server'
-import { getHreflangAlternates } from '@/lib/seo-utils'
+import type { Metadata } from 'next'
+import Link from 'next/link'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
+import { buildPageMetadata } from '@/lib/seo/page-metadata'
 import { routing } from '@/i18n/routing'
-import { BLOG_SLUGS, blogKeywords } from "@/lib/blog-posts"
+import { BLOG_SLUGS, blogKeywords } from '@/lib/blog-posts'
 import { getPostHref } from '@/lib/blog/meta'
 import Breadcrumbs from '@/components/Breadcrumbs'
 
@@ -24,6 +23,26 @@ const LANE_META: Record<string, { title: string; description: string; keywords: 
   'adc': { title: 'ADC Carry Champions Guide | League Roulette', description: 'Best ADC carries for climbing ranked. Hyper carries and consistent marksmen covered.', keywords: ['ADC champions', 'ADC carry guide', 'best ADC', 'lol ADC', 'ranked ADC picks'] },
   'support': { title: 'Support Champions Guide | League Roulette', description: 'Best support champions for ranked and ARAM. Engage, peel, and utility supports covered.', keywords: ['support champions', 'best support', 'support guide', 'lol support', 'ranked support'] },
   'aram': { title: 'ARAM Champion Pool Guide | League Roulette', description: 'Build the ultimate ARAM champion pool. Best champions for Howling Abyss chaos.', keywords: ['ARAM champion pool', 'best ARAM champions', 'ARAM guide', 'lol ARAM', 'Howling Abyss'] },
+}
+
+const LANE_ROLE_KEYS: Record<string, string> = {
+  'top-lane': 'top',
+  'mid-lane': 'mid',
+  'adc': 'adc',
+  'support': 'support',
+  'aram': 'aram',
+}
+
+async function getLaneCopy(locale: string, lane: string) {
+  const t = await getTranslations('page-seo')
+  const tTierlist = await getTranslations('tierlist')
+  const role = tTierlist(`roles.${LANE_ROLE_KEYS[lane]}.title`)
+
+  return {
+    role,
+    title: t('lane.title', { role }),
+    description: t('lane.description', { role }),
+  }
 }
 
 function getLanePosts(posts: BlogPost[], lane: string): BlogPost[] {
@@ -48,16 +67,16 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ locale: string; lane: string }> }): Promise<Metadata> {
   const { locale, lane } = await params
   setRequestLocale(locale)
-  const meta = LANE_META[lane]
-  if (!meta) return {}
-  const t = await getTranslations('blog')
-  return {
-    title: meta.title,
-    description: meta.description,
-    keywords: meta.keywords,
-    alternates: { canonical: locale === 'en' ? `/${lane}` : `/${locale}/${lane}`, languages: getHreflangAlternates(`/${lane}`) },
-    openGraph: { title: meta.title, description: meta.description, url: `/${lane}`, type: 'website' },
-  }
+  if (!LANE_META[lane]) return {}
+
+  const copy = await getLaneCopy(locale, lane)
+
+  return buildPageMetadata({
+    locale,
+    path: `/${lane}`,
+    title: copy.title,
+    description: copy.description,
+  })
 }
 
 export default async function LanePage({ params }: { params: Promise<{ locale: string; lane: string }> }) {
@@ -76,18 +95,18 @@ export default async function LanePage({ params }: { params: Promise<{ locale: s
     return laneKeywords.some(kw => allText.includes(kw.toLowerCase()))
   })
 
+  const copy = await getLaneCopy(locale, lane)
+
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: `https://leagueroulette.com` },
       { '@type': 'ListItem', position: 2, name: t('blog') || 'Blog', item: `https://leagueroulette.com/blog` },
-      { '@type': 'ListItem', position: 3, name: LANE_META[lane]?.title || lane, item: `https://leagueroulette.com/${lane}` },
+      { '@type': 'ListItem', position: 3, name: copy.role, item: `https://leagueroulette.com/${lane}` },
     ],
   }
 
-  const meta = LANE_META[lane]
-  const laneLabel = (meta?.title || lane).replace(' | League Roulette', '')
   return (
     <main className="min-h-screen bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 px-6 pt-10 pb-12">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
@@ -96,13 +115,13 @@ export default async function LanePage({ params }: { params: Promise<{ locale: s
           items={[
             { label: 'League Roulette', href: '/' },
             { label: t('blog'), href: '/blog' },
-            { label: laneLabel },
+            { label: copy.role },
           ]}
         />
 
         <div className="mb-8">
-          <h1 className="mb-3 text-4xl font-semibold tracking-tight text-white md:text-5xl">{meta?.title || lane}</h1>
-          <p className="max-w-2xl text-lg leading-8 text-neutral-300">{meta?.description}</p>
+          <h1 className="mb-3 text-4xl font-semibold tracking-tight text-white md:text-5xl">{copy.title}</h1>
+          <p className="max-w-2xl text-lg leading-8 text-neutral-300">{copy.description}</p>
         </div>
         <div className="grid gap-6 md:grid-cols-2">
           {lanePosts.map((post: BlogPost) => (

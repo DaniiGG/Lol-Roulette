@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useRef, useState, useCallback } from 'react'
+import NextImage from 'next/image'
 import { getChampionsByLane, normalizeChampionName } from '@/lib/champion-lanes'
 import { championHasRegion, championHasClass } from '@/lib/champion-metadata'
 import SlotLever from './SlotLever'
@@ -368,21 +369,13 @@ export default function RouletteWheel({
   return (
     <div className="w-full flex justify-center items-center relative">
       <div className="relative">
-        <div className="relative isolate bg-gradient-to-b from-[#75f5ec] via-[#14737c] to-[#b88b39] p-[3px] drop-shadow-[0_0_18px_rgba(35,220,220,0.22)] [clip-path:polygon(3.5%_0,96.5%_0,100%_13%,100%_87%,96.5%_100%,3.5%_100%,0_87%,0_13%)]">
-          <div className="relative overflow-hidden bg-[#03090d] p-1 sm:p-1.5 [clip-path:polygon(3.5%_0,96.5%_0,100%_13%,100%_87%,96.5%_100%,3.5%_100%,0_87%,0_13%)]">
-          <div className="pointer-events-none absolute left-[4%] right-[4%] top-1 z-20 h-px bg-gradient-to-r from-transparent via-cyan-100/70 to-transparent" />
-          <div className="pointer-events-none absolute bottom-1 left-[4%] right-[4%] z-20 h-px bg-gradient-to-r from-transparent via-[#C89B3C]/70 to-transparent" />
-          <div className="pointer-events-none absolute left-[3.5%] top-[14%] z-30 h-4 w-4 border-l border-t border-cyan-100/80" />
-          <div className="pointer-events-none absolute right-[3.5%] top-[14%] z-30 h-4 w-4 border-r border-t border-cyan-100/80" />
-          <div className="pointer-events-none absolute bottom-[14%] left-[3.5%] z-30 h-4 w-4 border-b border-l border-cyan-100/70" />
-          <div className="pointer-events-none absolute bottom-[14%] right-[3.5%] z-30 h-4 w-4 border-b border-r border-cyan-100/70" />
-          <div className="relative overflow-hidden rounded-xl border border-cyan-200/20 bg-black shadow-[inset_0_0_24px_rgba(0,229,255,0.08)]">
+        <div className="relative overflow-hidden rounded-xl bg-black">
           {/* Fade izquierdo */}
           <div className="pointer-events-none absolute left-0 top-0 h-full w-32 bg-gradient-to-r from-black to-transparent z-10" />
           {/* Fade derecho */}
           <div className="pointer-events-none absolute right-0 top-0 h-full w-32 bg-gradient-to-l from-black to-transparent z-10" />
           {/* Flecha central */}
-          <div className="pointer-events-none absolute left-1/2 -translate-x-1/2 top-0 z-20 flex flex-col items-center">
+          <div className="pointer-events-none absolute left-1/2 -translate-x-1/2 top-0 z-30 flex flex-col items-center">
             <div className="w-0 h-0 border-l-[14px] border-r-[14px] border-t-[22px] border-l-transparent border-r-transparent border-t-[#C89B3C] drop-shadow-[0_0_8px_#C89B3C]" />
             <div className="w-[3px] h-8 bg-[#C89B3C] shadow-[0_0_10px_#C89B3C]" />
           </div>
@@ -417,9 +410,29 @@ export default function RouletteWheel({
               </div>
             </div>
           )}
+        </div>
 
-          </div>
-          </div>
+        {/* Borde superior */}
+        <div className="pointer-events-none absolute inset-x-0 top-3 z-100 -translate-y-1/2">
+          <NextImage
+            src="/images/diseñorule3.png"
+            alt=""
+            aria-hidden="true"
+            width={2172}
+            height={724}
+            className="relative left-1/2 h-auto w-[104%] max-w-none -translate-x-1/2 select-none"
+          />
+        </div>
+        {/* Borde inferior (espejado) */}
+        <div className="pointer-events-none absolute inset-x-0 bottom-3 z-100 translate-y-1/2 scale-y-[-1]">
+          <NextImage
+            src="/images/diseñorule3.png"
+            alt=""
+            aria-hidden="true"
+            width={2172}
+            height={724}
+            className="relative left-1/2 h-auto w-[104%] max-w-none -translate-x-1/2 select-none"
+          />
         </div>
 
         <div className="absolute top-1/2 -translate-y-1/2 left-full ml-6">

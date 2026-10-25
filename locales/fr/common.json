@@ -647,7 +647,7 @@
         "resetView": "Réinitialiser la vue",
         "zoomIn": "Zoom avant",
         "zoomOut": "Zoom arrière",
-        "legend": "Taille du nœud = points de maîtrise (échelle logarithmique)",
+        "legend": "Taille du nœud = points de maîtrise",
         "legendLevels": "Niveau de maîtrise",
         "shareOfTotal": "{percent} % de votre maîtrise totale",
         "rankOf": "Rang n° {rank} sur {total}",

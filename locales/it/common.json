@@ -647,7 +647,7 @@
         "resetView": "Ripristina vista",
         "zoomIn": "Zoom avanti",
         "zoomOut": "Zoom indietro",
-        "legend": "Dimensione del nodo = punti maestria (scala logaritmica)",
+        "legend": "Dimensione del nodo = punti maestria",
         "legendLevels": "Livello maestria",
         "shareOfTotal": "{percent}% della tua maestria totale",
         "rankOf": "Posizione #{rank} di {total}",

@@ -1,0 +1,62 @@
+{
+  "home": {
+    "title": "Gerador aleatório de campeões LoL e roleta",
+    "description": "Gire a roleta gratuita de campeões de League of Legends, filtre por rota e receba um campeão aleatório para sua próxima partida. Acompanhe vitórias, ganhe XP e suba no ranking."
+  },
+  "about": {
+    "title": "Sobre o League Roulette",
+    "description": "Saiba como o League Roulette funciona, por que campeões aleatórios ajudam você a melhorar e como a verificação Riot API, XP, conquistas e ranking se conectam."
+  },
+  "faq": {
+    "title": "FAQ do gerador aleatório de LoL",
+    "description": "Respostas sobre o gerador gratuito de campeões aleatórios de LoL, roleta, filtros por rota, verificação Riot, XP, sequências e segurança da conta."
+  },
+  "howToPlay": {
+    "title": "Como jogar League Roulette",
+    "description": "Aprenda a girar a roleta, jogar seu pick aleatório, verificar uma vitória com a API da Riot, ganhar XP, criar sequências e completar desafios semanais."
+  },
+  "tips": {
+    "title": "Dicas e estratégia para campeões aleatórios",
+    "description": "Dicas práticas para vencer com campeões aleatórios de League of Legends: fundamentos por rota, builds adaptáveis, planejamento de matchups e mental."
+  },
+  "contact": {
+    "title": "Fale com o League Roulette",
+    "description": "Fale com a equipe do League Roulette para suporte, reportar bugs, sugerir recursos, parcerias ou enviar feedback sobre o gerador de campeões."
+  },
+  "privacy": {
+    "title": "Política de privacidade",
+    "description": "Veja como o League Roulette trata dados da conta, informações da Riot API, cookies, análises e suas opções de privacidade."
+  },
+  "terms": {
+    "title": "Termos de serviço",
+    "description": "Leia as regras de uso do League Roulette, incluindo uso aceitável, dados da Riot API, contas, desafios e limitações do serviço."
+  },
+  "leaderboard": {
+    "title": "Ranking LoL: melhores jogadores",
+    "description": "Veja os melhores jogadores do League Roulette por XP, nível, desafios concluídos e sequências de vitórias. Acompanhe sua posição e compita pelo primeiro lugar."
+  },
+  "mastery": {
+    "title": "Rastreador de maestria",
+    "description": "Confira níveis de maestria, pontos e taxas de vitória dos campeões em League of Legends. Encontre seus campeões mais fortes e escolha o próximo pick aleatório."
+  },
+  "modes": {
+    "title": "Modos de jogo de League of Legends",
+    "description": "Compare os modos de League of Legends, da Fenda do Invocador e ARAM ao URF e Um por Todos, e escolha o melhor para seu próximo desafio aleatório."
+  },
+  "popular": {
+    "title": "Campeões LoL mais populares",
+    "description": "Explore os campeões de League of Legends mais escolhidos por rota e tier, com notas rápidas para ajudar você a escolher o próximo campeão aleatório."
+  },
+  "tierlist": {
+    "title": "Tier list de campeões LoL por rota",
+    "description": "Veja a tier list atual de campeões de League of Legends para topo, selva, mid, ADC e suporte. Compare os picks S e encontre seu próximo main."
+  },
+  "challenges": {
+    "title": "Desafios de campeões aleatórios LoL",
+    "description": "Ative desafios semanais de League of Legends, ganhe XP bônus em vitórias verificadas e transforme picks aleatórios em uma progressão divertida."
+  },
+  "lane": {
+    "title": "Guia de campeões: {role}",
+    "description": "Descubra campeões fortes para {role}, dicas de matchup e ideias de picks aleatórios para ranked, normal e ARAM."
+  }
+}

@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
-import { getTranslations } from 'next-intl/server'
-import { getHreflangAlternates } from '@/lib/seo-utils'
-import { routing } from '@/i18n/routing'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
+import { BLOG_LOCALES, buildPageMetadata } from '@/lib/seo/page-metadata'
 import BlogSearch from '@/components/blog/BlogSearch'
 import BlogPostCard from '@/components/blog/BlogPostCard'
 import Link from 'next/link'
@@ -12,29 +11,18 @@ import type { BlogPost } from '@/lib/blog/content'
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
+  setRequestLocale(locale)
   const t = await getTranslations('blog')
-  return {
+  const isTranslated = BLOG_LOCALES.includes(locale as (typeof BLOG_LOCALES)[number])
+
+  return buildPageMetadata({
+    locale,
+    path: '/blog',
     title: t('heroTitle'),
     description: t('heroDesc'),
-    alternates: {
-      canonical: locale === 'en' ? '/blog' : `/${locale}/blog`,
-      languages: getHreflangAlternates('/blog'),
-    },
-    openGraph: {
-      title: t('heroTitle'),
-      description: t('heroDesc'),
-      url: locale === 'en' ? '/blog' : `/${locale}/blog`,
-      type: 'website',
-      siteName: 'League Roulette',
-      images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'League Roulette Blog' }],
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: t('heroTitle'),
-      description: t('heroDesc'),
-      images: ['/og-image.png'],
-    },
-  }
+    alternateLocales: BLOG_LOCALES,
+    robots: isTranslated ? undefined : { index: false, follow: true },
+  })
 }
 
 export default async function BlogIndexPage({ params }: { params: Promise<{ locale: string }> }) {

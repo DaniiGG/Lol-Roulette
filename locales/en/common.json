@@ -730,7 +730,7 @@
         "resetView": "Reset view",
         "zoomIn": "Zoom in",
         "zoomOut": "Zoom out",
-        "legend": "Node size = mastery points (log scale)",
+        "legend": "Node size = mastery points",
         "legendLevels": "Mastery level",
         "shareOfTotal": "{percent}% of your total mastery",
         "rankOf": "Rank #{rank} of {total}",

@@ -1,25 +1,21 @@
 // app/terms/page.tsx
-import type { Metadata } from "next"
+import type { Metadata } from 'next'
 import Link from 'next/link'
-import { getTranslations } from 'next-intl/server'
-import { getHreflangAlternates } from '@/lib/seo-utils'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
+import { buildPageMetadata } from '@/lib/seo/page-metadata'
 import Breadcrumbs from '@/components/Breadcrumbs'
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
-  return {
-    title: 'Terms of Service - League Roulette',
-    description: 'League Roulette terms of service. Read the terms governing your use of our free LoL random champion generator and challenge tracking platform.',
-    keywords: ['league roulette terms of service', 'lol random champion terms', 'league of legends challenge terms', 'terms of service', 'terms and conditions'],
-    alternates: {
-      canonical: locale === 'en' ? '/terms' : `/${locale}/terms`,
-      languages: getHreflangAlternates('/terms'),
-    },
-    robots: {
-      index: true,
-      follow: true,
-    },
-  }
+  setRequestLocale(locale)
+  const t = await getTranslations('page-seo')
+
+  return buildPageMetadata({
+    locale,
+    path: '/terms',
+    title: t('terms.title'),
+    description: t('terms.description'),
+  })
 }
 
 const baseUrl = 'https://leagueroulette.com'

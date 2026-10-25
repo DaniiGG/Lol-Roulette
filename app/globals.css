@@ -288,6 +288,12 @@ body::before {
   animation: tree-aura-spin 28s linear infinite;
 }
 
+.tree-guides {
+  transform-box: view-box;
+  transform-origin: center;
+  animation: tree-aura-spin 120s linear infinite;
+}
+
 .tree-pulse {
   transform-box: fill-box;
   transform-origin: center;
@@ -331,6 +337,7 @@ body::before {
   .tree-edge,
   .tree-node-enter,
   .tree-aura,
+  .tree-guides,
   .tree-pulse,
   .tree-loader span {
     animation: none !important;

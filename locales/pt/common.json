@@ -647,7 +647,7 @@
         "resetView": "Redefinir visualização",
         "zoomIn": "Aumentar zoom",
         "zoomOut": "Diminuir zoom",
-        "legend": "Tamanho do nó = pontos de maestria (escala logarítmica)",
+        "legend": "Tamanho do nó = pontos de maestria",
         "legendLevels": "Nível de maestria",
         "shareOfTotal": "{percent}% da sua maestria total",
         "rankOf": "Posição #{rank} de {total}",

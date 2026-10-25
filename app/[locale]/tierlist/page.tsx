@@ -1,27 +1,19 @@
-import type { Metadata } from "next"
-import { getTranslations } from 'next-intl/server'
-import { setRequestLocale } from 'next-intl/server'
-import { getHreflangAlternates } from '@/lib/seo-utils'
+import type { Metadata } from 'next'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
+import { buildPageMetadata } from '@/lib/seo/page-metadata'
 import Breadcrumbs from '@/components/Breadcrumbs'
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
   setRequestLocale(locale)
-  const t = await getTranslations('tierlist')
-  return {
-    title: t('title'),
-    description: t('subtitle'),
-    alternates: {
-      canonical: locale === 'en' ? '/tierlist' : `/${locale}/tierlist`,
-      languages: getHreflangAlternates('/tierlist'),
-    },
-    openGraph: {
-      title: t('title'),
-      description: t('subtitle'),
-      url: locale === 'en' ? '/tierlist' : `/${locale}/tierlist`,
-      siteName: 'League Roulette',
-    },
-  }
+  const t = await getTranslations('page-seo')
+
+  return buildPageMetadata({
+    locale,
+    path: '/tierlist',
+    title: t('tierlist.title'),
+    description: t('tierlist.description'),
+  })
 }
 
 export default async function TierListPage({ params }: { params: Promise<{ locale: string }> }) {

@@ -646,7 +646,7 @@
         "resetView": "보기 초기화",
         "zoomIn": "확대",
         "zoomOut": "축소",
-        "legend": "노드 크기 = 숙련도 점수(로그 스케일)",
+        "legend": "노드 크기 = 숙련도 점수",
         "legendLevels": "숙련도 레벨",
         "shareOfTotal": "총 숙련도의 {percent}%",
         "rankOf": "순위 #{rank} / {total}",

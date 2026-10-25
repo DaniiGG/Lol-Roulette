@@ -646,7 +646,7 @@
         "resetView": "Resetuj widok",
         "zoomIn": "Przybliż",
         "zoomOut": "Oddal",
-        "legend": "Rozmiar węzła = punkty mistrzostwa (skala logarytmiczna)",
+        "legend": "Rozmiar węzła = punkty mistrzostwa",
         "legendLevels": "Poziom mistrzostwa",
         "shareOfTotal": "{percent}% twojego całkowitego mistrzostwa",
         "rankOf": "Miejsce #{rank} z {total}",
