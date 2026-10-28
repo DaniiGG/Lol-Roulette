@@ -61,5 +61,9 @@
             "name": "League Roulette",
             "desc": "무작정 픽 챌린지: 룰렛을 진짜 성장으로 바꾸는 법."
         }
-    }
+    },
+    "browseTips": "팁 둘러보기",
+    "filterByCategory": "카테고리로 필터링",
+    "home": "홈",
+    "by": "작성자"
 }

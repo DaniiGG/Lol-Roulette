@@ -1,0 +1,3891 @@
+{
+  "patch": "26.21",
+  "updatedAt": "2026-10-28",
+  "champions": {
+    "katarina": {
+      "slug": "katarina",
+      "name": "Katarina",
+      "title": "La Cuchilla Siniestra",
+      "role": "mid",
+      "roleLabel": "Mid",
+      "difficulty": "high",
+      "difficultyLabel": "Alta",
+      "tagline": "Una asesina de dagas que gana eligiendo el momento correcto, no el más rápido.",
+      "metaTitle": "Cómo jugar Katarina en LoL: combos, build y consejos (parche 26.21)",
+      "metaDescription": "Aprende a jugar Katarina en League of Legends con runas, builds, orden de habilidades, combos de dagas y consejos de línea para el parche 26.21.",
+      "h1": "Cómo jugar Katarina en League of Legends",
+      "heroIntro": [
+        "Katarina es una asesina de mid de gran movilidad cuyo daño depende de las dagas, los reinicios y una ejecución limpia. No usa maná, así que sus límites son los enfriamientos, la posición y el control de masas.",
+        "Esta guía cubre su build del parche 26.21, el orden de habilidades nivel a nivel, combos prácticos con dagas, decisiones de línea y de teamfight, y los enfrentamientos que castigan una entrada imprudente. Está pensada para Solo/Dúo y se basa en Data Dragon 16.21.1 y en muestras actuales de U.GG y Lolalytics."
+      ],
+      "quickAnswer": "Sube Q primero, luego E y por último W. Lleva Electrocutar con Impacto repentino y Precisión secundaria, empieza con Sello oscuro o Anillo de Doran y construye Perdición del liche hacia Llamasombría para burst. Juega alrededor de las dagas y espera a que el enemigo gaste su control de masas antes de entrar. Katarina está fuerte en el parche 26.21, pero su porcentaje de victorias nace de la paciencia y la elección de objetivo, no de forzar todas las peleas.",
+      "quickStart": {
+        "role": "Carril medio",
+        "secondaryRoles": "Top o support como rol secundario",
+        "difficulty": "Alta",
+        "playstyle": "Asesina móvil de burst y limpieza",
+        "keyMechanic": "Recoger dagas reinicia Velocidad del rayo y provoca daño en área",
+        "beginnerMistake": "Usar E para entrar sin ruta de salida o sin controlar el CC enemigo",
+        "winCondition": "Forzar una captura en línea lateral o una pelea caótica y encadenar reinicios sobre los carries aislados"
+      },
+      "abilities": [
+        {
+          "key": "P",
+          "name": "Ansia",
+          "icon": "Katarina_Passive.png",
+          "description": "Las muertes y asistencias de Katarina reducen drásticamente sus enfriamientos restantes. Al recoger una daga, corta a los enemigos cercanos infligiendo daño mágico.",
+          "tips": [
+            "Controla dónde caerá la daga antes de comprometerte.",
+            "Recoge dagas que también golpeen a un campeón.",
+            "Un reinicio no garantiza que estés a salvo."
+          ],
+          "mistake": "Perseguir una muerte sin mirar dónde cae la daga ni quién puede castigar tu entrada."
+        },
+        {
+          "key": "Q",
+          "name": "Hoja rebotante",
+          "icon": "KatarinaQ.png",
+          "description": "Katarina lanza una daga que rebota entre enemigos cercanos y cae al suelo.",
+          "tips": [
+            "Usa Q para farmear y preparar una daga futura.",
+            "Fíjate en la posición final, no solo en el primer impacto.",
+            "Hacer rebotar la daga entre súbditos puede acercarla a tu objetivo."
+          ],
+          "mistake": "Tratar Q solo como poke e ignorar la daga que deja en el suelo."
+        },
+        {
+          "key": "W",
+          "name": "Preparación",
+          "icon": "KatarinaW.png",
+          "description": "Katarina gana velocidad de movimiento y deja una daga sobre ella que cae tras un breve retardo.",
+          "tips": [
+            "Usa la velocidad para esquivar o llegar a una daga.",
+            "Coloca W antes de entrar para que la daga cubra tu salida.",
+            "La daga es una herramienta de reinicio, no solo un botón de velocidad."
+          ],
+          "mistake": "Usar W únicamente por la velocidad y no recoger nunca la daga."
+        },
+        {
+          "key": "E",
+          "name": "Velocidad del rayo",
+          "icon": "KatarinaEWrapper.png",
+          "description": "Katarina parpadea hasta un objetivo, lo daña si es enemigo o golpea al enemigo más cercano. Recoger dagas reduce su enfriamiento.",
+          "tips": [
+            "Guarda un salto para escapar.",
+            "Usa súbditos enemigos, aliados y dagas para reposicionarte.",
+            "Usa E sobre una daga cuando el corte mejore el intercambio."
+          ],
+          "mistake": "Gastar E como única herramienta de movilidad al entrar en una pelea."
+        },
+        {
+          "key": "R",
+          "name": "Loto mortal",
+          "icon": "KatarinaR.png",
+          "description": "Katarina canaliza una tormenta de cuchillas que daña a los tres campeones enemigos más cercanos.",
+          "tips": [
+            "Espera a que se usen las interrupciones.",
+            "Colócate para que las cuchillas golpeen objetivos valiosos.",
+            "Cancela antes si la canalización va a ser castigada."
+          ],
+          "mistake": "Canalizar contra un equipo que todavía tiene stuns o derribos fiables."
+        }
+      ],
+      "skillOrder": {
+        "priority": "Q > E > W",
+        "start": "Q → E → W",
+        "levels": [
+          {
+            "level": 1,
+            "ability": "Q"
+          },
+          {
+            "level": 2,
+            "ability": "E"
+          },
+          {
+            "level": 3,
+            "ability": "W"
+          },
+          {
+            "level": 4,
+            "ability": "Q"
+          },
+          {
+            "level": 5,
+            "ability": "Q"
+          },
+          {
+            "level": 6,
+            "ability": "R"
+          },
+          {
+            "level": 7,
+            "ability": "Q"
+          },
+          {
+            "level": 8,
+            "ability": "E"
+          },
+          {
+            "level": 9,
+            "ability": "Q"
+          },
+          {
+            "level": 10,
+            "ability": "E"
+          },
+          {
+            "level": 11,
+            "ability": "R"
+          },
+          {
+            "level": 12,
+            "ability": "E"
+          },
+          {
+            "level": 13,
+            "ability": "E"
+          },
+          {
+            "level": 14,
+            "ability": "W"
+          },
+          {
+            "level": 15,
+            "ability": "W"
+          },
+          {
+            "level": 16,
+            "ability": "R"
+          },
+          {
+            "level": 17,
+            "ability": "W"
+          },
+          {
+            "level": 18,
+            "ability": "W"
+          }
+        ],
+        "explanation": [
+          "Q es la forma más segura de farmear, hacer poke y preparar dagas, así que se sube primero.",
+          "E reduce su enfriamiento con los niveles y mejora la frecuencia con la que te reposicionas alrededor de las dagas.",
+          "W se sube al final porque la duración de la velocidad y su enfriamiento importan menos que los umbrales de Q y E."
+        ],
+        "note": "Es la ruta más común del parche 26.21 en las muestras de U.GG y Lolalytics. En líneas difíciles, algunos jugadores retrasan E para tener más seguridad con W; es un ajuste de enfrentamiento, no la opción por defecto."
+      },
+      "runes": {
+        "title": "Burst con Electrocutar",
+        "summary": "Electrocutar es la runa clave por defecto en el parche 26.21. Da a Katarina una ventana de burst fiable en intercambios cortos y le ayuda a rematar antes de que el enemigo responda. Precisión secundaria aporta daño sostenido y valor al conseguir muertes.",
+        "primaryTree": {
+          "name": "Dominación",
+          "icon": "perk-images/Styles/7200_Domination.png"
+        },
+        "secondaryTree": {
+          "name": "Precisión",
+          "icon": "perk-images/Styles/7201_Precision.png"
+        },
+        "keystone": {
+          "id": 8112,
+          "name": "Electrocutar",
+          "icon": "perk-images/Styles/Domination/Electrocute/Electrocute.png",
+          "why": "La mejor opción por defecto para intercambios Q-E y patrones de asesinato."
+        },
+        "primaryRunes": [
+          {
+            "id": 8143,
+            "name": "Impacto repentino",
+            "icon": "perk-images/Styles/Domination/SuddenImpact/SuddenImpact.png",
+            "why": "La penetración extra tras Velocidad del rayo hace que cada intercambio corto golpee más fuerte."
+          },
+          {
+            "id": 8137,
+            "name": "Sexto sentido",
+            "icon": "perk-images/Styles/Domination/SixthSense/SixthSense.png",
+            "why": "Detección gratuita de wards que ayuda a controlar la visión del río."
+          },
+          {
+            "id": 8106,
+            "name": "Cazador definitivo",
+            "icon": "perk-images/Styles/Domination/UltimateHunter/UltimateHunter.png",
+            "why": "Más usos de Loto mortal en una partida en la que vas por delante."
+          }
+        ],
+        "secondaryRunes": [
+          {
+            "id": 9111,
+            "name": "Triunfo",
+            "icon": "perk-images/Styles/Precision/Triumph.png",
+            "why": "La curación y el oro al conseguir una muerte ayudan a Katarina a encadenar peleas."
+          },
+          {
+            "id": 8014,
+            "name": "Golpe de gracia",
+            "icon": "perk-images/Styles/Precision/CoupDeGrace/CoupDeGrace.png",
+            "why": "Daño extra a objetivos con poca vida que mejora las cadenas de reinicios."
+          }
+        ],
+        "alternatives": [
+          "Cosecha oscura para limpieza a largo plazo",
+          "Lluvia de cuchillas para intercambios con autos y builds on-hit",
+          "Último esfuerzo o Derribado en lugar de Golpe de gracia",
+          "Sabor a sangre o Golpe bajo en lugar de Impacto repentino"
+        ],
+        "notes": [
+          "Las runas cambian según la partida. La página de arriba es una configuración común del parche 26.21, no la única correcta.",
+          "Si estás aprendiendo a Katarina, Electrocutar es más indulgente que Cosecha oscura porque no necesita acumulaciones.",
+          "Contra mucho poke, Sabor a sangre puede sustituir a Impacto repentino para sobrevivir en línea."
+        ]
+      },
+      "summonerSpells": [
+        {
+          "name": "Flash",
+          "icon": "SummonerFlash.png",
+          "why": "Herramienta por defecto para escapar y entrar. E por sí sola no basta para entrar y salir con seguridad.",
+          "alternative": "Lleva Destello siempre."
+        },
+        {
+          "name": "Ignite",
+          "icon": "SummonerDot.png",
+          "why": "Añade presión de muerte en línea y ayuda a rematar objetivos con poca vida antes de que se curen o escapen.",
+          "alternative": "Teleportar es una opción más segura en líneas donde no puedes intercambiar pronto."
+        }
+      ],
+      "builds": [
+        {
+          "id": "ap-burst",
+          "label": "Burst AP",
+          "badge": "Recomendada por U.GG",
+          "summary": "La build por defecto de Katarina cambia daño sostenido por burst rápido y fiable. Perdición del liche es el pico clave; Llamasombría amplifica el daño posterior.",
+          "starting": {
+            "label": "Objetos iniciales",
+            "items": [
+              {
+                "id": "1082",
+                "name": "Sello oscuro",
+                "icon": "1082.png",
+                "why": "Inicio para snowball con pociones. Las acumulaciones importan si consigues muertes tempranas."
+              },
+              {
+                "id": "2003",
+                "name": "Poción de vida",
+                "icon": "2003.png",
+                "why": "Sostenibilidad para las primeras oleadas."
+              }
+            ],
+            "note": "Anillo de Doran y dos Pociones de vida son la alternativa más segura si no puedes proteger las acumulaciones de Sello oscuro."
+          },
+          "core": {
+            "label": "Objetos principales",
+            "items": [
+              {
+                "id": "3100",
+                "name": "Perdición del liche",
+                "icon": "3100.png",
+                "why": "Daño de Hechizoespada y velocidad de movimiento hacen que cada ataque potenciado por E golpee más fuerte."
+              },
+              {
+                "id": "4645",
+                "name": "Llamasombría",
+                "icon": "4645.png",
+                "why": "Penetración mágica y daño extra contra objetivos con poca vida."
+              }
+            ]
+          },
+          "boots": {
+            "label": "Botas",
+            "items": [
+              {
+                "id": "3020",
+                "name": "Botas de hechicero",
+                "icon": "3020.png",
+                "why": "Las botas AP por defecto para penetración mágica."
+              },
+              {
+                "id": "3175",
+                "name": "Botas del lanzahechizos",
+                "icon": "3175.png",
+                "why": "La recompensa mejorada de la misión; tómala cuando el juego te dé la mejora gratuita."
+              },
+              {
+                "id": "3111",
+                "name": "Botas de mercurio",
+                "icon": "3111.png",
+                "why": "Tenacidad y resistencia mágica contra mucho control de masas."
+              },
+              {
+                "id": "3047",
+                "name": "Botas blindadas",
+                "icon": "3047.png",
+                "why": "Armadura contra equipos con muchos ataques básicos."
+              }
+            ]
+          },
+          "situational": {
+            "label": "Objetos situacionales",
+            "items": [
+              {
+                "id": "3157",
+                "name": "Reloj de arena de Zhonya",
+                "icon": "3157.png",
+                "why": "Sobrevive a una inmersión o al burst de un asesino y espera a tus enfriamientos."
+              },
+              {
+                "id": "3089",
+                "name": "Sombrero mortal de Rabadon",
+                "icon": "3089.png",
+                "why": "El mayor multiplicador de AP bruto cuando vas por delante con seguridad."
+              },
+              {
+                "id": "3135",
+                "name": "Bastón del Vacío",
+                "icon": "3135.png",
+                "why": "Penetración mágica contra resistencia mágica acumulada."
+              },
+              {
+                "id": "3102",
+                "name": "Velo del hada de la muerte",
+                "icon": "3102.png",
+                "why": "Un escudo de hechizo contra una entrada o stun clave."
+              },
+              {
+                "id": "3041",
+                "name": "Robaalmas de Mejai",
+                "icon": "3041.png",
+                "why": "Mejora de alto riesgo para snowball desde Sello oscuro."
+              },
+              {
+                "id": "3165",
+                "name": "Morellonomicón",
+                "icon": "3165.png",
+                "why": "Heridas graves contra mucha curación."
+              }
+            ]
+          },
+          "notes": [
+            "Perdición del liche primero es el pico estándar del parche 26.21. No lo retrases por un objeto defensivo salvo que te estén campeando.",
+            "Vende Sello oscuro solo si necesitas el hueco; Robaalmas es una mejora de alto riesgo.",
+            "Si el enemigo acumula resistencia mágica, Bastón del Vacío suele ser mejor que un segundo objeto de AP bruto."
+          ]
+        },
+        {
+          "id": "ad-on-hit",
+          "label": "AD y on-hit",
+          "badge": "Núcleo más común en Lolalytics",
+          "summary": "Una build de daño sostenido que cambia burst por velocidad de ataque, daño on-hit y peleas más largas. Es menos indulgente porque pasas más tiempo al alcance de los ataques básicos.",
+          "starting": {
+            "label": "Objetos iniciales",
+            "items": [
+              {
+                "id": "1082",
+                "name": "Sello oscuro",
+                "icon": "1082.png",
+                "why": "Mantiene el snowball y el valor de reventa mientras construyes velocidad de ataque."
+              },
+              {
+                "id": "2003",
+                "name": "Poción de vida",
+                "icon": "2003.png",
+                "why": "Sostenibilidad para las primeras oleadas."
+              }
+            ],
+            "note": "Espada de Doran es una opción para intercambios tempranos, pero Sello oscuro es el inicio más común en la muestra de Lolalytics."
+          },
+          "core": {
+            "label": "Objetos principales",
+            "items": [
+              {
+                "id": "6672",
+                "name": "Verdugo de krakens",
+                "icon": "6672.png",
+                "why": "Daño on-hit y velocidad de ataque convierten a Katarina en una duelista sostenida."
+              },
+              {
+                "id": "3008",
+                "name": "Grebas codiciosas",
+                "icon": "3008.png",
+                "why": "Omnivamp y velocidad de movimiento para peleas largas."
+              },
+              {
+                "id": "3302",
+                "name": "El final",
+                "icon": "3302.png",
+                "why": "Resistencias alternas y penetración hacen mucho más fuertes las peleas tardías."
+              }
+            ]
+          },
+          "situational": {
+            "label": "Objetos situacionales",
+            "items": [
+              {
+                "id": "3041",
+                "name": "Robaalmas de Mejai",
+                "icon": "3041.png",
+                "why": "Opción de snowball cuando acumulas Sello oscuro con seguridad."
+              },
+              {
+                "id": "4645",
+                "name": "Llamasombría",
+                "icon": "4645.png",
+                "why": "Añade burst a un patrón de daño sostenido."
+              },
+              {
+                "id": "6333",
+                "name": "Baile de la muerte",
+                "icon": "6333.png",
+                "why": "Mitiga el burst físico y cura al conseguir muertes."
+              },
+              {
+                "id": "3157",
+                "name": "Reloj de arena de Zhonya",
+                "icon": "3157.png",
+                "why": "Gana tiempo contra una inmersión o un combo de burst retardado."
+              },
+              {
+                "id": "3089",
+                "name": "Sombrero mortal de Rabadon",
+                "icon": "3089.png",
+                "why": "Opción de late game si tus dagas hacen la mayor parte del trabajo."
+              }
+            ]
+          },
+          "notes": [
+            "Es el núcleo más común en la muestra de Lolalytics del parche 26.21, mientras que la pestaña recomendada de U.GG sigue prefiriendo burst AP. Ambas son válidas; elige una y practica su patrón de daño.",
+            "No mezcles objetos de AP y on-hit sin una razón clara.",
+            "La Katarina on-hit es más fuerte en peleas front-to-back y más débil para eliminar a un carry a través de escudos."
+          ]
+        }
+      ],
+      "combos": [
+        {
+          "name": "Intercambio seguro en línea",
+          "sequence": [
+            {
+              "key": "Q",
+              "label": "Q"
+            },
+            {
+              "key": "E",
+              "label": "E"
+            },
+            {
+              "key": "W",
+              "label": "W"
+            },
+            {
+              "key": "AA",
+              "label": "Auto"
+            },
+            {
+              "key": "E",
+              "label": "E fuera"
+            }
+          ],
+          "situation": "Un intercambio corto en línea o una ventana de poke segura.",
+          "execution": "Lanza Q para que la daga caiga detrás del objetivo, usa E sobre la daga o el campeón, W para velocidad y una segunda daga, un auto y después E a la daga de W o a un súbdito aliado para salir.",
+          "mistake": "Guardar E hasta después de estar aturdida.",
+          "warning": "No lo uses contra un mago con un stun point-and-click listo."
+        },
+        {
+          "name": "All-in de dos dagas",
+          "sequence": [
+            {
+              "key": "Q",
+              "label": "Q"
+            },
+            {
+              "key": "W",
+              "label": "W"
+            },
+            {
+              "key": "E",
+              "label": "E"
+            },
+            {
+              "key": "R",
+              "label": "R"
+            }
+          ],
+          "situation": "Un all-in después de que el enemigo haya gastado su control de masas principal.",
+          "execution": "Coloca las dagas de Q y W, entra con E sobre el objetivo, empieza R de inmediato y recoge las dagas después de la canalización si la pelea continúa.",
+          "mistake": "Canalizar R antes de que se use el stun o el derribo enemigo.",
+          "warning": "Si el enemigo puede interrumpirte, omite R y guarda las dagas para un reinicio."
+        },
+        {
+          "name": "Entrada de limpieza",
+          "sequence": [
+            {
+              "key": "E",
+              "label": "E"
+            },
+            {
+              "key": "Q",
+              "label": "Q"
+            },
+            {
+              "key": "W",
+              "label": "W"
+            },
+            {
+              "key": "R",
+              "label": "R"
+            }
+          ],
+          "situation": "Limpiar una pelea cuando un objetivo con poca vida está aislado.",
+          "execution": "E al objetivo, Q inmediatamente, W para velocidad y una daga, y después R. Usa las dagas para reiniciar E y pasar al siguiente objetivo.",
+          "mistake": "Fijarte solo en la primera muerte y olvidar la siguiente salida."
+        },
+        {
+          "name": "Cadena de reinicios en teamfight",
+          "sequence": [
+            {
+              "key": "Wait",
+              "label": "Espera CC"
+            },
+            {
+              "key": "E",
+              "label": "Entra"
+            },
+            {
+              "key": "Q",
+              "label": "Daño"
+            },
+            {
+              "key": "Dagger",
+              "label": "Recoge"
+            },
+            {
+              "key": "E",
+              "label": "Reset"
+            }
+          ],
+          "situation": "Teamfights de mitad de partida después de que se usen los primeros hechizos de control de masas.",
+          "execution": "Entra desde un flanco, daña al objetivo prioritario más cercano, recoge una daga y decide si continuar o salir. Las cadenas de reinicios son un bucle de decisiones, no una secuencia fija.",
+          "mistake": "Saltar solo porque ha ocurrido una muerte.",
+          "warning": "Un reinicio no limpia el control de masas ni te hace invulnerable."
+        }
+      ],
+      "sections": [
+        {
+          "id": "lane-phase",
+          "heading": "Fase de línea: sobrevive, farmea y luego muévete",
+          "paragraphs": [
+            "Los primeros tres niveles de Katarina consisten en conservar vida y preparar dagas, no en forzar intercambios. Usa Q para rematar súbditos y hacer que el daño rebote en la oleada, y guarda E para esquivar o escapar. Si el enemigo cruza por delante de sus súbditos, un intercambio Q-E-W puede merecer la pena, pero solo cuando su enfriamiento clave esté gastado.",
+            "Contra magos de rango, deja que la oleada empuje hacia ti y farmea con Q. No te quedes encima de tu propia daga si el enemigo puede castigar la recogida. Cuando tengas nivel 6 y Prender, busca una ventana de muerte después de que el enemigo use su hechizo defensivo o falle una habilidad clave.",
+            "Roama cuando la oleada esté empujada y tu rival de línea no pueda seguirte rápido. La velocidad de W y E hacen peligrosas para el enemigo las peleas en el río, pero un roam fallido te cuesta una oleada completa y tempo."
+          ],
+          "bullets": [
+            "Mantén vigilado el arbusto del río antes de empujar.",
+            "No uses E sobre una daga si te deja bajo la torre enemiga.",
+            "Respeta las ganks de jungla a nivel 2; Katarina no tiene escape natural sin E."
+          ]
+        },
+        {
+          "id": "mid-game",
+          "heading": "Mitad de partida: crea la primera captura",
+          "paragraphs": [
+            "Katarina no necesita iniciar peleas. Quiere que el enemigo las inicie o atrapar a un carry rotando solo. Empuja una oleada lateral, desaparece de la visión y ronda cerca del río. La amenaza de tu ausencia suele valer más que una inmersión de bajo porcentaje.",
+            "Cuando empiece una pelea, espera la primera oleada de control de masas. Después entra desde un lado, ataca al campeón valioso de menor riesgo y controla el enfriamiento de E. Si no hay reinicio disponible, sal antes de que el enemigo colapse."
+          ],
+          "bullets": [
+            "Juega alrededor de la visión, no solo del daño.",
+            "Consigue una muerte y vuelve a evaluar antes de perseguir la segunda.",
+            "Compra centinelas de control cuando vayas por delante; los flancos de Katarina necesitan visión."
+          ]
+        },
+        {
+          "id": "teamfights",
+          "heading": "Teamfights: la paciencia vence a la velocidad",
+          "paragraphs": [
+            "El error más común con Katarina es entrar primero. Su daño es alto, pero sigue siendo una campeona cuerpo a cuerpo sin inmunidad innata al control de masas. Deja que el enemigo gaste stuns, derribos y extenuaciones en tu primera línea o en la primera entrada.",
+            "Busca un ángulo de flanco que te permita llegar a la línea trasera sin cruzar por delante del tanque enemigo. Usa Q y W para crear dagas antes de comprometerte y guarda R hasta que se hayan gastado las interrupciones. Si la pelea está perdida, usa E para salir en lugar de perseguir una jugada de highlight."
+          ],
+          "bullets": [
+            "Controla el control de masas del support enemigo y el stun del mid.",
+            "No uses R contra un objetivo que pueda caminar detrás de su primera línea.",
+            "Una daga que te salva la vida vale más que una que hace daño extra."
+          ]
+        }
+      ],
+      "matchups": {
+        "note": "Los porcentajes de victoria son de las muestras de mid de U.GG y Lolalytics del parche 26.21 en Esmeralda+. Son señales estadísticas, no garantías; la habilidad del jugador y la atención del jungla importan más que el número.",
+        "difficult": [
+          {
+            "name": "Vladimir",
+            "icon": "Vladimir.png",
+            "winRate": "45.6%",
+            "games": "1,930",
+            "advice": "Vladimir supera tu sustento en los intercambios tempranos y puede esquivar tu burst con Estanque sangriento. Castígalo antes de que tenga objetos, pero no lo persigas a través del estanque. Roama en lugar de forzar una muerte en línea."
+          },
+          {
+            "name": "Annie",
+            "icon": "Annie.png",
+            "winRate": "46.7%",
+            "games": "954",
+            "advice": "El stun point-and-click de Annie responde directamente a tu E. Controla sus acumulaciones de stun, haz que lo gaste con un intercambio corto y entra solo cuando no lo tenga."
+          },
+          {
+            "name": "Vex",
+            "icon": "Vex.png",
+            "winRate": "46.8%",
+            "games": "1,354",
+            "advice": "Vex castiga los dashes y los intercambios largos. Mantente fuera del alcance de su miedo, farmea con Q y busca roams en lugar de duelar en la oleada."
+          },
+          {
+            "name": "Kassadin",
+            "icon": "Kassadin.png",
+            "winRate": "47.1%",
+            "games": "1,522",
+            "advice": "Kassadin escala y puede escapar de tu burst. Presiónalo antes del nivel 6 y evita gastar R en su Paso del Vacío. Pide ayuda al jungla para cerrar la partida pronto."
+          }
+        ],
+        "favorable": [
+          {
+            "name": "Taliyah",
+            "icon": "Taliyah.png",
+            "advice": "Taliyah es inmóvil cuando se le acaba el terreno trabajado. Esquiva su Q y su E, y luego intercambia con Q-E-W cuando su derribo esté en enfriamiento."
+          },
+          {
+            "name": "Syndra",
+            "icon": "Syndra.png",
+            "advice": "Syndra es vulnerable después de usar Dispersar a los débiles. Haz que gaste el stun, esquiva la esfera y entra antes de su siguiente rotación."
+          },
+          {
+            "name": "Zoe",
+            "icon": "Zoe.png",
+            "advice": "Zoe depende de acertar Burbbuja somnolienta. Mantén súbditos entre tú y ella, esquiva la estrella y castígala cuando dé un paso al frente."
+          }
+        ]
+      },
+      "mistakes": [
+        "Entrar antes de que el enemigo use su control de masas.",
+        "Tratar E como una entrada gratuita en lugar de guardar una salida.",
+        "Ignorar dónde caen las dagas.",
+        "Forzar R contra una interrupción de canalización.",
+        "Perseguir una segunda muerte cuando la pelea ya está perdida.",
+        "Copiar una build AD u on-hit sin practicar el espaciado de ataques básicos."
+      ],
+      "practicePlan": [
+        {
+          "title": "Ejercicio de caída de dagas",
+          "steps": [
+            "En la herramienta de práctica, lanza Q y W desde ángulos distintos.",
+            "Camina hasta cada daga y di en voz alta si recogerla es seguro.",
+            "Repite hasta que puedas predecir el punto de caída sin mirar el suelo."
+          ]
+        },
+        {
+          "title": "Ejercicio de cadenas de reinicio",
+          "steps": [
+            "Coloca dos muñecos de práctica y bájales la vida.",
+            "Mata a uno, recoge una daga y decide de inmediato si usar E sobre el segundo o salir.",
+            "No encadenes a ciegas; di la ruta de salida en voz alta."
+          ]
+        },
+        {
+          "title": "Revisión de teamfights",
+          "steps": [
+            "Mira una repetición por sesión.",
+            "Pausa en cada muerte e identifica qué enfriamiento enemigo estaba disponible.",
+            "Anota una regla para la siguiente partida, como «esperar el stun de Annie»."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "¿Es difícil aprender a Katarina?",
+          "a": "Sí. Su dificultad es alta porque su daño depende de la colocación de las dagas, los reinicios de enfriamiento y el timing de las peleas. La mecánica se puede aprender, pero la toma de decisiones requiere repeticiones."
+        },
+        {
+          "q": "¿Cuál es la mejor build de Katarina en el parche 26.21?",
+          "a": "No hay una única mejor build. El burst AP con Perdición del liche es la opción recomendada por defecto; el núcleo AD y on-hit con Verdugo de krakens, Grebas codiciosas y El final es la ruta más común en Lolalytics. Elige según la partida y tu práctica."
+        },
+        {
+          "q": "¿Qué orden de habilidades debo usar?",
+          "a": "Sube Q, luego E y después W, y mejora R en los niveles 6, 11 y 16. Empieza con Q-E-W en la mayoría de líneas."
+        },
+        {
+          "q": "¿Cuándo debo usar Loto mortal?",
+          "a": "Después de que el enemigo use sus interrupciones fiables, o cuando puedas golpear a varios objetivos sin ser castigada. No lo canalices solo porque esté disponible."
+        },
+        {
+          "q": "¿Es Katarina buena para principiantes?",
+          "a": "No es el primer campeón más fácil. Si eres nuevo, espera perder peleas mientras aprendes cuándo entrar; practica la recogida de dagas antes de llevarla a ranked."
+        }
+      ],
+      "statsNote": "U.GG y Lolalytics usan muestras y métodos de clasificación distintos, por lo que sus porcentajes de victoria difieren. Ambas instantáneas son del parche 26.21, Esmeralda+ y Solo/Dúo global. Tómalas como contexto, no como una promesa.",
+      "lastUpdated": "2026-10-27"
+    },
+    "sett": {
+      "slug": "sett",
+      "name": "Sett",
+      "title": "el Jefe",
+      "role": "top",
+      "roleLabel": "Top",
+      "difficulty": "medium",
+      "difficultyLabel": "Media",
+      "tagline": "Un abusón de línea que convierte el daño recibido en un escudo y un puñetazo de daño verdadero.",
+      "metaTitle": "Cómo jugar Sett en LoL: runas, build y combos (parche 26.21)",
+      "metaDescription": "Aprende a jugar Sett en el carril superior de League of Legends con runas, build de Cortasendas, orden de habilidades, combos y enfrentamientos del parche 26.21.",
+      "h1": "Cómo jugar Sett en League of Legends",
+      "heroIntro": [
+        "Sett es un coloso de la línea superior que gana intercambios cortos con la regeneración de su pasiva, el reinicio de autoataque de Q y el stun de E. Su W, Trastazo, convierte el daño recibido en un escudo y un potente puñetazo de daño verdadero.",
+        "Esta guía cubre la build de top del parche 26.21, el orden de habilidades exacto que usan las muestras más grandes, combos prácticos E-W-R, enfrentamientos de línea y los errores que hacen que Sett parezca débil. Se basa en Data Dragon 16.21.1 y en muestras actuales de U.GG y Lolalytics."
+      ],
+      "quickAnswer": "Empieza W-E-Q, sube Q primero, luego W y por último E. Lleva Conquistador con Valor secundario, construye Cortasendas hacia Cuchilla negra y usa E para aturdir antes de W para que el centro de daño verdadero sea inevitable. Sett es fuerte en intercambios cortos y peleas de línea lateral, pero los campeones a distancia lo kitean y no debe gastar Trastazo sin agallas.",
+      "quickStart": {
+        "role": "Línea superior",
+        "secondaryRoles": "Jungla o support como rol secundario",
+        "difficulty": "Media",
+        "playstyle": "Coloso y abusón de intercambios cortos",
+        "keyMechanic": "Trastazo convierte el daño almacenado en escudo y daño verdadero",
+        "beginnerMistake": "Lanzar W sin agallas o usar E con el enemigo solo a un lado",
+        "winCondition": "Ganar la línea lateral, forzar un flanco con R y usar E-W para proteger o eliminar a un carry"
+      },
+      "abilities": [
+        {
+          "key": "P",
+          "name": "Coraje del foso",
+          "icon": "Sett_P.png",
+          "description": "Los ataques básicos de Sett alternan entre un puñetazo izquierdo y un puñetazo derecho más fuerte y rápido. También se regenera según la vida que le falta.",
+          "tips": [
+            "Usa el puñetazo derecho para rematar y intercambiar.",
+            "Tu pasiva hace más resistentes las peleas largas con poca vida.",
+            "No confundas regeneración con inmunidad; el burst sigue matándote."
+          ],
+          "mistake": "Intercambiar con poca vida sin controlar el burst enemigo."
+        },
+        {
+          "key": "Q",
+          "name": "Nudillos a punto",
+          "icon": "SettQ.png",
+          "description": "Los dos siguientes ataques de Sett infligen daño adicional según la vida máxima del objetivo y gana velocidad de movimiento hacia campeones enemigos.",
+          "tips": [
+            "Q reinicia el autoataque; úsala inmediatamente después de un auto.",
+            "La velocidad te ayuda a seguir a un objetivo que huye.",
+            "Contra tanques con mucha vida, Q es una fuente de daño fiable."
+          ],
+          "mistake": "Usar Q sobre súbditos y quedarte sin reinicio para el intercambio con el campeón."
+        },
+        {
+          "key": "W",
+          "name": "Trastazo",
+          "icon": "SettW.png",
+          "description": "Sett almacena el daño recibido como agallas. Al lanzarlo, las consume para obtener un escudo y golpear un área, infligiendo daño verdadero en el centro y daño físico a los lados.",
+          "tips": [
+            "Deja que el enemigo te golpee primero para que el escudo y el puñetazo sean mayores.",
+            "El centro es la amenaza real; apúntalo a la posición actual del objetivo.",
+            "Puedes usar Destello durante la preparación para reposicionar el golpe."
+          ],
+          "mistake": "Lanzar W con pánico y casi sin agallas."
+        },
+        {
+          "key": "E",
+          "name": "Rompecaras",
+          "icon": "SettE.png",
+          "description": "Sett arrastra a los enemigos de lados opuestos, dañándolos y aturdiéndolos. Los enemigos que solo están a un lado son ralentizados.",
+          "tips": [
+            "Colócate para que el enemigo quede entre tú y un súbdito o una pared.",
+            "El stun de E prepara el centro de W.",
+            "Usa E para interrumpir dashes y habilidades canalizadas."
+          ],
+          "mistake": "Usar E con todos los enemigos a un lado y esperar un stun."
+        },
+        {
+          "key": "R",
+          "name": "El gran espectáculo",
+          "icon": "SettR.png",
+          "description": "Sett lleva a un campeón enemigo por el aire y lo estrella contra el suelo, dañando y ralentizando a los enemigos cercanos.",
+          "tips": [
+            "R puede aislar a un carry o alejar a un buceador de tu equipo.",
+            "Usa R para preparar E en la zona de aterrizaje.",
+            "No lances R a un tanque hacia tu propia línea trasera."
+          ],
+          "mistake": "Usar R como un botón de daño y olvidar dónde aterrizará el objetivo."
+        }
+      ],
+      "skillOrder": {
+        "priority": "Q > W > E",
+        "start": "W → E → Q",
+        "levels": [
+          {
+            "level": 1,
+            "ability": "W"
+          },
+          {
+            "level": 2,
+            "ability": "E"
+          },
+          {
+            "level": 3,
+            "ability": "Q"
+          },
+          {
+            "level": 4,
+            "ability": "Q"
+          },
+          {
+            "level": 5,
+            "ability": "Q"
+          },
+          {
+            "level": 6,
+            "ability": "R"
+          },
+          {
+            "level": 7,
+            "ability": "Q"
+          },
+          {
+            "level": 8,
+            "ability": "W"
+          },
+          {
+            "level": 9,
+            "ability": "Q"
+          },
+          {
+            "level": 10,
+            "ability": "W"
+          },
+          {
+            "level": 11,
+            "ability": "R"
+          },
+          {
+            "level": 12,
+            "ability": "W"
+          },
+          {
+            "level": 13,
+            "ability": "W"
+          },
+          {
+            "level": 14,
+            "ability": "E"
+          },
+          {
+            "level": 15,
+            "ability": "E"
+          },
+          {
+            "level": 16,
+            "ability": "R"
+          },
+          {
+            "level": 17,
+            "ability": "E"
+          },
+          {
+            "level": 18,
+            "ability": "E"
+          }
+        ],
+        "explanation": [
+          "Q se sube primero por el daño fiable según vida máxima y la velocidad para seguir a los objetivos.",
+          "W se sube segundo porque el escudo y el puñetazo de daño verdadero escalan con los niveles y deciden peleas largas.",
+          "E se sube al final; un punto basta para el stun y la interrupción temprana."
+        ],
+        "note": "El inicio W-E-Q es la ruta más común del parche 26.21 en las muestras de U.GG y Lolalytics. Empezar con E es una elección válida para líneas concretas cuando necesitas intercambiar a nivel 1 o un stun para asegurar una gank."
+      },
+      "runes": {
+        "title": "Coloso con Conquistador",
+        "summary": "Conquistador es la runa clave por defecto de Sett porque sus intercambios largos y los reinicios de Q la acumulan rápido. Valor secundario mejora su resistencia en línea y su presión en línea lateral.",
+        "primaryTree": {
+          "name": "Precisión",
+          "icon": "perk-images/Styles/7201_Precision.png"
+        },
+        "secondaryTree": {
+          "name": "Valor",
+          "icon": "perk-images/Styles/7204_Resolve.png"
+        },
+        "keystone": {
+          "id": 8010,
+          "name": "Conquistador",
+          "icon": "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+          "why": "Cura y añade daño en las peleas largas que Sett busca."
+        },
+        "primaryRunes": [
+          {
+            "id": 9111,
+            "name": "Triunfo",
+            "icon": "perk-images/Styles/Precision/Triumph.png",
+            "why": "La curación al conseguir muertes te mantiene vivo en peleas 1v2 en línea lateral."
+          },
+          {
+            "id": 9104,
+            "name": "Leyenda: Presteza",
+            "icon": "perk-images/Styles/Precision/LegendAlacrity/LegendAlacrity.png",
+            "why": "La velocidad de ataque hace más fluidos los reinicios de Q y los puñetazos derechos."
+          },
+          {
+            "id": 8299,
+            "name": "Último esfuerzo",
+            "icon": "perk-images/Styles/Sorcery/LastStand/LastStand.png",
+            "why": "Sett suele pelear con poca vida, donde el daño extra está activo."
+          }
+        ],
+        "secondaryRunes": [
+          {
+            "id": 8444,
+            "name": "Fuerzas renovadas",
+            "icon": "perk-images/Styles/Resolve/SecondWind/SecondWind.png",
+            "why": "La mejor opción por defecto contra poke e intercambios cortos."
+          },
+          {
+            "id": 8451,
+            "name": "Sobrecrecimiento",
+            "icon": "perk-images/Styles/Resolve/Overgrowth/Overgrowth.png",
+            "why": "La vida extra mejora la regeneración pasiva, el escudo de W y la resistencia en primera línea."
+          }
+        ],
+        "alternatives": [
+          "Revestimiento de huesos contra líneas con mucho burst",
+          "Demoler para presionar torres más rápido",
+          "Ataque intensificado para intercambios cortos",
+          "Leyenda: Velocidad contra líneas que dependen de habilidades"
+        ],
+        "notes": [
+          "La página de arriba es una configuración común del parche 26.21, no la única correcta.",
+          "Contra poke a distancia, Fuerzas renovadas y Escudo de Doran valen más que el daño bruto.",
+          "Si eres la única primera línea, Sobrecrecimiento y Calibrador de Sterak suelen ser mejores que más ofensiva."
+        ]
+      },
+      "summonerSpells": [
+        {
+          "name": "Flash",
+          "icon": "SummonerFlash.png",
+          "why": "Esencial para stuns con E, entradas con R y escapar después de una pelea en línea lateral.",
+          "alternative": "Lleva Destello siempre."
+        },
+        {
+          "name": "Ignite",
+          "icon": "SummonerDot.png",
+          "why": "Añade presión de muerte en líneas cuerpo a cuerpo y ayuda a rematar antes de que escapen.",
+          "alternative": "Teleportar es mejor en líneas donde esperas recibir poke o necesitas responder a un split-pusher."
+        }
+      ],
+      "builds": [
+        {
+          "id": "stridebreaker-bruiser",
+          "label": "Coloso con Cortasendas",
+          "badge": "Núcleo de U.GG y Lolalytics",
+          "summary": "Cortasendas da a Sett la capacidad de pegarse a los objetivos que le falta, mientras Cuchilla negra y las botas completan un núcleo resistente para la línea lateral. Es la build por defecto en la mayoría de partidas de top.",
+          "starting": {
+            "label": "Objetos iniciales",
+            "items": [
+              {
+                "id": "1054",
+                "name": "Escudo de Doran",
+                "icon": "1054.png",
+                "why": "El inicio más seguro contra poke y tops a distancia."
+              },
+              {
+                "id": "2003",
+                "name": "Poción de vida",
+                "icon": "2003.png",
+                "why": "Sostenibilidad extra para las primeras oleadas."
+              }
+            ],
+            "note": "Espada de Doran y dos Pociones de vida es el inicio más común en Lolalytics del parche 26.21 y es mejor cuando puedes intercambiar con agresividad. Escudo de Doran es la opción más segura contra poke."
+          },
+          "core": {
+            "label": "Objetos principales",
+            "items": [
+              {
+                "id": "6631",
+                "name": "Cortasendas",
+                "icon": "6631.png",
+                "why": "Daño, vida, velocidad de ataque y una ralentización que ayuda a Sett a quedarse sobre los objetivos."
+              },
+              {
+                "id": "3071",
+                "name": "Cuchilla negra",
+                "icon": "3071.png",
+                "why": "Reducción de armadura para tu daño físico y más vida para peleas largas."
+              }
+            ]
+          },
+          "boots": {
+            "label": "Botas",
+            "items": [
+              {
+                "id": "3009",
+                "name": "Botas de rapidez",
+                "icon": "3009.png",
+                "why": "Las botas por defecto del núcleo de Lolalytics; ayudan contra el kiting."
+              },
+              {
+                "id": "3047",
+                "name": "Botas blindadas",
+                "icon": "3047.png",
+                "why": "Armadura contra tops con muchos ataques básicos y composiciones AD."
+              },
+              {
+                "id": "3111",
+                "name": "Botas de mercurio",
+                "icon": "3111.png",
+                "why": "Tenacidad y resistencia mágica contra control de masas y AP."
+              }
+            ]
+          },
+          "situational": {
+            "label": "Objetos situacionales",
+            "items": [
+              {
+                "id": "3053",
+                "name": "Calibrador de Sterak",
+                "icon": "3053.png",
+                "why": "Escudo antiburst y tenacidad para teamfights."
+              },
+              {
+                "id": "3161",
+                "name": "Lanza de Shojin",
+                "icon": "3161.png",
+                "why": "Aceleración de habilidades y más tiempo de Q y W en peleas largas."
+              },
+              {
+                "id": "3083",
+                "name": "Armadura de Warmog",
+                "icon": "3083.png",
+                "why": "Sostenibilidad en línea lateral y recuperación de vida entre peleas."
+              },
+              {
+                "id": "3181",
+                "name": "Rompecascos",
+                "icon": "3181.png",
+                "why": "Presión de split-push cuando puedes forzar una línea lateral."
+              },
+              {
+                "id": "6333",
+                "name": "Baile de la muerte",
+                "icon": "6333.png",
+                "why": "Mitigación de daño físico y curación en escaramuzas."
+              },
+              {
+                "id": "3075",
+                "name": "Malla de espinas",
+                "icon": "3075.png",
+                "why": "Anticuración y armadura contra equipos con muchos ataques básicos."
+              },
+              {
+                "id": "4401",
+                "name": "Fuerza de la naturaleza",
+                "icon": "4401.png",
+                "why": "Resistencia mágica y velocidad de movimiento contra burst AP."
+              }
+            ]
+          },
+          "notes": [
+            "Cortasendas es el pico principal. No lo retrases por un objeto defensivo de lujo salvo que ya estés perdiendo la línea claramente.",
+            "Cuchilla negra es excelente contra armadura y tanques; si el enemigo no tiene primera línea, Calibrador de Sterak o Lanza de Shojin pueden llegar antes.",
+            "Rompecascos es una elección de línea lateral, no un objeto obligatorio para teamfights."
+          ]
+        },
+        {
+          "id": "frontline-anti-burst",
+          "label": "Primera línea y antiburst",
+          "badge": "Situacional",
+          "summary": "Cuando tu equipo necesita una primera línea y el enemigo tiene mucho burst, retrasa Cuchilla negra y prioriza Calibrador de Sterak, Lanza de Shojin y resistencias. Haces menos daño, pero puedes absorber la primera entrada.",
+          "starting": {
+            "label": "Objetos iniciales",
+            "items": [
+              {
+                "id": "1054",
+                "name": "Escudo de Doran",
+                "icon": "1054.png",
+                "why": "El inicio más seguro cuando esperas recibir poke."
+              },
+              {
+                "id": "2003",
+                "name": "Poción de vida",
+                "icon": "2003.png",
+                "why": "Sostenibilidad para las primeras oleadas."
+              }
+            ]
+          },
+          "core": {
+            "label": "Objetos principales",
+            "items": [
+              {
+                "id": "6631",
+                "name": "Cortasendas",
+                "icon": "6631.png",
+                "why": "Sigue siendo el mejor primer objeto para pegarse a los objetivos."
+              },
+              {
+                "id": "3053",
+                "name": "Calibrador de Sterak",
+                "icon": "3053.png",
+                "why": "El escudo antiburst que te permite sobrevivir a la primera entrada."
+              }
+            ]
+          },
+          "boots": {
+            "label": "Botas",
+            "items": [
+              {
+                "id": "3047",
+                "name": "Botas blindadas",
+                "icon": "3047.png",
+                "why": "La opción por defecto en partidas con mucho AD."
+              },
+              {
+                "id": "3111",
+                "name": "Botas de mercurio",
+                "icon": "3111.png",
+                "why": "La opción por defecto en partidas con mucho AP o control de masas."
+              }
+            ]
+          },
+          "situational": {
+            "label": "Objetos situacionales",
+            "items": [
+              {
+                "id": "3161",
+                "name": "Lanza de Shojin",
+                "icon": "3161.png",
+                "why": "Más tiempo de habilidades cuando eres la primera línea principal."
+              },
+              {
+                "id": "3083",
+                "name": "Armadura de Warmog",
+                "icon": "3083.png",
+                "why": "Vida y regeneración para peleas largas."
+              },
+              {
+                "id": "3075",
+                "name": "Malla de espinas",
+                "icon": "3075.png",
+                "why": "Anticuración y armadura."
+              },
+              {
+                "id": "4401",
+                "name": "Fuerza de la naturaleza",
+                "icon": "4401.png",
+                "why": "Resistencia mágica y velocidad de movimiento."
+              },
+              {
+                "id": "2504",
+                "name": "Rookern kaénico",
+                "icon": "2504.png",
+                "why": "Un fuerte escudo contra daño mágico de magos de burst."
+              },
+              {
+                "id": "3143",
+                "name": "Presagio de Randuin",
+                "icon": "3143.png",
+                "why": "Reducción de golpes críticos contra carries AD."
+              }
+            ]
+          },
+          "notes": [
+            "Esta ruta es para partidas en las que tu equipo ya tiene suficiente daño pero necesita una primera entrada duradera.",
+            "No omitas Cortasendas por completo; Sett sigue necesitando la ralentización para funcionar.",
+            "Si vas por detrás, construye resistencias antes que daño. Un Sett muerto no hace daño."
+          ]
+        }
+      ],
+      "combos": [
+        {
+          "name": "Intercambio estándar E-W",
+          "sequence": [
+            {
+              "key": "E",
+              "label": "E"
+            },
+            {
+              "key": "Q",
+              "label": "Q"
+            },
+            {
+              "key": "AA",
+              "label": "Auto"
+            },
+            {
+              "key": "W",
+              "label": "W"
+            }
+          ],
+          "situation": "Un intercambio corto cuando el enemigo está entre tú y un súbdito o una pared.",
+          "execution": "E arrastra y aturde, Q reinicia tu autoataque, haz dos autos y después W con las agallas almacenadas. Apunta el centro a la posición donde aterrizará el objetivo.",
+          "mistake": "Usar W antes de que el enemigo haya intercambiado contigo, así que el escudo y el golpe son pequeños.",
+          "warning": "Si E solo golpea a un lado, ralentiza en lugar de aturdir; reposiciónate antes de comprometerte."
+        },
+        {
+          "name": "Entrada de teamfight R-E",
+          "sequence": [
+            {
+              "key": "R",
+              "label": "R"
+            },
+            {
+              "key": "E",
+              "label": "E"
+            },
+            {
+              "key": "Q",
+              "label": "Q"
+            },
+            {
+              "key": "W",
+              "label": "W"
+            }
+          ],
+          "situation": "Una entrada de teamfight o una captura en línea lateral cuando puedes aislar a un carry.",
+          "execution": "Usa R para llevar al objetivo hacia tu equipo o lejos del suyo, E al aterrizar para aturdir a los enemigos cercanos, Q para daño según vida máxima y W con las agallas de la pelea.",
+          "mistake": "Lanzar R a un tanque hacia tu propia línea trasera y regalarle una entrada.",
+          "warning": "Comprueba dónde aterrizará el objetivo antes de usar R; el golpe puede desplazarlo lejos de tu seguimiento."
+        },
+        {
+          "name": "Captura con Destello E",
+          "sequence": [
+            {
+              "key": "Flash",
+              "label": "Flash"
+            },
+            {
+              "key": "E",
+              "label": "E"
+            },
+            {
+              "key": "Q",
+              "label": "Q"
+            },
+            {
+              "key": "W",
+              "label": "W"
+            }
+          ],
+          "situation": "Castigar a un carry que está justo fuera del alcance de E.",
+          "execution": "Destello para entrar en rango de E, E inmediatamente para aturdir, Q para reiniciar el autoataque y W para rematar con daño verdadero.",
+          "mistake": "Usar Destello sin E lista o ejecutar el combo sin suficientes agallas.",
+          "warning": "Esto gasta tu única salida fiable; no lo uses sin visión del jungla enemigo."
+        },
+        {
+          "name": "Reposicionar Trastazo",
+          "sequence": [
+            {
+              "key": "W",
+              "label": "W"
+            },
+            {
+              "key": "Flash",
+              "label": "Flash"
+            }
+          ],
+          "situation": "Mover el centro de daño verdadero de Trastazo a un objetivo que sale de rango.",
+          "execution": "Empieza W y usa Destello durante la preparación para colocar el centro sobre el objetivo.",
+          "mistake": "Usar Destello después de que el puñetazo ya se haya lanzado.",
+          "warning": "Es una mecánica de alto compromiso; practícala primero en la herramienta de práctica."
+        }
+      ],
+      "sections": [
+        {
+          "id": "lane-phase",
+          "heading": "Fase de línea: intercambios cortos y después presión",
+          "paragraphs": [
+            "El plan de línea de Sett se basa en intercambios cortos. Usa E para aturdir, Q para reiniciar tu autoataque y W para absorber la respuesta. No empieces con W; deja que el enemigo comprometa daño primero para que el escudo y el golpe valgan el enfriamiento.",
+            "Contra campeones de rango, renuncia a farmeo temprano antes que caminar hacia poke gratis. Escudo de Doran, Fuerzas renovadas y tu regeneración pasiva te permiten sobrevivir hasta Cortasendas. Contra campeones cuerpo a cuerpo, disputa la oleada con intercambios E-Q y usa el empuje para preparar un recall tramposo o una inmersión con jungla.",
+            "En nivel 6, R te da una herramienta de inmersión y escaramuza. Úsala para aislar al top enemigo bajo su torre solo cuando sepas dónde está el jungla enemigo. Sett gana 1v2 cuando tiene agallas y una pared, no cuando lo pillan en campo abierto."
+          ],
+          "bullets": [
+            "No uses E sobre la oleada si lo necesitas para escapar de una gank.",
+            "Guarda W para el burst enemigo, no para un intercambio de poke random.",
+            "Un empuje lento es mejor que uno rápido cuando quieres hacer dive o roamar."
+          ]
+        },
+        {
+          "id": "mid-game",
+          "heading": "Mitad de partida: haz que funcione la línea lateral",
+          "paragraphs": [
+            "La mitad de partida de Sett consiste en presión de línea lateral y forzar rotaciones. Empuja una oleada, amenaza la torre y haz que el enemigo envíe a alguien a responder. Cuando lo haga, tu equipo puede tomar un objetivo o tú puedes flanquear con R.",
+            "En escaramuzas, usa E para proteger a tu carry o aturdir a varios enemigos. W es defensa y ataque: el escudo gana tiempo y el centro castiga a quien se quede quieto. No persigas campeones de rango por campo abierto; deja que vengan a ti o empújalos contra una pared."
+          ],
+          "bullets": [
+            "Controla tus agallas antes de comprometerte con W.",
+            "Usa R para sacar al carry enemigo de la pelea, no solo por daño.",
+            "Rompecascos es para partidas en las que realmente puedes presionar una línea lateral."
+          ]
+        },
+        {
+          "id": "teamfights",
+          "heading": "Teamfights: primera línea y después aislar",
+          "paragraphs": [
+            "Sett es una primera línea, pero no es inmortal. Empieza protegiendo a tu carry con E y R, y luego busca un Destello E sobre la línea trasera enemiga cuando su primera línea ya esté comprometida. Si eres la entrada principal, asegúrate de que tu equipo pueda seguirte antes de entrar con R.",
+            "Trastazo es más fuerte después de que el enemigo haya gastado daño en ti. No lo desperdicies al inicio de la pelea solo porque esté disponible. Un W con agallas máximas puede decidir un teamfight; un W vacío normalmente solo retrasa tu muerte."
+          ],
+          "bullets": [
+            "Aturde a varios objetivos con E si es posible.",
+            "Usa R para alejar al buceador de tu carry.",
+            "No lances R a un tanque hacia tu propio equipo."
+          ]
+        }
+      ],
+      "matchups": {
+        "note": "Los porcentajes de victoria son de la muestra de top de U.GG del parche 26.21 en Esmeralda+. Lolalytics sitúa a Aatrox, Warwick y Ornn entre los counters más duros de Sett; U.GG destaca a Tryndamere, Aatrox y Vayne. Tómalos como señales, no como reglas fijas.",
+        "difficult": [
+          {
+            "name": "Tryndamere",
+            "icon": "Tryndamere.png",
+            "winRate": "46.5%",
+            "games": "1,083",
+            "advice": "Tryndamere puede igualar tu línea lateral e ignorar tu burst con Furia eterna. Haz intercambios cortos, no lo persigas durante su definitiva y compra armadura o Malla de espinas si es la condición de victoria."
+          },
+          {
+            "name": "Aatrox",
+            "icon": "Aatrox.png",
+            "winRate": "46.6%",
+            "games": "2,586",
+            "advice": "Aatrox te supera en rango con su Q y se sostiene a través de tus intercambios. Usa E para interrumpir su Q3 o su dash, y evita pelear en sus zonas óptimas. Filotormenta o Malla de espinas pueden ayudar."
+          },
+          {
+            "name": "Vayne",
+            "icon": "Vayne.png",
+            "winRate": "46.7%",
+            "games": "467",
+            "advice": "Vayne te kitea con Voltereta y Saetas de plata. No la persigas por campo abierto; fuérzala cerca de una pared, usa E para aturdirla y pide presión de jungla."
+          }
+        ],
+        "favorable": [
+          {
+            "name": "Rumble",
+            "icon": "Rumble.png",
+            "advice": "Rumble quiere quedarse quieto y quemarte, lo que te permite almacenar agallas y conectar un W enorme. Usa E para mantenerlo en tu rango y evita pelear dentro de su Ecualizador."
+          },
+          {
+            "name": "Tahm Kench",
+            "icon": "TahmKench.png",
+            "advice": "Tahm Kench es una pelea larga, y a Sett le gustan las peleas largas. Usa el daño de Q según vida máxima y guarda W para el momento de su devorar o su escudo."
+          },
+          {
+            "name": "K'Sante",
+            "icon": "KSante.png",
+            "advice": "K'Sante tiene que comprometerse al cuerpo a cuerpo. Usa E contra su dash, castígalo con Q-W y no dejes que te use R a través de una pared sin un plan de seguimiento."
+          }
+        ]
+      },
+      "mistakes": [
+        "Lanzar W sin agallas.",
+        "Usar E con el enemigo a un solo lado y esperar un stun.",
+        "Perseguir campeones de rango por campo abierto.",
+        "Lanzar R a un tanque hacia tu propia línea trasera.",
+        "Construir daño puro cuando tu equipo necesita una primera línea.",
+        "Ignorar el timing del puñetazo derecho y perder intercambios tempranos."
+      ],
+      "practicePlan": [
+        {
+          "title": "Ejercicio de agallas",
+          "steps": [
+            "En la herramienta de práctica, deja que un muñeco te golpee y lanza W con distintas cantidades de agallas.",
+            "Compara el escudo y el daño del centro.",
+            "Practica guardar W hasta que el enemigo se comprometa, no hasta que esté disponible."
+          ]
+        },
+        {
+          "title": "Ejercicio de centro con E-W",
+          "steps": [
+            "Coloca dos muñecos en lados opuestos.",
+            "Arrástralos con E y lanza W al centro de inmediato.",
+            "Repite hasta que el timing de stun a puñetazo sea automático."
+          ]
+        },
+        {
+          "title": "Preparación con R-E",
+          "steps": [
+            "Lanza R a un muñeco hacia una pared o hacia tu equipo.",
+            "Usa E al aterrizar para aturdir al objetivo cercano.",
+            "Practica elegir una zona de aterrizaje que mantenga al enemigo en rango de tu equipo."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "¿Es fácil jugar Sett?",
+          "a": "La barrera de entrada de Sett es baja, pero su techo es medio. El intercambio básico E-Q-W es sencillo; lo difícil es gestionar las agallas, elegir objetivos para R y no dejar que te kiteen."
+        },
+        {
+          "q": "¿Cuál es la mejor build de Sett en el parche 26.21?",
+          "a": "Cortasendas hacia Cuchilla negra es el núcleo estándar. Calibrador de Sterak, Lanza de Shojin y Armadura de Warmog son continuaciones habituales. Rompecascos es para presión de línea lateral, no para todas las partidas."
+        },
+        {
+          "q": "¿Qué orden de habilidades debo usar?",
+          "a": "Empieza W-E-Q, sube Q, luego W y después E, y mejora R en los niveles 6, 11 y 16. Es la ruta más común en las muestras del parche 26.21."
+        },
+        {
+          "q": "¿Cómo uso correctamente la W de Sett?",
+          "a": "Almacena agallas recibiendo daño, usa el escudo para sobrevivir al burst enemigo y apunta el centro a su posición actual. No la lances con vida llena y sin agallas."
+        },
+        {
+          "q": "¿Es Sett bueno en elo bajo?",
+          "a": "Sí. Sus intercambios directos y su fuerza en línea lateral funcionan bien en elo bajo, pero se vuelve más difícil cuando los enemigos aprenden a kitearte y esquivar Trastazo."
+        }
+      ],
+      "statsNote": "U.GG y Lolalytics usan muestras y métodos de clasificación distintos. Ambas instantáneas son del parche 26.21, Esmeralda+ y Solo/Dúo global. El porcentaje de victorias de Sett es fuerte, pero su pick rate y ban rate son moderados, así que la muestra es menor que la de Katarina.",
+      "lastUpdated": "2026-10-27"
+    },
+    "ksante": {
+      "slug": "ksante",
+      "name": "K'Sante",
+      "title": "el Orgullo de Nazumah",
+      "role": "top",
+      "roleLabel": "Top",
+      "difficulty": "very-high",
+      "difficultyLabel": "Muy alta",
+      "tagline": "Un tanque de alta habilidad que puede proteger, duelar y secuestrar a un carry a través de una pared.",
+      "metaTitle": "Cómo jugar K'Sante en LoL: runas, build y combos (parche 26.21)",
+      "metaDescription": "Aprende a jugar K'Sante en el carril superior de League of Legends con runas, build de Guantelete de hielo, orden de habilidades, combos y consejos del parche 26.21.",
+      "h1": "Cómo jugar K'Sante en League of Legends",
+      "heroIntro": [
+        "K'Sante es un tanque de la línea superior con un techo de habilidad inusualmente alto. Puede escudarse, hacer dash, arrastrar enemigos con su Q, aturdir con W y usar R para llevar a un objetivo a través de una pared y transformarse en un duelista centrado en daño.",
+        "Esta guía cubre la build de top del parche 26.21, el orden de habilidades exacto, combos prácticos Q-W-R, decisiones de línea y de teamfight, y los enfrentamientos que exponen sus debilidades. Se basa en Data Dragon 16.21.1 y en muestras actuales de U.GG y Lolalytics."
+      ],
+      "quickAnswer": "Empieza E-Q-W, sube Q primero, luego E y por último W. Lleva Garras del inmortal con Precisión secundaria, construye Rookern kaénico hacia Guantelete de hielo y usa Q2 para arrastrar enemigos hacia W o R. K'Sante es un campeón de bajo porcentaje de victorias y alto dominio en el parche 26.21: es fuerte cuando aciertas su control de masas y débil cuando gastas R o fallas las acumulaciones de Q.",
+      "quickStart": {
+        "role": "Línea superior",
+        "secondaryRoles": "Mid o support como rol secundario",
+        "difficulty": "Muy alta",
+        "playstyle": "Tanque de primera línea, captura y protección",
+        "keyMechanic": "La onda de choque de Q2 arrastra enemigos hacia tu W o R",
+        "beginnerMistake": "Usar R sin una pared o sin un plan de seguimiento",
+        "winCondition": "Sobrevivir la línea, controlar las peleas del río con Q2-W y usar R para aislar al carry enemigo"
+      },
+      "abilities": [
+        {
+          "key": "P",
+          "name": "Instinto intrépido",
+          "icon": "Icons_KSante_P.png",
+          "description": "Las habilidades de K'Sante marcan a los objetivos para recibir más daño de su siguiente ataque. En Órdago, inflige más daño con ataques y habilidades.",
+          "tips": [
+            "Haz un autoataque después de cada habilidad para consumir la marca.",
+            "En Órdago haces más daño, pero tus defensas bajan.",
+            "No persigas marcas hacia la línea trasera enemiga sin un plan."
+          ],
+          "mistake": "Encadenar habilidades sin intercalar autos y perder el daño de la pasiva."
+        },
+        {
+          "key": "Q",
+          "name": "Golpes de ntofo",
+          "icon": "KSanteQ.png",
+          "description": "K'Sante golpea en una línea corta y ralentiza a los enemigos. Acertar otorga una acumulación; con dos, el siguiente Q se convierte en una onda de choque que arrastra a los enemigos.",
+          "tips": [
+            "Usa Q para farmear y acumular antes de un intercambio.",
+            "Q2 es tu herramienta de preparación; arrastra enemigos hacia W o R.",
+            "En Órdago, Q tiene menos enfriamiento."
+          ],
+          "mistake": "Gastar Q2 en la oleada cuando está a punto de empezar una pelea."
+        },
+        {
+          "key": "W",
+          "name": "Pionero",
+          "icon": "KSanteW.png",
+          "description": "K'Sante se carga mientras recibe daño reducido y después hace un dash, empujando y aturdiendo a los enemigos. En Órdago inflige más daño, pero ya no empuja ni aturde.",
+          "tips": [
+            "Mantén W para bloquear el burst enemigo y suéltala para aturdir.",
+            "Usa W para interrumpir dashes o habilidades canalizadas.",
+            "En Órdago, W es una herramienta de daño, no de control de masas."
+          ],
+          "mistake": "Soltar W antes de tiempo y perder la reducción de daño antes de que llegue el burst."
+        },
+        {
+          "key": "E",
+          "name": "Juego de pies",
+          "icon": "KSanteE.png",
+          "description": "K'Sante hace un dash y obtiene un escudo. Si apunta a un aliado, aumenta el rango y escuda a ambos. En Órdago, el enfriamiento se reduce y la velocidad aumenta.",
+          "tips": [
+            "Usa E sobre un aliado para escapar o escudar a los dos.",
+            "E es tu dash defensivo principal; no lo gastes para hacer poke.",
+            "En Órdago, E es tu principal herramienta de persecución y reposicionamiento."
+          ],
+          "mistake": "Usar E de forma agresiva sin valor de escudo y sin salida."
+        },
+        {
+          "key": "R",
+          "name": "Órdago",
+          "icon": "KSanteR.png",
+          "description": "K'Sante empuja a un enemigo a través de cualquier pared en su camino, después hace un dash tras él y entra en Órdago, ganando daño y curación a cambio de defensas.",
+          "tips": [
+            "Usa R para aislar a un carry o escapar de una pelea perdida.",
+            "Comprueba el ángulo de la pared antes de comprometerte; el objetivo debe golpear una pared para ser desplazado.",
+            "En Órdago, juega como un duelista, no como un tanque."
+          ],
+          "mistake": "Usar R sobre un objetivo sin pared o sin seguimiento y morir después en Órdago."
+        }
+      ],
+      "skillOrder": {
+        "priority": "Q > E > W",
+        "start": "E → Q → W",
+        "levels": [
+          {
+            "level": 1,
+            "ability": "E"
+          },
+          {
+            "level": 2,
+            "ability": "Q"
+          },
+          {
+            "level": 3,
+            "ability": "W"
+          },
+          {
+            "level": 4,
+            "ability": "Q"
+          },
+          {
+            "level": 5,
+            "ability": "Q"
+          },
+          {
+            "level": 6,
+            "ability": "R"
+          },
+          {
+            "level": 7,
+            "ability": "Q"
+          },
+          {
+            "level": 8,
+            "ability": "E"
+          },
+          {
+            "level": 9,
+            "ability": "Q"
+          },
+          {
+            "level": 10,
+            "ability": "E"
+          },
+          {
+            "level": 11,
+            "ability": "R"
+          },
+          {
+            "level": 12,
+            "ability": "E"
+          },
+          {
+            "level": 13,
+            "ability": "E"
+          },
+          {
+            "level": 14,
+            "ability": "W"
+          },
+          {
+            "level": 15,
+            "ability": "W"
+          },
+          {
+            "level": 16,
+            "ability": "R"
+          },
+          {
+            "level": 17,
+            "ability": "W"
+          },
+          {
+            "level": 18,
+            "ability": "W"
+          }
+        ],
+        "explanation": [
+          "Q se sube primero por el control de oleada, el poke y el arrastre de Q2.",
+          "E se sube segundo por un escudo más fuerte y menos enfriamiento, algo central para la supervivencia de K'Sante.",
+          "W se sube al final porque un punto ya da el stun y la reducción de daño; los niveles posteriores son un extra."
+        ],
+        "note": "Es la ruta más común del parche 26.21 en las muestras de U.GG y Lolalytics. Algunas líneas prefieren Q a nivel 1 para hacer poke; empezar con E es la opción más segura por defecto."
+      },
+      "runes": {
+        "title": "Primera línea con Garras del inmortal",
+        "summary": "Garras del inmortal es la runa clave por defecto en el parche 26.21. Premia los intercambios cortos, mejora el sustento en línea y escala con la vida de K'Sante. Precisión secundaria añade tenacidad, aceleración de habilidades y daño de Último esfuerzo.",
+        "primaryTree": {
+          "name": "Valor",
+          "icon": "perk-images/Styles/7204_Resolve.png"
+        },
+        "secondaryTree": {
+          "name": "Precisión",
+          "icon": "perk-images/Styles/7201_Precision.png"
+        },
+        "keystone": {
+          "id": 8437,
+          "name": "Garras del inmortal",
+          "icon": "perk-images/Styles/Resolve/GraspOfTheUndying/GraspOfTheUndying.png",
+          "why": "La mejor opción por defecto para intercambios cortos y escalado con vida."
+        },
+        "primaryRunes": [
+          {
+            "id": 8446,
+            "name": "Demoler",
+            "icon": "perk-images/Styles/Resolve/Demolish/Demolish.png",
+            "why": "Presión de torre después de ganar la línea."
+          },
+          {
+            "id": 8444,
+            "name": "Fuerzas renovadas",
+            "icon": "perk-images/Styles/Resolve/SecondWind/SecondWind.png",
+            "why": "Sustento contra poke e intercambios cortos."
+          },
+          {
+            "id": 8451,
+            "name": "Sobrecrecimiento",
+            "icon": "perk-images/Styles/Resolve/Overgrowth/Overgrowth.png",
+            "why": "La vida extra mejora tu escudo, tu daño y tu resistencia en primera línea."
+          }
+        ],
+        "secondaryRunes": [
+          {
+            "id": 9111,
+            "name": "Triunfo",
+            "icon": "perk-images/Styles/Precision/Triumph.png",
+            "why": "Curación al conseguir muertes en peleas largas."
+          },
+          {
+            "id": 9105,
+            "name": "Leyenda: Velocidad",
+            "icon": "perk-images/Styles/Precision/LegendHaste/LegendHaste.png",
+            "why": "Más usos de Q y E en las peleas."
+          },
+          {
+            "id": 8299,
+            "name": "Último esfuerzo",
+            "icon": "perk-images/Styles/Sorcery/LastStand/LastStand.png",
+            "why": "K'Sante suele pelear con poca vida en Órdago."
+          }
+        ],
+        "alternatives": [
+          "Revestimiento de huesos contra líneas con mucho burst",
+          "Condicionamiento para resistencias de late game",
+          "Inquebrantable contra mucho control de masas",
+          "Reverberacción para resistir en teamfights"
+        ],
+        "notes": [
+          "Es una configuración común del parche 26.21, no la única página correcta.",
+          "Garras del inmortal es más débil en líneas donde no puedes hacer autos con seguridad; en esas partidas, Reverberacción puede ser más fiable.",
+          "No lleves Demoler si esperas que te campeen y no puedes empujar."
+        ]
+      },
+      "summonerSpells": [
+        {
+          "name": "Flash",
+          "icon": "SummonerFlash.png",
+          "why": "Clave para ángulos de R, escapes con E y stuns con W.",
+          "alternative": "Lleva Destello siempre."
+        },
+        {
+          "name": "Ignite",
+          "icon": "SummonerDot.png",
+          "why": "Añade presión de muerte y ayuda a ganar el all-in de nivel 6.",
+          "alternative": "Teleportar es la opción más segura en líneas donde esperas recibir poke o necesitas responder en una línea lateral."
+        }
+      ],
+      "builds": [
+        {
+          "id": "tank-core",
+          "label": "Núcleo de tanque",
+          "badge": "Núcleo de Lolalytics",
+          "summary": "La build por defecto de K'Sante prioriza resistencia y aceleración de habilidades. Rookern kaénico cubre daño mágico, Botas de mercurio reducen el control de masas y Guantelete de hielo da armadura, daño de Hechizoespada y una ralentización.",
+          "starting": {
+            "label": "Objetos iniciales",
+            "items": [
+              {
+                "id": "1120",
+                "name": "Yelmo de Doran",
+                "icon": "1120.png",
+                "why": "Vida, armadura y resistencia mágica lo convierten en el inicio más común en la muestra de Lolalytics."
+              },
+              {
+                "id": "2003",
+                "name": "Poción de vida",
+                "icon": "2003.png",
+                "why": "Sostenibilidad para las primeras oleadas."
+              }
+            ],
+            "note": "Escudo de Doran es la alternativa contra mucho poke. La Mano amiga del Yelmo de Doran ayuda con los últimos golpes tempranos."
+          },
+          "core": {
+            "label": "Objetos principales",
+            "items": [
+              {
+                "id": "2504",
+                "name": "Rookern kaénico",
+                "icon": "2504.png",
+                "why": "Resistencia mágica y un escudo que estabiliza la línea contra tops AP y poke."
+              },
+              {
+                "id": "6662",
+                "name": "Guantelete de hielo",
+                "icon": "6662.png",
+                "why": "Armadura, aceleración de habilidades y una ralentización que te ayuda a quedarte sobre los objetivos."
+              }
+            ]
+          },
+          "boots": {
+            "label": "Botas",
+            "items": [
+              {
+                "id": "3111",
+                "name": "Botas de mercurio",
+                "icon": "3111.png",
+                "why": "Tenacidad y resistencia mágica para el núcleo por defecto."
+              },
+              {
+                "id": "3047",
+                "name": "Botas blindadas",
+                "icon": "3047.png",
+                "why": "Mejor contra equipos AD con muchos ataques básicos."
+              }
+            ]
+          },
+          "situational": {
+            "label": "Objetos situacionales",
+            "items": [
+              {
+                "id": "3065",
+                "name": "Rostro espiritual",
+                "icon": "3065.png",
+                "why": "Más curación, escudos y resistencia mágica cuando eres la primera línea."
+              },
+              {
+                "id": "2502",
+                "name": "Desesperanza eterna",
+                "icon": "2502.png",
+                "why": "Armadura, aceleración de habilidades y curación en peleas largas."
+              },
+              {
+                "id": "6665",
+                "name": "Jak'Sho el Proteico",
+                "icon": "6665.png",
+                "why": "Mejor cuando las peleas son largas y necesitas resistencias mixtas."
+              },
+              {
+                "id": "3075",
+                "name": "Malla de espinas",
+                "icon": "3075.png",
+                "why": "Anticuración y armadura contra equipos con muchos ataques básicos."
+              },
+              {
+                "id": "3143",
+                "name": "Presagio de Randuin",
+                "icon": "3143.png",
+                "why": "Reducción de golpes críticos contra carries AD."
+              },
+              {
+                "id": "4401",
+                "name": "Fuerza de la naturaleza",
+                "icon": "4401.png",
+                "why": "Resistencia mágica y velocidad de movimiento contra burst AP."
+              },
+              {
+                "id": "2525",
+                "name": "Arnés de protoplasma",
+                "icon": "2525.png",
+                "why": "Una fuerte opción antiburst con vida, aceleración de habilidades y un efecto de salvación."
+              }
+            ]
+          },
+          "notes": [
+            "Rookern kaénico primero es común en la muestra de Lolalytics; si el top enemigo es AD, Botas blindadas y Guantelete de hielo pueden llegar antes.",
+            "Botas de mercurio son la opción por defecto, pero Botas blindadas son mejores contra equipos con muchos ataques básicos.",
+            "No compres objetos de daño puro en K'Sante salvo que ya vayas muy por delante y puedas cerrar la partida."
+          ]
+        },
+        {
+          "id": "all-out-duelist",
+          "label": "Duelista de Órdago",
+          "badge": "Snowball",
+          "summary": "Cuando vas por delante y necesitas amenazar tú mismo a la línea trasera, apuesta por aceleración de habilidades y curación. Esta build es menos indulgente y no debería sustituir al núcleo de tanque en partidas igualadas.",
+          "starting": {
+            "label": "Objetos iniciales",
+            "items": [
+              {
+                "id": "1120",
+                "name": "Yelmo de Doran",
+                "icon": "1120.png",
+                "why": "El inicio seguro estándar."
+              },
+              {
+                "id": "2003",
+                "name": "Poción de vida",
+                "icon": "2003.png",
+                "why": "Sostenibilidad para las primeras oleadas."
+              }
+            ]
+          },
+          "core": {
+            "label": "Objetos principales",
+            "items": [
+              {
+                "id": "6662",
+                "name": "Guantelete de hielo",
+                "icon": "6662.png",
+                "why": "El primer objeto por defecto para armadura y capacidad de pegarse a los objetivos."
+              },
+              {
+                "id": "3065",
+                "name": "Rostro espiritual",
+                "icon": "3065.png",
+                "why": "Curación y amplificación de escudos para peleas en Órdago."
+              }
+            ]
+          },
+          "boots": {
+            "label": "Botas",
+            "items": [
+              {
+                "id": "3111",
+                "name": "Botas de mercurio",
+                "icon": "3111.png",
+                "why": "Las botas más seguras para un duelista cuerpo a cuerpo."
+              },
+              {
+                "id": "3047",
+                "name": "Botas blindadas",
+                "icon": "3047.png",
+                "why": "Contra composiciones con mucho AD y ataques básicos."
+              }
+            ]
+          },
+          "situational": {
+            "label": "Objetos situacionales",
+            "items": [
+              {
+                "id": "6665",
+                "name": "Jak'Sho el Proteico",
+                "icon": "6665.png",
+                "why": "Resistencias mixtas para peleas largas."
+              },
+              {
+                "id": "2502",
+                "name": "Desesperanza eterna",
+                "icon": "2502.png",
+                "why": "Curación y armadura en peleas largas."
+              },
+              {
+                "id": "2525",
+                "name": "Arnés de protoplasma",
+                "icon": "2525.png",
+                "why": "Vida antiburst y un efecto de salvación."
+              },
+              {
+                "id": "3143",
+                "name": "Presagio de Randuin",
+                "icon": "3143.png",
+                "why": "Contra carries de golpes críticos."
+              },
+              {
+                "id": "3075",
+                "name": "Malla de espinas",
+                "icon": "3075.png",
+                "why": "Anticuración y armadura."
+              },
+              {
+                "id": "4401",
+                "name": "Fuerza de la naturaleza",
+                "icon": "4401.png",
+                "why": "Resistencia mágica y velocidad de movimiento."
+              }
+            ]
+          },
+          "notes": [
+            "Órdago reduce tus defensas; la curación y la aceleración extra ayudan, pero sigues sin ser un asesino puro.",
+            "Considera esta ruta solo cuando tu equipo ya tenga una primera línea fiable.",
+            "Si vas por detrás, construye el núcleo de tanque y juega para capturas, no para duelos."
+          ]
+        }
+      ],
+      "combos": [
+        {
+          "name": "All-in con arrastre de Q2",
+          "sequence": [
+            {
+              "key": "Q",
+              "label": "Q"
+            },
+            {
+              "key": "Q",
+              "label": "Q2"
+            },
+            {
+              "key": "E",
+              "label": "E"
+            },
+            {
+              "key": "AA",
+              "label": "Auto"
+            },
+            {
+              "key": "W",
+              "label": "W"
+            },
+            {
+              "key": "R",
+              "label": "R"
+            }
+          ],
+          "situation": "Un all-in estándar cuando tienes dos acumulaciones de Q y el enemigo está en rango.",
+          "execution": "Acierta el primer Q, usa la onda de choque del segundo Q para arrastrar al objetivo, entra con E para el escudo, haz un auto para consumir la marca pasiva, aturde con W y después usa R a través de una pared si el ángulo está disponible.",
+          "mistake": "Usar Q2 demasiado pronto y quedarte sin arrastre para el all-in.",
+          "warning": "No uses R salvo que el objetivo vaya a golpear una pared o tu equipo pueda seguirte."
+        },
+        {
+          "name": "Entrada con E a aliado",
+          "sequence": [
+            {
+              "key": "E",
+              "label": "E aliado"
+            },
+            {
+              "key": "Q",
+              "label": "Q"
+            },
+            {
+              "key": "W",
+              "label": "W"
+            },
+            {
+              "key": "R",
+              "label": "R"
+            }
+          ],
+          "situation": "Entrar o salir de una pelea usando a un aliado como ancla.",
+          "execution": "Usa E sobre un aliado para el dash más largo y el escudo compartido, Q para acumular y ralentizar, W para bloquear daño y aturdir, y después R sobre el objetivo prioritario.",
+          "mistake": "Usar E sobre un aliado cuando la necesitas para escapar.",
+          "warning": "E sobre un aliado te coloca a su lado; asegúrate de que es donde quieres pelear."
+        },
+        {
+          "name": "Secuestro a través de pared",
+          "sequence": [
+            {
+              "key": "R",
+              "label": "R muro"
+            },
+            {
+              "key": "E",
+              "label": "E"
+            },
+            {
+              "key": "Q",
+              "label": "Q"
+            },
+            {
+              "key": "W",
+              "label": "W"
+            }
+          ],
+          "situation": "Aislar a un carry en una línea lateral o en una pelea del río.",
+          "execution": "Usa R para llevar al objetivo a través de una pared, sigue con E, usa Q para daño y acumulaciones, y W como herramienta de daño en Órdago. Intercala autos entre habilidades para consumir las marcas pasivas.",
+          "mistake": "Usar R sin una pared y después pelear en Órdago con defensas reducidas.",
+          "warning": "Órdago es un compromiso; comprueba tu salida antes de usarlo."
+        },
+        {
+          "name": "W hacia arrastre",
+          "sequence": [
+            {
+              "key": "W",
+              "label": "W"
+            },
+            {
+              "key": "Q2",
+              "label": "Q2"
+            },
+            {
+              "key": "R",
+              "label": "R"
+            }
+          ],
+          "situation": "Preparar una captura cuando el enemigo está agrupado.",
+          "execution": "Carga W para reducir el daño recibido, suéltala para aturdir, acierta Q2 para arrastrarlos hacia tu equipo y después usa R sobre el objetivo aislado a través de una pared.",
+          "mistake": "Soltar W antes de que el enemigo comprometa su daño.",
+          "warning": "Este combo requiere que tu equipo siga; no lo empieces solo."
+        }
+      ],
+      "sections": [
+        {
+          "id": "lane-phase",
+          "heading": "Fase de línea: intercambios controlados",
+          "paragraphs": [
+            "La línea de K'Sante consiste en intercambios controlados, no en agresión constante. Usa Q para farmear y acumular, E para escudar la respuesta enemiga y W para bloquear su daño clave. Los autos de Garras del inmortal valen mucho, pero no camines hacia un intercambio perdedor solo para activarlas.",
+            "Contra tops de rango, renuncia a farmeo y conserva vida. Yelmo de Doran, Fuerzas renovadas y tu escudo te permiten sobrevivir; cuando tengas Rookern kaénico y Botas de mercurio, podrás disputar las oleadas con más confianza. Contra tops cuerpo a cuerpo, usa Q2 para preparar intercambios cortos E-Q-W y guarda R para un ángulo de pared garantizado.",
+            "En nivel 6, K'Sante se convierte en una amenaza de captura. R puede arrastrar a un rival sobreextendido a través de una pared y hacia tu jungla, pero también elimina tus estadísticas de tanque. Comprométete solo cuando sepas dónde está el jungla enemigo o cuando tu rival ya tenga poca vida."
+          ],
+          "bullets": [
+            "No gastes Q2 en la oleada antes de una pelea.",
+            "Usa W para bloquear el burst enemigo, no para hacer poke.",
+            "Guarda E para la entrada enemiga o para escudar a un aliado."
+          ]
+        },
+        {
+          "id": "mid-game",
+          "heading": "Mitad de partida: controla el río",
+          "paragraphs": [
+            "La mitad de partida de K'Sante consiste en presencia de primera línea y capturas. Empuja una oleada lateral y luego agrupa con tu equipo alrededor de la visión. Tu arrastre de Q2 y el stun de W pueden iniciar una pelea, pero normalmente deberías entrar segundo o tercero, no primero.",
+            "Usa R para aislar a un carry que avance demasiado o para alejar a un buceador de tu propio carry. En Órdago eres un duelista: persigue solo si el objetivo está aislado y tu equipo puede cubrir la salida."
+          ],
+          "bullets": [
+            "Juega alrededor de las paredes; forman parte del alcance de tu R.",
+            "Usa E sobre un aliado cuando necesites una retirada segura.",
+            "No persigas muertes en Órdago si tu equipo está perdiendo la pelea."
+          ]
+        },
+        {
+          "id": "teamfights",
+          "heading": "Teamfights: protege primero, aísla después",
+          "paragraphs": [
+            "En teamfights, K'Sante es una primera línea que protege. Colócate entre la entrada enemiga y tu carry, usa Q2 para arrastrar a los buceadores y W para aturdir la primera amenaza. R se usa mejor para sacar a un carry de la pelea o alejar a un buceador, no como un botón de daño aleatorio.",
+            "Cuando entras en Órdago, tus defensas bajan. Comprométete solo cuando el control de masas enemigo esté gastado o cuando puedas rematar rápido. Si la pelea cambia, usa E para volver a un aliado y restablecer la primera línea."
+          ],
+          "bullets": [
+            "El arrastre de Q2 es tu mejor preparación.",
+            "La carga de W bloquea burst; no la sueltes antes de tiempo.",
+            "Órdago es un compromiso, no una mejora gratuita de estadísticas."
+          ]
+        }
+      ],
+      "matchups": {
+        "note": "Los porcentajes de victoria son de la muestra de top de U.GG del parche 26.21 en Esmeralda+. Lolalytics sitúa a Poppy, Kayle y Garen como los counters más duros de K'Sante. Su porcentaje de victorias general es bajo, así que toma los datos de enfrentamiento como contexto y céntrate en la interacción mecánica.",
+        "difficult": [
+          {
+            "name": "Poppy",
+            "icon": "Poppy.png",
+            "winRate": "40.1%",
+            "games": "299",
+            "advice": "Presencia firme de Poppy detiene tus dashes y hace que E y R no sean fiables. Juega intercambios cortos con Q, haz que gaste su W y no te comprometas a Órdago mientras esté activa."
+          },
+          {
+            "name": "Kayle",
+            "icon": "Kayle.png",
+            "winRate": "41.6%",
+            "games": "598",
+            "advice": "Kayle te supera a largo plazo y puede kitearte en Órdago. Presiónala antes del nivel 6, pide ayuda al jungla y evita líneas largas donde pueda golpearte gratis."
+          },
+          {
+            "name": "Garen",
+            "icon": "Garen.png",
+            "winRate": "42.4%",
+            "games": "1,466",
+            "advice": "El silencio de Garen detiene tu W y tu E, y su ejecución castiga las peleas en Órdago con poca vida. Usa Q2 para mantener distancia y no uses R sobre él mientras su giro esté activo."
+          },
+          {
+            "name": "Fiora",
+            "icon": "Fiora.png",
+            "winRate": "43.5%",
+            "games": "1,151",
+            "advice": "Fiora puede parar tu W y castigar tus vitales. No uses R hacia su Respuesta; haz que la gaste con un intercambio corto y después comprométete."
+          }
+        ],
+        "favorable": [
+          {
+            "name": "Warwick",
+            "icon": "Warwick.png",
+            "advice": "Warwick quiere drenar y tanquear en peleas largas. Tu arrastre de Q2 y el stun de W pueden interrumpir su sustento, y tu escudo ayuda a sobrevivir a su burst."
+          },
+          {
+            "name": "Cho'Gath",
+            "icon": "Chogath.png",
+            "advice": "Cho'Gath es un objetivo grande e inmóvil. Acierta Q2, usa W para bloquear su entrada y castígalo con intercambios de Garras del inmortal."
+          },
+          {
+            "name": "Kennen",
+            "icon": "Kennen.png",
+            "advice": "Kennen quiere kitearte y flanquear. Mantén Q2 disponible para sacarlo de Carrera relámpago y usa W para bloquear su burst cuando se comprometa."
+          }
+        ]
+      },
+      "mistakes": [
+        "Gastar Q2 en la oleada.",
+        "Usar R sin una pared o sin seguimiento.",
+        "Soltar W antes del burst enemigo.",
+        "Olvidar hacer autos después de las habilidades para consumir la marca pasiva.",
+        "Pelear en Órdago sin salida.",
+        "Construir daño cuando el equipo necesita una primera línea."
+      ],
+      "practicePlan": [
+        {
+          "title": "Ejercicio de arrastre con Q2",
+          "steps": [
+            "Acumula Q sobre un muñeco y usa Q2 para arrastrar a un segundo muñeco.",
+            "Usa W de inmediato para aturdir a ambos.",
+            "Repite hasta que el timing de arrastre a stun sea consistente."
+          ]
+        },
+        {
+          "title": "Ángulos de R contra paredes",
+          "steps": [
+            "Abre la herramienta de práctica cerca de paredes distintas.",
+            "Practica usar R sobre un muñeco a través de cada pared.",
+            "Identifica qué ángulos colocan al objetivo en rango de tu equipo."
+          ]
+        },
+        {
+          "title": "Prueba de límites en Órdago",
+          "steps": [
+            "Entra en Órdago contra un muñeco resistente.",
+            "Practica intercalar autos y reposicionarte con E.",
+            "Sal de Órdago antes de morir como lo harías en una pelea real."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "¿Es difícil jugar K'Sante?",
+          "a": "Sí. Es uno de los tanques con mayor habilidad del juego porque sus acumulaciones de Q, la carga de W, las paredes de R y el cambio de forma de Órdago alteran su rol en la pelea."
+        },
+        {
+          "q": "¿Cuál es la mejor build de K'Sante en el parche 26.21?",
+          "a": "Rookern kaénico, Botas de mercurio y Guantelete de hielo son el núcleo estándar. Rostro espiritual y Desesperanza eterna son continuaciones habituales. Las builds de daño puro son situacionales."
+        },
+        {
+          "q": "¿Qué orden de habilidades debo usar?",
+          "a": "Empieza E-Q-W, sube Q, luego E y después W, y mejora R en los niveles 6, 11 y 16. Es la ruta más común del parche 26.21."
+        },
+        {
+          "q": "¿Por qué el porcentaje de victorias de K'Sante es bajo?",
+          "a": "Su kit es complejo y su forma de Órdago cambia defensa por daño, lo que lo hace fácil de castigar si juzgas mal la pelea. Los mejores jugadores de K'Sante rinden mucho mejor que la media general."
+        },
+        {
+          "q": "¿Cuándo debo usar Órdago?",
+          "a": "Cuando puedas aislar a un carry, rematar a un objetivo con poca vida o escapar de una pelea perdida a través de una pared. No lo uses solo porque esté disponible."
+        }
+      ],
+      "statsNote": "U.GG y Lolalytics usan muestras y métodos de clasificación distintos. Ambas instantáneas son del parche 26.21, Esmeralda+ y Solo/Dúo global. El porcentaje de victorias general de K'Sante está por debajo del 50%, pero Lolalytics registra un porcentaje mucho mayor para los mejores jugadores de K'Sante, lo que refleja su alta curva de dominio.",
+      "lastUpdated": "2026-10-27"
+    },
+    "azir": {
+      "slug": "azir",
+      "name": "Azir",
+      "title": "el Emperador de las Arenas",
+      "role": "mid",
+      "roleLabel": "Medio",
+      "difficulty": "high",
+      "difficultyLabel": "Alta",
+      "tagline": "Azir es un campeón de la calle central con una elevada dificultad mecánica que controla el campo de batalla mediante sus Soldados de Arena. A diferencia de muchos magos, depende de la colocación de sus soldados, el posiciónamiento y las ventanas de daño prolongado.",
+      "metaTitle": "Guía de Azir: combos, consejos y mecánicas avanzadas | League of Legends",
+      "metaDescription": "Aprende las runas, build, habilidades, combos y enfrentamientos de Azir en mid para el parche 26.21 de League of Legends.",
+      "h1": "Guía de Azir: combos, consejos y mecánicas avanzadas",
+      "heroIntro": [
+        "Azir es un campeón de la calle central con una elevada dificultad mecánica que controla el campo de batalla mediante sus Soldados de Arena. A diferencia de muchos magos, depende de la colocación de sus soldados, el posiciónamiento y las ventanas de daño prolongado.",
+        "Para dominarlo, debes aprender a gestionar sus soldados, intercambiar daño de forma segura en línea, colocarte correctamente en las peleas de equipo y reconocer cuándo merece la pena realizar una jugada agresiva."
+      ],
+      "quickAnswer": "Azir: prioriza W > Q > E, lleva Compás letal y usa el núcleo de Azir AP sostenido como referencia del parche 26.21. Consulta los enfrentamientos y adapta los objetos a la composición rival.",
+      "quickStart": {
+        "role": "Medio (calle central)",
+        "secondaryRoles": "No especificado en esta guía",
+        "difficulty": "Alta",
+        "playstyle": "Mago de control de largo alcance",
+        "keyMechanic": "Colocar y dirigir Soldados de Arena para controlar el espacio",
+        "beginnerMistake": "Usar la E agresivamente sin una salida. Entrar en el equipo rival puede dejarte vendido.",
+        "winCondition": "Infligir daño sostenido desde una posición segura y controlar el espacio alrededor de objetivos"
+      },
+      "abilities": [
+        {
+          "key": "P",
+          "name": "Legado de Shurima",
+          "icon": "Azir_Passive.png",
+          "description": "Azir puede invocar el Disco Solar sobre los restos elegibles de torretas destruidas. Esta estructura temporal puede ayudar a defender o presionar una zona.",
+          "tips": [
+            "Utiliza el Disco Solar como una herramienta situaciónal para controlar objetivos, no como excusa para asumir riesgos innecesarios."
+          ]
+        },
+        {
+          "key": "Q",
+          "name": "Arenas conquistadoras",
+          "icon": "AzirQ.png",
+          "description": "Azir ordena a sus Soldados de Arena activos que se desplacen hacia una ubicación, dañando y ralentizando a los enemigos que atraviesan.",
+          "tips": [
+            "Reposicióna a tus soldados para alcanzar enemigos que estén fuera de su alcance.",
+            "Aprovecha la ralentización para facilitar los siguientes ataques.",
+            "No gastes la Q sin pensar si necesitas conservar opciones de reposicionamiento."
+          ]
+        },
+        {
+          "key": "W",
+          "name": "¡Alzaos!",
+          "icon": "AzirW.png",
+          "description": "Azir invoca un Soldado de Arena. Cuando ordena atacar a enemigos dentro de su alcance, sus soldados golpean en línea.",
+          "tips": [
+            "Coloca soldados donde puedas farmear manteniendo una distancia segura.",
+            "Amenaza el acceso del rival a la oleada de súbditos.",
+            "Controla los soldados disponibles y su duración.",
+            "Evita colocarlos en posiciónes que no puedas aprovechar con seguridad."
+          ]
+        },
+        {
+          "key": "E",
+          "name": "Arenas movedizas",
+          "icon": "AzirE.png",
+          "description": "Azir se desplaza hacia uno de sus Soldados de Arena y obtiene un escudo. Si choca con un campeón enemigo, se detiene y consigue una carga de W.",
+          "tips": [
+            "Mantén un soldado en una posición que permita escapar.",
+            "Utiliza la E defensivamente cuando te amenace el jungla enemigo.",
+            "Úsala para iniciar únicamente si sabes dónde vas a aterrizar y cómo vas a salir."
+          ]
+        },
+        {
+          "key": "R",
+          "name": "Falange imperial",
+          "icon": "AzirR.png",
+          "description": "Azir invoca una línea de soldados que avanza, daña y empuja a los enemigos. Después forma una barrera temporal que los enemigos no pueden atravesar normalmente, mientras que los aliados sí pueden cruzarla.",
+          "tips": [
+            "Interrumpe a los enemigos que se abalanzan sobre tus carries.",
+            "Separa a la primera línea rival de su retaguardia.",
+            "Aprovecha los espacios estrechos.",
+            "Protege a tu equipo cuando un asesino llegue hasta ti."
+          ]
+        }
+      ],
+      "combos": [
+        {
+          "name": "Hostigamiento básico",
+          "sequence": [
+            {
+              "key": "W",
+              "label": "W"
+            },
+            {
+              "key": "AA",
+              "label": "AA"
+            }
+          ],
+          "situation": "Hostigamiento básico",
+          "execution": "Coloca un soldado y ataca a un enemigo que esté dentro de su alcance. Sirve para presionar manteniendo a Azir a una distancia segura.",
+          "mistake": "Adapta la secuencia a la situación; no la ejecutes automáticamente."
+        },
+        {
+          "name": "Intercambio prolongado",
+          "sequence": [
+            {
+              "key": "W",
+              "label": "W"
+            },
+            {
+              "key": "AA",
+              "label": "AA"
+            },
+            {
+              "key": "Q",
+              "label": "Q"
+            },
+            {
+              "key": "AA",
+              "label": "AA"
+            }
+          ],
+          "situation": "Intercambio prolongado",
+          "execution": "Invoca un soldado, ataca, reposiciónalo con la Q y continúa atacando si la situación es favorable. No prolongues automáticamente todos los intercambios: ten en cuenta las habilidades enemigas, el daño de los súbditos y la posición del jungla.",
+          "mistake": "Adapta la secuencia a la situación; no la ejecutes automáticamente."
+        },
+        {
+          "name": "Escape defensivo",
+          "sequence": [
+            {
+              "key": "W detrás de ti",
+              "label": "W detrás de ti"
+            },
+            {
+              "key": "E",
+              "label": "E"
+            }
+          ],
+          "situation": "Escape defensivo",
+          "execution": "Coloca un soldado en una dirección segura y desplázate hacia él con la E cuando necesites retirarte. Necesitas un objetivo válido y suficiente distancia. Planifica la ruta antes de verte obligado a escapar.",
+          "mistake": "Adapta la secuencia a la situación; no la ejecutes automáticamente."
+        },
+        {
+          "name": "Iniciación o desplazamiento",
+          "sequence": [
+            {
+              "key": "W",
+              "label": "W"
+            },
+            {
+              "key": "E",
+              "label": "E"
+            },
+            {
+              "key": "R",
+              "label": "R"
+            }
+          ],
+          "situation": "Iniciación o desplazamiento",
+          "execution": "Azir puede desplazarse hacia un soldado y utilizar su definitiva para empujar a los enemigos. Puede generar una oportunidad de combate, pero también lo acerca al peligro. Hazlo cuando tu equipo pueda seguir la jugada y hayas considerado las herramientas defensivas del rival. Importante: El famoso Azir shuffle es una técnica avanzada y situaciónal, no la forma predeterminada de utilizar la definitiva. Práctica las interacciones entre E y R antes de intentarlo en clasificatorias.",
+          "mistake": "Adapta la secuencia a la situación; no la ejecutes automáticamente.",
+          "warning": "Azir puede desplazarse hacia un soldado y utilizar su definitiva para empujar a los enemigos. Puede generar una oportunidad de combate, pero también lo acerca al peligro. Hazlo cuando tu equipo pueda seguir la jugada y hayas considerado las herramientas defensivas del rival. Importante: El famoso Azir shuffle es una técnica avanzada y situaciónal, no la forma predeterminada de utilizar la definitiva. Práctica las interacciones entre E y R antes de intentarlo en clasificatorias."
+        }
+      ],
+      "sections": [
+        {
+          "id": "laning",
+          "heading": "Fase de líneas",
+          "paragraphs": [
+            "Tu primera prioridad es farmear de forma consistente y aprender hasta dónde puedes amenazar al rival con tus soldados sin exponerte.",
+            "Azir puede quedar expuesto cuando no dispone de su herramienta de móvilidad. Antes de empujar la oleada, considera desde dónde podría llegar el jungla enemigo."
+          ],
+          "bullets": [
+            "Aprovecha el alcance de los soldados para intercambiar daño sin acercarte demasiado.",
+            "Vigila al jungla enemigo antes de utilizar la E agresivamente.",
+            "No gastes la Q solo para infligir un poco más de daño si pierdes una opción útil de reposicionamiento.",
+            "Aprende cuánto daño hacen tus soldados a los súbditos para no perjudicar tu farmeo.",
+            "Respeta a los campeones capaces de alcanzarte rápidamente."
+          ]
+        },
+        {
+          "id": "mid-late",
+          "heading": "Juego medio y tardío",
+          "paragraphs": [
+            "El valor de Azir reside en el daño sostenido y en controlar el espacio alrededor de los objetivos.",
+            "No necesitas ejecutar una jugada espectacular con la definitiva para ganar una pelea. El daño constante, el buen posiciónamiento y una definitiva defensiva bien utilizada pueden ser más valiosos."
+          ],
+          "bullets": [
+            "Colócate detrás de tu primera línea cuando sea posible.",
+            "Sitúa soldados en lugares por los que los enemigos tengan que pasar o rodearlos.",
+            "No persigas a un enemigo con poca vida si eso te obliga a abandonar una posición segura.",
+            "Guarda la definitiva para proteger a tu retaguardia si los campeones enemigos pueden lanzarse sobre ella.",
+            "Aprovecha los espacios estrechos para dificultar que el rival esquive tus ataques."
+          ]
+        },
+        {
+          "id": "final-advice",
+          "heading": "Consejo final",
+          "paragraphs": [
+            "Dominar a Azir consiste en controlar el espacio, no simplemente en ejecutar combos espectaculares. Aprende a colocar bien los soldados, mantener ventanas de daño seguras y utilizar la Falange imperial según las necesidades de cada pelea."
+          ]
+        }
+      ],
+      "mistakes": [
+        "Usar la E agresivamente sin una salida. Entrar en el equipo rival puede dejarte vendido.",
+        "Desperdiciar la Q. Reposiciónar soldados es fundamental para tu daño y control.",
+        "Colocarte demasiado cerca de la primera línea. El alcance solo es útil si mantienes una posición segura.",
+        "Intentar hacer el shuffle constantemente. Una iniciación poco fiable puede costar una pelea.",
+        "Ignorar la colocación de los soldados. Una mala posición reduce tu daño y facilita que el enemigo te inicie."
+      ],
+      "practicePlan": [
+        {
+          "title": "Práctica 1",
+          "steps": [
+            "En la herramienta de práctica, trabaja una mecánica cada vez:",
+            "El objetivo no es hacer el combo más rápido desde el principio, sino tomar la decisión correcta y ejecutarla con consistencia.",
+            "Muévete mientras mantienes el alcance de ataque de los soldados."
+          ]
+        },
+        {
+          "title": "Práctica 2",
+          "steps": [
+            "Práctica W–AA–Q–AA sin perder el control de la posición de Azir.",
+            "Ensaya rutas de escape con E desde distintos ángulos de emboscada.",
+            "Práctica la dirección y el momento de la Falange imperial."
+          ]
+        },
+        {
+          "title": "Práctica 3",
+          "steps": [
+            "Repite las combinaciones avanzadas lentamente antes de intentar ejecutarlas a máxima velocidad."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "¿Es difícil aprender a jugar Azir?",
+          "a": "Sí. Requiere buen posiciónamiento, gestión de soldados y criterio para utilizar la móvilidad de forma ofensiva o defensiva."
+        },
+        {
+          "q": "¿Cuál es la habilidad más importante de Azir?",
+          "a": "La W es fundamental porque sus soldados permiten ejecutar su patrón principal de daño. Sin embargo, Q, E y R son esenciales para controlar el espacio y sobrevivir."
+        },
+        {
+          "q": "¿Hay que utilizar siempre la definitiva para iniciar?",
+          "a": "No. La Falange imperial puede iniciar una pelea, pero también sirve para apartar a los campeones que amenazan a tu equipo."
+        },
+        {
+          "q": "¿Cómo escapar de las emboscadas con Azir?",
+          "a": "Mantén un soldado o una ruta de desplazamiento segura cuando sea posible, controla las posiciónes enemigas y evita gastar la E agresivamente si puedes necesitarla para retirarte."
+        },
+        {
+          "q": "¿Cuál es la mejor build de Azir?",
+          "a": "Una ruta de AP habitual para el daño sostenido de los soldados. Adapta la defensa y la penetración a las amenazas enemigas. Prioriza Zhonya si los buceadores pueden alcanzarte; no retrases la supervivencia si vas por detrás. Comprueba el parche actual antes de copiar la ruta."
+        }
+      ],
+      "statsNote": "Las recomendaciones de build, runas y enfrentamientos son una referencia del parche 26.21 para clasificatorias de la Grieta del Invocador, Esmeralda+. Las tendencias de enfrentamientos proceden de Lolalytics; los objetos y runas se contrastaron con U.GG y OP.GG. Las muestras y filtros varían según el sitio. Úsalas como base, no como garantías, y revisa el parche actual.",
+      "lastUpdated": "2026-10-28",
+      "skillOrder": {
+        "priority": "W > Q > E",
+        "start": "W → Q → E",
+        "levels": [
+          {
+            "level": 1,
+            "ability": "W"
+          },
+          {
+            "level": 2,
+            "ability": "Q"
+          },
+          {
+            "level": 3,
+            "ability": "E"
+          },
+          {
+            "level": 4,
+            "ability": "W"
+          },
+          {
+            "level": 5,
+            "ability": "W"
+          },
+          {
+            "level": 6,
+            "ability": "R"
+          },
+          {
+            "level": 7,
+            "ability": "W"
+          },
+          {
+            "level": 8,
+            "ability": "Q"
+          },
+          {
+            "level": 9,
+            "ability": "W"
+          },
+          {
+            "level": 10,
+            "ability": "Q"
+          },
+          {
+            "level": 11,
+            "ability": "R"
+          },
+          {
+            "level": 12,
+            "ability": "Q"
+          },
+          {
+            "level": 13,
+            "ability": "Q"
+          },
+          {
+            "level": 14,
+            "ability": "E"
+          },
+          {
+            "level": 15,
+            "ability": "E"
+          },
+          {
+            "level": 16,
+            "ability": "R"
+          },
+          {
+            "level": 17,
+            "ability": "E"
+          },
+          {
+            "level": 18,
+            "ability": "E"
+          }
+        ],
+        "explanation": [
+          "Maximiza W primero por el daño y la velocidad de ataque de los soldados; después Q para mejorar el reposicionamiento y el hostigamiento. Maximiza E al final tras un punto temprano para escapar.",
+          "Mejora R siempre que esté disponible, en los niveles 6, 11 y 16."
+        ],
+        "note": "W-Q-E es el inicio más habitual en las muestras; empezar con Q es una alternativa válida según el enfrentamiento."
+      },
+      "runes": {
+        "title": "Daño sostenido de Precisión",
+        "summary": "Compás letal potencia los ataques sostenidos de los soldados. Banda de maná y Trascendencia ayudan con el maná y la disponibilidad de habilidades; cambia la página secundaria si la línea requiere más defensa.",
+        "primaryTree": {
+          "name": "Precisión",
+          "icon": "perk-images/Styles/7201_Precision.png"
+        },
+        "secondaryTree": {
+          "name": "Brujería",
+          "icon": "perk-images/Styles/7202_Sorcery.png"
+        },
+        "keystone": {
+          "id": 8008,
+          "name": "Compás letal",
+          "icon": "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+          "why": "Premia los ataques prolongados de los soldados y los impactos repetidos a campeones."
+        },
+        "primaryRunes": [
+          {
+            "id": 8009,
+            "name": "Claridad mental",
+            "icon": "perk-images/Styles/Precision/PresenceOfMind/PresenceOfMind.png",
+            "why": "La restauración de maná ayuda a mantener soldados activos en línea."
+          },
+          {
+            "id": 9104,
+            "name": "Leyenda: Presteza",
+            "icon": "perk-images/Styles/Precision/LegendAlacrity/LegendAlacrity.png",
+            "why": "La velocidad de ataque mejora el patrón de daño sostenido de Azir."
+          },
+          {
+            "id": 8017,
+            "name": "Derribado",
+            "icon": "perk-images/Styles/Precision/CutDown/CutDown.png",
+            "why": "Aumenta la presión contra objetivos resistentes."
+          }
+        ],
+        "secondaryRunes": [
+          {
+            "id": 8226,
+            "name": "Banda de maná",
+            "icon": "perk-images/Styles/Sorcery/ManaflowBand/ManaflowBand.png",
+            "why": "Mejora el sustento de maná en línea."
+          },
+          {
+            "id": 8210,
+            "name": "Trascendencia",
+            "icon": "perk-images/Styles/Sorcery/Transcendence/Transcendence.png",
+            "why": "La aceleración de habilidad ayuda a tener más disponibilidad de hechizos."
+          }
+        ],
+        "alternatives": [
+          "Ataque intensificado puede preferirse para intercambios más cortos. Elige fragmentos defensivos contra mucho burst o emboscadas frecuentes."
+        ],
+        "notes": [
+          "Las estadísticas de runas varían según la región y el tamaño de muestra; es una configuración común de daño sostenido, no la única viable."
+        ]
+      },
+      "summonerSpells": [
+        {
+          "name": "Destello",
+          "icon": "SummonerFlash.png",
+          "why": "Herramienta esencial para reposicionarte y escapar; también permite una definitiva decisiva."
+        },
+        {
+          "name": "Teleportar",
+          "icon": "SummonerTeleport.png",
+          "why": "Hechizo habitual para volver a línea y participar en jugadas en los laterales.",
+          "alternative": "Prender es una alternativa agresiva si importa la presión de asesinato en línea."
+        }
+      ],
+      "builds": [
+        {
+          "id": "azir-recommended",
+          "label": "Azir AP sostenido",
+          "badge": "Muestra clasificatoria del parche 26.21",
+          "summary": "Una ruta de AP habitual para el daño sostenido de los soldados. Adapta la defensa y la penetración a las amenazas enemigas.",
+          "starting": {
+            "label": "Objetos iniciales",
+            "items": [
+              {
+                "id": "1056",
+                "name": "Anillo de Doran",
+                "icon": "1056.png",
+                "why": "Maná y vida lo convierten en un inicio fiable."
+              },
+              {
+                "id": "2003",
+                "name": "Poción de vida",
+                "icon": "2003.png",
+                "why": "Recupera vida tras los primeros intercambios."
+              }
+            ],
+            "note": "Adapta la compra inicial al enfrentamiento en línea."
+          },
+          "core": {
+            "label": "Objetos principales",
+            "items": [
+              {
+                "id": "3115",
+                "name": "Diente de Nashor",
+                "icon": "3115.png",
+                "why": "La velocidad de ataque y el poder de habilidad refuerzan el daño de los soldados."
+              },
+              {
+                "id": "4645",
+                "name": "Llamasombría",
+                "icon": "4645.png",
+                "why": "La penetración mágica amenaza a objetivos frágiles."
+              },
+              {
+                "id": "3089",
+                "name": "Sombrero mortal de Rabadon",
+                "icon": "3089.png",
+                "why": "Gran multiplicador de poder de habilidad para el daño avanzado."
+              }
+            ]
+          },
+          "boots": {
+            "label": "Botas",
+            "items": [
+              {
+                "id": "3020",
+                "name": "Botas de hechicero",
+                "icon": "3020.png",
+                "why": "La penetración mágica es la opción ofensiva habitual."
+              },
+              {
+                "id": "3111",
+                "name": "Botas de mercurio",
+                "icon": "3111.png",
+                "why": "Elígelas contra mucho daño mágico o control de adversarios."
+              }
+            ]
+          },
+          "situational": {
+            "label": "Objetos situacionales",
+            "items": [
+              {
+                "id": "3157",
+                "name": "Reloj de arena de Zhonya",
+                "icon": "3157.png",
+                "why": "La estasis puede frenar una entrada y dar tiempo a tu equipo."
+              },
+              {
+                "id": "3135",
+                "name": "Bastón del Vacío",
+                "icon": "3135.png",
+                "why": "Penetración mágica contra enemigos que acumulan resistencia mágica."
+              },
+              {
+                "id": "3102",
+                "name": "Velo del hada de la muerte",
+                "icon": "3102.png",
+                "why": "Escudo de hechizo contra una iniciación o interrupción clave."
+              }
+            ]
+          },
+          "notes": [
+            "Prioriza Zhonya si los buceadores pueden alcanzarte; no retrases la supervivencia si vas por detrás. Comprueba el parche actual antes de copiar la ruta."
+          ]
+        }
+      ],
+      "matchups": {
+        "note": "Las tendencias de counters proceden de Lolalytics, parche 16.21, Esmeralda+ y este rol. Son señales estadísticas, no counters absolutos; también importan la habilidad en línea, la composición y la presión del jungla.",
+        "difficult": [
+          {
+            "name": "Vel’Koz",
+            "icon": "Velkoz.png",
+            "advice": "Vel’Koz tiene más alcance que tus soldados. Usa súbditos para bloquear su Q, esquiva su E e intercambia cuando la haya gastado."
+          },
+          {
+            "name": "Diana",
+            "icon": "Diana.png",
+            "advice": "Diana puede cerrar distancia y amenazar con un all-in. Conserva E, no te coloques junto a súbditos marcados y pide ayuda si controla la oleada."
+          },
+          {
+            "name": "Zoe",
+            "icon": "Zoe.png",
+            "advice": "La burbuja y el burst de Zoe te castigan cuando no tienes E. Juega detrás de los súbditos, esquiva la burbuja y usa soldados para farmear con seguridad."
+          }
+        ],
+        "favorable": [
+          {
+            "name": "Yasuo",
+            "icon": "Yasuo.png",
+            "advice": "Aprovecha el alcance de los soldados para castigar sus entradas y mantén distancia de su tornado. No uses Q donde el Muro de viento pueda anular tu presión."
+          },
+          {
+            "name": "Mel",
+            "icon": "Mel.png",
+            "advice": "Amenázala cuando no tenga disponible su defensa de proyectiles. Coloca soldados para disputar la oleada y evita los proyectiles reflejados."
+          },
+          {
+            "name": "Akshan",
+            "icon": "Akshan.png",
+            "advice": "Intercambia cuando haya gastado el bumerán o el gancho y evita peleas largas dentro del alcance de su pasiva."
+          }
+        ]
+      },
+      "sources": [
+        {
+          "label": "U.GG — Azir mid build, runes and skill order",
+          "url": "https://u.gg/lol/champions/azir/build?role=mid&region=world"
+        },
+        {
+          "label": "OP.GG — Azir mid build and matchups",
+          "url": "https://op.gg/lol/champions/azir/build/mid"
+        },
+        {
+          "label": "Lolalytics — Azir mid build and counters (Emerald+)",
+          "url": "https://lolalytics.com/lol/azir/build/?lane=middle&tier=emerald_plus"
+        }
+      ]
+    },
+    "riven": {
+      "slug": "riven",
+      "name": "Riven",
+      "title": "la Desterrada",
+      "role": "top",
+      "roleLabel": "Superior",
+      "difficulty": "very-high",
+      "difficultyLabel": "Muy alta",
+      "tagline": "Riven es una campeona de la calle superior que exige mucha precisión mecánica. Combina móvilidad, control de adversarios, escudos y daño explosivo. Su potencial depende de encadenar habilidades de forma eficiente e intercalar ataques básicos entre ellas.",
+      "metaTitle": "Guía de Riven: combos, cancelación de animaciones y consejos avanzados | League of Legends",
+      "metaDescription": "Aprende las runas, build, habilidades, combos y enfrentamientos de Riven en top para el parche 26.21 de League of Legends.",
+      "h1": "Guía de Riven: combos, cancelación de animaciones y consejos avanzados",
+      "heroIntro": [
+        "Riven es una campeona de la calle superior que exige mucha precisión mecánica. Combina móvilidad, control de adversarios, escudos y daño explosivo. Su potencial depende de encadenar habilidades de forma eficiente e intercalar ataques básicos entre ellas.",
+        "A diferencia de los campeones que utilizan maná o energía, Riven no tiene una barra de recurso que gestionar. Su principal dificultad consiste en administrar los enfriamientos, las cargas de su pasiva y la móvilidad sin desperdiciar daño ni quedar expuesta."
+      ],
+      "quickAnswer": "Riven: prioriza Q > E > W, lleva Conquistador y usa el núcleo de Riven luchadora AD como referencia del parche 26.21. Consulta los enfrentamientos y adapta los objetos a la composición rival.",
+      "quickStart": {
+        "role": "Superior (calle superior)",
+        "secondaryRoles": "No especificado en esta guía",
+        "difficulty": "Muy alta",
+        "playstyle": "Luchadora cuerpo a cuerpo y móvil",
+        "keyMechanic": "Intercalar ataques básicos potenciados entre habilidades",
+        "beginnerMistake": "Ignorar la Hoja rúnica. No intercalar ataques básicos desperdicia parte de su daño.",
+        "winCondition": "Crear una ventana favorable de daño mediante la precisión y la selección de objetivo"
+      },
+      "abilities": [
+        {
+          "key": "P",
+          "name": "Hoja rúnica",
+          "icon": "Riven_Passive.png",
+          "description": "Las habilidades de Riven cargan su espada, y sus ataques básicos consumen esas cargas para infligir daño físico adicional.",
+          "tips": [
+            "No lances habilidades lo más rápido posible sin tener en cuenta la pasiva. Intercalar ataques básicos entre habilidades es fundamental para maximizar el daño."
+          ]
+        },
+        {
+          "key": "Q",
+          "name": "Alas rotas",
+          "icon": "RivenTriCleave.png",
+          "description": "Riven puede lanzar Alas rotas hasta tres veces seguidas. Inflige daño físico y el tercer lanzamiento incluye un desplazamiento más amplio y un efecto de levantamiento.",
+          "tips": [
+            "Aprovecha los dos primeros lanzamientos para infligir daño y reposiciónarte.",
+            "Si es posible, reserva el tercero para interrumpir al rival o terminar un intercambio.",
+            "Aprende cómo afectan las órdenes de movimiento a la ejecución de la habilidad.",
+            "Ten cuidado al utilizar el tercer lanzamiento cerca de paredes, ya que puede interactuar con ciertos terrenos."
+          ]
+        },
+        {
+          "key": "W",
+          "name": "Estallido de ki",
+          "icon": "RivenMartyr.png",
+          "description": "Riven inflige daño físico a los enemigos cercanos y los aturde brevemente.",
+          "tips": [
+            "Interrumpe o retrasa la respuesta del rival durante un intercambio cercano.",
+            "Combínala con otras habilidades para crear una ventana corta de daño.",
+            "Aprovecha el aturdimiento para conectar más daño o retirarte."
+          ]
+        },
+        {
+          "key": "E",
+          "name": "Valor",
+          "icon": "RivenFeint.png",
+          "description": "Riven se desplaza en una dirección y obtiene un escudo.",
+          "tips": [
+            "Absorbe daño durante los intercambios.",
+            "Recorre distancias cortas para reposiciónarte.",
+            "Conserva la E si puedes necesitar un desplazamiento defensivo.",
+            "No la utilices automáticamente para acercarte al rival si esperas que contraataque."
+          ]
+        },
+        {
+          "key": "R",
+          "name": "Hoja del exilio",
+          "icon": "RivenFengShuiEngine.png",
+          "description": "Riven potencia su espada, obtiene daño de ataque adicional y aumenta temporalmente su alcance. También puede utilizar Cuchillada de viento, un ataque a distancia que inflige más daño a los enemigos con menos vida.",
+          "tips": [
+            "Actívala antes de comprometerte en un enfrentamiento importante cuando sea posible.",
+            "Aprovecha el aumento de alcance de los ataques y habilidades.",
+            "Apunta Cuchillada de viento a objetivos debilitados.",
+            "Recuerda que la definitiva mejora tu amenaza durante toda su duración, no solo cuando buscas rematar."
+          ]
+        }
+      ],
+      "combos": [
+        {
+          "name": "Intercambio básico",
+          "sequence": [
+            {
+              "key": "Q",
+              "label": "Q"
+            },
+            {
+              "key": "AA",
+              "label": "AA"
+            },
+            {
+              "key": "Q",
+              "label": "Q"
+            },
+            {
+              "key": "AA",
+              "label": "AA"
+            }
+          ],
+          "situation": "Intercambio básico",
+          "execution": "Alterna los lanzamientos de Alas rotas con ataques básicos cuando la situación lo permita. Así aprovechas la Hoja rúnica y evitas perder daño potencial por encadenar habilidades sin atacar.",
+          "mistake": "Adapta la secuencia a la situación; no la ejecutes automáticamente."
+        },
+        {
+          "name": "Fast Q combo",
+          "sequence": [],
+          "situation": "Fast Q combo",
+          "execution": "El fast Q combo es una técnica que reduce el tiempo perdido entre los ataques básicos y los lanzamientos de Q. Cómo practicarlo: El momento exacto de cada acción depende de la ejecución, el tiempo de ataque y la latencia. Práctica a una velocidad controlada antes de intentar maximizar la rapidez. Selecciona un objetivo o muñeco de práctica. Lanza la Q. Emite una orden de movimiento inmediatamente después del lanzamiento. Ataca al objetivo cuando el ataque pueda conectar. Repite la secuencia con los siguientes lanzamientos de Q.",
+          "mistake": "Adapta la secuencia a la situación; no la ejecutes automáticamente."
+        },
+        {
+          "name": "Intercambio explosivo",
+          "sequence": [
+            {
+              "key": "E",
+              "label": "E"
+            },
+            {
+              "key": "W",
+              "label": "W"
+            },
+            {
+              "key": "AA",
+              "label": "AA"
+            },
+            {
+              "key": "Q",
+              "label": "Q"
+            }
+          ],
+          "situation": "Intercambio explosivo",
+          "execution": "Utiliza la E para acercarte o absorber daño, aturde al objetivo y continúa con un ataque potenciado y la Q cuando corresponda. Es un ejemplo flexible, no un combo universal. El orden óptimo depende de la distancia, los enfriamientos enemigos y de si necesitas conservar la E para escapar.",
+          "mistake": "Adapta la secuencia a la situación; no la ejecutes automáticamente."
+        },
+        {
+          "name": "All-in",
+          "sequence": [
+            {
+              "key": "R",
+              "label": "R"
+            },
+            {
+              "key": "E",
+              "label": "E"
+            },
+            {
+              "key": "W",
+              "label": "W"
+            },
+            {
+              "key": "Q",
+              "label": "Q"
+            },
+            {
+              "key": "AA",
+              "label": "AA"
+            }
+          ],
+          "situation": "All-in",
+          "execution": "Activa la definitiva antes de comprometerte y utiliza la móvilidad y el control para mantenerte sobre el objetivo, intercalando ataques básicos. No sigas esta secuencia de forma automática. Adáptala si el rival puede escapar, si necesitas reservar herramientas defensivas o si corres el riesgo de sufrir una interrupción.",
+          "mistake": "Adapta la secuencia a la situación; no la ejecutes automáticamente."
+        },
+        {
+          "name": "Remate",
+          "sequence": [
+            {
+              "key": "Cuchillada de viento",
+              "label": "Cuchillada de viento"
+            }
+          ],
+          "situation": "Remate",
+          "execution": "Cuchillada de viento inflige más daño a los enemigos con poca vida. Utilízala cuando su alcance y daño permitan rematar a un objetivo o ayudar a ganar una pelea. Evita lanzarla demasiado pronto si el enemigo todavía puede sobrevivir y escapar. Importante: La notación de combos es un punto de partida para practicar, no una secuencia óptima garantizada en todos los enfrentamientos. Aprende cómo interactúan las habilidades con la pasiva y los tiempos de ataque.",
+          "mistake": "Adapta la secuencia a la situación; no la ejecutes automáticamente.",
+          "warning": "Cuchillada de viento inflige más daño a los enemigos con poca vida. Utilízala cuando su alcance y daño permitan rematar a un objetivo o ayudar a ganar una pelea. Evita lanzarla demasiado pronto si el enemigo todavía puede sobrevivir y escapar. Importante: La notación de combos es un punto de partida para practicar, no una secuencia óptima garantizada en todos los enfrentamientos. Aprende cómo interactúan las habilidades con la pasiva y los tiempos de ataque."
+        }
+      ],
+      "sections": [
+        {
+          "id": "laning",
+          "heading": "Fase de líneas",
+          "paragraphs": [
+            "Riven destaca cuando controla el momento de los intercambios y aprovecha la móvilidad con eficiencia.",
+            "La gestión de oleadas es importante porque Riven es cuerpo a cuerpo y debe acercarse a los súbditos para farmear. Valora si puedes avanzar de forma segura antes de gastar tus habilidades."
+          ],
+          "bullets": [
+            "Comprueba los enfriamientos enemigos antes de alargar un intercambio.",
+            "Realiza intercambios cortos si el rival es más fuerte en combates prolongados.",
+            "Conserva móvilidad suficiente para retirarte si el jungla enemigo puede estar cerca.",
+            "Aprende cuándo utilizar el tercer lanzamiento de Q para hacer daño, controlar o desplazarte.",
+            "No gastes todas las habilidades en la oleada si el rival puede castigarte mientras están en enfriamiento."
+          ]
+        },
+        {
+          "id": "mid-late",
+          "heading": "Juego medio y tardío",
+          "paragraphs": [
+            "Riven puede amenazar objetivos aislados y lanzarse sobre campeones vulnerables de la retaguardia, pero el éxito depende del momento.",
+            "Tu objetivo es crear una ventana favorable de daño, no lanzar todas las habilidades lo más rápido posible."
+          ],
+          "bullets": [
+            "Busca flanqueos en lugar de entrar siempre por la primera línea enemiga.",
+            "Espera a que el rival gaste habilidades importantes de control cuando sea posible.",
+            "Utiliza la E para absorber daño y reposiciónarte, no como una iniciación gratuita.",
+            "No confundas móvilidad con invulnerabilidad.",
+            "Si lanzarte directamente es demasiado arriesgado, protege a tus carries o céntrate en un objetivo cercano al que puedas alcanzar de forma segura."
+          ]
+        },
+        {
+          "id": "final-advice",
+          "heading": "Consejo final",
+          "paragraphs": [
+            "Riven recompensa la ejecución deliberada. Aprende a combinar movimiento, ataques básicos y habilidades antes de perseguir combos avanzados. Los intercambios consistentes y las buenas decisiones importan más que memorizar una secuencia larga de botones."
+          ]
+        }
+      ],
+      "mistakes": [
+        "Ignorar la Hoja rúnica. No intercalar ataques básicos desperdicia parte de su daño.",
+        "Usar todos los lanzamientos de Q inmediatamente. Puedes perder flexibilidad para controlar la distancia y el momento.",
+        "Gastar la E para iniciar sin un plan. Puedes quedarte sin escudo cuando el rival contraataque.",
+        "Iniciar sin revisar los enfriamientos enemigos. El control de adversarios puede interrumpir tu secuencia.",
+        "Tratar cada combo como un guion fijo. Riven debe adaptarse a la distancia, al movimiento del objetivo y al estado de la pelea."
+      ],
+      "practicePlan": [
+        {
+          "title": "Práctica 1",
+          "steps": [
+            "En la herramienta de práctica:",
+            "La precisión y la toma de decisiones valen más que ejecutar un combo espectacular una sola vez.",
+            "Alterna los lanzamientos de Q con ataques básicos hasta ejecutar la secuencia de forma consistente."
+          ]
+        },
+        {
+          "title": "Práctica 2",
+          "steps": [
+            "Práctica el fast Q combo a una velocidad que permita mantener la precisión.",
+            "Prueba el tercer lanzamiento de Q cerca de distintos terrenos.",
+            "Práctica el uso de la E para absorber daño o reposiciónarte."
+          ]
+        },
+        {
+          "title": "Práctica 3",
+          "steps": [
+            "Añade W y R cuando el movimiento básico y los tiempos de ataque sean fiables."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "¿Es difícil dominar a Riven?",
+          "a": "Sí. Requiere precisión de movimiento, gestión de la pasiva, conocimiento de los enfriamientos y ejecución eficiente de las habilidades."
+        },
+        {
+          "q": "¿Qué es el fast Q combo?",
+          "a": "Es una técnica que combina órdenes de movimiento y ataques básicos con Alas rotas para reducir el tiempo perdido entre ataques. Requiere práctica para ejecutarse de forma consistente."
+        },
+        {
+          "q": "¿Hay que intercalar siempre ataques básicos?",
+          "a": "En muchos intercambios de daño, sí, porque Hoja rúnica recompensa los ataques básicos posteriores a las habilidades. Sin embargo, controlar al rival inmediatamente o retirarte puede ser más importante que maximizar el daño."
+        },
+        {
+          "q": "¿Cuándo utilizar la definitiva de Riven?",
+          "a": "Activa Hoja del exilio cuando te prepares para una pelea o un all-in importante. Cuchillada de viento resulta especialmente peligrosa cuando los enemigos pierden vida."
+        },
+        {
+          "q": "¿Cuál es la mejor build de Riven?",
+          "a": "Una ruta de daño y supervivencia para escaramuzas. El primer objeto exacto puede variar según el parche y el enfrentamiento. Compra una respuesta defensiva contra equipos con mucho burst. El primer objeto varía entre fuentes; verifica las tendencias clasificatorias actuales."
+        }
+      ],
+      "statsNote": "Las recomendaciones de build, runas y enfrentamientos son una referencia del parche 26.21 para clasificatorias de la Grieta del Invocador, Esmeralda+. Las tendencias de enfrentamientos proceden de Lolalytics; los objetos y runas se contrastaron con U.GG y OP.GG. Las muestras y filtros varían según el sitio. Úsalas como base, no como garantías, y revisa el parche actual.",
+      "lastUpdated": "2026-10-28",
+      "skillOrder": {
+        "priority": "Q > E > W",
+        "start": "Q → E → W",
+        "levels": [
+          {
+            "level": 1,
+            "ability": "Q"
+          },
+          {
+            "level": 2,
+            "ability": "E"
+          },
+          {
+            "level": 3,
+            "ability": "W"
+          },
+          {
+            "level": 4,
+            "ability": "Q"
+          },
+          {
+            "level": 5,
+            "ability": "Q"
+          },
+          {
+            "level": 6,
+            "ability": "R"
+          },
+          {
+            "level": 7,
+            "ability": "Q"
+          },
+          {
+            "level": 8,
+            "ability": "E"
+          },
+          {
+            "level": 9,
+            "ability": "Q"
+          },
+          {
+            "level": 10,
+            "ability": "E"
+          },
+          {
+            "level": 11,
+            "ability": "R"
+          },
+          {
+            "level": 12,
+            "ability": "E"
+          },
+          {
+            "level": 13,
+            "ability": "E"
+          },
+          {
+            "level": 14,
+            "ability": "W"
+          },
+          {
+            "level": 15,
+            "ability": "W"
+          },
+          {
+            "level": 16,
+            "ability": "R"
+          },
+          {
+            "level": 17,
+            "ability": "W"
+          },
+          {
+            "level": 18,
+            "ability": "W"
+          }
+        ],
+        "explanation": [
+          "Q es tu principal herramienta de daño, movilidad y control de oleada; maximízala primero.",
+          "E mejora el escudo y el enfriamiento, por eso va segunda. Maximiza W al final y mejora R en los niveles 6, 11 y 16."
+        ],
+        "note": "Q-E-W es la ruta más habitual; adapta los tres primeros niveles solo para una jugada concreta del enfrentamiento."
+      },
+      "runes": {
+        "title": "Intercambios largos con Conquistador",
+        "summary": "Conquistador encaja con la secuencia repetida de habilidades y ataques de Riven. Inspiración secundaria aporta sustento y disponibilidad de hechizos; adapta la página al enfrentamiento.",
+        "primaryTree": {
+          "name": "Precisión",
+          "icon": "perk-images/Styles/7201_Precision.png"
+        },
+        "secondaryTree": {
+          "name": "Inspiración",
+          "icon": "perk-images/Styles/7203_Whimsy.png"
+        },
+        "keystone": {
+          "id": 8010,
+          "name": "Conquistador",
+          "icon": "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+          "why": "Se acumula en peleas prolongadas y mejora el daño sostenido."
+        },
+        "primaryRunes": [
+          {
+            "id": 9111,
+            "name": "Triunfo",
+            "icon": "perk-images/Styles/Precision/Triumph.png",
+            "why": "Restaura vida tras conseguir eliminaciones en escaramuzas."
+          },
+          {
+            "id": 9105,
+            "name": "Leyenda: Haste",
+            "icon": "perk-images/Styles/Precision/LegendHaste/LegendHaste.png",
+            "why": "La aceleración de habilidades ayuda a Riven a repetir su rotación."
+          },
+          {
+            "id": 8299,
+            "name": "Último esfuerzo",
+            "icon": "perk-images/Styles/Sorcery/LastStand/LastStand.png",
+            "why": "Aumenta el daño con poca vida y favorece los duelos ajustados."
+          }
+        ],
+        "secondaryRunes": [
+          {
+            "id": 8304,
+            "name": "Calzado mágico",
+            "icon": "perk-images/Styles/Inspiration/MagicalFootwear/MagicalFootwear.png",
+            "why": "Las botas gratuitas ahorran oro para objetos de combate tempranos."
+          },
+          {
+            "id": 8347,
+            "name": "Perspicacia cósmica",
+            "icon": "perk-images/Styles/Inspiration/CosmicInsight/CosmicInsight.png",
+            "why": "La aceleración de hechizos de invocador mejora Destello y Prender."
+          }
+        ],
+        "alternatives": [
+          "Revestimiento de huesos ayuda contra intercambios cortos de burst. Elige Escudo de Doran contra líneas difíciles a distancia."
+        ],
+        "notes": [
+          "Algunas páginas de Riven prefieren Brujería secundaria; decide según la presión de línea y tu estilo de juego."
+        ]
+      },
+      "summonerSpells": [
+        {
+          "name": "Destello",
+          "icon": "SummonerFlash.png",
+          "why": "Permite ángulos de iniciación rápidos, control sorpresa y escapes de emergencia."
+        },
+        {
+          "name": "Prender",
+          "icon": "SummonerDot.png",
+          "why": "Aumenta la presión de asesinato en all-ins tempranos y reduce la curación.",
+          "alternative": "Teleportar es más seguro si importan la estabilidad de línea y las vueltas al mapa."
+        }
+      ],
+      "builds": [
+        {
+          "id": "riven-recommended",
+          "label": "Riven luchadora AD",
+          "badge": "Muestra clasificatoria del parche 26.21",
+          "summary": "Una ruta de daño y supervivencia para escaramuzas. El primer objeto exacto puede variar según el parche y el enfrentamiento.",
+          "starting": {
+            "label": "Objetos iniciales",
+            "items": [
+              {
+                "id": "1055",
+                "name": "Espada de Doran",
+                "icon": "1055.png",
+                "why": "El daño de ataque y el sustento ayudan en los intercambios iniciales."
+              },
+              {
+                "id": "2003",
+                "name": "Poción de vida",
+                "icon": "2003.png",
+                "why": "Recupera vida tras un intercambio temprano."
+              }
+            ],
+            "note": "Adapta la compra inicial al enfrentamiento en línea."
+          },
+          "core": {
+            "label": "Objetos principales",
+            "items": [
+              {
+                "id": "6696",
+                "name": "Arco axiomático",
+                "icon": "6696.png",
+                "why": "La aceleración y los reinicios de definitiva favorecen las escaramuzas."
+              },
+              {
+                "id": "2517",
+                "name": "Hambre insaciable",
+                "icon": "2517.png",
+                "why": "Añade daño y sustento a las peleas prolongadas."
+              },
+              {
+                "id": "6333",
+                "name": "Baile de la muerte",
+                "icon": "6333.png",
+                "why": "Retrasa el burst físico y ayuda a sobrevivir tras una eliminación."
+              }
+            ]
+          },
+          "boots": {
+            "label": "Botas",
+            "items": [
+              {
+                "id": "3158",
+                "name": "Botas jonias de lucidez",
+                "icon": "3158.png",
+                "why": "La aceleración de habilidades favorece rotaciones frecuentes."
+              },
+              {
+                "id": "3047",
+                "name": "Botas blindadas",
+                "icon": "3047.png",
+                "why": "Elígelas contra mucho daño físico de ataques básicos."
+              },
+              {
+                "id": "3111",
+                "name": "Botas de mercurio",
+                "icon": "3111.png",
+                "why": "Elígelas contra mucho control y daño mágico."
+              }
+            ]
+          },
+          "situational": {
+            "label": "Objetos situacionales",
+            "items": [
+              {
+                "id": "3156",
+                "name": "Fauces de Malmortius",
+                "icon": "3156.png",
+                "why": "Escudo antimágico contra equipos con mucho burst."
+              },
+              {
+                "id": "6694",
+                "name": "Rencor de Serylda",
+                "icon": "6694.png",
+                "why": "La penetración de armadura ayuda contra rivales resistentes."
+              },
+              {
+                "id": "3026",
+                "name": "Ángel de la guarda",
+                "icon": "3026.png",
+                "why": "Una segunda vida puede asegurar una pelea tardía."
+              },
+              {
+                "id": "3071",
+                "name": "Cuchilla negra",
+                "icon": "3071.png",
+                "why": "Vida, aceleración y reducción de armadura en peleas largas."
+              }
+            ]
+          },
+          "notes": [
+            "Compra una respuesta defensiva contra equipos con mucho burst. El primer objeto varía entre fuentes; verifica las tendencias clasificatorias actuales."
+          ]
+        }
+      ],
+      "matchups": {
+        "note": "Las tendencias de counters proceden de Lolalytics, parche 16.21, Esmeralda+ y este rol. Son señales estadísticas, no counters absolutos; también importan la habilidad en línea, la composición y la presión del jungla.",
+        "difficult": [
+          {
+            "name": "Pantheon",
+            "icon": "Pantheon.png",
+            "advice": "Haz que gaste el escudo y evita intercambiar contra su aturdimiento. Busca trades cortos tras sus enfriamientos clave."
+          },
+          {
+            "name": "Renekton",
+            "icon": "Renekton.png",
+            "advice": "Mantén la oleada cerca, evita pelear con mucha furia y usa E para retirarte de su segundo desplazamiento."
+          },
+          {
+            "name": "Kennen",
+            "icon": "Kennen.png",
+            "advice": "Conserva E para absorber poke y busca un flanqueo o ayuda del jungla; evita iniciar en terreno abierto."
+          }
+        ],
+        "favorable": [
+          {
+            "name": "K’Sante",
+            "icon": "KSante.png",
+            "advice": "Esquiva su Q y evita que te arrastre con W. Castiga sus fallos con un intercambio corto y retírate."
+          },
+          {
+            "name": "Ambessa",
+            "icon": "Ambessa.png",
+            "advice": "Controla su energía y los enfriamientos de sus desplazamientos. Los intercambios cortos cuando gaste un dash evitan su combinación completa."
+          },
+          {
+            "name": "Heimerdinger",
+            "icon": "Heimerdinger.png",
+            "advice": "Busca un ángulo alrededor de sus torretas en vez de lanzarte sobre ellas. Castígalo cuando no tenga la granada aturdidora."
+          }
+        ]
+      },
+      "sources": [
+        {
+          "label": "U.GG — Riven top build, runes and skill order",
+          "url": "https://u.gg/lol/champions/riven/build?role=top&region=world"
+        },
+        {
+          "label": "OP.GG — Riven top build and matchups",
+          "url": "https://op.gg/lol/champions/riven/build/top"
+        },
+        {
+          "label": "Lolalytics — Riven top build and counters (Emerald+)",
+          "url": "https://lolalytics.com/lol/riven/build/?lane=top&tier=emerald_plus"
+        }
+      ]
+    },
+    "gangplank": {
+      "slug": "gangplank",
+      "name": "Gangplank",
+      "title": "el Azote de los Siete Mares",
+      "role": "top",
+      "roleLabel": "Superior",
+      "difficulty": "very-high",
+      "difficultyLabel": "Muy alta",
+      "tagline": "Gangplank es un campeón de la calle superior que combina farmeo a distancia, daño de área y capacidad para influir en peleas por todo el mapa. Su mecánica más característica es el Barril de pólvora, que permite crear cadenas explosivas capaces de castigar a enemigos agrupados o mal posiciónados.",
+      "metaTitle": "Guía de Gangplank: combos de barriles, consejos y mecánicas avanzadas | League of Legends",
+      "metaDescription": "Aprende las runas, build, combos de barriles y enfrentamientos de Gangplank en top para el parche 26.21.",
+      "h1": "Guía de Gangplank: combos de barriles, consejos y mecánicas avanzadas",
+      "heroIntro": [
+        "Gangplank es un campeón de la calle superior que combina farmeo a distancia, daño de área y capacidad para influir en peleas por todo el mapa. Su mecánica más característica es el Barril de pólvora, que permite crear cadenas explosivas capaces de castigar a enemigos agrupados o mal posiciónados.",
+        "Para dominar a Gangplank, necesitas gestionar sus barriles, entender cómo reiniciar la pasiva, farmear de forma consistente y reconocer cuándo utilizar la definitiva global."
+      ],
+      "quickAnswer": "Gangplank: prioriza Q > E > W, lleva Toque de muerte ígnea y usa el núcleo de Golpes críticos de Gangplank como referencia del parche 26.21. Consulta los enfrentamientos y adapta los objetos a la composición rival.",
+      "quickStart": {
+        "role": "Superior (calle superior)",
+        "secondaryRoles": "No especificado en esta guía",
+        "difficulty": "Muy alta",
+        "playstyle": "Especialista de top con escalado e impacto global",
+        "keyMechanic": "Sincronizar las explosiones encadenadas de los Barriles de pólvora y los reinicios de la pasiva",
+        "beginnerMistake": "Colocar barriles sin tener en cuenta su cuenta atrás. El rival puede destruirlos primero.",
+        "winCondition": "Farmear de forma constante, amenazar con cadenas de barriles y apoyar peleas por todo el mapa"
+      },
+      "abilities": [
+        {
+          "key": "P",
+          "name": "Prueba de fuego",
+          "icon": "Gangplank_Passive.png",
+          "description": "Periódicamente, el siguiente ataque básico cuerpo a cuerpo de Gangplank inflige daño verdadero adicional durante un tiempo y le otorga velocidad de movimiento si impacta. Hacer explotar un Barril de pólvora reinicia el enfriamiento de la pasiva y le concede su beneficio de velocidad.",
+          "tips": [
+            "Busca oportunidades seguras para aplicar el ataque potenciado.",
+            "Aprovecha una explosión de barril para reiniciar la pasiva si puedes continuar sin peligro.",
+            "Utiliza la velocidad adicional para perseguir, reposiciónarte o escapar.",
+            "No fuerces un ataque cuerpo a cuerpo contra un rival peligroso solo porque tengas la pasiva disponible."
+          ]
+        },
+        {
+          "key": "Q",
+          "name": "Negociación",
+          "icon": "GangplankQ.png",
+          "description": "Gangplank dispara su pistola contra un objetivo e inflige daño físico. Si Negociación mata a una unidad, otorga oro adicional y Serpientes de plata.",
+          "tips": [
+            "Asegura últimos golpes cuando sea seguro y útil.",
+            "Consigue Serpientes de plata para desbloquear mejoras de Andanada de cañones.",
+            "Presiona al rival a distancia sin exponerte innecesariamente al combate cuerpo a cuerpo.",
+            "Controla el maná y evita utilizar Q repetidamente contra un rival capaz de castigarte."
+          ]
+        },
+        {
+          "key": "W",
+          "name": "Eliminar escorbuto",
+          "icon": "GangplankW.png",
+          "description": "Gangplank consume cítricos para curarse y eliminar efectos de control de adversarios.",
+          "tips": [
+            "Guarda la W para efectos de control importantes o situaciónes peligrosas cuando sea posible.",
+            "Recuerda que no elimina todos los perjuicios ni todos los efectos de daño.",
+            "No asumas que te hace inmune a controles posteriores.",
+            "Utilizarla en el momento adecuado puede ayudarte a sobrevivir a un aturdimiento o escapar de una iniciación peligrosa."
+          ]
+        },
+        {
+          "key": "E",
+          "name": "Barril de pólvora",
+          "icon": "GangplankE.png",
+          "description": "Gangplank coloca un barril que puede atacar para provocar una explosión. Esta propaga el daño del ataque que la activa, ralentiza a los enemigos e inflige daño adicional a campeones. Los barriles conectados pueden desencadenar reacciones en cadena.",
+          "tips": [
+            "Coloca barriles en lugares por los que los enemigos puedan necesitar pasar.",
+            "Conecta varios barriles para ampliar la amenaza más allá de una única explosión.",
+            "Aprende la cuenta atrás de la vida del barril y el momento adecuado para atacarlo.",
+            "Recuerda que los enemigos pueden destruirlo antes de que lo detones.",
+            "Aprovecha la ralentización para facilitar los ataques posteriores.",
+            "El Barril de pólvora es el centro de los patrones de daño más característicos de Gangplank."
+          ]
+        },
+        {
+          "key": "R",
+          "name": "Andanada de cañones",
+          "icon": "GangplankR.png",
+          "description": "Gangplank llama un bombardeo sobre una zona elegida en cualquier punto del mapa. La definitiva puede dañar y ralentizar a los enemigos, e influir en peleas aunque él se encuentre lejos.",
+          "tips": [
+            "Apoya peleas en otras líneas sin abandonar innecesariamente la tuya.",
+            "Ayuda a tus aliados a retirarse o a asegurar una eliminación.",
+            "Utilízala para influir en combates alrededor de objetivos.",
+            "Ten en cuenta el movimiento enemigo al elegir la zona.",
+            "Puedes mejorarla con Serpientes de plata obtenidas mediante Negociación. Consulta las mejoras disponibles en el juego antes de decidir cómo gastarlas."
+          ]
+        }
+      ],
+      "combos": [
+        {
+          "name": "Castigo con un barril",
+          "sequence": [],
+          "situation": "Castigo con un barril",
+          "execution": "Coloca un barril, espera una oportunidad adecuada y atácalo para hacerlo explotar cuando un enemigo esté dentro del alcance. Es la forma más sencilla de aprender el radio, el momento y el patrón de daño de la explosión.",
+          "mistake": "Adapta la secuencia a la situación; no la ejecutes automáticamente."
+        },
+        {
+          "name": "Cadena de dos barriles",
+          "sequence": [
+            {
+              "key": "E",
+              "label": "E"
+            },
+            {
+              "key": "E",
+              "label": "E"
+            },
+            {
+              "key": "atacar el primer barril",
+              "label": "atacar el primer barril"
+            }
+          ],
+          "situation": "Cadena de dos barriles",
+          "execution": "Coloca dos barriles conectados y ataca el primero para activar una explosión en cadena. El segundo barril amplía el alcance efectivo del ataque. El posiciónamiento y el tiempo son importantes porque el rival puede destruir un barril antes de que lo actives.",
+          "mistake": "Adapta la secuencia a la situación; no la ejecutes automáticamente.",
+          "warning": "Coloca dos barriles conectados y ataca el primero para activar una explosión en cadena. El segundo barril amplía el alcance efectivo del ataque. El posiciónamiento y el tiempo son importantes porque el rival puede destruir un barril antes de que lo actives."
+        },
+        {
+          "name": "Cadena de tres barriles",
+          "sequence": [
+            {
+              "key": "E",
+              "label": "E"
+            },
+            {
+              "key": "E",
+              "label": "E"
+            },
+            {
+              "key": "E",
+              "label": "E"
+            },
+            {
+              "key": "atacar",
+              "label": "atacar"
+            }
+          ],
+          "situation": "Cadena de tres barriles",
+          "execution": "Crea una cadena de barriles conectados y detona el primero para extender la explosión por toda la cadena. Práctica el tiempo de ejecución en la herramienta de práctica. El combo no impactará necesariamente por estar conectados los barriles: el enemigo puede moverse, atacarlos o salir de la zona afectada.",
+          "mistake": "Adapta la secuencia a la situación; no la ejecutes automáticamente."
+        },
+        {
+          "name": "Reinicio de pasiva",
+          "sequence": [
+            {
+              "key": "ataque potenciado",
+              "label": "ataque potenciado"
+            },
+            {
+              "key": "explosión de barril",
+              "label": "explosión de barril"
+            },
+            {
+              "key": "ataque potenciado",
+              "label": "ataque potenciado"
+            }
+          ],
+          "situation": "Reinicio de pasiva",
+          "execution": "Aplica Prueba de fuego a un objetivo, provoca una explosión de Barril de pólvora y busca una oportunidad segura para aplicar de nuevo la pasiva reiniciada. Esto puede generar una ventana potente de daño y velocidad, pero necesitas alcanzar al objetivo cuerpo a cuerpo sin exponerte demasiado.",
+          "mistake": "Adapta la secuencia a la situación; no la ejecutes automáticamente."
+        },
+        {
+          "name": "Apoyo global",
+          "sequence": [
+            {
+              "key": "R",
+              "label": "R"
+            },
+            {
+              "key": "reposicionamiento o continuación",
+              "label": "reposicionamiento o continuación"
+            }
+          ],
+          "situation": "Apoyo global",
+          "execution": "Utiliza Andanada de cañones para ayudar en una pelea en otra zona del mapa y decide después si continúas farmeando, rotas o te unes al combate. No necesitas abandonar automáticamente todo lo que estás haciendo cada vez que pulsas la R. El objetivo es obtener valor global sin sacrificar más de lo necesario.",
+          "mistake": "Adapta la secuencia a la situación; no la ejecutes automáticamente."
+        }
+      ],
+      "sections": [
+        {
+          "id": "laning",
+          "heading": "Fase de líneas",
+          "paragraphs": [
+            "Gangplank se beneficia de un farmeo constante y de gestionar cuidadosamente los riesgos.",
+            "La fase inicial de Gangplank puede variar considerablemente según el enfrentamiento. No des por hecho que un campeón con buen escalado siempre gana los intercambios iniciales."
+          ],
+          "bullets": [
+            "Utiliza Q para asegurar últimos golpes valiosos cuando sea seguro.",
+            "Controla el maná en lugar de gastarlo en cada oportunidad.",
+            "Coloca barriles que amenacen el acceso del rival a la oleada.",
+            "Aprende el ritmo de pérdida de vida de los barriles para detonarlos antes que el enemigo.",
+            "Utiliza la W con criterio cuando el control rival amenace tu supervivencia.",
+            "Vigila al jungla enemigo antes de avanzar demasiado."
+          ]
+        },
+        {
+          "id": "mid-late",
+          "heading": "Juego medio y tardío",
+          "paragraphs": [
+            "Gangplank puede influir en las peleas mediante el daño de área y su definitiva global.",
+            "La contribución de Gangplank no consiste únicamente en conseguir asesinatos. Un barril bien colocado puede obligar al rival a alejarse de un objetivo o desorganizar su formación."
+          ],
+          "bullets": [
+            "Busca oportunidades para alcanzar a varios enemigos con una cadena de barriles.",
+            "Evita colocar barriles donde el rival pueda destruirlos sin riesgo.",
+            "Aprovecha el terreno y los accesos a objetivos para dificultar que los enemigos esquiven las explosiones.",
+            "Apoya peleas lejanas con Andanada de cañones.",
+            "Mantén una posición segura mientras preparas un combo.",
+            "Utiliza la velocidad de movimiento de la pasiva para reposiciónarte tras una explosión."
+          ]
+        },
+        {
+          "id": "final-advice",
+          "heading": "Consejo final",
+          "paragraphs": [
+            "Dominar a Gangplank consiste en ser constante, controlar los tiempos y prepararse antes de cada jugada. Aprende a farmear de forma fiable, dominar las cadenas de barriles y reconocer cuándo puedes influir en una pelea con Andanada de cañones. Los combos difíciles ayudan, pero las buenas decisiones y la ejecución fiable son las que ganan partidas."
+          ],
+          "bullets": [
+            "Página oficial de Azir en Riot Games",
+            "Wiki: habilidades y mecánicas de Azir",
+            "Página oficial de Riven en Riot Games",
+            "Wiki: habilidades, pasiva y mecánicas de Riven",
+            "Página oficial de Gangplank en Riot Games",
+            "Wiki: barriles, pasiva y mecánicas de Gangplank",
+            "Notas oficiales del parche 26.21"
+          ]
+        }
+      ],
+      "mistakes": [
+        "Colocar barriles sin tener en cuenta su cuenta atrás. El rival puede destruirlos primero.",
+        "Ignorar los reinicios de la pasiva. Las explosiones pueden reiniciar Prueba de fuego.",
+        "Gastar todo el maná con la Q. Puedes quedarte sin recursos para un intercambio importante.",
+        "Utilizar la W demasiado pronto. Quizá la necesites para un efecto de control más peligroso.",
+        "Centrarse únicamente en combos difíciles. Los impactos fiables con un solo barril y el buen posiciónamiento también son valiosos.",
+        "Olvidarse de la definitiva global. Andanada de cañones puede contribuir a peleas lejos de tu posición."
+      ],
+      "practicePlan": [
+        {
+          "title": "Práctica 1",
+          "steps": [
+            "En la herramienta de práctica:",
+            "Empieza por una ejecución fiable antes de intentar cadenas difíciles en partidas reales.",
+            "Aprende la cuenta atrás de vida de los Barriles de pólvora."
+          ]
+        },
+        {
+          "title": "Práctica 2",
+          "steps": [
+            "Práctica atacar un barril en el momento adecuado.",
+            "Construye cadenas de dos y tres barriles.",
+            "Práctica la sincronización necesaria para detonarlos antes de que el enemigo los destruya."
+          ]
+        },
+        {
+          "title": "Práctica 3",
+          "steps": [
+            "Combina ataques potenciados de la pasiva con explosiones para comprender el reinicio.",
+            "Práctica el uso de Andanada de cañones mientras observas el resto del mapa."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "¿Es difícil aprender a jugar Gangplank?",
+          "a": "Sí. Requiere buen farmeo, precisión con los barriles, posiciónamiento y atención a las peleas que ocurren en otras partes del mapa."
+        },
+        {
+          "q": "¿Cómo funcionan los barriles de Gangplank?",
+          "a": "Gangplank coloca Barriles de pólvora que puede atacar para provocar explosiones. Los barriles conectados pueden crear reacciones en cadena que amplían el alcance efectivo del ataque."
+        },
+        {
+          "q": "¿Qué es el combo de tres barriles?",
+          "a": "Es una técnica que conecta tres Barriles de pólvora y detona el primero para extender la explosión por la cadena. El tiempo y el posiciónamiento son fundamentales."
+        },
+        {
+          "q": "¿Cómo se reinicia la pasiva de Gangplank?",
+          "a": "Hacer explotar un Barril de pólvora reinicia el enfriamiento de Prueba de fuego y concede el beneficio de velocidad de movimiento. Esto permite buscar otra oportunidad para aplicar la pasiva con un ataque cuerpo a cuerpo."
+        },
+        {
+          "q": "¿Para qué sirven las Serpientes de plata?",
+          "a": "Negociación puede otorgar Serpientes de plata al matar unidades. Gangplank las utiliza para desbloquear mejoras de Andanada de cañones."
+        },
+        {
+          "q": "¿Cuál es la mejor build de Gangplank?",
+          "a": "Una ruta de golpes críticos que potencia Negociación y los barriles. Adapta las botas y las opciones contra armadura al equipo rival. Recaudadora y Filo infinito son continuaciones habituales, pero el orden exacto varía. Compra anticuración solo cuando esté justificado."
+        }
+      ],
+      "statsNote": "Las recomendaciones de build, runas y enfrentamientos son una referencia del parche 26.21 para clasificatorias de la Grieta del Invocador, Esmeralda+. Las tendencias de enfrentamientos proceden de Lolalytics; los objetos y runas se contrastaron con U.GG y OP.GG. Las muestras y filtros varían según el sitio. Úsalas como base, no como garantías, y revisa el parche actual.",
+      "lastUpdated": "2026-10-28",
+      "skillOrder": {
+        "priority": "Q > E > W",
+        "start": "E → Q → W",
+        "levels": [
+          {
+            "level": 1,
+            "ability": "E"
+          },
+          {
+            "level": 2,
+            "ability": "Q"
+          },
+          {
+            "level": 3,
+            "ability": "W"
+          },
+          {
+            "level": 4,
+            "ability": "Q"
+          },
+          {
+            "level": 5,
+            "ability": "Q"
+          },
+          {
+            "level": 6,
+            "ability": "R"
+          },
+          {
+            "level": 7,
+            "ability": "Q"
+          },
+          {
+            "level": 8,
+            "ability": "E"
+          },
+          {
+            "level": 9,
+            "ability": "Q"
+          },
+          {
+            "level": 10,
+            "ability": "E"
+          },
+          {
+            "level": 11,
+            "ability": "R"
+          },
+          {
+            "level": 12,
+            "ability": "E"
+          },
+          {
+            "level": 13,
+            "ability": "E"
+          },
+          {
+            "level": 14,
+            "ability": "W"
+          },
+          {
+            "level": 15,
+            "ability": "W"
+          },
+          {
+            "level": 16,
+            "ability": "R"
+          },
+          {
+            "level": 17,
+            "ability": "W"
+          },
+          {
+            "level": 18,
+            "ability": "W"
+          }
+        ],
+        "explanation": [
+          "Q se maximiza primero por la presión en línea, el farmeo y las Serpientes de plata.",
+          "E se maximiza segunda porque el daño de los barriles es esencial en el juego medio. Maximiza W al final y mejora R en los niveles 6, 11 y 16."
+        ],
+        "note": "E-Q-W es el inicio habitual en las muestras. Empezar con Q es válido si necesitas farmear a distancia con seguridad."
+      },
+      "runes": {
+        "title": "Hostigamiento con Toque de muerte ígnea",
+        "summary": "Toque de muerte ígnea potencia el hostigamiento repetido con Negociación y las explosiones de barriles. Brujería aporta presión en línea; Precisión secundaria ayuda con maná y rivales resistentes.",
+        "primaryTree": {
+          "name": "Brujería",
+          "icon": "perk-images/Styles/7202_Sorcery.png"
+        },
+        "secondaryTree": {
+          "name": "Precisión",
+          "icon": "perk-images/Styles/7201_Precision.png"
+        },
+        "keystone": {
+          "id": 8992,
+          "name": "Toque de muerte ígnea",
+          "icon": "perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
+          "why": "Añade daño repetido al hostigamiento a distancia y la presión de tus barriles."
+        },
+        "primaryRunes": [
+          {
+            "id": 8224,
+            "name": "Arcanólogo axiomático",
+            "icon": "perk-images/Styles/Sorcery/NullifyingOrb/Axiom_Arcanist.png",
+            "why": "Mejora el valor de la definitiva y el daño de habilidades."
+          },
+          {
+            "id": 8226,
+            "name": "Banda de maná",
+            "icon": "perk-images/Styles/Sorcery/ManaflowBand/ManaflowBand.png",
+            "why": "Ayuda a sostener el uso de Q en línea."
+          },
+          {
+            "id": 8237,
+            "name": "Piroláser",
+            "icon": "perk-images/Styles/Sorcery/Scorch/Scorch.png",
+            "why": "Añade hostigamiento temprano cuando conectan tus habilidades."
+          }
+        ],
+        "secondaryRunes": [
+          {
+            "id": 8009,
+            "name": "Claridad mental",
+            "icon": "perk-images/Styles/Precision/PresenceOfMind/PresenceOfMind.png",
+            "why": "La restauración de maná ayuda a mantener la presión en línea."
+          },
+          {
+            "id": 8017,
+            "name": "Derribado",
+            "icon": "perk-images/Styles/Precision/CutDown/CutDown.png",
+            "why": "Útil contra rivales que acumulan vida."
+          }
+        ],
+        "alternatives": [
+          "Cometa arcano es una alternativa de hostigamiento; compara su frecuencia actual. Las runas secundarias de Valor pueden dar seguridad en líneas difíciles."
+        ],
+        "notes": [
+          "La popularidad de las runas puede cambiar tras un parche; prioriza las páginas estadísticas citadas frente a esta referencia."
+        ]
+      },
+      "summonerSpells": [
+        {
+          "name": "Destello",
+          "icon": "SummonerFlash.png",
+          "why": "Herramienta esencial para escapar y reposicionarte con un campeón de movilidad limitada."
+        },
+        {
+          "name": "Prender",
+          "icon": "SummonerDot.png",
+          "why": "Configuración habitual para añadir presión de asesinato y reducir curación.",
+          "alternative": "Teleportar es una opción para una línea más segura y presencia en el mapa."
+        }
+      ],
+      "builds": [
+        {
+          "id": "gangplank-recommended",
+          "label": "Golpes críticos de Gangplank",
+          "badge": "Muestra clasificatoria del parche 26.21",
+          "summary": "Una ruta de golpes críticos que potencia Negociación y los barriles. Adapta las botas y las opciones contra armadura al equipo rival.",
+          "starting": {
+            "label": "Objetos iniciales",
+            "items": [
+              {
+                "id": "1055",
+                "name": "Espada de Doran",
+                "icon": "1055.png",
+                "why": "El daño de ataque ayuda en intercambios y últimos golpes tempranos."
+              },
+              {
+                "id": "2003",
+                "name": "Poción de vida",
+                "icon": "2003.png",
+                "why": "Sustento para los primeros intercambios."
+              }
+            ],
+            "note": "Adapta la compra inicial al enfrentamiento en línea."
+          },
+          "core": {
+            "label": "Objetos principales",
+            "items": [
+              {
+                "id": "3508",
+                "name": "Segador de esencia",
+                "icon": "3508.png",
+                "why": "Los golpes críticos y el maná favorecen el uso frecuente de Negociación."
+              },
+              {
+                "id": "6676",
+                "name": "Recaudadora",
+                "icon": "6676.png",
+                "why": "La letalidad y la presión de ejecución ayudan a rematar objetivos."
+              },
+              {
+                "id": "3031",
+                "name": "Filo infinito",
+                "icon": "3031.png",
+                "why": "El daño crítico aumenta la amenaza de ataques potenciados y barriles."
+              }
+            ]
+          },
+          "boots": {
+            "label": "Botas",
+            "items": [
+              {
+                "id": "3047",
+                "name": "Botas blindadas",
+                "icon": "3047.png",
+                "why": "La armadura ayuda contra presión física en línea."
+              },
+              {
+                "id": "3158",
+                "name": "Botas jonias de lucidez",
+                "icon": "3158.png",
+                "why": "La aceleración de habilidades permite usar más barriles y definitivas."
+              }
+            ]
+          },
+          "situational": {
+            "label": "Objetos situacionales",
+            "items": [
+              {
+                "id": "3036",
+                "name": "Recuerdos de lord Dominik",
+                "icon": "3036.png",
+                "why": "Penetración de armadura contra primeras líneas resistentes."
+              },
+              {
+                "id": "3033",
+                "name": "Recordatorio letal",
+                "icon": "3033.png",
+                "why": "Anticuración y penetración contra equipos con mucha curación."
+              },
+              {
+                "id": "6673",
+                "name": "Arcoescudo inmortal",
+                "icon": "6673.png",
+                "why": "Un escudo puede protegerte del burst."
+              },
+              {
+                "id": "6699",
+                "name": "Espada ciclovoltaica",
+                "icon": "6699.png",
+                "why": "Un perfil de daño alternativo si buscas presión de letalidad."
+              }
+            ]
+          },
+          "notes": [
+            "Recaudadora y Filo infinito son continuaciones habituales, pero el orden exacto varía. Compra anticuración solo cuando esté justificado."
+          ]
+        }
+      ],
+      "matchups": {
+        "note": "Las tendencias de counters proceden de Lolalytics, parche 16.21, Esmeralda+ y este rol. Son señales estadísticas, no counters absolutos; también importan la habilidad en línea, la composición y la presión del jungla.",
+        "difficult": [
+          {
+            "name": "Kayle",
+            "icon": "Kayle.png",
+            "advice": "Controla la oleada con barriles y evita que escale gratis. Coordina presión antes de que alcance sus niveles fuertes."
+          },
+          {
+            "name": "Sion",
+            "icon": "Sion.png",
+            "advice": "Usa barriles para disputar la oleada y castiga su Q cargada. Prioriza escalar y aportar a objetivos antes que forzar all-ins."
+          },
+          {
+            "name": "Gwen",
+            "icon": "Gwen.png",
+            "advice": "Mantén barriles entre ambos, guarda W para su control clave y evita peleas largas dentro de su niebla."
+          }
+        ],
+        "favorable": [
+          {
+            "name": "Illaoi",
+            "icon": "Illaoi.png",
+            "advice": "Farmea fuera de su amenaza con Q y barriles, esquiva E y evita varios tentáculos. W puede limpiar su ralentización, no deshacer el daño."
+          },
+          {
+            "name": "Renekton",
+            "icon": "Renekton.png",
+            "advice": "Mantén la distancia y castiga sus entradas con barriles. Controla su furia y evita intercambios cercanos cuando esté alta."
+          },
+          {
+            "name": "Yasuo",
+            "icon": "Yasuo.png",
+            "advice": "Separa los barriles para que no se desplace por la oleada hasta ti. Evita colocar un barril clave donde el Muro de viento bloquee la jugada."
+          }
+        ]
+      },
+      "sources": [
+        {
+          "label": "U.GG — Gangplank top build, runes and skill order",
+          "url": "https://u.gg/lol/champions/gangplank/build?role=top&region=world"
+        },
+        {
+          "label": "OP.GG — Gangplank top build and matchups",
+          "url": "https://op.gg/lol/champions/gangplank/build/top"
+        },
+        {
+          "label": "Lolalytics — Gangplank top build and counters (Emerald+)",
+          "url": "https://lolalytics.com/lol/gangplank/build/?lane=top&tier=emerald_plus"
+        }
+      ]
+    }
+  }
+}

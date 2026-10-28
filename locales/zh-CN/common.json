@@ -64,7 +64,11 @@
         "matchMaking": {
             "verifying": "Verifying Match...",
             "verify": "Verify Match"
-        }
+        },
+        "editPool": "编辑英雄池",
+        "usePool": "使用英雄池",
+        "challengeActive": "挑战进行中 - 路线已锁定",
+        "lane": "路线"
     },
     "championCard": {
         "yourChampion": "Your Champion",
@@ -148,7 +152,8 @@
         "faqPasswordA": "Yes. We use Riot's official OAuth — your password is never stored on our servers. With manual login, we only verify your public Riot ID.",
         "faqModesQ": "What modes count?",
         "faqModesA": "Any matchmade game mode counts: Summoner's Rift (all queues), ARAM, and rotating game modes.",
-        "gotIt": "Got it, let's play!"
+        "gotIt": "Got it, let's play!",
+        "step3Desc": "游戏结束后，使用 Riot ID 登录并点击“验证比赛”，以确认你使用了指定的英雄。"
     },
     "autoVerify": {
         "title": "Auto-Scan",
@@ -510,7 +515,8 @@
             "Win streak tracking",
             "Global leaderboard",
             "100% free to use",
-            "Mobile-friendly interface"
+            "Mobile-friendly interface",
+            "移动端友好的 LoL 轮盘"
         ],
         "whyTitle": "Why Use a Random Champion Generator?",
         "whyText": "Using a random LoL champion picker helps you:",
@@ -556,6 +562,7 @@
         "faq8A": "100% mobile-friendly. Spin the roulette on phone, tablet, or desktop."
     },
     "localeSwitcher": {
+        "unavailable": "此语言版本不可用",
         "label": "Language"
     },
     "mastery": {
@@ -618,6 +625,11 @@
             "mid": "Mid",
             "adc": "ADC",
             "support": "Support"
+        },
+        "mode": {
+            "all": "所有模式",
+            "classic": "5v5 SR",
+            "aram": "ARAM"
         }
     },
     "faqContent": [
@@ -759,5 +771,13 @@
         "finalText": "Every random champion game makes you a better League of Legends player. Use these strategies, stay positive, and embrace the challenge!"
     },
     "siteName": "League Roulette",
-    "siteTagline": "Random Champion Challenge"
+    "siteTagline": "Random Champion Challenge",
+    "championPool": {
+        "title": "英雄池",
+        "desc": "每条路线至少选择 5 个英雄来组建你的英雄池",
+        "minPerLane": "每条路线需要 5 个英雄",
+        "totalSelected": "已选择 {count} 个英雄",
+        "cancel": "取消",
+        "save": "保存英雄池"
+    }
 }

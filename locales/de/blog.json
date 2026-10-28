@@ -61,5 +61,9 @@
             "name": "League Roulette",
             "desc": "Challenges und zufällige Picks: die Roulette in echten Fortschritt verwandeln."
         }
-    }
+    },
+    "browseTips": "Tipps ansehen",
+    "filterByCategory": "Nach Kategorie filtern",
+    "home": "Startseite",
+    "by": "Von"
 }

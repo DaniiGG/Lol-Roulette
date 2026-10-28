@@ -1,6 +1,6 @@
 // app/terms/page.tsx
 import type { Metadata } from 'next'
-import Link from 'next/link'
+import { Link } from '@/i18n/navigation'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { buildPageMetadata } from '@/lib/seo/page-metadata'
 import Breadcrumbs from '@/components/Breadcrumbs'

@@ -1,6 +1,6 @@
 // app/privacy/page.tsx
 import type { Metadata } from 'next'
-import Link from 'next/link'
+import { Link } from '@/i18n/navigation'
 import SlotLever from '@/components/SlotLever'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { buildPageMetadata } from '@/lib/seo/page-metadata'

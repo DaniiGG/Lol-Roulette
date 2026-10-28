@@ -1,9 +1,53 @@
 "use client"
 
 import { useLocale, useTranslations } from 'next-intl';
+import { useParams } from 'next/navigation';
 import { usePathname, useRouter } from '@/i18n/navigation';
 import { useTransition } from 'react';
 import { useState, useRef, useEffect } from 'react';
+import { isPathname, isRouteAvailable, type AppPathnames } from '@/i18n/routes';
+import { getAvailableLocales, getLocalizedSlug, resolvePostSlug } from '@/lib/blog/meta';
+import { getGuideSlug, isGuideLocale, resolveGuideSlug } from '@/lib/guides/meta';
+
+type LocaleParams = Readonly<Record<string, string | string[] | undefined>>;
+
+type LocaleHref = {
+  pathname: AppPathnames;
+  params?: Record<string, string>;
+};
+
+function getLocaleHref(
+  pathname: string,
+  params: LocaleParams,
+  locale: string,
+  targetLocale: string
+): LocaleHref | null {
+  if (!isPathname(pathname)) return null;
+
+  if (pathname === '/blog/[slug]') {
+    const slug = typeof params.slug === 'string' ? params.slug : '';
+    const canonical = resolvePostSlug(slug, locale);
+    if (!canonical) return null;
+    if (!getAvailableLocales(canonical).includes(targetLocale)) return null;
+    return {
+      pathname,
+      params: { slug: getLocalizedSlug(canonical, targetLocale) },
+    };
+  }
+
+  if (pathname === '/blog/guides/[champion]') {
+    const champion = typeof params.champion === 'string' ? params.champion : '';
+    const canonical = resolveGuideSlug(champion);
+    if (!canonical || !isGuideLocale(targetLocale)) return null;
+    return {
+      pathname,
+      params: { champion: getGuideSlug(canonical, targetLocale) },
+    };
+  }
+
+  if (!isRouteAvailable(pathname, targetLocale)) return null;
+  return { pathname };
+}
 
 const languages = [
   { code: 'en', label: 'English', flag: 'gb' },
@@ -134,6 +178,7 @@ export default function LocaleSwitcher() {
   const t = useTranslations('localeSwitcher');
   const locale = useLocale();
   const pathname = usePathname();
+  const params = useParams();
   const router = useRouter();
   const [isPending, startTransition] = useTransition();
   const [open, setOpen] = useState(false);
@@ -165,21 +210,31 @@ export default function LocaleSwitcher() {
       </button>
       {open && (
         <div className="absolute right-0 mt-1 w-48 bg-zinc-800 border border-zinc-700 rounded-lg shadow-xl overflow-hidden z-50">
-          {languages.map((lang) => (
-            <button
-              key={lang.code}
-              onClick={() => {
-                startTransition(() => {
-                  router.replace(pathname, { locale: lang.code });
-                });
-                setOpen(false);
-              }}
-              className={`w-full flex items-center gap-2 px-3 py-2 text-sm transition hover:bg-zinc-700 ${locale === lang.code ? 'bg-zinc-700 text-cyan-300' : 'text-zinc-300'}`}
-            >
-              <Flag code={lang.flag} />
-              <span>{lang.label}</span>
-            </button>
-          ))}
+          {languages.map((lang) => {
+            const target = getLocaleHref(String(pathname), params, locale, lang.code);
+            const isCurrent = locale === lang.code;
+            const disabled = !target || isCurrent;
+            return (
+              <button
+                key={lang.code}
+                disabled={disabled}
+                onClick={() => {
+                  if (!target || isCurrent) return;
+                  startTransition(() => {
+                    router.replace(target as never, { locale: lang.code });
+                  });
+                  setOpen(false);
+                }}
+                className={`w-full flex items-center gap-2 px-3 py-2 text-sm transition ${
+                  disabled ? 'cursor-not-allowed text-zinc-500' : 'hover:bg-zinc-700 text-zinc-300'
+                } ${isCurrent ? 'bg-zinc-700 text-cyan-300' : ''}`}
+                title={!target ? t('unavailable') : undefined}
+              >
+                <Flag code={lang.flag} />
+                <span>{lang.label}</span>
+              </button>
+            );
+          })}
         </div>
       )}
     </div>

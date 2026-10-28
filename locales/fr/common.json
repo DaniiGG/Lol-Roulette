@@ -64,7 +64,11 @@
         "matchMaking": {
             "verifying": "Vérification de la partie...",
             "verify": "Vérifier la partie"
-        }
+        },
+        "editPool": "Modifier le pool de champions",
+        "usePool": "Utiliser le pool",
+        "challengeActive": "Défi actif - La voie est verrouillée",
+        "lane": "Voie"
     },
     "championCard": {
         "yourChampion": "Ton Champion",
@@ -561,7 +565,8 @@
             "Suivi des streaks de victoires",
             "Classement global",
             "100% gratuit",
-            "Interface adaptée aux mobiles"
+            "Interface adaptée aux mobiles",
+            "Roulette LoL compatible mobile"
         ],
         "whyTitle": "Pourquoi Utiliser un Générateur de Champion Aléatoire ?",
         "whyText": "Utiliser un sélecteur de champion aléatoire LoL vous aide à :",
@@ -609,6 +614,7 @@
         "whatIs": "Qu'est-ce que League Roulette ?"
     },
     "localeSwitcher": {
+        "unavailable": "Non disponible dans cette langue",
         "label": "Langue"
     },
     "mastery": {
@@ -673,7 +679,12 @@
             "support": "Support"
         },
         "title": "Taux de victoire",
-        "winRate": "Taux de victoire"
+        "winRate": "Taux de victoire",
+        "mode": {
+            "all": "Tous les modes",
+            "classic": "5v5 SR",
+            "aram": "ARAM"
+        }
     },
     "faqContent": [
         {
@@ -819,7 +830,9 @@
         "title": "Pool de champions",
         "desc": "Choisissez au moins 5 champions par ligne",
         "minPerLane": "5 par ligne nécessaires",
-        "totalSelected": "Sélectionné: {count}"
+        "totalSelected": "Sélectionné: {count}",
+        "cancel": "Annuler",
+        "save": "Enregistrer le pool"
     },
     "heroTitle1": "League Roulette",
     "heroTitle2": "Défi Aléatoire",

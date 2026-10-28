@@ -1,116 +1,117 @@
 {
-  "weeklyChallenge": {
-    "title": "Défi Hebdomadaire",
-    "subtitle": "Complétez le défi de la semaine pour gagner des droits",
-    "challenges": [
-      {
-        "id": "support-only",
-        "name": "Support Only",
-        "description": "Jouez 3 parties cette semaine en jouant uniquement avec des champions support. Pas de carries autorisés !",
-        "emoji": "👩",
-        "deadline": "Ce Dimanche",
-        "difficulty": "Moyen"
-      },
-      {
-        "id": "low-mastery",
-        "name": "Faible Maîtrise",
-        "description": "Jouez avec des champions sur lesquels vous avez moins de 10 parties. Élargissez votre pool !",
-        "emoji": "🎯",
-        "deadline": "Ce Dimanche",
-        "difficulty": "Difficile"
-      },
-      {
-        "id": "friends-roulette",
-        "name": "Roulette des Amis",
-        "description": "Défiotez 3 amis à une roulette de groupe. Chacun tourne et joue son choix !",
-        "emoji": "🎉",
-        "deadline": "Ce Dimanche",
-        "difficulty": "Facile"
-      },
-      {
-        "id": "aram-only",
-        "name": "Uniquement ARAM",
-        "description": "Jouez 5 parties à Howling Abyss cette semaine. Le champion est toujours aléatoire !",
-        "emoji": "🏟️",
-        "deadline": "Ce Dimanche",
-        "difficulty": "Moyen"
-      },
-      {
-        "id": "champion-rotation",
-        "name": "Rotation des Champions",
-        "description": "Jouez avec chaque champion gratuit dans la rotation de cette semaine. Une partie chacun !",
-        "emoji": "🔄",
-        "deadline": "Ce Dimanche",
-        "difficulty": "Difficile"
-      }
-    ]
-  },
-  "createChallenge": "Créer votre propre défi",
-  "shareCode": "Partager le code",
-  "joinChallenge": "Rejoindre & Tourner",
-  "back": "Retour",
-  "sectionLabel": "Défi Hebdomadaire",
-  "startPlaying": "Commencer à Jouer",
-  "browseMore": "Parcourir le Blog",
-  "aramNote": "En ARAM le champion est toujours aléatoire - entrez simplement et jouez !",
-  "noChampions": "Aucun défi hebdomadaire disponible",
-
-  "sectionTitle": "Défis",
-  "sectionDescription": "Activez des défis à durée limitée pour gagner de l'XP bonus sur les victoires",
-  "activate": "Activer",
-  "activated": "Défi activé : {name}",
-  "activationFailed": "Échec de l'activation du défi",
-  "hasActiveChallenge": "Défi actif déjà existant",
-  "loginRequired": "Veuillez vous connecter pour activer les défis",
-  "difficulty": {
-    "easy": "Facile",
-    "medium": "Moyen",
-    "hard": "Difficile"
-  },
-  "category": {
-    "mastery": "Maîtrise",
-    "region": "Région",
-    "class": "Classe"
-  },
-  "requirement": {
-    "lowMastery": "Jouez avec un champion ayant moins de {threshold} points de maîtrise",
-    "region": "Gagnez avec un champion de {region}",
-    "class": "Gagnez avec un champion de classe {class}"
-  },
-  "duration": "Durée",
-  "xpMultiplier": "Multiplicateur XP",
-  "timeRemaining": "TEMPS RESTANT",
-  "expiresAt": "Expire à {time}",
-  "validWins": "Victoires Valides",
-  "bonusXP": "XP Bonus",
-  "totalXP": "XP Total",
-  "xpMultiplierActive": "Multiplicateur XP Actif :",
-  "onValidWins": "sur victoires valides",
-  "challengeExpired": "Défi Expiré",
-  "challengeExpiredDesc": "Ce défi a expiré. Démarrez-en un nouveau pour continuer à gagner de l'XP bonus.",
-  "history": "Historique des Défis",
-  "noHistory": "Aucun historique de défi",
-  "noHistoryDesc": "Terminez des défis pour les voir ici",
-  "started": "Commencé",
-  "ended": "Terminé",
-  "wins": "victoires",
-  "status": {
-    "completed": "Terminé",
-    "expired": "Expiré",
-    "failed": "Échoué"
-  },
-  "result": {
-    "completed": "{wins} victoires valides • +{bonusXp} XP bonus gagnés",
-    "expired": "Défi expiré sans être terminé",
-    "failed": "Défi échoué"
-  },
-  "dailyRegion": "Région Quotidienne",
-  "dailyRegionDesc": "Seul ce défi de région est disponible aujourd'hui. Change à minuit UTC.",
-  "weeklyChallenges": "Défis Hebdomadaires",
-  "changesMonday": "Changent le lundi",
-  "durationShort": "3h",
-  "developmentNoticeTitle": "En développement",
-  "developmentNoticeDescription": "Les défis sont encore en développement. Certaines fonctionnalités peuvent échouer ou ne pas fonctionner comme prévu.",
-  "activeChallenge": "Défi actif",
-  "requirementLabel": "Condition requise"
+    "weeklyChallenge": {
+        "title": "Défi Hebdomadaire",
+        "subtitle": "Complétez le défi de la semaine pour gagner des droits",
+        "challenges": [
+            {
+                "id": "support-only",
+                "name": "Support Only",
+                "description": "Jouez 3 parties cette semaine en jouant uniquement avec des champions support. Pas de carries autorisés !",
+                "emoji": "👩",
+                "deadline": "Ce Dimanche",
+                "difficulty": "Moyen"
+            },
+            {
+                "id": "low-mastery",
+                "name": "Faible Maîtrise",
+                "description": "Jouez avec des champions sur lesquels vous avez moins de 10 parties. Élargissez votre pool !",
+                "emoji": "🎯",
+                "deadline": "Ce Dimanche",
+                "difficulty": "Difficile"
+            },
+            {
+                "id": "friends-roulette",
+                "name": "Roulette des Amis",
+                "description": "Défiotez 3 amis à une roulette de groupe. Chacun tourne et joue son choix !",
+                "emoji": "🎉",
+                "deadline": "Ce Dimanche",
+                "difficulty": "Facile"
+            },
+            {
+                "id": "aram-only",
+                "name": "Uniquement ARAM",
+                "description": "Jouez 5 parties à Howling Abyss cette semaine. Le champion est toujours aléatoire !",
+                "emoji": "🏟️",
+                "deadline": "Ce Dimanche",
+                "difficulty": "Moyen"
+            },
+            {
+                "id": "champion-rotation",
+                "name": "Rotation des Champions",
+                "description": "Jouez avec chaque champion gratuit dans la rotation de cette semaine. Une partie chacun !",
+                "emoji": "🔄",
+                "deadline": "Ce Dimanche",
+                "difficulty": "Difficile"
+            }
+        ]
+    },
+    "createChallenge": "Créer votre propre défi",
+    "shareCode": "Partager le code",
+    "joinChallenge": "Rejoindre & Tourner",
+    "back": "Retour",
+    "sectionLabel": "Défi Hebdomadaire",
+    "startPlaying": "Commencer à Jouer",
+    "browseMore": "Parcourir le Blog",
+    "aramNote": "En ARAM le champion est toujours aléatoire - entrez simplement et jouez !",
+    "noChampions": "Aucun défi hebdomadaire disponible",
+    "sectionTitle": "Défis",
+    "sectionDescription": "Activez des défis à durée limitée pour gagner de l'XP bonus sur les victoires",
+    "activate": "Activer",
+    "activated": "Défi activé : {name}",
+    "activationFailed": "Échec de l'activation du défi",
+    "hasActiveChallenge": "Défi actif déjà existant",
+    "loginRequired": "Veuillez vous connecter pour activer les défis",
+    "difficulty": {
+        "easy": "Facile",
+        "medium": "Moyen",
+        "hard": "Difficile"
+    },
+    "category": {
+        "mastery": "Maîtrise",
+        "region": "Région",
+        "class": "Classe"
+    },
+    "requirement": {
+        "lowMastery": "Jouez avec un champion ayant moins de {threshold} points de maîtrise",
+        "region": "Gagnez avec un champion de {region}",
+        "class": "Gagnez avec un champion de classe {class}"
+    },
+    "duration": "Durée",
+    "xpMultiplier": "Multiplicateur XP",
+    "timeRemaining": "TEMPS RESTANT",
+    "expiresAt": "Expire à {time}",
+    "validWins": "Victoires Valides",
+    "bonusXP": "XP Bonus",
+    "totalXP": "XP Total",
+    "xpMultiplierActive": "Multiplicateur XP Actif :",
+    "onValidWins": "sur victoires valides",
+    "challengeExpired": "Défi Expiré",
+    "challengeExpiredDesc": "Ce défi a expiré. Démarrez-en un nouveau pour continuer à gagner de l'XP bonus.",
+    "history": "Historique des Défis",
+    "noHistory": "Aucun historique de défi",
+    "noHistoryDesc": "Terminez des défis pour les voir ici",
+    "started": "Commencé",
+    "ended": "Terminé",
+    "wins": "victoires",
+    "status": {
+        "completed": "Terminé",
+        "expired": "Expiré",
+        "failed": "Échoué"
+    },
+    "result": {
+        "completed": "{wins} victoires valides • +{bonusXp} XP bonus gagnés",
+        "expired": "Défi expiré sans être terminé",
+        "failed": "Défi échoué"
+    },
+    "dailyRegion": "Région Quotidienne",
+    "dailyRegionDesc": "Seul ce défi de région est disponible aujourd'hui. Change à minuit UTC.",
+    "weeklyChallenges": "Défis Hebdomadaires",
+    "changesMonday": "Changent le lundi",
+    "durationShort": "3h",
+    "developmentNoticeTitle": "En développement",
+    "developmentNoticeDescription": "Les défis sont encore en développement. Certaines fonctionnalités peuvent échouer ou ne pas fonctionner comme prévu.",
+    "activeChallenge": "Défi actif",
+    "requirementLabel": "Condition requise",
+    "categoryLabel": "Catégorie",
+    "toastAnnouncement": "🎉 Le nouveau système de défis est en ligne ! Essayez le défi de région quotidien + 3 défis hebdomadaires. D'autres mises à jour arrivent bientôt !"
 }

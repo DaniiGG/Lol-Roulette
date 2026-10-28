@@ -3,6 +3,7 @@
 
 import { Info, Zap, Trophy, Target, HelpCircle, X } from 'lucide-react'
 import { useTranslations } from 'next-intl'
+import { Link } from '@/i18n/navigation'
 
 interface InfoModalProps {
   onClose: () => void
@@ -110,9 +111,9 @@ export default function InfoModal({ onClose }: InfoModalProps) {
           </div>
           <ul className="space-y-2 text-sm">
             <li>
-              <a href="/howtoplay" className="text-xl font-bold hover:text-white transition">
+              <Link href="/howtoplay" className="text-xl font-bold hover:text-white transition">
                 {t('moreInfo')}
-              </a>
+              </Link>
             </li>
           </ul>
 

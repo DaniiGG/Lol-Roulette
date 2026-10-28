@@ -1,116 +1,117 @@
 {
-  "weeklyChallenge": {
-    "title": "Desafio Semanal",
-    "subtitle": "Complete o desafio semanal para ganhar direitos",
-    "challenges": [
-      {
-        "id": "support-only",
-        "name": "Somente Suporte",
-        "description": "Jogue 3 partidas esta semana jogando apenas com campeões de suporte. Sem carries permitidos!",
-        "emoji": "👩",
-        "deadline": "Este Domingo",
-        "difficulty": "Médio"
-      },
-      {
-        "id": "low-mastery",
-        "name": "Baixa Maestria",
-        "description": "Jogue com campeões em que você tem menos de 10 partidas. Expanda seu pool!",
-        "emoji": "🎯",
-        "deadline": "Este Domingo",
-        "difficulty": "Difícil"
-      },
-      {
-        "id": "friends-roulette",
-        "name": "Roleta dos Amigos",
-        "description": "Desafie 3 amigos para uma roleta de grupo. Cada um gira e joga sua escolha!",
-        "emoji": "🎉",
-        "deadline": "Este Domingo",
-        "difficulty": "Fácil"
-      },
-      {
-        "id": "aram-only",
-        "name": "Apenas ARAM",
-        "description": "Jogue 5 partidas em Howling Abyss esta semana. O campeão é sempre aleatório!",
-        "emoji": "🏟️",
-        "deadline": "Este Domingo",
-        "difficulty": "Médio"
-      },
-      {
-        "id": "champion-rotation",
-        "name": "Rotação de Campeões",
-        "description": "Jogue com cada campeão gratuito na rotação desta semana. Uma partida cada!",
-        "emoji": "🔄",
-        "deadline": "Este Domingo",
-        "difficulty": "Difícil"
-      }
-    ]
-  },
-  "createChallenge": "Crie seu próprio desafio",
-  "shareCode": "Compartilhar código",
-  "joinChallenge": "Entrar e Girar",
-  "back": "Voltar",
-  "sectionLabel": "Desafio Semanal",
-  "startPlaying": "Começar a Jogar",
-  "browseMore": "Explorar Blog",
-  "aramNote": "Em ARAM o campeão é sempre aleatório - basta entrar e jogar!",
-  "noChampions": "Nenhum desafio semanal disponível",
-
-  "sectionTitle": "Desafios",
-  "sectionDescription": "Ative desafios por tempo limitado para ganhar XP extra em vitórias",
-  "activate": "Ativar",
-  "activated": "Desafio ativado: {name}",
-  "activationFailed": "Erro ao ativar o desafio",
-  "hasActiveChallenge": "Você já tem um desafio ativo",
-  "loginRequired": "Faça login para ativar desafios",
-  "difficulty": {
-    "easy": "Fácil",
-    "medium": "Médio",
-    "hard": "Difícil"
-  },
-  "category": {
-    "mastery": "Maestria",
-    "region": "Região",
-    "class": "Classe"
-  },
-  "requirement": {
-    "lowMastery": "Jogue com um campeão com menos de {threshold} pontos de maestria",
-    "region": "Ganhe usando um campeão de {region}",
-    "class": "Ganhe usando um campeão da classe {class}"
-  },
-  "duration": "Duração",
-  "xpMultiplier": "Multiplicador XP",
-  "timeRemaining": "TEMPO RESTANTE",
-  "expiresAt": "Expira às {time}",
-  "validWins": "Vitórias Válidas",
-  "bonusXP": "XP Extra",
-  "totalXP": "XP Total",
-  "xpMultiplierActive": "Multiplicador XP Ativo:",
-  "onValidWins": "em vitórias válidas",
-  "challengeExpired": "Desafio Expirado",
-  "challengeExpiredDesc": "Este desafio expirou. Ative um novo para continuar ganhando XP extra.",
-  "history": "Histórico de Desafios",
-  "noHistory": "Sem histórico de desafios",
-  "noHistoryDesc": "Complete desafios para vê-los aqui",
-  "started": "Iniciado",
-  "ended": "Finalizado",
-  "wins": "vitórias",
-  "status": {
-    "completed": "Completado",
-    "expired": "Expirado",
-    "failed": "Falhou"
-  },
-  "result": {
-    "completed": "{wins} vitórias válidas • +{bonusXp} XP extra ganhos",
-    "expired": "Desafio expirou sem conclusão",
-    "failed": "Desafio falhou"
-  },
-  "dailyRegion": "Região do Dia",
-  "dailyRegionDesc": "Apenas este desafio de região está disponível hoje. Muda à meia-noite UTC.",
-  "weeklyChallenges": "Desafios Semanais",
-  "changesMonday": "Mudam na segunda",
-  "durationShort": "3h",
-  "developmentNoticeTitle": "Em desenvolvimento",
-  "developmentNoticeDescription": "Os desafios ainda estão em desenvolvimento. Algumas funcionalidades podem falhar ou não funcionar como esperado.",
-  "activeChallenge": "Desafio ativo",
-  "requirementLabel": "Requisito"
+    "weeklyChallenge": {
+        "title": "Desafio Semanal",
+        "subtitle": "Complete o desafio semanal para ganhar direitos",
+        "challenges": [
+            {
+                "id": "support-only",
+                "name": "Somente Suporte",
+                "description": "Jogue 3 partidas esta semana jogando apenas com campeões de suporte. Sem carries permitidos!",
+                "emoji": "👩",
+                "deadline": "Este Domingo",
+                "difficulty": "Médio"
+            },
+            {
+                "id": "low-mastery",
+                "name": "Baixa Maestria",
+                "description": "Jogue com campeões em que você tem menos de 10 partidas. Expanda seu pool!",
+                "emoji": "🎯",
+                "deadline": "Este Domingo",
+                "difficulty": "Difícil"
+            },
+            {
+                "id": "friends-roulette",
+                "name": "Roleta dos Amigos",
+                "description": "Desafie 3 amigos para uma roleta de grupo. Cada um gira e joga sua escolha!",
+                "emoji": "🎉",
+                "deadline": "Este Domingo",
+                "difficulty": "Fácil"
+            },
+            {
+                "id": "aram-only",
+                "name": "Apenas ARAM",
+                "description": "Jogue 5 partidas em Howling Abyss esta semana. O campeão é sempre aleatório!",
+                "emoji": "🏟️",
+                "deadline": "Este Domingo",
+                "difficulty": "Médio"
+            },
+            {
+                "id": "champion-rotation",
+                "name": "Rotação de Campeões",
+                "description": "Jogue com cada campeão gratuito na rotação desta semana. Uma partida cada!",
+                "emoji": "🔄",
+                "deadline": "Este Domingo",
+                "difficulty": "Difícil"
+            }
+        ]
+    },
+    "createChallenge": "Crie seu próprio desafio",
+    "shareCode": "Compartilhar código",
+    "joinChallenge": "Entrar e Girar",
+    "back": "Voltar",
+    "sectionLabel": "Desafio Semanal",
+    "startPlaying": "Começar a Jogar",
+    "browseMore": "Explorar Blog",
+    "aramNote": "Em ARAM o campeão é sempre aleatório - basta entrar e jogar!",
+    "noChampions": "Nenhum desafio semanal disponível",
+    "sectionTitle": "Desafios",
+    "sectionDescription": "Ative desafios por tempo limitado para ganhar XP extra em vitórias",
+    "activate": "Ativar",
+    "activated": "Desafio ativado: {name}",
+    "activationFailed": "Erro ao ativar o desafio",
+    "hasActiveChallenge": "Você já tem um desafio ativo",
+    "loginRequired": "Faça login para ativar desafios",
+    "difficulty": {
+        "easy": "Fácil",
+        "medium": "Médio",
+        "hard": "Difícil"
+    },
+    "category": {
+        "mastery": "Maestria",
+        "region": "Região",
+        "class": "Classe"
+    },
+    "requirement": {
+        "lowMastery": "Jogue com um campeão com menos de {threshold} pontos de maestria",
+        "region": "Ganhe usando um campeão de {region}",
+        "class": "Ganhe usando um campeão da classe {class}"
+    },
+    "duration": "Duração",
+    "xpMultiplier": "Multiplicador XP",
+    "timeRemaining": "TEMPO RESTANTE",
+    "expiresAt": "Expira às {time}",
+    "validWins": "Vitórias Válidas",
+    "bonusXP": "XP Extra",
+    "totalXP": "XP Total",
+    "xpMultiplierActive": "Multiplicador XP Ativo:",
+    "onValidWins": "em vitórias válidas",
+    "challengeExpired": "Desafio Expirado",
+    "challengeExpiredDesc": "Este desafio expirou. Ative um novo para continuar ganhando XP extra.",
+    "history": "Histórico de Desafios",
+    "noHistory": "Sem histórico de desafios",
+    "noHistoryDesc": "Complete desafios para vê-los aqui",
+    "started": "Iniciado",
+    "ended": "Finalizado",
+    "wins": "vitórias",
+    "status": {
+        "completed": "Completado",
+        "expired": "Expirado",
+        "failed": "Falhou"
+    },
+    "result": {
+        "completed": "{wins} vitórias válidas • +{bonusXp} XP extra ganhos",
+        "expired": "Desafio expirou sem conclusão",
+        "failed": "Desafio falhou"
+    },
+    "dailyRegion": "Região do Dia",
+    "dailyRegionDesc": "Apenas este desafio de região está disponível hoje. Muda à meia-noite UTC.",
+    "weeklyChallenges": "Desafios Semanais",
+    "changesMonday": "Mudam na segunda",
+    "durationShort": "3h",
+    "developmentNoticeTitle": "Em desenvolvimento",
+    "developmentNoticeDescription": "Os desafios ainda estão em desenvolvimento. Algumas funcionalidades podem falhar ou não funcionar como esperado.",
+    "activeChallenge": "Desafio ativo",
+    "requirementLabel": "Requisito",
+    "categoryLabel": "Categoria",
+    "toastAnnouncement": "🎉 O novo sistema de desafios está no ar! Experimente o desafio diário de região + 3 desafios semanais. Mais atualizações em breve!"
 }

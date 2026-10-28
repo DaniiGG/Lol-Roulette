@@ -1,5 +1,8 @@
 import type { Metadata } from 'next'
+import { getPathname } from '@/i18n/navigation'
 import { routing } from '@/i18n/routing'
+import type { AppPathnames, Locale } from '@/i18n/routes'
+import { SITE_URL } from '@/lib/site'
 
 const OG_LOCALES: Record<string, string> = {
   en: 'en_US',
@@ -17,9 +20,12 @@ const OG_LOCALES: Record<string, string> = {
   pl: 'pl_PL',
 }
 
+type RouteParams = Record<string, string>
+
 type PageMetadataOptions = {
   locale: string
-  path: string
+  path: AppPathnames
+  params?: RouteParams
   title: string
   description: string
   keywords?: string[]
@@ -30,29 +36,58 @@ type PageMetadataOptions = {
 
 export const BLOG_LOCALES = ['en', 'es'] as const
 
-export function localizedPath(locale: string, path: string): string {
-  return locale === routing.defaultLocale ? path : `/${locale}${path}`
+function routeHref(path: AppPathnames, params?: RouteParams) {
+  return params ? { pathname: path, params } : { pathname: path }
 }
 
-export function buildLanguageAlternates(path: string, locales: readonly string[] = routing.locales) {
-  return Object.fromEntries(
-    locales.map((locale) => [locale, localizedPath(locale, path)])
-  ) as Record<string, string>
+/** Localized public path (without origin) for a route and locale. */
+export function localizedPath(
+  locale: string,
+  path: AppPathnames,
+  params?: RouteParams
+): string {
+  return getPathname({
+    locale: locale as Locale,
+    href: routeHref(path, params) as never,
+  })
+}
+
+/** Absolute, locale-aware URL for a route. */
+export function localizedAbsoluteUrl(
+  locale: string,
+  path: AppPathnames,
+  params?: RouteParams
+): string {
+  return `${SITE_URL}${localizedPath(locale, path, params)}`
+}
+
+export function buildLanguageAlternates(
+  path: AppPathnames,
+  locales: readonly string[] = routing.locales,
+  params?: RouteParams
+) {
+  const languages: Record<string, string> = {}
+  for (const locale of locales) {
+    languages[locale] = localizedAbsoluteUrl(locale, path, params)
+  }
+  return languages
 }
 
 export function buildPageMetadata({
   locale,
   path,
+  params,
   title,
   description,
   keywords,
   type = 'website',
   robots,
-  alternateLocales = routing.locales,
+  alternateLocales,
 }: PageMetadataOptions): Metadata {
-  const canonical = localizedPath(locale, path)
+  const canonical = localizedAbsoluteUrl(locale, path, params)
   const ogLocale = OG_LOCALES[locale] ?? OG_LOCALES.en
-  const alternateLocale = alternateLocales
+  const locales = alternateLocales ?? routing.locales
+  const alternateLocale = locales
     .filter((item) => item !== locale)
     .map((item) => OG_LOCALES[item])
     .filter(Boolean)
@@ -65,8 +100,8 @@ export function buildPageMetadata({
     alternates: {
       canonical,
       languages: {
-        ...buildLanguageAlternates(path, alternateLocales),
-        'x-default': localizedPath(routing.defaultLocale, path),
+        ...buildLanguageAlternates(path, locales, params),
+        'x-default': localizedAbsoluteUrl('en', path, params),
       },
     },
     openGraph: {

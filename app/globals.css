@@ -349,3 +349,128 @@ body::before {
     stroke-dashoffset: 0;
   }
 }
+
+/* Mastery tree explorer scene */
+@keyframes mt-edge-draw {
+  0% { opacity: 0; stroke-dashoffset: 1; }
+  20% { opacity: 1; }
+  100% { opacity: 1; stroke-dashoffset: 0; }
+}
+
+@keyframes mt-pulse {
+  0%, 100% { opacity: 0.42; transform: scale(0.985); }
+  50% { opacity: 1; transform: scale(1.025); }
+}
+
+@keyframes mt-glow {
+  0%, 100% { opacity: 0.55; }
+  50% { opacity: 1; }
+}
+
+.mt-node {
+  cursor: pointer;
+  outline: none;
+  transition: opacity 0.28s ease;
+}
+
+.mt-node-inner {
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), filter 0.28s ease;
+}
+
+.mt-node:hover .mt-node-inner,
+.mt-node:focus-visible .mt-node-inner {
+  transform: scale(1.075);
+  filter: brightness(1.12) drop-shadow(0 0 10px rgba(240, 199, 94, 0.34));
+}
+
+.mt-node:focus-visible .mt-node-inner {
+  filter: brightness(1.16) drop-shadow(0 0 14px rgba(240, 199, 94, 0.65));
+}
+
+.mt-node.is-dimmed {
+  opacity: 0.13;
+}
+
+.mt-node.is-dimmed:hover,
+.mt-node.is-dimmed:focus-visible {
+  opacity: 0.82;
+}
+
+.mt-node.is-match .mt-node-inner {
+  filter: drop-shadow(0 0 11px rgba(240, 199, 94, 0.5));
+}
+
+.mt-node-glow {
+  animation: mt-glow 3.4s ease-in-out infinite;
+}
+
+.mt-edge {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  opacity: 0;
+  animation: mt-edge-draw 1.15s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.mt-pulse {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: mt-pulse 2.6s ease-in-out infinite;
+}
+
+.mt-aura {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: tree-aura-spin 44s linear infinite;
+}
+
+.mt-guides {
+  transform-box: view-box;
+  transform-origin: center;
+  animation: tree-aura-spin 150s linear infinite;
+}
+
+.mt-stars {
+  transform-box: view-box;
+  transform-origin: center;
+  animation: tree-aura-spin 220s linear infinite reverse;
+}
+
+.mt-center-sigil {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.mt-scene {
+  cursor: grab;
+}
+
+.mt-scene:active {
+  cursor: grabbing;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mt-node,
+  .mt-node-inner,
+  .mt-edge,
+  .mt-pulse,
+  .mt-aura,
+  .mt-guides,
+  .mt-stars,
+  .mt-node-glow {
+    animation: none !important;
+    transition: none !important;
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+
+  .mt-node.is-dimmed {
+    opacity: 0.2;
+  }
+
+  .mt-edge {
+    stroke-dashoffset: 0;
+  }
+}

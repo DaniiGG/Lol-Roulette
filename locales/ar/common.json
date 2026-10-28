@@ -66,7 +66,9 @@
             "verify": "تحقق من المباراة"
         },
         "challengeActive": "تحدي نشط - اللغة مقفولة",
-        "lane": "المسار"
+        "lane": "المسار",
+        "editPool": "تعديل مجموعة الأبطال",
+        "usePool": "استخدام المجموعة"
     },
     "championCard": {
         "yourChampion": "بطلك",
@@ -163,7 +165,8 @@
         "faqModesQ": "What modes count?",
         "faqModesA": "Any matchmade game mode counts: Summoner's Rift (all queues), ARAM, and rotating game modes.",
         "gotIt": "Got it, let's play!",
-        "description": "وصف"
+        "description": "وصف",
+        "step3Desc": "بعد اللعب، سجّل الدخول بحساب Riot ID الخاص بك واضغط على «التحقق من المباراة» لتأكيد أنك لعبت بالبطل المعيّن."
     },
     "autoVerify": {
         "title": "التحقق التلقائي",
@@ -562,7 +565,8 @@
             "Win streak tracking",
             "Global leaderboard",
             "100% free to use",
-            "Mobile-friendly interface"
+            "Mobile-friendly interface",
+            "عجلة League of Legends متوافقة مع الهواتف"
         ],
         "whyTitle": "Why Use a Random Champion Generator?",
         "whyText": "Using a random LoL champion picker helps you:",
@@ -610,6 +614,7 @@
         "whatIs": "ما هو League Roulette؟"
     },
     "localeSwitcher": {
+        "unavailable": "غير متوفر بهذه اللغة",
         "label": "اللغة"
     },
     "mastery": {
@@ -674,7 +679,12 @@
             "support": "Support"
         },
         "title": "نسبة الفوز",
-        "winRate": "نسبة الفوز"
+        "winRate": "نسبة الفوز",
+        "mode": {
+            "all": "جميع الأوضاع",
+            "classic": "5v5 SR",
+            "aram": "ARAM"
+        }
     },
     "faqContent": [
         {
@@ -820,7 +830,9 @@
         "title": "مجموعة الأبطال",
         "desc": "اختر على الأقل 5 أبطال لكل خط",
         "minPerLane": "يجب 5 أبطال لكل خط",
-        "totalSelected": "المختارة: {count}"
+        "totalSelected": "المختارة: {count}",
+        "cancel": "إلغاء",
+        "save": "حفظ المجموعة"
     },
     "heroTitle1": "League Roulette",
     "heroTitle2": "التحدي العشوائي",

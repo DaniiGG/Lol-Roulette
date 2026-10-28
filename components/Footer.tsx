@@ -1,13 +1,14 @@
 'use client'
 
-import Link from 'next/link'
-import { Link as LocaleLink } from '@/i18n/navigation'
-import { useTranslations } from 'next-intl'
+import { Link } from '@/i18n/navigation'
+import { useLocale, useTranslations } from 'next-intl'
 
 export default function Footer() {
   const t = useTranslations('footer')
   const tNav = useTranslations('nav')
   const tQuiz = useTranslations('quiz')
+  const locale = useLocale()
+  const hasMasteryTree = locale === 'en' || locale === 'es'
   const year = new Date().getFullYear()
 
   return (
@@ -25,34 +26,41 @@ export default function Footer() {
             <h4 className="mb-4 text-sm font-semibold text-white">{t('quickLinks')}</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <LocaleLink href="/find-your-main" className="text-neutral-400 transition hover:text-white">
+                <Link href="/find-your-main" className="text-neutral-400 transition hover:text-white">
                   {tQuiz('navLabel')}
-                </LocaleLink>
+                </Link>
               </li>
+              {hasMasteryTree && (
+                <li>
+                  <Link href="/mastery-tree" className="text-neutral-400 transition hover:text-white">
+                    {tNav('masteryTree')}
+                  </Link>
+                </li>
+              )}
               <li>
                 <Link href="/blog" className="text-neutral-400 transition hover:text-white">
                   {tNav('blog')}
                 </Link>
               </li>
               <li>
-                <a href="/howtoplay" className="text-neutral-400 transition hover:text-white">
+                <Link href="/howtoplay" className="text-neutral-400 transition hover:text-white">
                   {tNav('howToPlay')}
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/about" className="text-neutral-400 transition hover:text-white">
+                <Link href="/about" className="text-neutral-400 transition hover:text-white">
                   {tNav('about')}
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/faq" className="text-neutral-400 transition hover:text-white">
+                <Link href="/faq" className="text-neutral-400 transition hover:text-white">
                   {tNav('faq')}
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/tips" className="text-neutral-400 transition hover:text-white">
+                <Link href="/tips" className="text-neutral-400 transition hover:text-white">
                   {tNav('tips')}
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -61,19 +69,19 @@ export default function Footer() {
             <h4 className="mb-4 text-sm font-semibold text-white">{t('legal')}</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="/contact" className="text-neutral-400 transition hover:text-white">
+                <Link href="/contact" className="text-neutral-400 transition hover:text-white">
                   {tNav('contact')}
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/privacy" className="text-neutral-400 transition hover:text-white">
+                <Link href="/privacy" className="text-neutral-400 transition hover:text-white">
                   {tNav('privacy')}
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/terms" className="text-neutral-400 transition hover:text-white">
+                <Link href="/terms" className="text-neutral-400 transition hover:text-white">
                   {tNav('terms')}
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

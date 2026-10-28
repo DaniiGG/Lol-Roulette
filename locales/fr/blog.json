@@ -61,5 +61,9 @@
             "name": "League Roulette",
             "desc": "Défis et picks aléatoires : transformer la roue en vraie progression."
         }
-    }
+    },
+    "browseTips": "Parcourir les conseils",
+    "filterByCategory": "Filtrer par catégorie",
+    "home": "Accueil",
+    "by": "Par"
 }

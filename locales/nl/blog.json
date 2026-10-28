@@ -61,5 +61,9 @@
             "name": "League Roulette",
             "desc": "Willekeurige-pick challenges: hoe je van de roulette echte groei maakt."
         }
-    }
+    },
+    "browseTips": "Tips bekijken",
+    "filterByCategory": "Filteren op categorie",
+    "home": "Home",
+    "by": "Door"
 }

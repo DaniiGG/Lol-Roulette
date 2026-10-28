@@ -1,116 +1,117 @@
 {
-  "weeklyChallenge": {
-    "title": "週次チャレンジ",
-    "subtitle": "今週のチャレンジを完了して名誉を得る",
-    "challenges": [
-      {
-        "id": "support-only",
-        "name": "サポートのみ",
-        "description": "今週3試合、サポートキャラのみでプレイ。キャリーは禁止！",
-        "emoji": "👩",
-        "deadline": "今週の日曜日",
-        "difficulty": "普通"
-      },
-      {
-        "id": "low-mastery",
-        "name": "低マスタリー",
-        "description": "10試合未満のキャラでプレイ。プールを広げよう！",
-        "emoji": "🎯",
-        "deadline": "今週の日曜日",
-        "difficulty": "難しい"
-      },
-      {
-        "id": "friends-roulette",
-        "name": "フレンズルーレット",
-        "description": "3人のフレンドとグループルーレットを挑戦。みんなで回してそれぞれの選択をプレイ！",
-        "emoji": "🎉",
-        "deadline": "今週の日曜日",
-        "difficulty": "簡単"
-      },
-      {
-        "id": "aram-only",
-        "name": "ARAMのみ",
-        "description": "今週Howling Abyssで5試合プレイ。チャンピオンは常にランダム！",
-        "emoji": "🏟️",
-        "deadline": "今週の日曜日",
-        "difficulty": "普通"
-      },
-      {
-        "id": "champion-rotation",
-        "name": "チャンピオンローテーション",
-        "description": "今週の無料チャンピオンすべてでプレイ。1つずつ！",
-        "emoji": "🔄",
-        "deadline": "今週の日曜日",
-        "difficulty": "難しい"
-      }
-    ]
-  },
-  "createChallenge": "独自のチャレンジを作成",
-  "shareCode": "コードを共有",
-  "joinChallenge": "参加して回す",
-  "back": "戻る",
-  "sectionLabel": "週次チャレンジ",
-  "startPlaying": "プレイ開始",
-  "browseMore": "ブログを閲覧",
-  "aramNote": "ARAMではチャンピオンは常にランダム - とりあえず入ってプレイしよう！",
-  "noChampions": "週次チャレンジがありません",
-
-  "sectionTitle": "チャレンジ",
-  "sectionDescription": "期間限定チャレンジを有効化して勝利でボーナスXPを獲得",
-  "activate": "有効化",
-  "activated": "チャレンジ有効化: {name}",
-  "activationFailed": "チャレンジの有効化に失敗",
-  "hasActiveChallenge": "アクティブなチャレンジが存在します",
-  "loginRequired": "ログインしてチャレンジを有効化",
-  "difficulty": {
-    "easy": "簡単",
-    "medium": "普通",
-    "hard": "難しい"
-  },
-  "category": {
-    "mastery": "マスタリー",
-    "region": "地域",
-    "class": "クラス"
-  },
-  "requirement": {
-    "lowMastery": "{threshold}マスタリーポイント未満のチャンピオンでプレイ",
-    "region": "{region}のチャンピオンで勝利",
-    "class": "{class}チャンピオンで勝利"
-  },
-  "duration": "期間",
-  "xpMultiplier": "XP倍率",
-  "timeRemaining": "残り時間",
-  "expiresAt": "{time}に期限切れ",
-  "validWins": "有効な勝利",
-  "bonusXP": "ボーナスXP",
-  "totalXP": "合計XP",
-  "xpMultiplierActive": "XP倍率アクティブ:",
-  "onValidWins": "有効な勝利で",
-  "challengeExpired": "チャレンジ期限切れ",
-  "challengeExpiredDesc": "このチャレンジは期限切れです。新しいチャレンジを開始してボーナスXPを継続獲得。",
-  "history": "チャレンジ履歴",
-  "noHistory": "チャレンジ履歴なし",
-  "noHistoryDesc": "チャレンジを完了してここに表示",
-  "started": "開始",
-  "ended": "終了",
-  "wins": "勝利",
-  "status": {
-    "completed": "完了",
-    "expired": "期限切れ",
-    "failed": "失敗"
-  },
-  "result": {
-    "completed": "{wins}有効な勝利 • +{bonusXp}ボーナスXP獲得",
-    "expired": "未完了でチャレンジ期限切れ",
-    "failed": "チャレンジ失敗"
-  },
-  "dailyRegion": "今日の地域",
-  "dailyRegionDesc": "この地域のチャレンジのみ今日利用可能。UTC深夜に変更。",
-  "weeklyChallenges": "週間チャレンジ",
-  "changesMonday": "月曜日に変更",
-  "durationShort": "3h",
-  "developmentNoticeTitle": "開発中",
-  "developmentNoticeDescription": "チャレンジは現在開発中です。一部の機能でエラーが発生したり、予期しない動作をしたりする場合があります。",
-  "activeChallenge": "進行中のチャレンジ",
-  "requirementLabel": "条件"
+    "weeklyChallenge": {
+        "title": "週次チャレンジ",
+        "subtitle": "今週のチャレンジを完了して名誉を得る",
+        "challenges": [
+            {
+                "id": "support-only",
+                "name": "サポートのみ",
+                "description": "今週3試合、サポートキャラのみでプレイ。キャリーは禁止！",
+                "emoji": "👩",
+                "deadline": "今週の日曜日",
+                "difficulty": "普通"
+            },
+            {
+                "id": "low-mastery",
+                "name": "低マスタリー",
+                "description": "10試合未満のキャラでプレイ。プールを広げよう！",
+                "emoji": "🎯",
+                "deadline": "今週の日曜日",
+                "difficulty": "難しい"
+            },
+            {
+                "id": "friends-roulette",
+                "name": "フレンズルーレット",
+                "description": "3人のフレンドとグループルーレットを挑戦。みんなで回してそれぞれの選択をプレイ！",
+                "emoji": "🎉",
+                "deadline": "今週の日曜日",
+                "difficulty": "簡単"
+            },
+            {
+                "id": "aram-only",
+                "name": "ARAMのみ",
+                "description": "今週Howling Abyssで5試合プレイ。チャンピオンは常にランダム！",
+                "emoji": "🏟️",
+                "deadline": "今週の日曜日",
+                "difficulty": "普通"
+            },
+            {
+                "id": "champion-rotation",
+                "name": "チャンピオンローテーション",
+                "description": "今週の無料チャンピオンすべてでプレイ。1つずつ！",
+                "emoji": "🔄",
+                "deadline": "今週の日曜日",
+                "difficulty": "難しい"
+            }
+        ]
+    },
+    "createChallenge": "独自のチャレンジを作成",
+    "shareCode": "コードを共有",
+    "joinChallenge": "参加して回す",
+    "back": "戻る",
+    "sectionLabel": "週次チャレンジ",
+    "startPlaying": "プレイ開始",
+    "browseMore": "ブログを閲覧",
+    "aramNote": "ARAMではチャンピオンは常にランダム - とりあえず入ってプレイしよう！",
+    "noChampions": "週次チャレンジがありません",
+    "sectionTitle": "チャレンジ",
+    "sectionDescription": "期間限定チャレンジを有効化して勝利でボーナスXPを獲得",
+    "activate": "有効化",
+    "activated": "チャレンジ有効化: {name}",
+    "activationFailed": "チャレンジの有効化に失敗",
+    "hasActiveChallenge": "アクティブなチャレンジが存在します",
+    "loginRequired": "ログインしてチャレンジを有効化",
+    "difficulty": {
+        "easy": "簡単",
+        "medium": "普通",
+        "hard": "難しい"
+    },
+    "category": {
+        "mastery": "マスタリー",
+        "region": "地域",
+        "class": "クラス"
+    },
+    "requirement": {
+        "lowMastery": "{threshold}マスタリーポイント未満のチャンピオンでプレイ",
+        "region": "{region}のチャンピオンで勝利",
+        "class": "{class}チャンピオンで勝利"
+    },
+    "duration": "期間",
+    "xpMultiplier": "XP倍率",
+    "timeRemaining": "残り時間",
+    "expiresAt": "{time}に期限切れ",
+    "validWins": "有効な勝利",
+    "bonusXP": "ボーナスXP",
+    "totalXP": "合計XP",
+    "xpMultiplierActive": "XP倍率アクティブ:",
+    "onValidWins": "有効な勝利で",
+    "challengeExpired": "チャレンジ期限切れ",
+    "challengeExpiredDesc": "このチャレンジは期限切れです。新しいチャレンジを開始してボーナスXPを継続獲得。",
+    "history": "チャレンジ履歴",
+    "noHistory": "チャレンジ履歴なし",
+    "noHistoryDesc": "チャレンジを完了してここに表示",
+    "started": "開始",
+    "ended": "終了",
+    "wins": "勝利",
+    "status": {
+        "completed": "完了",
+        "expired": "期限切れ",
+        "failed": "失敗"
+    },
+    "result": {
+        "completed": "{wins}有効な勝利 • +{bonusXp}ボーナスXP獲得",
+        "expired": "未完了でチャレンジ期限切れ",
+        "failed": "チャレンジ失敗"
+    },
+    "dailyRegion": "今日の地域",
+    "dailyRegionDesc": "この地域のチャレンジのみ今日利用可能。UTC深夜に変更。",
+    "weeklyChallenges": "週間チャレンジ",
+    "changesMonday": "月曜日に変更",
+    "durationShort": "3h",
+    "developmentNoticeTitle": "開発中",
+    "developmentNoticeDescription": "チャレンジは現在開発中です。一部の機能でエラーが発生したり、予期しない動作をしたりする場合があります。",
+    "activeChallenge": "進行中のチャレンジ",
+    "requirementLabel": "条件",
+    "categoryLabel": "カテゴリ",
+    "toastAnnouncement": "🎉 新しいチャレンジシステムが登場！デイリーワールド + ウィークリー3種のチャレンジを試そう。さらなるアップデートも近日公開！"
 }

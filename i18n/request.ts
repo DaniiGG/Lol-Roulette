@@ -3,7 +3,7 @@ import {routing} from './routing';
 
 async function loadMessages(locale: string) {
   const common = (await import(`../locales/${locale}/common.json`)).default;
-  const extraFiles = ['challenges', 'tierlist', 'modes', 'popular', 'champion-guides', 'blog', 'blog-content', 'patch-tier-list', 'quiz', 'page-seo'];
+  const extraFiles = ['challenges', 'tierlist', 'modes', 'popular', 'champion-guides', 'champion-guide-content', 'guide-ui', 'blog', 'blog-content', 'patch-tier-list', 'quiz', 'page-seo'];
   const extra: Record<string, unknown> = {};
   for (const file of extraFiles) {
     try {
@@ -14,7 +14,18 @@ async function loadMessages(locale: string) {
       } catch {}
     }
   }
-  return { ...common, ...extra };
+
+  // The mastery-tree file is already namespaced, so it is merged at the root.
+  let masteryTree: Record<string, unknown> = {};
+  try {
+    masteryTree = (await import(`../locales/${locale}/mastery-tree.json`)).default;
+  } catch {
+    try {
+      masteryTree = (await import('../locales/en/mastery-tree.json')).default;
+    } catch {}
+  }
+
+  return { ...common, ...extra, ...masteryTree };
 }
 
 export default getRequestConfig(async ({requestLocale}) => {

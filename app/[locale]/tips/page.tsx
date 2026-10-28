@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { buildPageMetadata } from '@/lib/seo/page-metadata'
 import Breadcrumbs from '@/components/Breadcrumbs'
+import { Link } from '@/i18n/navigation'
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
@@ -158,8 +159,8 @@ export default async function TipsPage() {
             <h2 className="text-3xl font-bold text-white mb-4">{t('ctaTitle')}</h2>
             <p className="text-neutral-300 text-lg mb-6">{c['finalText']}</p>
             <div className="flex gap-4 justify-center flex-wrap">
-              <a href="/" className="px-8 py-4 rounded-xl bg-[#C89B3C] text-neutral-950 font-bold hover:bg-[#d9aa44] transition text-lg">{t('ctaPlay')}</a>
-              <a href="/howtoplay" className="px-8 py-4 rounded-xl bg-neutral-800 text-white font-bold hover:bg-neutral-700 transition text-lg">{t('ctaBasics')}</a>
+              <Link href="/" className="px-8 py-4 rounded-xl bg-[#C89B3C] text-neutral-950 font-bold hover:bg-[#d9aa44] transition text-lg">{t('ctaPlay')}</Link>
+              <Link href="/howtoplay" className="px-8 py-4 rounded-xl bg-neutral-800 text-white font-bold hover:bg-neutral-700 transition text-lg">{t('ctaBasics')}</Link>
             </div>
           </section>
 

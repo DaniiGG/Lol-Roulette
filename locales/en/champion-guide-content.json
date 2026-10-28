@@ -1,0 +1,3881 @@
+{
+  "patch": "26.21",
+  "updatedAt": "2026-10-28",
+  "champions": {
+    "katarina": {
+      "slug": "katarina",
+      "name": "Katarina",
+      "title": "the Sinister Blade",
+      "role": "mid",
+      "roleLabel": "Mid",
+      "difficulty": "high",
+      "difficultyLabel": "High",
+      "tagline": "A dagger-first assassin who wins by choosing the right moment, not the fastest one.",
+      "metaTitle": "How to Play Katarina in LoL: Combos, Build & Tips (Patch 26.21)",
+      "metaDescription": "Learn how to play Katarina in League of Legends with patch 26.21 runes, builds, skill order, dagger combos, laning tips and teamfight advice.",
+      "h1": "How to Play Katarina in League of Legends",
+      "heroIntro": [
+        "Katarina is a high-mobility mid-lane assassin whose damage comes from daggers, resets and clean execution. She has no mana, so her limits are cooldowns, positioning and crowd control.",
+        "This guide covers her patch 26.21 builds, the level-by-level skill order, practical dagger combos, lane and teamfight decisions, and the matchups that punish careless entries. It is written for ranked Summoner's Rift and is based on Data Dragon 16.21.1 plus current U.GG and Lolalytics samples."
+      ],
+      "quickAnswer": "Max Q first, then E, then W. Take Electrocute with Sudden Impact and Precision secondaries, start Dark Seal or Doran's Ring, and build Lich Bane into Shadowflame for burst. Play around dagger pickups and wait for enemy crowd control before committing. Katarina is strong on patch 26.21, but her win rate comes from patience and target selection, not from forcing every fight.",
+      "quickStart": {
+        "role": "Mid lane",
+        "secondaryRoles": "Top lane or support off-role",
+        "difficulty": "High",
+        "playstyle": "Mobile burst assassin and cleanup",
+        "keyMechanic": "Dagger pickups reset Shunpo and trigger area damage",
+        "beginnerMistake": "Using E to engage with no exit route or without tracking enemy crowd control",
+        "winCondition": "Force a side-lane pick or a chaotic fight, then chain resets onto isolated carries"
+      },
+      "abilities": [
+        {
+          "key": "P",
+          "name": "Voracity",
+          "icon": "Katarina_Passive.png",
+          "description": "Katarina's takedowns dramatically reduce her remaining cooldowns. Picking up a dagger slashes nearby enemies for magic damage.",
+          "tips": [
+            "Track the landing spot before you commit.",
+            "Pick up daggers that also hit a champion.",
+            "A reset is not a safety guarantee."
+          ],
+          "mistake": "Chasing a kill without checking where the dagger lands or who can punish the approach."
+        },
+        {
+          "key": "Q",
+          "name": "Bouncing Blade",
+          "icon": "KatarinaQ.png",
+          "description": "Katarina throws a dagger that bounces to nearby enemies and lands on the ground.",
+          "tips": [
+            "Use Q to farm and create a future dagger.",
+            "Watch the final landing position, not just the first hit.",
+            "Bouncing through a wave can push the dagger closer to your target."
+          ],
+          "mistake": "Treating Q as pure poke and ignoring the dagger it leaves behind."
+        },
+        {
+          "key": "W",
+          "name": "Preparation",
+          "icon": "KatarinaW.png",
+          "description": "Katarina gains movement speed and leaves a dagger above herself that falls after a short delay.",
+          "tips": [
+            "Use the speed to dodge or reach a dagger.",
+            "Place W before you go in so the dagger covers your exit.",
+            "The dagger is a reset tool, not just a speed button."
+          ],
+          "mistake": "Using W only for movement speed and never collecting the dagger."
+        },
+        {
+          "key": "E",
+          "name": "Shunpo",
+          "icon": "KatarinaEWrapper.png",
+          "description": "Katarina blinks to a target, damaging it if it is an enemy, or the nearest enemy otherwise. Dagger pickups reduce its cooldown.",
+          "tips": [
+            "Keep one jump available for escape.",
+            "Use enemy minions, allies and daggers as repositioning tools.",
+            "E to a dagger when the slash improves the trade."
+          ],
+          "mistake": "Spending E as the first and only mobility option into a fight."
+        },
+        {
+          "key": "R",
+          "name": "Death Lotus",
+          "icon": "KatarinaR.png",
+          "description": "Katarina channels a storm of blades, damaging the three nearest enemy champions.",
+          "tips": [
+            "Wait for interrupts to be used.",
+            "Position so the blades hit valuable targets.",
+            "Cancel early if the channel is about to be punished."
+          ],
+          "mistake": "Channeling into a team that still has reliable stuns or knockups."
+        }
+      ],
+      "skillOrder": {
+        "priority": "Q > E > W",
+        "start": "Q → E → W",
+        "levels": [
+          {
+            "level": 1,
+            "ability": "Q"
+          },
+          {
+            "level": 2,
+            "ability": "E"
+          },
+          {
+            "level": 3,
+            "ability": "W"
+          },
+          {
+            "level": 4,
+            "ability": "Q"
+          },
+          {
+            "level": 5,
+            "ability": "Q"
+          },
+          {
+            "level": 6,
+            "ability": "R"
+          },
+          {
+            "level": 7,
+            "ability": "Q"
+          },
+          {
+            "level": 8,
+            "ability": "E"
+          },
+          {
+            "level": 9,
+            "ability": "Q"
+          },
+          {
+            "level": 10,
+            "ability": "E"
+          },
+          {
+            "level": 11,
+            "ability": "R"
+          },
+          {
+            "level": 12,
+            "ability": "E"
+          },
+          {
+            "level": 13,
+            "ability": "E"
+          },
+          {
+            "level": 14,
+            "ability": "W"
+          },
+          {
+            "level": 15,
+            "ability": "W"
+          },
+          {
+            "level": 16,
+            "ability": "R"
+          },
+          {
+            "level": 17,
+            "ability": "W"
+          },
+          {
+            "level": 18,
+            "ability": "W"
+          }
+        ],
+        "explanation": [
+          "Q is the safest way to farm, poke and set up daggers, so it is maxed first.",
+          "E ranks lower its cooldown and improve how often you can reposition around daggers.",
+          "W is maxed last because the movement-speed duration and cooldown matter less than the Q and E breakpoints."
+        ],
+        "note": "This is the most common path on patch 26.21 in the U.GG and Lolalytics samples. In hard lanes, some players delay E for extra W safety; that is a matchup adjustment, not the default."
+      },
+      "runes": {
+        "title": "Electrocute burst",
+        "summary": "Electrocute is the default keystone on patch 26.21. It gives Katarina a reliable burst window on short trades and helps her finish targets before they can answer. Precision secondary adds sustained damage and takedown value.",
+        "primaryTree": {
+          "name": "Domination",
+          "icon": "perk-images/Styles/7200_Domination.png"
+        },
+        "secondaryTree": {
+          "name": "Precision",
+          "icon": "perk-images/Styles/7201_Precision.png"
+        },
+        "keystone": {
+          "id": 8112,
+          "name": "Electrocute",
+          "icon": "perk-images/Styles/Domination/Electrocute/Electrocute.png",
+          "why": "Best default for Q-E trades and assassination patterns."
+        },
+        "primaryRunes": [
+          {
+            "id": 8143,
+            "name": "Sudden Impact",
+            "icon": "perk-images/Styles/Domination/SuddenImpact/SuddenImpact.png",
+            "why": "Bonus penetration after Shunpo makes every short trade hit harder."
+          },
+          {
+            "id": 8137,
+            "name": "Sixth Sense",
+            "icon": "perk-images/Styles/Domination/SixthSense/SixthSense.png",
+            "why": "Free ward detection that helps you control river vision."
+          },
+          {
+            "id": 8106,
+            "name": "Ultimate Hunter",
+            "icon": "perk-images/Styles/Domination/UltimateHunter/UltimateHunter.png",
+            "why": "More Death Lotus casts in a snowballing game."
+          }
+        ],
+        "secondaryRunes": [
+          {
+            "id": 9111,
+            "name": "Triumph",
+            "icon": "perk-images/Styles/Precision/Triumph.png",
+            "why": "Takedown healing and gold help Katarina keep chaining fights."
+          },
+          {
+            "id": 8014,
+            "name": "Coup de Grace",
+            "icon": "perk-images/Styles/Precision/CoupDeGrace/CoupDeGrace.png",
+            "why": "Extra damage to low-health targets improves reset chains."
+          }
+        ],
+        "alternatives": [
+          "Dark Harvest for scaling cleanup",
+          "Hail of Blades for early auto trades and on-hit builds",
+          "Last Stand or Cut Down instead of Coup de Grace",
+          "Taste of Blood or Cheap Shot instead of Sudden Impact"
+        ],
+        "notes": [
+          "Rune choices vary by lobby. The page above is a common patch 26.21 setup, not the only correct page.",
+          "If you are learning Katarina, Electrocute is more forgiving than Dark Harvest because it does not require stacks.",
+          "Into heavy poke, Taste of Blood can replace Sudden Impact for lane sustain."
+        ]
+      },
+      "summonerSpells": [
+        {
+          "name": "Flash",
+          "icon": "SummonerFlash.png",
+          "why": "The default escape and engage tool. E alone is not enough to enter and leave safely.",
+          "alternative": "Always take Flash."
+        },
+        {
+          "name": "Ignite",
+          "icon": "SummonerDot.png",
+          "why": "Adds kill pressure in lane and helps finish low-health targets before they heal or escape.",
+          "alternative": "Teleport is a safer option in lanes where you cannot trade early."
+        }
+      ],
+      "builds": [
+        {
+          "id": "ap-burst",
+          "label": "AP burst",
+          "badge": "U.GG recommended",
+          "summary": "The default Katarina build trades sustained damage for fast, reliable burst. Lich Bane is the key spike; Shadowflame amplifies the follow-up.",
+          "starting": {
+            "label": "Starting items",
+            "items": [
+              {
+                "id": "1082",
+                "name": "Dark Seal",
+                "icon": "1082.png",
+                "why": "Snowball start with potions. Stacks matter if you get early takedowns."
+              },
+              {
+                "id": "2003",
+                "name": "Health Potion",
+                "icon": "2003.png",
+                "why": "Sustain for the first waves."
+              }
+            ],
+            "note": "Doran's Ring plus two Health Potions is the safer alternative if you cannot protect Dark Seal stacks."
+          },
+          "core": {
+            "label": "Core items",
+            "items": [
+              {
+                "id": "3100",
+                "name": "Lich Bane",
+                "icon": "3100.png",
+                "why": "Spellblade damage and movement speed make every E-empowered attack hit harder."
+              },
+              {
+                "id": "4645",
+                "name": "Shadowflame",
+                "icon": "4645.png",
+                "why": "Magic penetration and bonus damage against low-health targets."
+              }
+            ]
+          },
+          "boots": {
+            "label": "Boots",
+            "items": [
+              {
+                "id": "3020",
+                "name": "Sorcerer's Shoes",
+                "icon": "3020.png",
+                "why": "The default AP boots for magic penetration."
+              },
+              {
+                "id": "3175",
+                "name": "Spellslinger's Shoes",
+                "icon": "3175.png",
+                "why": "The upgraded quest reward; take it when the game gives you the free upgrade."
+              },
+              {
+                "id": "3111",
+                "name": "Mercury's Treads",
+                "icon": "3111.png",
+                "why": "Tenacity and magic resist against heavy crowd control."
+              },
+              {
+                "id": "3047",
+                "name": "Plated Steelcaps",
+                "icon": "3047.png",
+                "why": "Armor against auto-attack-heavy teams."
+              }
+            ]
+          },
+          "situational": {
+            "label": "Situational items",
+            "items": [
+              {
+                "id": "3157",
+                "name": "Zhonya's Hourglass",
+                "icon": "3157.png",
+                "why": "Survive a dive or an assassin burst and wait for your cooldowns."
+              },
+              {
+                "id": "3089",
+                "name": "Rabadon's Deathcap",
+                "icon": "3089.png",
+                "why": "The biggest raw AP multiplier when you are safely ahead."
+              },
+              {
+                "id": "3135",
+                "name": "Void Staff",
+                "icon": "3135.png",
+                "why": "Magic penetration against stacked magic resist."
+              },
+              {
+                "id": "3102",
+                "name": "Banshee's Veil",
+                "icon": "3102.png",
+                "why": "A spell shield against a single key engage or stun."
+              },
+              {
+                "id": "3041",
+                "name": "Mejai's Soulstealer",
+                "icon": "3041.png",
+                "why": "High-risk snowball upgrade from Dark Seal."
+              },
+              {
+                "id": "3165",
+                "name": "Morellonomicon",
+                "icon": "3165.png",
+                "why": "Grievous Wounds against heavy healing."
+              }
+            ]
+          },
+          "notes": [
+            "Lich Bane first is the standard patch 26.21 spike. Do not delay it for a defensive item unless you are being camped.",
+            "Sell Dark Seal only if you need the slot; Mejai's is a high-risk upgrade.",
+            "If the enemy stacks magic resist, Void Staff is usually better than a second raw AP item."
+          ]
+        },
+        {
+          "id": "ad-on-hit",
+          "label": "AD and on-hit",
+          "badge": "Lolalytics most common core",
+          "summary": "A sustained-damage Katarina build that trades burst for attack speed, on-hit damage and better extended fights. It is less forgiving because you spend more time in auto-attack range.",
+          "starting": {
+            "label": "Starting items",
+            "items": [
+              {
+                "id": "1082",
+                "name": "Dark Seal",
+                "icon": "1082.png",
+                "why": "Keeps the snowball and resale value while you build attack speed."
+              },
+              {
+                "id": "2003",
+                "name": "Health Potion",
+                "icon": "2003.png",
+                "why": "Sustain for the first waves."
+              }
+            ],
+            "note": "Doran's Blade is an option for early auto trades, but Dark Seal is the most common start in the Lolalytics sample."
+          },
+          "core": {
+            "label": "Core items",
+            "items": [
+              {
+                "id": "6672",
+                "name": "Kraken Slayer",
+                "icon": "6672.png",
+                "why": "On-hit damage and attack speed turn Katarina into a sustained duelist."
+              },
+              {
+                "id": "3008",
+                "name": "Gluttonous Greaves",
+                "icon": "3008.png",
+                "why": "Omnivamp and movement speed for extended fights."
+              },
+              {
+                "id": "3302",
+                "name": "Terminus",
+                "icon": "3302.png",
+                "why": "Alternating resistances and penetration make later fights much stronger."
+              }
+            ]
+          },
+          "situational": {
+            "label": "Situational items",
+            "items": [
+              {
+                "id": "3041",
+                "name": "Mejai's Soulstealer",
+                "icon": "3041.png",
+                "why": "Snowball option when you are stacking Dark Seal safely."
+              },
+              {
+                "id": "4645",
+                "name": "Shadowflame",
+                "icon": "4645.png",
+                "why": "Adds burst to an otherwise sustained damage pattern."
+              },
+              {
+                "id": "6333",
+                "name": "Death's Dance",
+                "icon": "6333.png",
+                "why": "Mitigates physical burst and heals off takedowns."
+              },
+              {
+                "id": "3157",
+                "name": "Zhonya's Hourglass",
+                "icon": "3157.png",
+                "why": "Buys time against a dive or a delayed burst combo."
+              },
+              {
+                "id": "3089",
+                "name": "Rabadon's Deathcap",
+                "icon": "3089.png",
+                "why": "A late-game option if your daggers are doing most of the work."
+              }
+            ]
+          },
+          "notes": [
+            "This is the most common core in the Lolalytics patch 26.21 sample, while U.GG's recommended tab still favors AP burst. Both are valid; pick one and practice its damage pattern.",
+            "Do not mix AP and on-hit items without a clear reason.",
+            "On-hit Katarina is stronger in front-to-back fights and weaker at one-shotting a carry through shields."
+          ]
+        }
+      ],
+      "combos": [
+        {
+          "name": "Safe lane trade",
+          "sequence": [
+            {
+              "key": "Q",
+              "label": "Q"
+            },
+            {
+              "key": "E",
+              "label": "E"
+            },
+            {
+              "key": "W",
+              "label": "W"
+            },
+            {
+              "key": "AA",
+              "label": "Auto"
+            },
+            {
+              "key": "E",
+              "label": "E out"
+            }
+          ],
+          "situation": "A short lane trade or a safe poke window.",
+          "execution": "Throw Q so the dagger lands behind the target, E to the dagger or the champion, W for speed and a second dagger, auto once, then E to the W dagger or an ally minion to leave.",
+          "mistake": "Holding E until after you are already stunned.",
+          "warning": "Do not use this into a mage with a ready point-and-click stun."
+        },
+        {
+          "name": "Two-dagger all-in",
+          "sequence": [
+            {
+              "key": "Q",
+              "label": "Q"
+            },
+            {
+              "key": "W",
+              "label": "W"
+            },
+            {
+              "key": "E",
+              "label": "E"
+            },
+            {
+              "key": "R",
+              "label": "R"
+            }
+          ],
+          "situation": "An all-in after the enemy has spent their main crowd control.",
+          "execution": "Place Q and W daggers, E onto the target, start R immediately, then collect daggers after the channel if the fight continues.",
+          "mistake": "Channeling R before the enemy's stun or knockup is used.",
+          "warning": "If the enemy can interrupt you, skip R and keep the daggers for a reset."
+        },
+        {
+          "name": "Cleanup entry",
+          "sequence": [
+            {
+              "key": "E",
+              "label": "E"
+            },
+            {
+              "key": "Q",
+              "label": "Q"
+            },
+            {
+              "key": "W",
+              "label": "W"
+            },
+            {
+              "key": "R",
+              "label": "R"
+            }
+          ],
+          "situation": "Cleaning up a fight when a low-health target is isolated.",
+          "execution": "E to the target, Q immediately, W for speed and a dagger, then R. Use dagger pickups to reset E for the next target.",
+          "mistake": "Tunnel-visioning on the first kill and forgetting the next exit."
+        },
+        {
+          "name": "Teamfight reset chain",
+          "sequence": [
+            {
+              "key": "Wait",
+              "label": "Wait for CC"
+            },
+            {
+              "key": "E",
+              "label": "Enter"
+            },
+            {
+              "key": "Q",
+              "label": "Damage"
+            },
+            {
+              "key": "Dagger",
+              "label": "Pick up"
+            },
+            {
+              "key": "E",
+              "label": "Reset"
+            }
+          ],
+          "situation": "Mid-game teamfights after the first crowd-control spells are used.",
+          "execution": "Enter from a flank, damage the closest priority target, pick up a dagger, then decide whether to continue or leave. Reset chains are a decision loop, not a fixed sequence.",
+          "mistake": "Jumping in just because a takedown happened.",
+          "warning": "A reset does not cleanse crowd control or make you invulnerable."
+        }
+      ],
+      "sections": [
+        {
+          "id": "lane-phase",
+          "heading": "Laning phase: survive, farm, then move",
+          "paragraphs": [
+            "Katarina's first three levels are about preserving health and setting up daggers, not forcing trades. Use Q to last-hit and bounce damage through the wave, and keep E for dodging or escaping. If the enemy walks past their minions, a Q-E-W trade can be worth it, but only when their key cooldown is down.",
+            "Against ranged mages, let the wave push toward you and farm with Q. Do not stand on top of your own dagger if the enemy can punish the pickup. When you have level 6 and Ignite, look for a kill window after the enemy uses their defensive spell or misses a key skillshot.",
+            "Roam when the wave is pushed and your lane opponent cannot follow quickly. Katarina's W movement speed and E make river fights dangerous for the enemy, but a failed roam costs you a full wave and tempo."
+          ],
+          "bullets": [
+            "Keep the river brush warded before you push.",
+            "Do not E to a dagger if it puts you under the enemy tower.",
+            "Respect level 2 jungle ganks; Katarina has no natural escape without E."
+          ]
+        },
+        {
+          "id": "mid-game",
+          "heading": "Mid game: create the first pick",
+          "paragraphs": [
+            "Katarina does not need to start fights. She wants the enemy to start one, or she wants to catch a carry rotating alone. Push a side wave, disappear from vision and hover near the river. The threat of your absence is often more valuable than a low-percentage dive.",
+            "When a fight starts, wait for the first wave of crowd control. Then enter from the side, target the lowest-risk high-value champion and keep track of your E cooldown. If no reset is available, leave before the enemy collapses."
+          ],
+          "bullets": [
+            "Play around vision, not just damage.",
+            "Take one kill and reassess before chasing the second.",
+            "Buy control wards when you are ahead; Katarina's flanks need vision."
+          ]
+        },
+        {
+          "id": "teamfights",
+          "heading": "Teamfights: patience beats speed",
+          "paragraphs": [
+            "The most common Katarina mistake is entering first. Her damage is high, but she is still a melee champion with no built-in crowd-control immunity. Let the enemy use their stuns, knockups and exhausts on your frontline or on the first engage.",
+            "Look for a flank angle that lets you reach the backline without walking through the enemy tank. Use Q and W to create daggers before you commit, and hold R until the enemy's interrupts are gone. If the fight is lost, use E to leave rather than chasing a highlight."
+          ],
+          "bullets": [
+            "Track the enemy support's crowd control and the mid laner's stun.",
+            "Do not R into a target that can walk behind their frontline.",
+            "A dagger pickup that saves your life is worth more than one that deals extra damage."
+          ]
+        }
+      ],
+      "matchups": {
+        "note": "Win rates below are from the U.GG and Lolalytics patch 26.21 Emerald+ mid-lane samples. They are statistical signals, not guarantees; player skill and jungle attention matter more than the number alone.",
+        "difficult": [
+          {
+            "name": "Vladimir",
+            "icon": "Vladimir.png",
+            "winRate": "45.6%",
+            "games": "1,930",
+            "advice": "Vladimir outsustains your early trades and can dodge your burst with Sanguine Pool. Punish him before he gets items, but do not chase him through his pool. Roam instead of forcing a lane kill."
+          },
+          {
+            "name": "Annie",
+            "icon": "Annie.png",
+            "winRate": "46.7%",
+            "games": "954",
+            "advice": "Annie's point-and-click stun is a direct answer to your E. Track her stun stacks, bait the stun with a short trade, and only all-in when it is down."
+          },
+          {
+            "name": "Vex",
+            "icon": "Vex.png",
+            "winRate": "46.8%",
+            "games": "1,354",
+            "advice": "Vex punishes dashes and long trades. Stay outside her fear range, farm with Q, and look for roams rather than dueling her in the wave."
+          },
+          {
+            "name": "Kassadin",
+            "icon": "Kassadin.png",
+            "winRate": "47.1%",
+            "games": "1,522",
+            "advice": "Kassadin scales and can escape your burst. Pressure him before level 6, then avoid wasting R on his Riftwalk. Ask for jungle help to close the game early."
+          }
+        ],
+        "favorable": [
+          {
+            "name": "Taliyah",
+            "icon": "Taliyah.png",
+            "advice": "Taliyah is immobile once her worked ground is gone. Dodge her Q and E, then trade with Q-E-W when her knockup is down."
+          },
+          {
+            "name": "Syndra",
+            "icon": "Syndra.png",
+            "advice": "Syndra is vulnerable after she uses Scatter the Weak. Bait the stun, dodge the sphere, and all-in before her next rotation."
+          },
+          {
+            "name": "Zoe",
+            "icon": "Zoe.png",
+            "advice": "Zoe relies on hitting Sleepy Trouble Bubble. Keep minions between you and her, dodge the paddle star, and punish her when she steps forward."
+          }
+        ]
+      },
+      "mistakes": [
+        "Entering before the enemy's crowd control is used.",
+        "Treating E as a free engage instead of keeping an exit.",
+        "Ignoring where daggers land.",
+        "Forcing R into a channel interrupt.",
+        "Chasing a second kill after the fight is already lost.",
+        "Copying an AD or on-hit build without practicing the auto-attack spacing."
+      ],
+      "practicePlan": [
+        {
+          "title": "Dagger landing drill",
+          "steps": [
+            "In the practice tool, cast Q and W at different angles.",
+            "Walk to each dagger and call out whether picking it up is safe.",
+            "Repeat until you can predict the landing spot without watching the ground."
+          ]
+        },
+        {
+          "title": "Reset chain drill",
+          "steps": [
+            "Set up two target dummies and lower their health.",
+            "Kill one, pick up a dagger, then immediately decide whether to E to the second target or leave.",
+            "Do not chain blindly; say the exit route out loud."
+          ]
+        },
+        {
+          "title": "Teamfight review",
+          "steps": [
+            "Watch one replay per session.",
+            "Pause at every death and identify which enemy cooldown was available.",
+            "Write down one rule for the next game, such as 'wait for Annie stun'."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "Is Katarina hard to learn?",
+          "a": "Yes. Her difficulty is high because her damage depends on dagger placement, cooldown resets and fight timing. The mechanics are learnable, but the decision-making takes reps."
+        },
+        {
+          "q": "What is Katarina's best build in patch 26.21?",
+          "a": "There is no single best build. AP burst with Lich Bane is the recommended default; the AD and on-hit core with Kraken Slayer, Gluttonous Greaves and Terminus is the most common Lolalytics path. Choose based on the game and your practice."
+        },
+        {
+          "q": "What skill order should I use?",
+          "a": "Max Q, then E, then W, and take R at 6, 11 and 16. Start Q-E-W in most lanes."
+        },
+        {
+          "q": "When should I use Death Lotus?",
+          "a": "After the enemy's reliable interrupts are used, or when you can hit multiple targets without being punished. Do not channel just because it is available."
+        },
+        {
+          "q": "Is Katarina good for beginners?",
+          "a": "She is not the easiest first champion. If you are new, expect to lose fights while learning her entry timing; practice dagger pickups before taking her into ranked."
+        }
+      ],
+      "statsNote": "U.GG and Lolalytics use different samples and ranking methods, so their win rates differ. Both snapshots are from patch 26.21, Emerald+ and global ranked Solo/Duo. Treat them as context, not a promise.",
+      "lastUpdated": "2026-10-27"
+    },
+    "sett": {
+      "slug": "sett",
+      "name": "Sett",
+      "title": "the Boss",
+      "role": "top",
+      "roleLabel": "Top",
+      "difficulty": "medium",
+      "difficultyLabel": "Medium",
+      "tagline": "A lane bully who turns damage taken into a shield and a true-damage punch.",
+      "metaTitle": "How to Play Sett in LoL: Runes, Build & Combos (Patch 26.21)",
+      "metaDescription": "Learn how to play Sett top in League of Legends with patch 26.21 runes, Stridebreaker build, skill order, combos, matchups and lane tips.",
+      "h1": "How to Play Sett in League of Legends",
+      "heroIntro": [
+        "Sett is a top-lane juggernaut who wins short trades with his passive regeneration, Q auto-attack reset and E stun. His W, Haymaker, converts damage taken into a shield and a powerful true-damage punch.",
+        "This guide covers the patch 26.21 top-lane build, the exact skill path used by the highest-sample data, practical E-W-R combos, lane matchups and the mistakes that make Sett feel weak. It is based on Data Dragon 16.21.1 and current U.GG and Lolalytics samples."
+      ],
+      "quickAnswer": "Start W-E-Q, max Q first, then W, then E. Take Conqueror with Resolve secondaries, build Stridebreaker into Black Cleaver, and use E to stun before W so the true-damage center is unavoidable. Sett is strong in short trades and sidelane fights, but he is kited by ranged champions and should not waste Haymaker without grit.",
+      "quickStart": {
+        "role": "Top lane",
+        "secondaryRoles": "Jungle or support off-role",
+        "difficulty": "Medium",
+        "playstyle": "Juggernaut and short-trade lane bully",
+        "keyMechanic": "Haymaker converts stored damage into a shield and true damage",
+        "beginnerMistake": "Casting W without grit or using E on only one side of the target",
+        "winCondition": "Win the side lane, force a flank with R, and use E-W to peel or delete a carry"
+      },
+      "abilities": [
+        {
+          "key": "P",
+          "name": "Pit Grit",
+          "icon": "Sett_P.png",
+          "description": "Sett's basic attacks alternate between a left punch and a stronger, faster right punch. He also regenerates health based on missing health.",
+          "tips": [
+            "Use the right punch to last-hit and trade.",
+            "Your passive makes long, low-health fights more survivable.",
+            "Do not confuse regeneration with immunity; burst still kills you."
+          ],
+          "mistake": "Trading at low health without tracking the enemy's burst."
+        },
+        {
+          "key": "Q",
+          "name": "Knuckle Down",
+          "icon": "SettQ.png",
+          "description": "Sett's next two attacks deal bonus damage based on the target's maximum health, and he gains movement speed toward enemy champions.",
+          "tips": [
+            "Q is an auto-attack reset; use it immediately after an auto.",
+            "The speed helps you stay on a fleeing target.",
+            "Against high-health tanks, Q is a reliable damage source."
+          ],
+          "mistake": "Using Q on minions and then having no reset for the champion trade."
+        },
+        {
+          "key": "W",
+          "name": "Haymaker",
+          "icon": "SettW.png",
+          "description": "Sett stores damage taken as grit. On cast, he consumes it for a shield and punches an area, dealing true damage in the center and physical damage at the sides.",
+          "tips": [
+            "Let the enemy hit you first so the shield and punch are larger.",
+            "The center is the real threat; aim it at the target's current position.",
+            "You can Flash during the windup to reposition the punch."
+          ],
+          "mistake": "Panic-casting W at full health with almost no grit."
+        },
+        {
+          "key": "E",
+          "name": "Facebreaker",
+          "icon": "SettE.png",
+          "description": "Sett pulls enemies from opposite sides together, damaging and stunning them. Enemies on only one side are slowed instead.",
+          "tips": [
+            "Position so the enemy is between you and a minion or wall.",
+            "E stun sets up the W center.",
+            "Use E to interrupt dashes and channeled abilities."
+          ],
+          "mistake": "Using E when all enemies are on one side and expecting a stun."
+        },
+        {
+          "key": "R",
+          "name": "The Show Stopper",
+          "icon": "SettR.png",
+          "description": "Sett carries an enemy champion through the air and slams them down, damaging and slowing nearby enemies.",
+          "tips": [
+            "R can isolate a carry or peel a diver away from your team.",
+            "Use R to set up E on the landing zone.",
+            "Do not R a tank into your own backline."
+          ],
+          "mistake": "Using R as a pure damage button and forgetting where the target will land."
+        }
+      ],
+      "skillOrder": {
+        "priority": "Q > W > E",
+        "start": "W → E → Q",
+        "levels": [
+          {
+            "level": 1,
+            "ability": "W"
+          },
+          {
+            "level": 2,
+            "ability": "E"
+          },
+          {
+            "level": 3,
+            "ability": "Q"
+          },
+          {
+            "level": 4,
+            "ability": "Q"
+          },
+          {
+            "level": 5,
+            "ability": "Q"
+          },
+          {
+            "level": 6,
+            "ability": "R"
+          },
+          {
+            "level": 7,
+            "ability": "Q"
+          },
+          {
+            "level": 8,
+            "ability": "W"
+          },
+          {
+            "level": 9,
+            "ability": "Q"
+          },
+          {
+            "level": 10,
+            "ability": "W"
+          },
+          {
+            "level": 11,
+            "ability": "R"
+          },
+          {
+            "level": 12,
+            "ability": "W"
+          },
+          {
+            "level": 13,
+            "ability": "W"
+          },
+          {
+            "level": 14,
+            "ability": "E"
+          },
+          {
+            "level": 15,
+            "ability": "E"
+          },
+          {
+            "level": 16,
+            "ability": "R"
+          },
+          {
+            "level": 17,
+            "ability": "E"
+          },
+          {
+            "level": 18,
+            "ability": "E"
+          }
+        ],
+        "explanation": [
+          "Q is maxed first for reliable max-health damage and the movement speed to stay on targets.",
+          "W is maxed second because the shield and true-damage punch scale with ranks and decide extended fights.",
+          "E is maxed last; one point is enough for the stun and disruption early."
+        ],
+        "note": "The W-E-Q start is the most common patch 26.21 path in the U.GG and Lolalytics samples. E start is a valid lane-specific choice when you need level 1 trading or a stun to secure a jungle gank."
+      },
+      "runes": {
+        "title": "Conqueror bruiser",
+        "summary": "Conqueror is the default Sett keystone because his extended trades and Q resets stack it quickly. Resolve secondary improves his lane durability and sidelane pressure.",
+        "primaryTree": {
+          "name": "Precision",
+          "icon": "perk-images/Styles/7201_Precision.png"
+        },
+        "secondaryTree": {
+          "name": "Resolve",
+          "icon": "perk-images/Styles/7204_Resolve.png"
+        },
+        "keystone": {
+          "id": 8010,
+          "name": "Conqueror",
+          "icon": "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+          "why": "Heals and adds damage in the long trades Sett wants."
+        },
+        "primaryRunes": [
+          {
+            "id": 9111,
+            "name": "Triumph",
+            "icon": "perk-images/Styles/Precision/Triumph.png",
+            "why": "Takedown healing keeps you alive in 1v2 sidelane fights."
+          },
+          {
+            "id": 9104,
+            "name": "Legend: Alacrity",
+            "icon": "perk-images/Styles/Precision/LegendAlacrity/LegendAlacrity.png",
+            "why": "Attack speed makes Q resets and right punches smoother."
+          },
+          {
+            "id": 8299,
+            "name": "Last Stand",
+            "icon": "perk-images/Styles/Sorcery/LastStand/LastStand.png",
+            "why": "Sett often fights at low health, where the bonus damage is active."
+          }
+        ],
+        "secondaryRunes": [
+          {
+            "id": 8444,
+            "name": "Second Wind",
+            "icon": "perk-images/Styles/Resolve/SecondWind/SecondWind.png",
+            "why": "Best default against poke and short trades."
+          },
+          {
+            "id": 8451,
+            "name": "Overgrowth",
+            "icon": "perk-images/Styles/Resolve/Overgrowth/Overgrowth.png",
+            "why": "Bonus health improves passive regeneration, W shield and frontline durability."
+          }
+        ],
+        "alternatives": [
+          "Bone Plating into burst-heavy lanes",
+          "Demolish for faster tower pressure",
+          "Press the Attack for short trades",
+          "Legend: Haste into ability-reliant lanes"
+        ],
+        "notes": [
+          "The page above is a common patch 26.21 setup, not the only correct one.",
+          "Into ranged poke, Second Wind and Doran's Shield are more valuable than raw damage.",
+          "If you are the only frontline, Overgrowth and Sterak's Gage are usually better than more offense."
+        ]
+      },
+      "summonerSpells": [
+        {
+          "name": "Flash",
+          "icon": "SummonerFlash.png",
+          "why": "Essential for E stuns, R engages and escaping after a sidelane fight.",
+          "alternative": "Always take Flash."
+        },
+        {
+          "name": "Ignite",
+          "icon": "SummonerDot.png",
+          "why": "Adds kill pressure in melee lanes and helps finish targets before they escape.",
+          "alternative": "Teleport is better in lanes where you expect to be poked out or need to match a split-pusher."
+        }
+      ],
+      "builds": [
+        {
+          "id": "stridebreaker-bruiser",
+          "label": "Stridebreaker bruiser",
+          "badge": "U.GG and Lolalytics core",
+          "summary": "Stridebreaker gives Sett the sticking power he lacks, while Black Cleaver and boots round out a durable sidelane core. This is the default build for most top-lane games.",
+          "starting": {
+            "label": "Starting items",
+            "items": [
+              {
+                "id": "1054",
+                "name": "Doran's Shield",
+                "icon": "1054.png",
+                "why": "Safest start against poke and ranged tops."
+              },
+              {
+                "id": "2003",
+                "name": "Health Potion",
+                "icon": "2003.png",
+                "why": "Extra sustain for the first waves."
+              }
+            ],
+            "note": "Doran's Blade plus two Health Potions is the most common Lolalytics start on patch 26.21 and is better when you can trade aggressively. Doran's Shield is the safer option against poke."
+          },
+          "core": {
+            "label": "Core items",
+            "items": [
+              {
+                "id": "6631",
+                "name": "Stridebreaker",
+                "icon": "6631.png",
+                "why": "Damage, health, attack speed and a slow that helps Sett stay on targets."
+              },
+              {
+                "id": "3071",
+                "name": "Black Cleaver",
+                "icon": "3071.png",
+                "why": "Armor shred for your physical damage and more health for extended fights."
+              }
+            ]
+          },
+          "boots": {
+            "label": "Boots",
+            "items": [
+              {
+                "id": "3009",
+                "name": "Boots of Swiftness",
+                "icon": "3009.png",
+                "why": "The default boots in the Lolalytics core; they help against kiting."
+              },
+              {
+                "id": "3047",
+                "name": "Plated Steelcaps",
+                "icon": "3047.png",
+                "why": "Armor against auto-attack-heavy top laners and AD comps."
+              },
+              {
+                "id": "3111",
+                "name": "Mercury's Treads",
+                "icon": "3111.png",
+                "why": "Tenacity and magic resist against crowd control and AP."
+              }
+            ]
+          },
+          "situational": {
+            "label": "Situational items",
+            "items": [
+              {
+                "id": "3053",
+                "name": "Sterak's Gage",
+                "icon": "3053.png",
+                "why": "Anti-burst shield and tenacity for teamfights."
+              },
+              {
+                "id": "3161",
+                "name": "Spear of Shojin",
+                "icon": "3161.png",
+                "why": "Ability haste and more Q and W uptime in extended fights."
+              },
+              {
+                "id": "3083",
+                "name": "Warmog's Armor",
+                "icon": "3083.png",
+                "why": "Sidelane sustain and reset health between fights."
+              },
+              {
+                "id": "3181",
+                "name": "Hullbreaker",
+                "icon": "3181.png",
+                "why": "Split-push pressure when you can force a sidelane."
+              },
+              {
+                "id": "6333",
+                "name": "Death's Dance",
+                "icon": "6333.png",
+                "why": "Physical damage mitigation and healing in skirmishes."
+              },
+              {
+                "id": "3075",
+                "name": "Thornmail",
+                "icon": "3075.png",
+                "why": "Anti-heal and armor against auto-attack-heavy teams."
+              },
+              {
+                "id": "4401",
+                "name": "Force of Nature",
+                "icon": "4401.png",
+                "why": "Magic resist and movement speed against AP burst."
+              }
+            ]
+          },
+          "notes": [
+            "Stridebreaker is the core spike. Do not delay it for a luxury defensive item unless you are already losing lane badly.",
+            "Black Cleaver is excellent into armor and tanks; if the enemy has no frontline, Sterak's or Shojin can come earlier.",
+            "Hullbreaker is a sidelane choice, not a mandatory teamfight item."
+          ]
+        },
+        {
+          "id": "frontline-anti-burst",
+          "label": "Frontline and anti-burst",
+          "badge": "Situational",
+          "summary": "When your team needs a frontline and the enemy has heavy burst, delay Black Cleaver and prioritize Sterak's, Shojin and resistances. You deal less damage but can absorb the first engage.",
+          "starting": {
+            "label": "Starting items",
+            "items": [
+              {
+                "id": "1054",
+                "name": "Doran's Shield",
+                "icon": "1054.png",
+                "why": "The safest start when you expect to be poked."
+              },
+              {
+                "id": "2003",
+                "name": "Health Potion",
+                "icon": "2003.png",
+                "why": "Sustain for the first waves."
+              }
+            ]
+          },
+          "core": {
+            "label": "Core items",
+            "items": [
+              {
+                "id": "6631",
+                "name": "Stridebreaker",
+                "icon": "6631.png",
+                "why": "Still the best first item for sticking power."
+              },
+              {
+                "id": "3053",
+                "name": "Sterak's Gage",
+                "icon": "3053.png",
+                "why": "The anti-burst shield that lets you survive the first engage."
+              }
+            ]
+          },
+          "boots": {
+            "label": "Boots",
+            "items": [
+              {
+                "id": "3047",
+                "name": "Plated Steelcaps",
+                "icon": "3047.png",
+                "why": "The default in heavy AD games."
+              },
+              {
+                "id": "3111",
+                "name": "Mercury's Treads",
+                "icon": "3111.png",
+                "why": "The default in heavy AP or crowd-control games."
+              }
+            ]
+          },
+          "situational": {
+            "label": "Situational items",
+            "items": [
+              {
+                "id": "3161",
+                "name": "Spear of Shojin",
+                "icon": "3161.png",
+                "why": "More ability uptime when you are the main frontline."
+              },
+              {
+                "id": "3083",
+                "name": "Warmog's Armor",
+                "icon": "3083.png",
+                "why": "Health and regeneration for long fights."
+              },
+              {
+                "id": "3075",
+                "name": "Thornmail",
+                "icon": "3075.png",
+                "why": "Anti-heal and armor."
+              },
+              {
+                "id": "4401",
+                "name": "Force of Nature",
+                "icon": "4401.png",
+                "why": "Magic resist and movement speed."
+              },
+              {
+                "id": "2504",
+                "name": "Kaenic Rookern",
+                "icon": "2504.png",
+                "why": "A strong magic-damage shield against burst mages."
+              },
+              {
+                "id": "3143",
+                "name": "Randuin's Omen",
+                "icon": "3143.png",
+                "why": "Critical strike reduction against AD carries."
+              }
+            ]
+          },
+          "notes": [
+            "This path is for games where your team already has enough damage but needs a durable first engage.",
+            "Do not skip Stridebreaker entirely; Sett still needs the slow to function.",
+            "If you are behind, build resistances before damage. A dead Sett deals no damage."
+          ]
+        }
+      ],
+      "combos": [
+        {
+          "name": "Standard E-W trade",
+          "sequence": [
+            {
+              "key": "E",
+              "label": "E"
+            },
+            {
+              "key": "Q",
+              "label": "Q"
+            },
+            {
+              "key": "AA",
+              "label": "Auto"
+            },
+            {
+              "key": "W",
+              "label": "W"
+            }
+          ],
+          "situation": "A short trade when the enemy is between you and a minion or wall.",
+          "execution": "E pulls and stuns, Q resets your auto, auto twice, then W with the grit you stored. Aim the center at the target's landing position.",
+          "mistake": "Using W before the enemy has traded into you, so the shield and punch are small.",
+          "warning": "If E only hits one side, it slows instead of stunning; reposition before committing."
+        },
+        {
+          "name": "R-E teamfight setup",
+          "sequence": [
+            {
+              "key": "R",
+              "label": "R"
+            },
+            {
+              "key": "E",
+              "label": "E"
+            },
+            {
+              "key": "Q",
+              "label": "Q"
+            },
+            {
+              "key": "W",
+              "label": "W"
+            }
+          ],
+          "situation": "A teamfight engage or sidelane pick when you can isolate a carry.",
+          "execution": "R the target into your team or away from theirs, E on landing to stun nearby enemies, Q for max-health damage, then W with the grit from the landing fight.",
+          "mistake": "R'ing a tank into your own backline and giving them a free engage.",
+          "warning": "Check where the target will land before using R; the slam can displace them away from your follow-up."
+        },
+        {
+          "name": "Flash E pick",
+          "sequence": [
+            {
+              "key": "Flash",
+              "label": "Flash"
+            },
+            {
+              "key": "E",
+              "label": "E"
+            },
+            {
+              "key": "Q",
+              "label": "Q"
+            },
+            {
+              "key": "W",
+              "label": "W"
+            }
+          ],
+          "situation": "Punish a carry who is just outside E range.",
+          "execution": "Flash into E range, immediately E to stun, Q for the auto reset and W for the true-damage finish.",
+          "mistake": "Flashing without E ready, or using the combo without enough grit.",
+          "warning": "This spends your only reliable escape; do not use it without vision of the enemy jungler."
+        },
+        {
+          "name": "Haymaker reposition",
+          "sequence": [
+            {
+              "key": "W",
+              "label": "W"
+            },
+            {
+              "key": "Flash",
+              "label": "Flash"
+            }
+          ],
+          "situation": "Reposition Haymaker's true-damage center onto a target who is walking out of range.",
+          "execution": "Start W, then Flash during the windup to place the center on the target.",
+          "mistake": "Flashing after the punch has already been released.",
+          "warning": "This is a high-commitment mechanic; practice it in the practice tool first."
+        }
+      ],
+      "sections": [
+        {
+          "id": "lane-phase",
+          "heading": "Laning phase: short trades, then pressure",
+          "paragraphs": [
+            "Sett's lane plan is built on short trades. Use E to stun, Q to reset your auto and W to absorb the response. Do not start with W; let the enemy commit damage first so the shield and punch are worth the cooldown.",
+            "Against ranged champions, give up early CS rather than walking into free poke. Doran's Shield, Second Wind and your passive regeneration let you survive until Stridebreaker. Against melee champions, contest the wave with E-Q trades and use the push to set up a cheater recall or a jungle dive.",
+            "At level 6, R gives you a dive and skirmish tool. Use it to isolate the enemy top laner under their tower only when you know where the enemy jungler is. Sett wins 1v2s when he has grit and a wall, not when he is caught in the open."
+          ],
+          "bullets": [
+            "Do not E the wave if you need it to escape a gank.",
+            "Save W for the enemy's burst, not for a random poke trade.",
+            "A slow push is better than a fast push when you want to dive or roam."
+          ]
+        },
+        {
+          "id": "mid-game",
+          "heading": "Mid game: make the sidelane work",
+          "paragraphs": [
+            "Sett's mid game is about sidelane pressure and forcing rotations. Push a side wave, threaten the tower, and make the enemy send someone to answer. When they do, your team can take an objective or you can flank with R.",
+            "In skirmishes, use E to peel for your carry or to stun multiple enemies. W is both defense and offense: the shield buys time, and the center punishes anyone who stands still. Do not chase ranged champions through open ground; let them come to you or force them into a wall."
+          ],
+          "bullets": [
+            "Track your grit before you commit to W.",
+            "Use R to take the enemy carry out of the fight, not just for damage.",
+            "Hullbreaker is for games where you can actually pressure a sidelane."
+          ]
+        },
+        {
+          "id": "teamfights",
+          "heading": "Teamfights: frontline, then isolate",
+          "paragraphs": [
+            "Sett is a frontline, but he is not unkillable. Start by peeling for your carry with E and R, then look for a Flash E on the enemy backline once their frontline is committed. If you are the primary engage, make sure your team can follow before you R in.",
+            "Haymaker is strongest after the enemy has spent damage on you. Do not waste it at the start of the fight just because it is off cooldown. A max-grit W can decide a teamfight; an empty W usually just delays your death."
+          ],
+          "bullets": [
+            "E stun multiple targets if possible.",
+            "R the diver away from your carry.",
+            "Do not R a tank into your own team."
+          ]
+        }
+      ],
+      "matchups": {
+        "note": "Win rates are from the U.GG patch 26.21 Emerald+ top-lane sample. Lolalytics lists Aatrox, Warwick and Ornn among Sett's hardest counters; U.GG highlights Tryndamere, Aatrox and Vayne. Treat these as signals, not fixed rules.",
+        "difficult": [
+          {
+            "name": "Tryndamere",
+            "icon": "Tryndamere.png",
+            "winRate": "46.5%",
+            "games": "1,083",
+            "advice": "Tryndamere can match your sidelane and ignore your burst with Undying Rage. Take short trades, do not chase him through his ultimate, and buy armor or Thornmail if he is the win condition."
+          },
+          {
+            "name": "Aatrox",
+            "icon": "Aatrox.png",
+            "winRate": "46.6%",
+            "games": "2,586",
+            "advice": "Aatrox outranges you with his Q and sustains through your trades. Use E to interrupt his Q3 or dash, and avoid fighting in his sweet spots. Executioner's Calling or Thornmail can help."
+          },
+          {
+            "name": "Vayne",
+            "icon": "Vayne.png",
+            "winRate": "46.7%",
+            "games": "467",
+            "advice": "Vayne kites you with Tumble and Silver Bolts. Do not chase through open ground; force her near a wall, use E to stun, and ask for jungle pressure."
+          }
+        ],
+        "favorable": [
+          {
+            "name": "Rumble",
+            "icon": "Rumble.png",
+            "advice": "Rumble wants to stand and burn you, which lets you store grit and land a big W. Use E to keep him in your range and avoid fighting inside his Equalizer."
+          },
+          {
+            "name": "Tahm Kench",
+            "icon": "TahmKench.png",
+            "advice": "Tahm Kench is a long trade, and Sett likes long trades. Use Q max-health damage and save W for his devour or shield timing."
+          },
+          {
+            "name": "K'Sante",
+            "icon": "KSante.png",
+            "advice": "K'Sante has to commit to melee range. E his dash, punish with Q-W, and do not let him R you through a wall without a follow-up plan."
+          }
+        ]
+      },
+      "mistakes": [
+        "Casting W with no grit.",
+        "Using E on one side and expecting a stun.",
+        "Chasing ranged champions through open ground.",
+        "R'ing a tank into your own backline.",
+        "Building full damage when your team needs a frontline.",
+        "Ignoring the right-punch timing and losing early trades."
+      ],
+      "practicePlan": [
+        {
+          "title": "Grit drill",
+          "steps": [
+            "In the practice tool, let a dummy hit you, then cast W at different grit amounts.",
+            "Compare the shield and center damage.",
+            "Practice holding W until the enemy commits, not until it is off cooldown."
+          ]
+        },
+        {
+          "title": "E-W center drill",
+          "steps": [
+            "Place two dummies on opposite sides.",
+            "E them together and immediately W the center.",
+            "Repeat until the stun-to-punch timing is automatic."
+          ]
+        },
+        {
+          "title": "R-E setup",
+          "steps": [
+            "R a dummy toward a wall or your team.",
+            "E on landing to stun the nearby target.",
+            "Practice choosing a landing zone that keeps the enemy in your team's range."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "Is Sett easy to play?",
+          "a": "Sett's entry barrier is low, but his ceiling is medium. The basic E-Q-W trade is simple; the hard part is managing grit, choosing R targets and not getting kited."
+        },
+        {
+          "q": "What is Sett's best build in patch 26.21?",
+          "a": "Stridebreaker into Black Cleaver is the standard core. Sterak's Gage, Spear of Shojin and Warmog's are common follow-ups. Hullbreaker is for sidelane pressure, not every game."
+        },
+        {
+          "q": "What skill order should I use?",
+          "a": "Start W-E-Q, max Q, then W, then E, and take R at 6, 11 and 16. That is the most common path in the patch 26.21 samples."
+        },
+        {
+          "q": "How do I use Sett's W correctly?",
+          "a": "Store grit by taking damage, then use the shield to survive the enemy's burst and aim the center at their current position. Do not cast it at full health with no grit."
+        },
+        {
+          "q": "Is Sett good in low elo?",
+          "a": "Yes. His straightforward trades and sidelane strength are effective in low elo, but he becomes harder to play as enemies learn to kite and dodge Haymaker."
+        }
+      ],
+      "statsNote": "U.GG and Lolalytics use different samples and ranking methods. Both snapshots are from patch 26.21, Emerald+ and global ranked Solo/Duo. Sett's win rate is strong, but his pick rate and ban rate are moderate, so the sample is smaller than Katarina's.",
+      "lastUpdated": "2026-10-27"
+    },
+    "ksante": {
+      "slug": "ksante",
+      "name": "K'Sante",
+      "title": "the Pride of Nazumah",
+      "role": "top",
+      "roleLabel": "Top",
+      "difficulty": "very-high",
+      "difficultyLabel": "Very high",
+      "tagline": "A high-skill tank who can peel, duel and kidnap a carry through a wall.",
+      "metaTitle": "How to Play K'Sante in LoL: Runes, Build & Combos (Patch 26.21)",
+      "metaDescription": "Learn how to play K'Sante top in League of Legends with patch 26.21 runes, Iceborn Gauntlet build, skill order, combos, matchups and tips.",
+      "h1": "How to Play K'Sante in League of Legends",
+      "heroIntro": [
+        "K'Sante is a top-lane tank with an unusually high skill ceiling. He can shield, dash, pull enemies with his Q, stun with W and use R to drag a target through a wall and transform into a damage-focused duelist.",
+        "This guide covers the patch 26.21 top-lane build, exact skill order, practical Q-W-R combos, lane and teamfight decisions, and the matchups that expose his weaknesses. It is based on Data Dragon 16.21.1 and current U.GG and Lolalytics samples."
+      ],
+      "quickAnswer": "Start E-Q-W, max Q first, then E, then W. Take Grasp of the Undying with Precision secondaries, build Kaenic Rookern into Iceborn Gauntlet, and use Q2 to pull enemies into W or R. K'Sante is a low-win-rate, high-mastery champion on patch 26.21: he is strong when you land his crowd control and weak when you waste R or miss Q stacks.",
+      "quickStart": {
+        "role": "Top lane",
+        "secondaryRoles": "Mid or support off-role",
+        "difficulty": "Very high",
+        "playstyle": "Frontline tank, pick and peel",
+        "keyMechanic": "Q2 shockwave pulls enemies into your W or R",
+        "beginnerMistake": "Using R without a wall or a follow-up plan",
+        "winCondition": "Survive the lane, control river fights with Q2-W, and use R to isolate the enemy carry"
+      },
+      "abilities": [
+        {
+          "key": "P",
+          "name": "Dauntless Instinct",
+          "icon": "Icons_KSante_P.png",
+          "description": "K'Sante's abilities mark targets to take more damage from his next attack. In All Out, he deals more damage with attacks and abilities.",
+          "tips": [
+            "Auto-attack after each ability to consume the mark.",
+            "In All Out, your damage is higher but your defenses are lower.",
+            "Do not chase marks into the enemy backline without a plan."
+          ],
+          "mistake": "Spamming abilities without weaving autos and losing the passive damage."
+        },
+        {
+          "key": "Q",
+          "name": "Ntofo Strikes",
+          "icon": "KSanteQ.png",
+          "description": "K'Sante strikes in a short line, slowing enemies. Hitting grants a stack; at two stacks, the next Q becomes a shockwave that pulls enemies in.",
+          "tips": [
+            "Use Q to farm and to build stacks before a trade.",
+            "Q2 is your setup tool; pull enemies into W or R.",
+            "In All Out, Q has a lower cooldown."
+          ],
+          "mistake": "Wasting Q2 on the wave when a fight is about to start."
+        },
+        {
+          "key": "W",
+          "name": "Path Maker",
+          "icon": "KSanteW.png",
+          "description": "K'Sante charges while taking reduced damage, then dashes, knocking back and stunning enemies. In All Out, it deals more damage but no longer knocks back or stuns.",
+          "tips": [
+            "Hold W to block the enemy's burst, then release to stun.",
+            "Use W to interrupt dashes or channeled abilities.",
+            "In All Out, W is a damage tool, not crowd control."
+          ],
+          "mistake": "Releasing W early and losing the damage reduction before the burst lands."
+        },
+        {
+          "key": "E",
+          "name": "Footwork",
+          "icon": "KSanteE.png",
+          "description": "K'Sante dashes and gains a shield. Targeting an ally increases range and shields both. In All Out, cooldown is reduced and speed is increased.",
+          "tips": [
+            "Use E on an ally to escape or to shield both of you.",
+            "E is your main defensive dash; do not waste it for poke.",
+            "In All Out, E is your main chase and repositioning tool."
+          ],
+          "mistake": "Using E aggressively with no shield value and no exit."
+        },
+        {
+          "key": "R",
+          "name": "All Out",
+          "icon": "KSanteR.png",
+          "description": "K'Sante knocks an enemy back through any wall in their path, then dashes after them and enters All Out, gaining damage and healing at the cost of defenses.",
+          "tips": [
+            "Use R to isolate a carry or to escape a losing fight.",
+            "Check the wall angle before committing; the target must hit a wall to be displaced.",
+            "In All Out, play like a duelist, not a tank."
+          ],
+          "mistake": "R'ing a target with no wall or follow-up and then dying in All Out."
+        }
+      ],
+      "skillOrder": {
+        "priority": "Q > E > W",
+        "start": "E → Q → W",
+        "levels": [
+          {
+            "level": 1,
+            "ability": "E"
+          },
+          {
+            "level": 2,
+            "ability": "Q"
+          },
+          {
+            "level": 3,
+            "ability": "W"
+          },
+          {
+            "level": 4,
+            "ability": "Q"
+          },
+          {
+            "level": 5,
+            "ability": "Q"
+          },
+          {
+            "level": 6,
+            "ability": "R"
+          },
+          {
+            "level": 7,
+            "ability": "Q"
+          },
+          {
+            "level": 8,
+            "ability": "E"
+          },
+          {
+            "level": 9,
+            "ability": "Q"
+          },
+          {
+            "level": 10,
+            "ability": "E"
+          },
+          {
+            "level": 11,
+            "ability": "R"
+          },
+          {
+            "level": 12,
+            "ability": "E"
+          },
+          {
+            "level": 13,
+            "ability": "E"
+          },
+          {
+            "level": 14,
+            "ability": "W"
+          },
+          {
+            "level": 15,
+            "ability": "W"
+          },
+          {
+            "level": 16,
+            "ability": "R"
+          },
+          {
+            "level": 17,
+            "ability": "W"
+          },
+          {
+            "level": 18,
+            "ability": "W"
+          }
+        ],
+        "explanation": [
+          "Q is maxed first for wave control, poke and the Q2 pull.",
+          "E is maxed second for a stronger shield and lower cooldown, which is core to K'Sante's survivability.",
+          "W is maxed last because one point gives the stun and damage reduction; the later ranks are a bonus."
+        ],
+        "note": "This is the most common patch 26.21 path in the U.GG and Lolalytics samples. Some lanes prefer Q at level 1 for poke; E start is the safer default."
+      },
+      "runes": {
+        "title": "Grasp frontline",
+        "summary": "Grasp of the Undying is the default keystone on patch 26.21. It rewards short trades, improves lane sustain and scales with K'Sante's health. Precision secondary adds tenacity, ability haste and last-stand damage.",
+        "primaryTree": {
+          "name": "Resolve",
+          "icon": "perk-images/Styles/7204_Resolve.png"
+        },
+        "secondaryTree": {
+          "name": "Precision",
+          "icon": "perk-images/Styles/7201_Precision.png"
+        },
+        "keystone": {
+          "id": 8437,
+          "name": "Grasp of the Undying",
+          "icon": "perk-images/Styles/Resolve/GraspOfTheUndying/GraspOfTheUndying.png",
+          "why": "Best default for short trades and health scaling."
+        },
+        "primaryRunes": [
+          {
+            "id": 8446,
+            "name": "Demolish",
+            "icon": "perk-images/Styles/Resolve/Demolish/Demolish.png",
+            "why": "Tower pressure after a lane win."
+          },
+          {
+            "id": 8444,
+            "name": "Second Wind",
+            "icon": "perk-images/Styles/Resolve/SecondWind/SecondWind.png",
+            "why": "Sustain against poke and short trades."
+          },
+          {
+            "id": 8451,
+            "name": "Overgrowth",
+            "icon": "perk-images/Styles/Resolve/Overgrowth/Overgrowth.png",
+            "why": "Bonus health improves your shield, damage and frontline durability."
+          }
+        ],
+        "secondaryRunes": [
+          {
+            "id": 9111,
+            "name": "Triumph",
+            "icon": "perk-images/Styles/Precision/Triumph.png",
+            "why": "Takedown healing in extended fights."
+          },
+          {
+            "id": 9105,
+            "name": "Legend: Haste",
+            "icon": "perk-images/Styles/Precision/LegendHaste/LegendHaste.png",
+            "why": "More Q and E casts in fights."
+          },
+          {
+            "id": 8299,
+            "name": "Last Stand",
+            "icon": "perk-images/Styles/Sorcery/LastStand/LastStand.png",
+            "why": "K'Sante often fights at low health in All Out."
+          }
+        ],
+        "alternatives": [
+          "Bone Plating into burst-heavy lanes",
+          "Conditioning for late-game resistances",
+          "Unflinching into heavy crowd control",
+          "Aftershock for teamfight durability"
+        ],
+        "notes": [
+          "This is a common patch 26.21 setup, not the only correct page.",
+          "Grasp is weaker in lanes where you cannot safely auto-attack the enemy; in those games, Aftershock can be more reliable.",
+          "Do not take Demolish if you expect to be camped and cannot push."
+        ]
+      },
+      "summonerSpells": [
+        {
+          "name": "Flash",
+          "icon": "SummonerFlash.png",
+          "why": "Core for R angles, E escapes and W stuns.",
+          "alternative": "Always take Flash."
+        },
+        {
+          "name": "Ignite",
+          "icon": "SummonerDot.png",
+          "why": "Adds kill pressure and helps win the level 6 all-in.",
+          "alternative": "Teleport is the safer choice in lanes where you expect to be poked out or need to match a sidelane."
+        }
+      ],
+      "builds": [
+        {
+          "id": "tank-core",
+          "label": "Tank core",
+          "badge": "Lolalytics core",
+          "summary": "K'Sante's default build prioritizes durability and ability haste. Kaenic Rookern covers magic damage, Mercury's Treads reduces crowd control, and Iceborn Gauntlet gives armor, spellblade damage and a slow.",
+          "starting": {
+            "label": "Starting items",
+            "items": [
+              {
+                "id": "1120",
+                "name": "Doran's Helm",
+                "icon": "1120.png",
+                "why": "Health, armor and magic resist make it the most common start in the Lolalytics sample."
+              },
+              {
+                "id": "2003",
+                "name": "Health Potion",
+                "icon": "2003.png",
+                "why": "Sustain for the first waves."
+              }
+            ],
+            "note": "Doran's Shield is the alternative against heavy poke. Doran's Helm's Helping Hand helps with early last hits."
+          },
+          "core": {
+            "label": "Core items",
+            "items": [
+              {
+                "id": "2504",
+                "name": "Kaenic Rookern",
+                "icon": "2504.png",
+                "why": "Magic resist and a shield that stabilizes the lane against AP tops and poke."
+              },
+              {
+                "id": "6662",
+                "name": "Iceborn Gauntlet",
+                "icon": "6662.png",
+                "why": "Armor, ability haste and a slow that helps you stick to targets."
+              }
+            ]
+          },
+          "boots": {
+            "label": "Boots",
+            "items": [
+              {
+                "id": "3111",
+                "name": "Mercury's Treads",
+                "icon": "3111.png",
+                "why": "Tenacity and magic resist for the default core."
+              },
+              {
+                "id": "3047",
+                "name": "Plated Steelcaps",
+                "icon": "3047.png",
+                "why": "Better against auto-attack-heavy AD teams."
+              }
+            ]
+          },
+          "situational": {
+            "label": "Situational items",
+            "items": [
+              {
+                "id": "3065",
+                "name": "Spirit Visage",
+                "icon": "3065.png",
+                "why": "More healing, shields and magic resist when you are the frontline."
+              },
+              {
+                "id": "2502",
+                "name": "Unending Despair",
+                "icon": "2502.png",
+                "why": "Armor, ability haste and healing in extended fights."
+              },
+              {
+                "id": "6665",
+                "name": "Jak'Sho, The Protean",
+                "icon": "6665.png",
+                "why": "Best when fights are long and you need mixed resistances."
+              },
+              {
+                "id": "3075",
+                "name": "Thornmail",
+                "icon": "3075.png",
+                "why": "Anti-heal and armor against auto-attack-heavy teams."
+              },
+              {
+                "id": "3143",
+                "name": "Randuin's Omen",
+                "icon": "3143.png",
+                "why": "Critical strike reduction against AD carries."
+              },
+              {
+                "id": "4401",
+                "name": "Force of Nature",
+                "icon": "4401.png",
+                "why": "Magic resist and movement speed against AP burst."
+              },
+              {
+                "id": "2525",
+                "name": "Protoplasm Harness",
+                "icon": "2525.png",
+                "why": "A strong anti-burst option with health, ability haste and a lifeline effect."
+              }
+            ]
+          },
+          "notes": [
+            "Kaenic Rookern first is common in the Lolalytics sample; if the enemy top is AD, Plated Steelcaps and Iceborn can come earlier.",
+            "Mercury's Treads is the default, but Plated Steelcaps is better against auto-attack-heavy teams.",
+            "Do not buy pure damage items on K'Sante unless you are already far ahead and can end the game."
+          ]
+        },
+        {
+          "id": "all-out-duelist",
+          "label": "All Out duelist",
+          "badge": "Snowball",
+          "summary": "When you are ahead and need to threaten the backline yourself, lean into ability haste and healing. This build is less forgiving and should not replace the tank core in even games.",
+          "starting": {
+            "label": "Starting items",
+            "items": [
+              {
+                "id": "1120",
+                "name": "Doran's Helm",
+                "icon": "1120.png",
+                "why": "The standard safe start."
+              },
+              {
+                "id": "2003",
+                "name": "Health Potion",
+                "icon": "2003.png",
+                "why": "Sustain for the first waves."
+              }
+            ]
+          },
+          "core": {
+            "label": "Core items",
+            "items": [
+              {
+                "id": "6662",
+                "name": "Iceborn Gauntlet",
+                "icon": "6662.png",
+                "why": "The default first item for armor and sticking power."
+              },
+              {
+                "id": "3065",
+                "name": "Spirit Visage",
+                "icon": "3065.png",
+                "why": "Healing and shield amplification for All Out fights."
+              }
+            ]
+          },
+          "boots": {
+            "label": "Boots",
+            "items": [
+              {
+                "id": "3111",
+                "name": "Mercury's Treads",
+                "icon": "3111.png",
+                "why": "The safest boots for a melee duelist."
+              },
+              {
+                "id": "3047",
+                "name": "Plated Steelcaps",
+                "icon": "3047.png",
+                "why": "Against heavy AD and auto-attack comps."
+              }
+            ]
+          },
+          "situational": {
+            "label": "Situational items",
+            "items": [
+              {
+                "id": "6665",
+                "name": "Jak'Sho, The Protean",
+                "icon": "6665.png",
+                "why": "Mixed resistances for long fights."
+              },
+              {
+                "id": "2502",
+                "name": "Unending Despair",
+                "icon": "2502.png",
+                "why": "Healing and armor in extended fights."
+              },
+              {
+                "id": "2525",
+                "name": "Protoplasm Harness",
+                "icon": "2525.png",
+                "why": "Anti-burst health and a lifeline effect."
+              },
+              {
+                "id": "3143",
+                "name": "Randuin's Omen",
+                "icon": "3143.png",
+                "why": "Against critical strike carries."
+              },
+              {
+                "id": "3075",
+                "name": "Thornmail",
+                "icon": "3075.png",
+                "why": "Anti-heal and armor."
+              },
+              {
+                "id": "4401",
+                "name": "Force of Nature",
+                "icon": "4401.png",
+                "why": "Magic resist and movement speed."
+              }
+            ]
+          },
+          "notes": [
+            "All Out reduces your defenses; the extra healing and ability haste help, but you are still not a pure assassin.",
+            "Only consider this path when your team already has a reliable frontline.",
+            "If you are behind, build the tank core and play for picks, not duels."
+          ]
+        }
+      ],
+      "combos": [
+        {
+          "name": "Q2 pull all-in",
+          "sequence": [
+            {
+              "key": "Q",
+              "label": "Q"
+            },
+            {
+              "key": "Q",
+              "label": "Q2"
+            },
+            {
+              "key": "E",
+              "label": "E"
+            },
+            {
+              "key": "AA",
+              "label": "Auto"
+            },
+            {
+              "key": "W",
+              "label": "W"
+            },
+            {
+              "key": "R",
+              "label": "R"
+            }
+          ],
+          "situation": "A standard all-in when you have two Q stacks and the enemy is in range.",
+          "execution": "Land the first Q, use the second Q shockwave to pull the target, E in for the shield, auto to consume the passive mark, W to stun, then R through a wall if the angle is available.",
+          "mistake": "Using Q2 too early and having no pull for the all-in.",
+          "warning": "Do not R unless the target will hit a wall or your team can follow."
+        },
+        {
+          "name": "Ally E engage",
+          "sequence": [
+            {
+              "key": "E",
+              "label": "E ally"
+            },
+            {
+              "key": "Q",
+              "label": "Q"
+            },
+            {
+              "key": "W",
+              "label": "W"
+            },
+            {
+              "key": "R",
+              "label": "R"
+            }
+          ],
+          "situation": "Engage or disengage with an ally as the anchor.",
+          "execution": "E to an ally for the longer dash and shared shield, Q to stack and slow, W to block damage and stun, then R the priority target.",
+          "mistake": "Using E on an ally when you need it to escape.",
+          "warning": "E on an ally puts you next to them; make sure that is where you want to fight."
+        },
+        {
+          "name": "Wall kidnap",
+          "sequence": [
+            {
+              "key": "R",
+              "label": "R wall"
+            },
+            {
+              "key": "E",
+              "label": "E"
+            },
+            {
+              "key": "Q",
+              "label": "Q"
+            },
+            {
+              "key": "W",
+              "label": "W"
+            }
+          ],
+          "situation": "Isolating a carry in a sidelane or river fight.",
+          "execution": "R the target through a wall, follow with E, use Q for damage and stacks, and W as a damage tool in All Out. Auto between abilities to consume passive marks.",
+          "mistake": "R'ing without a wall and then fighting in All Out with reduced defenses.",
+          "warning": "All Out is a commitment; check your exit before you use it."
+        },
+        {
+          "name": "W into pull",
+          "sequence": [
+            {
+              "key": "W",
+              "label": "W"
+            },
+            {
+              "key": "Q2",
+              "label": "Q2"
+            },
+            {
+              "key": "R",
+              "label": "R"
+            }
+          ],
+          "situation": "Setting up a pick when the enemy is grouped.",
+          "execution": "Charge W to reduce incoming damage, release to stun, hit Q2 to pull them back into your team, then R the isolated target through a wall.",
+          "mistake": "Releasing W before the enemy commits their damage.",
+          "warning": "This combo requires your team to follow; do not start it alone."
+        }
+      ],
+      "sections": [
+        {
+          "id": "lane-phase",
+          "heading": "Laning phase: controlled trades",
+          "paragraphs": [
+            "K'Sante's lane is about controlled trades, not constant aggression. Use Q to farm and build stacks, E to shield the enemy's response, and W to block their key damage. Grasp auto-attacks are valuable, but do not walk into a losing trade just to proc it.",
+            "Against ranged tops, give up CS and preserve health. Doran's Helm, Second Wind and your shield let you survive; once you have Kaenic Rookern and Mercury's Treads, you can contest waves more confidently. Against melee tops, use Q2 to set up short E-Q-W trades and save R for a guaranteed wall angle.",
+            "At level 6, K'Sante becomes a pick threat. R can drag an overextended laner through a wall and into your jungler, but it also removes your tank stats. Only commit when you know where the enemy jungler is or when your lane opponent is already low."
+          ],
+          "bullets": [
+            "Do not waste Q2 on the wave before a fight.",
+            "Use W to block the enemy's burst, not to poke.",
+            "Keep E for the enemy's engage or for an ally shield."
+          ]
+        },
+        {
+          "id": "mid-game",
+          "heading": "Mid game: control the river",
+          "paragraphs": [
+            "K'Sante's mid game is about frontline presence and picks. Push a side wave, then group with your team around vision. Your Q2 pull and W stun can start a fight, but you should usually be the second or third champion in, not the first.",
+            "Use R to isolate a carry who steps too far forward or to peel a diver away from your own carry. In All Out, you are a duelist: chase only if the target is isolated and your team can cover the exit."
+          ],
+          "bullets": [
+            "Play around walls; they are part of your R range.",
+            "E to an ally when you need a safe retreat.",
+            "Do not chase kills in All Out if your team is losing the fight."
+          ]
+        },
+        {
+          "id": "teamfights",
+          "heading": "Teamfights: peel first, then isolate",
+          "paragraphs": [
+            "In teamfights, K'Sante is a peel-first frontline. Stand between the enemy engage and your carry, use Q2 to pull divers off, and W to stun the first threat. R is best used to remove a carry from the fight or to peel a diver away, not as a random damage button.",
+            "When you go All Out, your defenses drop. Commit only when the enemy's crowd control is used or when you can finish the target quickly. If the fight turns, E back to an ally and reset the frontline."
+          ],
+          "bullets": [
+            "Q2 pull is your best setup.",
+            "W charge blocks burst; do not release early.",
+            "All Out is a commitment, not a free stat boost."
+          ]
+        }
+      ],
+      "matchups": {
+        "note": "Win rates are from the U.GG patch 26.21 Emerald+ top-lane sample. Lolalytics lists Poppy, Kayle and Garen as K'Sante's hardest counters. K'Sante's overall win rate is low, so treat matchup numbers as context and focus on the mechanical interaction.",
+        "difficult": [
+          {
+            "name": "Poppy",
+            "icon": "Poppy.png",
+            "winRate": "40.1%",
+            "games": "299",
+            "advice": "Poppy's Steadfast Presence stops your dashes and makes E and R unreliable. Play for short Q trades, bait her W, and do not commit to All Out while it is up."
+          },
+          {
+            "name": "Kayle",
+            "icon": "Kayle.png",
+            "winRate": "41.6%",
+            "games": "598",
+            "advice": "Kayle outscales you and can kite your All Out. Pressure her before level 6, ask for jungle help, and avoid long lanes where she can free-hit."
+          },
+          {
+            "name": "Garen",
+            "icon": "Garen.png",
+            "winRate": "42.4%",
+            "games": "1,466",
+            "advice": "Garen's silence stops your W and E, and his execute punishes low-health All Out fights. Use Q2 to keep distance, and do not R him while his spin is active."
+          },
+          {
+            "name": "Fiora",
+            "icon": "Fiora.png",
+            "winRate": "43.5%",
+            "games": "1,151",
+            "advice": "Fiora can parry your W and punish your vitals. Do not R into her Riposte; bait it with a short trade, then commit."
+          }
+        ],
+        "favorable": [
+          {
+            "name": "Warwick",
+            "icon": "Warwick.png",
+            "advice": "Warwick wants to drain-tank through extended fights. Your Q2 pull and W stun can interrupt his sustain, and your shield helps survive his burst."
+          },
+          {
+            "name": "Cho'Gath",
+            "icon": "Chogath.png",
+            "advice": "Cho'Gath is a large, immobile target. Land Q2, use W to block his engage, and punish him with Grasp trades."
+          },
+          {
+            "name": "Kennen",
+            "icon": "Kennen.png",
+            "advice": "Kennen wants to kite and flank. Keep Q2 available to pull him out of Lightning Rush, and use W to block his burst when he commits."
+          }
+        ]
+      },
+      "mistakes": [
+        "Wasting Q2 on the wave.",
+        "Using R without a wall or follow-up.",
+        "Releasing W before the enemy's burst.",
+        "Forgetting to auto-attack after abilities for the passive mark.",
+        "Fighting in All Out with no exit.",
+        "Building damage when the team needs a frontline."
+      ],
+      "practicePlan": [
+        {
+          "title": "Q2 pull drill",
+          "steps": [
+            "Stack Q on a dummy, then use Q2 to pull a second dummy.",
+            "Immediately W to stun both.",
+            "Repeat until the pull-to-stun timing is consistent."
+          ]
+        },
+        {
+          "title": "Wall R angles",
+          "steps": [
+            "Open the practice tool near different walls.",
+            "Practice R'ing a dummy through each wall.",
+            "Identify which angles put the target in your team's range."
+          ]
+        },
+        {
+          "title": "All Out limit test",
+          "steps": [
+            "Enter All Out against a durable dummy.",
+            "Practice auto-weaving and E repositioning.",
+            "Leave All Out before you would die in a real fight."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "Is K'Sante hard to play?",
+          "a": "Yes. He is one of the highest-skill tanks in the game because his Q stacks, W charge, R walls and All Out form change his role in a fight."
+        },
+        {
+          "q": "What is K'Sante's best build in patch 26.21?",
+          "a": "Kaenic Rookern, Mercury's Treads and Iceborn Gauntlet is the standard core. Spirit Visage and Unending Despair are common follow-ups. Pure damage builds are situational."
+        },
+        {
+          "q": "What skill order should I use?",
+          "a": "Start E-Q-W, max Q, then E, then W, and take R at 6, 11 and 16. That is the most common patch 26.21 path."
+        },
+        {
+          "q": "Why is K'Sante's win rate low?",
+          "a": "His kit is complex and his All Out form trades defense for damage, which makes him easy to punish if you misjudge the fight. The best K'Sante players perform much better than the overall average."
+        },
+        {
+          "q": "When should I use All Out?",
+          "a": "When you can isolate a carry, finish a low-health target, or escape a losing fight through a wall. Do not use it just because it is available."
+        }
+      ],
+      "statsNote": "U.GG and Lolalytics use different samples and ranking methods. Both snapshots are from patch 26.21, Emerald+ and global ranked Solo/Duo. K'Sante's overall win rate is below 50%, but Lolalytics reports a much higher win rate for the best K'Sante players, which reflects his high mastery curve.",
+      "lastUpdated": "2026-10-27"
+    },
+    "azir": {
+      "slug": "azir",
+      "name": "Azir",
+      "title": "the Emperor of the Sands",
+      "role": "mid",
+      "roleLabel": "Mid",
+      "difficulty": "high",
+      "difficultyLabel": "High",
+      "tagline": "Azir is a high-skill mid-lane champion who controls the battlefield through his Sand Soldiers. Unlike most mages, Azir relies on positioning, soldier placement and extended damage windows rather than simply casting spells at enemies.",
+      "metaTitle": "Azir Guide: Combos, Tips and Advanced Mechanics | League of Legends",
+      "metaDescription": "Learn Azir’s runes, build, skill order, combos and mid-lane matchups for League of Legends patch 26.21.",
+      "h1": "Azir Guide: Combos, Tips and Advanced Mechanics",
+      "heroIntro": [
+        "Azir is a high-skill mid-lane champion who controls the battlefield through his Sand Soldiers. Unlike most mages, Azir relies on positioning, soldier placement and extended damage windows rather than simply casting spells at enemies.",
+        "To master Azir, you need to understand how to manage your soldiers, trade safely in lane, position during teamfights and recognize when an aggressive play is worth the risk."
+      ],
+      "quickAnswer": "Azir: max W > Q > E, use Lethal Tempo, and follow the Azir sustained AP core as a patch 26.21 baseline. Read the matchup notes below and adapt your items to the enemy composition.",
+      "quickStart": {
+        "role": "Mid lane",
+        "secondaryRoles": "Not specified in this guide",
+        "difficulty": "High",
+        "playstyle": "A long-range control mage",
+        "keyMechanic": "Positioning and commanding Sand Soldiers to control space",
+        "beginnerMistake": "Using E aggressively without an exit plan. A dash into the enemy team can leave you exposed.",
+        "winCondition": "Deal sustained damage from a safe position and control space around objectives"
+      },
+      "abilities": [
+        {
+          "key": "P",
+          "name": "Shurima's Legacy",
+          "icon": "Azir_Passive.png",
+          "description": "Azir can summon the Sun Disc on eligible destroyed turret ruins. This temporary structure can help defend or pressure an area when used at the right time.",
+          "tips": [
+            "Treat the Sun Disc as a situational objective tool rather than a reason to take unnecessary risks around a turret ruin."
+          ]
+        },
+        {
+          "key": "Q",
+          "name": "Conquering Sands",
+          "icon": "AzirQ.png",
+          "description": "Azir commands his active Sand Soldiers to dash toward a target location, damaging and slowing enemies along their path.",
+          "tips": [
+            "Reposition soldiers to reach enemies who are outside their current attack range.",
+            "Use the slow to make subsequent soldier attacks easier to land.",
+            "Avoid spending Q carelessly if you need to preserve your repositioning options."
+          ]
+        },
+        {
+          "key": "W",
+          "name": "Arise!",
+          "icon": "AzirW.png",
+          "description": "Azir summons a Sand Soldier. His soldiers attack enemies in a line when he commands attacks against targets within their range.",
+          "tips": [
+            "Place soldiers where you can farm while maintaining a safe distance.",
+            "Position them to threaten the enemy's approach to the minion wave.",
+            "Track your available soldiers and their remaining duration.",
+            "Avoid placing every soldier where it can be ignored or where you cannot safely use it."
+          ]
+        },
+        {
+          "key": "E",
+          "name": "Shifting Sands",
+          "icon": "AzirE.png",
+          "description": "Azir dashes toward one of his Sand Soldiers and gains a shield. If he collides with an enemy champion, he stops and gains a charge of W.",
+          "tips": [
+            "Keep a soldier in a position that gives you a possible escape route.",
+            "Use E defensively when an enemy jungler or laner threatens you.",
+            "Use it offensively only when you understand where you will land and how you will get out."
+          ]
+        },
+        {
+          "key": "R",
+          "name": "Emperor's Divide",
+          "icon": "AzirR.png",
+          "description": "Azir summons a line of soldiers that surges forward, damaging and knocking back enemies. The soldiers then form a temporary wall that enemies cannot pass through normally, while allies can cross it.",
+          "tips": [
+            "Disrupt enemies diving onto your carries.",
+            "Separate frontline champions from their backline.",
+            "Punish enemies who move through narrow spaces.",
+            "Use the knockback to peel for yourself when an assassin reaches you."
+          ]
+        }
+      ],
+      "combos": [
+        {
+          "name": "Basic poke",
+          "sequence": [
+            {
+              "key": "W",
+              "label": "W"
+            },
+            {
+              "key": "AA",
+              "label": "AA"
+            }
+          ],
+          "situation": "Basic poke",
+          "execution": "Place a Sand Soldier and attack an enemy within its range. Use this to pressure opponents while keeping your own champion at a safe distance.",
+          "mistake": "Adapt the sequence to the situation; do not execute it automatically."
+        },
+        {
+          "name": "Extended trade",
+          "sequence": [
+            {
+              "key": "W",
+              "label": "W"
+            },
+            {
+              "key": "AA",
+              "label": "AA"
+            },
+            {
+              "key": "Q",
+              "label": "Q"
+            },
+            {
+              "key": "AA",
+              "label": "AA"
+            }
+          ],
+          "situation": "Extended trade",
+          "execution": "Place a soldier, attack through it, reposition it with Q and continue attacking if the situation is safe. Do not automatically extend every trade. Enemy cooldowns, minion damage and jungle pressure matter.",
+          "mistake": "Adapt the sequence to the situation; do not execute it automatically."
+        },
+        {
+          "name": "Defensive escape",
+          "sequence": [
+            {
+              "key": "W behind you",
+              "label": "W behind you"
+            },
+            {
+              "key": "E",
+              "label": "E"
+            }
+          ],
+          "situation": "Defensive escape",
+          "execution": "Place a soldier toward a safe direction and dash to it with E when you need to disengage. This requires enough distance and a valid soldier target. Plan the route before you are forced to use it.",
+          "mistake": "Adapt the sequence to the situation; do not execute it automatically."
+        },
+        {
+          "name": "Engage or displacement",
+          "sequence": [
+            {
+              "key": "W",
+              "label": "W"
+            },
+            {
+              "key": "E",
+              "label": "E"
+            },
+            {
+              "key": "R",
+              "label": "R"
+            }
+          ],
+          "situation": "Engage or displacement",
+          "execution": "Azir can dash toward a soldier and cast his ultimate to displace enemies. This can create a powerful teamfight opportunity, but it also places him close to danger. Use it when your team can follow up and the enemy's defensive abilities are accounted for. Important: The famous Azir shuffle is a situational advanced technique, not the default way to use your ultimate. Learn the underlying E and R interactions in Practice Tool before attempting it in ranked games.",
+          "mistake": "Adapt the sequence to the situation; do not execute it automatically.",
+          "warning": "Azir can dash toward a soldier and cast his ultimate to displace enemies. This can create a powerful teamfight opportunity, but it also places him close to danger. Use it when your team can follow up and the enemy's defensive abilities are accounted for. Important: The famous Azir shuffle is a situational advanced technique, not the default way to use your ultimate. Learn the underlying E and R interactions in Practice Tool before attempting it in ranked games."
+        }
+      ],
+      "sections": [
+        {
+          "id": "laning",
+          "heading": "Laning Phase",
+          "paragraphs": [
+            "Your first objective is to farm consistently while learning how far you can safely threaten the opponent with your soldiers.",
+            "Azir can become vulnerable when his mobility tool is unavailable. Before pushing the wave, consider where the enemy jungler could approach from."
+          ],
+          "bullets": [
+            "Use soldier range to trade without walking directly into the enemy's threat range.",
+            "Watch the enemy jungler before using E aggressively.",
+            "Avoid using Q solely for small amounts of damage if it leaves you without a useful repositioning option.",
+            "Learn how much damage your soldiers deal to minions so you do not accidentally disrupt your farming.",
+            "Respect champions who can reach you quickly or interrupt your positioning."
+          ]
+        },
+        {
+          "id": "mid-late",
+          "heading": "Mid and Late Game",
+          "paragraphs": [
+            "Azir's value comes from sustained damage and controlling space around objectives.",
+            "You do not always need a spectacular shuffle to win a fight. Consistent damage, safe positioning and a well-timed defensive ultimate can be more valuable."
+          ],
+          "bullets": [
+            "Position behind your frontline when possible.",
+            "Place soldiers where enemies must walk through or around them.",
+            "Avoid chasing a low-health enemy so far that you lose your safe position.",
+            "Save your ultimate when enemy divers are a serious threat to your backline.",
+            "Use narrow terrain to make your soldier attacks and ultimate more difficult to avoid."
+          ]
+        },
+        {
+          "id": "final-advice",
+          "heading": "Final Advice",
+          "paragraphs": [
+            "Mastering Azir is about controlling space, not simply landing flashy combos. Learn to position soldiers efficiently, maintain safe damage windows and use Emperor's Divide according to what your team needs in each fight."
+          ]
+        }
+      ],
+      "mistakes": [
+        "Using E aggressively without an exit plan. A dash into the enemy team can leave you exposed.",
+        "Wasting Q. Repositioning soldiers is central to your damage and control.",
+        "Standing too close to the frontline. Your range is useful only if you preserve it.",
+        "Overusing the shuffle. An unreliable engage can cost a teamfight.",
+        "Ignoring soldier placement. Poor positioning reduces your damage and makes it easier for enemies to engage on you."
+      ],
+      "practicePlan": [
+        {
+          "title": "Practice 1",
+          "steps": [
+            "In Practice Tool, focus on one skill at a time:",
+            "The goal is not to execute the fastest combo immediately. It is to make the correct decision and execute it consistently.",
+            "Keep moving while maintaining soldier attack range."
+          ]
+        },
+        {
+          "title": "Practice 2",
+          "steps": [
+            "Practise W–AA–Q–AA without losing track of your champion's position.",
+            "Rehearse E escape routes from common gank angles.",
+            "Practise the timing and direction of Emperor's Divide."
+          ]
+        },
+        {
+          "title": "Practice 3",
+          "steps": [
+            "Repeat advanced shuffle inputs slowly before attempting them at full speed."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "Is Azir difficult to learn?",
+          "a": "Yes. Azir requires strong positioning, soldier management and an understanding of when to use his mobility defensively or offensively."
+        },
+        {
+          "q": "What is Azir's most important ability?",
+          "a": "W is central to his identity because his Sand Soldiers enable his primary damage pattern. However, Q, E and R are all essential to controlling space and surviving fights."
+        },
+        {
+          "q": "Should you always use Azir's ultimate to engage?",
+          "a": "No. Emperor's Divide can initiate a fight, but it is also a powerful defensive tool for peeling divers away from your team."
+        },
+        {
+          "q": "How do you escape ganks as Azir?",
+          "a": "Maintain a soldier or a safe dash route when possible, track enemy positions and avoid using E aggressively when you may need it to disengage."
+        },
+        {
+          "q": "What is the best Azir build?",
+          "a": "A standard AP path for sustained soldier damage. Adapt the defensive slot and penetration to enemy threats. Build Zhonya’s earlier if divers can reach you; don’t delay survivability when behind. Check the current patch before copying this path."
+        }
+      ],
+      "statsNote": "Build, rune and matchup recommendations are a patch 26.21 snapshot for ranked Summoner’s Rift, Emerald+. Matchup signals come from Lolalytics; item and rune paths were cross-checked with U.GG and OP.GG. Sample sizes and filters differ by site. Use these as a baseline, not guarantees, and recheck the live patch.",
+      "lastUpdated": "2026-10-28",
+      "skillOrder": {
+        "priority": "W > Q > E",
+        "start": "W → Q → E",
+        "levels": [
+          {
+            "level": 1,
+            "ability": "W"
+          },
+          {
+            "level": 2,
+            "ability": "Q"
+          },
+          {
+            "level": 3,
+            "ability": "E"
+          },
+          {
+            "level": 4,
+            "ability": "W"
+          },
+          {
+            "level": 5,
+            "ability": "W"
+          },
+          {
+            "level": 6,
+            "ability": "R"
+          },
+          {
+            "level": 7,
+            "ability": "W"
+          },
+          {
+            "level": 8,
+            "ability": "Q"
+          },
+          {
+            "level": 9,
+            "ability": "W"
+          },
+          {
+            "level": 10,
+            "ability": "Q"
+          },
+          {
+            "level": 11,
+            "ability": "R"
+          },
+          {
+            "level": 12,
+            "ability": "Q"
+          },
+          {
+            "level": 13,
+            "ability": "Q"
+          },
+          {
+            "level": 14,
+            "ability": "E"
+          },
+          {
+            "level": 15,
+            "ability": "E"
+          },
+          {
+            "level": 16,
+            "ability": "R"
+          },
+          {
+            "level": 17,
+            "ability": "E"
+          },
+          {
+            "level": 18,
+            "ability": "E"
+          }
+        ],
+        "explanation": [
+          "Max W first for soldier damage and attack speed, then Q to improve repositioning and poke. E is maxed last after an early escape point.",
+          "Take R whenever available, at levels 6, 11 and 16."
+        ],
+        "note": "W-Q-E is the most common sample start; Q at level 1 is a reasonable lane-specific alternative."
+      },
+      "runes": {
+        "title": "Precision sustained damage",
+        "summary": "Lethal Tempo supports Azir’s sustained soldier attacks. Manaflow Band and Transcendence help with mana and ability uptime; change the secondary page if the lane demands more defense.",
+        "primaryTree": {
+          "name": "Precision",
+          "icon": "perk-images/Styles/7201_Precision.png"
+        },
+        "secondaryTree": {
+          "name": "Sorcery",
+          "icon": "perk-images/Styles/7202_Sorcery.png"
+        },
+        "keystone": {
+          "id": 8008,
+          "name": "Lethal Tempo",
+          "icon": "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+          "why": "Rewards extended soldier attacks and repeated champion hits."
+        },
+        "primaryRunes": [
+          {
+            "id": 8009,
+            "name": "Presence of Mind",
+            "icon": "perk-images/Styles/Precision/PresenceOfMind/PresenceOfMind.png",
+            "why": "Mana restoration helps you keep soldiers active in lane."
+          },
+          {
+            "id": 9104,
+            "name": "Legend: Alacrity",
+            "icon": "perk-images/Styles/Precision/LegendAlacrity/LegendAlacrity.png",
+            "why": "Attack speed improves Azir’s sustained damage pattern."
+          },
+          {
+            "id": 8017,
+            "name": "Cut Down",
+            "icon": "perk-images/Styles/Precision/CutDown/CutDown.png",
+            "why": "Adds pressure against durable targets."
+          }
+        ],
+        "secondaryRunes": [
+          {
+            "id": 8226,
+            "name": "Manaflow Band",
+            "icon": "perk-images/Styles/Sorcery/ManaflowBand/ManaflowBand.png",
+            "why": "Improves mana sustain in lane."
+          },
+          {
+            "id": 8210,
+            "name": "Transcendence",
+            "icon": "perk-images/Styles/Sorcery/Transcendence/Transcendence.png",
+            "why": "Ability haste helps maintain spell uptime."
+          }
+        ],
+        "alternatives": [
+          "Press the Attack can be preferred for shorter trading patterns. Take defensive shards into heavy burst or frequent ganks."
+        ],
+        "notes": [
+          "Rune statistics vary by region and sample size; this is a common sustained-damage setup, not the only viable page."
+        ]
+      },
+      "summonerSpells": [
+        {
+          "name": "Flash",
+          "icon": "SummonerFlash.png",
+          "why": "Essential repositioning and escape tool; can also enable a decisive ultimate."
+        },
+        {
+          "name": "Teleport",
+          "icon": "SummonerTeleport.png",
+          "why": "Default lane spell for returning to lane and joining side-lane plays.",
+          "alternative": "Ignite is an aggressive alternative when lane kill pressure matters."
+        }
+      ],
+      "builds": [
+        {
+          "id": "azir-recommended",
+          "label": "Azir sustained AP",
+          "badge": "Patch 26.21 ranked sample",
+          "summary": "A standard AP path for sustained soldier damage. Adapt the defensive slot and penetration to enemy threats.",
+          "starting": {
+            "label": "Starting items",
+            "items": [
+              {
+                "id": "1056",
+                "name": "Doran’s Ring",
+                "icon": "1056.png",
+                "why": "Mana and health make this the reliable lane start."
+              },
+              {
+                "id": "2003",
+                "name": "Health Potion",
+                "icon": "2003.png",
+                "why": "Restores health through early trades."
+              }
+            ],
+            "note": "Adapt your opening purchase to the lane matchup."
+          },
+          "core": {
+            "label": "Core items",
+            "items": [
+              {
+                "id": "3115",
+                "name": "Nashor’s Tooth",
+                "icon": "3115.png",
+                "why": "Attack speed and ability power reinforce soldier DPS."
+              },
+              {
+                "id": "4645",
+                "name": "Shadowflame",
+                "icon": "4645.png",
+                "why": "Magic penetration helps threaten squishier targets."
+              },
+              {
+                "id": "3089",
+                "name": "Rabadon’s Deathcap",
+                "icon": "3089.png",
+                "why": "Large ability-power multiplier for later damage."
+              }
+            ]
+          },
+          "boots": {
+            "label": "Boots",
+            "items": [
+              {
+                "id": "3020",
+                "name": "Sorcerer’s Shoes",
+                "icon": "3020.png",
+                "why": "Magic penetration is the default offensive option."
+              },
+              {
+                "id": "3111",
+                "name": "Mercury’s Treads",
+                "icon": "3111.png",
+                "why": "Choose against heavy magic damage or crowd control."
+              }
+            ]
+          },
+          "situational": {
+            "label": "Situational items",
+            "items": [
+              {
+                "id": "3157",
+                "name": "Zhonya’s Hourglass",
+                "icon": "3157.png",
+                "why": "Stasis can deny a dive and buy time for your team."
+              },
+              {
+                "id": "3135",
+                "name": "Void Staff",
+                "icon": "3135.png",
+                "why": "Magic penetration against enemies stacking magic resistance."
+              },
+              {
+                "id": "3102",
+                "name": "Banshee’s Veil",
+                "icon": "3102.png",
+                "why": "Spell shield against one key engage or interrupt."
+              }
+            ]
+          },
+          "notes": [
+            "Build Zhonya’s earlier if divers can reach you; don’t delay survivability when behind. Check the current patch before copying this path."
+          ]
+        }
+      ],
+      "matchups": {
+        "note": "Counter trends are from Lolalytics patch 16.21 Emerald+ for this role. They are statistical signals, not hard counters in every game; lane skill, team composition and jungle pressure still matter.",
+        "difficult": [
+          {
+            "name": "Vel’Koz",
+            "icon": "Velkoz.png",
+            "advice": "Vel’Koz outranges your soldiers. Use minions to block his Q, sidestep E, and trade after he spends it."
+          },
+          {
+            "name": "Diana",
+            "icon": "Diana.png",
+            "advice": "Diana can close the gap and threaten an all-in. Keep E available, avoid standing beside marked minions, and ask for help if she controls the wave."
+          },
+          {
+            "name": "Zoe",
+            "icon": "Zoe.png",
+            "advice": "Zoe’s bubble and burst punish you when E is unavailable. Play behind minions, dodge the bubble, and use soldiers to farm safely."
+          }
+        ],
+        "favorable": [
+          {
+            "name": "Yasuo",
+            "icon": "Yasuo.png",
+            "advice": "Use soldier range to punish his approaches and keep space from his tornado. Avoid using Q where Wind Wall can negate your pressure."
+          },
+          {
+            "name": "Mel",
+            "icon": "Mel.png",
+            "advice": "Threaten her when her defensive return-fire is unavailable. Keep soldiers placed to contest the wave and avoid reflected projectiles."
+          },
+          {
+            "name": "Akshan",
+            "icon": "Akshan.png",
+            "advice": "Trade when his boomerang or hookshot is down, and avoid long trades in his passive range."
+          }
+        ]
+      },
+      "sources": [
+        {
+          "label": "U.GG — Azir mid build, runes and skill order",
+          "url": "https://u.gg/lol/champions/azir/build?role=mid&region=world"
+        },
+        {
+          "label": "OP.GG — Azir mid build and matchups",
+          "url": "https://op.gg/lol/champions/azir/build/mid"
+        },
+        {
+          "label": "Lolalytics — Azir mid build and counters (Emerald+)",
+          "url": "https://lolalytics.com/lol/azir/build/?lane=middle&tier=emerald_plus"
+        }
+      ]
+    },
+    "riven": {
+      "slug": "riven",
+      "name": "Riven",
+      "title": "the Exile",
+      "role": "top",
+      "roleLabel": "Top",
+      "difficulty": "very-high",
+      "difficultyLabel": "Very high",
+      "tagline": "Riven is a mechanically demanding top-lane champion who combines mobility, crowd control, shielding and burst damage. Her power comes from chaining abilities efficiently and weaving empowered basic attacks between casts.",
+      "metaTitle": "Riven Guide: Combos, Animation Cancelling and Advanced Tips | League of Legends",
+      "metaDescription": "Learn Riven’s runes, build, skill order, combos and top-lane matchups for League of Legends patch 26.21.",
+      "h1": "Riven Guide: Combos, Animation Cancelling and Advanced Tips",
+      "heroIntro": [
+        "Riven is a mechanically demanding top-lane champion who combines mobility, crowd control, shielding and burst damage. Her power comes from chaining abilities efficiently and weaving empowered basic attacks between casts.",
+        "Unlike champions who rely on mana or energy, Riven has no resource bar to manage. Her main challenge is using cooldowns, passive stacks and mobility without wasting damage or leaving herself vulnerable."
+      ],
+      "quickAnswer": "Riven: max Q > E > W, use Conqueror, and follow the Riven AD skirmisher core as a patch 26.21 baseline. Read the matchup notes below and adapt your items to the enemy composition.",
+      "quickStart": {
+        "role": "Top lane",
+        "secondaryRoles": "Not specified in this guide",
+        "difficulty": "Very high",
+        "playstyle": "A mobile melee skirmisher",
+        "keyMechanic": "Weaving empowered basic attacks between abilities",
+        "beginnerMistake": "Ignoring Runic Blade. Failing to weave basic attacks wastes part of her damage pattern.",
+        "winCondition": "Create a favourable damage window through precise timing and target selection"
+      },
+      "abilities": [
+        {
+          "key": "P",
+          "name": "Runic Blade",
+          "icon": "Riven_Passive.png",
+          "description": "Riven's abilities charge her blade, allowing her basic attacks to consume stacks and deal additional physical damage.",
+          "tips": [
+            "Do not press abilities as quickly as possible without considering your passive. Weaving basic attacks between abilities is a major part of maximizing your damage."
+          ]
+        },
+        {
+          "key": "Q",
+          "name": "Broken Wings",
+          "icon": "RivenTriCleave.png",
+          "description": "Riven can cast Broken Wings up to three times in quick succession. The ability deals physical damage, and the third cast includes a larger movement and knock-up effect.",
+          "tips": [
+            "Use the first two casts to deal damage and reposition.",
+            "Save the third cast when possible to disrupt an enemy or complete a trade.",
+            "Learn how movement commands affect the flow of the ability.",
+            "Use the third cast carefully when approaching terrain, as its dash can interact with certain walls."
+          ]
+        },
+        {
+          "key": "W",
+          "name": "Ki Burst",
+          "icon": "RivenMartyr.png",
+          "description": "Riven deals physical damage to nearby enemies and briefly stuns them.",
+          "tips": [
+            "Interrupt or delay an opponent's response during a close-range trade.",
+            "Combine it with your other abilities to create a short burst window.",
+            "Use the stun to help land your remaining damage or disengage."
+          ]
+        },
+        {
+          "key": "E",
+          "name": "Valor",
+          "icon": "RivenFeint.png",
+          "description": "Riven dashes in a target direction and gains a shield.",
+          "tips": [
+            "Absorb incoming damage when trading.",
+            "Cross short distances to reposition.",
+            "Preserve E when you may need a defensive dash.",
+            "Avoid using it automatically just to approach an opponent if you expect retaliation."
+          ]
+        },
+        {
+          "key": "R",
+          "name": "Blade of the Exile",
+          "icon": "RivenFengShuiEngine.png",
+          "description": "Riven empowers her blade, gaining additional attack damage and increased attack range for a limited time. She can also cast Wind Slash, a ranged attack that deals more damage to targets with lower health.",
+          "tips": [
+            "Activate it before a serious all-in when possible.",
+            "Use the increased range to improve your attack and ability reach.",
+            "Aim Wind Slash at weakened targets rather than firing it without considering their remaining health.",
+            "Remember that the ultimate can be valuable even before you commit to a kill, because it strengthens your threat during the window."
+          ]
+        }
+      ],
+      "combos": [
+        {
+          "name": "Basic trade",
+          "sequence": [
+            {
+              "key": "Q",
+              "label": "Q"
+            },
+            {
+              "key": "AA",
+              "label": "AA"
+            },
+            {
+              "key": "Q",
+              "label": "Q"
+            },
+            {
+              "key": "AA",
+              "label": "AA"
+            }
+          ],
+          "situation": "Basic trade",
+          "execution": "Alternate Broken Wings casts with basic attacks when the situation allows. This helps you use Runic Blade instead of losing potential passive damage by chaining abilities without attacking.",
+          "mistake": "Adapt the sequence to the situation; do not execute it automatically."
+        },
+        {
+          "name": "Fast Q combo",
+          "sequence": [],
+          "situation": "Fast Q combo",
+          "execution": "The fast Q combo is a technique that reduces the downtime between Riven's attacks and Q casts. The exact input timing depends on execution, attack timing and latency. Practise the sequence at a controlled pace before trying to maximize speed. Target an enemy or practice dummy. Cast Q. Issue a movement command immediately after the cast. Attack the target when the attack can connect. Repeat the sequence with the remaining Q casts.",
+          "mistake": "Adapt the sequence to the situation; do not execute it automatically."
+        },
+        {
+          "name": "Burst trade",
+          "sequence": [
+            {
+              "key": "E",
+              "label": "E"
+            },
+            {
+              "key": "W",
+              "label": "W"
+            },
+            {
+              "key": "AA",
+              "label": "AA"
+            },
+            {
+              "key": "Q",
+              "label": "Q"
+            }
+          ],
+          "situation": "Burst trade",
+          "execution": "Use E to approach or absorb damage, then stun the target and follow with an empowered attack and Q when appropriate. This is a flexible example, not a universal combo. The best order depends on range, enemy cooldowns and whether you need E to escape.",
+          "mistake": "Adapt the sequence to the situation; do not execute it automatically."
+        },
+        {
+          "name": "All-in",
+          "sequence": [
+            {
+              "key": "R",
+              "label": "R"
+            },
+            {
+              "key": "E",
+              "label": "E"
+            },
+            {
+              "key": "W",
+              "label": "W"
+            },
+            {
+              "key": "Q",
+              "label": "Q"
+            },
+            {
+              "key": "AA",
+              "label": "AA"
+            }
+          ],
+          "situation": "All-in",
+          "execution": "Activate your ultimate before committing, then use mobility and crowd control to stay on the target while weaving in basic attacks. Do not follow this sequence mechanically. If the opponent can escape, use defensive tools or crowd control, or if you risk being interrupted, adapt your inputs.",
+          "mistake": "Adapt the sequence to the situation; do not execute it automatically."
+        },
+        {
+          "name": "Finisher",
+          "sequence": [
+            {
+              "key": "Wind Slash",
+              "label": "Wind Slash"
+            }
+          ],
+          "situation": "Finisher",
+          "execution": "Wind Slash deals more damage to enemies with lower health. Use it when its range and damage can finish a target or help secure a fight. Avoid firing it too early if the enemy still has enough health to survive and escape. Important: Combo notation describes a starting point for practice, not a guaranteed optimal sequence in every matchup. Learn how each ability interacts with your passive and basic attack timing.",
+          "mistake": "Adapt the sequence to the situation; do not execute it automatically.",
+          "warning": "Wind Slash deals more damage to enemies with lower health. Use it when its range and damage can finish a target or help secure a fight. Avoid firing it too early if the enemy still has enough health to survive and escape. Important: Combo notation describes a starting point for practice, not a guaranteed optimal sequence in every matchup. Learn how each ability interacts with your passive and basic attack timing."
+        }
+      ],
+      "sections": [
+        {
+          "id": "laning",
+          "heading": "Laning Phase",
+          "paragraphs": [
+            "Riven is strongest when she can control the timing of trades and use her mobility efficiently.",
+            "Wave management is important because Riven is melee and must often approach the minion wave to farm. Consider whether you can safely walk up before committing your cooldowns."
+          ],
+          "bullets": [
+            "Track enemy cooldowns before committing to a longer trade.",
+            "Use short trades when the opponent has a stronger extended fight.",
+            "Preserve enough mobility to disengage if the enemy jungler may be nearby.",
+            "Learn when to use the third Q cast for damage, crowd control or movement.",
+            "Avoid spending every ability on the wave if the opponent can punish your cooldowns."
+          ]
+        },
+        {
+          "id": "mid-late",
+          "heading": "Mid and Late Game",
+          "paragraphs": [
+            "Riven can threaten isolated targets and dive onto vulnerable backline champions, but her success depends on timing.",
+            "Your goal is to create a favourable damage window, not simply to use every ability as quickly as possible."
+          ],
+          "bullets": [
+            "Look for flanks instead of always approaching through the enemy frontline.",
+            "Wait for key enemy crowd-control abilities before committing when possible.",
+            "Use E to absorb damage and reposition rather than treating it as a free engage.",
+            "Do not confuse mobility with invulnerability.",
+            "If a direct dive is too risky, protect your carries or focus on a nearby target you can reach safely."
+          ]
+        },
+        {
+          "id": "final-advice",
+          "heading": "Final Advice",
+          "paragraphs": [
+            "Riven rewards deliberate execution. Learn to combine movement, basic attacks and ability timing before chasing advanced combos. Consistent trades and good decisions will matter more than memorizing a long sequence of buttons."
+          ]
+        }
+      ],
+      "mistakes": [
+        "Ignoring Runic Blade. Failing to weave basic attacks wastes part of her damage pattern.",
+        "Using every Q cast immediately. You may lose flexibility in spacing and timing.",
+        "Spending E to engage without a plan. You may have no shielded escape when the enemy responds.",
+        "Starting fights before checking enemy cooldowns. Crowd control can stop your damage sequence.",
+        "Treating every combo as a fixed script. Riven must adapt to range, target movement and the state of the fight."
+      ],
+      "practicePlan": [
+        {
+          "title": "Practice 1",
+          "steps": [
+            "In Practice Tool:",
+            "Accuracy and decision-making are more valuable than performing a flashy combo once.",
+            "Alternate Q casts and basic attacks until the sequence feels consistent."
+          ]
+        },
+        {
+          "title": "Practice 2",
+          "steps": [
+            "Practise the fast Q combo at a pace where you can maintain accuracy.",
+            "Test the third Q cast around terrain.",
+            "Practise using E to absorb a dummy's damage or reposition."
+          ]
+        },
+        {
+          "title": "Practice 3",
+          "steps": [
+            "Add W and R only after your basic movement and attack timing are reliable."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "Is Riven hard to master?",
+          "a": "Yes. She requires precise movement, passive management, cooldown awareness and efficient ability sequencing."
+        },
+        {
+          "q": "What is the fast Q combo?",
+          "a": "It is a technique that combines movement commands and basic attacks with Broken Wings to reduce downtime between attacks. It takes practice to perform consistently."
+        },
+        {
+          "q": "Should you always weave basic attacks between abilities?",
+          "a": "In many damage trades, yes, because Runic Blade rewards basic attacks after ability casts. However, immediate crowd control or a fast disengage can sometimes be more important than maximizing damage."
+        },
+        {
+          "q": "When should you use Riven's ultimate?",
+          "a": "Use Blade of the Exile when you are preparing for a meaningful fight or all-in. Wind Slash becomes especially threatening as enemies lose health."
+        },
+        {
+          "q": "What is the best Riven build?",
+          "a": "A damage and survivability path for skirmishes. The exact first item can change with the current patch and matchup. Buy a defensive answer when the enemy has heavy burst. First-item recommendations differ by data source; verify current ranked trends."
+        }
+      ],
+      "statsNote": "Build, rune and matchup recommendations are a patch 26.21 snapshot for ranked Summoner’s Rift, Emerald+. Matchup signals come from Lolalytics; item and rune paths were cross-checked with U.GG and OP.GG. Sample sizes and filters differ by site. Use these as a baseline, not guarantees, and recheck the live patch.",
+      "lastUpdated": "2026-10-28",
+      "skillOrder": {
+        "priority": "Q > E > W",
+        "start": "Q → E → W",
+        "levels": [
+          {
+            "level": 1,
+            "ability": "Q"
+          },
+          {
+            "level": 2,
+            "ability": "E"
+          },
+          {
+            "level": 3,
+            "ability": "W"
+          },
+          {
+            "level": 4,
+            "ability": "Q"
+          },
+          {
+            "level": 5,
+            "ability": "Q"
+          },
+          {
+            "level": 6,
+            "ability": "R"
+          },
+          {
+            "level": 7,
+            "ability": "Q"
+          },
+          {
+            "level": 8,
+            "ability": "E"
+          },
+          {
+            "level": 9,
+            "ability": "Q"
+          },
+          {
+            "level": 10,
+            "ability": "E"
+          },
+          {
+            "level": 11,
+            "ability": "R"
+          },
+          {
+            "level": 12,
+            "ability": "E"
+          },
+          {
+            "level": 13,
+            "ability": "E"
+          },
+          {
+            "level": 14,
+            "ability": "W"
+          },
+          {
+            "level": 15,
+            "ability": "W"
+          },
+          {
+            "level": 16,
+            "ability": "R"
+          },
+          {
+            "level": 17,
+            "ability": "W"
+          },
+          {
+            "level": 18,
+            "ability": "W"
+          }
+        ],
+        "explanation": [
+          "Q is your main damage, mobility and wave-control tool; max it first.",
+          "E improves shield strength and cooldown, so max it second. Max W last and take R at levels 6, 11 and 16."
+        ],
+        "note": "Q-E-W is the most common path; adjust the first three levels only for a specific matchup play."
+      },
+      "runes": {
+        "title": "Conqueror extended trades",
+        "summary": "Conqueror fits Riven’s repeated ability and attack pattern. Inspiration secondary offers lane sustain and summoner-spell uptime; adjust to the matchup.",
+        "primaryTree": {
+          "name": "Precision",
+          "icon": "perk-images/Styles/7201_Precision.png"
+        },
+        "secondaryTree": {
+          "name": "Inspiration",
+          "icon": "perk-images/Styles/7203_Whimsy.png"
+        },
+        "keystone": {
+          "id": 8010,
+          "name": "Conqueror",
+          "icon": "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+          "why": "Stacks during extended fights and improves sustained damage."
+        },
+        "primaryRunes": [
+          {
+            "id": 9111,
+            "name": "Triumph",
+            "icon": "perk-images/Styles/Precision/Triumph.png",
+            "why": "Restores health after takedowns in skirmishes."
+          },
+          {
+            "id": 9105,
+            "name": "Legend: Haste",
+            "icon": "perk-images/Styles/Precision/LegendHaste/LegendHaste.png",
+            "why": "Ability haste helps Riven cycle her kit."
+          },
+          {
+            "id": 8299,
+            "name": "Last Stand",
+            "icon": "perk-images/Styles/Sorcery/LastStand/LastStand.png",
+            "why": "Adds damage while low, complementing close fights."
+          }
+        ],
+        "secondaryRunes": [
+          {
+            "id": 8304,
+            "name": "Magical Footwear",
+            "icon": "perk-images/Styles/Inspiration/MagicalFootwear/MagicalFootwear.png",
+            "why": "Free boots save gold for early combat items."
+          },
+          {
+            "id": 8347,
+            "name": "Cosmic Insight",
+            "icon": "perk-images/Styles/Inspiration/CosmicInsight/CosmicInsight.png",
+            "why": "Summoner spell haste improves Flash and Ignite availability."
+          }
+        ],
+        "alternatives": [
+          "Bone Plating helps against short burst trades. Choose Doran’s Shield into difficult ranged lanes."
+        ],
+        "notes": [
+          "Some Riven pages prefer Sorcery secondary; choose based on lane pressure and your preferred play pattern."
+        ]
+      },
+      "summonerSpells": [
+        {
+          "name": "Flash",
+          "icon": "SummonerFlash.png",
+          "why": "Enables fast engage angles, surprise crowd control and emergency escape."
+        },
+        {
+          "name": "Ignite",
+          "icon": "SummonerDot.png",
+          "why": "Adds kill pressure to early all-ins and reduces healing.",
+          "alternative": "Teleport is safer when lane stability and map returns matter more."
+        }
+      ],
+      "builds": [
+        {
+          "id": "riven-recommended",
+          "label": "Riven AD skirmisher",
+          "badge": "Patch 26.21 ranked sample",
+          "summary": "A damage and survivability path for skirmishes. The exact first item can change with the current patch and matchup.",
+          "starting": {
+            "label": "Starting items",
+            "items": [
+              {
+                "id": "1055",
+                "name": "Doran’s Blade",
+                "icon": "1055.png",
+                "why": "Attack damage and sustain support early trades."
+              },
+              {
+                "id": "2003",
+                "name": "Health Potion",
+                "icon": "2003.png",
+                "why": "Restores health after an early trade."
+              }
+            ],
+            "note": "Adapt your opening purchase to the lane matchup."
+          },
+          "core": {
+            "label": "Core items",
+            "items": [
+              {
+                "id": "6696",
+                "name": "Axiom Arc",
+                "icon": "6696.png",
+                "why": "Ability haste and ultimate resets support repeated skirmishes."
+              },
+              {
+                "id": "2517",
+                "name": "Endless Hunger",
+                "icon": "2517.png",
+                "why": "Adds damage and sustain to extended fights."
+              },
+              {
+                "id": "6333",
+                "name": "Death’s Dance",
+                "icon": "6333.png",
+                "why": "Delays physical burst and helps you survive takedowns."
+              }
+            ]
+          },
+          "boots": {
+            "label": "Boots",
+            "items": [
+              {
+                "id": "3158",
+                "name": "Ionian Boots of Lucidity",
+                "icon": "3158.png",
+                "why": "Ability haste supports frequent spell rotations."
+              },
+              {
+                "id": "3047",
+                "name": "Plated Steelcaps",
+                "icon": "3047.png",
+                "why": "Choose against auto-attack-heavy physical damage."
+              },
+              {
+                "id": "3111",
+                "name": "Mercury’s Treads",
+                "icon": "3111.png",
+                "why": "Choose against heavy crowd control and magic damage."
+              }
+            ]
+          },
+          "situational": {
+            "label": "Situational items",
+            "items": [
+              {
+                "id": "3156",
+                "name": "Maw of Malmortius",
+                "icon": "3156.png",
+                "why": "Anti-magic shield against burst-heavy teams."
+              },
+              {
+                "id": "6694",
+                "name": "Serylda’s Grudge",
+                "icon": "6694.png",
+                "why": "Armor penetration helps against durable opponents."
+              },
+              {
+                "id": "3026",
+                "name": "Guardian Angel",
+                "icon": "3026.png",
+                "why": "A second life can secure a late-game fight."
+              },
+              {
+                "id": "3071",
+                "name": "Black Cleaver",
+                "icon": "3071.png",
+                "why": "Health, haste and armor reduction in longer fights."
+              }
+            ]
+          },
+          "notes": [
+            "Buy a defensive answer when the enemy has heavy burst. First-item recommendations differ by data source; verify current ranked trends."
+          ]
+        }
+      ],
+      "matchups": {
+        "note": "Counter trends are from Lolalytics patch 16.21 Emerald+ for this role. They are statistical signals, not hard counters in every game; lane skill, team composition and jungle pressure still matter.",
+        "difficult": [
+          {
+            "name": "Pantheon",
+            "icon": "Pantheon.png",
+            "advice": "Bait his shield and avoid trading into his stun. Take short trades after his key cooldowns."
+          },
+          {
+            "name": "Renekton",
+            "icon": "Renekton.png",
+            "advice": "Keep the wave near your side, avoid fighting while his fury is high, and use E to retreat from his second dash."
+          },
+          {
+            "name": "Kennen",
+            "icon": "Kennen.png",
+            "advice": "Preserve E to absorb poke and look for a flank or jungle assist; avoid engaging through open space."
+          }
+        ],
+        "favorable": [
+          {
+            "name": "K’Sante",
+            "icon": "KSante.png",
+            "advice": "Dodge his Q and avoid being pulled into W. Punish missed abilities with a short trade, then disengage."
+          },
+          {
+            "name": "Ambessa",
+            "icon": "Ambessa.png",
+            "advice": "Track her energy and dash cooldowns. Short trades after she spends a dash help you avoid her full combo."
+          },
+          {
+            "name": "Heimerdinger",
+            "icon": "Heimerdinger.png",
+            "advice": "Find an angle around his turrets rather than dashing directly into them. Punish him when his stun grenade is down."
+          }
+        ]
+      },
+      "sources": [
+        {
+          "label": "U.GG — Riven top build, runes and skill order",
+          "url": "https://u.gg/lol/champions/riven/build?role=top&region=world"
+        },
+        {
+          "label": "OP.GG — Riven top build and matchups",
+          "url": "https://op.gg/lol/champions/riven/build/top"
+        },
+        {
+          "label": "Lolalytics — Riven top build and counters (Emerald+)",
+          "url": "https://lolalytics.com/lol/riven/build/?lane=top&tier=emerald_plus"
+        }
+      ]
+    },
+    "gangplank": {
+      "slug": "gangplank",
+      "name": "Gangplank",
+      "title": "the Saltwater Scourge",
+      "role": "top",
+      "roleLabel": "Top",
+      "difficulty": "very-high",
+      "difficultyLabel": "Very high",
+      "tagline": "Gangplank is a high-skill top-lane champion who combines ranged farming, powerful area damage and global teamfight influence. His signature mechanic is Powder Keg, which allows him to create explosive chains that can punish enemies who group together or misposition.",
+      "metaTitle": "Gangplank Guide: Barrel Combos, Tips and Advanced Mechanics | League of Legends",
+      "metaDescription": "Learn Gangplank’s runes, build, barrel combos and top-lane matchups for League of Legends patch 26.21.",
+      "h1": "Gangplank Guide: Barrel Combos, Tips and Advanced Mechanics",
+      "heroIntro": [
+        "Gangplank is a high-skill top-lane champion who combines ranged farming, powerful area damage and global teamfight influence. His signature mechanic is Powder Keg, which allows him to create explosive chains that can punish enemies who group together or misposition.",
+        "To master Gangplank, you need to manage your barrels, understand his passive resets, farm consistently and recognize when to use your global ultimate."
+      ],
+      "quickAnswer": "Gangplank: max Q > E > W, use Deathfire Touch, and follow the Gangplank critical strike core as a patch 26.21 baseline. Read the matchup notes below and adapt your items to the enemy composition.",
+      "quickStart": {
+        "role": "Top lane",
+        "secondaryRoles": "Not specified in this guide",
+        "difficulty": "Very high",
+        "playstyle": "A scaling top-lane specialist with global impact",
+        "keyMechanic": "Timing connected Powder Keg explosions and passive resets",
+        "beginnerMistake": "Using barrels without considering their health countdown. The opponent may destroy them first.",
+        "winCondition": "Farm consistently, threaten with barrel chains and support fights across the map"
+      },
+      "abilities": [
+        {
+          "key": "P",
+          "name": "Trial by Fire",
+          "icon": "Gangplank_Passive.png",
+          "description": "Periodically, Gangplank's next melee basic attack deals bonus true damage over time and grants movement speed when it hits. Exploding a Powder Keg resets the passive's cooldown and grants its movement-speed benefit.",
+          "tips": [
+            "Look for safe opportunities to apply the empowered melee attack.",
+            "Use a barrel explosion to refresh the passive when you can follow up safely.",
+            "Take advantage of the movement speed to chase, reposition or disengage.",
+            "Do not force a melee attack against a dangerous opponent simply because your passive is ready."
+          ]
+        },
+        {
+          "key": "Q",
+          "name": "Parrrley",
+          "icon": "GangplankQ.png",
+          "description": "Gangplank fires his pistol at a target, dealing physical damage. If Parrrley kills a unit, it grants additional gold and Silver Serpents.",
+          "tips": [
+            "Secure last hits when doing so is safe and useful.",
+            "Farm Silver Serpents to unlock upgrades for Cannon Barrage.",
+            "Use the ability to apply pressure without automatically committing to melee range.",
+            "Be aware of your mana and the risk of repeatedly using Q against a champion who can retaliate."
+          ]
+        },
+        {
+          "key": "W",
+          "name": "Remove Scurvy",
+          "icon": "GangplankW.png",
+          "description": "Gangplank consumes citrus to heal himself and remove crowd-control effects.",
+          "tips": [
+            "Save W for meaningful crowd control or dangerous situations when possible.",
+            "Remember that its cleanse does not remove every possible debuff or damage effect.",
+            "Do not assume it makes you immune to follow-up crowd control.",
+            "Correct timing can help you survive a stun or escape a dangerous engagement."
+          ]
+        },
+        {
+          "key": "E",
+          "name": "Powder Keg",
+          "icon": "GangplankE.png",
+          "description": "Gangplank places a barrel that he can attack to trigger an explosion. The blast spreads the triggering attack's damage, slows enemies and deals additional damage to enemy champions. Connected barrels can trigger chain reactions.",
+          "tips": [
+            "Place barrels where enemies may need to walk.",
+            "Use connected barrels to extend the threat beyond a single explosion.",
+            "Learn the barrel's health countdown and attack timing.",
+            "Remember that enemies can destroy a barrel before you detonate it.",
+            "Use the slow to make follow-up attacks easier.",
+            "Powder Keg is the core of Gangplank's most distinctive damage patterns."
+          ]
+        },
+        {
+          "key": "R",
+          "name": "Cannon Barrage",
+          "icon": "GangplankR.png",
+          "description": "Gangplank calls down a bombardment over a target area anywhere on the map. The ultimate can damage and slow enemies, helping influence fights even when he is far away.",
+          "tips": [
+            "Support fights in other lanes without abandoning your own lane unnecessarily.",
+            "Help allies disengage or secure a kill.",
+            "Use it to influence fights around objectives.",
+            "Consider the enemy's movement before choosing the target area.",
+            "Cannon Barrage can also be upgraded using Silver Serpents earned through Parrrley. Check the current in-game upgrade options when deciding how to invest them."
+          ]
+        }
+      ],
+      "combos": [
+        {
+          "name": "Single-barrel punish",
+          "sequence": [],
+          "situation": "Single-barrel punish",
+          "execution": "Place a barrel, wait for a suitable opportunity and attack it to detonate it when an enemy is in range. This is the simplest way to learn the explosion radius, timing and damage pattern.",
+          "mistake": "Adapt the sequence to the situation; do not execute it automatically."
+        },
+        {
+          "name": "Double-barrel chain",
+          "sequence": [
+            {
+              "key": "E",
+              "label": "E"
+            },
+            {
+              "key": "E",
+              "label": "E"
+            },
+            {
+              "key": "attack the first barrel",
+              "label": "attack the first barrel"
+            }
+          ],
+          "situation": "Double-barrel chain",
+          "execution": "Place two connected barrels, then attack the first one to trigger a chain explosion. The second barrel extends the reach of your attack. Positioning and timing matter because an opponent may destroy a barrel before you can activate it.",
+          "mistake": "Adapt the sequence to the situation; do not execute it automatically."
+        },
+        {
+          "name": "Triple-barrel chain",
+          "sequence": [
+            {
+              "key": "E",
+              "label": "E"
+            },
+            {
+              "key": "E",
+              "label": "E"
+            },
+            {
+              "key": "E",
+              "label": "E"
+            },
+            {
+              "key": "attack",
+              "label": "attack"
+            }
+          ],
+          "situation": "Triple-barrel chain",
+          "execution": "Create a connected chain of barrels and detonate the first one to extend the explosion across the chain. Practise the timing in Practice Tool. The sequence is not guaranteed to land simply because the barrels are connected; enemies can move, attack the barrels or leave the affected area.",
+          "mistake": "Adapt the sequence to the situation; do not execute it automatically."
+        },
+        {
+          "name": "Passive reset",
+          "sequence": [
+            {
+              "key": "passive attack",
+              "label": "passive attack"
+            },
+            {
+              "key": "barrel explosion",
+              "label": "barrel explosion"
+            },
+            {
+              "key": "passive attack",
+              "label": "passive attack"
+            }
+          ],
+          "situation": "Passive reset",
+          "execution": "Use Trial by Fire on a target, trigger a Powder Keg explosion and look for a safe opportunity to apply the refreshed passive again. This can create a powerful damage and movement-speed window, but it requires you to reach melee range safely.",
+          "mistake": "Adapt the sequence to the situation; do not execute it automatically."
+        },
+        {
+          "name": "Global support",
+          "sequence": [
+            {
+              "key": "R",
+              "label": "R"
+            },
+            {
+              "key": "reposition or follow up",
+              "label": "reposition or follow up"
+            }
+          ],
+          "situation": "Global support",
+          "execution": "Use Cannon Barrage to support a fight elsewhere on the map, then decide whether to continue farming, rotate or join the fight. You do not need to stop everything you are doing whenever you press R. The goal is to gain map-wide value without sacrificing more than necessary.",
+          "mistake": "Adapt the sequence to the situation; do not execute it automatically."
+        }
+      ],
+      "sections": [
+        {
+          "id": "laning",
+          "heading": "Laning Phase",
+          "paragraphs": [
+            "Gangplank benefits from consistent farming and careful management of risk.",
+            "Gangplank's early game can vary considerably with the matchup. Avoid assuming that a champion with strong scaling can always win a direct early trade."
+          ],
+          "bullets": [
+            "Use Q to secure valuable last hits when it is safe.",
+            "Track your mana rather than spending it on every available opportunity.",
+            "Place barrels where they threaten the opponent's approach to the minion wave.",
+            "Learn the timing of barrel health changes so you can detonate them before an opponent does.",
+            "Use W thoughtfully when enemy crowd control threatens your survival.",
+            "Pay attention to the enemy jungler before pushing forward."
+          ]
+        },
+        {
+          "id": "mid-late",
+          "heading": "Mid and Late Game",
+          "paragraphs": [
+            "Gangplank can influence fights through area damage and his global ultimate.",
+            "Gangplank's contribution is not limited to securing kills. A well-placed barrel can force opponents away from an objective or disrupt their formation."
+          ],
+          "bullets": [
+            "Look for opportunities to hit multiple opponents with a barrel chain.",
+            "Avoid placing barrels where the enemy can safely destroy them before you act.",
+            "Use terrain and objective approaches to make it harder for opponents to avoid your explosions.",
+            "Support distant fights with Cannon Barrage.",
+            "Maintain safe positioning when preparing a barrel combo.",
+            "Use your passive movement speed to reposition when an explosion triggers it."
+          ]
+        },
+        {
+          "id": "final-advice",
+          "heading": "Final Advice",
+          "paragraphs": [
+            "Mastering Gangplank is about consistency, timing and preparation. Learn to farm reliably, control your barrel chains and recognize opportunities to influence fights with Cannon Barrage. Difficult combos are useful, but good decisions and reliable execution win games."
+          ]
+        }
+      ],
+      "mistakes": [
+        "Using barrels without considering their health countdown. The opponent may destroy them first.",
+        "Ignoring passive resets. Powder Keg explosions can refresh Trial by Fire.",
+        "Spending all available mana on Q. This may leave you without resources for an important exchange.",
+        "Using W too early. You may need it for a more dangerous crowd-control effect.",
+        "Focusing only on difficult combos. Reliable single-barrel hits and good positioning are valuable too.",
+        "Forgetting the global ultimate. Cannon Barrage can contribute to fights outside your immediate location."
+      ],
+      "practicePlan": [
+        {
+          "title": "Practice 1",
+          "steps": [
+            "In Practice Tool:",
+            "Start with reliable execution before attempting difficult chains in live games.",
+            "Learn the health countdown of Powder Keg."
+          ]
+        },
+        {
+          "title": "Practice 2",
+          "steps": [
+            "Practise attacking a single barrel at the right moment.",
+            "Build double- and triple-barrel chains.",
+            "Practise the timing needed to detonate connected barrels before an opponent can destroy them."
+          ]
+        },
+        {
+          "title": "Practice 3",
+          "steps": [
+            "Combine passive attacks and barrel explosions to understand the reset.",
+            "Practise using Cannon Barrage while monitoring the wider map."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "Is Gangplank difficult to learn?",
+          "a": "Yes. He requires strong farming, barrel timing, positioning and awareness of fights happening elsewhere on the map."
+        },
+        {
+          "q": "How do Gangplank's barrels work?",
+          "a": "Gangplank places Powder Kegs that he can attack to trigger explosions. Connected barrels can create chain reactions that extend the effective range of the attack."
+        },
+        {
+          "q": "What is a triple-barrel combo?",
+          "a": "It is a technique that links three Powder Kegs and detonates the first one to extend the explosion through the chain. Timing and positioning are essential."
+        },
+        {
+          "q": "How do you reset Gangplank's passive?",
+          "a": "Detonating a Powder Keg resets Trial by Fire's cooldown and grants its movement-speed benefit. This can create an opportunity to apply the passive again with a melee attack."
+        },
+        {
+          "q": "What are Silver Serpents used for?",
+          "a": "Parrrley can grant Silver Serpents when it kills a unit. Gangplank uses them to unlock upgrades for Cannon Barrage."
+        },
+        {
+          "q": "What is the best Gangplank build?",
+          "a": "A critical-strike path that amplifies Parrrley and barrel damage. Adapt boots and anti-armor choices to the enemy team. The Collector and Infinity Edge are common follow-ups, but exact item order varies. Buy anti-heal only when justified."
+        }
+      ],
+      "statsNote": "Build, rune and matchup recommendations are a patch 26.21 snapshot for ranked Summoner’s Rift, Emerald+. Matchup signals come from Lolalytics; item and rune paths were cross-checked with U.GG and OP.GG. Sample sizes and filters differ by site. Use these as a baseline, not guarantees, and recheck the live patch.",
+      "lastUpdated": "2026-10-28",
+      "skillOrder": {
+        "priority": "Q > E > W",
+        "start": "E → Q → W",
+        "levels": [
+          {
+            "level": 1,
+            "ability": "E"
+          },
+          {
+            "level": 2,
+            "ability": "Q"
+          },
+          {
+            "level": 3,
+            "ability": "W"
+          },
+          {
+            "level": 4,
+            "ability": "Q"
+          },
+          {
+            "level": 5,
+            "ability": "Q"
+          },
+          {
+            "level": 6,
+            "ability": "R"
+          },
+          {
+            "level": 7,
+            "ability": "Q"
+          },
+          {
+            "level": 8,
+            "ability": "E"
+          },
+          {
+            "level": 9,
+            "ability": "Q"
+          },
+          {
+            "level": 10,
+            "ability": "E"
+          },
+          {
+            "level": 11,
+            "ability": "R"
+          },
+          {
+            "level": 12,
+            "ability": "E"
+          },
+          {
+            "level": 13,
+            "ability": "E"
+          },
+          {
+            "level": 14,
+            "ability": "W"
+          },
+          {
+            "level": 15,
+            "ability": "W"
+          },
+          {
+            "level": 16,
+            "ability": "R"
+          },
+          {
+            "level": 17,
+            "ability": "W"
+          },
+          {
+            "level": 18,
+            "ability": "W"
+          }
+        ],
+        "explanation": [
+          "Q is maxed first for lane pressure, farming and Silver Serpent income.",
+          "E is maxed second because barrel damage is central to your mid-game threat. Max W last and take R at levels 6, 11 and 16."
+        ],
+        "note": "E-Q-W is the common sample start. Q at level 1 is viable when you need safe ranged farming."
+      },
+      "runes": {
+        "title": "Deathfire Touch poke",
+        "summary": "Deathfire Touch supports repeated poke through Parrrley and barrel explosions. Sorcery gives lane pressure; Precision secondary helps with mana and durable opponents.",
+        "primaryTree": {
+          "name": "Sorcery",
+          "icon": "perk-images/Styles/7202_Sorcery.png"
+        },
+        "secondaryTree": {
+          "name": "Precision",
+          "icon": "perk-images/Styles/7201_Precision.png"
+        },
+        "keystone": {
+          "id": 8992,
+          "name": "Deathfire Touch",
+          "icon": "perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
+          "why": "Adds repeated damage to ranged poke and barrel pressure."
+        },
+        "primaryRunes": [
+          {
+            "id": 8224,
+            "name": "Axiom Arcanist",
+            "icon": "perk-images/Styles/Sorcery/NullifyingOrb/Axiom_Arcanist.png",
+            "why": "Improves ultimate value and ability damage."
+          },
+          {
+            "id": 8226,
+            "name": "Manaflow Band",
+            "icon": "perk-images/Styles/Sorcery/ManaflowBand/ManaflowBand.png",
+            "why": "Helps sustain Q use during lane."
+          },
+          {
+            "id": 8237,
+            "name": "Scorch",
+            "icon": "perk-images/Styles/Sorcery/Scorch/Scorch.png",
+            "why": "Adds early lane poke when abilities connect."
+          }
+        ],
+        "secondaryRunes": [
+          {
+            "id": 8009,
+            "name": "Presence of Mind",
+            "icon": "perk-images/Styles/Precision/PresenceOfMind/PresenceOfMind.png",
+            "why": "Mana restoration helps maintain lane pressure."
+          },
+          {
+            "id": 8017,
+            "name": "Cut Down",
+            "icon": "perk-images/Styles/Precision/CutDown/CutDown.png",
+            "why": "Useful against opponents building health."
+          }
+        ],
+        "alternatives": [
+          "Arcane Comet is an alternative poke keystone; compare current pick rates. Resolve secondaries can improve safety into hard lanes."
+        ],
+        "notes": [
+          "Rune popularity can shift after a patch; the cited live build pages should take precedence over this snapshot."
+        ]
+      },
+      "summonerSpells": [
+        {
+          "name": "Flash",
+          "icon": "SummonerFlash.png",
+          "why": "Essential escape and repositioning tool for a champion with limited mobility."
+        },
+        {
+          "name": "Ignite",
+          "icon": "SummonerDot.png",
+          "why": "Common lane setup to add kill pressure and reduce healing.",
+          "alternative": "Teleport is an option for a safer lane and map presence."
+        }
+      ],
+      "builds": [
+        {
+          "id": "gangplank-recommended",
+          "label": "Gangplank critical strike",
+          "badge": "Patch 26.21 ranked sample",
+          "summary": "A critical-strike path that amplifies Parrrley and barrel damage. Adapt boots and anti-armor choices to the enemy team.",
+          "starting": {
+            "label": "Starting items",
+            "items": [
+              {
+                "id": "1055",
+                "name": "Doran’s Blade",
+                "icon": "1055.png",
+                "why": "Attack damage supports early trades and last-hitting."
+              },
+              {
+                "id": "2003",
+                "name": "Health Potion",
+                "icon": "2003.png",
+                "why": "Lane sustain for early trades."
+              }
+            ],
+            "note": "Adapt your opening purchase to the lane matchup."
+          },
+          "core": {
+            "label": "Core items",
+            "items": [
+              {
+                "id": "3508",
+                "name": "Essence Reaver",
+                "icon": "3508.png",
+                "why": "Critical strike and mana support frequent Parrrley use."
+              },
+              {
+                "id": "6676",
+                "name": "The Collector",
+                "icon": "6676.png",
+                "why": "Lethality and execute pressure help finish targets."
+              },
+              {
+                "id": "3031",
+                "name": "Infinity Edge",
+                "icon": "3031.png",
+                "why": "Critical damage increases the threat of empowered attacks and barrels."
+              }
+            ]
+          },
+          "boots": {
+            "label": "Boots",
+            "items": [
+              {
+                "id": "3047",
+                "name": "Plated Steelcaps",
+                "icon": "3047.png",
+                "why": "Armor helps against physical lane pressure."
+              },
+              {
+                "id": "3158",
+                "name": "Ionian Boots of Lucidity",
+                "icon": "3158.png",
+                "why": "Ability haste supports more barrel and ultimate casts."
+              }
+            ]
+          },
+          "situational": {
+            "label": "Situational items",
+            "items": [
+              {
+                "id": "3036",
+                "name": "Lord Dominik’s Regards",
+                "icon": "3036.png",
+                "why": "Armor penetration against durable frontlines."
+              },
+              {
+                "id": "3033",
+                "name": "Mortal Reminder",
+                "icon": "3033.png",
+                "why": "Anti-heal and penetration against healing-heavy teams."
+              },
+              {
+                "id": "6673",
+                "name": "Immortal Shieldbow",
+                "icon": "6673.png",
+                "why": "A shield can protect you from burst."
+              },
+              {
+                "id": "6699",
+                "name": "Voltaic Cyclosword",
+                "icon": "6699.png",
+                "why": "An alternative damage profile for lethality pressure."
+              }
+            ]
+          },
+          "notes": [
+            "The Collector and Infinity Edge are common follow-ups, but exact item order varies. Buy anti-heal only when justified."
+          ]
+        }
+      ],
+      "matchups": {
+        "note": "Counter trends are from Lolalytics patch 16.21 Emerald+ for this role. They are statistical signals, not hard counters in every game; lane skill, team composition and jungle pressure still matter.",
+        "difficult": [
+          {
+            "name": "Kayle",
+            "icon": "Kayle.png",
+            "advice": "Use barrels to control the wave and deny free scaling. Coordinate pressure before she reaches her strongest levels."
+          },
+          {
+            "name": "Sion",
+            "icon": "Sion.png",
+            "advice": "Use barrels to contest the wave and punish his Q charge. Prioritize scaling and objective value over repeated all-ins."
+          },
+          {
+            "name": "Gwen",
+            "icon": "Gwen.png",
+            "advice": "Keep barrels between you, save W for key control, and avoid extended fights inside her mist."
+          }
+        ],
+        "favorable": [
+          {
+            "name": "Illaoi",
+            "icon": "Illaoi.png",
+            "advice": "Farm outside her threat with Q and barrels, sidestep E, and avoid standing near multiple tentacles. W can cleanse her slow, not undo damage."
+          },
+          {
+            "name": "Renekton",
+            "icon": "Renekton.png",
+            "advice": "Maintain distance and punish his approach with barrels. Track his fury and avoid close trades when it is high."
+          },
+          {
+            "name": "Yasuo",
+            "icon": "Yasuo.png",
+            "advice": "Space barrels so he cannot dash through the wave to reach you. Avoid placing a key barrel where Wind Wall blocks your setup."
+          }
+        ]
+      },
+      "sources": [
+        {
+          "label": "U.GG — Gangplank top build, runes and skill order",
+          "url": "https://u.gg/lol/champions/gangplank/build?role=top&region=world"
+        },
+        {
+          "label": "OP.GG — Gangplank top build and matchups",
+          "url": "https://op.gg/lol/champions/gangplank/build/top"
+        },
+        {
+          "label": "Lolalytics — Gangplank top build and counters (Emerald+)",
+          "url": "https://lolalytics.com/lol/gangplank/build/?lane=top&tier=emerald_plus"
+        }
+      ]
+    }
+  }
+}

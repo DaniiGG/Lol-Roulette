@@ -13,5 +13,57 @@
     "relatedReading": "Powiązane artykuły",
     "blog": "Blog",
     "onThisPage": "Na tej stronie",
-    "categoryCount": "{n} artykułów"
+    "categoryCount": "{n} artykułów",
+    "browseTips": "Przeglądaj porady",
+    "filterByCategory": "Filtruj według kategorii",
+    "home": "Strona główna",
+    "by": "Autor",
+    "heroTitle": "Poradniki, buildy i wskazówki do League of Legends",
+    "heroDesc": "Praktyczne poradniki, szczere opinie i świeże pomysły dla każdej roli — od pierwszej gry po wspinaczkę w ranked. Aktualizowane wraz z metą i powiązane z narzędziami, których już używasz.",
+    "featuredLabel": "Polecane",
+    "latestLabel": "Najnowsze artykuły",
+    "categoriesLabel": "Przeglądaj według tematu",
+    "searchLabel": "Szukaj",
+    "searchPlaceholder": "Szukaj poradników, championów, wskazówek...",
+    "searchNoResults": "Brak wyników dla",
+    "allLabel": "Wszystko",
+    "readTime": "{n} min czytania",
+    "published": "Opublikowano",
+    "updated": "Zaktualizowano",
+    "availableIn": "Dostępne w",
+    "tryApp": "Wypróbuj League Roulette",
+    "tryAppDesc": "Nie wiesz, kim grać? Pozwól League Roulette wybrać twojego następnego championa.",
+    "ctaMidTitle": "Utknąłeś na swoim mainie?",
+    "ctaMidDesc": "Losowy wybór przełamuje rutynę. Pozwól League Roulette wybrać twojego następnego championa.",
+    "backToAll": "Wszystkie artykuły",
+    "categories": {
+        "champions": {
+            "name": "Poradniki championów",
+            "desc": "Archetypy, wybory i wskazówki według roli: top, jungle, mid, bot i support."
+        },
+        "guides": {
+            "name": "Poradniki",
+            "desc": "Mechaniki i procesy, które poprawiają twoją grę: matchupy, rotacje, podstawy."
+        },
+        "tier-lists": {
+            "name": "Tier listy",
+            "desc": "Jak czytać metę: tiery, dane i kiedy lista ci nie pomaga."
+        },
+        "beginners": {
+            "name": "Poradniki dla początkujących",
+            "desc": "Zacznij grać w League bez walki z kitem: wyrozumiałe postacie i pierwsze kroki."
+        },
+        "ranked": {
+            "name": "Ranked",
+            "desc": "Struktura sesji, nawyki i błędy, które blokują wspinaczkę."
+        },
+        "mechanics": {
+            "name": "Mechaniki",
+            "desc": "Farming, fale i micro: podstawy, które kumulują się w każdej grze."
+        },
+        "league-roulette": {
+            "name": "League Roulette",
+            "desc": "Losowe wyzwania: jak zamienić ruletkę w realną poprawę."
+        }
+    }
 }

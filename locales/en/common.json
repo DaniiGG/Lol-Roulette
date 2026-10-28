@@ -7,6 +7,7 @@
         "faq": "FAQ",
         "about": "About",
         "mastery": "Mastery",
+        "masteryTree": "Mastery Tree",
         "blog": "Blog",
         "challenges": "Challenges",
         "tierlist": "Tier List",
@@ -700,6 +701,7 @@
         "faq8A": "100% mobile-friendly. Spin the roulette on phone, tablet, or desktop."
     },
     "localeSwitcher": {
+        "unavailable": "Not available in this language",
         "label": "Language"
     },
     "championMastery": {

@@ -64,7 +64,11 @@
         "matchMaking": {
             "verifying": "Wedstrijd worden geverifieerd...",
             "verify": "Verifieer Wedstrijd"
-        }
+        },
+        "editPool": "Championpool bewerken",
+        "usePool": "Pool gebruiken",
+        "challengeActive": "Uitdaging actief - Lane is vergrendeld",
+        "lane": "Lane"
     },
     "championCard": {
         "yourChampion": "Jouw Kampioen",
@@ -561,7 +565,8 @@
             "Win streak bijhouden",
             "Wereldwijd klassement",
             "100% gratis",
-            "Mobiel-vriendelijke interface"
+            "Mobiel-vriendelijke interface",
+            "Mobielvriendelijke LoL-roulette"
         ],
         "whyTitle": "Waarom een Willekeurige Kampioen Generator?",
         "whyText": "Een willekeurige LoL kampioen kiezer helpt je:",
@@ -609,6 +614,7 @@
         "whatIs": "Wat is League Roulette?"
     },
     "localeSwitcher": {
+        "unavailable": "Niet beschikbaar in deze taal",
         "label": "Taal"
     },
     "mastery": {
@@ -673,7 +679,12 @@
             "support": "Support"
         },
         "title": "Winst percentage",
-        "winRate": "Winst percentage"
+        "winRate": "Winst percentage",
+        "mode": {
+            "all": "Alle modi",
+            "classic": "5v5 SR",
+            "aram": "ARAM"
+        }
     },
     "faqContent": [
         {
@@ -819,7 +830,9 @@
         "title": "Champion pool",
         "desc": "Kies minimaal 5 champions per lane",
         "minPerLane": "5 per lane nodig",
-        "totalSelected": "Geselecteerd: {count}"
+        "totalSelected": "Geselecteerd: {count}",
+        "cancel": "Annuleren",
+        "save": "Pool opslaan"
     },
     "heroTitle1": "League Roulette",
     "heroTitle2": "Willekeurige Challenge",

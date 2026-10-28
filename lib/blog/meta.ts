@@ -1,3 +1,7 @@
+import { getPathname } from '@/i18n/navigation'
+import { BLOG_CATEGORY_ROUTES, type AppPathnames, type Locale } from '@/i18n/routes'
+import { SPANISH_BLOG_SLUGS } from './localized-slugs'
+
 export type BlogCategorySlug =
   | 'champions'
   | 'guides'
@@ -410,6 +414,16 @@ export const BLOG_POST_META: Record<string, BlogPostMeta> = {
   },
 }
 
+/**
+ * Editorial Spanish slugs are stored in a pure data module so next.config.ts
+ * can generate permanent redirects without importing React navigation code.
+ */
+for (const [canonicalSlug, spanishSlug] of Object.entries(SPANISH_BLOG_SLUGS)) {
+  const meta = BLOG_POST_META[canonicalSlug]
+  if (!meta) continue
+  meta.localizedSlugs = { ...(meta.localizedSlugs ?? {}), es: spanishSlug }
+}
+
 export const BLOG_SLUGS = Object.keys(BLOG_POST_META)
 
 export const ALL_LANES = 'all-lanes'
@@ -446,8 +460,57 @@ export function getLocalizedSlug(slug: string, locale: string): string {
 
 /** Localized public path for a blog post. */
 export function getPostHref(slug: string, locale: string): string {
-  const localized = getLocalizedSlug(slug, locale)
-  return locale === 'en' ? `/blog/${localized}` : `/${locale}/blog/${localized}`
+  return getPathname({
+    locale: locale as Locale,
+    href: {
+      pathname: '/blog/[slug]',
+      params: { slug: getLocalizedSlug(slug, locale) },
+    },
+  })
+}
+
+/** Localized public path for the blog index. */
+export function getBlogIndexHref(locale: string): string {
+  return getPathname({ locale: locale as Locale, href: { pathname: '/blog' } })
+}
+
+/** Stable route identifier for a blog category, if it exists. */
+export function getCategoryPathname(category: string): AppPathnames | undefined {
+  return BLOG_CATEGORY_ROUTES[category as keyof typeof BLOG_CATEGORY_ROUTES]
+}
+
+/** Localized public path for a blog category. */
+export function getCategoryHref(category: string, locale: string): string {
+  const pathname = getCategoryPathname(category)
+  if (!pathname) return getBlogIndexHref(locale)
+  return getPathname({ locale: locale as Locale, href: { pathname } as never })
+}
+
+/**
+ * Resolve legacy hrefs stored in translation/content JSON to their localized
+ * public URL. Handles the old `/es/...` prefixes, the home route, blog
+ * categories and blog posts. Unknown hrefs are returned unchanged.
+ */
+export function resolveLegacyHref(href: string, locale: string): string {
+  const normalized = href === '/es' ? '/' : href.replace(/^\/es(?=\/)/, '')
+
+  if (normalized === '/') {
+    return getPathname({ locale: locale as Locale, href: { pathname: '/' } })
+  }
+
+  const match = normalized.match(/^\/blog\/([^/?#]+)\/?$/)
+  if (!match) return href
+
+  const segment = match[1]
+  if (getCategoryPathname(segment)) return getCategoryHref(segment, locale)
+
+  const canonical = resolvePostSlug(segment, 'en') ?? resolvePostSlug(segment, locale)
+  return canonical ? getPostHref(canonical, locale) : href
+}
+
+/** @deprecated Use resolveLegacyHref instead. */
+export function resolveLegacyPostHref(href: string, locale: string): string {
+  return resolveLegacyHref(href, locale)
 }
 
 /**

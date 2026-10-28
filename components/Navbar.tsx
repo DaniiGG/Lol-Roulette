@@ -1,11 +1,20 @@
 "use client"
 
 import { useState } from 'react'
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
+import { Link, usePathname } from '@/i18n/navigation'
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
+import type { AppPathnames } from '@/i18n/routes'
 import LocaleSwitcher from './LocaleSwitcher'
+
+type NavHref = Exclude<AppPathnames, '/blog/[slug]' | '/blog/guides/[champion]'>
+
+type NavLink = {
+  href: NavHref
+  label: string
+  icon: string
+  isNew?: boolean
+}
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -15,12 +24,12 @@ export default function Navbar() {
 
   const isActive = (path: string) => path === '/blog' ? pathname.startsWith('/blog') : pathname === path
 
-const navLinks = [
+const navLinks: NavLink[] = [
     { href: '/', label: t('play'), icon: '🎮' },
     { href: '/leaderboard', label: t('leaderboard'), icon: '🏆' },
     { href: '/challenges', label: t('challenges'), icon: '⚡', isNew: true },
     { href: '/find-your-main', label: tQuiz('navLabel'), icon: '✦' },
-    {href: '/mastery', label: t('mastery'), icon: '📚'},
+    { href: '/mastery', label: t('mastery'), icon: '◈' },
     { href: '/howtoplay', label: t('howToPlay'), icon: '📖' },
   ]
 

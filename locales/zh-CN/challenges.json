@@ -1,116 +1,117 @@
 {
-  "weeklyChallenge": {
-    "title": "每周挑战",
-    "subtitle": "完成本周挑战赢得荣誉",
-    "challenges": [
-      {
-        "id": "support-only",
-        "name": "仅限辅助",
-        "description": "本周进行3场游戏，仅使用辅助英雄。不允许Carry！",
-        "emoji": "👩",
-        "deadline": "本周日",
-        "difficulty": "中等"
-      },
-      {
-        "id": "low-mastery",
-        "name": "低熟练度",
-        "description": "使用你不足10场游戏的英雄。扩展你的英雄池！",
-        "emoji": "🎯",
-        "deadline": "本周日",
-        "difficulty": "困难"
-      },
-      {
-        "id": "friends-roulette",
-        "name": "好友轮盘",
-        "description": "挑战3位好友进行团队轮盘。每个人转盘并玩自己的选择！",
-        "emoji": "🎉",
-        "deadline": "本周日",
-        "difficulty": "简单"
-      },
-      {
-        "id": "aram-only",
-        "name": "仅限ARAM",
-        "description": "本周在嚎哭深渊进行5场游戏。英雄总是随机的！",
-        "emoji": "🏟️",
-        "deadline": "本周日",
-        "difficulty": "中等"
-      },
-      {
-        "id": "champion-rotation",
-        "name": "英雄轮换",
-        "description": "使用本周免费轮换中的每个英雄。每人一局！",
-        "emoji": "🔄",
-        "deadline": "本周日",
-        "difficulty": "困难"
-      }
-    ]
-  },
-  "createChallenge": "创建你自己的挑战",
-  "shareCode": "分享代码",
-  "joinChallenge": "加入并旋转",
-  "back": "返回",
-  "sectionLabel": "每周挑战",
-  "startPlaying": "开始游戏",
-  "browseMore": "浏览博客",
-  "aramNote": "在ARAM中英雄总是随机的 - 直接登录游戏！",
-  "noChampions": "没有可用的每周挑战",
-
-  "sectionTitle": "挑战",
-  "sectionDescription": "激活限时挑战，在胜利中获得额外XP",
-  "activate": "激活",
-  "activated": "挑战已激活: {name}",
-  "activationFailed": "激活挑战失败",
-  "hasActiveChallenge": "已有活跃挑战",
-  "loginRequired": "请登录以激活挑战",
-  "difficulty": {
-    "easy": "简单",
-    "medium": "中等",
-    "hard": "困难"
-  },
-  "category": {
-    "mastery": "熟练度",
-    "region": "地区",
-    "class": "职业"
-  },
-  "requirement": {
-    "lowMastery": "使用熟练度低于{threshold}点的英雄游戏",
-    "region": "使用{region}地区的英雄获胜",
-    "class": "使用{class}职业的英雄获胜"
-  },
-  "duration": "时长",
-  "xpMultiplier": "XP倍率",
-  "timeRemaining": "剩余时间",
-  "expiresAt": "{time}过期",
-  "validWins": "有效胜利",
-  "bonusXP": "额外XP",
-  "totalXP": "总XP",
-  "xpMultiplierActive": "XP倍率激活:",
-  "onValidWins": "有效胜利时",
-  "challengeExpired": "挑战已过期",
-  "challengeExpiredDesc": "此挑战已过期。开始新挑战以继续获得额外XP。",
-  "history": "挑战历史",
-  "noHistory": "暂无挑战历史",
-  "noHistoryDesc": "完成挑战以查看记录",
-  "started": "已开始",
-  "ended": "已结束",
-  "wins": "胜利",
-  "status": {
-    "completed": "已完成",
-    "expired": "已过期",
-    "failed": "失败"
-  },
-  "result": {
-    "completed": "{wins}场有效胜利 • +{bonusXp}额外XP获得",
-    "expired": "挑战过期未完成",
-    "failed": "挑战失败"
-  },
-  "dailyRegion": "每日地区",
-  "dailyRegionDesc": "每天仅此地区挑战可用。UTC午夜更换。",
-  "weeklyChallenges": "每周挑战",
-  "changesMonday": "周一更换",
-  "durationShort": "3h",
-  "developmentNoticeTitle": "开发中",
-  "developmentNoticeDescription": "挑战功能仍在开发中。部分功能可能会出错或无法按预期运行。",
-  "activeChallenge": "当前挑战",
-  "requirementLabel": "要求"
+    "weeklyChallenge": {
+        "title": "每周挑战",
+        "subtitle": "完成本周挑战赢得荣誉",
+        "challenges": [
+            {
+                "id": "support-only",
+                "name": "仅限辅助",
+                "description": "本周进行3场游戏，仅使用辅助英雄。不允许Carry！",
+                "emoji": "👩",
+                "deadline": "本周日",
+                "difficulty": "中等"
+            },
+            {
+                "id": "low-mastery",
+                "name": "低熟练度",
+                "description": "使用你不足10场游戏的英雄。扩展你的英雄池！",
+                "emoji": "🎯",
+                "deadline": "本周日",
+                "difficulty": "困难"
+            },
+            {
+                "id": "friends-roulette",
+                "name": "好友轮盘",
+                "description": "挑战3位好友进行团队轮盘。每个人转盘并玩自己的选择！",
+                "emoji": "🎉",
+                "deadline": "本周日",
+                "difficulty": "简单"
+            },
+            {
+                "id": "aram-only",
+                "name": "仅限ARAM",
+                "description": "本周在嚎哭深渊进行5场游戏。英雄总是随机的！",
+                "emoji": "🏟️",
+                "deadline": "本周日",
+                "difficulty": "中等"
+            },
+            {
+                "id": "champion-rotation",
+                "name": "英雄轮换",
+                "description": "使用本周免费轮换中的每个英雄。每人一局！",
+                "emoji": "🔄",
+                "deadline": "本周日",
+                "difficulty": "困难"
+            }
+        ]
+    },
+    "createChallenge": "创建你自己的挑战",
+    "shareCode": "分享代码",
+    "joinChallenge": "加入并旋转",
+    "back": "返回",
+    "sectionLabel": "每周挑战",
+    "startPlaying": "开始游戏",
+    "browseMore": "浏览博客",
+    "aramNote": "在ARAM中英雄总是随机的 - 直接登录游戏！",
+    "noChampions": "没有可用的每周挑战",
+    "sectionTitle": "挑战",
+    "sectionDescription": "激活限时挑战，在胜利中获得额外XP",
+    "activate": "激活",
+    "activated": "挑战已激活: {name}",
+    "activationFailed": "激活挑战失败",
+    "hasActiveChallenge": "已有活跃挑战",
+    "loginRequired": "请登录以激活挑战",
+    "difficulty": {
+        "easy": "简单",
+        "medium": "中等",
+        "hard": "困难"
+    },
+    "category": {
+        "mastery": "熟练度",
+        "region": "地区",
+        "class": "职业"
+    },
+    "requirement": {
+        "lowMastery": "使用熟练度低于{threshold}点的英雄游戏",
+        "region": "使用{region}地区的英雄获胜",
+        "class": "使用{class}职业的英雄获胜"
+    },
+    "duration": "时长",
+    "xpMultiplier": "XP倍率",
+    "timeRemaining": "剩余时间",
+    "expiresAt": "{time}过期",
+    "validWins": "有效胜利",
+    "bonusXP": "额外XP",
+    "totalXP": "总XP",
+    "xpMultiplierActive": "XP倍率激活:",
+    "onValidWins": "有效胜利时",
+    "challengeExpired": "挑战已过期",
+    "challengeExpiredDesc": "此挑战已过期。开始新挑战以继续获得额外XP。",
+    "history": "挑战历史",
+    "noHistory": "暂无挑战历史",
+    "noHistoryDesc": "完成挑战以查看记录",
+    "started": "已开始",
+    "ended": "已结束",
+    "wins": "胜利",
+    "status": {
+        "completed": "已完成",
+        "expired": "已过期",
+        "failed": "失败"
+    },
+    "result": {
+        "completed": "{wins}场有效胜利 • +{bonusXp}额外XP获得",
+        "expired": "挑战过期未完成",
+        "failed": "挑战失败"
+    },
+    "dailyRegion": "每日地区",
+    "dailyRegionDesc": "每天仅此地区挑战可用。UTC午夜更换。",
+    "weeklyChallenges": "每周挑战",
+    "changesMonday": "周一更换",
+    "durationShort": "3h",
+    "developmentNoticeTitle": "开发中",
+    "developmentNoticeDescription": "挑战功能仍在开发中。部分功能可能会出错或无法按预期运行。",
+    "activeChallenge": "当前挑战",
+    "requirementLabel": "要求",
+    "categoryLabel": "类别",
+    "toastAnnouncement": "🎉 全新挑战系统已上线！试试每日地区挑战 + 3 个每周挑战。更多更新即将到来！"
 }

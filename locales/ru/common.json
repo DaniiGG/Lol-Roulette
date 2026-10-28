@@ -64,7 +64,11 @@
         "matchMaking": {
             "verifying": "Проверка матча...",
             "verify": "Проверить матч"
-        }
+        },
+        "editPool": "Изменить пул чемпионов",
+        "usePool": "Использовать пул",
+        "challengeActive": "Испытание активно — линия заблокирована",
+        "lane": "Линия"
     },
     "championCard": {
         "yourChampion": "Ваш чемпион",
@@ -161,7 +165,8 @@
         "faqModesQ": "What modes count?",
         "faqModesA": "Any matchmade game mode counts: Summoner's Rift (all queues), ARAM, and rotating game modes.",
         "gotIt": "Got it, let's play!",
-        "description": "Описание"
+        "description": "Описание",
+        "step3Desc": "После игры войдите через Riot ID и нажмите «Проверить матч», чтобы подтвердить, что вы играли назначенным чемпионом."
     },
     "autoVerify": {
         "title": "Автоматическая верификация",
@@ -560,7 +565,8 @@
             "Win streak tracking",
             "Global leaderboard",
             "100% free to use",
-            "Mobile-friendly interface"
+            "Mobile-friendly interface",
+            "Мобильная рулетка LoL"
         ],
         "whyTitle": "Why Use a Random Champion Generator?",
         "whyText": "Using a random LoL champion picker helps you:",
@@ -608,6 +614,7 @@
         "whatIs": "Что такое League Roulette?"
     },
     "localeSwitcher": {
+        "unavailable": "Недоступно на этом языке",
         "label": "Язык"
     },
     "mastery": {
@@ -672,7 +679,12 @@
             "support": "Support"
         },
         "title": "Процент побед",
-        "winRate": "Процент побед"
+        "winRate": "Процент побед",
+        "mode": {
+            "all": "Все режимы",
+            "classic": "5v5 SR",
+            "aram": "ARAM"
+        }
     },
     "faqContent": [
         {
@@ -818,7 +830,9 @@
         "title": "Пул чемпионов",
         "desc": "Выберите минимум 5 чемпионов на линию",
         "minPerLane": "5 на линию необходимо",
-        "totalSelected": "Выбрано: {count}"
+        "totalSelected": "Выбрано: {count}",
+        "cancel": "Отмена",
+        "save": "Сохранить пул"
     },
     "heroTitle1": "League Roulette",
     "heroTitle2": "Случайный челлендж",

@@ -2,7 +2,8 @@ import type { Metadata } from 'next'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { ArrowRight, BookOpen, ChevronRight, Dices, ListChecks, Sparkles } from 'lucide-react'
 import { Link } from '@/i18n/navigation'
-import { getBreadcrumbSchema, getHreflangAlternates } from '@/lib/seo-utils'
+import { getBreadcrumbSchema } from '@/lib/seo-utils'
+import { buildPageMetadata, localizedPath } from '@/lib/seo/page-metadata'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import FindYourMainClient from './FindYourMainClient'
 
@@ -10,46 +11,17 @@ type PageParams = { locale: string }
 
 const PAGE_PATH = '/find-your-main'
 
-function localizedPath(locale: string): string {
-  return locale === 'en' ? PAGE_PATH : `/${locale}${PAGE_PATH}`
-}
-
 export async function generateMetadata({ params }: { params: Promise<PageParams> }): Promise<Metadata> {
   const { locale } = await params
   setRequestLocale(locale)
   const t = await getTranslations('quiz')
-  const path = localizedPath(locale)
 
-  return {
+  return buildPageMetadata({
+    locale,
+    path: PAGE_PATH,
     title: t('meta.title'),
     description: t('meta.description'),
-    alternates: {
-      canonical: path,
-      languages: getHreflangAlternates(PAGE_PATH),
-    },
-    openGraph: {
-      title: t('meta.title'),
-      description: t('meta.description'),
-      url: path,
-      siteName: 'League Roulette',
-      type: 'website',
-      images: [
-        {
-          url: '/og-image.png',
-          width: 1200,
-          height: 630,
-          alt: t('intro.title'),
-        },
-      ],
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: t('meta.title'),
-      description: t('meta.description'),
-      images: ['/og-image.png'],
-      creator: '@LeagueRoulette',
-    },
-  }
+  })
 }
 
 export default async function FindYourMainPage({ params }: { params: Promise<PageParams> }) {
@@ -70,7 +42,7 @@ export default async function FindYourMainPage({ params }: { params: Promise<Pag
 
   const breadcrumbSchema = getBreadcrumbSchema([
     { name: 'League Roulette', path: locale === 'en' ? '/' : `/${locale}` },
-    { name: t('navLabel'), path: localizedPath(locale) },
+    { name: t('navLabel'), path: localizedPath(locale, PAGE_PATH) },
   ])
 
   return (

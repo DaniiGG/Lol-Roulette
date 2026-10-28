@@ -13,6 +13,7 @@ import type {
   BlogSource,
 } from '@/lib/blog/content'
 import Link from 'next/link'
+import { resolveLegacyHref } from '@/lib/blog/meta'
 
 interface BlogPostContentProps {
   post: BlogPost
@@ -212,7 +213,7 @@ function renderCtaBox(cta: BlogCta, paragraphs: string[] | undefined, locale: st
         ))}
       </div>
       <Link
-        href={cta.href}
+        href={resolveLegacyHref(cta.href, locale)}
         className="inline-flex items-center rounded-xl bg-[#C89B3C] px-6 py-3 font-semibold text-neutral-950 transition hover:bg-[#d9aa44]"
       >
         {locale === 'es' ? 'Gira la ruleta' : 'Spin the roulette'}
@@ -341,13 +342,13 @@ function renderSubsections(subsections: NonNullable<BlogSection['subsections']>)
   )
 }
 
-function renderLinks(links: NonNullable<BlogSection['links']>) {
+function renderLinks(links: NonNullable<BlogSection['links']>, locale: string) {
   return (
     <ul className="mt-6 grid gap-3 sm:grid-cols-2">
       {links.map((link) => (
         <li key={link.href}>
           <Link
-            href={link.href}
+            href={resolveLegacyHref(link.href, locale)}
             className="group block h-full rounded-xl border border-neutral-800 bg-neutral-900/60 p-4 transition hover:border-[#C89B3C]/50 hover:bg-neutral-900"
           >
             <span className="font-semibold text-[#C89B3C] group-hover:text-[#e8c77e]">
@@ -387,7 +388,7 @@ export default function BlogPostContent({ post, locale }: BlogPostContentProps) 
             )}
             {section.bullets?.length && renderBullets(section.bullets)}
             {section.subsections?.length ? renderSubsections(section.subsections) : null}
-            {section.links?.length ? renderLinks(section.links) : null}
+            {section.links?.length ? renderLinks(section.links, locale) : null}
             {section.table && renderTable(section.table)}
             {section.patchTable && renderPatchTable(section.patchTable, locale)}
             {section.cta && renderCtaBox(section.cta, section.paragraphs, locale)}

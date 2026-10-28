@@ -3,7 +3,8 @@ import { notFound, redirect } from 'next/navigation'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { getGraphSchema, getBreadcrumbSchema } from '@/lib/seo-utils'
 import { routing } from '@/i18n/routing'
-import Link from 'next/link'
+import { Link } from '@/i18n/navigation'
+import type { AppPathnames } from '@/i18n/routes'
 import Image from 'next/image'
 import Script from 'next/script'
 import BlogPostContent from '@/components/blog/BlogPostContent'
@@ -18,6 +19,7 @@ import {
   getRelatedSlugs,
   getLocalizedSlug,
   getPostHref,
+  getBlogIndexHref,
   resolvePostSlug,
   getSeoTitle,
   getSeoDescription,
@@ -169,10 +171,8 @@ export default async function BlogPostPage(props: BlogPostPageProps) {
   const rt = readingTime(post)
   const related = relatedPosts(blogPosts, canonicalSlug)
   const postPath = getPostHref(canonicalSlug, locale)
-  const blogPath = locale === 'en' ? '/blog' : `/${locale}/blog`
-  const categoryHref = category
-    ? (locale === 'en' ? `/blog/${category}` : `/${locale}/blog/${category}`)
-    : blogPath
+  const blogPath: AppPathnames = '/blog'
+  const categoryHref = (category ? `/blog/${category}` : '/blog') as AppPathnames
   const isTierList = canonicalSlug === TIER_LIST_SLUG
 
   let tierListData: PatchTierListData | null = null
@@ -224,7 +224,7 @@ export default async function BlogPostPage(props: BlogPostPageProps) {
 
   const breadcrumbSchema = getBreadcrumbSchema([
     { name: t('home'), path: locale === 'en' ? '/' : `/${locale}` },
-    { name: t('blog'), path: blogPath },
+    { name: t('blog'), path: getBlogIndexHref(locale) },
     { name: post.title, path: postPath },
   ])
 
@@ -281,7 +281,7 @@ export default async function BlogPostPage(props: BlogPostPageProps) {
           items={[
             { label: 'League Roulette', href: '/' },
             { label: t('blog'), href: '/blog' },
-            ...(catInfo ? [{ label: catInfo.name, href: `/blog/${category}` }] : []),
+            ...(catInfo ? [{ label: catInfo.name, href: categoryHref }] : []),
             { label: post.title },
           ]}
         />
@@ -291,16 +291,17 @@ export default async function BlogPostPage(props: BlogPostPageProps) {
           <div className="mb-6 flex items-center gap-2 flex-wrap">
             <span className="text-sm text-neutral-500">{t('availableIn')}</span>
             {availableLocales.map(l => (
-              <Link
+              <a
                 key={l}
                 href={getPostHref(canonicalSlug, l)}
+                hrefLang={l}
                 className={`px-2.5 py-1 rounded-full text-xs font-medium transition ${l === locale
                   ? 'bg-[#C89B3C] text-neutral-950'
                   : 'bg-neutral-800 text-neutral-300 hover:bg-neutral-700 hover:text-white'
                 }`}
               >
                 {l.toUpperCase()}
-              </Link>
+              </a>
             ))}
           </div>
         )}
@@ -309,7 +310,7 @@ export default async function BlogPostPage(props: BlogPostPageProps) {
           <div className="mb-4 flex flex-wrap items-center gap-2 text-sm text-neutral-500">
             {catInfo && (
               <Link
-                href={categoryHref}
+                href={categoryHref as never}
                 className="px-3 py-1 rounded-full bg-[#C89B3C]/20 text-[#C89B3C] font-medium hover:bg-[#C89B3C]/30 transition"
               >
                 {catInfo.name}
@@ -397,7 +398,7 @@ export default async function BlogPostPage(props: BlogPostPageProps) {
                   {t('ctaMidDesc')}
                 </p>
                 <Link
-                  href={locale === 'en' ? '/' : `/${locale}`}
+                  href="/"
                   className="inline-flex items-center rounded-xl bg-[#C89B3C] px-6 py-3 font-semibold text-neutral-950 transition hover:bg-[#d9aa44]"
                 >
                   {t('tryApp')}
@@ -415,7 +416,7 @@ export default async function BlogPostPage(props: BlogPostPageProps) {
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link
-                  href={locale === 'en' ? '/' : `/${locale}`}
+                  href="/"
                   className="rounded-xl bg-[#C89B3C] px-6 py-3 font-semibold text-neutral-950 transition hover:bg-[#d9aa44]"
                 >
                   {t('tryApp')}

@@ -1,116 +1,117 @@
 {
-  "weeklyChallenge": {
-    "title": "Sfida Settimanale",
-    "subtitle": "Completa la sfida settimanale per guadagnare diritti",
-    "challenges": [
-      {
-        "id": "support-only",
-        "name": "Solo Support",
-        "description": "Gioca 3 partite questa settimana giocando solo con champion di supporto. Niente carry permessi!",
-        "emoji": "👩",
-        "deadline": "Questa Domenica",
-        "difficulty": "Medio"
-      },
-      {
-        "id": "low-mastery",
-        "name": "Bassa Padronanza",
-        "description": "Gioca con champion su cui hai meno di 10 partite. Amplia il tuo pool!",
-        "emoji": "🎯",
-        "deadline": "Questa Domenica",
-        "difficulty": "Difficile"
-      },
-      {
-        "id": "friends-roulette",
-        "name": "Roulette Amici",
-        "description": "Sfida 3 amici a una roulette di gruppo. Ognuno gira e gioca la sua scelta!",
-        "emoji": "🎉",
-        "deadline": "Questa Domenica",
-        "difficulty": "Facile"
-      },
-      {
-        "id": "aram-only",
-        "name": "Solo ARAM",
-        "description": "Gioca 5 partite a Howling Abyss questa settimana. Il champion è sempre casuale!",
-        "emoji": "🏟️",
-        "deadline": "Questa Domenica",
-        "difficulty": "Medio"
-      },
-      {
-        "id": "champion-rotation",
-        "name": "Rotazione Champion",
-        "description": "Gioca con ogni champion gratuito nella rotazione di questa settimana. Una partita ciascuno!",
-        "emoji": "🔄",
-        "deadline": "Questa Domenica",
-        "difficulty": "Difficile"
-      }
-    ]
-  },
-  "createChallenge": "Crea la tua sfida",
-  "shareCode": "Condividi codice",
-  "joinChallenge": "Partecipa & Gira",
-  "back": "Indietro",
-  "sectionLabel": "Sfida Settimanale",
-  "startPlaying": "Inizia a Giocare",
-  "browseMore": "Sfoglia Blog",
-  "aramNote": "In ARAM il champion è sempre casuale - entra semplicemente e gioca!",
-  "noChampions": "Nessuna sfida settimanale disponibile",
-
-  "sectionTitle": "Sfide",
-  "sectionDescription": "Attiva sfide a tempo limitato per guadagnare XP bonus nelle vittorie",
-  "activate": "Attiva",
-  "activated": "Sfida attivata: {name}",
-  "activationFailed": "Errore nell'attivazione della sfida",
-  "hasActiveChallenge": "Sfida attiva già esistente",
-  "loginRequired": "Accedi per attivare le sfide",
-  "difficulty": {
-    "easy": "Facile",
-    "medium": "Medio",
-    "hard": "Difficile"
-  },
-  "category": {
-    "mastery": "Maestria",
-    "region": "Regione",
-    "class": "Classe"
-  },
-  "requirement": {
-    "lowMastery": "Gioca con un campione con meno di {threshold} punti maestria",
-    "region": "Vinci con un campione di {region}",
-    "class": "Vinci con un campione di classe {class}"
-  },
-  "duration": "Durata",
-  "xpMultiplier": "Moltiplicatore XP",
-  "timeRemaining": "TEMPO RIMANENTE",
-  "expiresAt": "Scade alle {time}",
-  "validWins": "Vittorie Valide",
-  "bonusXP": "XP Bonus",
-  "totalXP": "XP Totale",
-  "xpMultiplierActive": "Moltiplicatore XP Attivo:",
-  "onValidWins": "su vittorie valide",
-  "challengeExpired": "Sfida Scaduta",
-  "challengeExpiredDesc": "Questa sfida è scaduta. Inizia una nuova per continuare a guadagnare XP bonus.",
-  "history": "Storico Sfide",
-  "noHistory": "Nessuno storico sfide",
-  "noHistoryDesc": "Completa le sfide per vederle qui",
-  "started": "Iniziato",
-  "ended": "Terminato",
-  "wins": "vittorie",
-  "status": {
-    "completed": "Completato",
-    "expired": "Scaduto",
-    "failed": "Fallito"
-  },
-  "result": {
-    "completed": "{wins} vittorie valide • +{bonusXp} XP bonus guadagnati",
-    "expired": "Sfida scaduta senza completamento",
-    "failed": "Sfida fallita"
-  },
-  "dailyRegion": "Regione Giornaliera",
-  "dailyRegionDesc": "Solo questa sfida di regione è disponibile oggi. Cambia a mezzanotte UTC.",
-  "weeklyChallenges": "Sfide Settimanali",
-  "changesMonday": "Cambiano il lunedì",
-  "durationShort": "3h",
-  "developmentNoticeTitle": "In sviluppo",
-  "developmentNoticeDescription": "Le sfide sono ancora in fase di sviluppo. Alcune funzionalità potrebbero non funzionare o comportarsi in modo imprevisto.",
-  "activeChallenge": "Sfida attiva",
-  "requirementLabel": "Requisito"
+    "weeklyChallenge": {
+        "title": "Sfida Settimanale",
+        "subtitle": "Completa la sfida settimanale per guadagnare diritti",
+        "challenges": [
+            {
+                "id": "support-only",
+                "name": "Solo Support",
+                "description": "Gioca 3 partite questa settimana giocando solo con champion di supporto. Niente carry permessi!",
+                "emoji": "👩",
+                "deadline": "Questa Domenica",
+                "difficulty": "Medio"
+            },
+            {
+                "id": "low-mastery",
+                "name": "Bassa Padronanza",
+                "description": "Gioca con champion su cui hai meno di 10 partite. Amplia il tuo pool!",
+                "emoji": "🎯",
+                "deadline": "Questa Domenica",
+                "difficulty": "Difficile"
+            },
+            {
+                "id": "friends-roulette",
+                "name": "Roulette Amici",
+                "description": "Sfida 3 amici a una roulette di gruppo. Ognuno gira e gioca la sua scelta!",
+                "emoji": "🎉",
+                "deadline": "Questa Domenica",
+                "difficulty": "Facile"
+            },
+            {
+                "id": "aram-only",
+                "name": "Solo ARAM",
+                "description": "Gioca 5 partite a Howling Abyss questa settimana. Il champion è sempre casuale!",
+                "emoji": "🏟️",
+                "deadline": "Questa Domenica",
+                "difficulty": "Medio"
+            },
+            {
+                "id": "champion-rotation",
+                "name": "Rotazione Champion",
+                "description": "Gioca con ogni champion gratuito nella rotazione di questa settimana. Una partita ciascuno!",
+                "emoji": "🔄",
+                "deadline": "Questa Domenica",
+                "difficulty": "Difficile"
+            }
+        ]
+    },
+    "createChallenge": "Crea la tua sfida",
+    "shareCode": "Condividi codice",
+    "joinChallenge": "Partecipa & Gira",
+    "back": "Indietro",
+    "sectionLabel": "Sfida Settimanale",
+    "startPlaying": "Inizia a Giocare",
+    "browseMore": "Sfoglia Blog",
+    "aramNote": "In ARAM il champion è sempre casuale - entra semplicemente e gioca!",
+    "noChampions": "Nessuna sfida settimanale disponibile",
+    "sectionTitle": "Sfide",
+    "sectionDescription": "Attiva sfide a tempo limitato per guadagnare XP bonus nelle vittorie",
+    "activate": "Attiva",
+    "activated": "Sfida attivata: {name}",
+    "activationFailed": "Errore nell'attivazione della sfida",
+    "hasActiveChallenge": "Sfida attiva già esistente",
+    "loginRequired": "Accedi per attivare le sfide",
+    "difficulty": {
+        "easy": "Facile",
+        "medium": "Medio",
+        "hard": "Difficile"
+    },
+    "category": {
+        "mastery": "Maestria",
+        "region": "Regione",
+        "class": "Classe"
+    },
+    "requirement": {
+        "lowMastery": "Gioca con un campione con meno di {threshold} punti maestria",
+        "region": "Vinci con un campione di {region}",
+        "class": "Vinci con un campione di classe {class}"
+    },
+    "duration": "Durata",
+    "xpMultiplier": "Moltiplicatore XP",
+    "timeRemaining": "TEMPO RIMANENTE",
+    "expiresAt": "Scade alle {time}",
+    "validWins": "Vittorie Valide",
+    "bonusXP": "XP Bonus",
+    "totalXP": "XP Totale",
+    "xpMultiplierActive": "Moltiplicatore XP Attivo:",
+    "onValidWins": "su vittorie valide",
+    "challengeExpired": "Sfida Scaduta",
+    "challengeExpiredDesc": "Questa sfida è scaduta. Inizia una nuova per continuare a guadagnare XP bonus.",
+    "history": "Storico Sfide",
+    "noHistory": "Nessuno storico sfide",
+    "noHistoryDesc": "Completa le sfide per vederle qui",
+    "started": "Iniziato",
+    "ended": "Terminato",
+    "wins": "vittorie",
+    "status": {
+        "completed": "Completato",
+        "expired": "Scaduto",
+        "failed": "Fallito"
+    },
+    "result": {
+        "completed": "{wins} vittorie valide • +{bonusXp} XP bonus guadagnati",
+        "expired": "Sfida scaduta senza completamento",
+        "failed": "Sfida fallita"
+    },
+    "dailyRegion": "Regione Giornaliera",
+    "dailyRegionDesc": "Solo questa sfida di regione è disponibile oggi. Cambia a mezzanotte UTC.",
+    "weeklyChallenges": "Sfide Settimanali",
+    "changesMonday": "Cambiano il lunedì",
+    "durationShort": "3h",
+    "developmentNoticeTitle": "In sviluppo",
+    "developmentNoticeDescription": "Le sfide sono ancora in fase di sviluppo. Alcune funzionalità potrebbero non funzionare o comportarsi in modo imprevisto.",
+    "activeChallenge": "Sfida attiva",
+    "requirementLabel": "Requisito",
+    "categoryLabel": "Categoria",
+    "toastAnnouncement": "🎉 Il nuovo sistema di sfide è online! Prova la sfida quotidiana della regione + 3 sfide settimanali. Altri aggiornamenti in arrivo!"
 }

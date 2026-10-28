@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { buildPageMetadata } from '@/lib/seo/page-metadata'
 import Breadcrumbs from '@/components/Breadcrumbs'
+import { Link } from '@/i18n/navigation'
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
@@ -383,18 +384,18 @@ export default async function HowToPlayPage() {
               You now know everything you need to begin your League Roulette adventure. Time to spin the wheel and embrace the challenge!
             </p>
             <div className="flex gap-4 justify-center flex-wrap">
-              <a
+              <Link
                 href="/"
                 className="px-8 py-4 rounded-xl bg-[#C89B3C] text-neutral-950 font-bold hover:bg-[#d9aa44] transition text-lg"
               >
                 {t('ctaPlay')}
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/faq"
                 className="px-8 py-4 rounded-xl bg-neutral-800 text-white font-bold hover:bg-neutral-700 transition text-lg"
               >
                 {t('ctaFaq')}
-              </a>
+              </Link>
             </div>
           </section>
 

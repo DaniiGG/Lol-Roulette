@@ -61,5 +61,9 @@
             "name": "League Roulette",
             "desc": "ランダムピックの課題：ルーレットを成長に変える方法。"
         }
-    }
+    },
+    "browseTips": "ヒントを見る",
+    "filterByCategory": "カテゴリで絞り込む",
+    "home": "ホーム",
+    "by": "著者"
 }

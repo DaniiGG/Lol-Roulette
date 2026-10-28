@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect, useRef, useSyncExternalStore } from "react"
-import Link from "next/link"
+import { resolveLegacyPostHref } from "@/lib/blog/meta"
 import { useTranslations, useLocale } from "next-intl"
 import { useSearchParams } from "next/navigation"
 import { supabase } from "@/lib/supabase"
@@ -973,9 +973,9 @@ export default function Home() {
 
             <div className="grid gap-6 md:grid-cols-3">
               {t.raw('blogPosts').map((post: { href: string; title: string; desc: string }, i: number) => (
-                <Link
+                <a
                   key={post.href}
-                  href={post.href}
+                  href={resolveLegacyPostHref(post.href, locale)}
                   className="rounded-3xl border border-neutral-800 bg-neutral-900/80 p-6 transition hover:border-[#C89B3C]/40 hover:bg-neutral-900"
                 >
                   <h3 className="mb-3 text-2xl font-semibold text-white">
@@ -984,7 +984,7 @@ export default function Home() {
                   <p className="leading-7 text-neutral-400">
                     {post.desc}
                   </p>
-                </Link>
+                </a>
               ))}
             </div>
           </section>

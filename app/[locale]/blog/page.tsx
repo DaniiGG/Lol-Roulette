@@ -3,7 +3,8 @@ import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { BLOG_LOCALES, buildPageMetadata } from '@/lib/seo/page-metadata'
 import BlogSearch from '@/components/blog/BlogSearch'
 import BlogPostCard from '@/components/blog/BlogPostCard'
-import Link from 'next/link'
+import { Link } from '@/i18n/navigation'
+import { getCategoryHref } from '@/lib/blog/meta'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import { postsByCategory, sortByPublishedDesc, formatDate } from '@/lib/blog/content'
 import { CATEGORIES } from '@/lib/blog/categories'
@@ -100,9 +101,9 @@ export default async function BlogIndexPage({ params }: { params: Promise<{ loca
           </h2>
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
             {categoryCounts.map((cat, idx) => (
-              <Link
+              <a
                 key={cat.slug}
-                href={locale === 'en' ? `/blog/${cat.slug}` : `/${locale}/blog/${cat.slug}`}
+                href={getCategoryHref(cat.slug, locale)}
                 className="group p-6 rounded-2xl border border-neutral-800 bg-neutral-900/80 transition hover:border-[#C89B3C]/40 hover:bg-neutral-900"
                 style={{ animationDelay: `${200 + idx * 30}ms` }}
               >
@@ -116,7 +117,7 @@ export default async function BlogIndexPage({ params }: { params: Promise<{ loca
                 <p className="mt-2 text-sm text-neutral-400 line-clamp-2">
                   {t(`categories.${cat.slug}.desc`)}
                 </p>
-              </Link>
+              </a>
             ))}
           </div>
         </section>

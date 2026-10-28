@@ -1,8 +1,9 @@
 import { postsByCategory, sortByPublishedDesc } from '@/lib/blog/content'
 import BlogPostCard from './BlogPostCard'
-import Link from 'next/link'
+import { Link } from '@/i18n/navigation'
 import type { BlogPost } from '@/lib/blog/content'
 import { CATEGORIES, isCategorySlug } from '@/lib/blog/categories'
+import { getBlogIndexHref, getCategoryHref } from '@/lib/blog/meta'
 import Breadcrumbs from '@/components/Breadcrumbs'
 
 interface CategoryViewProps {
@@ -13,8 +14,8 @@ interface CategoryViewProps {
 }
 
 export default function CategoryView({ posts, locale, categorySlug, t }: CategoryViewProps) {
-  const blogPath = locale === 'en' ? '/blog' : `/${locale}/blog`
-  const categoryHref = (slug: string) => (locale === 'en' ? `/blog/${slug}` : `/${locale}/blog/${slug}`)
+  const blogPath = getBlogIndexHref(locale)
+  const categoryHref = (slug: string) => getCategoryHref(slug, locale)
   const catPosts = isCategorySlug(categorySlug) ? postsByCategory(posts, categorySlug) : []
   const sortedPosts = sortByPublishedDesc(catPosts)
   const otherCategories = CATEGORIES.filter(c => c.slug !== categorySlug)
@@ -43,20 +44,20 @@ export default function CategoryView({ posts, locale, categorySlug, t }: Categor
         </header>
 
         <div className="mb-8 flex flex-wrap gap-2" role="group" aria-label={t('filterByCategory')}>
-          <Link
+          <a
             href={blogPath}
             className={`px-4 py-2 rounded-full text-sm font-medium transition ${'bg-[#C89B3C] text-neutral-950'}`}
           >
             {t('allLabel')}
-          </Link>
+          </a>
           {otherCategories.map(cat => (
-            <Link
+            <a
               key={cat.slug}
               href={categoryHref(cat.slug)}
               className="px-4 py-2 rounded-full text-sm font-medium transition capitalize bg-neutral-800 text-neutral-300 hover:bg-neutral-700 hover:text-white"
             >
               {t(`categories.${cat.slug}.name`)}
-            </Link>
+            </a>
           ))}
         </div>
 

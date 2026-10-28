@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 import { useTranslations, useLocale } from "next-intl"
 import Cookies from "js-cookie"
-import ChampionMasteryTree from "@/components/ChampionMasteryTree"
+import MasteryTreeExplorer from "@/components/mastery-tree/MasteryTreeExplorer"
 import ChampionWinrate from "@/components/ChampionWinrate"
 import HybridLoginModal from "@/components/RSOLoginmodal"
 import Breadcrumbs from "@/components/Breadcrumbs"
@@ -190,7 +190,7 @@ export default function MasteryPage() {
             </div>
 
             {user && user.puuid && user.region && (
-              <ChampionMasteryTree puuid={user.puuid} region={user.region} />
+              <MasteryTreeExplorer readOnlyMastery />
             )}
 
             {user && user.puuid && user.region && (

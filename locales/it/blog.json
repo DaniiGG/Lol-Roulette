@@ -61,5 +61,9 @@
             "name": "League Roulette",
             "desc": "Sfide e pick casuali: come trasformare la roulette in vera crescita."
         }
-    }
+    },
+    "browseTips": "Sfoglia i consigli",
+    "filterByCategory": "Filtra per categoria",
+    "home": "Home",
+    "by": "Di"
 }

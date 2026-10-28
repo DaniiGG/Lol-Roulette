@@ -61,5 +61,9 @@
             "name": "League Roulette",
             "desc": "Desafios e picks aleatórios: como transformar a roleta em evolução real."
         }
-    }
+    },
+    "browseTips": "Ver dicas",
+    "filterByCategory": "Filtrar por categoria",
+    "home": "Início",
+    "by": "Por"
 }

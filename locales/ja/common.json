@@ -64,7 +64,11 @@
         "matchMaking": {
             "verifying": "試合を検証中...",
             "verify": "試合を検証"
-        }
+        },
+        "editPool": "チャンピオンプールを編集",
+        "usePool": "プールを使用",
+        "challengeActive": "チャレンジ進行中 - レーンは固定されています",
+        "lane": "レーン"
     },
     "championCard": {
         "yourChampion": "あなたのチャンピオン",
@@ -161,7 +165,8 @@
         "faqModesQ": "What modes count?",
         "faqModesA": "Any matchmade game mode counts: Summoner's Rift (all queues), ARAM, and rotating game modes.",
         "gotIt": "Got it, let's play!",
-        "description": "説明"
+        "description": "説明",
+        "step3Desc": "試合後、Riot IDでログインして「試合を確認」をクリックし、指定されたチャンピオンでプレイしたことを確認してください。"
     },
     "autoVerify": {
         "title": "自動検証",
@@ -560,7 +565,8 @@
             "Win streak tracking",
             "Global leaderboard",
             "100% free to use",
-            "Mobile-friendly interface"
+            "Mobile-friendly interface",
+            "モバイル対応のLoLルーレット"
         ],
         "whyTitle": "Why Use a Random Champion Generator?",
         "whyText": "Using a random LoL champion picker helps you:",
@@ -608,6 +614,7 @@
         "whatIs": "League Rouletteとは？"
     },
     "localeSwitcher": {
+        "unavailable": "この言語では利用できません",
         "label": "言語"
     },
     "mastery": {
@@ -672,7 +679,12 @@
             "support": "Support"
         },
         "title": "勝率",
-        "winRate": "勝率"
+        "winRate": "勝率",
+        "mode": {
+            "all": "すべてのモード",
+            "classic": "5v5 SR",
+            "aram": "ARAM"
+        }
     },
     "faqContent": [
         {
@@ -818,7 +830,9 @@
         "title": "チャンピオンプール",
         "desc": "各ラインで少なくとも5人のチャンピオンを選択",
         "minPerLane": "ラインごとに5人必要",
-        "totalSelected": "選択済み: {count}"
+        "totalSelected": "選択済み: {count}",
+        "cancel": "キャンセル",
+        "save": "プールを保存"
     },
     "heroTitle1": "League Roulette",
     "heroTitle2": "ランダムチャレンジ",

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { buildPageMetadata } from '@/lib/seo/page-metadata'
-import Link from 'next/link'
+import { Link } from '@/i18n/navigation'
 import Breadcrumbs from '@/components/Breadcrumbs'
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
@@ -73,7 +73,7 @@ export default async function PopularPage({ params }: { params: Promise<{ locale
                 <p className="mt-1 text-sm leading-relaxed text-neutral-300">{champion.description || ''}</p>
               </div>
               <Link
-                href={`/?champion=${encodeURIComponent(champion.name)}`}
+                href={{ pathname: '/', query: { champion: champion.name } }}
                 className="rounded-xl bg-[#C89B3C] px-4 py-2 text-sm font-semibold text-neutral-950 transition hover:bg-[#d9aa44]"
               >
                 {t('spinWith') || 'Spin with'}

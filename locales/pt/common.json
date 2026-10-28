@@ -64,7 +64,11 @@
         "matchMaking": {
             "verifying": "Verificando partida...",
             "verify": "Verificar Partida"
-        }
+        },
+        "editPool": "Editar pool de campeões",
+        "usePool": "Usar pool",
+        "challengeActive": "Desafio ativo - A rota está bloqueada",
+        "lane": "Rota"
     },
     "championCard": {
         "yourChampion": "Seu Campeão",
@@ -561,7 +565,8 @@
             "Rastreamento de sequências de vitórias",
             "Ranking global",
             "100% gratuito",
-            "Interface compatível com mobile"
+            "Interface compatível com mobile",
+            "Roleta de LoL compatível com celular"
         ],
         "whyTitle": "Por Que Usar um Gerador de Campeões Aleatórios?",
         "whyText": "Usar um seletor de campeões aleatórios LoL ajuda você a:",
@@ -609,6 +614,7 @@
         "whatIs": "O que é League Roulette?"
     },
     "localeSwitcher": {
+        "unavailable": "Não disponível neste idioma",
         "label": "Idioma"
     },
     "mastery": {
@@ -673,7 +679,12 @@
             "support": "Suporte"
         },
         "title": "Taxa de vitória",
-        "winRate": "Vitórias"
+        "winRate": "Vitórias",
+        "mode": {
+            "all": "Todos os modos",
+            "classic": "5v5 SR",
+            "aram": "ARAM"
+        }
     },
     "faqContent": [
         {
@@ -819,7 +830,9 @@
         "title": "Pool de campeões",
         "desc": "Escolha pelo menos 5 campeões por lane",
         "minPerLane": "5 por lane necessários",
-        "totalSelected": "Selecionados: {count}"
+        "totalSelected": "Selecionados: {count}",
+        "cancel": "Cancelar",
+        "save": "Salvar pool"
     },
     "heroTitle1": "League Roulette",
     "heroTitle2": "Desafio Aleatório",

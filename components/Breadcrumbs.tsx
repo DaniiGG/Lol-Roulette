@@ -1,9 +1,10 @@
 import { ChevronRight } from 'lucide-react'
 import { Link } from '@/i18n/navigation'
+import type { AppPathnames } from '@/i18n/routes'
 
 export type BreadcrumbItem = {
   label: string
-  href?: string
+  href?: AppPathnames
 }
 
 type BreadcrumbsProps = {
@@ -24,7 +25,7 @@ export default function Breadcrumbs({ items, className = '' }: BreadcrumbsProps)
           <span key={`${item.label}-${index}`} className="inline-flex items-center gap-1.5">
             {index > 0 && <ChevronRight className="h-3.5 w-3.5" aria-hidden="true" />}
             {item.href && !isLast ? (
-              <Link href={item.href} className="transition hover:text-zinc-300">
+              <Link href={item.href as never} className="transition hover:text-zinc-300">
                 {item.label}
               </Link>
             ) : (

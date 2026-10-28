@@ -61,5 +61,9 @@
             "name": "League Roulette",
             "desc": "随机选人挑战：把轮盘变成真正的成长。"
         }
-    }
+    },
+    "browseTips": "浏览技巧",
+    "filterByCategory": "按分类筛选",
+    "home": "首页",
+    "by": "作者"
 }

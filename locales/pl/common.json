@@ -64,7 +64,11 @@
         "matchMaking": {
             "verifying": "Weryfikacja meczu...",
             "verify": "Zweryfikuj mecz"
-        }
+        },
+        "editPool": "Edytuj pulę championów",
+        "usePool": "Użyj puli",
+        "challengeActive": "Wyzwanie aktywne - linia jest zablokowana",
+        "lane": "Linia"
     },
     "championCard": {
         "yourChampion": "Twój champion",
@@ -161,7 +165,8 @@
         "faqModesQ": "What modes count?",
         "faqModesA": "Any matchmade game mode counts: Summoner's Rift (all queues), ARAM, and rotating game modes.",
         "gotIt": "Got it, let's play!",
-        "description": "Opis"
+        "description": "Opis",
+        "step3Desc": "Po grze zaloguj się przez Riot ID i kliknij „Zweryfikuj mecz”, aby potwierdzić, że grałeś przydzielonym championem."
     },
     "autoVerify": {
         "title": "Automatyczna weryfikacja",
@@ -560,7 +565,8 @@
             "Win streak tracking",
             "Global leaderboard",
             "100% free to use",
-            "Mobile-friendly interface"
+            "Mobile-friendly interface",
+            "Mobilna ruletka LoL"
         ],
         "whyTitle": "Why Use a Random Champion Generator?",
         "whyText": "Using a random LoL champion picker helps you:",
@@ -608,6 +614,7 @@
         "whatIs": "Czym jest League Roulette?"
     },
     "localeSwitcher": {
+        "unavailable": "Niedostępne w tym języku",
         "label": "Język"
     },
     "mastery": {
@@ -672,7 +679,12 @@
             "support": "Support"
         },
         "title": "Wyniki",
-        "winRate": "Wyniki"
+        "winRate": "Wyniki",
+        "mode": {
+            "all": "Wszystkie tryby",
+            "classic": "5v5 SR",
+            "aram": "ARAM"
+        }
     },
     "faqContent": [
         {
@@ -818,7 +830,9 @@
         "title": "Pula championów",
         "desc": "Wybierz co najmniej 5 championów na lane",
         "minPerLane": "5 na lane wymaganych",
-        "totalSelected": "Wybrano: {count}"
+        "totalSelected": "Wybrano: {count}",
+        "cancel": "Anuluj",
+        "save": "Zapisz pulę"
     },
     "heroTitle1": "League Roulette",
     "heroTitle2": "Losowe wyzwanie",

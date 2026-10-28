@@ -1,8 +1,9 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
-import { buildPageMetadata } from '@/lib/seo/page-metadata'
+import { buildPageMetadata, localizedPath } from '@/lib/seo/page-metadata'
 import { routing } from '@/i18n/routing'
+import type { AppPathnames } from '@/i18n/routes'
 import { BLOG_SLUGS, blogKeywords } from '@/lib/blog-posts'
 import { getPostHref } from '@/lib/blog/meta'
 import Breadcrumbs from '@/components/Breadcrumbs'
@@ -73,7 +74,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
   return buildPageMetadata({
     locale,
-    path: `/${lane}`,
+    path: `/${lane}` as AppPathnames,
     title: copy.title,
     description: copy.description,
   })
@@ -101,9 +102,9 @@ export default async function LanePage({ params }: { params: Promise<{ locale: s
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: `https://leagueroulette.com` },
-      { '@type': 'ListItem', position: 2, name: t('blog') || 'Blog', item: `https://leagueroulette.com/blog` },
-      { '@type': 'ListItem', position: 3, name: copy.role, item: `https://leagueroulette.com/${lane}` },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: `https://leagueroulette.com${localizedPath(locale, '/')}` },
+      { '@type': 'ListItem', position: 2, name: t('blog') || 'Blog', item: `https://leagueroulette.com${localizedPath(locale, '/blog')}` },
+      { '@type': 'ListItem', position: 3, name: copy.role, item: `https://leagueroulette.com${localizedPath(locale, `/${lane}` as AppPathnames)}` },
     ],
   }
 

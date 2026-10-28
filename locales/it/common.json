@@ -64,7 +64,11 @@
         "matchMaking": {
             "verifying": "Verifica partita...",
             "verify": "Verifica partita"
-        }
+        },
+        "editPool": "Modifica pool di campioni",
+        "usePool": "Usa pool",
+        "challengeActive": "Sfida attiva - La corsia è bloccata",
+        "lane": "Corsia"
     },
     "championCard": {
         "yourChampion": "Il Tuo Campione",
@@ -561,7 +565,8 @@
             "Tracciamento strisce vincenti",
             "Classifica globale",
             "100% gratuito",
-            "Interfaccia mobile-friendly"
+            "Interfaccia mobile-friendly",
+            "Roulette LoL compatibile con mobile"
         ],
         "whyTitle": "Perché Usare un Generatore di Campioni Casuali?",
         "whyText": "Usare un selezionatore di campioni casuali LoL ti aiuta a:",
@@ -609,6 +614,7 @@
         "whatIs": "Cos'è League Roulette?"
     },
     "localeSwitcher": {
+        "unavailable": "Non disponibile in questa lingua",
         "label": "Lingua"
     },
     "mastery": {
@@ -673,7 +679,12 @@
             "support": "Support"
         },
         "title": "Vittorie",
-        "winRate": "Vittorie"
+        "winRate": "Vittorie",
+        "mode": {
+            "all": "Tutte le modalità",
+            "classic": "5v5 SR",
+            "aram": "ARAM"
+        }
     },
     "faqContent": [
         {
@@ -819,7 +830,9 @@
         "title": "Pool di campioni",
         "desc": "Scegli almeno 5 campioni per ruolo",
         "minPerLane": "5 per ruolo necessari",
-        "totalSelected": "Selezionati: {count}"
+        "totalSelected": "Selezionati: {count}",
+        "cancel": "Annulla",
+        "save": "Salva pool"
     },
     "heroTitle1": "League Roulette",
     "heroTitle2": "Sfida Casuale",

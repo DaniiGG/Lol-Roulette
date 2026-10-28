@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { buildPageMetadata } from '@/lib/seo/page-metadata'
 import Breadcrumbs from '@/components/Breadcrumbs'
+import { Link } from '@/i18n/navigation'
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
@@ -176,7 +177,7 @@ export default async function AboutPage() {
               {t('communityP2')}
             </p>
             <p className="text-neutral-300 text-lg leading-relaxed">
-              {communityBefore}<a href="/contact" className="text-[#C89B3C] hover:text-[#d9aa44] underline">{t('contactLink')}</a>{communityAfter}
+              {communityBefore}<Link href="/contact" className="text-[#C89B3C] hover:text-[#d9aa44] underline">{t('contactLink')}</Link>{communityAfter}
             </p>
           </section>
 
@@ -242,18 +243,18 @@ export default async function AboutPage() {
               {t('communityP1')}
             </p>
             <div className="flex gap-4 justify-center flex-wrap">
-              <a
+              <Link
                 href="/"
                 className="px-8 py-4 rounded-xl bg-[#C89B3C] text-neutral-950 font-bold hover:bg-[#d9aa44] transition text-lg"
               >
                 {t('ctaStart')}
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/howtoplay"
                 className="px-8 py-4 rounded-xl bg-neutral-800 text-white font-bold hover:bg-neutral-700 transition text-lg"
               >
                 {t('ctaLearn')}
-              </a>
+              </Link>
             </div>
           </section>
 
