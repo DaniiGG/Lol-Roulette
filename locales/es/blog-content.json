@@ -2871,5 +2871,1180 @@
         "url": "https://www.leagueoflegends.com/en-us/news/game-updates/"
       }
     ]
+  },
+  {
+    "slug": "lol-patch-26-22",
+    "title": "Parche 26.22 de LoL: todas las mejoras, nerfs y cambios de campeones",
+    "description": "Descubre todos los cambios del parche 26.22 de League of Legends: mejoras, nerfs, actualización de Mel y objetos.",
+    "keywords": [
+      "parche 26.22 de LoL",
+      "notas del parche 26.22",
+      "campeones mejorados LoL",
+      "campeones nerfeados LoL",
+      "cambios de objetos parche 26.22",
+      "actualización de Mel"
+    ],
+    "excerpt": "El parche 26.22 llega el 4 de noviembre de 2026 con 10 campeones mejorados, 3 debilitados, una gran actualización de Mel y 2 cambios en objetos. Consulta el desglose completo antes y después.",
+    "ctaLabel": "Gira un campeón aleatorio",
+    "ctaHref": "/es",
+    "heroIntro": [
+      "El parche 26.22 de League of Legends está programado para el miércoles 4 de noviembre de 2026. Trae otra ronda de ajustes centrada en campeones y estilos de juego que necesitan más fuerza, al mismo tiempo que recorta algunas de las elecciones más potentes.",
+      "El adelanto de Riot incluye 10 mejoras de campeones, 3 debilitamientos y una gran actualización de Mel que cambia su mecánica característica de reflejo de proyectiles en la W.",
+      "Importante: estos valores son del adelanto anunciado de Riot, no las notas definitivas. El parche 26.22 aún no está en vivo y los números de abajo pueden cambiar antes del lanzamiento."
+    ],
+    "sections": [
+      {
+        "heading": "Parche 26.22 de un vistazo",
+        "paragraphs": [
+          "El parche 26.22 es un parche de equilibrio con cambios concretos más que una renovación completa. El adelanto toca a 13 campeones: 10 reciben mejoras, 3 son debilitados y Mel recibe una actualización que rehace su W. También cambian dos objetos."
+        ],
+        "bullets": [
+          "Campeones mejorados (10): Aurelion Sol, Corki, Kayle, Maokai, Naafiri, Rumble, Shen, Smolder, Viktor y Zaahen.",
+          "Campeones debilitados (3): Locke, Thresh y Yasuo.",
+          "Actualización: Mel recibe cambios importantes en su W, pasiva, Q, E y R.",
+          "Cambios en objetos (2): Malla de Sangre del Soberano (mejora) y Arco de Doran (debilitamiento).",
+          "Lanzamiento: miércoles 4 de noviembre de 2026. La fecha y los valores pueden cambiar."
+        ],
+        "table": {
+          "headers": [
+            "Categoría",
+            "Cantidad",
+            "Campeones / objetos"
+          ],
+          "rows": [
+            [
+              "Campeones mejorados",
+              "10",
+              "Aurelion Sol, Corki, Kayle, Maokai, Naafiri, Rumble, Shen, Smolder, Viktor, Zaahen"
+            ],
+            [
+              "Campeones debilitados",
+              "3",
+              "Locke, Thresh, Yasuo"
+            ],
+            [
+              "Actualización de campeón",
+              "1",
+              "Mel"
+            ],
+            [
+              "Cambios en objetos",
+              "2",
+              "Malla de Sangre del Soberano, Arco de Doran"
+            ]
+          ]
+        }
+      },
+      {
+        "heading": "Estado de la verificación",
+        "paragraphs": [
+          "Todos los números de abajo son valores del adelanto anunciado del parche 26.22 de Riot. Las notas oficiales de Riot aún no se publican porque el parche no está en vivo. Los valores definitivos exactos aún no están confirmados frente a las notas oficiales."
+        ]
+      },
+      {
+        "heading": "Todos los campeones mejorados en el parche 26.22",
+        "paragraphs": [
+          "Diez campeones reciben mejoras directas en el adelanto del parche 26.22. Los cambios se muestran antes → después según el adelanto."
+        ],
+        "patchTable": {
+          "kind": "champion-buffs",
+          "headers": [
+            "Campeón",
+            "Habilidad / estadística",
+            "Antes",
+            "Después",
+            "Cambio",
+            "Impacto en la partida"
+          ],
+          "rows": [
+            {
+              "championId": "AurelionSol",
+              "name": "Aurelion Sol",
+              "ability": "E daño mágico total durante 5 segundos",
+              "before": "50-150 (+60% PH)",
+              "after": "50-170 (+70% PH)",
+              "change": "+20 en el rango máximo, +10% de ratio de PH",
+              "impact": "Hace más atractivo maximizar la E como segunda habilidad frente a la W; más daño de área sostenido.",
+              "type": "buff"
+            },
+            {
+              "championId": "Corki",
+              "name": "Corki",
+              "ability": "R (Bombardeo de Misiles) daño de los misiles normales",
+              "before": "90-250 (+85% de DA adicional)",
+              "after": "100-280 (+90% de DA adicional)",
+              "change": "+10 en cada extremo, +5% de DA adicional",
+              "impact": "Más hostigamiento y daño general con Bombardeo de Misiles.",
+              "type": "buff"
+            },
+            {
+              "championId": "Corki",
+              "name": "Corki",
+              "ability": "R (Bombardeo de Misiles) daño del misil especial",
+              "before": "180-500 (+170% de DA adicional)",
+              "after": "200-560 (+180% de DA adicional)",
+              "change": "+20 en cada extremo, +10% de DA adicional",
+              "impact": "Misiles potenciados más fuertes en peleas prolongadas.",
+              "type": "buff"
+            },
+            {
+              "championId": "Kayle",
+              "name": "Kayle",
+              "ability": "Enfriamiento de la Q",
+              "before": "12-8 s",
+              "after": "10-8 s",
+              "change": "-2 s en rangos tempranos",
+              "impact": "Más hostigamiento y limpieza de oleadas al principio.",
+              "type": "buff"
+            },
+            {
+              "championId": "Kayle",
+              "name": "Kayle",
+              "ability": "Enfriamiento de la R",
+              "before": "160/120/80 s",
+              "after": "140/110/80 s",
+              "change": "-20 s / -10 s / 0 s",
+              "impact": "Acceso más frecuente a su definitiva defensiva.",
+              "type": "buff"
+            },
+            {
+              "championId": "Maokai",
+              "name": "Maokai",
+              "ability": "Q (Golpe de Zarzas) daño según la vida máxima",
+              "before": "2-4%",
+              "after": "2,5-4,5%",
+              "change": "+0,5 puntos porcentuales",
+              "impact": "Mejor daño contra rivales que acumulan vida.",
+              "type": "buff"
+            },
+            {
+              "championId": "Naafiri",
+              "name": "Naafiri",
+              "ability": "Q curación",
+              "before": "45-105 (+40% de DA adicional)",
+              "after": "55-115 (+45% de DA adicional)",
+              "change": "+10 de base, +5% de DA adicional",
+              "impact": "Más sostenibilidad en línea y en escaramuzas.",
+              "type": "buff"
+            },
+            {
+              "championId": "Naafiri",
+              "name": "Naafiri",
+              "ability": "W escalado de DA adicional",
+              "before": "20%",
+              "after": "22%",
+              "change": "+2 puntos porcentuales",
+              "impact": "Más daño en su combo de W, sobre todo en el carril central.",
+              "type": "buff"
+            },
+            {
+              "championId": "Rumble",
+              "name": "Rumble",
+              "ability": "R (El Igualador) escalado de PH del daño por segundo",
+              "before": "35%",
+              "after": "40%",
+              "change": "+5 puntos porcentuales",
+              "impact": "Más daño en peleas largas con El Igualador.",
+              "type": "buff"
+            },
+            {
+              "championId": "Shen",
+              "name": "Shen",
+              "ability": "Q (Asalto Crepuscular) modificador de daño contra monstruos",
+              "before": "100/125/150/175/200",
+              "after": "120/140/160/180/200",
+              "change": "+20 en rangos tempranos",
+              "impact": "Limpieza de jungla más rápida sin aumentar el daño contra campeones.",
+              "type": "buff"
+            },
+            {
+              "championId": "Smolder",
+              "name": "Smolder",
+              "ability": "W (¡Achís!) daño de explosión",
+              "before": "10-110 (+50% de DA adicional) (+80% de PH)",
+              "after": "25-125 (+50% de DA adicional) (+80% de PH)",
+              "change": "+15 en cada extremo",
+              "impact": "Le ayuda a recuperar parte de su capacidad de daño.",
+              "type": "buff"
+            },
+            {
+              "championId": "Viktor",
+              "name": "Viktor",
+              "ability": "R (Tormenta Arcana) ratio de PH del daño inicial",
+              "before": "50%",
+              "after": "60%",
+              "change": "+10 puntos porcentuales",
+              "impact": "Más ráfaga y escalado con Tormenta Arcana; el daño base no cambia.",
+              "type": "buff"
+            },
+            {
+              "championId": "Viktor",
+              "name": "Viktor",
+              "ability": "Crecimiento de vida por nivel",
+              "before": "100",
+              "after": "105",
+              "change": "+5 por nivel",
+              "impact": "Un poco más de durabilidad manteniendo su movilidad reducida.",
+              "type": "buff"
+            },
+            {
+              "championId": "Zaahen",
+              "name": "Zaahen",
+              "ability": "Q (La Guja Darkin) enfriamiento",
+              "before": "10-6 s",
+              "after": "8-6 s",
+              "change": "-2 s en el rango 1",
+              "impact": "Uso más frecuente de la habilidad al principio y a mitad de partida.",
+              "type": "buff"
+            }
+          ]
+        }
+      },
+      {
+        "heading": "Todos los campeones debilitados en el parche 26.22",
+        "paragraphs": [
+          "Tres campeones reciben debilitamientos en el adelanto del parche 26.22. Estos cambios reducen su daño y el poder de algunas de sus ventanas clave."
+        ],
+        "patchTable": {
+          "kind": "champion-nerfs",
+          "headers": [
+            "Campeón",
+            "Habilidad / estadística",
+            "Antes",
+            "Después",
+            "Cambio",
+            "Impacto en la partida"
+          ],
+          "rows": [
+            {
+              "championId": "Locke",
+              "name": "Locke",
+              "ability": "Q (Uñas Ritualistas) daño adicional por acumulación",
+              "before": "18/26/34/42/50",
+              "after": "15/22/29/36/43",
+              "change": "-3 / -4 / -5 / -6 / -7",
+              "impact": "Menos daño a medida que acumula.",
+              "type": "nerf"
+            },
+            {
+              "championId": "Locke",
+              "name": "Locke",
+              "ability": "W (Ignición del Alma) duración",
+              "before": "6 s",
+              "after": "5 s",
+              "change": "-1 s",
+              "impact": "Ventana de velocidad de movimiento más corta.",
+              "type": "nerf"
+            },
+            {
+              "championId": "Thresh",
+              "name": "Thresh",
+              "ability": "Daño de ataque base",
+              "before": "56",
+              "after": "54",
+              "change": "-2",
+              "impact": "Intercambios y últimas bajas ligeramente más débiles.",
+              "type": "nerf"
+            },
+            {
+              "championId": "Thresh",
+              "name": "Thresh",
+              "ability": "R (La Caja) daño",
+              "before": "250-550 (+100% de PH)",
+              "after": "200-500 (+100% de PH)",
+              "change": "-50 en cada rango",
+              "impact": "Menos daño de La Caja en peleas de equipo.",
+              "type": "nerf"
+            },
+            {
+              "championId": "Yasuo",
+              "name": "Yasuo",
+              "ability": "Q (Tempestad de Acero) ratio de DA total",
+              "before": "105%",
+              "after": "100%",
+              "change": "-5 puntos porcentuales",
+              "impact": "Un poco menos de daño de Q; el daño base se mantiene en 20-120.",
+              "type": "nerf"
+            }
+          ]
+        }
+      },
+      {
+        "heading": "Actualización de Mel: importantes cambios en su W",
+        "paragraphs": [
+          "Uno de los aspectos más destacados del parche 26.22 es la actualización de Mel. Riot cambiará su W para que ya no devuelva los proyectiles enemigos a sus objetivos originales.",
+          "El objetivo es mantener la sensación de destruir proyectiles entrantes, pero reducir las interacciones frustrantes contra determinados campeones."
+        ],
+        "subsections": [
+          {
+            "heading": "W – Réplica",
+            "bullets": [
+              "Destruye los proyectiles enemigos entrantes en lugar de reflejarlos.",
+              "Inflige una pequeña cantidad de daño de represalia.",
+              "Proporciona escudos a Mel y a sus aliados cercanos.",
+              "Otorga velocidad de movimiento para ayudar a los aliados a reposicionarse."
+            ]
+          },
+          {
+            "heading": "Otros cambios de Mel",
+            "bullets": [
+              "Pasiva y estadísticas básicas: menos daño de pasiva al inicio, menor resistencia temprana y mejor crecimiento de vida y armadura.",
+              "Q – Salva Radiante: lanzamiento ligeramente más lento, menos daño de explosión inicial, más daño trasladado a los impactos posteriores y un reembolso fijo del enfriamiento al golpear al menos a un campeón enemigo.",
+              "E – Trampa Solar: inmovilización más corta contra enemigos cercanos y más larga contra enemigos alcanzados desde más lejos.",
+              "R – Eclipse Dorado: mayor reducción del enfriamiento a medida que aumenta el rango de la habilidad."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Cambios de objetos del parche 26.22",
+        "paragraphs": [
+          "Dos objetos reciben ajustes en el parche 26.22. Malla de Sangre del Soberano es una mejora, mientras que el Arco de Doran es un pequeño debilitamiento."
+        ],
+        "patchTable": {
+          "kind": "item-changes",
+          "headers": [
+            "Objeto",
+            "Estadística / efecto",
+            "Antes",
+            "Después",
+            "Diferencia",
+            "A quién afecta"
+          ],
+          "rows": [
+            {
+              "itemId": "2501",
+              "name": "Malla de Sangre del Soberano",
+              "stat": "Daño de ataque; bonificación de Represalia",
+              "before": "30 de DA; 0-12% del DA total según la vida que falte",
+              "after": "40 de DA; 0-10% del DA total según la vida que falte",
+              "change": "+10 de DA; -2 puntos porcentuales en el máximo",
+              "impact": "Más atractivo para campeones como Dr. Mundo y Sion, y menos exclusivo de Sett.",
+              "type": "buff"
+            },
+            {
+              "itemId": "1086",
+              "name": "Arco de Doran",
+              "stat": "Daño de ataque",
+              "before": "8",
+              "after": "7",
+              "change": "-1",
+              "impact": "Acerca su poder al de otros objetos iniciales.",
+              "type": "nerf"
+            }
+          ]
+        }
+      },
+      {
+        "heading": "Qué significan los cambios más importantes en la partida",
+        "paragraphs": [
+          "Carril central: Viktor gana escalado de PH y crecimiento de vida, Corki obtiene más daño con su definitiva y Naafiri mejora su curación y sus ratios de daño. Aurelion Sol y Smolder también ganan daño, mientras que Yasuo pierde un poco de escalado en su Q.",
+          "Carril superior: Maokai gana daño según la vida máxima y la definitiva de Rumble escala mejor con PH. Shen limpia la jungla más rápido y Zaahen reduce el enfriamiento de su Q.",
+          "Carril inferior: el hostigamiento de Corki y la explosión de la W de Smolder suben, mientras que Thresh pierde daño de ataque y daño de definitiva. Los enfriamientos de Kayle bajan, ayudándola a llegar antes a su punto fuerte de final de partida.",
+          "Objetos: Malla de Sangre del Soberano gana daño de ataque a cambio de una pequeña pérdida de Represalia, abriéndose a más campeones, mientras que el Arco de Doran pierde un punto de daño de ataque."
+        ]
+      },
+      {
+        "heading": "Qué roles y estilos de juego podrían verse afectados",
+        "bullets": [
+          "Magos de escalado del carril central (Viktor, Aurelion Sol): más daño y durabilidad en las fases finales.",
+          "Magos de hostigamiento y ráfaga (Corki, Smolder): más daño a distancia.",
+          "Luchadores y escaramuzadores (Naafiri, Rumble, Zaahen): mejor sostenibilidad, duelo o acceso a habilidades.",
+          "Tanques y jungla (Maokai, Shen): más daño contra rivales con mucha vida y una limpieza de jungla más rápida.",
+          "Support encantador y de utilidad (Mel, Thresh): Mel pasa a escudos y utilidad para el equipo; Thresh pierde daño.",
+          "Objetos iniciales: el Arco de Doran es ligeramente más débil, lo que puede afectar los intercambios tempranos de tiradores y algunos luchadores."
+        ]
+      },
+      {
+        "heading": "¿Quieres probar otro campeón después del parche?",
+        "cta": {
+          "label": "Gira un campeón aleatorio",
+          "href": "/es"
+        },
+        "paragraphs": [
+          "Usa League Roulette para aleatorizar tu próxima elección y descubrir un nuevo estilo de juego. Es gratis y funciona para cualquier carril."
+        ]
+      },
+      {
+        "heading": "Tasas de victoria, valores del adelanto y qué observar",
+        "paragraphs": [
+          "Los cambios de equilibrio anunciados no garantizan las tasas de victoria después del parche. La fuerza real de un campeón depende de cómo se adapten los jugadores, las construcciones de objetos y el contexto general del parche.",
+          "Consulta las notas oficiales del parche de Riot el día del lanzamiento (4 de noviembre de 2026) para confirmar los números definitivos antes de armar tu grupo de clasificatorias."
+        ]
+      },
+      {
+        "heading": "Preguntas frecuentes",
+        "faq": [
+          {
+            "q": "¿Cuándo sale el parche 26.22 de LoL?",
+            "a": "Riot programa el parche 26.22 para el miércoles 4 de noviembre de 2026. La fecha puede cambiar, así que consulta el calendario de parches de Riot cerca del lanzamiento."
+          },
+          {
+            "q": "¿Son definitivos los cambios del parche 26.22?",
+            "a": "No. Son valores del adelanto anunciado del parche de Riot. El parche 26.22 aún no está en vivo, y Riot puede revisar los números en las notas definitivas."
+          },
+          {
+            "q": "¿Qué campeones reciben mejoras en el 26.22?",
+            "a": "Aurelion Sol, Corki, Kayle, Maokai, Naafiri, Rumble, Shen, Smolder, Viktor y Zaahen."
+          },
+          {
+            "q": "¿Qué campeones reciben nerfs en el 26.22?",
+            "a": "Locke, Thresh y Yasuo."
+          },
+          {
+            "q": "¿Qué cambia en Mel?",
+            "a": "Mel recibe una actualización que elimina el reflejo de proyectiles de su W e incorpora efectos defensivos y de utilidad para el equipo."
+          },
+          {
+            "q": "¿Qué objetos cambian en el parche 26.22?",
+            "a": "Malla de Sangre del Soberano recibe una mejora, mientras que el Arco de Doran es debilitado."
+          },
+          {
+            "q": "¿Cambiará el meta de clasificatorias con el parche 26.22?",
+            "a": "Los cambios podrían afectar a la fuerza y prioridad de selección de algunos campeones, pero su impacto real se conocerá cuando se hayan disputado suficientes partidas clasificatorias con la nueva versión."
+          }
+        ]
+      },
+      {
+        "heading": "Conclusión",
+        "paragraphs": [
+          "El parche 26.22 es un parche de equilibrio con cambios concretos: diez campeones ganan poder, tres pierden algo, Mel deja atrás el reflejo de proyectiles y se ajustan dos objetos. Trata los números como valores del adelanto hasta que Riot publique las notas oficiales el 4 de noviembre.",
+          "¿Quieres salir de tu grupo de campeones habitual después del parche? Prueba League Roulette para un campeón aleatorio y un estilo de juego nuevo."
+        ]
+      }
+    ],
+    "faq": [],
+    "sources": [
+      {
+        "label": "Riot Games - Notas del parche de League of Legends (las notas definitivas del 26.22 se publican el día del lanzamiento)",
+        "url": "https://www.leagueoflegends.com/en-us/news/game-updates/"
+      },
+      {
+        "label": "Hexgate - Calendario de parches de LoL 2026",
+        "url": "https://hexgate.app/patch-notes/"
+      },
+      {
+        "label": "Wiki de League of Legends - Patch/2026 Ciclo anual",
+        "url": "https://wiki.leagueoflegends.com/en-us/Patch/2026_Annual_Cycle"
+      }
+    ]
+  },
+  {
+    "slug": "find-your-main-champion",
+    "title": "Cómo encontrar tu main en League of Legends",
+    "description": "Descubre tu campeón principal en LoL. Encuentra tu estilo de juego, elige tu posición y aprende a encontrar tu main.",
+    "keywords": [
+      "cómo encontrar tu main en lol",
+      "mejor campeón para main",
+      "cómo elegir un campeón principal",
+      "encontrar tu estilo de juego en lol",
+      "guía de campeones de league of legends"
+    ],
+    "excerpt": "Deja de adivinar qué campeón elegir. Aprende a encajar tu estilo de juego, posición y clase de campeón, prueba picks como es debido y crea un pool con el que escalar.",
+    "ctaLabel": "Gira la ruleta",
+    "ctaHref": "/",
+    "heroIntro": [
+      "League of Legends tiene más de 170 campeones, y la cifra suena emocionante hasta que la selección de campeones está a punto de terminar y ninguno de los picks se siente tuyo.",
+      "El consejo habitual es jugar al campeón más fuerte del parche actual. El problema es que un campeón puede ser objetivamente poderoso y, aun así, encajar fatal con tus manos, tu paciencia y la forma en la que te gusta afrontar una pelea.",
+      "Esta guía propone un proceso práctico: entender qué es realmente un main, identificar tu estilo de juego, elegir una posición, comprender las clases de campeones, probar candidatos como es debido y construir un grupo reducido con el que puedas contar. Funciona tanto si empezaste la semana pasada como si llevas años cambiando de campeón."
+    ],
+    "sections": [
+      {
+        "heading": "¿Qué significa tener un main en League of Legends?",
+        "paragraphs": [
+          "Tu main es el campeón que conoces más allá de la descripción de habilidades. Sabes cuánto daño haces en nivel 3, qué intercambios ganas, qué enfrentamientos exigen paciencia y cómo se siente tu campeón cuando la partida va mal. Es tu respuesta por defecto cuando quieres jugar en serio.",
+          "Tener un main no significa bloquear el mismo campeón en todas las partidas. Significa tener un pick preferido en el que has invertido tiempo. Esa inversión se nota de formas que es fácil subestimar."
+        ],
+        "bullets": [
+          "Patrones de daño e intercambios: dejas de adivinar si puedes ganar un trade y empiezas a reconocerlo.",
+          "Conocimiento de enfrentamientos: aprendes qué rivales te castigan pronto, contra cuáles escalas mejor y cuándo conviene renunciar a farmear en lugar de morir por ello.",
+          "Posicionamiento y toma de decisiones: cuando el kit ya sale solo, tu atención pasa de las habilidades al juego real.",
+          "Consistencia: las clasificatorias premian decisiones repetibles, y un grupo más pequeño hace que esas decisiones sean repetibles.",
+          "Menos carga mental: gastas menos energía en aprender habilidades y más en leer el mapa.",
+          "Puedes tener un main en más de una posición, sobre todo si haces cola flex, pero evita llamar main a diez campeones y no desarrollar profundidad en ninguno."
+        ],
+        "table": {
+          "headers": [
+            "Enfoque",
+            "Cómo se ve",
+            "Ideal para",
+            "Contrapartida"
+          ],
+          "rows": [
+            [
+              "Main",
+              "Un campeón preferido que dominas, más algunos suplentes",
+              "Quien busca profundidad sin renunciar a la flexibilidad",
+              "Requiere paciencia durante la fase de aprendizaje"
+            ],
+            [
+              "One-trick",
+              "Casi exclusivamente un campeón",
+              "Quien busca máxima profundidad",
+              "Vulnerable a baneos, counters y cambios de rol"
+            ],
+            [
+              "Fill",
+              "Muchos campeones en muchas posiciones",
+              "Juego casual y flexible",
+              "Menos dominio y menos consistencia"
+            ]
+          ]
+        }
+      },
+      {
+        "heading": "Descubre tu estilo de juego",
+        "paragraphs": [
+          "Antes de comparar campeones, responde una pregunta más sencilla: cuando te diviertes en League, ¿qué estás haciendo realmente?",
+          "¿Persigues una kill al otro lado del río? ¿Preparas visión antes de un objetivo? ¿Farmeas con seguridad hasta tres objetos? ¿Te pones delante de tu carry y retas al equipo enemigo a entrar? Cada campeón premia instintos diferentes. Los seis perfiles siguientes no son tipos de personalidad cerrados; son atajos para reconocer los patrones que ya disfrutas.",
+          "Estas categorías se solapan. Un campeón como Lee Sin puede atraer tanto a jugadores agresivos como mecánicos; Ornn puede gustar a perfiles defensivos y estratégicos. Usa los perfiles para reducir opciones, no para etiquetarte para siempre."
+        ],
+        "tableFirst": true,
+        "table": {
+          "headers": [
+            "Perfil",
+            "Disfrutas de",
+            "Tu partida ideal se siente como",
+            "Campeones para probar"
+          ],
+          "rows": [
+            [
+              "Agresivo",
+              "Presión temprana, forzar peleas, snowball",
+              "Acción constante y momentum",
+              "Darius, Katarina, Samira, Lee Sin, Yasuo"
+            ],
+            [
+              "Estratégico",
+              "Control del mapa, objetivos, preparación",
+              "Una partida de ajedrez en la que siempre vas un paso por delante",
+              "Twisted Fate, Galio, Orianna, Shen, Bard"
+            ],
+            [
+              "Mecánico",
+              "Combos, outplays, ejecución precisa",
+              "Un highlight que has creado tú mismo",
+              "Riven, Azir, Lee Sin, Akali, Gangplank"
+            ],
+            [
+              "Defensivo",
+              "Proteger, absorber, controlar el espacio",
+              "Un muro que el equipo enemigo no puede romper",
+              "Ornn, Braum, Leona, Malphite, Nautilus"
+            ],
+            [
+              "Carry",
+              "Escalado, oro, ser la amenaza de daño",
+              "Una construcción lenta hacia un late game imparable",
+              "Kayle, Jinx, Vayne, Smolder, Aurelion Sol"
+            ],
+            [
+              "De apoyo",
+              "Habilitar a tus compañeros, curar, proteger",
+              "Tu carry sobrevive gracias a ti",
+              "Lulu, Janna, Soraka, Nami, Milio"
+            ]
+          ]
+        },
+        "subsections": [
+          {
+            "heading": "El jugador agresivo",
+            "paragraphs": [
+              "Te gusta ser quien empieza las cosas. Prefieres intercambiar daño con agresividad y aprender de una muerte antes que quedarte farmeando veinte minutos.",
+              "Disfrutas de campeones capaces de generar presión pronto y convertir una pequeña ventaja en una bola de nieve."
+            ],
+            "bullets": [
+              "Darius — gana intercambios largos en línea y castiga el más mínimo error de posicionamiento con su sangrado y su ejecución.",
+              "Katarina — premia las inmersiones con confianza y los reinicios, convirtiendo una kill en una reacción en cadena.",
+              "Samira — una tiradora que quiere estar en medio de la pelea, no detrás.",
+              "Lee Sin — el playmaker clásico de early game, hecho para invadir, gankear y forzar acción.",
+              "Yasuo — un skirmisher móvil que premia la agresividad calculada y castiga la imprudente."
+            ]
+          },
+          {
+            "heading": "El jugador estratégico",
+            "paragraphs": [
+              "Disfrutas de las partes de League que no aparecen en el gráfico de daño: estados de oleada, visión, tiempos de objetivos, ritmo de rotaciones y la presión silenciosa que obliga al rival a reaccionar.",
+              "Te gustan los campeones cuyo valor nace de las decisiones más que del duelo puro."
+            ],
+            "bullets": [
+              "Twisted Fate — presión global y un aturdimiento point-and-click que lo convierten en una amenaza permanente en el mapa.",
+              "Galio — ultimate de largo alcance, roaming y utilidad para quien quiere estar en todas partes.",
+              "Orianna — control de zona y colocación de la bola que premian planificar en lugar de reaccionar tarde.",
+              "Shen — presión en la calle lateral con una ultimate global capaz de cambiar una pelea al otro lado del mapa.",
+              "Bard — un support errante que cambia presencia de línea por visión, tempo y picks inesperados."
+            ]
+          },
+          {
+            "heading": "El jugador mecánico",
+            "paragraphs": [
+              "Disfrutas del proceso de mejorar en algo difícil. Un campeón con un techo alto no te intimida; te da una razón para volver a jugar.",
+              "Te gustan los combos, los animation cancels, el espaciado y la sensación de ejecutar un plan a la perfección."
+            ],
+            "bullets": [
+              "Riven — combos rápidos y animation cancels que recompensan horas de práctica.",
+              "Azir — gestión de soldados y jugadas de shuffle que lo convierten en uno de los magos más expresivos del juego.",
+              "Lee Sin — ward hops, Insecs y rutas de gank creativas le dan una profundidad mecánica casi ilimitada.",
+              "Akali — movilidad y juego con el humo que premian el timing preciso y las intentonas de asesinato con confianza.",
+              "Gangplank — cadenas de barriles y timing para un campeón con el que siempre puedes mejorar."
+            ]
+          },
+          {
+            "heading": "El jugador defensivo",
+            "paragraphs": [
+              "Te sientes mejor cuando eres la razón por la que tu equipo sobrevive. Te gusta absorber presión, controlar el espacio y convertir la iniciación enemiga en un error.",
+              "No necesitas hacer el mayor daño para sentirte importante."
+            ],
+            "bullets": [
+              "Ornn — un tanque de primera línea que puede iniciar, aguantar daño y mejorar los objetos de su equipo más adelante.",
+              "Braum — el support de escudo y peel que hace que bucear contra tu carry parezca una mala idea.",
+              "Leona — iniciación directa y agresiva con suficiente control de masas para bloquear una pelea.",
+              "Malphite — un tanque sencillo con una de las ultimates de iniciación más fiables del juego.",
+              "Nautilus — control de masas, potencial de pick y presencia en primera línea que encaja en casi cualquier draft."
+            ]
+          },
+          {
+            "heading": "El jugador carry",
+            "paragraphs": [
+              "Te gusta la fantasía de convertirte en el protagonista. Quieres oro, objetos y el momento en el que el equipo enemigo tiene que respetar tu daño.",
+              "Estás dispuesto a jugar con paciencia al principio si eso te da el control más tarde."
+            ],
+            "bullets": [
+              "Kayle — empieza humilde y se convierte en una amenaza ranged de late game si sobrevives a la fase inicial.",
+              "Jinx — una tiradora de teamfight cuyos reinicios pueden convertir una kill en una pelea ganada.",
+              "Vayne — una tiradora duelista que destroza tanques y premia el posicionamiento limpio.",
+              "Smolder — un tirador que acumula stacks y cambia presión temprana por una recompensa poderosa en late game.",
+              "Aurelion Sol — un mago de escalado que crece hasta convertirse en un monstruo de teamfight mediante acumulación cuidadosa."
+            ]
+          },
+          {
+            "heading": "El jugador de apoyo",
+            "paragraphs": [
+              "Disfrutas habilitando a otras personas. Un escudo a tiempo, una curación salvadora o un control de masas perfectamente colocado se sienten tan bien como una kill.",
+              "Te gustan los campeones que hacen que tus compañeros brillen."
+            ],
+            "bullets": [
+              "Lulu — buffs, escudos y peel para hyper-carries que necesitan un segundo más para ganar la pelea.",
+              "Janna — desenganche y protección para quien disfruta negando el plan del enemigo.",
+              "Soraka — curación y sustain capaces de mantener viva una pelea mucho más de lo esperado.",
+              "Nami — una support que puede tradear en línea, curar y preparar picks con su ultimate.",
+              "Milio — un encantador de apoyo con curación, limpieza y buffs de alcance para su carry."
+            ]
+          }
+        ],
+        "links": [
+          {
+            "label": "¿Qué campeón debería jugar?",
+            "href": "/blog/what-champion-should-i-play",
+            "description": "Un repaso posición por posición si quieres una segunda opinión antes de decidirte."
+          },
+          {
+            "label": "Cuestionario para encontrar tu main",
+            "href": "/es/find-your-main",
+            "description": "Responde unas preguntas y recibe sugerencias de campeones según tus preferencias."
+          }
+        ]
+      },
+      {
+        "heading": "Elige la posición adecuada",
+        "paragraphs": [
+          "Tu posición determina mucho más que el lugar donde empiezas la partida. Decide cuánto oro recibes, con qué frecuencia interactúas con el mapa, qué espera tu equipo de ti y qué errores cuestan más caro.",
+          "Puedes amar un campeón y odiar la posición a la que pertenece. Usa las descripciones siguientes para separar lo que disfrutas de lo que estás dispuesto a practicar."
+        ],
+        "tableFirst": true,
+        "table": {
+          "headers": [
+            "Posición",
+            "Responsabilidad principal",
+            "Te gustará si disfrutas de",
+            "Campeones para probar"
+          ],
+          "rows": [
+            [
+              "Top",
+              "Ganar la calle lateral y generar presión",
+              "Duelos, gestión de oleadas, split push",
+              "Garen, Darius, Jax, Camille, Ornn"
+            ],
+            [
+              "Jungla",
+              "Controlar tempo, objetivos y ganks",
+              "Conocimiento del mapa, planificación, playmaking",
+              "Warwick, Amumu, Vi, Lee Sin, Nocturne"
+            ],
+            [
+              "Mid",
+              "Controlar el centro y roamear",
+              "Skirmishes, control de oleada, impacto en el mapa",
+              "Ahri, Lux, Syndra, Zed, Viktor"
+            ],
+            [
+              "ADC / Bot",
+              "Infligir daño sostenido en teamfights",
+              "Farmear, posicionarte, escalar",
+              "Ashe, Jinx, Caitlyn, Miss Fortune, Kai'Sa"
+            ],
+            [
+              "Support",
+              "Habilitar al equipo y controlar la visión",
+              "Playmaking, protección, control del mapa",
+              "Lulu, Leona, Thresh, Nami, Nautilus"
+            ]
+          ]
+        },
+        "subsections": [
+          {
+            "heading": "Top",
+            "paragraphs": [
+              "Top es la línea larga y aislada donde las pequeñas ventajas se acumulan. Pasarás mucho tiempo en enfrentamientos uno contra uno, gestionando oleadas y decidiendo si presionas la calle lateral o te unes a tu equipo.",
+              "Por qué atrae: te gustan los duelos, aprender los enfrentamientos en detalle y la responsabilidad de crear presión en la calle lateral. Si disfrutas de la idea de ganar la línea mediante control de oleadas en lugar de roamear constantemente, top es un encaje natural."
+            ],
+            "bullets": [
+              "Garen — sencillo, indulgente y excelente para aprender intercambios y recuperación de línea.",
+              "Darius — un abusador de línea que te enseña a castigar errores y controlar peleas prolongadas.",
+              "Jax — un duelista de escalado que se convierte en una amenaza seria en la calle lateral.",
+              "Camille — movilidad y potencial de pick para quien disfruta del juego preciso y agresivo en la calle lateral.",
+              "Ornn — un tanque que aporta mediante iniciación, resistencia y mejoras de objetos para todo el equipo."
+            ]
+          },
+          {
+            "heading": "Jungla",
+            "paragraphs": [
+              "La jungla tiene menos que ver con una línea y más con el reloj. Gestionas campamentos, rastreas al jungla enemigo, eliges rutas de gank y decides por qué objetivo debe pelear tu equipo.",
+              "Por qué atrae: te gusta planificar, leer el mapa y ser quien crea oportunidades. Si quedarte en línea diez minutos te parece aburrido, la jungla ofrece decisiones constantes."
+            ],
+            "bullets": [
+              "Warwick — limpiezas indulgentes, buen sustain y ganks directos lo convierten en un gran jungla para aprender.",
+              "Amumu — iniciación sencilla y control de masas para quien disfruta preparando peleas.",
+              "Vi — bloqueo point-and-click que castiga a los carries aislados.",
+              "Lee Sin — presión temprana y expresión mecánica para junglas con confianza.",
+              "Nocturne — presión global con la ultimate y potencial de pick contra equipos dispersos."
+            ]
+          },
+          {
+            "heading": "Mid",
+            "paragraphs": [
+              "Mid está en el centro de todo. Tienes prioridad, acceso a ambos lados del río y la elección de roamear, invadir o presionar a tu rival.",
+              "Por qué atrae: te gusta la variedad. Una partida eres un mago de control sosteniendo un cuello de botella; la siguiente eres un asesino buscando un pick en la calle lateral. Mid también premia a quien disfruta de los outplays mecánicos y las decisiones rápidas."
+            ],
+            "bullets": [
+              "Ahri — segura, móvil y buena creando picks sin comprometerse de más.",
+              "Lux — presión a larga distancia, limpieza de oleadas y potencial de pick.",
+              "Syndra — burst y control de zona para quien disfruta castigando errores de posicionamiento.",
+              "Zed — un asesino que crea presión en la calle lateral y elimina objetivos aislados.",
+              "Viktor — un mago de control que escala hasta ser una amenaza en teamfights."
+            ]
+          },
+          {
+            "heading": "ADC / Bot",
+            "paragraphs": [
+              "El rol de ADC consiste en convertir oro en daño constante. Compartes línea con un support, farmeas con cuidado y te posicionas detrás de tu equipo en las peleas.",
+              "Por qué atrae: te gusta la fantasía de escalado y la precisión del posicionamiento en teamfights. Si disfrutas kiteando, siguiendo cooldowns enemigos y siendo quien acaba carreando, el ADC encaja."
+            ],
+            "bullets": [
+              "Ashe — utilidad, iniciación y visión la hacen útil incluso cuando va por detrás.",
+              "Jinx — una tiradora de teamfight con alcance y potencial de reinicio.",
+              "Caitlyn — presión de línea y control a larga distancia mediante trampas y espaciado.",
+              "Miss Fortune — buen intercambio en línea y una ultimate que puede ganar peleas.",
+              "Kai'Sa — una tiradora flexible que puede entrar con su equipo y escalar hacia el late game."
+            ]
+          },
+          {
+            "heading": "Support",
+            "paragraphs": [
+              "Support no es un rol pasivo. Controlas la visión, dictas el tempo de la línea y decides si tu equipo entra o se retira.",
+              "Por qué atrae: te gusta habilitar a otros y controlar el flujo de la partida. Si disfrutas del playmaking sin necesitar oro, support ofrece algunas de las decisiones de mayor impacto del juego."
+            ],
+            "bullets": [
+              "Lulu — la encantadora que hace que un carry fed sea casi imposible de matar.",
+              "Leona — iniciación y control de masas para quien quiere empezar peleas.",
+              "Thresh — un playmaker versátil con potencial de pick, peel y una salvación con linterna inconfundible.",
+              "Nami — intercambio en línea, curación e iniciación de seguimiento.",
+              "Nautilus — bloqueo fiable y presencia en primera línea."
+            ]
+          }
+        ],
+        "links": [
+          {
+            "label": "Guía de campeones de top",
+            "href": "/blog/best-champions-for-top-lane",
+            "description": "Profundiza en los picks, enfrentamientos y responsabilidades de top."
+          },
+          {
+            "label": "Guía de campeones de mid",
+            "href": "/blog/mid-lane-champions-guide",
+            "description": "Compara magos de control, asesinos y mid laners de roaming."
+          },
+          {
+            "label": "Guía de campeones ADC",
+            "href": "/blog/adc-champions-guide",
+            "description": "Encuentra tiradores que encajen con tu farmeo y tu estilo de teamfight."
+          },
+          {
+            "label": "Guía de campeones de support",
+            "href": "/blog/best-support-champions",
+            "description": "Explora encantadores, supports de iniciación y picks de utilidad."
+          }
+        ]
+      },
+      {
+        "heading": "Comprende las clases de campeones",
+        "paragraphs": [
+          "Tu posición te dice dónde juegas. La clase del campeón te dice cómo peleas. Dos campeones pueden compartir posición y sentirse completamente distintos porque uno quiere reventar a un objetivo y el otro quiere ganar una pelea larga y sostenida.",
+          "El sistema oficial de clases de Riot utiliza categorías como Controller, Fighter, Mage, Marksman, Slayer, Tank y Specialist. Los jugadores suelen usar etiquetas más simples: asesinos, magos, luchadores, tanques, tiradores y supports. La tabla siguiente usa los términos comunes sin alejarse demasiado de cómo se juegan realmente los campeones."
+        ],
+        "tableFirst": true,
+        "table": {
+          "headers": [
+            "Clase",
+            "Cómo gana",
+            "Fortalezas",
+            "Ojo con",
+            "Ejemplos"
+          ],
+          "rows": [
+            [
+              "Asesinos",
+              "Revienta a un objetivo prioritario y escapa",
+              "Movilidad, potencial de pick, snowball",
+              "Frágiles; se quedan atrás si el early va mal",
+              "Zed, Akali, Katarina, Talon, Qiyana"
+            ],
+            [
+              "Magos",
+              "Controla el espacio con habilidades a distancia",
+              "Limpieza de oleadas, zoning, burst o utilidad",
+              "A menudo inmóviles y dependientes de skillshots",
+              "Lux, Syndra, Orianna, Viktor, Ahri"
+            ],
+            [
+              "Luchadores",
+              "Ganan peleas prolongadas con daño y resistencia",
+              "Presión en calle lateral, intercambios sostenidos",
+              "Pueden ser kiteados por campeones ranged",
+              "Darius, Jax, Camille, Riven, Warwick"
+            ],
+            [
+              "Tanques",
+              "Absorben presión y controlan peleas",
+              "Iniciación, control de masas, primera línea",
+              "Menos daño; dependen de sus compañeros",
+              "Ornn, Malphite, Leona, Nautilus, Shen"
+            ],
+            [
+              "Tiradores",
+              "Infligen daño sostenido a distancia",
+              "Daño a objetivos, teamfights de late game",
+              "Frágiles; necesitan oro y protección",
+              "Jinx, Caitlyn, Ashe, Kai'Sa, Vayne"
+            ],
+            [
+              "Supports / Controladores",
+              "Habilitan o interrumpen mediante utilidad",
+              "Visión, peel, iniciación, curación",
+              "Poco daño; el impacto depende del equipo",
+              "Lulu, Janna, Thresh, Nami, Braum"
+            ]
+          ]
+        },
+        "bullets": [
+          "Los asesinos esperan un cooldown o un error, y entonces eliminan a un objetivo. Si no te gusta la paciencia ni el flanqueo, pueden frustrarte.",
+          "Los magos quieren controlar el espacio antes de que empiece la pelea. Si prefieres acción constante al zoning, un mago de control puede parecerte lento.",
+          "Los luchadores quieren intercambios largos y presión lateral. Si prefieres el burst, pueden sentirse sin golpe final.",
+          "Los tanques quieren iniciar peleas o proteger carries. Si necesitas números de daño altos para sentirte útil, los tanques pueden resultarte poco gratificantes.",
+          "Los tiradores quieren tiempo y oro. Si no te gusta posicionarte con cuidado, el rol te castigará.",
+          "Los supports quieren habilitar a otra persona. Si necesitas ser tú el carry, el rol puede no satisfacerte.",
+          "La mayoría de campeones difuminan las líneas. Samira es una tiradora que se juega como asesina, Galio es un mago con utilidad de tanque y Lee Sin es un luchador con playmaking de asesino. Usa las clases como filtro inicial, no como jaula."
+        ]
+      },
+      {
+        "heading": "Prueba diferentes campeones antes de decidirte",
+        "paragraphs": [
+          "El error más común es elegir un main después de una buena partida. Un campeón puede parecer increíble en un vídeo de highlights y sentirse torpe en tus manos. Otro puede parecer aburrido sobre el papel y convertirse en tu favorito después de cinco partidas.",
+          "Prueba a los candidatos como si fuera un pequeño experimento, no un compromiso."
+        ],
+        "subsections": [
+          {
+            "heading": "Paso 1: Crea una lista corta de tres a cinco campeones",
+            "paragraphs": [
+              "Elige campeones que encajen con tu posición preferida y con uno o dos perfiles de estilo de juego. Mantén la lista lo bastante corta como para evaluar de verdad a cada uno. Si no sabes por dónde empezar, el cuestionario para encontrar tu main puede sugerirte campeones según tus preferencias."
+            ]
+          },
+          {
+            "heading": "Paso 2: Aprende sus habilidades",
+            "paragraphs": [
+              "Lee la pasiva y las cuatro habilidades. Después pasa unos minutos en la Herramienta de Práctica para entender alcance, cooldowns y el combo básico. No necesitas memorizar cada animation cancel antes de tu primera partida. Sí necesitas saber qué intenta hacer tu campeón."
+            ]
+          },
+          {
+            "heading": "Paso 3: Juega al menos de tres a cinco partidas con cada campeón",
+            "paragraphs": [
+              "Una partida es una primera impresión. De tres a cinco partidas bastan para sentir el ritmo del campeón, sus power spikes y sus debilidades. Draft Normal o Ciego es ideal porque se parece a la partida real sin la presión de ranked. ARAM puede ayudarte a aprender un kit rápido, pero no reproduce la gestión de oleadas ni los enfrentamientos de Summoner's Rift."
+            ]
+          },
+          {
+            "heading": "Paso 4: Evalúa diversión y rendimiento por separado",
+            "paragraphs": [
+              "Un campeón puede ser divertido pero difícil, o efectivo pero aburrido. Ambos importan, pero la diversión importa más para un main a largo plazo. Después de cada sesión, usa la tabla de evaluación de campeones y busca patrones en lugar de resultados aislados."
+            ]
+          },
+          {
+            "heading": "Paso 5: Reduce tus opciones",
+            "paragraphs": [
+              "Quédate con uno o dos campeones que puntúen bien en diversión y comodidad. Descarta los que se sintieron como un trabajo. No conserves un campeón solo porque ganaste una partida con él; las victorias son ruidosas, sobre todo en muestras pequeñas.",
+              "Antes de decidir, pregúntate:"
+            ],
+            "bullets": [
+              "¿Disfruté del campeón incluso en una partida perdida?",
+              "¿Me gustan sus habilidades o solo la idea del campeón?",
+              "¿Entiendo por qué morí o estoy culpando al enfrentamiento?",
+              "¿Encaja el campeón con la posición en la que quiero jugar?",
+              "¿Puedo imaginarme jugando este campeón cincuenta veces más?",
+              "¿Lo elijo porque me gusta o porque me lo dijo una tier list?"
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Tabla de evaluación de campeones",
+        "paragraphs": [
+          "Después de cada sesión con un candidato, puntúa estas preguntas de 1 a 5. Compara los totales a lo largo de tres a cinco partidas, no después de una sola."
+        ],
+        "table": {
+          "headers": [
+            "Pregunta",
+            "Puntuación (1–5)",
+            "Por qué importa"
+          ],
+          "rows": [
+            [
+              "¿He disfrutado jugando con este campeón?",
+              "",
+              "La diversión es el mejor predictor de compromiso a largo plazo"
+            ],
+            [
+              "¿Me gustan sus habilidades y mecánicas?",
+              "",
+              "La comodidad afecta a la velocidad con la que mejoras"
+            ],
+            [
+              "¿Tengo ganas de seguir mejorando con él?",
+              "",
+              "La curiosidad sostiene el dominio"
+            ],
+            [
+              "¿Disfruto de su fase inicial, media y final?",
+              "",
+              "Necesitas que te guste la partida completa, no solo un pico de poder"
+            ],
+            [
+              "¿Me imagino jugándolo habitualmente?",
+              "",
+              "Evita picks de hype a corto plazo"
+            ]
+          ]
+        }
+      },
+      {
+        "heading": "No elijas tu main solo por el meta",
+        "paragraphs": [
+          "El meta es real, pero es temporal. Los parches de equilibrio, los cambios de objetos y el juego profesional pueden mover a un campeón de must-pick a situacional en pocas semanas. Un campeón con una tasa de victoria fuerte hoy puede recibir un nerf directo mañana o perder su mejor objeto la próxima temporada.",
+          "Las tasas de victoria también necesitan contexto. La tasa de un campeón puede estar inflada por una base pequeña y dedicada de jugadores, un rango concreto, una posición determinada o un parche favorable. Las tier lists son fotografías, no recomendaciones personales. Te dicen qué funciona para la población que se está midiendo; no te dicen qué funcionará para tus manos, tu posición y tu disposición a practicar.",
+          "Usa el meta como información, no como juez.",
+          "Un campeón que disfrutas y entiendes suele ser una mejor inversión a largo plazo que un pick temporalmente fuerte. Los picks del meta también atraen baneos y disputas. Tu main debería seguir ahí cuando cambie el parche."
+        ],
+        "table": {
+          "headers": [
+            "Buena razón para elegir un campeón",
+            "Mala razón para elegir un campeón"
+          ],
+          "rows": [
+            [
+              "Disfrutas del kit y quieres dominarlo",
+              "Es S-tier en una tier list esta semana"
+            ],
+            [
+              "Rindes con consistencia en distintas partidas",
+              "Tiene una tasa alta en una posición que no juegas"
+            ],
+            [
+              "Te gustan su rol y sus responsabilidades",
+              "Un streamer lo jugó una vez"
+            ],
+            [
+              "Estás dispuesto a aprender sus malos enfrentamientos",
+              "Está temporalmente roto y probablemente lo nerfeen"
+            ],
+            [
+              "Encaja con las necesidades de tu equipo y con tu pool",
+              "Es el único campeón que te queda por probar"
+            ]
+          ]
+        }
+      },
+      {
+        "heading": "Crea un grupo de campeones reducido",
+        "paragraphs": [
+          "Encontrar tu main no es el final del proceso. También necesitas un grupo con el que contar cuando tu main esté baneado, lo elija el enemigo o no encaje en el draft. Un buen pool es lo bastante pequeño para mantenerlo y lo bastante flexible para cubrir situaciones habituales.",
+          "Un pool es una herramienta, no una identidad permanente. Revísalo al principio de cada temporada, conserva los picks que siguen encajando y sustituye los que ya no lo hacen."
+        ],
+        "tableFirst": true,
+        "table": {
+          "headers": [
+            "Hueco",
+            "Propósito",
+            "Cuándo elegirlo",
+            "Ejemplo de enfoque"
+          ],
+          "rows": [
+            [
+              "Main",
+              "Tu pick más fuerte y disfrutable",
+              "La mayoría de partidas cuando esté disponible",
+              "Un campeón que has jugado mucho y entiendes en varios enfrentamientos"
+            ],
+            [
+              "Secundario",
+              "Una alternativa fiable",
+              "Tu main está baneado, elegido o no encaja",
+              "Un campeón con rol similar pero distinto perfil de daño o iniciación"
+            ],
+            [
+              "Suplente",
+              "Una opción sencilla y cómoda",
+              "Estás autofilled, cansado o necesitas un pick seguro",
+              "Un campeón de baja complejidad que puedas jugar sin calentar"
+            ]
+          ]
+        },
+        "bullets": [
+          "En clasificatorias, un pool pequeño suele ser más manejable que cambiar constantemente entre diez campeones.",
+          "El objetivo no es jugar el mismo campeón para siempre; es reducir el número de variables que aprendes a la vez.",
+          "Cuando conoces tu pool, puedes dedicar más atención a gestión de oleadas, visión, tiempos de objetivos y teamfights.",
+          "Un campeón que te encantaba hace dos temporadas puede que ya no encaje con tu forma de jugar. Es normal, y es una razón para revisar el pool en lugar de aferrarte a él."
+        ],
+        "links": [
+          {
+            "label": "Cómo subir de elo en League of Legends",
+            "href": "/blog/how-to-climb-ranked",
+            "description": "Convierte tu nuevo main en un plan de ranked con mejores sesiones y hábitos de revisión."
+          }
+        ]
+      },
+      {
+        "heading": "Sigue tu progreso",
+        "paragraphs": [
+          "Una vez tienes un main, la mejora llega del feedback. Las victorias y las derrotas son demasiado ruidosas para ser tu única señal. Sigue algunos aspectos concretos y revísalos con regularidad.",
+          "League of Legends también tiene un sistema de Maestría de campeones que registra tu progreso con cada personaje. Consigues puntos de maestría jugando partidas emparejadas compatibles, y tu rendimiento contribuye a la progresión de tu campeón. La maestría es un registro útil de experiencia, pero no significa automáticamente que hayas dominado el enfrentamiento o el rol."
+        ],
+        "tableFirst": true,
+        "table": {
+          "headers": [
+            "Métrica",
+            "Qué te dice",
+            "Cómo usarla"
+          ],
+          "rows": [
+            [
+              "CS por minuto",
+              "Consistencia de farmeo y eficiencia de línea",
+              "Compáralo con tu propia media, no con un benchmark aleatorio"
+            ],
+            [
+              "Muertes",
+              "Posicionamiento, sobreextensión y gestión del riesgo",
+              "Cuenta las muertes evitables, no solo el total"
+            ],
+            [
+              "Posicionamiento",
+              "Si estás infligiendo daño con seguridad",
+              "Revisa teamfights y anota cuándo estabas fuera de alcance o expuesto"
+            ],
+            [
+              "Daño infligido",
+              "Tu contribución en contexto",
+              "Compáralo con tu oro y tu rol; un daño alto en una derrota también puede esconder malas decisiones"
+            ],
+            [
+              "Rendimiento en línea",
+              "Si ganas o sobrevives la fase de líneas con consistencia",
+              "Revisa tus primeros 10 minutos y anota un error recurrente"
+            ],
+            [
+              "Decisiones en teamfights",
+              "Selección de objetivos, seguimiento de cooldowns y posicionamiento bajo presión",
+              "Revisa un teamfight por sesión e identifica una decisión mejor"
+            ],
+            [
+              "Notas de enfrentamientos",
+              "Qué rivales te complican siempre",
+              "Anota un ajuste para cada enfrentamiento difícil"
+            ],
+            [
+              "Maestría de campeón",
+              "Tiempo invertido y familiaridad",
+              "Úsala como señal de comodidad, no como prueba de habilidad"
+            ]
+          ]
+        },
+        "bullets": [
+          "Elige una métrica en la que centrarte durante la semana, como morir menos antes del nivel 6 o mantener tu CS por minuto estable durante el mid game.",
+          "Revisa una repetición después de cada sesión y encuentra dos decisiones que cambiarías.",
+          "Anota una conclusión sobre un enfrentamiento después de cada partida.",
+          "Revisa tu pool al final del mes y pregúntate si sigue encajando."
+        ]
+      },
+      {
+        "heading": "Encuentra tu main con LeagueRoulette",
+        "paragraphs": [
+          "Si has seguido el proceso y sigues sin decidirte, o si vuelves por costumbre a los mismos tres campeones, el azar puede ayudarte. Probar un campeón que nunca elegirías por tu cuenta es una de las formas más rápidas de descubrir un estilo de juego que no sabías que te gustaba.",
+          "LeagueRoulette aleatoriza tu selección de campeones para que salgas de tus picks de confort sin pensarlo demasiado. Úsalo en partidas normales o con amigos, trata cada giro como un experimento sin presión y fíjate en qué campeones te hacen querer volver a jugar.",
+          "Deja de jugar siempre con los mismos campeones. Gira la ruleta, prueba algo diferente y encuentra tu próximo main."
+        ],
+        "links": [
+          {
+            "label": "Gira la ruleta de LeagueRoulette",
+            "href": "/",
+            "description": "Prueba un campeón aleatorio y deja tus picks de confort a un lado durante una partida."
+          },
+          {
+            "label": "Cuestionario para encontrar tu main",
+            "href": "/es/find-your-main",
+            "description": "Recibe sugerencias de campeones adaptadas a tu estilo de juego y posición."
+          },
+          {
+            "label": "Tier list actual",
+            "href": "/es/tierlist",
+            "description": "Consulta el meta como contexto y decide después con tus propias preferencias."
+          }
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "q": "¿Cuántos campeones debería tener como main?",
+        "a": "No existe un número obligatorio, pero centrarse en uno a tres campeones es un buen punto de partida, especialmente si quieres mejorar en clasificatorias. Un main y uno o dos suplentes mantienen el pool manejable y cubren baneos y enfrentamientos desfavorables."
+      },
+      {
+        "q": "¿Cuánto tiempo se tarda en dominar un campeón?",
+        "a": "Depende de la complejidad del campeón y de tu experiencia. Un campeón directo como Garen o Ashe puede sentirse cómodo después de unas pocas partidas. Un campeón como Azir, Riven o Gangplank puede necesitar docenas o incluso cientos de partidas antes de que el kit salga de forma automática. La maestría también significa cosas distintas en cada rango; siempre estás aprendiendo enfrentamientos nuevos."
+      },
+      {
+        "q": "¿Es mejor elegir un campeón fácil o uno difícil?",
+        "a": "Elige el que disfrutes y con el que puedas mejorar. Los campeones fáciles te permiten centrarte en fundamentos como farmeo, gestión de oleadas y posicionamiento. Los difíciles ofrecen más profundidad mecánica y un techo más alto, pero pueden esconder tus errores de fundamentos detrás de retos de ejecución. Ninguna opción es mejor por sí misma; el mejor campeón es el que vas a seguir jugando."
+      },
+      {
+        "q": "¿Debería cambiar de main después de un nerf?",
+        "a": "No automáticamente. Un nerf no hace que un campeón sea injugable, y cambiar en cada parche te impide desarrollar profundidad. Si el campeón sigue encajando con tu estilo y entiendes sus nuevos límites, sigue jugándolo. Reconsidéralo solo si el cambio elimina la parte del kit que realmente disfrutabas o si el campeón se siente frustrante de forma constante durante muchas partidas."
+      },
+      {
+        "q": "¿Puedo tener más de un main?",
+        "a": "Sí. Muchos jugadores tienen un main para su posición principal y un pick secundario para drafts desfavorables. También puedes tener un main en una segunda posición si haces cola flexible. La clave es mantener el pool total bajo control para no estar reaprendiendo un campeón distinto cada partida."
+      },
+      {
+        "q": "¿Cómo sé que he encontrado mi main?",
+        "a": "Lo notarás porque disfrutas del campeón incluso cuando pierdes, quieres entender sus enfrentamientos y buscas motivos para elegirlo. Dejas de pensar en el campeón como una prueba y empiezas a pensar en el juego que lo rodea. Ese cambio suele ser la señal de que has encontrado un main."
+      }
+    ]
   }
 ]

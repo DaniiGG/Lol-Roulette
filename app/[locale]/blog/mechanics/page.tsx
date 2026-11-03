@@ -12,12 +12,14 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   setRequestLocale(locale)
   const t = await getTranslations('blog')
   const isTranslated = BLOG_LOCALES.includes(locale as (typeof BLOG_LOCALES)[number])
+  const titleKey = `categories.${CATEGORY_SLUG}.seoTitle`
+  const descriptionKey = `categories.${CATEGORY_SLUG}.seoDescription`
 
   return buildPageMetadata({
     locale,
     path: `/blog/${CATEGORY_SLUG}`,
-    title: t(`categories.${CATEGORY_SLUG}.name`),
-    description: t(`categories.${CATEGORY_SLUG}.desc`),
+    title: t.has(titleKey) ? t(titleKey) : t(`categories.${CATEGORY_SLUG}.name`),
+    description: t.has(descriptionKey) ? t(descriptionKey) : t(`categories.${CATEGORY_SLUG}.desc`),
     alternateLocales: BLOG_LOCALES,
     robots: isTranslated ? undefined : { index: false, follow: true },
   })

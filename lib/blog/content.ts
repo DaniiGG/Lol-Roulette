@@ -67,6 +67,7 @@ export type BlogSection = {
   subsections?: BlogSubsection[]
   links?: BlogInternalLink[]
   table?: BlogTable
+  tableFirst?: boolean
   patchTable?: BlogPatchTable
   cta?: BlogCta
 }

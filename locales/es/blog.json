@@ -39,31 +39,45 @@
     "categories": {
         "champions": {
             "name": "Guías de campeones",
-            "desc": "Arquetipos, picks y consejos por rol para top, jungle, mid, bot y support."
+            "desc": "Arquetipos, picks y consejos por rol para top, jungle, mid, bot y support.",
+            "seoTitle": "Guías de campeones LoL por rol",
+            "seoDescription": "Guías de campeones de League of Legends por rol: arquetipos, picks fuertes, builds, runas y consejos de enfrentamiento para top, jungla, mid, ADC y support."
         },
         "guides": {
             "name": "Guías",
-            "desc": "Mecánicas y procesos que mejoran tu jugada: matchups, rotación, fundamentos."
+            "desc": "Mecánicas y procesos que mejoran tu jugada: matchups, rotación, fundamentos.",
+            "seoTitle": "Guías de LoL: mecánicas y macro",
+            "seoDescription": "Guías prácticas de League of Legends sobre mecánicas, enfrentamientos, rotaciones y decisiones de macro para mejorar desde la primera oleada hasta la pelea final."
         },
         "tier-lists": {
             "name": "Tier Lists",
-            "desc": "Cómo leer el meta: tiers, datos y cuándo la lista no te sirve."
+            "desc": "Cómo leer el meta: tiers, datos y cuándo la lista no te sirve.",
+            "seoTitle": "Tier lists de LoL por rol y parche",
+            "seoDescription": "Aprende a leer las tier lists de LoL por rol y parche, comparar win rate y pick rate, y usar los datos sin reaccionar de más al meta."
         },
         "beginners": {
             "name": "Principiantes",
-            "desc": "Empezar en League sin pelearte con el kit: picks indulgentes y primeros pasos."
+            "desc": "Empezar en League sin pelearte con el kit: picks indulgentes y primeros pasos.",
+            "seoTitle": "Guías para principiantes de LoL",
+            "seoDescription": "¿Empiezas en League of Legends? Usa campeones indulgentes, runas y builds simples, y crea los primeros hábitos que hacen menos frustrante aprender el juego."
         },
         "ranked": {
             "name": "Ranked",
-            "desc": "Estructura de sesión, hábitos y errores que frenan tu escalada."
+            "desc": "Estructura de sesión, hábitos y errores que frenan tu escalada.",
+            "seoTitle": "Ranked en LoL: hábitos para subir",
+            "seoDescription": "Mejora tus hábitos de ranked en League of Legends: estructura de sesión, pool de campeones, control del tilt y errores que frenan tu escalada."
         },
         "mechanics": {
             "name": "Mecánicas",
-            "desc": "Farming, oleadas y micro: los fundamentos que componen cada partida."
+            "desc": "Farming, oleadas y micro: los fundamentos que componen cada partida.",
+            "seoTitle": "Mecánicas de LoL: farmeo y oleadas",
+            "seoDescription": "Mecánicas de League of Legends explicadas: last hit, gestión de oleadas, intercambios, spacing y hábitos de micro que mejoran todos los roles."
         },
         "league-roulette": {
             "name": "League Roulette",
-            "desc": "Retos y picks aleatorios: cómo convertir la ruleta en mejora real."
+            "desc": "Retos y picks aleatorios: cómo convertir la ruleta en mejora real.",
+            "seoTitle": "Retos y guías de picks aleatorios",
+            "seoDescription": "Convierte los picks aleatorios en práctica con los retos de League Roulette: filtros por rol, planes de matchup y consejos para aprender más rápido bajo presión."
         }
     }
 }

@@ -2871,5 +2871,1180 @@
         "url": "https://www.leagueoflegends.com/en-us/news/game-updates/"
       }
     ]
+  },
+  {
+    "slug": "lol-patch-26-22",
+    "title": "LoL Patch 26.22: All Champion Changes, Buffs and Nerfs",
+    "description": "Discover all League of Legends Patch 26.22 changes, including champion buffs, nerfs, Mel's update and item adjustments.",
+    "keywords": [
+      "lol patch 26.22",
+      "league of legends patch 26.22",
+      "lol patch notes 26.22",
+      "lol champion buffs and nerfs",
+      "patch 26.22 item changes",
+      "mel mini update"
+    ],
+    "excerpt": "Patch 26.22 arrives November 4, 2026 with 10 champion buffs, 3 nerfs, a major Mel mini-update and 2 item changes. See the full before-and-after breakdown.",
+    "ctaLabel": "Spin a Random Champion",
+    "ctaHref": "/",
+    "heroIntro": [
+      "League of Legends Patch 26.22 is scheduled for Wednesday, November 4, 2026. It brings another round of balance changes focused on underperforming champions and playstyles while trimming some of the strongest picks.",
+      "Riot's preview lists 10 champion buffs, 3 nerfs and a major mini-update for Mel that changes her signature projectile-reflection mechanic on W.",
+      "Important: these are preview values from Riot's announced preview, not final patch notes. Patch 26.22 is not live yet, and the numbers below can still change before release."
+    ],
+    "sections": [
+      {
+        "heading": "Patch 26.22 at a glance",
+        "paragraphs": [
+          "Patch 26.22 is a targeted balance patch rather than a full overhaul. The preview touches 13 champions: 10 receive buffs, 3 are nerfed, and Mel gets a mini-update that reworks her W. Two items also change."
+        ],
+        "bullets": [
+          "Champion buffs (10): Aurelion Sol, Corki, Kayle, Maokai, Naafiri, Rumble, Shen, Smolder, Viktor and Zaahen.",
+          "Champion nerfs (3): Locke, Thresh and Yasuo.",
+          "Mini-update: Mel receives major changes to her W, passive, Q, E and R.",
+          "Item changes (2): Overlord's Bloodmail (buff) and Doran's Bow (nerf).",
+          "Release: Wednesday, November 4, 2026. The date and values can still change."
+        ],
+        "table": {
+          "headers": [
+            "Category",
+            "Count",
+            "Champions / items"
+          ],
+          "rows": [
+            [
+              "Champion buffs",
+              "10",
+              "Aurelion Sol, Corki, Kayle, Maokai, Naafiri, Rumble, Shen, Smolder, Viktor, Zaahen"
+            ],
+            [
+              "Champion nerfs",
+              "3",
+              "Locke, Thresh, Yasuo"
+            ],
+            [
+              "Champion mini-update",
+              "1",
+              "Mel"
+            ],
+            [
+              "Item changes",
+              "2",
+              "Overlord's Bloodmail, Doran's Bow"
+            ]
+          ]
+        }
+      },
+      {
+        "heading": "Verification status",
+        "paragraphs": [
+          "All numbers below are preview values from Riot's announced Patch 26.22 preview. Riot's official patch notes are not yet published because the patch is not live. Exact final values are not yet confirmed against Riot's official patch notes."
+        ]
+      },
+      {
+        "heading": "All Champion Buffs in Patch 26.22",
+        "paragraphs": [
+          "Ten champions are receiving direct buffs in the Patch 26.22 preview. Changes are shown before → after as reported in the preview."
+        ],
+        "patchTable": {
+          "kind": "champion-buffs",
+          "headers": [
+            "Champion",
+            "Ability / stat",
+            "Before",
+            "After",
+            "Change",
+            "In-game impact"
+          ],
+          "rows": [
+            {
+              "championId": "AurelionSol",
+              "name": "Aurelion Sol",
+              "ability": "E total magic damage over 5 seconds",
+              "before": "50-150 (+60% AP)",
+              "after": "50-170 (+70% AP)",
+              "change": "+20 at max rank, +10% AP scaling",
+              "impact": "Makes maxing E second more attractive than maxing W; more sustained area damage.",
+              "type": "buff"
+            },
+            {
+              "championId": "Corki",
+              "name": "Corki",
+              "ability": "R (Missile Barrage) normal missile damage",
+              "before": "90-250 (+85% bonus AD)",
+              "after": "100-280 (+90% bonus AD)",
+              "change": "+10 at each end, +5% bonus AD",
+              "impact": "More poke and overall damage with Missile Barrage.",
+              "type": "buff"
+            },
+            {
+              "championId": "Corki",
+              "name": "Corki",
+              "ability": "R (Missile Barrage) Big One damage",
+              "before": "180-500 (+170% bonus AD)",
+              "after": "200-560 (+180% bonus AD)",
+              "change": "+20 at each end, +10% bonus AD",
+              "impact": "Stronger empowered missiles in extended fights.",
+              "type": "buff"
+            },
+            {
+              "championId": "Kayle",
+              "name": "Kayle",
+              "ability": "Q cooldown",
+              "before": "12-8 s",
+              "after": "10-8 s",
+              "change": "-2 s at early ranks",
+              "impact": "More frequent early poke and wave clear.",
+              "type": "buff"
+            },
+            {
+              "championId": "Kayle",
+              "name": "Kayle",
+              "ability": "R cooldown",
+              "before": "160/120/80 s",
+              "after": "140/110/80 s",
+              "change": "-20 s / -10 s / 0 s",
+              "impact": "Access to her defensive ultimate more often.",
+              "type": "buff"
+            },
+            {
+              "championId": "Maokai",
+              "name": "Maokai",
+              "ability": "Q (Bramble Smash) max health damage",
+              "before": "2-4%",
+              "after": "2.5-4.5%",
+              "change": "+0.5 percentage points",
+              "impact": "Better damage against health-stacking opponents.",
+              "type": "buff"
+            },
+            {
+              "championId": "Naafiri",
+              "name": "Naafiri",
+              "ability": "Q healing",
+              "before": "45-105 (+40% bonus AD)",
+              "after": "55-115 (+45% bonus AD)",
+              "change": "+10 base, +5% bonus AD",
+              "impact": "More sustain in lane and skirmishes.",
+              "type": "buff"
+            },
+            {
+              "championId": "Naafiri",
+              "name": "Naafiri",
+              "ability": "W bonus AD ratio",
+              "before": "20%",
+              "after": "22%",
+              "change": "+2 percentage points",
+              "impact": "More damage on her W combo, especially in the mid lane.",
+              "type": "buff"
+            },
+            {
+              "championId": "Rumble",
+              "name": "Rumble",
+              "ability": "R (The Equalizer) damage per second AP ratio",
+              "before": "35%",
+              "after": "40%",
+              "change": "+5 percentage points",
+              "impact": "More damage in longer fights with The Equalizer.",
+              "type": "buff"
+            },
+            {
+              "championId": "Shen",
+              "name": "Shen",
+              "ability": "Q (Twilight Assault) monster damage modifier",
+              "before": "100/125/150/175/200",
+              "after": "120/140/160/180/200",
+              "change": "+20 at early ranks",
+              "impact": "Faster jungle clear without increasing damage against champions.",
+              "type": "buff"
+            },
+            {
+              "championId": "Smolder",
+              "name": "Smolder",
+              "ability": "W (Achooo!) explosion damage",
+              "before": "10-110 (+50% bonus AD) (+80% AP)",
+              "after": "25-125 (+50% bonus AD) (+80% AP)",
+              "change": "+15 at each end",
+              "impact": "Helps him recover some of his damage output.",
+              "type": "buff"
+            },
+            {
+              "championId": "Viktor",
+              "name": "Viktor",
+              "ability": "R (Arcane Storm) initial damage AP ratio",
+              "before": "50%",
+              "after": "60%",
+              "change": "+10 percentage points",
+              "impact": "More burst and scaling with Arcane Storm; base damage is unchanged.",
+              "type": "buff"
+            },
+            {
+              "championId": "Viktor",
+              "name": "Viktor",
+              "ability": "Health growth per level",
+              "before": "100",
+              "after": "105",
+              "change": "+5 per level",
+              "impact": "A little more durability while keeping his reduced mobility.",
+              "type": "buff"
+            },
+            {
+              "championId": "Zaahen",
+              "name": "Zaahen",
+              "ability": "Q (The Darkin Glaive) cooldown",
+              "before": "10-6 s",
+              "after": "8-6 s",
+              "change": "-2 s at rank 1",
+              "impact": "More frequent ability use in the early and mid game.",
+              "type": "buff"
+            }
+          ]
+        }
+      },
+      {
+        "heading": "All Champion Nerfs in Patch 26.22",
+        "paragraphs": [
+          "Three champions are receiving nerfs in the Patch 26.22 preview. These changes target damage output and reduce the power of some of their key windows."
+        ],
+        "patchTable": {
+          "kind": "champion-nerfs",
+          "headers": [
+            "Champion",
+            "Ability / stat",
+            "Before",
+            "After",
+            "Change",
+            "In-game impact"
+          ],
+          "rows": [
+            {
+              "championId": "Locke",
+              "name": "Locke",
+              "ability": "Q (Ritual Nails) stack bonus damage",
+              "before": "18/26/34/42/50",
+              "after": "15/22/29/36/43",
+              "change": "-3 / -4 / -5 / -6 / -7",
+              "impact": "Lower damage output as his stacks build.",
+              "type": "nerf"
+            },
+            {
+              "championId": "Locke",
+              "name": "Locke",
+              "ability": "W (Soul Ignition) duration",
+              "before": "6 s",
+              "after": "5 s",
+              "change": "-1 s",
+              "impact": "Shorter movement-speed window.",
+              "type": "nerf"
+            },
+            {
+              "championId": "Thresh",
+              "name": "Thresh",
+              "ability": "Base attack damage",
+              "before": "56",
+              "after": "54",
+              "change": "-2",
+              "impact": "Slightly weaker trading and last-hitting.",
+              "type": "nerf"
+            },
+            {
+              "championId": "Thresh",
+              "name": "Thresh",
+              "ability": "R (The Box) damage",
+              "before": "250-550 (+100% AP)",
+              "after": "200-500 (+100% AP)",
+              "change": "-50 at each rank",
+              "impact": "Less damage from The Box in teamfights.",
+              "type": "nerf"
+            },
+            {
+              "championId": "Yasuo",
+              "name": "Yasuo",
+              "ability": "Q (Steel Tempest) total AD ratio",
+              "before": "105%",
+              "after": "100%",
+              "change": "-5 percentage points",
+              "impact": "Slightly less Q damage; base damage stays at 20-120.",
+              "type": "nerf"
+            }
+          ]
+        }
+      },
+      {
+        "heading": "Mel Mini-Update: Major Changes to Her W",
+        "paragraphs": [
+          "One of the biggest highlights of Patch 26.22 is Mel's mini-update. Riot is changing her W so it no longer reflects enemy projectiles back at their original targets.",
+          "The goal is to preserve the feeling of destroying incoming projectiles while reducing frustrating interactions against certain champions."
+        ],
+        "subsections": [
+          {
+            "heading": "W – Rebuttal",
+            "bullets": [
+              "Destroy incoming enemy projectiles instead of reflecting them.",
+              "Deal a small amount of retaliatory damage.",
+              "Shield Mel and nearby allies.",
+              "Grant movement speed to help allies reposition."
+            ]
+          },
+          {
+            "heading": "Other Mel changes",
+            "bullets": [
+              "Passive and base stats: reduced early-game passive damage, lower early durability, and improved health and armor scaling.",
+              "Q – Radiant Volley: slightly slower projectile delivery, reduced initial explosion damage, more damage shifted to subsequent hits, and a flat cooldown refund when hitting at least one enemy champion.",
+              "E – Solar Snare: shorter root against nearby enemies and longer root against enemies hit from farther away.",
+              "R – Golden Eclipse: greater cooldown reduction as the ability gains ranks."
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Patch 26.22 Item Changes",
+        "paragraphs": [
+          "Two items are receiving adjustments in Patch 26.22. Overlord's Bloodmail is a buff, while Doran's Bow is a small nerf."
+        ],
+        "patchTable": {
+          "kind": "item-changes",
+          "headers": [
+            "Item",
+            "Stat / effect",
+            "Before",
+            "After",
+            "Difference",
+            "Who it affects"
+          ],
+          "rows": [
+            {
+              "itemId": "2501",
+              "name": "Overlord's Bloodmail",
+              "stat": "Attack damage; Retribution bonus",
+              "before": "30 AD; 0-12% total AD based on missing health",
+              "after": "40 AD; 0-10% total AD based on missing health",
+              "change": "+10 AD; -2 percentage points at max",
+              "impact": "More attractive for champions like Dr. Mundo and Sion, and less of a Sett-only item.",
+              "type": "buff"
+            },
+            {
+              "itemId": "1086",
+              "name": "Doran's Bow",
+              "stat": "Attack damage",
+              "before": "8",
+              "after": "7",
+              "change": "-1",
+              "impact": "Brings its power closer to other starting items.",
+              "type": "nerf"
+            }
+          ]
+        }
+      },
+      {
+        "heading": "What the biggest changes mean in-game",
+        "paragraphs": [
+          "Mid lane: Viktor gains AP scaling and health growth, Corki gets more ultimate damage and Naafiri improves her healing and damage ratios. Aurelion Sol and Smolder also gain damage, while Yasuo loses a little Q scaling.",
+          "Top lane: Maokai gets more max-health damage and Rumble's ultimate scales better with AP. Shen's jungle clear improves, and Zaahen gets a shorter Q cooldown.",
+          "Bot lane: Corki's poke and Smolder's W explosion both go up, while Thresh loses attack damage and ultimate damage. Kayle's cooldowns drop, helping her reach her late-game spikes more often.",
+          "Items: Overlord's Bloodmail gains attack damage for a small Retribution tradeoff, opening it up to more champions, while Doran's Bow loses one attack damage."
+        ]
+      },
+      {
+        "heading": "Which roles and playstyles could be affected",
+        "bullets": [
+          "Scaling mid-lane mages (Viktor, Aurelion Sol): more damage and durability in the later stages.",
+          "Poke and burst mages (Corki, Smolder): stronger long-range damage.",
+          "Bruisers and skirmishers (Naafiri, Rumble, Zaahen): better sustain, dueling or cooldown access.",
+          "Tanks and jungle (Maokai, Shen): more damage against health stackers and a faster jungle clear.",
+          "Enchanter and utility supports (Mel, Thresh): Mel shifts toward shields and team utility; Thresh loses damage.",
+          "Starting items: Doran's Bow is slightly weaker, which can affect early trading for marksmen and some bruisers."
+        ]
+      },
+      {
+        "heading": "Want to try a different champion after the patch?",
+        "cta": {
+          "label": "Spin a random champion",
+          "href": "/"
+        },
+        "paragraphs": [
+          "Use League Roulette to randomize your next pick and discover a new playstyle. It is free and works for any lane."
+        ]
+      },
+      {
+        "heading": "Win rates, preview values and what to watch",
+        "paragraphs": [
+          "Announced balance changes do not guarantee post-patch win rates. A champion's actual strength depends on how players adapt, item builds and the wider patch context.",
+          "Check Riot's official patch notes on release day (November 4, 2026) to confirm the final numbers before building your ranked pool."
+        ]
+      },
+      {
+        "heading": "Frequently asked questions",
+        "faq": [
+          {
+            "q": "When does LoL Patch 26.22 release?",
+            "a": "Riot schedules Patch 26.22 for Wednesday, November 4, 2026. The date can change, so check Riot's patch schedule close to release."
+          },
+          {
+            "q": "Are these the final Patch 26.22 changes?",
+            "a": "No. They are preview values from Riot's announced patch preview. Patch 26.22 is not live yet, and Riot can revise numbers in the final patch notes."
+          },
+          {
+            "q": "Which champions are buffed in 26.22?",
+            "a": "Aurelion Sol, Corki, Kayle, Maokai, Naafiri, Rumble, Shen, Smolder, Viktor and Zaahen."
+          },
+          {
+            "q": "Which champions are nerfed in 26.22?",
+            "a": "Locke, Thresh and Yasuo."
+          },
+          {
+            "q": "What is changing about Mel?",
+            "a": "Mel is receiving a mini-update that removes projectile reflection from her W while adding defensive and team utility effects."
+          },
+          {
+            "q": "Which items are changing in Patch 26.22?",
+            "a": "Overlord's Bloodmail is receiving a buff, while Doran's Bow is being nerfed."
+          },
+          {
+            "q": "Will Patch 26.22 change the ranked meta?",
+            "a": "The changes could affect champion strength and pick priority, but the actual impact will become clearer after enough ranked games have been played on the new patch."
+          }
+        ]
+      },
+      {
+        "heading": "Conclusion",
+        "paragraphs": [
+          "Patch 26.22 is a targeted balance patch: ten champions gain power, three lose some, Mel shifts away from projectile reflection, and two items are adjusted. Treat the numbers as preview values until Riot's official notes ship on November 4.",
+          "Want to step outside your comfort pool after the patch? Try League Roulette for a random champion and a fresh playstyle."
+        ]
+      }
+    ],
+    "faq": [],
+    "sources": [
+      {
+        "label": "Riot Games - League of Legends patch notes (final 26.22 notes publish on release day)",
+        "url": "https://www.leagueoflegends.com/en-us/news/game-updates/"
+      },
+      {
+        "label": "Hexgate - 2026 LoL Patch Schedule",
+        "url": "https://hexgate.app/patch-notes/"
+      },
+      {
+        "label": "League of Legends Wiki - Patch/2026 Annual Cycle",
+        "url": "https://wiki.leagueoflegends.com/en-us/Patch/2026_Annual_Cycle"
+      }
+    ]
+  },
+  {
+    "slug": "find-your-main-champion",
+    "title": "How to Find Your Main Champion in League of Legends",
+    "description": "Find your perfect League of Legends main. Discover your playstyle, choose the right role and learn how to find a champion you love.",
+    "keywords": [
+      "how to find your main in league of legends",
+      "best champion to main",
+      "how to choose a main champion",
+      "league of legends champion guide",
+      "find your playstyle"
+    ],
+    "excerpt": "Stop guessing which champion to main. Learn how to match your playstyle, role and champion class, test picks properly and build a pool you can climb with.",
+    "ctaLabel": "Spin the Wheel",
+    "ctaHref": "/",
+    "heroIntro": [
+      "League of Legends has more than 170 champions, and that number sounds exciting until champion select is ticking down and none of the picks feel like yours.",
+      "The usual advice is to play the strongest champion in the current patch. The problem is that a champion can be objectively strong and still be a terrible fit for your hands, your patience, and the way you like to approach a fight.",
+      "This guide is a practical process: understand what a main really is, identify your playstyle, choose a role, learn how champion classes work, test candidates properly, and build a small pool you can rely on. It works whether you started last week or have spent years switching champions."
+    ],
+    "sections": [
+      {
+        "heading": "What Does It Mean to Have a Main in League of Legends?",
+        "paragraphs": [
+          "A main is the champion you know beyond the tooltip. You know how much damage you deal at level 3, which trades you win, which matchups require patience, and what your champion looks like when the game is going badly. It is your default answer when you want to play seriously.",
+          "Having a main does not mean locking the same champion every game. It means having a preferred pick you have invested in. That investment pays off in ways that are easy to underestimate."
+        ],
+        "bullets": [
+          "Damage and trading patterns: you stop guessing whether you can win a trade and start recognizing it.",
+          "Matchup knowledge: you learn which opponents punish you early, which ones you outscale, and when to give up farm instead of dying for it.",
+          "Positioning and decision-making: once the kit feels natural, your attention moves from the abilities to the actual game.",
+          "Consistency: ranked rewards repeatable decisions, and a smaller pool makes those decisions repeatable.",
+          "Mental bandwidth: you spend less energy learning abilities and more energy reading the map.",
+          "You can have a main in more than one role, especially if you queue flexibly, but avoid calling ten champions mains and never developing depth in any of them."
+        ],
+        "table": {
+          "headers": [
+            "Approach",
+            "What it looks like",
+            "Best for",
+            "Trade-off"
+          ],
+          "rows": [
+            [
+              "Main",
+              "A preferred champion you have mastered, plus a few backups",
+              "Players who want depth without giving up flexibility",
+              "Requires patience during the learning phase"
+            ],
+            [
+              "One-trick",
+              "Almost exclusively one champion",
+              "Players who want maximum depth",
+              "Vulnerable to bans, counters, and role changes"
+            ],
+            [
+              "Fill",
+              "Many champions across many roles",
+              "Flexible casual play",
+              "Slower mastery and less consistency"
+            ]
+          ]
+        }
+      },
+      {
+        "heading": "Discover Your Playstyle",
+        "paragraphs": [
+          "Before you compare champions, answer a simpler question: when you are having fun in League, what are you actually doing?",
+          "Are you chasing a kill across the river? Setting up vision before an objective? Farming safely until three items? Standing in front of your carry and daring the enemy team to engage? Different champions reward different instincts. The six profiles below are not permanent personality types; they are shortcuts to help you recognize the patterns you already enjoy.",
+          "These categories overlap. A champion like Lee Sin can appeal to both aggressive and mechanical players; Ornn can appeal to defensive and strategic players. Use the profiles to narrow your options, not to label yourself permanently."
+        ],
+        "tableFirst": true,
+        "table": {
+          "headers": [
+            "Profile",
+            "You enjoy",
+            "Your ideal game feels like",
+            "Champions to try"
+          ],
+          "rows": [
+            [
+              "Aggressive",
+              "Early pressure, forcing fights, snowballing",
+              "Constant action and momentum",
+              "Darius, Katarina, Samira, Lee Sin, Yasuo"
+            ],
+            [
+              "Strategic",
+              "Map control, objectives, setup",
+              "A chess match where you are always one step ahead",
+              "Twisted Fate, Galio, Orianna, Shen, Bard"
+            ],
+            [
+              "Mechanical",
+              "Combos, outplays, high execution",
+              "A highlight reel you created yourself",
+              "Riven, Azir, Lee Sin, Akali, Gangplank"
+            ],
+            [
+              "Defensive",
+              "Protecting, absorbing, controlling space",
+              "A wall the enemy team cannot break",
+              "Ornn, Braum, Leona, Malphite, Nautilus"
+            ],
+            [
+              "Carry",
+              "Scaling, gold, being the damage threat",
+              "A slow build into an unstoppable late game",
+              "Kayle, Jinx, Vayne, Smolder, Aurelion Sol"
+            ],
+            [
+              "Supportive",
+              "Enabling teammates, healing, peeling",
+              "Your carry surviving because of you",
+              "Lulu, Janna, Soraka, Nami, Milio"
+            ]
+          ]
+        },
+        "subsections": [
+          {
+            "heading": "The Aggressive Player",
+            "paragraphs": [
+              "You like to be the one who starts things. You would rather trade aggressively and learn from a death than sit back and farm for twenty minutes.",
+              "You enjoy champions that can create pressure early and convert a small lead into a snowball."
+            ],
+            "bullets": [
+              "Darius — wins extended lane trades and punishes the smallest positioning mistake with his bleed and execute.",
+              "Katarina — rewards confident dives and resets, turning a single kill into a chain reaction.",
+              "Samira — a marksman who wants to be in the middle of the fight, not behind it.",
+              "Lee Sin — the classic early-game playmaker, built for invading, ganking, and forcing action.",
+              "Yasuo — a mobile skirmisher who rewards calculated aggression and punishes reckless aggression."
+            ]
+          },
+          {
+            "heading": "The Strategic Player",
+            "paragraphs": [
+              "You enjoy the parts of League that do not show up in the damage graph: wave states, vision, objective timers, rotation timing, and the quiet pressure that forces the enemy team to respond.",
+              "You like champions whose value comes from decisions rather than raw dueling."
+            ],
+            "bullets": [
+              "Twisted Fate — global pressure and a point-and-click stun make him a permanent threat on the map.",
+              "Galio — long-range ultimate, roaming, and teamfight utility for players who want to be everywhere.",
+              "Orianna — zone control and ball placement reward planning ahead rather than reacting late.",
+              "Shen — side-lane pressure with a global ultimate that can turn a fight on the other side of the map.",
+              "Bard — a roaming support who trades lane presence for vision, tempo, and unexpected picks."
+            ]
+          },
+          {
+            "heading": "The Mechanical Player",
+            "paragraphs": [
+              "You enjoy the process of getting better at something difficult. A champion with a high skill ceiling does not intimidate you; it gives you a reason to queue again.",
+              "You like combos, animation cancels, spacing, and the feeling of executing a plan perfectly."
+            ],
+            "bullets": [
+              "Riven — fast combos and animation cancels reward hours of practice.",
+              "Azir — soldier management and shuffle plays make him one of the most expressive mages in the game.",
+              "Lee Sin — ward hops, Insecs, and creative gank paths give him almost unlimited mechanical depth.",
+              "Akali — mobility and shroud play reward precise timing and confident assassination attempts.",
+              "Gangplank — barrel chains and timing make him a champion you can always improve with."
+            ]
+          },
+          {
+            "heading": "The Defensive Player",
+            "paragraphs": [
+              "You feel best when you are the reason your team survives. You like absorbing pressure, controlling space, and turning an enemy engage into a mistake.",
+              "You do not need to deal the most damage to feel important."
+            ],
+            "bullets": [
+              "Ornn — a frontline tank who can engage, soak damage, and upgrade his team's items later in the game.",
+              "Braum — the shield-and-peel support who makes diving your carry feel like a bad idea.",
+              "Leona — straightforward, aggressive engage with enough crowd control to lock down a fight.",
+              "Malphite — a simple tank with one of the most reliable engage ultimates in the game.",
+              "Nautilus — crowd control, pick potential, and a frontline presence that fits almost any draft."
+            ]
+          },
+          {
+            "heading": "The Carry Player",
+            "paragraphs": [
+              "You like the fantasy of becoming the main character. You want gold, items, and the moment when the enemy team has to respect your damage.",
+              "You are willing to play patiently early if it means controlling the game later."
+            ],
+            "bullets": [
+              "Kayle — starts humble and becomes a ranged late-game threat if you survive the early game.",
+              "Jinx — a teamfight marksman whose resets can turn one kill into a won fight.",
+              "Vayne — a duelist marksman who shreds tanks and rewards clean positioning.",
+              "Smolder — a stacking marksman who trades early pressure for a powerful late-game payoff.",
+              "Aurelion Sol — a scaling mage who grows into a teamfight threat through careful stacking."
+            ]
+          },
+          {
+            "heading": "The Supportive Player",
+            "paragraphs": [
+              "You enjoy enabling other people. A well-timed shield, a clutch heal, or a perfectly placed piece of crowd control feels as good as a kill.",
+              "You like champions that make your teammates look good."
+            ],
+            "bullets": [
+              "Lulu — buffs, shields, and peel for hyper-carries who need one more second to win the fight.",
+              "Janna — disengage and protection for players who like denying the enemy's plan.",
+              "Soraka — healing and sustain that can keep a fight alive far longer than expected.",
+              "Nami — a support who can trade in lane, heal, and set up picks with her ultimate.",
+              "Milio — a supportive enchanter with healing, cleansing, and range buffs for his carry."
+            ]
+          }
+        ],
+        "links": [
+          {
+            "label": "What champion should I play?",
+            "href": "/blog/what-champion-should-i-play",
+            "description": "A role-by-role breakdown if you want a second opinion before committing."
+          },
+          {
+            "label": "Find your main quiz",
+            "href": "/find-your-main",
+            "description": "Answer a few questions and get champion suggestions based on your preferences."
+          }
+        ]
+      },
+      {
+        "heading": "Choose the Right Role",
+        "paragraphs": [
+          "Your role determines more than where you start the game. It decides how much gold you get, how often you interact with the map, what your team expects from you, and which mistakes are most costly.",
+          "You can love a champion and still hate the role it belongs to. Use the role descriptions below to separate what you enjoy from what you are willing to practice."
+        ],
+        "tableFirst": true,
+        "table": {
+          "headers": [
+            "Role",
+            "Main responsibility",
+            "You will enjoy it if you like",
+            "Champions to try"
+          ],
+          "rows": [
+            [
+              "Top",
+              "Winning the side lane and creating pressure",
+              "Dueling, wave management, split pushing",
+              "Garen, Darius, Jax, Camille, Ornn"
+            ],
+            [
+              "Jungle",
+              "Controlling tempo, objectives, and ganks",
+              "Map awareness, planning, playmaking",
+              "Warwick, Amumu, Vi, Lee Sin, Nocturne"
+            ],
+            [
+              "Mid",
+              "Controlling the center and roaming",
+              "Skirmishes, wave control, map impact",
+              "Ahri, Lux, Syndra, Zed, Viktor"
+            ],
+            [
+              "ADC / Bot",
+              "Dealing sustained damage in teamfights",
+              "Farming, positioning, scaling",
+              "Ashe, Jinx, Caitlyn, Miss Fortune, Kai'Sa"
+            ],
+            [
+              "Support",
+              "Enabling the team and controlling vision",
+              "Playmaking, protection, map control",
+              "Lulu, Leona, Thresh, Nami, Nautilus"
+            ]
+          ]
+        },
+        "subsections": [
+          {
+            "heading": "Top Lane",
+            "paragraphs": [
+              "Top lane is the long, isolated lane where small advantages compound. You will spend a lot of time in one-on-one matchups, managing waves, and deciding whether to pressure the side lane or join your team.",
+              "Why it appeals: you like dueling, learning matchups in detail, and the responsibility of creating side-lane pressure. If you enjoy winning a lane through wave control rather than constant roaming, top is a natural fit."
+            ],
+            "bullets": [
+              "Garen — simple, forgiving, and excellent for learning trades and lane recovery.",
+              "Darius — a lane bully who teaches you to punish mistakes and control extended fights.",
+              "Jax — a scaling duelist who becomes a serious side-lane threat.",
+              "Camille — mobility and pick potential for players who like precise, aggressive side-lane play.",
+              "Ornn — a tank who contributes through engage, durability, and team-wide item upgrades."
+            ]
+          },
+          {
+            "heading": "Jungle",
+            "paragraphs": [
+              "The jungle is less about a lane and more about the clock. You manage camps, track the enemy jungler, choose gank paths, and decide which objective your team should fight for.",
+              "Why it appeals: you like planning, map awareness, and being the player who creates opportunities. If sitting in lane for ten minutes sounds boring, the jungle offers constant decisions."
+            ],
+            "bullets": [
+              "Warwick — forgiving clears, strong sustain, and straightforward ganks make him a great learning jungler.",
+              "Amumu — simple engage and teamfight crowd control for players who like setting up fights.",
+              "Vi — point-and-click lockdown that punishes isolated carries.",
+              "Lee Sin — early pressure and high mechanical expression for confident junglers.",
+              "Nocturne — global ultimate pressure and pick potential against scattered teams."
+            ]
+          },
+          {
+            "heading": "Mid Lane",
+            "paragraphs": [
+              "Mid lane sits in the middle of everything. You get priority, access to both river sides, and the choice to roam, invade, or pressure your opponent.",
+              "Why it appeals: you like variety. One game you are a control mage holding a chokepoint; the next you are an assassin looking for a side-lane pick. Mid also rewards mechanical outplays and quick decision-making."
+            ],
+            "bullets": [
+              "Ahri — safe, mobile, and good at creating picks without overcommitting.",
+              "Lux — long-range pressure, wave clear, and pick potential.",
+              "Syndra — burst and zone control for players who like punishing positioning mistakes.",
+              "Zed — an assassin who creates side-lane pressure and deletes isolated targets.",
+              "Viktor — a control mage who scales into a teamfight threat."
+            ]
+          },
+          {
+            "heading": "ADC / Bot Lane",
+            "paragraphs": [
+              "The ADC role is about converting gold into consistent damage. You share a lane with a support, farm carefully, and position behind your team in fights.",
+              "Why it appeals: you like the scaling fantasy and the precision of teamfight positioning. If you enjoy kiting, tracking enemy cooldowns, and being the player who eventually carries, ADC fits."
+            ],
+            "bullets": [
+              "Ashe — utility, engage, and vision make her useful even when behind.",
+              "Jinx — a teamfight marksman with range and reset potential.",
+              "Caitlyn — lane pressure and long-range control through traps and spacing.",
+              "Miss Fortune — strong lane trading and a fight-winning ultimate.",
+              "Kai'Sa — a flexible marksman who can dive with her team and scale into the late game."
+            ]
+          },
+          {
+            "heading": "Support",
+            "paragraphs": [
+              "Support is not a passive role. You control vision, dictate lane tempo, and decide whether your team engages or disengages.",
+              "Why it appeals: you like enabling others and controlling the flow of the game. If you enjoy playmaking without needing gold, support offers some of the highest-impact decisions in the game."
+            ],
+            "bullets": [
+              "Lulu — the enchanter who makes a fed carry nearly impossible to kill.",
+              "Leona — engage and crowd control for players who want to start fights.",
+              "Thresh — a versatile playmaker with pick potential, peel, and a signature lantern save.",
+              "Nami — lane trading, healing, and follow-up engage.",
+              "Nautilus — reliable lockdown and a frontline presence."
+            ]
+          }
+        ],
+        "links": [
+          {
+            "label": "Top lane champion guide",
+            "href": "/blog/best-champions-for-top-lane",
+            "description": "Go deeper on top lane picks, matchups and responsibilities."
+          },
+          {
+            "label": "Mid lane champion guide",
+            "href": "/blog/mid-lane-champions-guide",
+            "description": "Compare control mages, assassins and roaming mid laners."
+          },
+          {
+            "label": "ADC champion guide",
+            "href": "/blog/adc-champions-guide",
+            "description": "Find marksmen that fit your farming and teamfight style."
+          },
+          {
+            "label": "Support champion guide",
+            "href": "/blog/best-support-champions",
+            "description": "Explore enchanters, engage supports and utility picks."
+          }
+        ]
+      },
+      {
+        "heading": "Understand Champion Classes",
+        "paragraphs": [
+          "Your role tells you where you play. Champion class tells you how you fight. Two champions can share a role and feel completely different because one wants to burst a target while the other wants to win a long, sustained fight.",
+          "Riot's official class system uses categories such as Controller, Fighter, Mage, Marksman, Slayer, Tank, and Specialist. Players commonly use simpler labels: assassins, mages, fighters, tanks, marksmen, and supports. The table below uses the common terms while staying close to how the champions actually play."
+        ],
+        "tableFirst": true,
+        "table": {
+          "headers": [
+            "Class",
+            "How it wins",
+            "Strengths",
+            "Watch out for",
+            "Examples"
+          ],
+          "rows": [
+            [
+              "Assassins",
+              "Bursts a priority target and escapes",
+              "Mobility, pick potential, snowballing",
+              "Squishy; falls behind if the early game goes wrong",
+              "Zed, Akali, Katarina, Talon, Qiyana"
+            ],
+            [
+              "Mages",
+              "Controls space with ranged abilities",
+              "Wave clear, zoning, burst or utility",
+              "Often immobile and skillshot-dependent",
+              "Lux, Syndra, Orianna, Viktor, Ahri"
+            ],
+            [
+              "Fighters",
+              "Wins extended fights with damage and durability",
+              "Side-lane pressure, sustained trading",
+              "Can be kited by ranged champions",
+              "Darius, Jax, Camille, Riven, Warwick"
+            ],
+            [
+              "Tanks",
+              "Absorbs pressure and controls fights",
+              "Engage, crowd control, frontline",
+              "Lower damage; reliant on teammates",
+              "Ornn, Malphite, Leona, Nautilus, Shen"
+            ],
+            [
+              "Marksmen",
+              "Deals sustained damage from range",
+              "Objective damage, late-game teamfights",
+              "Fragile; needs gold and protection",
+              "Jinx, Caitlyn, Ashe, Kai'Sa, Vayne"
+            ],
+            [
+              "Supports / Controllers",
+              "Enables or disrupts through utility",
+              "Vision, peel, engage, healing",
+              "Low damage; impact depends on teammates",
+              "Lulu, Janna, Thresh, Nami, Braum"
+            ]
+          ]
+        },
+        "bullets": [
+          "Assassins want to wait for a cooldown or a misstep, then delete a target. If you dislike patience and flanking, they may frustrate you.",
+          "Mages want to control space before the fight starts. If you prefer constant action over zoning, a control mage may feel slow.",
+          "Fighters want extended trades and side-lane pressure. If you prefer burst, they may feel like they lack a finishing blow.",
+          "Tanks want to start fights or protect carries. If you need high damage numbers to feel useful, tanks can feel unrewarding.",
+          "Marksmen want time and gold. If you dislike careful positioning, the role will punish you.",
+          "Supports want to enable someone else. If you need to be the carry, the role may not satisfy you.",
+          "Most champions blur the lines. Samira is a marksman who plays like an assassin, Galio is a mage with tank-like utility, and Lee Sin is a fighter with assassin-level playmaking. Use classes as a starting filter, not a cage."
+        ]
+      },
+      {
+        "heading": "Test Different Champions Before You Commit",
+        "paragraphs": [
+          "The most common mistake is choosing a main after one good game. A champion can look incredible in a highlight video and feel clunky in your hands. Another can seem boring on paper and become your favorite after five games.",
+          "Test candidates like a small experiment instead of a commitment."
+        ],
+        "subsections": [
+          {
+            "heading": "Step 1: Create a shortlist of three to five champions",
+            "paragraphs": [
+              "Pick champions that fit both your preferred role and one or two playstyle profiles. Keep the list short enough that you can actually evaluate each one. If you are unsure where to start, the find-your-main quiz can suggest champions based on your preferences."
+            ]
+          },
+          {
+            "heading": "Step 2: Learn their abilities",
+            "paragraphs": [
+              "Read the passive and all four abilities. Then spend a few minutes in the Practice Tool to understand range, cooldowns, and the basic combo. You do not need to memorize every animation cancel before your first game. You do need to know what your champion is trying to do."
+            ]
+          },
+          {
+            "heading": "Step 3: Play at least three to five games with each champion",
+            "paragraphs": [
+              "One game is a first impression. Three to five games is enough to feel the champion's rhythm, its power spikes, and its weaknesses. Normal Draft or Blind Pick is ideal because it resembles the real game without ranked pressure. ARAM can help you learn a kit quickly, but it does not replicate Summoner's Rift wave management or lane matchups."
+            ]
+          },
+          {
+            "heading": "Step 4: Evaluate enjoyment and performance separately",
+            "paragraphs": [
+              "A champion can be fun but difficult, or effective but boring. Both matter, but enjoyment matters more for a long-term main. After each session, use the Champion Test Scorecard below and look for patterns rather than one-off results."
+            ]
+          },
+          {
+            "heading": "Step 5: Narrow down your choices",
+            "paragraphs": [
+              "Keep one or two champions that scored well on enjoyment and comfort. Remove the ones that felt like work. Do not keep a champion only because you won one game with it; wins are noisy, especially in a small sample.",
+              "Before deciding, ask yourself these questions:"
+            ],
+            "bullets": [
+              "Did I enjoy the champion even in a losing game?",
+              "Do I like the abilities, or just the idea of the champion?",
+              "Do I understand why I died, or am I blaming the matchup?",
+              "Does the champion fit the role I actually want to queue?",
+              "Can I imagine playing this champion fifty more times?",
+              "Am I choosing it because I like it, or because a tier list told me to?"
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Champion Test Scorecard",
+        "paragraphs": [
+          "After each session with a candidate, score these questions from 1 to 5. Compare the totals across three to five games, not after a single match."
+        ],
+        "table": {
+          "headers": [
+            "Question",
+            "Score (1–5)",
+            "Why it matters"
+          ],
+          "rows": [
+            [
+              "Did I enjoy playing this champion?",
+              "",
+              "Fun is the strongest predictor of long-term commitment"
+            ],
+            [
+              "Do I like its abilities and mechanics?",
+              "",
+              "Comfort affects how quickly you improve"
+            ],
+            [
+              "Do I feel motivated to improve with it?",
+              "",
+              "Curiosity sustains mastery"
+            ],
+            [
+              "Do I enjoy its early, mid and late game?",
+              "",
+              "You need to like the whole game, not just one power spike"
+            ],
+            [
+              "Can I imagine playing this champion regularly?",
+              "",
+              "Prevents short-term hype picks"
+            ]
+          ]
+        }
+      },
+      {
+        "heading": "Don't Choose Your Main Only Because of the Meta",
+        "paragraphs": [
+          "The meta is real, but it is temporary. Balance patches, item changes, and professional play can move a champion from must-pick to situational in a few weeks. A champion with a strong win rate today might receive a direct nerf tomorrow, or lose its best item next season.",
+          "Win rates also need context. A champion's win rate can be inflated by a small, dedicated player base, a specific rank, a particular role, or a favorable patch. Tier lists are snapshots, not personal recommendations. They tell you what is working for the population being measured; they do not tell you what will work for your hands, your role, and your willingness to practice.",
+          "Use the meta as information, not as a decision-maker.",
+          "A champion you enjoy and understand is usually a better long-term investment than a temporarily strong pick. Meta picks also attract bans and contested picks. Your main should still be there when the patch changes."
+        ],
+        "table": {
+          "headers": [
+            "Good reason to pick a champion",
+            "Weak reason to pick a champion"
+          ],
+          "rows": [
+            [
+              "You enjoy the kit and want to master it",
+              "It is S-tier on a tier list this week"
+            ],
+            [
+              "You perform consistently across different games",
+              "It has a high win rate in a role you do not play"
+            ],
+            [
+              "You like the champion's role and responsibilities",
+              "A streamer played it once"
+            ],
+            [
+              "You are willing to learn its bad matchups",
+              "It is temporarily overpowered and will likely be nerfed"
+            ],
+            [
+              "It fits your team's needs and your champion pool",
+              "It is the only champion you have not tried yet"
+            ]
+          ]
+        }
+      },
+      {
+        "heading": "Build a Small Champion Pool",
+        "paragraphs": [
+          "Finding your main is not the end of the process. You also need a pool you can rely on when your main is banned, picked by the enemy, or a bad fit for the draft. A good pool is small enough to maintain and flexible enough to handle common situations.",
+          "A pool is a tool, not a permanent identity. Review it at the start of each season, keep the picks that still fit, and replace the ones that no longer do."
+        ],
+        "tableFirst": true,
+        "table": {
+          "headers": [
+            "Slot",
+            "Purpose",
+            "When to pick it",
+            "Example approach"
+          ],
+          "rows": [
+            [
+              "Main",
+              "Your strongest and most enjoyable pick",
+              "Most games when available",
+              "A champion you have played extensively and understand in multiple matchups"
+            ],
+            [
+              "Secondary",
+              "A reliable alternative",
+              "Main is banned, picked, or poorly suited",
+              "A champion with a similar role but a different damage profile or engage pattern"
+            ],
+            [
+              "Backup",
+              "A simple, comfortable option",
+              "You are autofilled, tired, or need a safe pick",
+              "A low-complexity champion you can play without warming up"
+            ]
+          ]
+        },
+        "bullets": [
+          "For ranked play, a small pool is usually more manageable than constantly rotating through ten champions.",
+          "The goal is not to play the same champion forever; it is to reduce the number of variables you are learning at once.",
+          "When you know your pool, you can spend more attention on wave management, vision, objective timers, and teamfighting.",
+          "A champion you loved two seasons ago may no longer fit the way you play. That is normal, and it is a reason to review the pool rather than cling to it."
+        ],
+        "links": [
+          {
+            "label": "How to climb ranked in League of Legends",
+            "href": "/blog/how-to-climb-ranked",
+            "description": "Turn your new main into a ranked plan with better sessions and review habits."
+          }
+        ]
+      },
+      {
+        "heading": "Track Your Progress",
+        "paragraphs": [
+          "Once you have a main, improvement comes from feedback. Wins and losses are too noisy to be your only signal. Track a few specific things and review them regularly.",
+          "League of Legends also has a Champion Mastery system that tracks your progress with individual champions. You earn mastery points by playing eligible matchmaking games, and your performance contributes to your champion's progression. Mastery is a useful record of experience, but it does not automatically mean you have mastered the matchup or the role."
+        ],
+        "tableFirst": true,
+        "table": {
+          "headers": [
+            "Metric",
+            "What it tells you",
+            "How to use it"
+          ],
+          "rows": [
+            [
+              "CS per minute",
+              "Farming consistency and lane efficiency",
+              "Compare against your own average, not a random benchmark"
+            ],
+            [
+              "Deaths",
+              "Positioning, overextension, and risk management",
+              "Count avoidable deaths, not just total deaths"
+            ],
+            [
+              "Positioning",
+              "Whether you are dealing damage safely",
+              "Review teamfights and note when you were out of range or exposed"
+            ],
+            [
+              "Damage dealt",
+              "Your contribution in context",
+              "Compare with your gold and role; high damage in a loss can still hide bad decisions"
+            ],
+            [
+              "Lane performance",
+              "Whether you are winning or surviving lane consistently",
+              "Review your first 10 minutes and note one recurring mistake"
+            ],
+            [
+              "Teamfight decisions",
+              "Target selection, cooldown tracking and positioning under pressure",
+              "Review one teamfight per session and identify one better choice"
+            ],
+            [
+              "Matchup notes",
+              "Which opponents consistently give you trouble",
+              "Write down one adjustment for each difficult matchup"
+            ],
+            [
+              "Champion mastery",
+              "Time invested and familiarity",
+              "Use it as a comfort signal, not proof of skill"
+            ]
+          ]
+        },
+        "bullets": [
+          "Pick one metric to focus on for the week, such as dying less before level 6 or keeping your CS per minute steady through the mid game.",
+          "Review one replay after a session and find two decisions you would change.",
+          "Note one matchup insight after each game.",
+          "Revisit your champion pool at the end of the month and ask whether it still fits."
+        ]
+      },
+      {
+        "heading": "Find Your Main Champion with LeagueRoulette",
+        "paragraphs": [
+          "If you have followed the process and still feel stuck, or if you keep defaulting to the same three champions out of habit, randomness can help. Trying a champion you would never pick on your own is one of the fastest ways to discover a playstyle you did not know you enjoyed.",
+          "LeagueRoulette randomizes your champion selection so you can step outside your comfort picks without overthinking it. Use it in normal games or with friends, treat each spin as a low-pressure experiment, and pay attention to which champions make you want to queue again.",
+          "Stop playing the same champions every game. Spin the wheel, try something new and find your next main!"
+        ],
+        "links": [
+          {
+            "label": "Spin the LeagueRoulette wheel",
+            "href": "/",
+            "description": "Try a random champion and leave your comfort picks behind for one game."
+          },
+          {
+            "label": "Find your main quiz",
+            "href": "/find-your-main",
+            "description": "Get champion suggestions tailored to your playstyle and role."
+          },
+          {
+            "label": "Current tier list",
+            "href": "/tierlist",
+            "description": "Check the meta for context, then decide with your own preferences."
+          }
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "q": "How many champions should I main?",
+        "a": "There is no fixed number, but focusing on one to three champions is a good starting point, especially if you want to improve in ranked. A main plus one or two backups keeps the pool manageable while covering bans and unfavorable matchups."
+      },
+      {
+        "q": "How long does it take to master a champion?",
+        "a": "It depends on the champion's complexity and your experience. A straightforward champion like Garen or Ashe can feel comfortable after a handful of games. A champion like Azir, Riven, or Gangplank can take dozens or even hundreds of games before the kit feels automatic. Mastery also means different things at different ranks; you are always learning new matchups."
+      },
+      {
+        "q": "Should I main an easy or difficult champion?",
+        "a": "Choose the one you enjoy and can improve with. Easy champions let you focus on fundamentals like farming, wave management, and positioning. Difficult champions offer more mechanical depth and a higher ceiling, but they can hide your fundamental mistakes behind execution challenges. Neither choice is inherently better; the best champion is the one you will keep playing."
+      },
+      {
+        "q": "Should I change my main after a nerf?",
+        "a": "Not automatically. A nerf does not make a champion unplayable, and switching every patch prevents you from developing depth. If the champion still fits your playstyle and you understand its new limits, keep playing it. Reconsider only if the change removes the part of the kit you actually enjoyed, or if the champion feels consistently frustrating across many games."
+      },
+      {
+        "q": "Can I have more than one main?",
+        "a": "Yes. Many players have a main for their primary role and a secondary pick for unfavorable drafts. You can also have a main in a second role if you queue flexibly. The key is to keep the total pool manageable so you are not relearning a different champion every game."
+      },
+      {
+        "q": "How do I know if I've found my main?",
+        "a": "You will notice that you enjoy the champion even when you lose, that you want to understand its matchups, and that you naturally look for reasons to pick it. You stop thinking about the champion as a test and start thinking about the game around it. That shift is usually the sign that you have found a main."
+      }
+    ]
   }
 ]

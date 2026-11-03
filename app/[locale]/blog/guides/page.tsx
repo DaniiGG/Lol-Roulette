@@ -26,12 +26,14 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   setRequestLocale(locale)
   const t = await getTranslations('guide-ui')
   const isTranslated = isGuideLocale(locale)
+  const titleKey = 'directory.seoTitle'
+  const descriptionKey = 'directory.seoDescription'
 
   return buildPageMetadata({
     locale,
     path: GUIDE_PATH,
-    title: t('directory.title'),
-    description: t('directory.description'),
+    title: t.has(titleKey) ? t(titleKey) : t('directory.title'),
+    description: t.has(descriptionKey) ? t(descriptionKey) : t('directory.description'),
     alternateLocales: GUIDE_LOCALES,
     robots: isTranslated ? undefined : { index: false, follow: true },
   })

@@ -372,6 +372,36 @@ export const BLOG_POST_META: Record<string, BlogPostMeta> = {
     image: '/images/blog/parche21oct.jpg',
     imageAlt: 'Patch 26.21 of League of Legends: buffs, nerfs y object changes',
   },
+  'lol-patch-26-22': {
+    publishedAt: '2026-11-03',
+    updatedAt: '2026-11-03',
+    author: 'League Roulette Team',
+    category: 'guides',
+    keywords: [
+      'lol patch 26.22',
+      'league of legends patch 26.22',
+      'lol patch notes 26.22',
+      'lol champion buffs and nerfs',
+      'patch 26.22 item changes',
+      'mel mini update',
+    ],
+    translatedIn: ['en', 'es'],
+    related: ['lol-patch-26-21', 'lol-tier-list-current-patch', 'how-to-climb-ranked'],
+    seoTitleByLocale: {
+      en: 'LoL Patch 26.22: All Champion Changes, Buffs and Nerfs',
+      es: 'Parche 26.22 de LoL: todos los cambios, mejoras y nerfs',
+    },
+    seoDescriptionByLocale: {
+      en: "Discover all League of Legends Patch 26.22 changes, including champion buffs, nerfs, Mel's update and item adjustments.",
+      es: 'Descubre todos los cambios del parche 26.22 de League of Legends: mejoras, nerfs, actualización de Mel y objetos.',
+    },
+    image: '/images/blog/parche26.22.jpg',
+    imageAlt: 'Patch 26.22 of League of Legends: champion buffs, nerfs, Mel update and item changes',
+    imageAltByLocale: {
+      en: 'Patch 26.22 of League of Legends: champion buffs, nerfs, Mel update and item changes',
+      es: 'Parche 26.22 de League of Legends: mejoras, nerfs, actualización de Mel y cambios de objetos',
+    },
+  },
   'lol-patch-26-21-tier-list': {
     publishedAt: '2026-10-21',
     updatedAt: '2026-10-21',
@@ -410,6 +440,44 @@ export const BLOG_POST_META: Record<string, BlogPostMeta> = {
     imageAltByLocale: {
       en: 'League of Legends Patch 26.21 tier list with champion portraits for every role',
       es: 'Tier list del parche 26.21 de League of Legends con retratos de campeones para cada línea',
+    },
+  },
+  'find-your-main-champion': {
+    publishedAt: '2026-11-03',
+    updatedAt: '2026-11-03',
+    author: 'League Roulette Team',
+    category: 'guides',
+    lane: 'all-lanes',
+    keywords: [
+      'how to find your main in league of legends',
+      'best champion to main',
+      'how to choose a main champion',
+      'league of legends champion guide',
+      'find your playstyle',
+      'cómo encontrar tu main en lol',
+      'mejor campeón para main',
+      'cómo elegir un campeón principal',
+      'encontrar tu estilo de juego en lol',
+    ],
+    translatedIn: ['en', 'es'],
+    related: ['what-is-my-main', 'what-champion-should-i-play', 'how-to-climb-ranked'],
+    seoTitle: 'How to Find Your Main Champion in League of Legends',
+    seoDescription:
+      'Find your perfect League of Legends main. Discover your playstyle, choose the right role and learn how to find a champion you love.',
+    seoTitleByLocale: {
+      en: 'How to Find Your Main Champion in League of Legends',
+      es: 'Cómo encontrar tu main en League of Legends',
+    },
+    seoDescriptionByLocale: {
+      en: 'Find your perfect League of Legends main. Discover your playstyle, choose the right role and learn how to find a champion you love.',
+      es: 'Descubre tu campeón principal en LoL. Encuentra tu estilo de juego, elige tu posición y aprende a encontrar tu main.',
+    },
+    image: '/images/blog/elijemainarticulo.jpg',
+    imageAlt:
+      'Fantasy artwork of a hooded figure and a dragon, representing the search for a League of Legends main',
+    imageAltByLocale: {
+      en: 'Fantasy artwork of a hooded figure and a dragon, representing the search for a League of Legends main',
+      es: 'Ilustración fantástica de una figura encapuchada y un dragón que representa la búsqueda de un main en League of Legends',
     },
   },
 }

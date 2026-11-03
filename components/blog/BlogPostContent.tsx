@@ -386,10 +386,11 @@ export default function BlogPostContent({ post, locale }: BlogPostContentProps) 
                 ))}
               </div>
             )}
+            {section.tableFirst && section.table ? renderTable(section.table) : null}
             {section.bullets?.length && renderBullets(section.bullets)}
             {section.subsections?.length ? renderSubsections(section.subsections) : null}
             {section.links?.length ? renderLinks(section.links, locale) : null}
-            {section.table && renderTable(section.table)}
+            {!section.tableFirst && section.table ? renderTable(section.table) : null}
             {section.patchTable && renderPatchTable(section.patchTable, locale)}
             {section.cta && renderCtaBox(section.cta, section.paragraphs, locale)}
           </section>
