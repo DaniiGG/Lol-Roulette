@@ -17,6 +17,7 @@ export default function RootHead() {
       <meta name="google-site-verification" content="3sVvOH8RoSBRMz3-yWd4pFKr5fcoclC4VZXl7GNi4ic" />
       <meta name="theme-color" content="#C89B3C" />
       <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <Script type="text/javascript" async data-noptimize="1" data-cfasync="false" src="//scripts.scriptwrapper.com/tags/5b012155-52f9-43ac-afd4-fcefde79ff33.js"/>
       <Script
         id="breadcrumb-schema"
         type="application/ld+json"
