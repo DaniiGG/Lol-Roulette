@@ -27,6 +27,8 @@ function buildLegacyRedirects(): Redirect[] {
     redirects.push({ source, destination, statusCode: 301 });
   };
 
+  add('/ads.txt', 'https://adstxt.journeymv.com/sites/5b012155-52f9-43ac-afd4-fcefde79ff33/ads.txt');
+
   // Localized static path segments used before the URL simplification.
   for (const [source, destination] of Object.entries(LEGACY_LOCALIZED_PATHS)) {
     add(source, destination);
