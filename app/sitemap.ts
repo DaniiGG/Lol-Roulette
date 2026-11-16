@@ -38,6 +38,7 @@ const staticPages: Array<{
   { path: '/privacy', priority: 0.3, freq: 'yearly' },
   { path: '/terms', priority: 0.3, freq: 'yearly' },
   { path: '/top-lane', priority: 0.6, freq: 'weekly' },
+  { path: '/jungle', priority: 0.6, freq: 'weekly' },
   { path: '/mid-lane', priority: 0.6, freq: 'weekly' },
   { path: '/adc', priority: 0.6, freq: 'weekly' },
   { path: '/support', priority: 0.6, freq: 'weekly' },
@@ -67,14 +68,13 @@ function buildAlternates(
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = []
-  const now = new Date()
+
 
   // Static pages available in every locale (mastery is noindex).
   for (const page of staticPages) {
     for (const locale of routing.locales) {
       entries.push({
         url: localizedUrl(locale, page.path),
-        lastModified: now,
         changeFrequency: page.freq,
         priority: page.priority,
         alternates: buildAlternates(page.path, routing.locales),
@@ -86,7 +86,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   for (const locale of blogLocales) {
     entries.push({
       url: localizedUrl(locale, '/mastery-tree'),
-      lastModified: now,
       changeFrequency: 'weekly',
       priority: 0.8,
       alternates: buildAlternates('/mastery-tree', blogLocales),
@@ -97,7 +96,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   for (const locale of blogLocales) {
     entries.push({
       url: localizedUrl(locale, '/blog'),
-      lastModified: now,
       changeFrequency: 'weekly',
       priority: 0.8,
       alternates: buildAlternates('/blog', blogLocales),
@@ -129,7 +127,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   for (const locale of GUIDE_LOCALES) {
     entries.push({
       url: `${baseUrl}${getGuideIndexHref(locale)}`,
-      lastModified: now,
       changeFrequency: 'weekly',
       priority: 0.8,
       alternates: buildAlternates('/blog/guides', GUIDE_LOCALES),
@@ -170,7 +167,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
       entries.push({
         url: localizedUrl(locale, pathname),
-        lastModified: newestDate,
+        ...(newestDate.getTime() > 0 ? { lastModified: newestDate } : {}),
         changeFrequency: 'weekly',
         priority: 0.6,
         alternates: buildAlternates(pathname, blogLocales),

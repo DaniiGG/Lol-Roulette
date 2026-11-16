@@ -1,10 +1,13 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { notFound } from 'next/navigation'
+import LaneRoulette from '@/components/LaneRoulette'
+import { GUIDE_CHAMPIONS, getGuideHref, isGuideLocale } from '@/lib/guides/meta'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { buildPageMetadata, localizedPath } from '@/lib/seo/page-metadata'
 import { routing } from '@/i18n/routing'
 import type { AppPathnames } from '@/i18n/routes'
-import { BLOG_SLUGS, blogKeywords } from '@/lib/blog-posts'
+
 import { getPostHref } from '@/lib/blog/meta'
 import Breadcrumbs from '@/components/Breadcrumbs'
 
@@ -19,6 +22,7 @@ type BlogPost = {
 }
 
 const LANE_META: Record<string, { title: string; description: string; keywords: string[] }> = {
+  'jungle': { title: 'Jungle Champion Roulette', description: 'Pick a random jungler.', keywords: ['jungle', 'jungla', 'jungler'] },
   'top-lane': { title: 'Top Lane Champions Guide | League Roulette', description: 'Best top lane champions for ranked and ARAM. Find your carry pick with our comprehensive guide.', keywords: ['top lane champions', 'best top lane', 'top lane guide', 'lol top lane', 'ranked top lane'] },
   'mid-lane': { title: 'Mid Lane Champions Guide | League Roulette', description: 'Best mid lane champions for every playstyle. Control mages, assassins, and carries covered.', keywords: ['mid lane champions', 'best mid lane', 'mid lane guide', 'lol mid lane', 'mid lane meta'] },
   'adc': { title: 'ADC Carry Champions Guide | League Roulette', description: 'Best ADC carries for climbing ranked. Hyper carries and consistent marksmen covered.', keywords: ['ADC champions', 'ADC carry guide', 'best ADC', 'lol ADC', 'ranked ADC picks'] },
@@ -28,16 +32,17 @@ const LANE_META: Record<string, { title: string; description: string; keywords: 
 
 const LANE_ROLE_KEYS: Record<string, string> = {
   'top-lane': 'top',
+  'jungle': 'jungle',
   'mid-lane': 'mid',
   'adc': 'adc',
   'support': 'support',
   'aram': 'aram',
 }
 
-async function getLaneCopy(locale: string, lane: string) {
+async function getLaneCopy(lane: string) {
   const t = await getTranslations('page-seo')
-  const tTierlist = await getTranslations('tierlist')
-  const role = tTierlist(`roles.${LANE_ROLE_KEYS[lane]}.title`)
+  const tLanes = await getTranslations('laneSelector')
+  const role = lane === 'aram' ? 'ARAM' : tLanes(LANE_ROLE_KEYS[lane])
 
   return {
     role,
@@ -46,16 +51,8 @@ async function getLaneCopy(locale: string, lane: string) {
   }
 }
 
-function getLanePosts(posts: BlogPost[], lane: string): BlogPost[] {
-  const laneKeywords = LANE_META[lane]?.keywords || []
-  return posts.filter(p => {
-    const allText = (p.title + p.description + p.excerpt).toLowerCase()
-    return laneKeywords.some(kw => allText.includes(kw.toLowerCase()))
-  })
-}
-
 export async function generateStaticParams() {
-  const lanes = ['top-lane', 'mid-lane', 'adc', 'support', 'aram']
+  const lanes = Object.keys(LANE_META)
   const params: { locale: string; lane: string }[] = []
   for (const locale of routing.locales) {
     for (const lane of lanes) {
@@ -68,9 +65,9 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ locale: string; lane: string }> }): Promise<Metadata> {
   const { locale, lane } = await params
   setRequestLocale(locale)
-  if (!LANE_META[lane]) return {}
+  if (!Object.hasOwn(LANE_META, lane)) notFound()
 
-  const copy = await getLaneCopy(locale, lane)
+  const copy = await getLaneCopy(lane)
 
   return buildPageMetadata({
     locale,
@@ -83,28 +80,27 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 export default async function LanePage({ params }: { params: Promise<{ locale: string; lane: string }> }) {
   const { locale, lane } = await params
   setRequestLocale(locale)
-  const t = await getTranslations('blog')
+  if (!Object.hasOwn(LANE_META, lane)) notFound()
+  const tQuiz = await getTranslations('quiz')
   const tAll = await getTranslations()
 
   let allPosts: BlogPost[] = []
   try { allPosts = tAll.raw('blog-content') as BlogPost[] } catch { allPosts = [] }
 
-  const lanePosts = allPosts.filter(p => {
-    const laneKey = lane === 'adc' ? 'adc' : lane
+  const lanePosts = (isGuideLocale(locale) ? allPosts : []).filter(p => {
     const allText = (p.title + p.description + p.excerpt).toLowerCase()
     const laneKeywords = LANE_META[lane]?.keywords || []
     return laneKeywords.some(kw => allText.includes(kw.toLowerCase()))
   })
 
-  const copy = await getLaneCopy(locale, lane)
+  const copy = await getLaneCopy(lane)
 
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: `https://leagueroulette.com${localizedPath(locale, '/')}` },
-      { '@type': 'ListItem', position: 2, name: t('blog') || 'Blog', item: `https://leagueroulette.com${localizedPath(locale, '/blog')}` },
-      { '@type': 'ListItem', position: 3, name: copy.role, item: `https://leagueroulette.com${localizedPath(locale, `/${lane}` as AppPathnames)}` },
+      { '@type': 'ListItem', position: 2, name: copy.role, item: `https://leagueroulette.com${localizedPath(locale, `/${lane}` as AppPathnames)}` },
     ],
   }
 
@@ -115,7 +111,6 @@ export default async function LanePage({ params }: { params: Promise<{ locale: s
         <Breadcrumbs
           items={[
             { label: 'League Roulette', href: '/' },
-            { label: t('blog'), href: '/blog' },
             { label: copy.role },
           ]}
         />
@@ -124,6 +119,22 @@ export default async function LanePage({ params }: { params: Promise<{ locale: s
           <h1 className="mb-3 text-4xl font-semibold tracking-tight text-white md:text-5xl">{copy.title}</h1>
           <p className="max-w-2xl text-lg leading-8 text-neutral-300">{copy.description}</p>
         </div>
+        <LaneRoulette lane={LANE_ROLE_KEYS[lane]} />
+        <nav aria-label={copy.role} className="mb-8 flex flex-wrap gap-4">
+          {Object.keys(LANE_META).filter(key => key !== lane).map(key => (
+            <Link key={key} href={localizedPath(locale, `/${key}` as AppPathnames)} className="text-[#C89B3C] underline underline-offset-4">
+              {key === 'top-lane' ? 'Top' : key === 'mid-lane' ? 'Mid' : key === 'jungle' ? (locale === 'es' ? 'Jungla' : 'Jungle') : key.toUpperCase()}
+            </Link>
+          ))}
+          <Link href={localizedPath(locale, '/find-your-main')} className="text-[#C89B3C] underline underline-offset-4">{tQuiz('navLabel')}</Link>
+        </nav>
+        {isGuideLocale(locale) && <div className="mb-8 flex flex-wrap gap-4">
+          {GUIDE_CHAMPIONS.filter(guide => lane === 'aram' || guide.roles.some(role => role === LANE_ROLE_KEYS[lane])).map(guide => (
+            <Link key={guide.slug} href={getGuideHref(guide.slug, locale)} className="text-[#C89B3C] underline underline-offset-4">
+              {locale === 'es' ? 'Cómo jugar' : 'How to play'} {guide.championId}
+            </Link>
+          ))}
+        </div>}
         <div className="grid gap-6 md:grid-cols-2">
           {lanePosts.map((post: BlogPost) => (
             <article key={post.slug} className="flex h-full flex-col rounded-3xl border border-neutral-800 bg-neutral-900 p-6">

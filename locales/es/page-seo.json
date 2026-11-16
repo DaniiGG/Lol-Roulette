@@ -1,7 +1,7 @@
 {
   "home": {
-    "title": "Generador aleatorio de campeones LoL y ruleta",
-    "description": "Gira la ruleta gratuita de campeones de League of Legends, filtra por línea y recibe un campeón aleatorio para tu próxima partida. Registra victorias, gana XP y sube en la clasificación."
+    "title": "Ruleta de campeones LoL por rol, gratis y sin registro",
+    "description": "Elige un campeón aleatorio de LoL por rol sin registrarte. Gira gratis, descubre nuevos picks y conecta tu cuenta para registrar victorias y ganar XP."
   },
   "about": {
     "title": "Acerca de League Roulette",
@@ -56,7 +56,7 @@
     "description": "Activa retos semanales de League of Legends, gana XP extra en victorias verificadas y convierte los picks aleatorios en un sistema de progresión divertido."
   },
   "lane": {
-    "title": "Guía de campeones: {role}",
-    "description": "Descubre campeones fuertes para {role}, consejos de matchups e ideas de picks aleatorios para ranked, normales y ARAM."
+    "title": "Campeón aleatorio para {role}: ruleta LoL",
+    "description": "Elige tu próximo campeón para {role} con una ruleta gratuita y sin registro. Descubre picks y consulta guías para preparar tu próxima partida."
   }
 }

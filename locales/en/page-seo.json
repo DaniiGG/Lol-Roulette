@@ -1,7 +1,7 @@
 {
   "home": {
-    "title": "LoL Random Champion Generator & Roulette",
-    "description": "Spin the free League of Legends champion roulette, filter by lane, and get a random champion for your next match. Track wins, earn XP, and climb the leaderboard."
+    "title": "LoL Random Champion Generator by Role - Free Roulette",
+    "description": "Get a random LoL champion by role with no sign-up. Spin for free, discover new picks, and connect your account to track wins and earn XP."
   },
   "about": {
     "title": "About League Roulette",
@@ -56,7 +56,7 @@
     "description": "Activate weekly League of Legends challenges, earn bonus XP on verified wins, and turn random champion picks into a fun progression system."
   },
   "lane": {
-    "title": "{role} Champions Guide",
-    "description": "Discover strong {role} champions, matchup tips, and random pick ideas for ranked, normal, and ARAM games."
+    "title": "Random {role} Champion Generator - LoL Roulette",
+    "description": "Pick your next {role} champion with a free roulette, no sign-up needed. Discover picks and explore guides before your next match."
   }
 }

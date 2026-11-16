@@ -104,6 +104,7 @@ export const pathnames = {
 
   // Lanes
   '/top-lane': same('/top-lane'),
+  '/jungle': same('/jungle'),
   '/mid-lane': same('/mid-lane'),
   '/adc': same('/adc'),
   '/support': same('/support'),
@@ -149,6 +150,7 @@ export const ROUTES = {
   tierlist: '/tierlist',
   tips: '/tips',
   topLane: '/top-lane',
+  jungle: '/jungle',
   midLane: '/mid-lane',
   adc: '/adc',
   support: '/support',
@@ -187,6 +189,7 @@ export const ROUTE_LOCALES: Record<AppPathnames, readonly string[]> = {
   '/tierlist': ALL_LOCALES,
   '/tips': ALL_LOCALES,
   '/top-lane': ALL_LOCALES,
+  '/jungle': ALL_LOCALES,
   '/mid-lane': ALL_LOCALES,
   '/adc': ALL_LOCALES,
   '/support': ALL_LOCALES,

@@ -283,7 +283,10 @@ export default function RouletteWheel({
   /* ───────── SPIN ───────── */
 
   const spin = useCallback(() => {
-  if (isSpinning || !allChampions.length || disabled) return
+  if (isSpinning || loadingChamps || profileLoading || !allChampions.length || disabled) return
+
+  const canvas = canvasRef.current
+  if (!canvas) return
 
   setWinner(null)
   setIsSpinning(true)
@@ -292,17 +295,15 @@ export default function RouletteWheel({
   prevCellIndexRef.current = 0
 
   const pool: Champion[] = []
-  for (let i = 0; i < 1; i++) {
+  const repetitions = Math.max(3, Math.ceil(60 / allChampions.length))
+  for (let i = 0; i < repetitions; i++) {
     pool.push(...[...allChampions].sort(() => Math.random() - 0.5))
   }
   stripRef.current = pool
 
-  const canvas = canvasRef.current
-  if (!canvas) return
-
   const cx = canvas.width / 2
   const mid = Math.floor(pool.length * 0.5)
-  const winIdx = mid + Math.floor(Math.random() * 20)
+  const winIdx = mid + Math.floor(Math.random() * allChampions.length)
   const finalOffset = winIdx * CELL_W + CELL_W / 2 - cx
   const start = performance.now()
   const winChamp = pool[winIdx]
@@ -336,7 +337,7 @@ export default function RouletteWheel({
   }
 
   animRef.current = requestAnimationFrame(animate)
-}, [isSpinning, allChampions, disabled, draw, onResult])
+}, [isSpinning, loadingChamps, profileLoading, allChampions, disabled, draw, onResult])
 
   /* ───────── INIT STRIP ───────── */
 
@@ -344,7 +345,8 @@ export default function RouletteWheel({
     if (!allChampions.length) return
     const pool = [...allChampions, ...allChampions, ...allChampions]
     stripRef.current = pool
-    setTimeout(() => draw(0), 300)
+    const timer = setTimeout(() => draw(0), 300)
+    return () => clearTimeout(timer)
   }, [allChampions, draw])
 
   /* ───────── RESIZE ───────── */

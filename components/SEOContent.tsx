@@ -1,66 +1,14 @@
-'use client'
-
 import { useTranslations } from 'next-intl'
-
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'What is a random lol champion generator?',
-      acceptedAnswer: { '@type': 'Answer', text: 'A random lol champion generator randomly selects a League of Legends champion for you to play. League Roulette is the best league of legends randomizer and champion roulette — spin to get a random league champ generator pick for any lane.' },
-    },
-    {
-      '@type': 'Question',
-      name: 'Is League Roulette free?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Yes! League Roulette is completely free to use. You can spin the roulette without creating an account, or login to track your progress and compete.' },
-    },
-    {
-      '@type': 'Question',
-      name: 'How does match verification work?',
-      acceptedAnswer: { '@type': 'Answer', text: 'We use Riot Games official API to verify that you played and won with the assigned champion. Your match data is fetched securely and privately.' },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can I filter champions by lane?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Yes! You can select your preferred lane (Top, Jungle, Mid, ADC, Support) and get a random champion that fits that role.' },
-    },
-    {
-      '@type': 'Question',
-      name: 'Is this affiliated with Riot Games?',
-      acceptedAnswer: { '@type': 'Answer', text: 'No. League Roulette is an independent fan-made project and is not endorsed by Riot Games.' },
-    },
-    {
-      '@type': 'Question',
-      name: 'Does it include all Season 2026 champions?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Yes! Updated for Season 2026 with all League of Legends champions including new releases.' },
-    },
-    {
-      '@type': 'Question',
-      name: 'Is it good for ARAM random champion generator?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Perfect for ARAM! Filter by role and get random picks that work great in Howling Abyss chaos.' },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can I use random champion picker for ranked?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Absolutely! Many players use it to practice off-meta picks and improve their champion pool for ranked climb.' },
-    },
-    {
-      '@type': 'Question',
-      name: 'Is League Roulette mobile optimized?',
-      acceptedAnswer: { '@type': 'Answer', text: '100% mobile-friendly. Spin the roulette on phone, tablet, or desktop. Perfect for queue times!' },
-    },
-    {
-      '@type': 'Question',
-      name: 'What is the best league of legends randomizer?',
-      acceptedAnswer: { '@type': 'Answer', text: 'League Roulette is the best league of legends randomizer and random lol champion generator. With lane filtering, Riot API verification, unlimited spins, and leaderboards, it is the most complete random champ generator online.' },
-    },
-  ],
-}
 
 export default function SEOContent() {
   const t = useTranslations('seo')
+  const faqSchema = {
+    '@context': 'https://schema.org', '@type': 'FAQPage',
+    mainEntity: Array.from({ length: 8 }, (_, index) => ({
+      '@type': 'Question', name: t(`faq${index + 1}Q`),
+      acceptedAnswer: { '@type': 'Answer', text: t(`faq${index + 1}A`) },
+    })),
+  }
   const features = t.raw('features') as string[]
   const howToSteps = t.raw('howToSteps') as string[]
   const whyBullets = t.raw('whyBullets') as string[]
@@ -71,9 +19,9 @@ export default function SEOContent() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <h1 className="sr-only">
+      <h2 className="sr-only">
         {t('srHeading')}
-      </h1>
+      </h2>
 
       <div className="bg-neutral-900/40 backdrop-blur-xl rounded-2xl border border-neutral-800/50 p-8 space-y-6 text-neutral-300">
 

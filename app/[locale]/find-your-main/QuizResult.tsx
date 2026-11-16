@@ -1,6 +1,7 @@
 ﻿'use client'
 
 import { useCallback, useState } from 'react'
+import ChampionGuideLink from '@/components/ChampionGuideLink'
 import { ArrowLeft, Check, Copy, Dices, Link2, RotateCcw, Share2, Sparkles } from 'lucide-react'
 import { Link } from '@/i18n/navigation'
 import { useTranslations } from 'next-intl'
@@ -298,6 +299,7 @@ export default function QuizResult({ answers, outcome, locale, onRestart, onRevi
         />
       </div>
 
+      <div className="mt-6"><ChampionGuideLink championId={champion.ddragonKey} /></div>
       <section className="mt-8 rounded-3xl border border-white/10 bg-[#070912]/90 p-6 sm:p-8">
         <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center">
           <button

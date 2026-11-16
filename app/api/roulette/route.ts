@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server"
-import { getChampionsByLane } from "@/lib/champion-lanes"
+import { getChampionsByLane, normalizeChampionName } from "@/lib/champion-lanes"
 
 type Champion = {
   id: string
@@ -20,13 +20,14 @@ export async function GET(request: Request) {
       { cache: "force-cache" }
     )
 
+    if (!res.ok) throw new Error("Champion data unavailable")
     const data = await res.json()
     const allChampions: Champion[] = Object.values(data.data)
 
     const validChampionNames = getChampionsByLane(lane)
 
     let champions = allChampions.filter(champ => 
-      validChampionNames.includes(champ.name)
+      validChampionNames.some(name => normalizeChampionName(name) === champ.id)
     )
 
     if (champions.length === 0) {

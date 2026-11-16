@@ -25,7 +25,8 @@ import VerificationResult from "@/components/VerificationResult"
 import AutoVerifyIndicator from "@/components/AutoVerifyIndicator"
 import RouletteWheel from "@/components/RouletteWheel"
 import SlotMachineRoulette from "@/components/Slotmachineroulette"
-import SEOContent from "@/components/SEOContent"
+import type { ReactNode } from "react"
+import ChampionGuideLink from "@/components/ChampionGuideLink"
 import ChampionStats from "@/components/ChampionStats"
 import MatchSimulator from "@/components/MatchSimulator"
 import { AutoVerifier } from "@/lib/auto-verify"
@@ -108,7 +109,7 @@ function saveGuestPicks(picks: GuestPick[]) {
   window.dispatchEvent(new Event(GUEST_PICK_CHANGE_EVENT))
 }
 
-export default function Home() {
+export default function Home({ seoContent }: { seoContent: ReactNode }) {
   const t = useTranslations('home')
   const tChallenges = useTranslations('challenges')
   const tLanes = useTranslations('laneSelector')
@@ -868,6 +869,8 @@ export default function Home() {
                 </section>
               )}
 
+              {champ && !spinning && <ChampionGuideLink championId={champ.id} />}
+
               {/* Champion Stats & Build */}
               {champ && (
                 <ChampionStats championId={champ.id} championName={champ.name} />
@@ -956,7 +959,7 @@ export default function Home() {
           </div>
 
           {/* SEO Rich Content */}
-          <SEOContent />
+          {seoContent}
 
           <section className="mx-auto mt-16 max-w-5xl">
             <div className="mb-8 text-center">

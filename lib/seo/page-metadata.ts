@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { getPathname } from '@/i18n/navigation'
 import { routing } from '@/i18n/routing'
-import type { AppPathnames, Locale } from '@/i18n/routes'
+import { getRouteLocales, type AppPathnames, type Locale } from '@/i18n/routes'
 import { SITE_URL } from '@/lib/site'
 
 const OG_LOCALES: Record<string, string> = {
@@ -86,7 +86,7 @@ export function buildPageMetadata({
 }: PageMetadataOptions): Metadata {
   const canonical = localizedAbsoluteUrl(locale, path, params)
   const ogLocale = OG_LOCALES[locale] ?? OG_LOCALES.en
-  const locales = alternateLocales ?? routing.locales
+  const locales = alternateLocales ?? getRouteLocales(path)
   const alternateLocale = locales
     .filter((item) => item !== locale)
     .map((item) => OG_LOCALES[item])
