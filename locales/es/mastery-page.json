@@ -1,0 +1,19 @@
+{
+  "eyebrow": "TU PERFIL DE LEAGUE OF LEGENDS",
+  "intro": "Tu experiencia con cada campeón, en un solo lugar. Explora tus puntos de maestría y descubre con quién consigues mejores resultados.",
+  "collection": "Tu colección de campeones",
+  "preview": "Vista ilustrativa",
+  "pointsDesc": "Localiza los campeones a los que más tiempo has dedicado.",
+  "levelsDesc": "Explora los niveles de maestría y la distribución de tu colección.",
+  "winsDesc": "Consulta tus resultados por campeón y filtra por línea o modo de juego.",
+  "access": "Conecta tu perfil",
+  "accessNote": "Accede con tu Riot ID y región para cargar tus datos.",
+  "tree": "Mapa de maestría",
+  "treeDesc": "Busca un campeón, filtra por rol y explora sus puntos y nivel.",
+  "resultsDesc": "Compara victorias y derrotas por campeón en las partidas disponibles.",
+  "connected": "Perfil conectado",
+  "incomplete": "Faltan datos del perfil",
+  "incompleteDesc": "No se ha encontrado el identificador de jugador o la región. Vuelve a conectar tu perfil para cargar tus maestrías.",
+  "reconnect": "Volver a conectar",
+  "loading": "Cargando tu perfil…"
+}

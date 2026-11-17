@@ -16,7 +16,7 @@
       "h1": "How to Play Katarina in League of Legends",
       "heroIntro": [
         "Katarina is a high-mobility mid-lane assassin whose damage comes from daggers, resets and clean execution. She has no mana, so her limits are cooldowns, positioning and crowd control.",
-        "This guide covers her patch 26.21 builds, the level-by-level skill order, practical dagger combos, lane and teamfight decisions, and the matchups that punish careless entries. It is written for ranked Summoner's Rift and is based on Data Dragon 16.21.1 plus current U.GG and Lolalytics samples."
+        "This guide covers her patch 26.21 builds, the level-by-level skill order, practical dagger combos, lane and teamfight decisions, and the matchups that punish careless entries. It is written for ranked Summoner's Rift and is based on Data Dragon 16.22.1 plus current U.GG and Lolalytics samples."
       ],
       "quickAnswer": "Max Q first, then E, then W. Take Electrocute with Sudden Impact and Precision secondaries, start Dark Seal or Doran's Ring, and build Lich Bane into Shadowflame for burst. Play around dagger pickups and wait for enemy crowd control before committing. Katarina is strong on patch 26.21, but her win rate comes from patience and target selection, not from forcing every fight.",
       "quickStart": {
@@ -730,7 +730,7 @@
       "h1": "How to Play Sett in League of Legends",
       "heroIntro": [
         "Sett is a top-lane juggernaut who wins short trades with his passive regeneration, Q auto-attack reset and E stun. His W, Haymaker, converts damage taken into a shield and a powerful true-damage punch.",
-        "This guide covers the patch 26.21 top-lane build, the exact skill path used by the highest-sample data, practical E-W-R combos, lane matchups and the mistakes that make Sett feel weak. It is based on Data Dragon 16.21.1 and current U.GG and Lolalytics samples."
+        "This guide covers the patch 26.21 top-lane build, the exact skill path used by the highest-sample data, practical E-W-R combos, lane matchups and the mistakes that make Sett feel weak. It is based on Data Dragon 16.22.1 and current U.GG and Lolalytics samples."
       ],
       "quickAnswer": "Start W-E-Q, max Q first, then W, then E. Take Conqueror with Resolve secondaries, build Stridebreaker into Black Cleaver, and use E to stun before W so the true-damage center is unavoidable. Sett is strong in short trades and sidelane fights, but he is kited by ranged champions and should not waste Haymaker without grit.",
       "quickStart": {
@@ -1438,7 +1438,7 @@
       "h1": "How to Play K'Sante in League of Legends",
       "heroIntro": [
         "K'Sante is a top-lane tank with an unusually high skill ceiling. He can shield, dash, pull enemies with his Q, stun with W and use R to drag a target through a wall and transform into a damage-focused duelist.",
-        "This guide covers the patch 26.21 top-lane build, exact skill order, practical Q-W-R combos, lane and teamfight decisions, and the matchups that expose his weaknesses. It is based on Data Dragon 16.21.1 and current U.GG and Lolalytics samples."
+        "This guide covers the patch 26.21 top-lane build, exact skill order, practical Q-W-R combos, lane and teamfight decisions, and the matchups that expose his weaknesses. It is based on Data Dragon 16.22.1 and current U.GG and Lolalytics samples."
       ],
       "quickAnswer": "Start E-Q-W, max Q first, then E, then W. Take Grasp of the Undying with Precision secondaries, build Kaenic Rookern into Iceborn Gauntlet, and use Q2 to pull enemies into W or R. K'Sante is a low-win-rate, high-mastery champion on patch 26.21: he is strong when you land his crowd control and weak when you waste R or miss Q stacks.",
       "quickStart": {
@@ -2654,7 +2654,7 @@
         }
       ],
       "matchups": {
-        "note": "Counter trends are from Lolalytics patch 16.21 Emerald+ for this role. They are statistical signals, not hard counters in every game; lane skill, team composition and jungle pressure still matter.",
+        "note": "Counter trends are from Lolalytics patch 16.22.1 Emerald+ for this role. They are statistical signals, not hard counters in every game; lane skill, team composition and jungle pressure still matter.",
         "difficult": [
           {
             "name": "Vel’Koz",
@@ -3240,7 +3240,7 @@
         }
       ],
       "matchups": {
-        "note": "Counter trends are from Lolalytics patch 16.21 Emerald+ for this role. They are statistical signals, not hard counters in every game; lane skill, team composition and jungle pressure still matter.",
+        "note": "Counter trends are from Lolalytics patch 16.22.1 Emerald+ for this role. They are statistical signals, not hard counters in every game; lane skill, team composition and jungle pressure still matter.",
         "difficult": [
           {
             "name": "Pantheon",
@@ -3826,7 +3826,7 @@
         }
       ],
       "matchups": {
-        "note": "Counter trends are from Lolalytics patch 16.21 Emerald+ for this role. They are statistical signals, not hard counters in every game; lane skill, team composition and jungle pressure still matter.",
+        "note": "Counter trends are from Lolalytics patch 16.22.1 Emerald+ for this role. They are statistical signals, not hard counters in every game; lane skill, team composition and jungle pressure still matter.",
         "difficult": [
           {
             "name": "Kayle",
@@ -3876,6 +3876,763 @@
           "url": "https://lolalytics.com/lol/gangplank/build/?lane=top&tier=emerald_plus"
         }
       ]
+    },
+    "vladimir": {
+      "slug": "vladimir",
+      "name": "Vladimir",
+      "title": "The Crimson Reaper",
+      "role": "mid",
+      "roleLabel": "Mid",
+      "difficulty": "medium",
+      "difficultyLabel": "Medium",
+      "tagline": "A powerful battlemage who turns health into damage, heals through enemy attacks, and dominates extended teamfights.",
+      "metaTitle": "How to Play Vladimir in League of Legends — Build, Runes & Combos (Patch 26.22)",
+      "metaDescription": "Learn how to play Vladimir in LoL with Patch 26.22 builds, runes, skill order, combos, laning tips and teamfight advice.",
+      "h1": "How to Play Vladimir in League of Legends",
+      "heroIntro": [
+        "Vladimir is a scaling mid-lane mage specializing in magic damage, healing, and area-of-effect burst. Unlike most mages, he doesn't use mana. Instead, his abilities rely on cooldown management and, in some cases, consume his own health.",
+        "His strength comes from surviving difficult lanes, accumulating ability power, and finding the perfect opportunity to eliminate multiple enemies in a teamfight.",
+        "This guide covers Vladimir's Patch 26.22 build, skill order, runes, combos, laning strategy, teamfight decisions, matchups, and common mistakes."
+      ],
+      "quickAnswer": "Max Q first, followed by E and W. Run Phase Rush with Sorcery primary and Precision secondary. Start Doran's Ring and build Stormsurge, followed by ability power items that suit the enemy composition. Take Flash and Ghost to compensate for Vladimir's limited mobility. During laning phase, prioritize farming, trade around empowered Q, and save Sanguine Pool for dangerous abilities. In teamfights, try to hit multiple enemies with Hemoplague before unloading your damage.",
+      "quickStart": {
+        "role": "Mid-lane battlemage.",
+        "secondaryRoles": "Top as a secondary role",
+        "difficulty": "Medium",
+        "playstyle": "Scaling, sustain, AoE magic damage.",
+        "keyMechanic": "Managing empowered Transfusion and Sanguine Pool.",
+        "winCondition": "Reach your core items and dominate grouped fights through AoE damage and healing.",
+        "beginnerMistake": "Wasting Sanguine Pool and becoming vulnerable to enemy crowd control."
+      },
+      "abilities": [
+        {
+          "key": "P",
+          "name": "Crimson Pact",
+          "icon": "Vladimir_CrimsonPact.png",
+          "description": "Vladimir gains ability power from bonus health and bonus health from ability power.",
+          "tips": [
+            "Prioritize AP items that also improve your survivability.",
+            "Take advantage of your scaling as the game progresses.",
+            "Remember that additional health doesn't replace defensive resistances."
+          ],
+          "mistake": "Building only health and expecting the same damage as a proper AP build."
+        },
+        {
+          "key": "Q",
+          "name": "Transfusion",
+          "icon": "VladimirQ.png",
+          "description": "Vladimir drains an enemy's health, dealing magic damage and healing himself. After two casts, his next Transfusion becomes empowered, significantly increasing its damage and healing.",
+          "tips": [
+            "Cast Q on minions to restore health.",
+            "Prepare empowered Q before trading.",
+            "Threaten enemies when your empowered Q becomes available.",
+            "Use the healing to survive difficult matchups."
+          ],
+          "mistake": "Wasting empowered Q on a minion when you could safely damage your opponent."
+        },
+        {
+          "key": "W",
+          "name": "Sanguine Pool",
+          "icon": "VladimirSanguinePool.png",
+          "description": "Vladimir sinks into a pool of blood, becoming untargetable for a short duration. He can move while slowing and damaging enemies inside the pool.",
+          "tips": [
+            "Dodge dangerous abilities and crowd control.",
+            "Avoid using it purely for damage.",
+            "Combine it with a previously charged E to deal damage while protected.",
+            "Save W when the enemy jungler might be nearby."
+          ],
+          "mistake": "Using W to avoid insignificant damage and leaving yourself exposed during its long cooldown."
+        },
+        {
+          "key": "E",
+          "name": "Tides of Blood",
+          "icon": "VladimirE.png",
+          "description": "Vladimir charges a burst of blood that damages nearby enemies. Charging increases its damage and health cost.",
+          "tips": [
+            "Begin charging before entering enemy range.",
+            "Combine E with W for safer damage.",
+            "Use it to clear waves when you have sufficient health.",
+            "Learn its range and remember that other units can block its projectiles."
+          ],
+          "mistake": "Constantly charging E and losing too much health during laning phase."
+        },
+        {
+          "key": "R",
+          "name": "Hemoplague",
+          "icon": "VladimirHemoplague.png",
+          "description": "Vladimir infects an area, increasing the damage affected enemies receive. After a delay, the infection detonates, dealing magic damage and healing Vladimir based on the champions hit.",
+          "tips": [
+            "Try to hit multiple champions.",
+            "Cast R before your main damage abilities.",
+            "Use the delayed healing to survive intense fights.",
+            "Combine it with Flash to reach enemy carries."
+          ],
+          "mistake": "Casting Hemoplague after already using your main damage abilities."
+        }
+      ],
+      "skillOrder": {
+        "priority": "Q > E > W",
+        "start": "Q → E → W",
+        "levels": [
+          {
+            "level": 1,
+            "ability": "Q"
+          },
+          {
+            "level": 2,
+            "ability": "E"
+          },
+          {
+            "level": 3,
+            "ability": "W"
+          },
+          {
+            "level": 4,
+            "ability": "Q"
+          },
+          {
+            "level": 5,
+            "ability": "Q"
+          },
+          {
+            "level": 6,
+            "ability": "R"
+          },
+          {
+            "level": 7,
+            "ability": "Q"
+          },
+          {
+            "level": 8,
+            "ability": "E"
+          },
+          {
+            "level": 9,
+            "ability": "Q"
+          },
+          {
+            "level": 10,
+            "ability": "E"
+          },
+          {
+            "level": 11,
+            "ability": "R"
+          },
+          {
+            "level": 12,
+            "ability": "E"
+          },
+          {
+            "level": 13,
+            "ability": "E"
+          },
+          {
+            "level": 14,
+            "ability": "W"
+          },
+          {
+            "level": 15,
+            "ability": "W"
+          },
+          {
+            "level": 16,
+            "ability": "R"
+          },
+          {
+            "level": 17,
+            "ability": "W"
+          },
+          {
+            "level": 18,
+            "ability": "W"
+          }
+        ],
+        "explanation": [
+          "Max Q first because it provides damage, healing, and stronger trades.",
+          "Max E second for improved waveclear and AoE damage.",
+          "Max W last because its primary purpose is defensive."
+        ],
+        "note": "Against particularly dangerous early matchups, consider taking W at level 2 instead of E."
+      },
+      "runes": {
+        "title": "Primary Setup: Phase Rush",
+        "summary": "Phase Rush provides movement speed after hitting an enemy champion with multiple attacks or abilities. It helps Vladimir chase enemies, escape dangerous situations, and reposition during fights.",
+        "primaryTree": {
+          "name": "Sorcery",
+          "icon": "perk-images/Styles/7202_Sorcery.png"
+        },
+        "secondaryTree": {
+          "name": "Precision",
+          "icon": "perk-images/Styles/7201_Precision.png"
+        },
+        "keystone": {
+          "id": 8230,
+          "name": "Phase Rush",
+          "why": "Movement speed after landing multiple attacks or abilities.",
+          "icon": "perk-images/Styles/Sorcery/PhaseRush/PhaseRush.png"
+        },
+        "primaryRunes": [
+          {
+            "id": 8275,
+            "name": "Nimbus Cloak",
+            "why": "Bonus movement speed after using summoner spells.",
+            "icon": "perk-images/Styles/Sorcery/NimbusCloak/6361.png"
+          },
+          {
+            "id": 8210,
+            "name": "Transcendence",
+            "why": "Ability haste for more frequent spell rotations.",
+            "icon": "perk-images/Styles/Sorcery/Transcendence/Transcendence.png"
+          },
+          {
+            "id": 8236,
+            "name": "Gathering Storm",
+            "why": "Increasing ability power as the game progresses.",
+            "icon": "perk-images/Styles/Sorcery/GatheringStorm/GatheringStorm.png"
+          }
+        ],
+        "secondaryRunes": [
+          {
+            "id": 9105,
+            "name": "Legend",
+            "why": "Haste: Additional ability haste through stacks.",
+            "icon": "perk-images/Styles/Precision/LegendHaste/LegendHaste.png"
+          },
+          {
+            "id": 8299,
+            "name": "Last Stand",
+            "why": "Increased damage when low on health.",
+            "icon": "perk-images/Styles/Sorcery/LastStand/LastStand.png"
+          }
+        ],
+        "alternatives": [
+          "Summon Aery: Provides additional pressure through frequent short trades during laning phase.",
+          "Conqueror: An alternative for extended fights against durable enemies.",
+          "Deathfire Touch: A damage-oriented option for ability-focused trades."
+        ],
+        "notes": [
+          "Phase Rush is a strong default for learning Vladimir because it helps compensate for his limited mobility."
+        ]
+      },
+      "summonerSpells": [
+        {
+          "name": "Flash",
+          "icon": "SummonerFlash.png",
+          "why": "Essential for reaching priority targets, escaping dangerous situations, and executing unexpected combos."
+        },
+        {
+          "name": "Ghost",
+          "icon": "SummonerHaste.png",
+          "why": "Provides sustained mobility during teamfights and helps Vladimir chase enemies."
+        },
+        {
+          "name": "Alternative — Ignite",
+          "icon": "SummonerDot.png",
+          "why": "Increases early kill pressure against opponents you can punish during laning phase."
+        }
+      ],
+      "builds": [
+        {
+          "id": "vladimir-burst",
+          "label": "Primary Build — AP Burst",
+          "badge": "26.22",
+          "summary": "A damage-focused setup designed to eliminate priority targets and capitalize on Hemoplague's AoE damage.",
+          "starting": {
+            "label": "Starting Items",
+            "items": [
+              {
+                "id": "1056",
+                "name": "Doran's Ring",
+                "icon": "1056.png",
+                "why": ""
+              },
+              {
+                "id": "2003",
+                "name": "2 Health Potions",
+                "icon": "2003.png",
+                "why": ""
+              }
+            ]
+          },
+          "core": {
+            "label": "Core Items",
+            "items": [
+              {
+                "id": "4646",
+                "name": "Stormsurge",
+                "icon": "4646.png",
+                "why": ""
+              },
+              {
+                "id": "6653",
+                "name": "Liandry's Torment",
+                "icon": "6653.png",
+                "why": ""
+              },
+              {
+                "id": "3135",
+                "name": "Void Staff",
+                "icon": "3135.png",
+                "why": ""
+              }
+            ]
+          },
+          "boots": {
+            "label": "Boots",
+            "items": [
+              {
+                "id": "3020",
+                "name": "Sorcerer's Shoes",
+                "icon": "3020.png",
+                "why": ""
+              },
+              {
+                "id": "1312",
+                "name": "Spellslinger's Shoes when the upgraded boots become available",
+                "icon": "1312.png",
+                "why": ""
+              },
+              {
+                "id": "3111",
+                "name": "Mercury's Treads against heavy crowd control",
+                "icon": "3111.png",
+                "why": ""
+              }
+            ]
+          },
+          "situational": {
+            "label": "Situational Items",
+            "items": [
+              {
+                "id": "3089",
+                "name": "Rabadon's Deathcap",
+                "icon": "3089.png",
+                "why": "Massive ability power increase."
+              },
+              {
+                "id": "3157",
+                "name": "Zhonya's Hourglass",
+                "icon": "3157.png",
+                "why": "Protection against burst and dangerous abilities."
+              },
+              {
+                "id": "4633",
+                "name": "Riftmaker",
+                "icon": "4633.png",
+                "why": "Extended combat and survivability."
+              },
+              {
+                "id": "4629",
+                "name": "Cosmic Drive",
+                "icon": "4629.png",
+                "why": "Movement speed and ability haste."
+              },
+              {
+                "id": "4645",
+                "name": "Shadowflame",
+                "icon": "4645.png",
+                "why": "Additional damage against vulnerable targets."
+              },
+              {
+                "id": "3041",
+                "name": "Mejai's Soulstealer",
+                "icon": "3041.png",
+                "why": "Snowball option with Dark Seal stacks."
+              },
+              {
+                "id": "3165",
+                "name": "Morellonomicon",
+                "icon": "3165.png",
+                "why": "Grievous Wounds against heavy healing."
+              }
+            ]
+          },
+          "notes": [
+            "Stormsurge is a common first-item spike in Patch 26.22. Adapt your later purchases to the enemy team's defenses and damage threats."
+          ]
+        },
+        {
+          "id": "vladimir-extended",
+          "label": "Alternative Build — Extended Teamfights",
+          "badge": "26.22",
+          "summary": "A situational setup focused on sustained combat and surviving longer engagements.",
+          "starting": {
+            "label": "Starting Items",
+            "items": [
+              {
+                "id": "1056",
+                "name": "Doran's Ring",
+                "icon": "1056.png",
+                "why": ""
+              },
+              {
+                "id": "2003",
+                "name": "2 Health Potions",
+                "icon": "2003.png",
+                "why": ""
+              }
+            ]
+          },
+          "core": {
+            "label": "Core Items",
+            "items": [
+              {
+                "id": "4646",
+                "name": "Stormsurge",
+                "icon": "4646.png",
+                "why": ""
+              },
+              {
+                "id": "4633",
+                "name": "Riftmaker",
+                "icon": "4633.png",
+                "why": ""
+              },
+              {
+                "id": "3089",
+                "name": "Rabadon's Deathcap",
+                "icon": "3089.png",
+                "why": ""
+              }
+            ]
+          },
+          "situational": {
+            "label": "Situational Items",
+            "items": [
+              {
+                "id": "6653",
+                "name": "Liandry's Torment",
+                "icon": "6653.png",
+                "why": ""
+              },
+              {
+                "id": "4629",
+                "name": "Cosmic Drive",
+                "icon": "4629.png",
+                "why": ""
+              },
+              {
+                "id": "3157",
+                "name": "Zhonya's Hourglass",
+                "icon": "3157.png",
+                "why": ""
+              },
+              {
+                "id": "3135",
+                "name": "Void Staff",
+                "icon": "3135.png",
+                "why": ""
+              }
+            ]
+          },
+          "notes": [
+            "This is a situational alternative rather than the primary statistically supported build."
+          ]
+        }
+      ],
+      "combos": [
+        {
+          "name": "Basic Lane Trade",
+          "sequence": [
+            {
+              "key": "Q",
+              "label": "Q"
+            },
+            {
+              "key": "AA",
+              "label": "Auto Attack"
+            },
+            {
+              "key": "Move",
+              "label": "Disengage"
+            }
+          ],
+          "situation": "During early laning when your opponent approaches the wave.",
+          "execution": "Hit your opponent with Q, add an auto attack if safe, and retreat before taking unnecessary damage.",
+          "mistake": "Avoid extended trades against champions with stronger early sustained damage."
+        },
+        {
+          "name": "Empowered Q Trade",
+          "sequence": [
+            {
+              "key": "Q",
+              "label": "Prepare Q"
+            },
+            {
+              "key": "Q",
+              "label": "Empowered Q"
+            },
+            {
+              "key": "E",
+              "label": "E"
+            },
+            {
+              "key": "Move",
+              "label": "Disengage"
+            }
+          ],
+          "situation": "When empowered Transfusion is available and your opponent enters range.",
+          "execution": "Use Q on minions to prepare the empowered cast. Approach your opponent and combine empowered Q with E for a stronger trade.",
+          "mistake": "Don't chase too far when your empowered Q window is about to expire."
+        },
+        {
+          "name": "Defensive Combo",
+          "sequence": [
+            {
+              "key": "E",
+              "label": "Charge E"
+            },
+            {
+              "key": "W",
+              "label": "W"
+            },
+            {
+              "key": "E",
+              "label": "Release E"
+            }
+          ],
+          "situation": "When you need to avoid a dangerous ability while dealing damage.",
+          "execution": "Start charging E, activate Sanguine Pool, and release E while untargetable.",
+          "mistake": "If your opponent can continue chasing, you may be vulnerable when Sanguine Pool ends."
+        },
+        {
+          "name": "Hemoplague All-In",
+          "sequence": [
+            {
+              "key": "R",
+              "label": "R"
+            },
+            {
+              "key": "E",
+              "label": "Charge E"
+            },
+            {
+              "key": "Q",
+              "label": "Q"
+            },
+            {
+              "key": "W",
+              "label": "W if needed"
+            },
+            {
+              "key": "E",
+              "label": "Release E"
+            }
+          ],
+          "situation": "When a priority target is within reach and you have enough damage to secure the kill.",
+          "execution": "Apply Hemoplague first to amplify incoming damage. Charge E while approaching, cast Q, and use W if necessary to avoid retaliation.",
+          "mistake": "Don't automatically use W. It may be your only way to survive the enemy's response."
+        },
+        {
+          "name": "Flash Teamfight Engage",
+          "sequence": [
+            {
+              "key": "E",
+              "label": "Charge E"
+            },
+            {
+              "key": "Flash",
+              "label": "Flash"
+            },
+            {
+              "key": "R",
+              "label": "R"
+            },
+            {
+              "key": "E",
+              "label": "Release E"
+            },
+            {
+              "key": "Q",
+              "label": "Q"
+            },
+            {
+              "key": "W",
+              "label": "W"
+            }
+          ],
+          "situation": "When multiple enemies are grouped and you can reach their carries.",
+          "execution": "Begin charging E before entering, Flash into position, and cast Hemoplague on multiple enemies. Release E, target a priority enemy with Q, and save W for incoming threats.",
+          "mistake": "Engaging without checking enemy crowd control can result in an immediate death."
+        }
+      ],
+      "sections": [
+        {
+          "id": "laning",
+          "heading": "Laning Phase: Survive and Scale",
+          "paragraphs": [
+            "Vladimir's early game is primarily about collecting gold without losing too much health.",
+            "His early damage is limited, and his cooldowns are relatively long. Against aggressive opponents, focus on last-hitting and maintaining enough health to remain in lane.",
+            "Use Transfusion to secure minions, heal, and prepare empowered trades.",
+            "You don't need to win every exchange. Vladimir can recover health over time while many opponents consume mana or other resources.",
+            "Against ranged mages, allow the wave to approach your tower and avoid unnecessary poke.",
+            "Against melee champions, punish predictable last-hitting attempts with Q and basic attacks.",
+            "Once you have several points in Q and your first AP components, your ability to control the lane improves."
+          ],
+          "bullets": [
+            "Prioritize consistent farming over risky early kills.",
+            "Save W when the enemy jungler could gank.",
+            "Avoid spending excessive health on E waveclear.",
+            "Use empowered Q to threaten opponents and control space."
+          ]
+        },
+        {
+          "id": "mid-game",
+          "heading": "Mid Game: Reach Your Power Spikes",
+          "paragraphs": [
+            "Vladimir becomes significantly stronger after acquiring AP, ability haste, and additional ranks in his main abilities.",
+            "Push waves when safe and look for opportunities around Dragons, Rift Herald, and Baron Nashor.",
+            "Fights in narrow areas are especially valuable because your AoE abilities can hit several enemies.",
+            "Avoid chasing highly mobile champions when Flash and Ghost are unavailable."
+          ],
+          "bullets": [
+            "Farm side lanes without overextending.",
+            "Group around important objectives.",
+            "Look for flanking angles toward enemy carries.",
+            "Track your summoner spell cooldowns before committing."
+          ]
+        },
+        {
+          "id": "teamfights",
+          "heading": "Teamfights: Timing Is Everything",
+          "paragraphs": [
+            "Vladimir can decide a teamfight with a well-placed Hemoplague.",
+            "However, he isn't a traditional tank and shouldn't always engage first. His limited mobility and vulnerability when Sanguine Pool is unavailable can be heavily punished.",
+            "Wait for enemies to use some of their crowd control, find a flank, and engage when priority targets become accessible.",
+            "Apply Hemoplague before your main damage rotation and use Sanguine Pool to survive while waiting for the detonation."
+          ],
+          "bullets": [
+            "Prioritize enemy carries when you can reach them safely.",
+            "Try to hit multiple champions with Hemoplague.",
+            "Don't waste W for a small amount of extra damage.",
+            "Use Hemoplague's healing to continue fighting."
+          ]
+        }
+      ],
+      "matchups": {
+        "difficult": [
+          {
+            "name": "Malzahar",
+            "icon": "Malzahar.png",
+            "advice": "His ultimate can lock Vladimir down and allow his team to secure a kill. Avoid engaging while Malzahar's ultimate is available, and consider defensive itemization."
+          },
+          {
+            "name": "Orianna",
+            "icon": "Orianna.png",
+            "advice": "Orianna can control waves and punish Vladimir from a greater distance. Prioritize farming and avoid unnecessary poke while waiting for empowered Q opportunities."
+          },
+          {
+            "name": "Anivia",
+            "icon": "Anivia.png",
+            "advice": "Her zone control makes approaching targets difficult. Avoid fighting inside her ultimate and respect her waveclear and crowd control."
+          },
+          {
+            "name": "Kog'Maw",
+            "icon": "KogMaw.png",
+            "advice": "Kog'Maw can punish Vladimir from range with high sustained damage. Look for flanks rather than approaching directly through open areas."
+          }
+        ],
+        "favorable": [
+          {
+            "name": "Katarina",
+            "icon": "Katarina.png",
+            "advice": "Vladimir's sustain makes short trades less effective, while Sanguine Pool can avoid important parts of Katarina's burst. Punish predictable dagger pickups and avoid giving her opportunities to snowball through skirmishes."
+          },
+          {
+            "name": "Yone",
+            "icon": "Yone.png",
+            "advice": "Sanguine Pool can avoid important parts of Yone's combo. Punish predictable engages and maintain safe spacing when his ultimate is available."
+          },
+          {
+            "name": "Fizz",
+            "icon": "Fizz.png",
+            "advice": "Vladimir's healing helps him survive repeated short trades. Save Sanguine Pool to avoid Fizz's ultimate or another crucial part of his burst combo."
+          }
+        ],
+        "note": "The following matchups are general strategic examples. Difficulty varies depending on patch, builds, and player experience."
+      },
+      "mistakes": [
+        "Using Sanguine Pool without a meaningful threat.",
+        "Ignoring empowered Transfusion during trades.",
+        "Losing too much health by constantly charging E.",
+        "Entering teamfights without Flash, Ghost, or a safe escape route.",
+        "Casting Hemoplague after using all your damage.",
+        "Sacrificing too much farm to chase early kills.",
+        "Building the same items regardless of enemy composition."
+      ],
+      "practicePlan": [
+        {
+          "title": "1. Empowered Q Drill",
+          "steps": [
+            "In Practice Tool, repeatedly cast Transfusion on minions and training dummies.",
+            "Observe when empowered Q becomes available and how long it remains active.",
+            "Practice approaching targets before the empowered window expires.",
+            "Goal: Recognize your strongest trading windows automatically."
+          ]
+        },
+        {
+          "title": "2. E + W Combo Drill",
+          "steps": [
+            "Start charging Tides of Blood and activate Sanguine Pool before releasing E.",
+            "Repeat the combination from different distances and practice controlling your positioning.",
+            "Goal: Execute the defensive combo consistently without wasting movement or damage."
+          ]
+        },
+        {
+          "title": "3. Teamfight Review",
+          "steps": [
+            "Watch a replay and review each major teamfight.",
+            "Identify when you used W, how many enemies you hit with R, and whether a better entry angle existed.",
+            "Goal: Improve your engagement timing and survivability."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "Is Vladimir difficult to learn?",
+          "a": "His abilities are relatively straightforward, but mastering cooldown management, positioning, and teamfight timing takes practice."
+        },
+        {
+          "q": "What is the best Vladimir build in Patch 26.22?",
+          "a": "A common build starts with Stormsurge and follows with items such as Liandry's Torment, Void Staff, and Rabadon's Deathcap. The ideal combination depends on the matchup and enemy team."
+        },
+        {
+          "q": "What skill order should I use?",
+          "a": "Max Q first, E second, and W last, leveling R whenever available."
+        },
+        {
+          "q": "When should I use Sanguine Pool?",
+          "a": "Primarily to avoid dangerous abilities, crowd control, and potentially lethal damage."
+        },
+        {
+          "q": "Is Vladimir good for beginners?",
+          "a": "Vladimir has accessible basic mechanics, but learning to farm consistently, manage health, and time teamfight engagements is essential."
+        },
+        {
+          "q": "Is Vladimir better mid or top?",
+          "a": "Mid is his primary role in this guide. Top is also viable but involves different matchups and positioning requirements."
+        }
+      ],
+      "sources": [
+        {
+          "label": "U.GG - Vladimir Mid, Patch 26.22",
+          "url": "https://u.gg/lol/champions/vladimir/build?patch=26_22"
+        },
+        {
+          "label": "League of Legends - Vladimir",
+          "url": "https://www.leagueoflegends.com/en-us/champions/vladimir/"
+        },
+        {
+          "label": "League of Legends Wiki - Vladimir",
+          "url": "https://wiki.leagueoflegends.com/en-us/Vladimir"
+        },
+        {
+          "label": "KPM.gg - Vladimir Mid",
+          "url": "https://kpm.gg/champions/vladimir/build"
+        }
+      ],
+      "statsNote": "Statistics refer to Patch 26.22, Emerald+, global Ranked Solo/Duo where specified. Win rates change as additional games are recorded and may differ across statistical platforms.",
+      "lastUpdated": "2026-11-17"
     }
   }
 }

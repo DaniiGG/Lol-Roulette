@@ -12,6 +12,7 @@ import {
   getGuideIndexHref,
 } from '@/lib/guides/meta'
 import { SITE_URL } from '@/lib/site'
+import { skinCatalog, skinIsIndexable, SKIN_LOCALES } from '@/lib/skins/data'
 
 const baseUrl = SITE_URL
 
@@ -62,12 +63,28 @@ function buildAlternates(
   for (const locale of locales) {
     languages[locale] = localizedUrl(locale, pathname, params)
   }
-  languages['x-default'] = localizedUrl('en', pathname, params)
+  languages['x-default'] = localizedUrl(locales.includes('en') ? 'en' : locales[0], pathname, params)
   return { languages }
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = []
+
+  for (const locale of SKIN_LOCALES) {
+    for (const path of ['/skins', '/skins/shop'] as const) {
+      entries.push({ url: localizedUrl(locale, path), changeFrequency: 'weekly', priority: 0.8, alternates: buildAlternates(path, SKIN_LOCALES) })
+    }
+    for (const champion of skinCatalog.champions) {
+      const params = { champion: champion.slug }
+      entries.push({ url: localizedUrl(locale, '/skins/[champion]', params), lastModified: new Date(skinCatalog.updatedAt), changeFrequency: 'monthly', priority: 0.7, alternates: buildAlternates('/skins/[champion]', SKIN_LOCALES, params) })
+    }
+    for (const skin of skinCatalog.skins) {
+      if (!skinIsIndexable(skin, locale)) continue
+      const params = { champion: skin.champion, skin: skin.slug }
+      const locales = SKIN_LOCALES.filter(language => skinIsIndexable(skin, language))
+      entries.push({ url: localizedUrl(locale, '/skins/[champion]/[skin]', params), lastModified: new Date(skinCatalog.updatedAt), changeFrequency: 'monthly', priority: 0.5, alternates: buildAlternates('/skins/[champion]/[skin]', locales, params) })
+    }
+  }
 
 
   // Static pages available in every locale (mastery is noindex).

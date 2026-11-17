@@ -3,7 +3,7 @@ import type { Locale } from '@/i18n/routes'
 import type { GuideChampionMeta, GuideRole } from './types'
 
 export const GUIDE_PATCH = '26.21'
-export const GUIDE_DDRAGON_VERSION = '16.21.1'
+export const GUIDE_DDRAGON_VERSION = '16.22.1'
 export const GUIDE_UPDATED_AT = '2026-10-27'
 export const GUIDE_INDEX_PATH = '/blog/guides'
 export const GUIDE_LOCALES = ['en', 'es'] as const
@@ -26,6 +26,16 @@ const UGGBASE = 'https://u.gg/lol/champions'
 const LOLALYTICS_BASE = 'https://lolalytics.com/lol'
 
 export const GUIDE_CHAMPIONS: GuideChampionMeta[] = [
+  {
+    slug: 'vladimir', championId: 'Vladimir', roles: ['mid', 'top'], primaryRole: 'mid',
+    ddragonDifficulty: 7, patch: '26.22',
+    localizedSlugs: { en: 'how-to-play-vladimir', es: 'como-jugar-vladimir' },
+    publishedAt: '2026-11-17', updatedAt: '2026-11-17',
+    related: ['katarina', 'azir', 'gangplank'],
+    splash: splashFor('Vladimir'), loading: loadingFor('Vladimir'),
+    stats: [{ source: 'U.GG', context: 'Mid / Emerald+ / Global / Ranked Solo-Duo / Patch 26.22', winRate: '51.41%', url: 'https://u.gg/lol/champions/vladimir/build?patch=26_22' }],
+    sources: [],
+  },
   {
     slug: 'katarina',
     championId: 'Katarina',
@@ -75,8 +85,8 @@ export const GUIDE_CHAMPIONS: GuideChampionMeta[] = [
         url: `${LOLALYTICS_BASE}/katarina/build/?lane=middle&tier=emerald_plus`,
       },
       {
-        label: 'Riot Data Dragon 16.21.1 — champion, item and rune data',
-        url: 'https://ddragon.leagueoflegends.com/cdn/16.21.1/data/en_US/champion.json',
+        label: 'Riot Data Dragon 16.22.1 — champion, item and rune data',
+        url: 'https://ddragon.leagueoflegends.com/cdn/16.22.1/data/en_US/champion.json',
       },
     ],
   },
@@ -129,8 +139,8 @@ export const GUIDE_CHAMPIONS: GuideChampionMeta[] = [
         url: `${LOLALYTICS_BASE}/sett/build/?lane=top&tier=emerald_plus`,
       },
       {
-        label: 'Riot Data Dragon 16.21.1 — champion, item and rune data',
-        url: 'https://ddragon.leagueoflegends.com/cdn/16.21.1/data/en_US/champion.json',
+        label: 'Riot Data Dragon 16.22.1 — champion, item and rune data',
+        url: 'https://ddragon.leagueoflegends.com/cdn/16.22.1/data/en_US/champion.json',
       },
     ],
   },
@@ -183,8 +193,8 @@ export const GUIDE_CHAMPIONS: GuideChampionMeta[] = [
         url: `${LOLALYTICS_BASE}/ksante/build/?lane=top&tier=emerald_plus`,
       },
       {
-        label: 'Riot Data Dragon 16.21.1 — champion, item and rune data',
-        url: 'https://ddragon.leagueoflegends.com/cdn/16.21.1/data/en_US/champion.json',
+        label: 'Riot Data Dragon 16.22.1 — champion, item and rune data',
+        url: 'https://ddragon.leagueoflegends.com/cdn/16.22.1/data/en_US/champion.json',
       },
     ],
   },
@@ -206,7 +216,7 @@ export const GUIDE_CHAMPIONS: GuideChampionMeta[] = [
     stats: [
       {
         source: 'Lolalytics',
-        context: 'Mid · Emerald+ · Global · Patch 16.21',
+        context: 'Mid · Emerald+ · Global · Patch 16.22.1',
         winRate: '48.71%',
         pickRate: '2.02%',
         banRate: '0.33%',
@@ -236,7 +246,7 @@ export const GUIDE_CHAMPIONS: GuideChampionMeta[] = [
     stats: [
       {
         source: 'Lolalytics',
-        context: 'Top · Emerald+ · Global · Patch 16.21',
+        context: 'Top · Emerald+ · Global · Patch 16.22.1',
         winRate: '51.64%',
         pickRate: '2.27%',
         banRate: '1.4%',
@@ -266,7 +276,7 @@ export const GUIDE_CHAMPIONS: GuideChampionMeta[] = [
     stats: [
       {
         source: 'Lolalytics',
-        context: 'Top · Emerald+ · Global · Patch 16.21',
+        context: 'Top · Emerald+ · Global · Patch 16.22.1',
         winRate: '52.54%',
         pickRate: '5.14%',
         banRate: '8.84%',

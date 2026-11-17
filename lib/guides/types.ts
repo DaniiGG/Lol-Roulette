@@ -194,6 +194,7 @@ export type ChampionGuideContentFile = {
 }
 
 export type GuideChampionMeta = {
+  patch?: string
   slug: string
   championId: string
   roles: GuideRole[]

@@ -82,7 +82,7 @@ export async function generateMetadata({ params }: GuidePageProps): Promise<Meta
           `${content.name} runas`,
           `${content.name} combos`,
           `guía ${content.name} League of Legends`,
-          `parche ${GUIDE_PATCH}`,
+          `parche ${meta.patch ?? GUIDE_PATCH}`,
         ]
       : [
           `how to play ${content.name}`,
@@ -90,7 +90,7 @@ export async function generateMetadata({ params }: GuidePageProps): Promise<Meta
           `${content.name} runes`,
           `${content.name} combos`,
           `${content.name} guide League of Legends`,
-          `patch ${GUIDE_PATCH}`,
+          `patch ${meta.patch ?? GUIDE_PATCH}`,
         ]
 
   return {
@@ -126,7 +126,7 @@ export async function generateMetadata({ params }: GuidePageProps): Promise<Meta
     },
     other: {
       'article:section': 'Champion Guides',
-      'article:tag': `${content.name}, ${content.roleLabel}, League of Legends, patch ${GUIDE_PATCH}`,
+      'article:tag': `${content.name}, ${content.roleLabel}, League of Legends, patch ${meta.patch ?? GUIDE_PATCH}`,
       'article:published_time': meta.publishedAt,
       'article:modified_time': meta.updatedAt,
     },
@@ -201,7 +201,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
       `${content.name} build`,
       `${content.name} runes`,
       `${content.name} combos`,
-      `patch ${GUIDE_PATCH}`,
+      `patch ${meta.patch ?? GUIDE_PATCH}`,
     ].join(', '),
     wordCount: guideWordCount(content),
     about: {

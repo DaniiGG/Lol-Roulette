@@ -1,4 +1,14 @@
 {
+  "rouletteStyles": {
+    "label": "Estilo de ruleta",
+    "classic": "Ruleta clásica",
+    "slots": "Tragaperras",
+    "switchClassic": "Cambiar a ruleta",
+    "switchSlots": "Cambiar a tragaperras",
+    "loadError": "No se han podido cargar los campeones.",
+    "retry": "Reintentar",
+    "emptyPool": "No hay campeones para estos filtros."
+  },
     "nav": {
         "play": "Jugar",
         "leaderboard": "Clasificación",
@@ -548,7 +558,7 @@
     "seo": {
         "srHeading": "Generador aleatorio gratuito de campeones LoL | League Roulette",
         "whatIsTitle": "¿Qué es League Roulette?",
-        "whatIsText": "League Roulette es un <strong>generador de campeones aleatorio gratuito</strong> para League of Legends (LoL). Gira la ruleta para obtener un campeón LoL aleatorio y desafíate a ganar partidas ranked o normales.",
+        "whatIsText": "¿No sabes qué campeón jugar? League Roulette es una <strong>ruleta de campeones de League of Legends</strong> gratuita. Elige un rol o gira entre todos los campeones para obtener un <strong>campeón aleatorio de LoL</strong>. Puedes usarla sin registrarte para probar picks, ampliar tu pool o preparar retos con amigos.",
         "howToTitle": "Cómo Usar el Generador de Campeones Aleatorios",
         "howToSteps": [
             "Selecciona tu línea preferida (Top, Jungla, Mid, ADC o Support)",
@@ -662,7 +672,7 @@
         "loginRequired": "Se requiere inicio de sesión",
         "loginRequiredDesc": "Inicia sesión para ver la maestría",
         "signIn": "Iniciar sesión",
-        "winrateSection": "Winrate por Campeón"
+        "winrateSection": "Victorias por campeón"
     },
     "championWinrate": {
         "loading": "Cargando historial de partidas...",
@@ -680,8 +690,8 @@
             "support": "Soporte"
         },
         "mode": {
-            "all": "All Modes",
-            "classic": "Classic",
+            "all": "Todos los modos",
+            "classic": "Clásico",
             "aram": "ARAM"
         },
         "title": "Victorias",

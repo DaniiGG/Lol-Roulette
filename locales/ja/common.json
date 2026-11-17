@@ -1,4 +1,14 @@
 {
+  "rouletteStyles": {
+    "label": "ルーレットのスタイル",
+    "classic": "クラシックルーレット",
+    "slots": "スロットマシン",
+    "switchClassic": "ルーレットに切り替え",
+    "switchSlots": "スロットに切り替え",
+    "loadError": "Could not load champions.",
+    "retry": "Try again",
+    "emptyPool": "No champions match these filters."
+  },
     "nav": {
         "play": "Play",
         "leaderboard": "Leaderboard",

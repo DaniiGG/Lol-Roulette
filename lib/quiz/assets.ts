@@ -1,4 +1,4 @@
-export const QUIZ_DDRAGON_VERSION = '16.21.1'
+export const QUIZ_DDRAGON_VERSION = '16.22.1'
 
 const BASE = `https://ddragon.leagueoflegends.com/cdn/${QUIZ_DDRAGON_VERSION}`
 const SPLASH_BASE = 'https://ddragon.leagueoflegends.com/cdn/img/champion/splash'

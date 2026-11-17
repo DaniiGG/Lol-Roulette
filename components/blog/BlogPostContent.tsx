@@ -20,7 +20,7 @@ interface BlogPostContentProps {
   locale: string
 }
 
-const DD_VERSION = '16.21.1'
+const DD_VERSION = '16.22.1'
 const CHAMPION_IMG = (id: string) => `https://ddragon.leagueoflegends.com/cdn/${DD_VERSION}/img/champion/${id}.png`
 const ITEM_IMG = (id: string) => `https://ddragon.leagueoflegends.com/cdn/${DD_VERSION}/img/item/${id}.png`
 

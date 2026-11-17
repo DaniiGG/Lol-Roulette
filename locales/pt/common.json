@@ -1,4 +1,14 @@
 {
+  "rouletteStyles": {
+    "label": "Estilo da roleta",
+    "classic": "Roleta clássica",
+    "slots": "Caça-níqueis",
+    "switchClassic": "Mudar para roleta",
+    "switchSlots": "Mudar para caça-níqueis",
+    "loadError": "Could not load champions.",
+    "retry": "Try again",
+    "emptyPool": "No champions match these filters."
+  },
     "nav": {
         "play": "Jogar",
         "leaderboard": "Classificação",

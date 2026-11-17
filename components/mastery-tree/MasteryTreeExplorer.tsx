@@ -143,10 +143,12 @@ function svgPoint(svg: SVGSVGElement, clientX: number, clientY: number) {
 
 interface MasteryTreeExplorerProps {
   readOnlyMastery?: boolean
+  embedded?: boolean
 }
 
 export default function MasteryTreeExplorer({
   readOnlyMastery = false,
+  embedded = false,
 }: MasteryTreeExplorerProps) {
   const locale = useLocale()
   const t = useTranslations('masteryTreeExplorer')
@@ -783,12 +785,13 @@ export default function MasteryTreeExplorer({
   const isEmptyFilter =
     !isEmptyPersonal && layout.nodes.length > 0 && visibleNodeCount === 0
 
+  const Root = embedded ? 'div' : 'main'
   return (
-    <main className="relative min-h-screen overflow-hidden bg-[#05030d] text-white">
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-[780px] bg-[radial-gradient(ellipse_at_50%_-10%,rgba(124,58,237,0.2),transparent_58%)]" />
-      <div className="pointer-events-none absolute left-1/2 top-0 h-[540px] w-[980px] -translate-x-1/2 bg-[radial-gradient(ellipse_at_center,rgba(200,155,60,0.1),transparent_65%)]" />
+    <Root className={embedded ? 'relative min-w-0 text-white' : 'relative min-h-screen overflow-hidden bg-[#05030d] text-white'}>
+      <div hidden={embedded} className="pointer-events-none absolute inset-x-0 top-0 h-[780px] bg-[radial-gradient(ellipse_at_50%_-10%,rgba(124,58,237,0.2),transparent_58%)]" />
+      <div hidden={embedded} className="pointer-events-none absolute left-1/2 top-0 h-[540px] w-[980px] -translate-x-1/2 bg-[radial-gradient(ellipse_at_center,rgba(200,155,60,0.1),transparent_65%)]" />
 
-      <div className="relative mx-auto max-w-[1400px] px-4 pt-10 sm:px-6 lg:px-8 lg:pt-16">
+      <div className={embedded ? 'relative' : 'relative mx-auto max-w-[1400px] px-4 pt-10 sm:px-6 lg:px-8 lg:pt-16'}>
         {sharedNotice !== null && (
           <div
             role="status"
@@ -823,7 +826,7 @@ export default function MasteryTreeExplorer({
           </div>
         )}
 
-        <section className="mx-auto max-w-4xl text-center">
+        {!embedded && <section className="mx-auto max-w-4xl text-center">
           <span className="inline-flex items-center gap-2 rounded-full border border-[#c89b3c]/25 bg-[#c89b3c]/[0.07] px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-[#f0c75e]/85">
             <Sparkles className="h-3 w-3" />
             {t('badge')}
@@ -864,9 +867,9 @@ export default function MasteryTreeExplorer({
             <span>{t('heroStatNoAccount')}</span>
             <span>{t('heroStatExport')}</span>
           </div>
-        </section>
+        </section>}
 
-        <section ref={canvasSectionRef} className="mt-10 scroll-mt-24" aria-labelledby="mt-tree-title">
+        <section ref={canvasSectionRef} className={embedded ? 'scroll-mt-24' : 'mt-10 scroll-mt-24'} aria-labelledby="mt-tree-title">
           <h2 id="mt-tree-title" className="sr-only">
             {t('treeRegionLabel')}
           </h2>
@@ -1106,7 +1109,7 @@ export default function MasteryTreeExplorer({
 
             <div
               ref={canvasRef}
-              className="relative mt-2 h-[480px] overflow-hidden rounded-[1.4rem] border border-white/[0.06] bg-[#05030d] sm:h-[620px] lg:h-[720px]"
+              className={embedded ? 'relative mt-2 h-[420px] overflow-hidden rounded-[1.4rem] border border-white/[0.06] bg-[#05030d] sm:h-[540px] lg:h-[620px]' : 'relative mt-2 h-[480px] overflow-hidden rounded-[1.4rem] border border-white/[0.06] bg-[#05030d] sm:h-[620px] lg:h-[720px]'}
             >
               <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(124,58,237,0.08),transparent_66%)]" />
 
@@ -1542,6 +1545,7 @@ export default function MasteryTreeExplorer({
           </div>
         </section>
 
+        {!embedded && <>
         <section className="mt-12" aria-labelledby="mt-legend-title">
           <div className="flex items-center gap-2">
             <span className="h-px flex-1 bg-gradient-to-r from-transparent to-[#f0c75e]/30" />
@@ -1737,6 +1741,7 @@ export default function MasteryTreeExplorer({
             {t('dataSource', { version: DDRAGON_VERSION })}
           </p>
         </footer>
+        </>}
       </div>
 
       <ChampionDetailsModal
@@ -1776,6 +1781,6 @@ export default function MasteryTreeExplorer({
         layout={layout}
         roleLabels={roleLabels}
       />
-    </main>
+    </Root>
   )
 }

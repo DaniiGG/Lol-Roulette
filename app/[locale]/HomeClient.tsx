@@ -1,5 +1,7 @@
 "use client"
 
+import sidebarStyles from '@/components/HomeSidebar.module.css'
+
 import { useState, useEffect, useRef, useSyncExternalStore } from "react"
 import { resolveLegacyPostHref } from "@/lib/blog/meta"
 import { useTranslations, useLocale } from "next-intl"
@@ -12,7 +14,7 @@ import {
 } from "@/lib/api-client"
 import confetti from "canvas-confetti"
 import Cookies from 'js-cookie'
-import { History, Trash2 } from 'lucide-react'
+import { History, Trash2, Swords } from 'lucide-react'
 import InfoModal from "@/components/InfoModal"
 
 // Components
@@ -23,10 +25,10 @@ import AchievementsList from "@/components/AchievementsList"
 import AchievementPopup from "@/components/AchievementPopup"
 import VerificationResult from "@/components/VerificationResult"
 import AutoVerifyIndicator from "@/components/AutoVerifyIndicator"
-import RouletteWheel from "@/components/RouletteWheel"
-import SlotMachineRoulette from "@/components/Slotmachineroulette"
+import RouletteSwitcher from "@/components/RouletteSwitcher"
 import type { ReactNode } from "react"
 import ChampionGuideLink from "@/components/ChampionGuideLink"
+import ChampionSkinLink from "@/components/ChampionSkinLink"
 import ChampionStats from "@/components/ChampionStats"
 import MatchSimulator from "@/components/MatchSimulator"
 import { AutoVerifier } from "@/lib/auto-verify"
@@ -114,6 +116,23 @@ export default function Home({ seoContent }: { seoContent: ReactNode }) {
   const tChallenges = useTranslations('challenges')
   const tLanes = useTranslations('laneSelector')
   const locale = useLocale()
+  const sidebarLayoutRef = useRef<HTMLDivElement>(null)
+  const laneSelectorRef = useRef<HTMLDivElement>(null)
+  const [sidebarTop, setSidebarTop] = useState(0)
+  useEffect(() => {
+    const layout = sidebarLayoutRef.current
+    const selector = laneSelectorRef.current
+    if (!layout || !selector) return
+    const alignSidebar = () => setSidebarTop(selector.getBoundingClientRect().top - layout.getBoundingClientRect().top)
+    alignSidebar()
+    const observer = new ResizeObserver(alignSidebar)
+    observer.observe(selector)
+    if (selector.parentElement) observer.observe(selector.parentElement)
+    window.addEventListener('resize', alignSidebar)
+    return () => { observer.disconnect(); window.removeEventListener('resize', alignSidebar) }
+  }, [])
+  const tStats = useTranslations('championStats')
+  const tCard = useTranslations('championCard')
   const guestPicks = parseGuestPicks(useSyncExternalStore(
     subscribeToGuestPicks,
     getGuestPicksSnapshot,
@@ -722,9 +741,64 @@ export default function Home({ seoContent }: { seoContent: ReactNode }) {
           )}
 
           {/* Main Grid */}
-          <div className={`max-w-4xl mx-auto space-y-3`}>
+          <div ref={sidebarLayoutRef} className={`max-w-4xl mx-auto space-y-3 relative home-play-layout ${user ? 'home-play-authenticated' : ''}`}>
+            <aside style={{ top: sidebarTop }} className="home-play-sidebar" aria-label={tStats('recommendedBuild')}>
+              {champ ? <ChampionStats championId={champ.id} championName={champ.name} compact /> : (
+                <section className={`${sidebarStyles.card}`}>
+                  <div className={`${sidebarStyles.heading}`}>
+                    <span className={`${sidebarStyles.headingIcon}`}><Swords className="h-3.5 w-3.5" aria-hidden="true" /></span>
+                    <h2>{tStats('recommendedBuild').replace(/^[^\p{L}\p{N}]+/u, '')}</h2>
+                  </div>
+                  <div className={`${sidebarStyles.grid}`} aria-hidden="true">{Array.from({ length: 6 }, (_, index) => <div key={index} className={`${sidebarStyles.placeholder}`}><span /></div>)}</div>
+                  <p className={`${sidebarStyles.emptyText}`}>{tCard('pressBelow')}</p>
+                </section>
+              )}
+              <section className={`${sidebarStyles.card}`} aria-labelledby="guest-picks-heading">
+                  <div className={`${sidebarStyles.heading}`}>
+                    <span className={`${sidebarStyles.headingIcon}`}><History className="h-3.5 w-3.5" aria-hidden="true" /></span>
+                    <h2 id="guest-picks-heading">
+                      {t('guestHistoryTitle')}
+                    </h2>
+                    {guestPicks.length > 0 && (
+                      <button
+                        type="button"
+                        onClick={clearGuestPicks}
+                        className={`${sidebarStyles.clear}`}
+                        aria-label={t('clearGuestHistory')}
+                        title={t('clearGuestHistory')}
+                      >
+                        <Trash2 className="h-3.5 w-3.5" />
+                      </button>
+                    )}
+                  </div>
+                  {guestPicks.length > 0 ? (
+                    <ul className={`${sidebarStyles.grid}`}>
+                      {guestPicks.map((pick) => (
+                        <li key={pick.createdAt} title={pick.name} className={`${sidebarStyles.champion}`}>
+                          <img
+                            src={`https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/${pick.id}.png`}
+                            alt={pick.name}
+                            className={`${sidebarStyles.portrait}`}
+                            width={44}
+                            height={44}
+                            onError={(e) => {
+                              ;(e.target as HTMLImageElement).style.display = 'none'
+                            }}
+                          />
+
+                        </li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <div>
+                      <div className={`${sidebarStyles.grid}`} aria-hidden="true">{Array.from({ length: 6 }, (_, index) => <div key={index} className={`${sidebarStyles.placeholder} ${sidebarStyles.championPlaceholder}`}><span /></div>)}</div>
+                      <p className={`${sidebarStyles.emptyText}`}>{t('guestHistoryEmpty')}</p>
+                    </div>
+                  )}
+                </section>
+            </aside>
             {/* Left: Roulette (SIEMPRE VISIBLE) */}
-            <div className={`${user ? 'lg:col-span-2' : 'max-w-2xl mx-auto w-full'} space-y-6`}>
+            <div className={`${user ? 'lg:col-span-2' : 'max-w-2xl mx-auto w-full'} home-play-main space-y-6`}>
               {/* HEADER */}
               <div className="text-center relative">
                 <h1 className="mb-2 relative">
@@ -780,11 +854,13 @@ export default function Home({ seoContent }: { seoContent: ReactNode }) {
               )}
 
               {/* Lane Selector */}
+              <div ref={laneSelectorRef}>
               <LaneSelector
                 selectedLane={selectedLane}
                 onLaneChange={setSelectedLane}
                 disabled={!!activeChallengeId || !!activeChallengeSession || !!(user && rerollCount > MAX_REROLLS)}
               />
+              </div>
 
               {/* Champion Pool Toggle */}
               <div className="flex items-center justify-center gap-3 mt-2">
@@ -812,7 +888,8 @@ export default function Home({ seoContent }: { seoContent: ReactNode }) {
               </div>
 
               {/* ★ RULETA VISUAL ★ */}
-              <RouletteWheel
+
+              <RouletteSwitcher
                 lane={selectedLane}
                 onResult={handleRouletteResult}
                 disabled={!!(user && rerollCount > MAX_REROLLS)}
@@ -830,51 +907,10 @@ export default function Home({ seoContent }: { seoContent: ReactNode }) {
                 } : null}
               />
 
-              {!user && (
-                <section className="rounded-2xl border border-neutral-800 bg-neutral-900/60 p-4 sm:p-5" aria-labelledby="guest-picks-heading">
-                  <div className="mb-4 flex items-center justify-between gap-3">
-                    <h2 id="guest-picks-heading" className="flex items-center gap-2 font-semibold text-white">
-                      <History className="h-4 w-4 text-[#C89B3C]" />
-                      {t('guestHistoryTitle')}
-                    </h2>
-                    {guestPicks.length > 0 && (
-                      <button
-                        type="button"
-                        onClick={clearGuestPicks}
-                        className="inline-flex items-center gap-1.5 rounded-lg px-2 py-1 text-xs text-neutral-400 transition hover:bg-neutral-800 hover:text-white"
-                      >
-                        <Trash2 className="h-3.5 w-3.5" />
-                        {t('clearGuestHistory')}
-                      </button>
-                    )}
-                  </div>
-                  {guestPicks.length > 0 ? (
-                    <ul className="flex gap-2 overflow-x-auto pb-2">
-                      {guestPicks.map((pick) => (
-                        <li key={pick.createdAt} className="shrink-0 rounded-xl border border-neutral-800 bg-neutral-950/50 p-1">
-                          <img
-                            src={`https://ddragon.leagueoflegends.com/cdn/16.21.1/img/champion/${pick.id}.png`}
-                            alt={pick.name}
-                            className="w-10 h-10 object-cover rounded-lg"
-                            onError={(e) => {
-                              ;(e.target as HTMLImageElement).style.display = 'none'
-                            }}
-                          />
-                        </li>
-                      ))}
-                    </ul>
-                  ) : (
-                    <p className="text-sm text-neutral-500">{t('guestHistoryEmpty')}</p>
-                  )}
-                </section>
-              )}
-
               {champ && !spinning && <ChampionGuideLink championId={champ.id} />}
+              {champ && !spinning && <ChampionSkinLink championId={champ.id} />}
 
-              {/* Champion Stats & Build */}
-              {champ && (
-                <ChampionStats championId={champ.id} championName={champ.name} />
-              )}
+
 
               {/* Verify button (solo si logueado, hay campeón y no está auto-verificando) */}
               {user && champ && !verificationResult && !isAutoVerifying && (

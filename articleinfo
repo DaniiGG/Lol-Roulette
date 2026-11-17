@@ -1,617 +1,989 @@
-# How to Find Your Main Champion in League of Legends
+# Cómo jugar Yasuo en League of Legends — Build, runas y combos (Parche 26.22)
 
-With over 170 champions in League of Legends, finding the right one can feel overwhelming. Every champion has unique abilities, strengths, weaknesses and playstyles. Some excel at eliminating enemies in seconds, while others protect their teammates, control teamfights or dominate the map.
+**La Espada sin Honor**
 
-But finding your main isn't simply about choosing the strongest champion in the current meta. It's about finding someone whose abilities, personality and playstyle match the way you enjoy playing the game.
+Un espadachín de gran movilidad que convierte los súbditos en rutas de ataque, bloquea proyectiles y puede decidir una pelea con un solo tornado bien colocado.
 
-Whether you're a new player or someone who has spent hundreds of hours switching between champions, this guide will help you discover your ideal League of Legends main.
+Yasuo es un luchador y asesino de mid cuyo daño depende de los ataques básicos, los golpes críticos y la precisión con sus habilidades. No utiliza maná, pero necesita gestionar su escudo pasivo, las acumulaciones de Q y los objetivos disponibles para desplazarse con E.
 
-## What Does It Mean to Have a Main in League of Legends?
+Esta guía cubre su build del parche 26.22, el orden de habilidades nivel a nivel, runas, combos avanzados, decisiones de línea, teamfights y enfrentamientos que castigan las entradas imprudentes.
 
-A main champion is the champion you enjoy playing the most and choose to invest time in mastering.
+**13 min de lectura**  
+**Actualizada:** 17 nov 2026  
+**48,97% WR — 179.462 partidas**  
+**Rol:** Mid  
+**Parche:** 26.22, Esmeralda+, Solo/Dúo global
 
-Having a main doesn't mean you can only play one champion. It means having a preferred pick that you understand particularly well, including its abilities, matchups, strengths, weaknesses and limits.
+## Respuesta rápida
 
-Mastering a champion can help you:
+Sube Q primero, después E y por último W. Lleva Compás letal con Precisión principal y Valor secundario. Empieza con Espada de Doran y construye Hoja del rey arruinado, Arcoescudo inmortal y Filo infinito.
 
-- Understand its damage potential and trading patterns.
-- Learn matchups and recognize favorable situations.
-- Improve your positioning and decision-making.
-- Focus more on the overall game instead of constantly learning new abilities.
-- Develop consistency in ranked games.
+Juega alrededor de tu escudo pasivo, prepara tornados antes de intercambiar y utiliza los súbditos como rutas de entrada y salida. Guarda Muro de viento para los proyectiles importantes y no utilices Último aliento sobre cualquier enemigo levantado si la posición final es peligrosa.
 
-You can also have several mains, especially if you play multiple roles.
+Yasuo tiene un 48,97% de victorias en mid durante el parche 26.22 según U.GG. Su potencial mecánico es alto, pero necesita buenas decisiones para convertir una ventaja individual en una victoria.
 
-## Step 1: Discover Your Playstyle
+**Rol:** Carril central.
 
-Before choosing a champion, think about how you actually want to play League of Legends.
+**Estilo de juego:** Luchador móvil de daño físico, críticos y combos.
 
-Different champions reward different approaches to combat. Some require patience and precise positioning, while others encourage aggressive plays and mechanical execution.
+**Mecánica clave:** Preparar tornados con Q y utilizar E para reposicionarse entre objetivos.
 
-Here are six common playstyles to help you identify what you enjoy.
+**Condición de victoria:** Ganar escaramuzas, aprovechar levantamientos aliados y eliminar objetivos prioritarios con daño sostenido.
 
-### 1. The Aggressive Player
+**Error de principiante:** Utilizar E para avanzar sin tener una ruta de salida.
 
-Do you enjoy starting fights, chasing enemies and taking risks to secure kills?
+## Habilidades y consejos
 
-You might enjoy champions that excel at engaging and dealing damage quickly.
+### P — Camino del alma errante
 
-**Champions to try:**
-- Yasuo
-- Katarina
-- Darius
-- Samira
-- Lee Sin
+Yasuo aumenta considerablemente su probabilidad de impacto crítico. Además, acumula Flujo mientras se desplaza. Cuando alcanza el máximo, obtiene un escudo que se activa al recibir daño de un campeón o monstruo.
 
-### 2. The Strategic Player
+**Cómo usarla:**
+- Muévete constantemente para cargar el escudo.
+- Busca intercambios cuando tengas la pasiva disponible.
+- Aprovecha los objetos de crítico para alcanzar tus picos de daño.
+- Espera a recuperar el escudo antes de repetir un intercambio peligroso.
 
-Do you prefer planning your moves, controlling objectives and making decisions that help your team win?
+**Error común:** Entrar en combate sin el escudo y perder vida innecesariamente.
 
-You may enjoy champions with strong utility, crowd control or map-wide influence.
+### Q — Tempestad de acero
 
-**Champions to try:**
-- Twisted Fate
-- Galio
-- Orianna
-- Shen
-- Bard
+Yasuo lanza una estocada que inflige daño físico. Al golpear enemigos acumula Tormenta inminente. Con dos acumulaciones, su siguiente Q lanza un tornado que levanta a los enemigos.
 
-### 3. The Mechanical Player
+La velocidad de ataque reduce el enfriamiento y el tiempo de lanzamiento de Q hasta sus límites.
 
-Do you enjoy mastering difficult abilities, combos and precise movements?
+**Cómo usarla:**
+- Utiliza Q para farmear y preparar tornados.
+- Golpea súbditos antes de buscar un intercambio.
+- Combina Q con E para golpear en un círculo alrededor de Yasuo.
+- Aprovecha el tornado para activar tu definitiva.
 
-Some champions have steep learning curves but offer plenty of opportunities to improve over time.
+**Error común:** Lanzar el tornado inmediatamente sin considerar el movimiento del enemigo.
 
-**Champions to try:**
-- Riven
-- Azir
-- Lee Sin
-- Akali
-- Gangplank
+### W — Muro de viento
 
-### 4. The Defensive Player
+Yasuo crea una barrera que bloquea numerosos proyectiles enemigos.
 
-Would you rather protect your teammates, absorb damage and control the battlefield?
+**Cómo usarla:**
+- Guárdala para habilidades importantes.
+- Utilízala para proteger a tus aliados durante teamfights.
+- Colócate correctamente respecto al muro para aprovechar su protección.
+- Identifica qué habilidades enemigas son proyectiles bloqueables.
 
-You might prefer tanks and champions with defensive abilities.
+**Error común:** Gastar W para bloquear un ataque básico poco importante y quedarse sin defensa frente a una habilidad decisiva.
 
-**Champions to try:**
-- Ornn
-- Braum
-- Leona
-- Malphite
-- Nautilus
+### E — Hoja cortante
 
-### 5. The Carry Player
+Yasuo se desplaza a través de un enemigo, infligiendo daño mágico. No puede volver a utilizar E sobre el mismo objetivo durante un breve periodo.
 
-Do you enjoy becoming stronger throughout the game and being the main source of damage for your team?
+**Cómo usarla:**
+- Utiliza los súbditos para acercarte o escapar.
+- Planifica el orden de los objetivos antes de entrar.
+- Combina E + Q para ejecutar un ataque circular.
+- Evita utilizar todos los súbditos disponibles si después necesitas retirarte.
 
-You may prefer scaling champions that become particularly powerful in the later stages of a match.
+**Error común:** Desplazarte automáticamente hacia el enemigo sin comprobar dónde terminarás.
 
-**Champions to try:**
-- Kayle
-- Jinx
-- Vayne
-- Smolder
-- Aurelion Sol
+### R — Último aliento
 
-### 6. The Supportive Player
+Yasuo se desplaza hasta un campeón enemigo que esté en el aire y lo mantiene suspendido, infligiendo daño físico. Recupera su Flujo y obtiene temporalmente penetración de armadura adicional para sus golpes críticos.
 
-Do you enjoy helping teammates, healing, providing shields and creating opportunities for others?
+**Cómo usarla:**
+- Combínala con tu tornado o los levantamientos de tus aliados.
+- Busca objetivos prioritarios que estén en el aire.
+- Evalúa dónde aparecerás después de utilizar R.
+- Aprovecha la penetración adicional para continuar atacando.
 
-Enchanters and utility-focused champions might be your best fit.
+**Error común:** Utilizar R sobre un tanque y aparecer rodeado de cinco enemigos.
 
-**Champions to try:**
-- Lulu
-- Janna
-- Soraka
-- Nami
-- Milio
+## Orden de habilidades
 
-Remember that these categories aren't strict rules. Many champions combine several playstyles, and your preferences may change as you gain experience.
+**Prioridad: Q > E > W**
 
-## Step 2: Choose the Right Role
+**Niveles 1–3: Q → E → W**
 
-Your preferred position is another important factor when finding your main.
+| Nivel | Habilidad |
+|---|---|
+| 1 | Q |
+| 2 | E |
+| 3 | W |
+| 4 | Q |
+| 5 | Q |
+| 6 | R |
+| 7 | Q |
+| 8 | E |
+| 9 | Q |
+| 10 | E |
+| 11 | R |
+| 12 | E |
+| 13 | E |
+| 14 | W |
+| 15 | W |
+| 16 | R |
+| 17 | W |
+| 18 | W |
 
-League of Legends has five main positions, each with different responsibilities and gameplay patterns.
+Q se maximiza primero porque es la principal fuente de daño y permite preparar tornados con mayor frecuencia.
 
-### Top Lane
+E se maximiza después para mejorar el daño y la movilidad ofensiva.
 
-Top lane is generally suited to players who enjoy individual matchups, extended fights and split-pushing.
+W se maximiza al final porque su utilidad defensiva depende principalmente de bloquear las habilidades correctas.
 
-You will often have to manage your lane independently and understand when to fight, farm or help your team.
+Contra determinados campeones cuerpo a cuerpo, empezar con E puede permitir intercambios agresivos desde el nivel 1, pero Q es la opción más sencilla para aprender.
 
-**Champions to try:** Garen, Darius, Jax, Camille and Ornn.
+## Runas
 
-### Jungle
+### Compás letal — Daño sostenido
 
-The jungle is ideal for players who enjoy controlling the map, securing objectives and helping teammates through ganks.
+**Precisión + Valor**
 
-Junglers need to manage their camps, track the enemy jungler and recognize opportunities across the map.
+Compás letal es la runa clave más utilizada por Yasuo en el parche 26.22. Aumenta su potencial durante los intercambios prolongados y combina especialmente bien con su dependencia de la velocidad de ataque.
 
-**Champions to try:** Warwick, Amumu, Vi, Lee Sin and Nocturne.
+**Árbol principal — Precisión**
 
-### Mid Lane
+**Compás letal:** Aumenta tu capacidad de daño sostenido durante los combates.
 
-Mid lane offers a combination of mechanical skill, map awareness and roaming opportunities.
+**Absorber vida:** Recuperación de vida al eliminar súbditos, útil para sobrevivir durante la fase de líneas.
 
-You can choose between assassins, mages and other champions capable of controlling the center of the map.
+**Leyenda: Presteza:** Velocidad de ataque adicional que mejora tus ataques y la frecuencia de Q.
 
-**Champions to try:** Ahri, Lux, Syndra, Zed and Viktor.
+**Último esfuerzo:** Aumenta tu daño cuando tienes poca vida, especialmente útil en duelos ajustados.
 
-### ADC / Bot Lane
+**Árbol secundario — Valor**
 
-The bottom lane carry position is ideal for players who enjoy dealing consistent damage through basic attacks and positioning carefully during fights.
+**Revestimiento de huesos:** Reduce el daño recibido durante intercambios cortos y combos enemigos.
 
-ADCs are often vulnerable early on but can become extremely powerful with enough gold and items.
+**Sobrecrecimiento:** Proporciona vida adicional conforme avanzas en la partida.
 
-**Champions to try:** Ashe, Jinx, Caitlyn, Miss Fortune and Kai'Sa.
+### Alternativas
 
-### Support
+- **Pies veloces:** Para líneas difíciles donde necesitas recuperación y movilidad.
+- **Triunfo:** Alternativa a Absorber vida cuando buscas mejores escaramuzas.
+- **Segundo aliento:** Contra campeones que te desgastan constantemente.
+- **Inquebrantable:** Contra composiciones con control de masas.
 
-Support is perfect for players who enjoy controlling fights, protecting teammates and creating opportunities for their team.
+Si estás aprendiendo a Yasuo, Compás letal es una opción sólida porque favorece los intercambios prolongados y recompensa una buena gestión de los ataques básicos.
 
-You can choose between defensive enchanters, aggressive engage champions and champions focused on vision and utility.
+## Hechizos de invocador
 
-**Champions to try:** Lulu, Leona, Thresh, Nami and Nautilus.
+**Destello**
 
-## Step 3: Understand Champion Classes
+Fundamental para escapar, reposicionarte y ejecutar combos avanzados como Beyblade.
 
-Your role tells you where you play, but champion classes help explain how you fight.
+**Prender**
 
-Riot divides champions into several broad classes:
+Añade presión de asesinato durante la fase de líneas y ayuda a rematar enemigos.
 
-| Champion class | Main characteristics | Examples |
-|---|---|---|
-| Assassins | High burst damage and mobility | Zed, Akali |
-| Mages | Ability-based magic damage | Lux, Syndra |
-| Fighters | A combination of damage and durability | Darius, Jax |
-| Tanks | High durability and crowd control | Ornn, Malphite |
-| Marksmen | Sustained damage, usually through basic attacks | Jinx, Caitlyn |
-| Supports / Controllers | Protection, utility and crowd control | Lulu, Janna |
+**Alternativa: Teleportar**
 
-Some champions belong to more than one class, so these categories are useful guidelines rather than strict definitions.
+Permite volver a línea y mantener el ritmo de farmeo en enfrentamientos donde es difícil conseguir asesinatos tempranos.
 
-Understanding these differences can help you narrow down your options before trying individual champions.
+## Builds
 
-## Step 4: Test Different Champions Before Choosing Your Main
+### Build principal — Crítico y daño sostenido
 
-One of the biggest mistakes players make is choosing a main after playing only one or two games.
+Una configuración que combina daño físico, velocidad de ataque, robo de vida y golpes críticos.
 
-A champion might look exciting in a highlight video but feel completely different when you actually play it.
+**Objetos iniciales**
 
-Instead, follow this simple process:
+**Espada de Doran:** Daño y sustain para los primeros intercambios.
 
-**1. Create a shortlist.**
+**Poción de vida:** Recuperación para la fase de líneas.
 
-Choose three to five champions that match your preferred role and playstyle.
+**Objetos principales**
 
-**2. Learn the basics.**
+**Hoja del rey arruinado:** Velocidad de ataque, robo de vida y daño adicional contra enemigos con mucha vida.
 
-Understand their passive abilities, Q, W, E and R. You don't need to master every combo immediately.
+**Arcoescudo inmortal:** Probabilidad de crítico y un escudo defensivo que ayuda a sobrevivir al burst.
 
-**3. Play several games.**
+**Filo infinito:** Gran aumento del daño de los golpes críticos.
 
-Try to play at least three to five games with each champion. This gives you a better idea of how they feel beyond the first impression.
+**Botas**
 
-**4. Evaluate your experience.**
+**Grebas metalizadas:** Opción frecuente para obtener velocidad de ataque y mejorar los intercambios.
 
-Ask yourself:
+**Botas blindadas:** Contra equipos con mucho daño físico y ataques básicos.
 
-- Did I enjoy playing this champion?
-- Do I like its abilities and mechanics?
-- Do I feel motivated to improve?
-- Do I enjoy its early, mid and late game?
-- Can I imagine playing this champion regularly?
+**Botas de mercurio:** Contra composiciones con abundante daño mágico y control de masas.
 
-**5. Narrow down your choices.**
+**Objetos situacionales**
 
-Keep the champions you genuinely enjoy and remove those that don't feel right.
+**Baile de la muerte:** Supervivencia contra daño físico y peleas prolongadas.
 
-Don't choose a champion simply because you won a game with them. Enjoyment and long-term interest are much more important.
+**Ángel de la guarda:** Segunda oportunidad después de una entrada arriesgada.
 
-## Step 5: Don't Choose Your Main Only Because of the Meta
+**Recuerdos de lord Dominik:** Penetración de armadura contra enemigos resistentes.
 
-The strongest champions change with balance updates, item adjustments and seasonal changes.
+**Recordatorio letal:** Penetración de armadura y Heridas graves.
 
-A champion with an excellent win rate today might become weaker after the next patch.
+**Fauces de Malmortius:** Protección frente a burst mágico.
 
-This is why choosing your main exclusively based on tier lists can be a mistake.
+**Sanguinaria:** Robo de vida y daño para mejorar el sustain.
 
-Instead, consider these factors:
+La combinación Hoja del rey arruinado → Arcoescudo inmortal → Filo infinito es una de las rutas más utilizadas del parche 26.22.
 
-- **Enjoyment:** Do you actually like playing the champion?
-- **Consistency:** Can you perform reasonably well with it?
-- **Learning potential:** Does it offer mechanics or strategies you want to master?
-- **Versatility:** Can you adapt to different team compositions and situations?
-- **Commitment:** Are you willing to invest time in improving?
+### Build alternativa — Crítico temprano
 
-A champion that you enjoy and understand is often a better long-term choice than a temporarily overpowered pick.
+Una configuración que prioriza alcanzar antes los objetos de crítico.
 
-## Step 6: Build a Small Champion Pool
+**Objetos iniciales**
+- Espada de Doran
+- Poción de vida
 
-Once you find your main, you don't necessarily need to stop playing other champions.
+**Objetos principales**
+- Arcoescudo inmortal
+- Filo infinito
+- Baile de la muerte
 
-A small champion pool can help you stay flexible without constantly switching between completely different playstyles.
+**Objetos situacionales**
+- Ángel de la guarda
+- Recuerdos de lord Dominik
+- Fauces de Malmortius
+- Sanguinaria
 
-A good starting point is:
+Esta ruta es una alternativa cuando prefieres acelerar tus picos de crítico en lugar de construir Hoja del rey arruinado primero.
 
-- **Main champion:** Your preferred pick and the champion you focus on mastering.
-- **Secondary champion:** A reliable alternative when your main is unavailable or poorly suited to the matchup.
-- **Backup champion:** A simpler option for difficult situations or when you want something different.
+## Combos
 
-For ranked games, focusing on a small number of champions can make it easier to develop consistency.
+### Intercambio básico
 
-## Step 7: Track Your Progress and Master Your Champion
+**E → Q → Autoataque → E fuera**
 
-Finding your main is only the beginning. The next step is improving with that champion.
+**Cuándo usarlo:** Durante la fase de líneas, cuando tienes súbditos disponibles para entrar y salir.
 
-Pay attention to your performance rather than focusing exclusively on wins and losses.
+**Cómo ejecutarlo:** Utiliza E sobre un súbdito para acercarte, golpea con Q y un autoataque, y utiliza otro objetivo para retirarte.
 
-Consider tracking:
+**Cuidado:** No entres si el enemigo puede inmovilizarte antes de que completes el intercambio.
 
-- Your average CS per minute.
-- Your deaths and positioning mistakes.
-- Your damage dealt.
-- Your performance in lane.
-- Your decision-making during teamfights.
-- Your understanding of matchups.
+### Combo de tornado
 
-League of Legends also has a Champion Mastery system that tracks your progress with individual champions.
+**Q → Q → Q3 → R**
 
-You earn Mastery Points by completing eligible matchmaking games, and your performance contributes to your champion's progression.
+**Cuándo usarlo:** Cuando tienes dos acumulaciones de Q y el enemigo está a una distancia adecuada.
 
-The more you play and learn, the more comfortable you will become with your chosen champion.
+**Cómo ejecutarlo:** Prepara el tornado golpeando súbditos o campeones. Lanza Q3 y utiliza R cuando el enemigo quede levantado.
 
-## Find Your Main Champion with LeagueRoulette
+**Cuidado:** No fuerces R si terminarás en una posición peligrosa.
 
-Still can't decide which champion to play?
+### Combo circular
 
-Sometimes the best way to discover a new main is to try someone you wouldn't normally choose.
+**E → Q**
 
-LeagueRoulette helps you randomize your champion selection and step outside your usual picks.
+**Cuándo usarlo:** Cuando quieres golpear a varios enemigos cercanos mientras te desplazas.
 
-You might discover a champion whose abilities, mechanics and playstyle you end up loving.
+**Cómo ejecutarlo:** Activa Q durante el desplazamiento de E para realizar un ataque circular al llegar.
 
-**Stop playing the same champions every game. Spin the wheel, try something new and find your next main!**
+**Cuidado:** Calcula correctamente el alcance del círculo y tu posición final.
 
-[Discover LeagueRoulette](https://leagueroulette.com/)
+### Beyblade
 
-## Frequently Asked Questions
+**Q3 → E + Q → Destello → R**
 
-### How many champions should I main in League of Legends?
+**Cuándo usarlo:** Cuando necesitas sorprender a varios enemigos o alcanzar a un carry que está fuera de tu rango normal.
 
-There is no fixed number, but focusing on one to three champions is a good starting point, especially if you want to improve in ranked games.
+**Cómo ejecutarlo:** Prepara el tornado, comienza el combo circular E + Q y utiliza Destello durante la animación para trasladar el área de impacto. Si levantas a un objetivo válido, continúa con R.
 
-### How long does it take to master a champion?
+**Cuidado:** Es un combo mecánicamente exigente. Practica el momento exacto del Destello antes de intentarlo en clasificatorias.
 
-It depends on the champion's complexity and your previous experience. Simple champions may become comfortable after a few games, while mechanically demanding champions can take dozens or even hundreds of games to master.
+### Airblade
 
-### Should I main an easy or difficult champion?
+**Q3 → E + Q sobre otro objetivo → R**
 
-Choose based on what you enjoy. Easier champions can help you focus on fundamental game mechanics, while difficult champions offer more mechanical depth and room for improvement.
+**Cuándo usarlo:** Cuando ya has levantado a un enemigo y quieres añadir daño antes de utilizar Último aliento.
 
-### Should I change my main when it gets nerfed?
+**Cómo ejecutarlo:** Conecta el tornado, utiliza E + Q sobre un objetivo cercano mientras el enemigo permanece en el aire y activa R durante la ventana disponible.
 
-Not necessarily. A nerf doesn't automatically make a champion unplayable. If you enjoy the champion and understand how to play it, you can continue using it.
+**Cuidado:** Necesitas suficiente velocidad de ataque y una ejecución precisa. Si tardas demasiado, el enemigo caerá antes de que puedas utilizar R.
 
-### Can I have more than one main?
+### Keyblade
 
-Absolutely. Having a small champion pool is often useful because it gives you alternatives when your preferred champion is banned, picked by the enemy team or unsuitable for a particular matchup.
+**Beyblade → Airblade**
 
-### How do I know if I've found my main?
+**Cuándo usarlo:** Para maximizar el daño y sorprender a enemigos en una pelea importante.
 
-You'll usually notice that you enjoy playing the champion even when you lose, want to learn more about its mechanics and naturally choose it whenever possible.
+**Cómo ejecutarlo:** Combina un Beyblade para levantar al objetivo con la secuencia adicional de Airblade antes de utilizar R.
 
-**The best main isn't necessarily the strongest champion in the game. It's the champion you genuinely enjoy improving with.**
+**Cuidado:** Es uno de los combos más difíciles de Yasuo. No lo conviertas en tu prioridad hasta dominar las mecánicas básicas.
 
+## Fase de líneas: controla la oleada y tus desplazamientos
 
+Yasuo puede presionar mucho durante los primeros niveles, pero también es vulnerable cuando utiliza E de forma imprudente.
 
-# Cómo encontrar tu main en League of Legends: descubre tu campeón ideal
+Contra magos de rango, aprovecha tu escudo pasivo para acercarte y utiliza los súbditos para evitar habilidades. Guarda Muro de viento para los proyectiles más peligrosos.
 
-Con más de 170 campeones en League of Legends, encontrar al personaje adecuado puede resultar complicado. Cada campeón tiene habilidades, fortalezas, debilidades y estilos de juego diferentes. Algunos destacan por eliminar enemigos en cuestión de segundos, mientras que otros protegen a sus compañeros, controlan los combates o dominan el mapa.
+Contra campeones cuerpo a cuerpo, busca intercambios cuando tengas Compás letal y puedas prolongar la pelea sin recibir demasiado daño de la oleada enemiga.
 
-Pero encontrar tu main no consiste simplemente en elegir al campeón más fuerte del meta actual. Se trata de encontrar uno cuyas habilidades, personalidad y estilo de juego encajen con la forma en la que disfrutas jugando.
+Evita empujar automáticamente todas las oleadas. Si la línea queda demasiado adelantada, perderás espacio para utilizar E y quedarás expuesto a emboscadas.
 
-Tanto si acabas de empezar a jugar como si llevas cientos de horas cambiando constantemente de campeón, esta guía te ayudará a descubrir cuál podría ser tu main ideal en League of Legends.
+- Prepara el tornado antes de buscar un intercambio.
+- Utiliza el escudo pasivo para absorber daño.
+- Conserva súbditos que permitan escapar.
+- Controla la posición del jungla enemigo.
+- No utilices W contra habilidades que no puedas bloquear.
 
-## ¿Qué significa tener un main en League of Legends?
+## Mitad de partida: escaramuzas y presión lateral
 
-Tener un main significa tener un campeón principal con el que disfrutas jugando y al que dedicas tiempo para mejorar y dominar sus mecánicas.
+Yasuo destaca en peleas pequeñas donde puede aprovechar su movilidad y los levantamientos de sus compañeros.
 
-Esto no significa que solamente puedas jugar con un campeón. Significa que tienes una elección preferida que conoces especialmente bien, incluyendo sus habilidades, enfrentamientos, fortalezas, debilidades y limitaciones.
+Empuja oleadas laterales cuando sea seguro y busca oportunidades para unirte a tu equipo en objetivos importantes.
 
-Dominar un campeón puede ayudarte a:
+Si tienes aliados como Malphite, Diana o Wukong, coordina tu definitiva con sus habilidades de levantamiento.
 
-- Comprender su potencial de daño y sus intercambios.
-- Aprender los enfrentamientos y reconocer situaciones favorables.
-- Mejorar tu posicionamiento y toma de decisiones.
-- Concentrarte más en la partida en lugar de aprender constantemente nuevas habilidades.
-- Conseguir mayor consistencia en las clasificatorias.
+No necesitas utilizar R inmediatamente después de cualquier levantamiento. A veces es mejor mantener tu posición y continuar atacando.
 
-También puedes tener varios mains, especialmente si juegas en diferentes posiciones.
+- Busca peleas alrededor de objetivos neutrales.
+- Utiliza la visión para preparar flancos.
+- No persigas enemigos sin una ruta de salida.
+- Aprovecha los levantamientos aliados.
+- Evita luchar en zonas sin objetivos disponibles para E.
 
-## Paso 1: Descubre tu estilo de juego
+## Teamfights: no eres el iniciador principal
 
-Antes de elegir un campeón, piensa en cómo quieres jugar realmente a League of Legends.
+Aunque Yasuo puede eliminar rápidamente a varios enemigos, sigue siendo vulnerable al control de masas y al daño concentrado.
 
-Cada campeón recompensa diferentes formas de jugar. Algunos requieren paciencia y un posicionamiento preciso, mientras que otros favorecen las jugadas agresivas y la ejecución mecánica.
+Espera a que tu primera línea cree espacio o a que un aliado consiga un levantamiento importante.
 
-Estos son seis estilos de juego habituales que pueden ayudarte a identificar tus preferencias.
+Utiliza Muro de viento para bloquear proyectiles que amenacen a tu equipo y busca un ángulo seguro para alcanzar a los carries.
 
-### 1. El jugador agresivo
+Después de utilizar R, aprovecha tu escudo y la penetración adicional para continuar atacando, pero no persigas una segunda muerte si el resto del equipo enemigo puede eliminarte.
 
-¿Te gusta iniciar combates, perseguir enemigos y asumir riesgos para conseguir asesinatos?
+- No utilices R automáticamente sobre el primer enemigo levantado.
+- Controla las habilidades de control de masas enemigas.
+- Protege a tus carries con Muro de viento cuando sea necesario.
+- Prioriza objetivos que puedas alcanzar sin morir.
+- Aprovecha tu daño sostenido en lugar de buscar únicamente combos espectaculares.
 
-Probablemente disfrutes de campeones capaces de iniciar enfrentamientos e infligir grandes cantidades de daño rápidamente.
+## Enfrentamientos
 
-**Campeones que puedes probar:**
-- Yasuo
-- Katarina
-- Darius
-- Samira
-- Lee Sin
+Los enfrentamientos siguientes combinan datos del parche 26.22 con consejos estratégicos. Los porcentajes citados corresponden a victorias del rival contra Yasuo y no garantizan el resultado de una partida individual.
 
-### 2. El jugador estratégico
+### Enfrentamientos difíciles
 
-¿Prefieres planificar tus movimientos, controlar los objetivos y tomar decisiones que ayuden a tu equipo a ganar?
+**Lissandra**
 
-Es posible que disfrutes de campeones con mucha utilidad, control de masas o influencia sobre el mapa.
+Puede inmovilizar a Yasuo y neutralizar sus entradas con su definitiva. Su equipo puede aprovechar ese control de masas para eliminarte antes de que puedas atacar.
 
-**Campeones que puedes probar:**
-- Twisted Fate
-- Galio
-- Orianna
-- Shen
-- Bard
+**54,9% WR de Lissandra contra Yasuo — 8.152 partidas.**
 
-### 3. El jugador mecánico
+**Consejo:** No entres mientras tenga su definitiva disponible y evita utilizar E de forma predecible.
 
-¿Te gusta dominar habilidades difíciles, combos y movimientos precisos?
+**Malzahar**
 
-Algunos campeones tienen una curva de aprendizaje elevada, pero ofrecen muchas posibilidades de mejora.
+Su definitiva puede detener tus combos y convertirte en un objetivo fácil para el jungla enemigo.
 
-**Campeones que puedes probar:**
-- Riven
-- Azir
-- Lee Sin
-- Akali
-- Gangplank
+**54,7% WR de Malzahar contra Yasuo — 5.499 partidas.**
 
-### 4. El jugador defensivo
+**Consejo:** Controla su escudo pasivo y evita los all-ins cuando tenga R.
 
-¿Prefieres proteger a tus compañeros, absorber daño y controlar el campo de batalla?
+**Aurelion Sol**
 
-Quizás encajes mejor con los tanques y los campeones que cuentan con habilidades defensivas.
+Puede controlar grandes zonas y escalar hasta superar tu impacto en peleas agrupadas.
 
-**Campeones que puedes probar:**
-- Ornn
-- Braum
-- Leona
-- Malphite
-- Nautilus
+**56,2% WR de Aurelion Sol contra Yasuo — 2.449 partidas.**
 
-### 5. El jugador carry
+**Consejo:** Presiónalo cuando sus habilidades importantes estén en enfriamiento y evita regalarle tiempo para escalar.
 
-¿Disfrutas haciéndote cada vez más fuerte durante la partida y convirtiéndote en la principal fuente de daño de tu equipo?
+### Enfrentamientos favorables o de presión
 
-Puede que prefieras campeones de escalado que alcanzan un gran potencial durante las últimas fases de la partida.
+**Lux**
 
-**Campeones que puedes probar:**
-- Kayle
-- Jinx
-- Vayne
-- Smolder
-- Aurelion Sol
+Yasuo puede bloquear varias de sus habilidades con Muro de viento y castigarla cuando falla su inmovilización.
 
-### 6. El jugador de apoyo
+**Consejo:** Guarda W para su Q o E y aprovecha los súbditos para acercarte.
 
-¿Te gusta ayudar a tus compañeros, curarlos, proporcionar escudos y crear oportunidades para los demás?
+**Ahri**
 
-Los encantadores y los campeones centrados en la utilidad pueden ser tu mejor opción.
+Sus proyectiles pueden ser bloqueados y Yasuo puede castigarla cuando utiliza su hechizo de control de masas.
 
-**Campeones que puedes probar:**
-- Lulu
-- Janna
-- Soraka
-- Nami
-- Milio
+**Consejo:** No persigas a Ahri sin considerar las cargas de su definitiva.
 
-Recuerda que estas categorías no son reglas estrictas. Muchos campeones combinan varios estilos de juego y tus preferencias pueden cambiar a medida que adquieras experiencia.
+**Syndra**
 
-## Paso 2: Elige la posición adecuada
+Yasuo puede presionarla cuando sus habilidades defensivas están en enfriamiento, pero debe respetar su control de masas.
 
-Tu posición preferida es otro factor importante para encontrar tu main.
+**Consejo:** Busca intercambios cortos y utiliza W para bloquear proyectiles importantes.
 
-League of Legends tiene cinco posiciones principales, cada una con responsabilidades y estilos de juego diferentes.
+Estos tres enfrentamientos son ejemplos estratégicos, no ventajas estadísticas confirmadas para el parche.
 
-### Top
+## Errores comunes que corregir
 
-La calle superior suele ser adecuada para jugadores que disfrutan de los enfrentamientos individuales, los combates prolongados y el split push.
+1. Utilizar E para avanzar sin planear cómo salir.
+2. Gastar Muro de viento en habilidades poco importantes.
+3. Lanzar tornados sin considerar el movimiento enemigo.
+4. Utilizar R sobre cualquier objetivo levantado.
+5. Empujar todas las oleadas sin controlar al jungla.
+6. Intentar combos avanzados antes de dominar los básicos.
+7. Comprar siempre la misma build sin adaptarte al daño enemigo.
+8. Confundir movilidad con invulnerabilidad.
 
-Normalmente tendrás que gestionar tu propia línea y saber cuándo luchar, conseguir súbditos o ayudar a tu equipo.
+## Plan de práctica
 
-**Campeones que puedes probar:** Garen, Darius, Jax, Camille y Ornn.
+### 1. Ejercicio de desplazamientos
 
-### Jungla
+En la herramienta de práctica, coloca varios muñecos y utiliza oleadas de súbditos.
 
-La jungla es ideal para quienes disfrutan controlando el mapa, asegurando objetivos y ayudando a sus compañeros mediante emboscadas.
+Practica encadenar E entre objetivos sin quedarte atrapado.
 
-Los junglas deben gestionar sus campamentos, localizar al jungla enemigo y reconocer oportunidades en las diferentes líneas.
+Intenta terminar cada secuencia en una posición segura.
 
-**Campeones que puedes probar:** Warwick, Amumu, Vi, Lee Sin y Nocturne.
+**Objetivo:** Aprender a visualizar una ruta de entrada y salida antes de desplazarte.
 
-### Mid
+### 2. Ejercicio de tornados
 
-La calle central combina habilidad mecánica, conocimiento del mapa y oportunidades para desplazarse a otras líneas.
+Golpea súbditos para preparar Q3 y practica acertar tornados desde distintas distancias.
 
-Puedes elegir entre asesinos, magos y otros campeones capaces de controlar el centro del mapa.
+Después combina E + Q para ejecutar el levantamiento circular.
 
-**Campeones que puedes probar:** Ahri, Lux, Syndra, Zed y Viktor.
+**Objetivo:** Mejorar la precisión y reducir los tornados desperdiciados.
 
-### ADC / Bot
+### 3. Ejercicio de combos avanzados
 
-La posición de tirador está pensada para jugadores que disfrutan infligiendo daño constante mediante ataques básicos y manteniendo un buen posicionamiento durante los combates.
+Practica Beyblade y Airblade por separado.
 
-Los ADC suelen ser vulnerables durante los primeros minutos, pero pueden convertirse en auténticas amenazas cuando consiguen suficiente oro y objetos.
+Cuando puedas ejecutarlos consistentemente, intenta combinarlos en Keyblade.
 
-**Campeones que puedes probar:** Ashe, Jinx, Caitlyn, Miss Fortune y Kai'Sa.
+**Objetivo:** Ejecutar los combos sin depender de movimientos improvisados.
 
-### Support
+### 4. Revisión de teamfights
 
-Support es ideal para jugadores que disfrutan controlando los combates, protegiendo a sus compañeros y creando oportunidades para su equipo.
+Mira una repetición y pausa antes de cada definitiva.
 
-Puedes elegir entre encantadores defensivos, campeones de iniciación agresiva y personajes especializados en visión y utilidad.
+Identifica qué enemigo estaba levantado, dónde aparecerías y qué control de masas seguía disponible.
 
-**Campeones que puedes probar:** Lulu, Leona, Thresh, Nami y Nautilus.
-
-## Paso 3: Aprende las diferentes clases de campeones
-
-Tu posición determina dónde juegas, pero las clases de campeones ayudan a entender cómo combates.
-
-Riot divide a los campeones en varias categorías generales:
-
-| Clase | Características principales | Ejemplos |
-|---|---|---|
-| Asesinos | Mucho daño explosivo y movilidad | Zed, Akali |
-| Magos | Daño mágico basado en habilidades | Lux, Syndra |
-| Luchadores | Combinación de daño y resistencia | Darius, Jax |
-| Tanques | Gran resistencia y control de masas | Ornn, Malphite |
-| Tiradores | Daño sostenido, normalmente mediante ataques básicos | Jinx, Caitlyn |
-| Apoyos / Controladores | Protección, utilidad y control de masas | Lulu, Janna |
-
-Algunos campeones pertenecen a más de una clase, por lo que estas categorías son orientativas y no definiciones estrictas.
-
-Comprender estas diferencias te ayudará a reducir tus opciones antes de probar campeones concretos.
-
-## Paso 4: Prueba diferentes campeones antes de elegir tu main
-
-Uno de los mayores errores es elegir un main después de jugar solamente una o dos partidas.
-
-Un campeón puede parecer increíble en un vídeo de jugadas destacadas, pero sentirse completamente diferente cuando lo utilizas tú mismo.
-
-En su lugar, sigue este proceso:
-
-**1. Crea una lista de candidatos.**
-
-Elige entre tres y cinco campeones que encajen con tu posición y estilo de juego preferidos.
-
-**2. Aprende lo básico.**
-
-Comprende su pasiva y sus habilidades Q, W, E y R. No necesitas dominar todos sus combos desde el principio.
-
-**3. Juega varias partidas.**
-
-Intenta jugar al menos entre tres y cinco partidas con cada campeón. Así tendrás una idea más clara de cómo se siente jugarlo, más allá de la primera impresión.
-
-**4. Evalúa tu experiencia.**
-
-Pregúntate:
-
-- ¿He disfrutado jugando con este campeón?
-- ¿Me gustan sus habilidades y mecánicas?
-- ¿Tengo ganas de seguir mejorando?
-- ¿Disfruto de su fase inicial, media y final?
-- ¿Me imagino jugando con él habitualmente?
-
-**5. Reduce tus opciones.**
-
-Quédate con los campeones que realmente disfrutes y descarta aquellos con los que no te sientas cómodo.
-
-No elijas un campeón simplemente porque hayas ganado una partida con él. El disfrute y el interés a largo plazo son mucho más importantes.
-
-## Paso 5: No elijas tu main únicamente por el meta
-
-Los campeones más fuertes cambian con las actualizaciones de equilibrio, los ajustes de objetos y los cambios de temporada.
-
-Un campeón con una excelente tasa de victoria hoy podría debilitarse después del siguiente parche.
-
-Por eso, elegir tu main exclusivamente basándote en las tier lists puede ser un error.
-
-En su lugar, ten en cuenta estos factores:
-
-- **Diversión:** ¿Realmente disfrutas jugando con ese campeón?
-- **Consistencia:** ¿Consigues rendir razonablemente bien con él?
-- **Potencial de aprendizaje:** ¿Tiene mecánicas o estrategias que quieres dominar?
-- **Versatilidad:** ¿Puedes adaptarte a diferentes composiciones y situaciones?
-- **Compromiso:** ¿Estás dispuesto a dedicar tiempo a mejorar?
-
-Un campeón que disfrutas y comprendes suele ser una mejor elección a largo plazo que uno temporalmente demasiado poderoso.
-
-## Paso 6: Crea un pequeño grupo de campeones
-
-Una vez encuentres tu main, no tienes por qué dejar de jugar con otros campeones.
-
-Tener un grupo reducido de campeones puede ayudarte a mantener cierta flexibilidad sin cambiar constantemente entre estilos de juego completamente diferentes.
-
-Una buena estructura inicial sería:
-
-- **Campeón principal:** tu elección preferida y aquel en el que te centras para mejorar.
-- **Campeón secundario:** una alternativa fiable cuando tu main no está disponible o no encaja bien en el enfrentamiento.
-- **Campeón de reserva:** una opción más sencilla para situaciones complicadas o cuando quieras cambiar de estilo.
-
-En las clasificatorias, centrarse en un número reducido de campeones puede facilitar el desarrollo de una mayor consistencia.
-
-## Paso 7: Sigue tu progreso y domina tu campeón
-
-Encontrar tu main es solamente el principio. El siguiente paso es mejorar con ese campeón.
-
-Presta atención a tu rendimiento en lugar de centrarte exclusivamente en las victorias y derrotas.
-
-Puedes seguir estos aspectos:
-
-- Tu promedio de súbditos por minuto.
-- Tus muertes y errores de posicionamiento.
-- El daño que infliges.
-- Tu rendimiento durante la fase de líneas.
-- Tus decisiones durante los combates por equipos.
-- Tu conocimiento de los enfrentamientos.
-
-League of Legends también cuenta con un sistema de Maestría de campeones que registra tu progreso individual con cada personaje.
-
-Consigues puntos de maestría al completar partidas emparejadas compatibles, y tu rendimiento contribuye a la progresión de cada campeón.
-
-Cuanto más juegues y aprendas, más cómodo te sentirás con tu elección.
-
-## Encuentra tu main con LeagueRoulette
-
-¿Todavía no sabes qué campeón elegir?
-
-A veces, la mejor forma de descubrir un nuevo main es probar a alguien que normalmente nunca escogerías.
-
-LeagueRoulette te permite aleatorizar tu selección de campeones y salir de tus elecciones habituales.
-
-Puede que descubras un campeón cuyas habilidades, mecánicas y estilo de juego terminen encantándote.
-
-**Deja de jugar siempre con los mismos campeones. Gira la ruleta, prueba algo diferente y encuentra tu próximo main.**
-
-[Descubre LeagueRoulette](https://leagueroulette.com/)
+**Objetivo:** Mejorar la elección del objetivo y evitar muertes innecesarias.
 
 ## Preguntas frecuentes
 
-### ¿Cuántos campeones debería tener como main en League of Legends?
+**¿Es difícil aprender a Yasuo?**
 
-No existe un número obligatorio, pero centrarse en uno o tres campeones es un buen punto de partida, especialmente si quieres mejorar en las clasificatorias.
+Sí. Sus habilidades básicas son sencillas de entender, pero dominar los desplazamientos, tornados y combos avanzados requiere mucha práctica.
 
-### ¿Cuánto se tarda en dominar un campeón?
+**¿Cuál es la mejor build de Yasuo en el parche 26.22?**
 
-Depende de la complejidad del campeón y de tu experiencia previa. Algunos campeones sencillos pueden resultar cómodos después de unas pocas partidas, mientras que otros con mecánicas exigentes pueden necesitar decenas o incluso cientos de partidas para dominarlos.
+Una de las rutas más populares es Hoja del rey arruinado, Arcoescudo inmortal y Filo infinito. También existen configuraciones que priorizan Arcoescudo y Filo infinito.
 
-### ¿Es mejor tener un main fácil o difícil?
+**¿Qué orden de habilidades debo utilizar?**
 
-Elige según lo que disfrutes. Los campeones más sencillos permiten concentrarse en los fundamentos del juego, mientras que los más difíciles ofrecen mayor profundidad mecánica y posibilidades de mejora.
+Q primero, E después y W al final, mejorando R siempre que esté disponible.
 
-### ¿Debería cambiar de main si recibe un nerf?
+**¿Qué es el combo Beyblade de Yasuo?**
 
-No necesariamente. Un nerf no convierte automáticamente a un campeón en una elección injugable. Si disfrutas jugando con él y sabes utilizarlo, puedes seguir eligiéndolo.
+Es una combinación de E + Q3 + Destello que permite trasladar el área del levantamiento a una nueva posición.
 
-### ¿Puedo tener más de un main?
+**¿Qué es Airblade?**
 
-Por supuesto. Tener un grupo reducido de campeones suele ser útil porque te permite disponer de alternativas cuando tu campeón preferido está bloqueado, lo elige el equipo enemigo o no resulta adecuado para un enfrentamiento concreto.
+Es una técnica que permite añadir el daño de E + Q antes de completar Último aliento sobre un enemigo levantado.
 
-### ¿Cómo sé si he encontrado mi main?
+**¿Es Yasuo bueno para principiantes?**
 
-Normalmente lo notarás porque disfrutas jugando con ese campeón incluso cuando pierdes, quieres aprender más sobre sus mecánicas y tiendes a elegirlo siempre que tienes oportunidad.
+No es uno de los campeones más sencillos, pero puede aprenderse empezando por el farmeo, el posicionamiento y los combos básicos.
 
-**El mejor main no tiene por qué ser el campeón más fuerte del juego. Es aquel con el que realmente disfrutas mejorando.**
+**¿Yasuo es mejor mid o top?**
+
+Mid es su posición principal en esta guía. Top es una alternativa, aunque puede enfrentarse a luchadores con mayor resistencia y daño sostenido.
+
+## Sobre las estadísticas
+
+Los datos principales proceden de U.GG para el parche 26.22, Esmeralda+, Solo/Dúo global. Las rutas de objetos también se contrastan con Trackimo y Mobalytics.
+
+Los porcentajes de victoria pueden variar entre plataformas debido a las diferencias de muestra, filtros y metodología. Las estadísticas de builds completas están condicionadas por las partidas que llegan a completar esos objetos.
+
+## Fuentes
+
+- U.GG — Yasuo Mid Build, Runes and Skill Order, Patch 26.22.
+- Mobalytics — Yasuo Build and Runes, Patch 26.22.
+- Trackimo — Yasuo Mid Build, Items and Skill Order, Patch 26.22.
+- Riot Games — Yasuo Official Champion Page.
+
+
+
+
+
+
+
+# How to Play Yasuo in League of Legends — Build, Runes & Combos (Patch 26.22)
+
+**The Unforgiven**
+
+A highly mobile swordsman who turns minion waves into movement paths, blocks enemy projectiles, and can decide an entire teamfight with a perfectly placed tornado.
+
+Yasuo is a mid-lane fighter and assassin specializing in critical strikes, sustained physical damage, and high-mobility combos. He doesn't use mana, but his effectiveness depends on managing his passive shield, Steel Tempest stacks, and available dash targets.
+
+This guide covers Yasuo's Patch 26.22 build, level-by-level skill order, runes, advanced combos, laning decisions, teamfights, difficult matchups, and common mistakes.
+
+**Reading time:** 13 minutes  
+**Updated:** November 17, 2026  
+**Win rate:** 48.97% — 179,462 matches  
+**Role:** Mid  
+**Patch:** 26.22, Emerald+, Global Ranked Solo/Duo
+
+## Quick Answer
+
+Max Q first, followed by E and W. Run Lethal Tempo with Precision primary and Resolve secondary. Start Doran's Blade and build Blade of the Ruined King, Immortal Shieldbow, and Infinity Edge.
+
+Play around your passive shield, prepare tornadoes before trading, and use minions as entry and escape routes. Save Wind Wall for important projectiles and avoid using Last Breath on every airborne target if the landing position is dangerous.
+
+Yasuo has a 48.97% mid-lane win rate in Patch 26.22 according to U.GG. His mechanical potential is extremely high, but success depends on turning individual outplays into meaningful advantages.
+
+**Role:** Mid-lane fighter.
+
+**Playstyle:** Mobile physical damage dealer with critical strikes and extended combos.
+
+**Key mechanic:** Preparing Steel Tempest tornadoes and repositioning with Sweeping Blade.
+
+**Win condition:** Win skirmishes, capitalize on allied knockups, and eliminate priority targets through sustained damage.
+
+**Beginner mistake:** Dashing forward without planning an escape route.
+
+## Abilities and Tips
+
+### P — Way of the Wanderer
+
+Yasuo gains increased critical strike chance. He also generates Flow while moving, which creates a shield when fully charged and triggered by enemy champion or monster damage.
+
+**How to use it:**
+- Keep moving to charge your passive shield.
+- Trade when your shield is available.
+- Take advantage of critical strike items to reach your damage spikes.
+- Wait for your shield to recharge before repeating dangerous trades.
+
+**Common mistake:** Engaging without your shield and taking unnecessary damage.
+
+### Q — Steel Tempest
+
+Yasuo thrusts his sword forward, dealing physical damage. Hitting enemies generates Gathering Storm stacks. After two successful hits, his next Q launches a tornado that knocks enemies airborne.
+
+Attack speed reduces Steel Tempest's cooldown and cast time, up to their limits.
+
+**How to use it:**
+- Use Q to last-hit minions and prepare tornadoes.
+- Stack Q on minions before engaging.
+- Combine E + Q for a circular attack.
+- Use your tornado to enable Last Breath.
+
+**Common mistake:** Throwing tornadoes immediately without predicting enemy movement.
+
+### W — Wind Wall
+
+Yasuo creates a wall that blocks many enemy projectiles.
+
+**How to use it:**
+- Save it for important enemy abilities.
+- Protect teammates during teamfights.
+- Position correctly around the wall.
+- Learn which enemy abilities count as blockable projectiles.
+
+**Common mistake:** Wasting Wind Wall on insignificant damage and having no protection against a crucial ability.
+
+### E — Sweeping Blade
+
+Yasuo dashes through a target, dealing magic damage. He cannot dash through the same target again for a short period.
+
+**How to use it:**
+- Use minions to approach or escape.
+- Plan your dash targets before engaging.
+- Combine E + Q for a circular strike.
+- Preserve available minions for your escape.
+
+**Common mistake:** Dashing automatically toward an enemy without considering your final position.
+
+### R — Last Breath
+
+Yasuo blinks to an airborne enemy champion, suspending airborne enemies and dealing physical damage. He restores his Flow and temporarily gains bonus armor penetration on critical strikes.
+
+**How to use it:**
+- Combine R with your tornado or allied knockups.
+- Prioritize valuable airborne targets.
+- Evaluate your landing position.
+- Continue attacking after R to benefit from its armor penetration.
+
+**Common mistake:** Ulting a tank and landing in the middle of the entire enemy team.
+
+## Skill Order
+
+**Priority: Q > E > W**
+
+**Levels 1–3: Q → E → W**
+
+| Level | Ability |
+|---|---|
+| 1 | Q |
+| 2 | E |
+| 3 | W |
+| 4 | Q |
+| 5 | Q |
+| 6 | R |
+| 7 | Q |
+| 8 | E |
+| 9 | Q |
+| 10 | E |
+| 11 | R |
+| 12 | E |
+| 13 | E |
+| 14 | W |
+| 15 | W |
+| 16 | R |
+| 17 | W |
+| 18 | W |
+
+Max Q first because it is your primary damage source and provides frequent tornado opportunities.
+
+Max E second for improved damage and offensive mobility.
+
+Max W last because its defensive value mainly comes from blocking the right abilities.
+
+Starting E can be useful against certain melee champions, but Q is the more straightforward option for learning Yasuo.
+
+## Runes
+
+### Lethal Tempo — Sustained Damage
+
+**Precision + Resolve**
+
+Lethal Tempo is Yasuo's most popular keystone in Patch 26.22. It improves extended trades and synergizes with his reliance on attack speed.
+
+**Primary Tree — Precision**
+
+**Lethal Tempo:** Improves sustained damage during extended fights.
+
+**Absorb Life:** Restores health when killing minions, improving lane sustain.
+
+**Legend: Alacrity:** Provides attack speed for faster attacks and more frequent Steel Tempest casts.
+
+**Last Stand:** Increases damage when low on health, helping Yasuo win close duels.
+
+**Secondary Tree — Resolve**
+
+**Bone Plating:** Reduces incoming damage during short trades and enemy combos.
+
+**Overgrowth:** Provides additional health as the game progresses.
+
+### Alternatives
+
+- **Fleet Footwork:** Better sustain and mobility against difficult poke matchups.
+- **Triumph:** An alternative to Absorb Life for stronger skirmishes.
+- **Second Wind:** Useful against frequent ranged poke.
+- **Unflinching:** Additional protection against crowd control.
+
+Lethal Tempo is a strong default for learning Yasuo because it rewards extended trades and consistent basic attacks.
+
+## Summoner Spells
+
+**Flash:** Essential for escaping, repositioning, and advanced combos such as Beyblade.
+
+**Ignite:** Provides additional early kill pressure and helps finish low-health enemies.
+
+**Alternative — Teleport:** A safer choice for difficult lanes where maintaining farm and tempo matters more than early kills.
+
+## Builds
+
+### Primary Build — Critical Strike and Sustained Damage
+
+A setup combining physical damage, attack speed, lifesteal, and critical strikes.
+
+**Starting Items**
+- Doran's Blade
+- Health Potion
+
+**Core Items**
+
+**Blade of the Ruined King:** Attack speed, lifesteal, and additional damage against high-health targets.
+
+**Immortal Shieldbow:** Critical strike chance and a defensive shield that helps survive burst damage.
+
+**Infinity Edge:** A major increase to critical strike damage.
+
+**Boots**
+- Gunmetal Greaves: A popular attack-speed option.
+- Plated Steelcaps: Against heavy physical damage and basic attacks.
+- Mercury's Treads: Against magic damage and crowd control.
+
+**Situational Items**
+
+**Death's Dance:** Improves survivability against physical damage and during extended fights.
+
+**Guardian Angel:** Provides a second chance after a risky engage.
+
+**Lord Dominik's Regards:** Armor penetration against durable enemies.
+
+**Mortal Reminder:** Armor penetration and Grievous Wounds.
+
+**Maw of Malmortius:** Protection against magic burst.
+
+**Bloodthirster:** Lifesteal and additional sustained damage.
+
+Blade of the Ruined King → Immortal Shieldbow → Infinity Edge is one of the most popular item paths in Patch 26.22.
+
+### Alternative Build — Early Critical Strike
+
+A build focused on reaching critical strike power spikes earlier.
+
+**Starting Items**
+- Doran's Blade
+- Health Potion
+
+**Core Items**
+- Immortal Shieldbow
+- Infinity Edge
+- Death's Dance
+
+**Situational Items**
+- Guardian Angel
+- Lord Dominik's Regards
+- Maw of Malmortius
+- Bloodthirster
+
+Choose this route when prioritizing earlier critical strike power spikes over Blade of the Ruined King's sustained damage.
+
+## Combos
+
+### Basic Lane Trade
+
+**E → Q → Auto Attack → E Out**
+
+**When to use it:** During laning phase when minions provide safe entry and exit paths.
+
+**How to execute:** Dash through a minion to approach, hit Q and an auto attack, then use another target to retreat.
+
+**Warning:** Avoid engaging when the enemy can immobilize you before completing the trade.
+
+### Tornado Combo
+
+**Q → Q → Q3 → R**
+
+**When to use it:** When you have two Steel Tempest stacks and the enemy is within tornado range.
+
+**How to execute:** Stack Q on minions or champions, land your tornado, and cast Last Breath while the target is airborne.
+
+**Warning:** Don't force R if your landing position is dangerous.
+
+### Circular Strike
+
+**E → Q**
+
+**When to use it:** When you want to damage nearby enemies while dashing.
+
+**How to execute:** Activate Q during Sweeping Blade to perform a circular attack.
+
+**Warning:** Pay attention to the circular hitbox and your final position.
+
+### Beyblade
+
+**Q3 → E + Q → Flash → R**
+
+**When to use it:** When you need to surprise enemies or reach a carry outside your normal range.
+
+**How to execute:** Prepare your tornado, begin the E + Q circular attack, and Flash during the animation to reposition the knockup area. Follow with R if you hit a valid target.
+
+**Warning:** This is mechanically demanding. Practice Flash timing before attempting it in ranked games.
+
+### Airblade
+
+**Q3 → E + Q on Another Target → R**
+
+**When to use it:** When an enemy is already airborne and you want to add damage before Last Breath.
+
+**How to execute:** Land your tornado, use E + Q on a nearby target while the enemy remains airborne, and cast R during the available window.
+
+**Warning:** You need sufficient attack speed and precise timing. If you are too slow, the target will land before you can ult.
+
+### Keyblade
+
+**Beyblade → Airblade**
+
+**When to use it:** To maximize damage and surprise enemies during an important fight.
+
+**How to execute:** Combine a Beyblade knockup with the additional Airblade sequence before Last Breath.
+
+**Warning:** This is one of Yasuo's most difficult combos. Master the fundamentals first.
+
+## Laning Phase: Control the Wave and Your Dashes
+
+Yasuo can apply significant pressure during early levels, but he is vulnerable when using Sweeping Blade carelessly.
+
+Against ranged mages, use your passive shield to approach and minions to dodge skillshots. Save Wind Wall for their most dangerous projectiles.
+
+Against melee champions, look for extended trades when Lethal Tempo is available and you can fight without taking excessive minion damage.
+
+Avoid automatically pushing every wave. Overextending removes safe dash routes and exposes you to jungle ganks.
+
+- Prepare your tornado before trading.
+- Use your passive shield to absorb damage.
+- Preserve minions for escaping.
+- Track the enemy jungler.
+- Don't waste Wind Wall against unblockable abilities.
+
+## Mid Game: Skirmishes and Side-Lane Pressure
+
+Yasuo excels in smaller fights where he can use mobility and allied knockups.
+
+Push side waves when safe and look for opportunities around important objectives.
+
+If your team includes champions such as Malphite, Diana, or Wukong, coordinate Last Breath with their knockup abilities.
+
+You don't need to ult immediately after every knockup. Sometimes maintaining your position and continuing to attack is more valuable.
+
+- Look for fights around neutral objectives.
+- Use vision to prepare flanks.
+- Don't chase enemies without an escape route.
+- Capitalize on allied knockups.
+- Avoid fighting where no targets are available for E.
+
+## Teamfights: Don't Always Engage First
+
+Although Yasuo can eliminate multiple enemies quickly, he remains vulnerable to crowd control and focused damage.
+
+Wait for your frontline to create space or for an ally to land an important knockup.
+
+Use Wind Wall to block projectiles threatening your team and find a safe angle toward enemy carries.
+
+After using Last Breath, take advantage of your shield and additional armor penetration to continue attacking. Don't chase another kill when the remaining enemies can immediately eliminate you.
+
+- Don't automatically ult the first airborne enemy.
+- Track enemy crowd control cooldowns.
+- Protect your carries with Wind Wall when necessary.
+- Prioritize targets you can reach safely.
+- Use sustained damage instead of relying entirely on flashy combos.
+
+## Matchups
+
+The following matchups combine Patch 26.22 statistics with strategic advice. Listed win rates refer to the opposing champion's performance against Yasuo.
+
+### Difficult Matchups
+
+**Lissandra**
+
+Lissandra can immobilize Yasuo and stop his engages with her ultimate. Her team can capitalize on this crowd control to eliminate him.
+
+**Lissandra: 54.9% WR vs Yasuo — 8,152 matches.**
+
+**Tip:** Avoid committing while her ultimate is available, and don't use predictable dashes.
+
+**Malzahar**
+
+Malzahar's ultimate can stop Yasuo's combos and leave him vulnerable to jungle pressure.
+
+**Malzahar: 54.7% WR vs Yasuo — 5,499 matches.**
+
+**Tip:** Track his passive shield and avoid all-ins while his ultimate is available.
+
+**Aurelion Sol**
+
+Aurelion Sol can control large areas and eventually outscale Yasuo's impact in grouped fights.
+
+**Aurelion Sol: 56.2% WR vs Yasuo — 2,449 matches.**
+
+**Tip:** Pressure him when his important abilities are on cooldown and prevent him from scaling freely.
+
+### Favorable or Pressure-Oriented Matchups
+
+**Lux**
+
+Yasuo can block several of Lux's abilities with Wind Wall and punish her after she misses her root.
+
+**Tip:** Save W for important projectiles and use minions to close the distance.
+
+**Ahri**
+
+Yasuo can block Ahri's projectiles and punish her when Charm is unavailable.
+
+**Tip:** Don't chase Ahri without accounting for her ultimate charges.
+
+**Syndra**
+
+Yasuo can pressure Syndra when her defensive abilities are on cooldown, but must respect her crowd control.
+
+**Tip:** Look for short trades and use Wind Wall against important projectiles.
+
+These three matchups are strategic examples, not statistically confirmed favorable matchups for the patch.
+
+## Common Mistakes to Fix
+
+1. Dashing forward without planning an escape.
+2. Wasting Wind Wall on insignificant abilities.
+3. Throwing tornadoes without predicting enemy movement.
+4. Using Last Breath on every airborne target.
+5. Constantly pushing waves without tracking the enemy jungler.
+6. Attempting advanced combos before mastering basic mechanics.
+7. Building identical items regardless of enemy composition.
+8. Confusing high mobility with invulnerability.
+
+## Practice Plan
+
+### 1. Dash Path Drill
+
+In Practice Tool, place several training dummies and use minion waves.
+
+Practice chaining Sweeping Blade between targets without getting trapped.
+
+Try to finish each sequence in a safe position.
+
+**Goal:** Learn to visualize entry and escape routes before dashing.
+
+### 2. Tornado Accuracy Drill
+
+Hit minions to prepare Q3 and practice landing tornadoes from different distances.
+
+Then combine E + Q for circular knockups.
+
+**Goal:** Improve accuracy and reduce wasted tornadoes.
+
+### 3. Advanced Combo Drill
+
+Practice Beyblade and Airblade separately.
+
+Once you can execute both consistently, combine them into Keyblade.
+
+**Goal:** Perform advanced combos reliably rather than improvising under pressure.
+
+### 4. Teamfight Review
+
+Watch a replay and pause before every ultimate.
+
+Identify which enemy was airborne, where you would land, and which crowd control abilities remained available.
+
+**Goal:** Improve target selection and avoid unnecessary deaths.
+
+## Frequently Asked Questions
+
+**Is Yasuo difficult to learn?**
+
+Yes. His basic abilities are straightforward, but mastering dash paths, tornadoes, and advanced combos takes considerable practice.
+
+**What is the best Yasuo build in Patch 26.22?**
+
+One of the most popular builds is Blade of the Ruined King, Immortal Shieldbow, and Infinity Edge. Other builds prioritize Shieldbow and Infinity Edge earlier.
+
+**What skill order should I use?**
+
+Max Q first, E second, and W last, leveling R whenever available.
+
+**What is Yasuo's Beyblade combo?**
+
+Beyblade is an E + Q3 + Flash combination that relocates the circular knockup area.
+
+**What is Airblade?**
+
+Airblade is an advanced technique that adds E + Q damage before completing Last Breath on an airborne enemy.
+
+**Is Yasuo good for beginners?**
+
+Yasuo isn't one of the easiest champions, but beginners can learn him by focusing on farming, positioning, and basic combos before advanced mechanics.
+
+**Is Yasuo better mid or top?**
+
+Mid is his primary role in this guide. Top is also viable, although Yasuo may face durable fighters with stronger sustained damage.
+
+## About the Statistics
+
+The primary statistics come from U.GG for Patch 26.22, Emerald+, global Ranked Solo/Duo. Item paths are also compared with Trackimo and Mobalytics.
+
+Win rates can differ between platforms because of sample sizes, filters, and statistical methodologies. Completed-build win rates are conditional on games lasting long enough to reach those items.
+
+## Sources
+
+- U.GG — Yasuo Mid Build, Runes and Skill Order, Patch 26.22.
+- Mobalytics — Yasuo Build and Runes, Patch 26.22.
+- Trackimo — Yasuo Mid Build, Items and Skill Order, Patch 26.22.
+- Riot Games — Yasuo Official Champion Page.
+

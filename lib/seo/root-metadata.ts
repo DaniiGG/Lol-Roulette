@@ -29,7 +29,15 @@ export const rootMetadata: Metadata = {
     images: ['/og-image.png'],
     creator: '@LeagueRoulette',
   },
-  other: {
-    'X-Robots-Tag': 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-snippet': -1,
+      'max-image-preview': 'large',
+      'max-video-preview': -1,
+    },
   },
 }

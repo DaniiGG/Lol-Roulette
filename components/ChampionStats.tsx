@@ -1,9 +1,13 @@
 'use client'
 
+import sidebarStyles from '@/components/HomeSidebar.module.css'
+
 import { useState, useEffect } from 'react'
+import { Swords } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 
 interface ChampionStatsProps {
+  compact?: boolean
   championId: string
   championName: string
 }
@@ -23,7 +27,7 @@ interface DDragonItem {
   maps?: Record<string, boolean>
 }
 
-const DDV = '16.21.1'
+const DDV = '16.22.1'
 
 type Archetype =
   | 'ad_bruiser'
@@ -155,8 +159,9 @@ function chooseArchetype(champ: ChampionStaticData | null, championId: string): 
   return isAP ? 'ap_mage' : 'ad_bruiser'
 }
 
-export default function ChampionStats({ championId }: ChampionStatsProps) {
+export default function ChampionStats({ championId, compact = false }: ChampionStatsProps) {
   const t = useTranslations('championStats')
+  const compactHeading = <div className={`${sidebarStyles.heading}`}><span className={`${sidebarStyles.headingIcon}`}><Swords className="h-3.5 w-3.5" aria-hidden="true" /></span><h2>{t('recommendedBuild').replace(/^[^\p{L}\p{N}]+/u, '')}</h2></div>
   const [stats, setStats] = useState<ChampionStaticData | null>(null)
   const [loading, setLoading] = useState(true)
   const [itemMap, setItemMap] = useState<Record<string, number>>({})
@@ -204,6 +209,7 @@ export default function ChampionStats({ championId }: ChampionStatsProps) {
   }, [])
 
   if (loading || !stats) {
+    if (compact) return <section className={`${sidebarStyles.card}`} aria-busy="true">{compactHeading}<div className={`${sidebarStyles.grid}`} aria-hidden="true">{Array.from({ length: 6 }, (_, index) => <div key={index} className={`${sidebarStyles.placeholder} ${sidebarStyles.loading}`}><span /></div>)}</div></section>
     return (
       <div className="w-full mt-6 p-6 rounded-2xl bg-neutral-900/40 border border-neutral-800 flex items-center justify-center min-h-[200px]">
         <div className="w-8 h-8 border-2 border-[#C89B3C]/30 border-t-[#C89B3C] rounded-full animate-spin"></div>
@@ -217,19 +223,33 @@ export default function ChampionStats({ championId }: ChampionStatsProps) {
     ? { ...baseBuild, items: ['Hextech Rocketbelt', ...baseBuild.items.slice(1)] }
     : baseBuild
 
+  if (compact) return (
+    <section className={`${sidebarStyles.card}`}>
+      {compactHeading}
+      <div className={`${sidebarStyles.grid}`}>
+        {recommendedBuild.items.map(item => {
+          const itemId = itemMap[item]
+          return <div key={item} title={item} tabIndex={0} className={`${sidebarStyles.item}`}>
+            {itemId ? <img src={`https://ddragon.leagueoflegends.com/cdn/${DDV}/img/item/${itemId}.png`} alt={item} width={40} height={40} loading="lazy" /> : <span className={`${sidebarStyles.placeholder}`} role="img" aria-label={item}><span /></span>}
+          </div>
+        })}
+      </div>
+    </section>
+  )
+
   return (
-    <div className="w-full mt-6 space-y-6 animate-fadeIn">
-      <div className="p-6 rounded-3xl bg-neutral-900/60 border border-neutral-800/80 backdrop-blur-md">
-        <h3 className="text-2xl font-semibold text-white mb-2 flex items-center gap-3">
+    <div className={`w-full ${compact ? '' : 'mt-6'} space-y-6 animate-fadeIn`}>
+      <div className={`${compact ? 'p-4 rounded-2xl' : 'p-6 rounded-3xl'} bg-neutral-900/60 border border-neutral-800/80 backdrop-blur-md`}>
+        <h3 className={`${compact ? 'text-base' : 'text-2xl'} font-semibold text-white mb-2 flex items-center gap-3`}>
           <span className="text-blue-500">{t('recommendedBuild')}</span>
         </h3>
-        <p className="text-neutral-400 text-sm mb-6">{t('buildForRole', { role: recommendedBuild.role })}</p>
+        {!compact && <p className="text-neutral-400 text-sm mb-6">{t('buildForRole', { role: recommendedBuild.role })}</p>}
 
-        <div className="flex flex-wrap gap-3">
+        <div className={compact ? 'grid grid-cols-3 gap-2' : 'flex flex-wrap gap-3'}>
           {recommendedBuild.items.map((item: string, i: number) => {
             const itemId = itemMap[item]
             return (
-              <div key={i} className="px-4 py-3 rounded-xl bg-neutral-950 border border-neutral-800 flex items-center gap-3">
+              <div key={i} title={item} className={`${compact ? 'p-2 justify-center' : 'px-4 py-3'} rounded-xl bg-neutral-950 border border-neutral-800 flex items-center gap-3`}>
                 {itemId ? (
                   <img
                     src={`https://ddragon.leagueoflegends.com/cdn/${DDV}/img/item/${itemId}.png`}
@@ -244,7 +264,7 @@ export default function ChampionStats({ championId }: ChampionStatsProps) {
                     <div className="w-2 h-2 rounded-full bg-blue-500"></div>
                   </div>
                 )}
-                <span className="text-neutral-200 text-sm">{item}</span>
+                <span className={compact ? 'sr-only' : 'text-neutral-200 text-sm'}>{item}</span>
               </div>
             )
           })}

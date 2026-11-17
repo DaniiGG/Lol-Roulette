@@ -1,4 +1,14 @@
 {
+  "rouletteStyles": {
+    "label": "Roulette style",
+    "classic": "Classic roulette",
+    "slots": "Slot machine",
+    "switchClassic": "Use classic roulette",
+    "switchSlots": "Use slot machine",
+    "loadError": "Could not load champions.",
+    "retry": "Try again",
+    "emptyPool": "No champions match these filters."
+  },
     "nav": {
         "play": "Play",
         "leaderboard": "Leaderboard",
@@ -636,7 +646,7 @@
     "seo": {
         "srHeading": "Free Random LoL Champion Generator | League of Legends Roulette & Random League Champion Picker for Ranked, ARAM & Custom Games",
         "whatIsTitle": "What is League Roulette?",
-        "whatIsText": "League Roulette is a <strong>free random lol champion generator</strong> and <strong>League of Legends roulette</strong>. Spin the champion roulette to get a <strong>random league champ generator</strong> pick for any lane — the best <strong>league of legends randomizer</strong> and <strong>lol random</strong> champion picker online.",
+        "whatIsText": "Not sure who to play? League Roulette is a <strong>free League of Legends champion roulette</strong>. Choose a role or spin across all champions to get a <strong>random LoL champion</strong>. Use the picker without signing up to try a new lane, expand your champion pool or set up challenges with friends.",
         "howToTitle": "How to Use the Random League Champion Generator",
         "howToSteps": [
             "Select your preferred lane (Top, Jungle, Mid, ADC, or Support)",

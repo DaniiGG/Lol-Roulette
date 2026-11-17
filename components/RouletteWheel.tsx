@@ -1,10 +1,11 @@
 'use client'
 
 import { useEffect, useRef, useState, useCallback } from 'react'
-import NextImage from 'next/image'
 import { getChampionsByLane, normalizeChampionName } from '@/lib/champion-lanes'
 import { championHasRegion, championHasClass } from '@/lib/champion-metadata'
-import SlotLever from './SlotLever'
+import RouletteLever from './RouletteLever'
+import machineStyles from './RouletteAppearance.module.css'
+import { useTranslations } from 'next-intl'
 
 interface Champion {
   id: string
@@ -18,7 +19,8 @@ interface ChallengeFilter {
   value: string | number
 }
 
-interface RouletteWheelProps {
+export interface RouletteWheelProps {
+  onSpinningChange?: (spinning: boolean) => void
   lane?: string
   onResult: (champion: Champion) => void
   disabled?: boolean
@@ -29,7 +31,7 @@ interface RouletteWheelProps {
   challengeFilter?: ChallengeFilter | null
 }
 
-const DDV = '16.21.1'
+const DDV = '16.22.1'
 const SPLASH_BASE = 'https://ddragon.leagueoflegends.com/cdn/img/champion/splash/'
 const LOADING_BASE = 'https://ddragon.leagueoflegends.com/cdn/img/champion/loading/'
 
@@ -43,6 +45,7 @@ function easeOutQuart(t: number) {
 }
 
 export default function RouletteWheel({
+  onSpinningChange,
   lane = 'all',
   onResult,
   disabled = false,
@@ -50,6 +53,7 @@ export default function RouletteWheel({
   championPool = null,
   challengeFilter = null,
 }: RouletteWheelProps) {
+  const t = useTranslations('championCard')
 
   const [allChampions, setAllChampions] = useState<Champion[]>([])
   const [isSpinning, setIsSpinning] = useState(false)
@@ -104,7 +108,7 @@ export default function RouletteWheel({
         )
         const json = await res.json()
 
-        let pool: Champion[] = Object.values(json.data).map((c: any) => ({
+        let pool: Champion[] = (Object.values(json.data) as Champion[]).map(c => ({
           id: c.id,
           key: c.key,
           name: c.name,
@@ -160,25 +164,6 @@ export default function RouletteWheel({
   }, [lane, championPoolKey, challengeFilterType, challengeFilterValue])
 
   /* ───────── PRELOAD IMAGES ───────── */
-
-  useEffect(() => {
-    if (!allChampions.length) return
-
-    allChampions.forEach(c => {
-      if (imagesRef.current.has(c.id)) return
-
-      const img = new Image()
-      img.crossOrigin = 'anonymous'
-      img.src = `${LOADING_BASE}${c.id}_0.jpg`
-      img.onload = () => imagesRef.current.set(c.id, img)
-      img.onerror = () => {
-        const splash = new Image()
-        splash.crossOrigin = 'anonymous'
-        splash.src = `${SPLASH_BASE}${c.id}_0.jpg`
-        splash.onload = () => imagesRef.current.set(c.id, splash)
-      }
-    })
-  }, [allChampions])
 
   /* ───────── DRAW ───────── */
 
@@ -282,14 +267,44 @@ export default function RouletteWheel({
 
   /* ───────── SPIN ───────── */
 
+  useEffect(() => {
+    if (!allChampions.length) return
+
+    let cancelled = false
+    const loaded = (id: string, image: HTMLImageElement) => {
+      imagesRef.current.set(id, image)
+      if (!cancelled && !isSpinning) draw(0)
+    }
+    allChampions.forEach(c => {
+      if (imagesRef.current.has(c.id)) return
+
+      const img = new Image()
+      img.crossOrigin = 'anonymous'
+      img.src = `${LOADING_BASE}${c.id}_0.jpg`
+      img.onload = () => loaded(c.id, img)
+      img.onerror = () => {
+        const splash = new Image()
+        splash.crossOrigin = 'anonymous'
+        splash.src = `${SPLASH_BASE}${c.id}_0.jpg`
+        splash.onload = () => loaded(c.id, splash)
+      }
+    })
+    return () => { cancelled = true }
+  }, [allChampions, draw, isSpinning])
+
   const spin = useCallback(() => {
-  if (isSpinning || loadingChamps || profileLoading || !allChampions.length || disabled) return
+  if (isSpinning) return
+  if (loadingChamps || profileLoading || !allChampions.length || disabled) {
+    onSpinningChange?.(false)
+    return
+  }
 
   const canvas = canvasRef.current
-  if (!canvas) return
+  if (!canvas) { onSpinningChange?.(false); return }
 
   setWinner(null)
   setIsSpinning(true)
+  onSpinningChange?.(true)
   cancelAnimationFrame(animRef.current)
   
   prevCellIndexRef.current = 0
@@ -331,13 +346,14 @@ export default function RouletteWheel({
       draw(finalOffset, winIdx)
       playTick() // último tick final
       setIsSpinning(false)
+      onSpinningChange?.(false)
       setWinner(winChamp)
       onResult({ ...winChamp, key: Number(winChamp.key) })
     }
   }
 
   animRef.current = requestAnimationFrame(animate)
-}, [isSpinning, loadingChamps, profileLoading, allChampions, disabled, draw, onResult])
+}, [isSpinning, loadingChamps, profileLoading, allChampions, disabled, draw, onResult, onSpinningChange])
 
   /* ───────── INIT STRIP ───────── */
 
@@ -360,8 +376,13 @@ export default function RouletteWheel({
       draw(0)
     }
     resize()
+    const observer = new ResizeObserver(resize)
+    if (canvas.parentElement) observer.observe(canvas.parentElement)
     window.addEventListener('resize', resize)
-    return () => window.removeEventListener('resize', resize)
+    return () => {
+      observer.disconnect()
+      window.removeEventListener('resize', resize)
+    }
   }, [draw])
 
   useEffect(() => () => cancelAnimationFrame(animRef.current), [])
@@ -369,9 +390,15 @@ export default function RouletteWheel({
   /* ───────── UI ───────── */
 
   return (
-    <div className="w-full flex justify-center items-center relative">
-      <div className="relative">
-        <div className="relative overflow-hidden rounded-xl bg-black">
+    <div className={machineStyles.stage}>
+      <RouletteLever
+        onActivate={spin}
+        onPullStart={() => onSpinningChange?.(true)}
+        disabled={isSpinning || loadingChamps || profileLoading || !allChampions.length || disabled}
+        isSpinning={isSpinning}
+      />
+      <div className={machineStyles.classicFrame}>
+        <div className={machineStyles.classicWindow}>
           {/* Fade izquierdo */}
           <div className="pointer-events-none absolute left-0 top-0 h-full w-32 bg-gradient-to-r from-black to-transparent z-10" />
           {/* Fade derecho */}
@@ -385,7 +412,7 @@ export default function RouletteWheel({
           <canvas
             ref={canvasRef}
             className="block"
-            style={{ width: "50vw", height: CELL_H + 40 }}
+            style={{ width: "100%", height: CELL_H + 40 }}
           />
 
           {(loadingChamps || profileLoading) && (
@@ -401,9 +428,9 @@ export default function RouletteWheel({
             <div className="absolute inset-0 z-40 flex items-center justify-center bg-black/75 backdrop-blur-sm animate-fadeIn">
               <div className="text-center">
                 <p className="text-[#C89B3C] text-xs uppercase tracking-[0.4em] mb-4 opacity-80">
-                  Your Champion
+                  {t('yourChampion')}
                 </p>
-                <h2 className="text-white text-5xl md:text-6xl font-extrabold
+                <h2 className="text-white text-2xl sm:text-4xl md:text-5xl break-words px-3 font-extrabold
                              animate-winnerReveal
                              drop-shadow-[0_0_25px_#C89B3C]
                              tracking-wider">
@@ -414,37 +441,8 @@ export default function RouletteWheel({
           )}
         </div>
 
-        {/* Borde superior */}
-        <div className="pointer-events-none absolute inset-x-0 top-3 z-100 -translate-y-1/2">
-          <NextImage
-            src="/images/diseñorule3.png"
-            alt=""
-            aria-hidden="true"
-            width={2172}
-            height={724}
-            className="relative left-1/2 h-auto w-[104%] max-w-none -translate-x-1/2 select-none"
-          />
-        </div>
-        {/* Borde inferior (espejado) */}
-        <div className="pointer-events-none absolute inset-x-0 bottom-3 z-100 translate-y-1/2 scale-y-[-1]">
-          <NextImage
-            src="/images/diseñorule3.png"
-            alt=""
-            aria-hidden="true"
-            width={2172}
-            height={724}
-            className="relative left-1/2 h-auto w-[104%] max-w-none -translate-x-1/2 select-none"
-          />
-        </div>
-
-        <div className="absolute top-1/2 -translate-y-1/2 left-full ml-6">
-          <SlotLever
-            onActivate={spin}
-            disabled={isSpinning || loadingChamps || profileLoading || disabled}
-            isSpinning={isSpinning}
-          />
-        </div>
       </div>
+
     </div>
   )
 }

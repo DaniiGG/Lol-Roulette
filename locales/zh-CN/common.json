@@ -1,4 +1,14 @@
 {
+  "rouletteStyles": {
+    "label": "转盘样式",
+    "classic": "经典转盘",
+    "slots": "老虎机",
+    "switchClassic": "切换到转盘",
+    "switchSlots": "切换到老虎机",
+    "loadError": "Could not load champions.",
+    "retry": "Try again",
+    "emptyPool": "No champions match these filters."
+  },
     "nav": {
         "play": "Play",
         "leaderboard": "Leaderboard",

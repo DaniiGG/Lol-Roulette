@@ -1,608 +1,165 @@
 'use client'
 
-import { useEffect, useRef, useState, useCallback } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
+import Image from 'next/image'
+import { useLocale, useTranslations } from 'next-intl'
+import { LoaderCircle, RotateCcw } from 'lucide-react'
+import { championIconUrl, loadChampionData } from '@/lib/champion-data'
 import { getChampionsByLane, normalizeChampionName } from '@/lib/champion-lanes'
-import { useTranslations } from 'next-intl'
+import { CHAMPION_CLASSES, CHAMPION_REGIONS } from '@/lib/champion-metadata'
+import RouletteLever from './RouletteLever'
+import type { RouletteWheelProps } from './RouletteWheel'
+import styles from './RouletteAppearance.module.css'
 
-// ─────────────────────────────────────────────────────────────────────────────
-// Tipos
-// ─────────────────────────────────────────────────────────────────────────────
-interface Champion {
-  id: string
-  key: string | number
-  name: string
-  tags?: string[]
-}
+type Champion = { id: string; key: number; name: string }
+type Round = { winner: Champion; reels: Champion[][] }
+const normalize = (name: string) => normalizeChampionName(name).toLowerCase()
+const regions = new Map(Object.entries(CHAMPION_REGIONS).map(([name, values]) => [normalize(name), values]))
+const classes = new Map(Object.entries(CHAMPION_CLASSES).map(([name, values]) => [normalize(name), values]))
 
-interface SlotMachineRouletteProps {
-  lane?: string
-  onResult: (champion: Champion) => void
-  disabled?: boolean
-  rerollsUsed?: number
-  maxRerolls?: number
-}
+function Machine({ champions, disabled, profileLoading, onResult, onSpinningChange }: RouletteWheelProps & { champions: Champion[] }) {
+  const t = useTranslations('championCard')
+  const slot = useTranslations('slotMachine')
+  const [round, setRound] = useState<Round | null>(null)
+  const [winner, setWinner] = useState<Champion | null>(null)
+  const [spinning, setSpinning] = useState(false)
+  const [stopped, setStopped] = useState(0)
+  const strips = useRef<(HTMLDivElement | null)[]>([])
+  const lock = useRef(false)
+  const callbacks = useRef({ onResult, onSpinningChange })
+  useEffect(() => { callbacks.current = { onResult, onSpinningChange } }, [onResult, onSpinningChange])
 
-// ─────────────────────────────────────────────────────────────────────────────
-// Constantes
-// ─────────────────────────────────────────────────────────────────────────────
-const DDV          = '16.21.1'
-const SPLASH_BASE  = 'https://ddragon.leagueoflegends.com/cdn/img/champion/splash/'
-const LOADING_BASE = 'https://ddragon.leagueoflegends.com/cdn/img/champion/loading/'
-
-const CELL_SIZE    = 120        // tamaño de cada celda
-const VISIBLE_ROWS = 3          // filas visibles por columna
-const SPIN_DURATION = 3500      // duración total (ms)
-const COLUMNS = 3               // número de columnas
-
-// Delays progresivos para cada columna (efecto cascada)
-const COLUMN_DELAYS = [0, 400, 800]
-
-function easeOutQuart(t: number): number {
-  return 1 - Math.pow(1 - t, 4)
-}
-
-// ─────────────────────────────────────────────────────────────────────────────
-// Componente
-// ─────────────────────────────────────────────────────────────────────────────
-export default function SlotMachineRoulette({ 
-  lane = 'all', 
-  onResult, 
-  disabled = false,
-  rerollsUsed = 0,
-  maxRerolls = 2
-}: SlotMachineRouletteProps) {
-  const t = useTranslations('slotMachine')
-  const [allChampions, setAllChampions] = useState<Champion[]>([])
-  const [isSpinning, setIsSpinning]     = useState(false)
-  const [winner, setWinner]             = useState<Champion | null>(null)
-  const [loadingChamps, setLoadingChamps] = useState(true)
-
-  // Refs para cada columna
-  const canvasRefs = useRef<(HTMLCanvasElement | null)[]>([null, null, null])
-  const imagesRef  = useRef<Map<string, HTMLImageElement>>(new Map())
-  const animRefs   = useRef<number[]>([0, 0, 0])
-
-  // Estado de cada columna
-  const stripsRef  = useRef<Champion[][]>([[], [], []])
-  const winnersRef = useRef<Champion[]>([])
-  const offsetsRef = useRef<number[]>([0, 0, 0])
-
-  // ── 1. Cargar campeones filtrados por lane ──────────────────────────────
-  useEffect(() => {
-    ;(async () => {
-      setLoadingChamps(true)
-      try {
-        const res = await fetch(`https://ddragon.leagueoflegends.com/cdn/${DDV}/data/en_US/champion.json`)
-        const json = await res.json()
-        
-        let championPool: Champion[] = Object.values(json.data).map((c: any) => ({
-          id: c.id,
-          key: c.key,
-          name: c.name,
-          tags: c.tags || []
-        }))
-
-        if (lane !== 'all') {
-          const laneChampNames = getChampionsByLane(lane)
-          championPool = championPool.filter(champ => {
-            const normalized = normalizeChampionName(champ.name)
-            return laneChampNames.some(laneName => 
-              normalizeChampionName(laneName).toLowerCase() === normalized.toLowerCase()
-            )
-          })
-        }
-
-        setAllChampions(championPool.sort(() => Math.random() - 0.5))
-      } catch (err) {
-        console.error('Error loading champions:', err)
-      }
-      setLoadingChamps(false)
-    })()
-  }, [lane])
-
-  // ── 2. Precargar imágenes (loading screens - mejor calidad) ─────────────
-  useEffect(() => {
-    if (allChampions.length === 0) return
-    allChampions.forEach(c => {
-      if (imagesRef.current.has(c.id)) return
-      const img = new Image()
-      img.crossOrigin = 'anonymous'
-      // Usar loading screens - mejor calidad que splash
-      img.src = `${LOADING_BASE}${c.id}_0.jpg`
-      img.onload = () => imagesRef.current.set(c.id, img)
-      img.onerror = () => {
-        // Fallback a splash si loading falla
-        const splash = new Image()
-        splash.crossOrigin = 'anonymous'
-        splash.src = `${SPLASH_BASE}${c.id}_0.jpg`
-        splash.onload = () => imagesRef.current.set(c.id, splash)
-      }
-    })
-  }, [allChampions])
-
-  // ── 3. Función de dibujo para una columna ───────────────────────────────
-  const drawColumn = useCallback((colIndex: number, offset: number, highlight: boolean = false) => {
-    const canvas = canvasRefs.current[colIndex]
-    if (!canvas) return
-    const ctx = canvas.getContext('2d')
-    if (!ctx) return
-    const strip = stripsRef.current[colIndex]
-    if (!strip.length) return
-
-    const W = canvas.width
-    const H = canvas.height
-
-    ctx.clearRect(0, 0, W, H)
-
-    // Fondo degradado
-    const bgGrad = ctx.createLinearGradient(0, 0, 0, H)
-    bgGrad.addColorStop(0, '#0a0a0d')
-    bgGrad.addColorStop(0.5, '#12121a')
-    bgGrad.addColorStop(1, '#0a0a0d')
-    ctx.fillStyle = bgGrad
-    ctx.fillRect(0, 0, W, H)
-
-    // Calcular qué celdas dibujar
-    const firstCell = Math.floor(offset / CELL_SIZE)
-    const drawCount = VISIBLE_ROWS + 2
-
-    for (let i = firstCell; i < firstCell + drawCount; i++) {
-      const idx = ((i % strip.length) + strip.length) % strip.length
-      const champ = strip[idx]
-      const y = i * CELL_SIZE - offset
-      const centerY = H / 2
-
-      // Solo dibujar si está visible
-      if (y + CELL_SIZE < -20 || y > H + 20) continue
-
-      const isCenter = Math.abs(y + CELL_SIZE / 2 - centerY) < CELL_SIZE / 2
-
-      // Fondo de celda
-      ctx.fillStyle = isCenter && highlight ? '#1a1600' : '#0f0f14'
-      ctx.beginPath()
-      ctx.roundRect(8, y + 4, W - 16, CELL_SIZE - 8, 12)
-      ctx.fill()
-
-      // Imagen del campeón
-      const img = imagesRef.current.get(champ.id)
-      if (img) {
-        ctx.save()
-        ctx.beginPath()
-        ctx.roundRect(12, y + 8, W - 24, CELL_SIZE - 32, 10)
-        ctx.clip()
-        
-        // Dibujar imagen centrada y recortada
-        const imgAspect = img.naturalWidth / img.naturalHeight
-        const cellAspect = (W - 24) / (CELL_SIZE - 32)
-        
-        let drawW, drawH, drawX, drawY
-        if (imgAspect > cellAspect) {
-          drawH = CELL_SIZE - 32
-          drawW = drawH * imgAspect
-          drawX = 12 - (drawW - (W - 24)) / 2
-          drawY = y + 8
-        } else {
-          drawW = W - 24
-          drawH = drawW / imgAspect
-          drawX = 12
-          drawY = y + 8 - (drawH - (CELL_SIZE - 32)) / 2
-        }
-        
-        ctx.drawImage(img, drawX, drawY, drawW, drawH)
-        ctx.restore()
-      } else {
-        // Placeholder
-        ctx.fillStyle = '#1a1a22'
-        ctx.beginPath()
-        ctx.roundRect(12, y + 8, W - 24, CELL_SIZE - 32, 10)
-        ctx.fill()
-        
-        ctx.fillStyle = '#444'
-        ctx.font = 'bold 32px sans-serif'
-        ctx.textAlign = 'center'
-        ctx.textBaseline = 'middle'
-        ctx.fillText(champ.name[0] || '?', W / 2, y + CELL_SIZE / 2 - 8)
-      }
-
-      // Nombre
-      ctx.fillStyle = isCenter && highlight ? '#C89B3C' : '#666'
-      ctx.font = `${isCenter && highlight ? 'bold ' : ''}11px "Segoe UI", Arial, sans-serif`
-      ctx.textAlign = 'center'
-      ctx.textBaseline = 'alphabetic'
-      const label = champ.name.length > 12 ? champ.name.slice(0, 11) + '…' : champ.name
-      ctx.fillText(label, W / 2, y + CELL_SIZE - 8)
-
-      // Borde dorado si es centro y highlight
-      if (isCenter && highlight) {
-        ctx.shadowColor = '#C89B3C'
-        ctx.shadowBlur = 20
-        ctx.strokeStyle = '#C89B3C'
-        ctx.lineWidth = 3
-        ctx.beginPath()
-        ctx.roundRect(8, y + 4, W - 16, CELL_SIZE - 8, 12)
-        ctx.stroke()
-        ctx.shadowBlur = 0
-      }
+  function spin() {
+    if (lock.current) return
+    if (disabled || profileLoading || !champions.length) {
+      callbacks.current.onSpinningChange?.(false)
+      return
     }
-
-    // Overlays arriba y abajo
-    const fadeH = 60
-    const topGrad = ctx.createLinearGradient(0, 0, 0, fadeH)
-    topGrad.addColorStop(0, 'rgba(10,10,13,1)')
-    topGrad.addColorStop(1, 'rgba(10,10,13,0)')
-    ctx.fillStyle = topGrad
-    ctx.fillRect(0, 0, W, fadeH)
-
-    const botGrad = ctx.createLinearGradient(0, H - fadeH, 0, H)
-    botGrad.addColorStop(0, 'rgba(10,10,13,0)')
-    botGrad.addColorStop(1, 'rgba(10,10,13,1)')
-    ctx.fillStyle = botGrad
-    ctx.fillRect(0, H - fadeH, W, fadeH)
-
-    // Marcador central
-    if (highlight) {
-      const cy = H / 2
-      ctx.strokeStyle = '#C89B3C80'
-      ctx.lineWidth = 2
-      ctx.setLineDash([4, 4])
-      ctx.beginPath()
-      ctx.moveTo(0, cy - CELL_SIZE / 2)
-      ctx.lineTo(W, cy - CELL_SIZE / 2)
-      ctx.stroke()
-      ctx.beginPath()
-      ctx.moveTo(0, cy + CELL_SIZE / 2)
-      ctx.lineTo(W, cy + CELL_SIZE / 2)
-      ctx.stroke()
-      ctx.setLineDash([])
-    }
-  }, [])
-
-  // ── 4. SPIN ──────────────────────────────────────────────────────────────
-  const spin = useCallback(() => {
-    if (isSpinning || allChampions.length === 0 || disabled) return
-
+    lock.current = true
+    setSpinning(true)
     setWinner(null)
-    setIsSpinning(true)
-
-    // Limpiar animaciones anteriores
-    animRefs.current.forEach(id => cancelAnimationFrame(id))
-
-    // Elegir UN SOLO campeón ganador para las 3 columnas
-    const randomWinner = allChampions[Math.floor(Math.random() * allChampions.length)]
-
-    // Construir strips para cada columna
-    const strips: Champion[][] = []
-    const winners: Champion[] = []
-
-    for (let col = 0; col < COLUMNS; col++) {
-      const pool: Champion[] = []
-      for (let i = 0; i < 10; i++) {
-        pool.push(...[...allChampions].sort(() => Math.random() - 0.5))
-      }
-      
-      // Insertar el mismo ganador en todas las columnas
-      const mid = Math.floor(pool.length * 0.4)
-      const winIdx = mid + Math.floor(Math.random() * Math.floor(pool.length * 0.2))
-      pool[winIdx] = randomWinner  // ← MISMO campeón en las 3 columnas
-      
-      strips[col] = pool
-      winners[col] = randomWinner  // ← MISMO campeón
-
-      stripsRef.current[col] = pool
-      winnersRef.current = winners
-      offsetsRef.current[col] = 0
-    }
-
-    // Animar cada columna con delay
-    strips.forEach((strip, colIndex) => {
-      const canvas = canvasRefs.current[colIndex]
-      if (!canvas) return
-
-      const H = canvas.height
-      const centerY = H / 2
-
-      // Calcular offset final para centrar ganador
-      const winnerIdx = strip.indexOf(randomWinner)
-      const finalOffset = winnerIdx * CELL_SIZE - centerY + CELL_SIZE / 2
-
-      const startTime = performance.now() + COLUMN_DELAYS[colIndex]
-      const duration = SPIN_DURATION
-
-      const animate = (now: number) => {
-        const elapsed = now - startTime
-        
-        if (elapsed < 0) {
-          // Aún en delay
-          drawColumn(colIndex, 0, false)
-          animRefs.current[colIndex] = requestAnimationFrame(animate)
-          return
-        }
-
-        const t = Math.min(elapsed / duration, 1)
-        const eased = easeOutQuart(t)
-        offsetsRef.current[colIndex] = finalOffset * eased
-
-        if (t < 1) {
-          drawColumn(colIndex, offsetsRef.current[colIndex], false)
-          animRefs.current[colIndex] = requestAnimationFrame(animate)
-        } else {
-          // Terminado
-          offsetsRef.current[colIndex] = finalOffset
-          drawColumn(colIndex, finalOffset, true)
-
-          // Si es la última columna, terminar spin
-          if (colIndex === COLUMNS - 1) {
-            setTimeout(() => {
-              setIsSpinning(false)
-              setWinner(randomWinner)
-              onResult({
-                ...randomWinner,
-                key: Number(randomWinner.key)
-              })
-            }, 300)
-          }
-        }
-      }
-
-      animRefs.current[colIndex] = requestAnimationFrame(animate)
-    })
-  }, [isSpinning, allChampions, disabled, drawColumn, onResult])
-
-  // ── 5. Frame inicial ─────────────────────────────────────────────────────
-  useEffect(() => {
-    if (allChampions.length === 0) return
-    
-    // Inicializar strips con campeones mezclados
-    for (let col = 0; col < COLUMNS; col++) {
-      const pool = [...allChampions, ...allChampions, ...allChampions]
-        .sort(() => Math.random() - 0.5)
-      stripsRef.current[col] = pool
-    }
-
-    const id = setTimeout(() => {
-      for (let col = 0; col < COLUMNS; col++) {
-        drawColumn(col, 0, false)
-      }
-    }, 500)
-    return () => clearTimeout(id)
-  }, [allChampions, drawColumn])
-
-  // ── 6. Resize ────────────────────────────────────────────────────────────
-  useEffect(() => {
-    const resize = () => {
-      canvasRefs.current.forEach((canvas, idx) => {
-        if (!canvas) return
-        canvas.width = 140
-        canvas.height = VISIBLE_ROWS * CELL_SIZE + 40
-        if (stripsRef.current[idx].length > 0) {
-          drawColumn(idx, offsetsRef.current[idx], false)
-        }
-      })
-    }
-    resize()
-    window.addEventListener('resize', resize)
-    return () => window.removeEventListener('resize', resize)
-  }, [drawColumn])
+    setStopped(0)
+    callbacks.current.onSpinningChange?.(true)
+    // Choose the result once; every reel lands on that exact champion.
+    const winner = champions[Math.floor(Math.random() * champions.length)]
+    const visuals = Array.from({ length: 12 }, () => champions[Math.floor(Math.random() * champions.length)])
+    const reels = Array.from({ length: 3 }, (_, reel) => [
+      ...Array.from({ length: 30 + reel * 8 }, () => visuals[Math.floor(Math.random() * visuals.length)]),
+      winner,
+      visuals[reel],
+    ])
+    setRound({ winner, reels })
+  }
 
   useEffect(() => {
-    return () => animRefs.current.forEach(id => cancelAnimationFrame(id))
-  }, [])
+    if (!round) return
+    let cancelled = false
+    const animations: Animation[] = []
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    async function animate() {
+      try {
+        await Promise.all(round!.reels.map(async (reel, index) => {
+          const strip = strips.current[index]
+          if (!strip) throw new Error('Reel unavailable')
+          // Percentages keep the winning row centered when the viewport changes.
+          const target = -(reel.length - 3) / reel.length * 100
+          const animation = strip.animate([
+            { transform: 'translateY(0)' },
+            { transform: 'translateY(' + target + '%)' },
+          ], { duration: reduced ? 120 + index * 70 : 2400 + index * 440, easing: 'cubic-bezier(0.15, 0.72, 0.12, 1)', fill: 'forwards' })
+          animations.push(animation)
+          await animation.finished
+          if (!cancelled) setStopped(count => count + 1)
+        }))
+        if (cancelled) return
+        setWinner(round!.winner)
+        // Keep the lever locked until result persistence has finished.
+        await callbacks.current.onResult(round!.winner)
+      } catch (error) {
+        if (!cancelled) console.error('Slot animation interrupted', error)
+      } finally {
+        if (!cancelled) {
+          lock.current = false
+          setSpinning(false)
+          callbacks.current.onSpinningChange?.(false)
+        }
+      }
+    }
+    void animate()
+    return () => {
+      cancelled = true
+      animations.forEach(animation => animation.cancel())
+    }
+  }, [round])
 
-  // ─────────────────────────────────────────────────────────────────────────
-  // Render
-  // ─────────────────────────────────────────────────────────────────────────
+  useEffect(() => () => { callbacks.current.onSpinningChange?.(false) }, [])
+  const reels = round?.reels ?? Array.from({ length: 3 }, (_, i) => Array.from({ length: 3 }, (_, j) => champions[(i + j) % champions.length]))
   return (
-    <div className="w-full flex flex-col items-center gap-5">
-
-      {/* Slot Machine Container */}
-      <div className="relative w-full max-w-2xl">
-        
-        {/* Top decoration */}
-        <div className="h-1 w-full bg-gradient-to-r from-transparent via-[#C89B3C] to-transparent mb-4" />
-
-        {/* Slot machine body */}
-        <div className="relative bg-gradient-to-b from-[#1a1a22] to-[#0f0f14] rounded-3xl p-6 border-2 border-[#C89B3C]/30 shadow-2xl">
-          
-          {/* Columns container */}
-          <div className="grid grid-cols-3 gap-4">
-            {[0, 1, 2].map(colIdx => (
-              <div key={colIdx} className="relative">
-                <div className="relative rounded-2xl overflow-hidden border-2 border-neutral-800/80 bg-[#0a0a0d] shadow-inner">
-                  <canvas
-                    ref={el => {canvasRefs.current[colIdx] = el}}
-                    className="block w-full"
-                    style={{ height: VISIBLE_ROWS * CELL_SIZE + 40 }}
-                  />
-                </div>
+    <div className={styles.stage}>
+      <RouletteLever onActivate={spin} onPullStart={() => callbacks.current.onSpinningChange?.(true)} disabled={spinning || !!disabled || !!profileLoading} isSpinning={spinning} />
+      <div className={styles.cabinet} aria-busy={spinning}>
+        <div className={styles.topline} aria-hidden="true"><i className={styles.light} /><i className={styles.light} /><i className={styles.light} /><span className={styles.rule} /></div>
+        <div className={styles.reels} aria-hidden="true">
+          {reels.map((reel, index) => (
+            <div key={index} className={styles.window + (stopped > index ? ' ' + styles.stopped : '')}>
+              <div key={round ? 'round' : 'idle'} ref={el => { strips.current[index] = el }} className={styles.strip}>
+                {reel.map((champion, row) => <div key={row} className={styles.cell}>
+                  <Image unoptimized src={championIconUrl(champion.id)} alt="" width={104} height={104} loading="eager" draggable={false} className={styles.portrait} />
+                </div>)}
               </div>
-            ))}
-          </div>
-
-          {/* Loading overlay */}
-          {loadingChamps && (
-            <div className="absolute inset-0 flex items-center justify-center bg-[#0f0f14]/95 rounded-3xl">
-              <div className="flex items-center gap-3 text-[#C89B3C]">
-                <svg className="animate-spin w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-                </svg>
-                <span className="text-sm font-semibold tracking-wider">{t('loading')}</span>
-              </div>
+              <div className={styles.shade} />
             </div>
-          )}
+          ))}
+          <div className={styles.payline} />
         </div>
-
-        {/* Bottom decoration */}
-        <div className="h-1 w-full bg-gradient-to-r from-transparent via-[#C89B3C] to-transparent mt-4" />
+        <div className={styles.footer} role="status" aria-live="polite" aria-atomic="true">
+          <span className={styles.caption}>{winner ? t('yourChampion') : spinning ? slot('spinning') : t('readyToBegin')}</span>
+          {winner ? <span className="sr-only">{winner.name}</span> : <span className={styles.status}>{spinning ? '· · ·' : slot('pullLever')}</span>}
+        </div>
       </div>
-
-      {/* Reroll counter */}
-      {rerollsUsed > 0 && (
-        <div className="flex items-center justify-center gap-2">
-          <span className="text-neutral-400 text-sm">{t('rerolls')}</span>
-          <div className="flex gap-1">
-            {[...Array(maxRerolls + 1)].map((_, i) => (
-              <div
-                key={i}
-                className={`w-2 h-2 rounded-full transition-colors ${
-                  i < rerollsUsed ? 'bg-[#C89B3C]' : 'bg-neutral-700'
-                }`}
-              />
-            ))}
-          </div>
-          <span className="text-neutral-500 text-xs">({rerollsUsed}/{maxRerolls + 1})</span>
-        </div>
-      )}
-
-      {/* Champion count */}
-      {!loadingChamps && allChampions.length > 0 && (
-        <div className="text-neutral-500 text-xs">
-          {t('championCount', { count: allChampions.length })}
-        </div>
-      )}
-
-      {/* Botón PALANCA DE SLOT */}
-      <div className="relative flex flex-col items-center gap-2">
-        <button
-          onClick={spin}
-          disabled={isSpinning || loadingChamps || disabled}
-          className={`
-            relative group
-            ${(isSpinning || disabled)
-              ? 'cursor-not-allowed'
-              : 'cursor-pointer hover:scale-105 active:scale-95'
-            }
-            transition-all duration-200
-          `}
-        >
-          {/* Palanca base */}
-          <div className="relative">
-            {/* Bola/Mango de la palanca */}
-            <div className={`
-              relative z-10
-              w-24 h-24 rounded-full
-              bg-gradient-to-br from-red-600 to-red-800
-              border-4 border-red-900/50
-              shadow-2xl shadow-red-600/40
-              flex items-center justify-center
-              ${isSpinning ? 'animate-pulse' : ''}
-              ${!(isSpinning || disabled) ? 'group-hover:shadow-red-500/60 group-hover:from-red-500 group-hover:to-red-700' : ''}
-              ${(isSpinning || disabled) ? 'opacity-50' : ''}
-            `}>
-              {/* Reflejo en la bola */}
-              <div className="absolute inset-2 rounded-full bg-gradient-to-br from-white/30 to-transparent" />
-              
-              {/* Icono en el centro */}
-              <div className="relative z-10">
-                {isSpinning ? (
-                  <svg className="w-8 h-8 text-white animate-spin" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-                  </svg>
-                ) : (
-                  <svg className="w-10 h-10 text-white drop-shadow-lg" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
-                  </svg>
-                )}
-              </div>
-
-              {/* Anillo dorado alrededor */}
-              <div className={`
-                absolute inset-0 rounded-full
-                border-2 border-[#C89B3C]
-                ${!(isSpinning || disabled) ? 'group-hover:border-[#d9aa44] group-hover:shadow-[0_0_20px_rgba(200,155,60,0.5)]' : ''}
-              `} />
-            </div>
-
-            {/* Palo de la palanca */}
-            <div className={`
-              absolute left-1/2 -translate-x-1/2 top-full
-              w-4 h-32
-              bg-gradient-to-b from-neutral-700 via-neutral-600 to-neutral-800
-              border-l border-r border-neutral-500
-              shadow-lg
-              ${isSpinning ? 'animate-[leverPull_0.5s_ease-in-out_infinite]' : ''}
-            `}>
-              {/* Detalles metálicos */}
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-            </div>
-
-            {/* Base de la palanca */}
-            <div className="absolute left-1/2 -translate-x-1/2 top-[calc(100%+128px)] w-12 h-6 bg-gradient-to-b from-neutral-800 to-neutral-900 rounded-b-lg border-2 border-neutral-700 shadow-xl" />
-          </div>
-
-          {/* Texto debajo */}
-          <div className="mt-40 text-center">
-            <p className={`
-              text-sm font-bold tracking-wider uppercase
-              ${(isSpinning || disabled) ? 'text-neutral-500' : 'text-[#C89B3C] group-hover:text-[#d9aa44]'}
-              transition-colors
-            `}>
-              {isSpinning ? t('spinning') : rerollsUsed > 0 && rerollsUsed <= maxRerolls 
-                ? t('pullLeft', { remaining: maxRerolls + 1 - rerollsUsed }) 
-                : t('pullLever')}
-            </p>
-            {!isSpinning && !(isSpinning || disabled) && (
-              <p className="text-xs text-neutral-600 mt-1">{t('clickToSpin')}</p>
-            )}
-          </div>
-        </button>
-      </div>
-
-      {/* Winner card */}
-      {winner && !isSpinning && (
-        <div
-          key={winner.id + Math.random()}
-          className="w-full max-w-xl flex items-center gap-4 px-6 py-5 rounded-2xl
-                     border-2 border-[#C89B3C]/60 bg-gradient-to-br from-[#1a1600]/80 to-[#0f0f11]
-                     shadow-xl shadow-[#C89B3C]/20"
-          style={{ animation: 'fadeSlideUp 0.5s ease-out' }}
-        >
-          <div className="relative flex-shrink-0 w-24 h-24 rounded-xl overflow-hidden border-2 border-[#C89B3C] shadow-lg">
-            <img
-              src={`${LOADING_BASE}${winner.id}_0.jpg`}
-              alt={winner.name}
-              className="w-full h-full object-cover"
-              onError={(e) => {
-                e.currentTarget.src = `${SPLASH_BASE}${winner.id}_0.jpg`
-              }}
-            />
-            <div className="absolute inset-0 rounded-xl ring-2 ring-[#C89B3C]/40 ring-inset" />
-          </div>
-
-          <div className="flex-1 min-w-0">
-            <p className="text-[#C89B3C] text-xs font-bold tracking-[0.3em] uppercase mb-1">
-              {t('jackpot')}
-            </p>
-            <p className="text-white text-3xl font-bold leading-tight truncate">
-              {winner.name}
-            </p>
-          </div>
-
-          <button
-            onClick={spin}
-            disabled={disabled}
-            title={t('spinAgain')}
-            className="flex-shrink-0 p-3 rounded-xl bg-neutral-800/80
-                       hover:bg-neutral-700 text-neutral-400 hover:text-white
-                       transition disabled:opacity-40 disabled:cursor-not-allowed"
-          >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-            </svg>
-          </button>
-        </div>
-      )}
-
-      <style>{`
-        @keyframes fadeSlideUp {
-          from { opacity: 0; transform: translateY(12px) scale(0.95); }
-          to   { opacity: 1; transform: translateY(0) scale(1); }
-        }
-        
-        @keyframes leverPull {
-          0%, 100% { transform: translateY(0) scaleY(1); }
-          50% { transform: translateY(8px) scaleY(0.95); }
-        }
-      `}</style>
     </div>
   )
+}
+
+export default function SlotMachineRoulette(props: RouletteWheelProps) {
+  const locale = useLocale()
+  const t = useTranslations('rouletteStyles')
+  const slot = useTranslations('slotMachine')
+  const [catalog, setCatalog] = useState<{ locale: string; champions: Champion[] } | null>(null)
+  const [error, setError] = useState<string | null>(null)
+  const [attempt, setAttempt] = useState(0)
+  useEffect(() => {
+    let cancelled = false
+    loadChampionData(locale).then(data => {
+      if (!cancelled) setCatalog({ locale, champions: Object.entries(data).map(([key, champion]) => ({ id: champion.key, key: Number(key), name: champion.name })) })
+    }).catch(() => { if (!cancelled) setError(locale) })
+    return () => { cancelled = true }
+  }, [locale, attempt])
+  const poolKey = props.championPool?.map(normalize).join('\0') ?? null
+  const lane = props.lane ?? 'all'
+  const type = props.challengeFilter?.type
+  const value = props.challengeFilter?.value
+  const champions = useMemo(() => {
+    if (catalog?.locale !== locale) return []
+    const laneNames = lane === 'all' ? null : new Set(getChampionsByLane(lane).map(normalize))
+    const poolNames = poolKey === null ? null : new Set(poolKey.split('\0'))
+    return catalog.champions.filter(champion =>
+      (!laneNames || laneNames.has(normalize(champion.name)) || laneNames.has(normalize(champion.id))) &&
+      (!poolNames || poolNames.has(normalize(champion.name)) || poolNames.has(normalize(champion.id))) &&
+      (type !== 'region' || regions.get(normalize(champion.id))?.includes(String(value))) &&
+      (type !== 'class' || classes.get(normalize(champion.id))?.includes(String(value)))
+    )
+  }, [catalog, locale, lane, poolKey, type, value])
+  const loading = catalog?.locale !== locale
+  if (loading || error === locale || !champions.length) return (
+    <div className={styles.stage}>
+      <RouletteLever onActivate={() => {}} disabled isSpinning={false} />
+      <div className={styles.cabinet} style={{ minHeight: 290 }}>
+        <div className={styles.overlay} role="status">
+          {error === locale ? <><span className={styles.status}>{t('loadError')}</span><button type="button" className="flex min-h-11 items-center gap-2 rounded-lg border border-neutral-700 px-4 text-sm text-[#C89B3C]" onClick={() => { setError(null); setCatalog(null); setAttempt(x => x + 1) }}><RotateCcw size={14} />{t('retry')}</button></> : loading ? <><LoaderCircle className="animate-spin text-[#C89B3C]" size={24} /><span className={styles.status}>{slot('loading')}</span></> : <span className={styles.status}>{t('emptyPool')}</span>}
+        </div>
+      </div>
+    </div>
+  )
+  return <Machine key={[locale, lane, poolKey, type, value].join('|')} {...props} champions={champions} />
 }

@@ -1,4 +1,14 @@
 {
+  "rouletteStyles": {
+    "label": "룰렛 스타일",
+    "classic": "클래식 룰렛",
+    "slots": "슬롯머신",
+    "switchClassic": "룰렛으로 전환",
+    "switchSlots": "슬롯으로 전환",
+    "loadError": "Could not load champions.",
+    "retry": "Try again",
+    "emptyPool": "No champions match these filters."
+  },
     "nav": {
         "play": "Play",
         "leaderboard": "Leaderboard",

@@ -3,11 +3,11 @@
 import { useState } from 'react'
 import { Link, usePathname } from '@/i18n/navigation'
 import Image from 'next/image'
-import { useTranslations } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 import type { AppPathnames } from '@/i18n/routes'
 import LocaleSwitcher from './LocaleSwitcher'
 
-type NavHref = Exclude<AppPathnames, '/blog/[slug]' | '/blog/guides/[champion]'>
+type NavHref = Exclude<AppPathnames, '/blog/[slug]' | '/blog/guides/[champion]' | '/skins/[champion]' | '/skins/[champion]/[skin]'>
 
 type NavLink = {
   href: NavHref
@@ -21,11 +21,13 @@ export default function Navbar() {
   const pathname = usePathname()
   const t = useTranslations('nav')
   const tQuiz = useTranslations('quiz')
+  const locale = useLocale()
 
-  const isActive = (path: string) => path === '/blog' ? pathname.startsWith('/blog') : pathname === path
+  const isActive = (path: string) => path === '/blog' || path === '/skins' ? pathname.startsWith(path) : pathname === path
 
 const navLinks: NavLink[] = [
     { href: '/', label: t('play'), icon: '🎮' },
+    ...(locale === 'en' || locale === 'es' ? [{ href: '/skins' as const, label: 'Skins', icon: '✧' }] : []),
     { href: '/leaderboard', label: t('leaderboard'), icon: '🏆' },
     { href: '/challenges', label: t('challenges'), icon: '⚡', isNew: true },
     { href: '/find-your-main', label: tQuiz('navLabel'), icon: '✦' },
@@ -61,13 +63,13 @@ const navLinks: NavLink[] = [
             </div>
           </Link>
 
-          <div className="hidden items-center gap-1 lg:flex">
+          <div className="hidden min-w-0 items-center gap-0.5 lg:flex">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 className={`
-                  relative rounded-lg px-3 py-2 text-sm font-medium transition-all duration-200
+                  relative whitespace-nowrap rounded-lg px-2 py-2 text-xs font-medium transition-all duration-200
                   ${isActive(link.href)
                     ? 'text-cyan-300'
                     : 'text-zinc-400 hover:text-zinc-200 hover:bg-zinc-800/50'

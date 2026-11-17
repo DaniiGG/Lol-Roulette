@@ -1,0 +1,19 @@
+{
+  "eyebrow": "YOUR LEAGUE OF LEGENDS PROFILE",
+  "intro": "Your experience with every champion, in one place. Explore mastery points and discover who brings you the best results.",
+  "collection": "Your champion collection",
+  "preview": "Illustrative preview",
+  "pointsDesc": "Find the champions you have spent the most time playing.",
+  "levelsDesc": "Explore mastery levels and the distribution of your collection.",
+  "winsDesc": "Review your champion results and filter by lane or game mode.",
+  "access": "Connect your profile",
+  "accessNote": "Use your Riot ID and region to load your data.",
+  "tree": "Mastery map",
+  "treeDesc": "Search for a champion, filter by role and explore mastery points and levels.",
+  "resultsDesc": "Compare champion wins and losses in the available matches.",
+  "connected": "Profile connected",
+  "incomplete": "Profile information is missing",
+  "incompleteDesc": "Your player identifier or region could not be found. Reconnect your profile to load champion mastery.",
+  "reconnect": "Reconnect profile",
+  "loading": "Loading your profile…"
+}

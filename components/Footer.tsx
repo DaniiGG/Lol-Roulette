@@ -25,6 +25,7 @@ export default function Footer() {
           <div>
             <h4 className="mb-4 text-sm font-semibold text-white">{t('quickLinks')}</h4>
             <ul className="space-y-2 text-sm">
+              {hasMasteryTree && <li><Link href="/skins" className="text-neutral-400 transition hover:text-white">{locale === 'es' ? 'Catálogo de skins' : 'Skin catalogue'}</Link></li>}
               <li>
                 <Link href="/find-your-main" className="text-neutral-400 transition hover:text-white">
                   {tQuiz('navLabel')}

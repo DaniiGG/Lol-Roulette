@@ -1,4 +1,14 @@
 {
+  "rouletteStyles": {
+    "label": "Styl ruletki",
+    "classic": "Klasyczna ruletka",
+    "slots": "Automat",
+    "switchClassic": "Przełącz na ruletkę",
+    "switchSlots": "Przełącz na automat",
+    "loadError": "Could not load champions.",
+    "retry": "Try again",
+    "emptyPool": "No champions match these filters."
+  },
     "nav": {
         "play": "Play",
         "leaderboard": "Leaderboard",

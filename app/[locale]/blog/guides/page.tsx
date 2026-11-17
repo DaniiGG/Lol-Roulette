@@ -70,7 +70,7 @@ export default async function GuidesPage({ params }: { params: Promise<{ locale:
         splash: meta.splash,
         href: getGuideHref(guide.slug, isGuideLocale(locale) ? locale : 'en'),
         updatedLabel: t('directory.updated', { date: formatDate(meta.updatedAt, locale) }),
-        patchLabel: t('directory.patch', { patch: GUIDE_PATCH }),
+        patchLabel: t('directory.patch', { patch: meta.patch ?? GUIDE_PATCH }),
         readingTime: guideReadingTime(guide),
         winRate: meta.stats[0]?.winRate ?? '—',
         availableLocales: [...GUIDE_LOCALES],

@@ -1,4 +1,14 @@
 {
+  "rouletteStyles": {
+    "label": "Roulette-Stil",
+    "classic": "Klassisches Roulette",
+    "slots": "Spielautomat",
+    "switchClassic": "Zum Roulette wechseln",
+    "switchSlots": "Zum Spielautomaten wechseln",
+    "loadError": "Could not load champions.",
+    "retry": "Try again",
+    "emptyPool": "No champions match these filters."
+  },
     "nav": {
         "play": "Spielen",
         "leaderboard": "Rangliste",

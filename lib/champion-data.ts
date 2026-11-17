@@ -1,6 +1,6 @@
 ﻿import type { ChampionMeta, ChampionMetaMap } from './mastery-tree/types'
 
-export const DDRAGON_VERSION = '16.21.1'
+export const DDRAGON_VERSION = '16.22.1'
 
 const DDRAGON_BASE = `https://ddragon.leagueoflegends.com/cdn/${DDRAGON_VERSION}`
 

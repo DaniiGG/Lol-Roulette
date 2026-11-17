@@ -1,4 +1,14 @@
 {
+  "rouletteStyles": {
+    "label": "Roulettestijl",
+    "classic": "Klassieke roulette",
+    "slots": "Gokkast",
+    "switchClassic": "Naar roulette",
+    "switchSlots": "Naar gokkast",
+    "loadError": "Could not load champions.",
+    "retry": "Try again",
+    "emptyPool": "No champions match these filters."
+  },
     "nav": {
         "play": "Spelen",
         "leaderboard": "Klassement",

@@ -16,7 +16,7 @@
       "h1": "Cómo jugar Katarina en League of Legends",
       "heroIntro": [
         "Katarina es una asesina de mid de gran movilidad cuyo daño depende de las dagas, los reinicios y una ejecución limpia. No usa maná, así que sus límites son los enfriamientos, la posición y el control de masas.",
-        "Esta guía cubre su build del parche 26.21, el orden de habilidades nivel a nivel, combos prácticos con dagas, decisiones de línea y de teamfight, y los enfrentamientos que castigan una entrada imprudente. Está pensada para Solo/Dúo y se basa en Data Dragon 16.21.1 y en muestras actuales de U.GG y Lolalytics."
+        "Esta guía cubre su build del parche 26.21, el orden de habilidades nivel a nivel, combos prácticos con dagas, decisiones de línea y de teamfight, y los enfrentamientos que castigan una entrada imprudente. Está pensada para Solo/Dúo y se basa en Data Dragon 16.22.1 y en muestras actuales de U.GG y Lolalytics."
       ],
       "quickAnswer": "Sube Q primero, luego E y por último W. Lleva Electrocutar con Impacto repentino y Precisión secundaria, empieza con Sello oscuro o Anillo de Doran y construye Perdición del liche hacia Llamasombría para burst. Juega alrededor de las dagas y espera a que el enemigo gaste su control de masas antes de entrar. Katarina está fuerte en el parche 26.21, pero su porcentaje de victorias nace de la paciencia y la elección de objetivo, no de forzar todas las peleas.",
       "quickStart": {
@@ -730,7 +730,7 @@
       "h1": "Cómo jugar Sett en League of Legends",
       "heroIntro": [
         "Sett es un coloso de la línea superior que gana intercambios cortos con la regeneración de su pasiva, el reinicio de autoataque de Q y el stun de E. Su W, Trastazo, convierte el daño recibido en un escudo y un potente puñetazo de daño verdadero.",
-        "Esta guía cubre la build de top del parche 26.21, el orden de habilidades exacto que usan las muestras más grandes, combos prácticos E-W-R, enfrentamientos de línea y los errores que hacen que Sett parezca débil. Se basa en Data Dragon 16.21.1 y en muestras actuales de U.GG y Lolalytics."
+        "Esta guía cubre la build de top del parche 26.21, el orden de habilidades exacto que usan las muestras más grandes, combos prácticos E-W-R, enfrentamientos de línea y los errores que hacen que Sett parezca débil. Se basa en Data Dragon 16.22.1 y en muestras actuales de U.GG y Lolalytics."
       ],
       "quickAnswer": "Empieza W-E-Q, sube Q primero, luego W y por último E. Lleva Conquistador con Valor secundario, construye Cortasendas hacia Cuchilla negra y usa E para aturdir antes de W para que el centro de daño verdadero sea inevitable. Sett es fuerte en intercambios cortos y peleas de línea lateral, pero los campeones a distancia lo kitean y no debe gastar Trastazo sin agallas.",
       "quickStart": {
@@ -1438,7 +1438,7 @@
       "h1": "Cómo jugar K'Sante en League of Legends",
       "heroIntro": [
         "K'Sante es un tanque de la línea superior con un techo de habilidad inusualmente alto. Puede escudarse, hacer dash, arrastrar enemigos con su Q, aturdir con W y usar R para llevar a un objetivo a través de una pared y transformarse en un duelista centrado en daño.",
-        "Esta guía cubre la build de top del parche 26.21, el orden de habilidades exacto, combos prácticos Q-W-R, decisiones de línea y de teamfight, y los enfrentamientos que exponen sus debilidades. Se basa en Data Dragon 16.21.1 y en muestras actuales de U.GG y Lolalytics."
+        "Esta guía cubre la build de top del parche 26.21, el orden de habilidades exacto, combos prácticos Q-W-R, decisiones de línea y de teamfight, y los enfrentamientos que exponen sus debilidades. Se basa en Data Dragon 16.22.1 y en muestras actuales de U.GG y Lolalytics."
       ],
       "quickAnswer": "Empieza E-Q-W, sube Q primero, luego E y por último W. Lleva Garras del inmortal con Precisión secundaria, construye Rookern kaénico hacia Guantelete de hielo y usa Q2 para arrastrar enemigos hacia W o R. K'Sante es un campeón de bajo porcentaje de victorias y alto dominio en el parche 26.21: es fuerte cuando aciertas su control de masas y débil cuando gastas R o fallas las acumulaciones de Q.",
       "quickStart": {
@@ -2654,7 +2654,7 @@
         }
       ],
       "matchups": {
-        "note": "Las tendencias de counters proceden de Lolalytics, parche 16.21, Esmeralda+ y este rol. Son señales estadísticas, no counters absolutos; también importan la habilidad en línea, la composición y la presión del jungla.",
+        "note": "Las tendencias de counters proceden de Lolalytics, parche 16.22.1, Esmeralda+ y este rol. Son señales estadísticas, no counters absolutos; también importan la habilidad en línea, la composición y la presión del jungla.",
         "difficult": [
           {
             "name": "Vel’Koz",
@@ -3240,7 +3240,7 @@
         }
       ],
       "matchups": {
-        "note": "Las tendencias de counters proceden de Lolalytics, parche 16.21, Esmeralda+ y este rol. Son señales estadísticas, no counters absolutos; también importan la habilidad en línea, la composición y la presión del jungla.",
+        "note": "Las tendencias de counters proceden de Lolalytics, parche 16.22.1, Esmeralda+ y este rol. Son señales estadísticas, no counters absolutos; también importan la habilidad en línea, la composición y la presión del jungla.",
         "difficult": [
           {
             "name": "Pantheon",
@@ -3836,7 +3836,7 @@
         }
       ],
       "matchups": {
-        "note": "Las tendencias de counters proceden de Lolalytics, parche 16.21, Esmeralda+ y este rol. Son señales estadísticas, no counters absolutos; también importan la habilidad en línea, la composición y la presión del jungla.",
+        "note": "Las tendencias de counters proceden de Lolalytics, parche 16.22.1, Esmeralda+ y este rol. Son señales estadísticas, no counters absolutos; también importan la habilidad en línea, la composición y la presión del jungla.",
         "difficult": [
           {
             "name": "Kayle",
@@ -3886,6 +3886,758 @@
           "url": "https://lolalytics.com/lol/gangplank/build/?lane=top&tier=emerald_plus"
         }
       ]
+    },
+    "vladimir": {
+      "slug": "vladimir",
+      "name": "Vladimir",
+      "title": "El Segador Carmesí",
+      "role": "mid",
+      "roleLabel": "Mid",
+      "difficulty": "medium",
+      "difficultyLabel": "Media",
+      "tagline": "Un mago de batalla que convierte su propia vida en daño, sobrevive gracias a su curación y domina las peleas prolongadas.",
+      "metaTitle": "Cómo jugar Vladimir en League of Legends — Build, runas y combos (Parche 26.22)",
+      "metaDescription": "Aprende a jugar Vladimir en LoL: build, runas, combos, habilidades y consejos de mid y teamfights para el parche 26.22.",
+      "h1": "Cómo jugar Vladimir en League of Legends",
+      "heroIntro": [
+        "Vladimir es un mago de mid especializado en daño mágico en área, sustain y escalado. No utiliza maná: sus habilidades dependen de enfriamientos y, en algunos casos, consumen su propia vida. Su mayor fortaleza es sobrevivir a los intercambios, acumular poder y destruir a varios enemigos durante una teamfight.",
+        "Esta guía cubre su build del parche 26.22, el orden de habilidades, las mejores runas, combos, decisiones de línea, teamfights y enfrentamientos difíciles."
+      ],
+      "quickAnswer": "Sube Q primero, después E y finalmente W. Utiliza Irrupción de fase con Brujería como árbol principal y Precisión como secundario. Empieza con Anillo de Doran y construye Sobrecarga tormentosa, seguida de objetos de poder de habilidad según la composición enemiga. Lleva Destello y Fantasmal para compensar tu falta de movilidad. Durante la fase de líneas, prioriza el farmeo, utiliza Q potenciada para intercambiar y conserva W para esquivar habilidades peligrosas. En teamfights, busca golpear a varios enemigos con Hemoplaga antes de utilizar tu daño en área.",
+      "quickStart": {
+        "role": "Carril central, mago de batalla.",
+        "secondaryRoles": "Top como rol alternativo",
+        "difficulty": "Media",
+        "playstyle": "Sustain, daño mágico en área y escalado.",
+        "keyMechanic": "Gestionar la Q potenciada y el Estanque sangriento.",
+        "winCondition": "Alcanzar tus objetos principales y ganar peleas agrupadas mediante daño en área y curación.",
+        "beginnerMistake": "Gastar W innecesariamente y quedarse sin protección frente al control de masas."
+      },
+      "abilities": [
+        {
+          "key": "P",
+          "name": "Pacto carmesí",
+          "icon": "Vladimir_CrimsonPact.png",
+          "description": "Vladimir convierte parte de su vida adicional en poder de habilidad y parte de su poder de habilidad en vida adicional.",
+          "tips": [
+            "Prioriza objetos de AP que también mejoren tu supervivencia.",
+            "Aprovecha tu escalado para convertirte en una amenaza durante el mid y late game.",
+            "Recuerda que más vida no sustituye a las resistencias defensivas."
+          ],
+          "mistake": "Construir únicamente vida esperando obtener el mismo daño que con una build de AP."
+        },
+        {
+          "key": "Q",
+          "name": "Transfusión",
+          "icon": "VladimirQ.png",
+          "description": "Vladimir roba vida de un enemigo, infligiendo daño mágico y curándose. Después de dos usos, su siguiente Q se potencia, aumentando considerablemente el daño y la curación.",
+          "tips": [
+            "Utiliza Q sobre súbditos para recuperar vida.",
+            "Prepara la Q potenciada antes de buscar un intercambio.",
+            "Acércate al enemigo cuando esté disponible la versión potenciada.",
+            "Aprovecha la curación para sobrevivir a líneas difíciles."
+          ],
+          "mistake": "Desperdiciar la Q potenciada en un súbdito cuando existe una oportunidad segura de golpear al rival."
+        },
+        {
+          "key": "W",
+          "name": "Estanque sangriento",
+          "icon": "VladimirSanguinePool.png",
+          "description": "Vladimir se convierte en un charco de sangre, volviéndose inalcanzable para la mayoría de habilidades dirigidas. Puede desplazarse mientras ralentiza y daña a los enemigos que atraviesan el estanque.",
+          "tips": [
+            "Esquiva habilidades decisivas y controles de masas.",
+            "Evita utilizarla como herramienta de daño sin necesidad.",
+            "Combínala con E previamente cargada para mantener la presión mientras te proteges.",
+            "Guarda W cuando sospeches que el jungla enemigo está cerca."
+          ],
+          "mistake": "Utilizar W para esquivar daño insignificante y quedar vulnerable durante su largo enfriamiento."
+        },
+        {
+          "key": "E",
+          "name": "Mareas de sangre",
+          "icon": "VladimirE.png",
+          "description": "Vladimir carga una explosión de sangre que inflige daño mágico a los enemigos cercanos. Cuanto más tiempo carga la habilidad, mayor es su daño y coste de vida.",
+          "tips": [
+            "Carga E antes de entrar en rango del enemigo.",
+            "Combínala con W para liberar daño mientras eres inalcanzable.",
+            "Utilízala para limpiar oleadas cuando tengas suficiente vida.",
+            "Aprende a calcular su alcance y evita que otros objetivos bloqueen los proyectiles."
+          ],
+          "mistake": "Cargar E constantemente y perder demasiada vida durante la fase de líneas."
+        },
+        {
+          "key": "R",
+          "name": "Hemoplaga",
+          "icon": "VladimirHemoplague.png",
+          "description": "Vladimir infecta una zona con una plaga que aumenta el daño recibido por los enemigos afectados. Tras unos segundos, la plaga explota, infligiendo daño mágico y curando a Vladimir según los campeones alcanzados.",
+          "tips": [
+            "Intenta alcanzar a varios campeones.",
+            "Utiliza R antes de descargar tu combo principal.",
+            "Aprovecha la curación retardada para sobrevivir durante peleas intensas.",
+            "Combínala con Destello para alcanzar a la línea trasera."
+          ],
+          "mistake": "Lanzar R demasiado tarde, cuando ya has gastado tus habilidades principales."
+        }
+      ],
+      "skillOrder": {
+        "priority": "Q > E > W",
+        "start": "Q → E → W",
+        "levels": [
+          {
+            "level": 1,
+            "ability": "Q"
+          },
+          {
+            "level": 2,
+            "ability": "E"
+          },
+          {
+            "level": 3,
+            "ability": "W"
+          },
+          {
+            "level": 4,
+            "ability": "Q"
+          },
+          {
+            "level": 5,
+            "ability": "Q"
+          },
+          {
+            "level": 6,
+            "ability": "R"
+          },
+          {
+            "level": 7,
+            "ability": "Q"
+          },
+          {
+            "level": 8,
+            "ability": "E"
+          },
+          {
+            "level": 9,
+            "ability": "Q"
+          },
+          {
+            "level": 10,
+            "ability": "E"
+          },
+          {
+            "level": 11,
+            "ability": "R"
+          },
+          {
+            "level": 12,
+            "ability": "E"
+          },
+          {
+            "level": 13,
+            "ability": "E"
+          },
+          {
+            "level": 14,
+            "ability": "W"
+          },
+          {
+            "level": 15,
+            "ability": "W"
+          },
+          {
+            "level": 16,
+            "ability": "R"
+          },
+          {
+            "level": 17,
+            "ability": "W"
+          },
+          {
+            "level": 18,
+            "ability": "W"
+          }
+        ],
+        "explanation": [
+          "Q se maximiza primero porque proporciona daño, curación y mejores intercambios.",
+          "E se maximiza después para mejorar la limpieza de oleadas y el daño en área.",
+          "W se maximiza al final porque su utilidad principal es defensiva."
+        ],
+        "note": "Contra enemigos con una amenaza temprana muy fuerte, puedes aprender W en nivel 2 en lugar de E."
+      },
+      "runes": {
+        "title": "Build principal: Irrupción de fase",
+        "summary": "Irrupción de fase es una excelente opción para Vladimir porque proporciona velocidad de movimiento tras golpear repetidamente a un campeón. Esto permite perseguir enemigos, escapar de situaciones peligrosas y reposicionarte durante las peleas.",
+        "primaryTree": {
+          "name": "Brujería",
+          "icon": "perk-images/Styles/7202_Sorcery.png"
+        },
+        "secondaryTree": {
+          "name": "Precisión",
+          "icon": "perk-images/Styles/7201_Precision.png"
+        },
+        "keystone": {
+          "id": 8230,
+          "name": "Irrupción de fase",
+          "why": "Movilidad adicional después de conectar varios ataques o habilidades.",
+          "icon": "perk-images/Styles/Sorcery/PhaseRush/PhaseRush.png"
+        },
+        "primaryRunes": [
+          {
+            "id": 8275,
+            "name": "Capa del nimbo",
+            "why": "Velocidad de movimiento después de utilizar hechizos de invocador.",
+            "icon": "perk-images/Styles/Sorcery/NimbusCloak/6361.png"
+          },
+          {
+            "id": 8210,
+            "name": "Trascendencia",
+            "why": "Aceleración de habilidad para utilizar tus hechizos con mayor frecuencia.",
+            "icon": "perk-images/Styles/Sorcery/Transcendence/Transcendence.png"
+          },
+          {
+            "id": 8236,
+            "name": "Se avecina tormenta",
+            "why": "AP adicional conforme avanza la partida.",
+            "icon": "perk-images/Styles/Sorcery/GatheringStorm/GatheringStorm.png"
+          }
+        ],
+        "secondaryRunes": [
+          {
+            "id": 9105,
+            "name": "Leyenda",
+            "why": "Aceleración: Aceleración de habilidades al acumular progresos.",
+            "icon": "perk-images/Styles/Precision/LegendHaste/LegendHaste.png"
+          },
+          {
+            "id": 8299,
+            "name": "Último esfuerzo",
+            "why": "Más daño mientras tienes poca vida.",
+            "icon": "perk-images/Styles/Sorcery/LastStand/LastStand.png"
+          }
+        ],
+        "alternatives": [
+          "Invocar a Aery: Para presionar con intercambios frecuentes durante la fase de líneas.",
+          "Conquistador: Alternativa para enfrentamientos prolongados contra enemigos resistentes.",
+          "Toque de fuego mortal: Opción orientada a aumentar el daño de tus habilidades."
+        ],
+        "notes": [
+          "Irrupción de fase es la configuración recomendada para aprender a Vladimir porque facilita el posicionamiento, una de sus principales debilidades."
+        ]
+      },
+      "summonerSpells": [
+        {
+          "name": "Destello",
+          "icon": "SummonerFlash.png",
+          "why": "Fundamental para alcanzar objetivos, escapar y ejecutar combos inesperados."
+        },
+        {
+          "name": "Fantasmal",
+          "icon": "SummonerHaste.png",
+          "why": "Proporciona movilidad sostenida durante las teamfights y ayuda a perseguir enemigos."
+        },
+        {
+          "name": "Alternativa — Prender",
+          "icon": "SummonerDot.png",
+          "why": "Aumenta la presión de asesinato en línea, especialmente contra rivales a los que puedes castigar desde los primeros niveles."
+        }
+      ],
+      "builds": [
+        {
+          "id": "vladimir-burst",
+          "label": "Build principal — Burst AP",
+          "badge": "26.22",
+          "summary": "Una configuración orientada a eliminar objetivos prioritarios rápidamente y aprovechar el daño en área de Hemoplaga.",
+          "starting": {
+            "label": "Objetos iniciales",
+            "items": [
+              {
+                "id": "1056",
+                "name": "Anillo de Doran",
+                "icon": "1056.png",
+                "why": ""
+              },
+              {
+                "id": "2003",
+                "name": "2 Pociones de vida",
+                "icon": "2003.png",
+                "why": ""
+              }
+            ]
+          },
+          "core": {
+            "label": "Objetos principales",
+            "items": [
+              {
+                "id": "4646",
+                "name": "Sobrecarga tormentosa",
+                "icon": "4646.png",
+                "why": ""
+              },
+              {
+                "id": "6653",
+                "name": "Tormento de Liandry",
+                "icon": "6653.png",
+                "why": ""
+              },
+              {
+                "id": "3135",
+                "name": "Bastón del Vacío",
+                "icon": "3135.png",
+                "why": ""
+              }
+            ]
+          },
+          "boots": {
+            "label": "Botas",
+            "items": [
+              {
+                "id": "3020",
+                "name": "Botas de hechicero",
+                "icon": "3020.png",
+                "why": ""
+              },
+              {
+                "id": "1312",
+                "name": "Botas del lanzahechizos, cuando estén disponibles mediante la mejora de botas",
+                "icon": "1312.png",
+                "why": ""
+              },
+              {
+                "id": "3111",
+                "name": "Botas de mercurio, contra mucho control de masas",
+                "icon": "3111.png",
+                "why": ""
+              }
+            ]
+          },
+          "situational": {
+            "label": "Objetos situacionales",
+            "items": [
+              {
+                "id": "3089",
+                "name": "Sombrero mortal de Rabadon",
+                "icon": "3089.png",
+                "why": "Gran aumento del AP."
+              },
+              {
+                "id": "3157",
+                "name": "Reloj de arena de Zhonya",
+                "icon": "3157.png",
+                "why": "Supervivencia frente a burst y control de masas."
+              },
+              {
+                "id": "4633",
+                "name": "Creagrietas",
+                "icon": "4633.png",
+                "why": "Peleas prolongadas."
+              },
+              {
+                "id": "4629",
+                "name": "Impulso cósmico",
+                "icon": "4629.png",
+                "why": "Movilidad y aceleración de habilidad."
+              },
+              {
+                "id": "4645",
+                "name": "Llamasombría",
+                "icon": "4645.png",
+                "why": "Daño contra objetivos vulnerables."
+              },
+              {
+                "id": "3041",
+                "name": "Robaalmas de Mejai",
+                "icon": "3041.png",
+                "why": "Snowball cuando acumulas Sello oscuro."
+              },
+              {
+                "id": "3165",
+                "name": "Morellonomicón",
+                "icon": "3165.png",
+                "why": "Heridas graves contra equipos con mucha curación."
+              }
+            ]
+          },
+          "notes": [
+            "Sobrecarga tormentosa es un primer objeto habitual del parche 26.22. Adapta los siguientes objetos a las resistencias y necesidades de cada partida."
+          ]
+        },
+        {
+          "id": "vladimir-extended",
+          "label": "Build alternativa — Peleas prolongadas",
+          "badge": "26.22",
+          "summary": "Una configuración orientada a mantenerte dentro del combate, aplicar daño constante y sobrevivir a enfrentamientos extensos.",
+          "starting": {
+            "label": "Objetos iniciales",
+            "items": [
+              {
+                "id": "1056",
+                "name": "Anillo de Doran",
+                "icon": "1056.png",
+                "why": ""
+              },
+              {
+                "id": "2003",
+                "name": "2 Pociones de vida",
+                "icon": "2003.png",
+                "why": ""
+              }
+            ]
+          },
+          "core": {
+            "label": "Objetos principales",
+            "items": [
+              {
+                "id": "4646",
+                "name": "Sobrecarga tormentosa",
+                "icon": "4646.png",
+                "why": ""
+              },
+              {
+                "id": "4633",
+                "name": "Creagrietas",
+                "icon": "4633.png",
+                "why": ""
+              },
+              {
+                "id": "3089",
+                "name": "Sombrero mortal de Rabadon",
+                "icon": "3089.png",
+                "why": ""
+              }
+            ]
+          },
+          "situational": {
+            "label": "Objetos situacionales",
+            "items": [
+              {
+                "id": "6653",
+                "name": "Tormento de Liandry",
+                "icon": "6653.png",
+                "why": ""
+              },
+              {
+                "id": "4629",
+                "name": "Impulso cósmico",
+                "icon": "4629.png",
+                "why": ""
+              },
+              {
+                "id": "3157",
+                "name": "Reloj de arena de Zhonya",
+                "icon": "3157.png",
+                "why": ""
+              },
+              {
+                "id": "3135",
+                "name": "Bastón del Vacío",
+                "icon": "3135.png",
+                "why": ""
+              }
+            ]
+          },
+          "notes": [
+            "Esta configuración es una alternativa situacional, no la build estadísticamente principal del parche."
+          ]
+        }
+      ],
+      "combos": [
+        {
+          "name": "Intercambio básico en línea",
+          "sequence": [
+            {
+              "key": "Q",
+              "label": "Q"
+            },
+            {
+              "key": "AA",
+              "label": "Autoataque"
+            },
+            {
+              "key": "Move",
+              "label": "Retroceder"
+            }
+          ],
+          "situation": "Durante los primeros niveles, cuando el enemigo se acerca a farmear.",
+          "execution": "Golpea con Q, añade un autoataque si es seguro y retrocede antes de recibir demasiado daño.",
+          "mistake": "No prolongues intercambios contra campeones con mayor daño sostenido temprano."
+        },
+        {
+          "name": "Intercambio con Q potenciada",
+          "sequence": [
+            {
+              "key": "Q",
+              "label": "Preparar Q"
+            },
+            {
+              "key": "Q",
+              "label": "Q potenciada"
+            },
+            {
+              "key": "E",
+              "label": "E"
+            },
+            {
+              "key": "Move",
+              "label": "Retroceder"
+            }
+          ],
+          "situation": "Cuando tienes la Q potenciada disponible y el rival entra en tu alcance.",
+          "execution": "Utiliza Q sobre súbditos para preparar la versión potenciada. Acércate al enemigo y conecta Q junto a E para conseguir un intercambio favorable.",
+          "mistake": "No persigas demasiado lejos cuando la duración de la Q potenciada está terminando."
+        },
+        {
+          "name": "Combo defensivo",
+          "sequence": [
+            {
+              "key": "E",
+              "label": "Cargar E"
+            },
+            {
+              "key": "W",
+              "label": "W"
+            },
+            {
+              "key": "E",
+              "label": "Soltar E"
+            }
+          ],
+          "situation": "Para esquivar una habilidad peligrosa mientras continúas haciendo daño.",
+          "execution": "Empieza a cargar E, activa W y libera la E mientras estás en el estanque.",
+          "mistake": "Si el enemigo todavía tiene herramientas para perseguirte, puedes quedar vulnerable al terminar W."
+        },
+        {
+          "name": "All-in con Hemoplaga",
+          "sequence": [
+            {
+              "key": "R",
+              "label": "R"
+            },
+            {
+              "key": "E",
+              "label": "Cargar E"
+            },
+            {
+              "key": "Q",
+              "label": "Q"
+            },
+            {
+              "key": "W",
+              "label": "W si es necesario"
+            },
+            {
+              "key": "E",
+              "label": "E"
+            }
+          ],
+          "situation": "Cuando puedes alcanzar a un objetivo prioritario y tienes suficiente daño para eliminarlo.",
+          "execution": "Aplica R primero para amplificar el daño. Carga E mientras te aproximas, conecta Q y utiliza W si necesitas evitar daño o control de masas.",
+          "mistake": "No gastes W automáticamente. Puede ser tu única protección frente a la respuesta enemiga."
+        },
+        {
+          "name": "Entrada en teamfight con Destello",
+          "sequence": [
+            {
+              "key": "E",
+              "label": "Cargar E"
+            },
+            {
+              "key": "Flash",
+              "label": "Destello"
+            },
+            {
+              "key": "R",
+              "label": "R"
+            },
+            {
+              "key": "E",
+              "label": "Soltar E"
+            },
+            {
+              "key": "Q",
+              "label": "Q"
+            },
+            {
+              "key": "W",
+              "label": "W"
+            }
+          ],
+          "situation": "Cuando varios enemigos están agrupados y puedes alcanzar a sus carries.",
+          "execution": "Prepara E antes de entrar, utiliza Destello para reposicionarte y aplica R a varios objetivos. Libera E y utiliza Q sobre el enemigo prioritario. Guarda W para esquivar la respuesta enemiga.",
+          "mistake": "Entrar sin comprobar el control de masas disponible puede acabar en una muerte instantánea."
+        }
+      ],
+      "sections": [
+        {
+          "id": "laning",
+          "heading": "Fase de líneas: sobrevive y escala",
+          "paragraphs": [
+            "Los primeros niveles de Vladimir consisten en conseguir oro sin perder demasiada vida. Tu daño inicial es limitado y los enfriamientos de tus habilidades son relativamente largos.",
+            "Utiliza Q para asegurar súbditos, recuperar vida y preparar intercambios. No necesitas ganar cada intercambio: puedes recuperar parte de la vida perdida mientras el enemigo consume recursos.",
+            "Contra magos de largo alcance, permite que la oleada se acerque a tu torre y evita recibir daño gratuito. Contra campeones cuerpo a cuerpo, castiga sus intentos de farmear con Q y autoataques.",
+            "Cuando consigas varios puntos en Q y tus primeros componentes de AP, tendrás más capacidad para controlar la línea."
+          ],
+          "bullets": [
+            "Prioriza el farmeo sobre los asesinatos arriesgados.",
+            "Conserva W cuando el jungla enemigo pueda intervenir.",
+            "No gastes demasiada vida utilizando E para limpiar una oleada.",
+            "Utiliza la Q potenciada para amenazar al enemigo y controlar el espacio."
+          ]
+        },
+        {
+          "id": "mid-game",
+          "heading": "Mitad de partida: alcanza tus picos de poder",
+          "paragraphs": [
+            "Vladimir mejora considerablemente cuando consigue AP, aceleración de habilidad y varios puntos en sus habilidades principales.",
+            "Empuja oleadas cuando sea seguro y busca oportunidades alrededor de dragones, Heraldo o Barón. Las peleas en zonas estrechas favorecen tu daño en área.",
+            "Evita perseguir campeones con mucha movilidad si no tienes Destello o Fantasmal disponibles."
+          ],
+          "bullets": [
+            "Farmea las oleadas laterales sin exponerte innecesariamente.",
+            "Agrúpate cuando haya objetivos importantes.",
+            "Busca ángulos laterales para alcanzar a los carries.",
+            "Controla tus hechizos de invocador antes de iniciar una pelea."
+          ]
+        },
+        {
+          "id": "teamfights",
+          "heading": "Teamfights: entra en el momento correcto",
+          "paragraphs": [
+            "Vladimir puede decidir una pelea con una Hemoplaga que alcance a varios campeones.",
+            "Sin embargo, no es un tanque y no debe iniciar todas las peleas. Su falta de movilidad y su vulnerabilidad cuando W está en enfriamiento pueden ser castigadas fácilmente.",
+            "Espera a que el enemigo utilice parte de su control de masas, busca un flanco y entra cuando tengas acceso a objetivos prioritarios.",
+            "Aplica R antes de utilizar tus principales fuentes de daño. Aprovecha W para sobrevivir mientras la Hemoplaga se prepara para explotar."
+          ],
+          "bullets": [
+            "Prioriza a los carries cuando puedas alcanzarlos con seguridad.",
+            "Intenta golpear a varios enemigos con R.",
+            "No gastes W para conseguir un poco de daño adicional.",
+            "Aprovecha la curación de R para continuar peleando."
+          ]
+        }
+      ],
+      "matchups": {
+        "difficult": [
+          {
+            "name": "Malzahar",
+            "icon": "Malzahar.png",
+            "advice": "Su definitiva puede inmovilizarte y permitir que su equipo te elimine. Evita entrar sin comprobar si tiene R disponible y considera comprar resistencia mágica o protección situacional."
+          },
+          {
+            "name": "Orianna",
+            "icon": "Orianna.png",
+            "advice": "Puede controlar la oleada y castigarte desde una distancia superior. Prioriza el farmeo y evita recibir daño gratuito mientras buscas oportunidades con Q potenciada."
+          },
+          {
+            "name": "Anivia",
+            "icon": "Anivia.png",
+            "advice": "Su control de zonas dificulta tu acceso a los objetivos y puede interrumpir tus intentos de acercarte. Evita las peleas dentro de su definitiva y respeta su capacidad de limpieza."
+          },
+          {
+            "name": "Kog'Maw",
+            "icon": "KogMaw.png",
+            "advice": "Puede castigarte a distancia y hacer mucho daño sostenido. Busca flancos y evita avanzar directamente por zonas abiertas donde pueda golpearte repetidamente."
+          }
+        ],
+        "favorable": [
+          {
+            "name": "Katarina",
+            "icon": "Katarina.png",
+            "advice": "Vladimir puede recuperar vida durante la fase de líneas y utilizar W para evitar parte del burst de Katarina. Castígala cuando intente recoger dagas y evita regalarle asesinatos en escaramuzas."
+          },
+          {
+            "name": "Yone",
+            "icon": "Yone.png",
+            "advice": "Puedes utilizar W para evitar momentos importantes de su combo. Castiga sus entradas predecibles y conserva la distancia cuando tenga su definitiva disponible."
+          },
+          {
+            "name": "Fizz",
+            "icon": "Fizz.png",
+            "advice": "Tu sustain dificulta que te desgaste mediante intercambios cortos. Guarda W para esquivar su definitiva o una parte decisiva de su combo."
+          }
+        ],
+        "note": "Los siguientes enfrentamientos son orientativos. Su dificultad depende del parche, las runas y la experiencia de los jugadores."
+      },
+      "mistakes": [
+        "Gastar Estanque sangriento sin una amenaza real.",
+        "No aprovechar la Q potenciada durante los intercambios.",
+        "Perder demasiada vida cargando E constantemente.",
+        "Entrar en teamfights sin Destello, Fantasmal ni una ruta segura.",
+        "Utilizar Hemoplaga después de gastar todo el daño.",
+        "Abandonar demasiado farmeo por buscar asesinatos tempranos.",
+        "Construir siempre los mismos objetos sin considerar la composición enemiga."
+      ],
+      "practicePlan": [
+        {
+          "title": "1. Ejercicio de Q potenciada",
+          "steps": [
+            "En la herramienta de práctica, utiliza Q repetidamente sobre muñecos y súbditos.",
+            "Observa cuándo se activa la versión potenciada y cuánto tiempo permanece disponible.",
+            "Practica acercarte al objetivo antes de que desaparezca.",
+            "Objetivo: Reconocer automáticamente tus ventanas de daño."
+          ]
+        },
+        {
+          "title": "2. Ejercicio de E + W",
+          "steps": [
+            "Carga E y activa W antes de liberar la habilidad.",
+            "Repite el combo desde distintas distancias y aprende a calcular su alcance.",
+            "Objetivo: Ejecutar el combo defensivo sin perder tiempo ni posicionamiento."
+          ]
+        },
+        {
+          "title": "3. Ejercicio de teamfight",
+          "steps": [
+            "En una repetición, revisa cada pelea importante.",
+            "Identifica cuándo utilizaste W, cuántos enemigos golpeaste con R y si existía una mejor ruta de entrada.",
+            "Objetivo: Mejorar el momento de entrada y la supervivencia."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "¿Es difícil aprender a Vladimir?",
+          "a": "Sus habilidades son relativamente sencillas, pero dominar sus enfriamientos, el posicionamiento y las entradas en teamfights requiere práctica."
+        },
+        {
+          "q": "¿Cuál es la mejor build de Vladimir en el parche 26.22?",
+          "a": "Una opción habitual empieza con Sobrecarga tormentosa y continúa con objetos como Tormento de Liandry, Bastón del Vacío y Sombrero mortal de Rabadon. La mejor combinación depende de la partida."
+        },
+        {
+          "q": "¿Qué orden de habilidades debo utilizar?",
+          "a": "Q primero, E segundo y W al final, mejorando R siempre que esté disponible."
+        },
+        {
+          "q": "¿Cuándo debo utilizar Estanque sangriento?",
+          "a": "Principalmente para evitar habilidades peligrosas, control de masas y daño que pueda matarte."
+        },
+        {
+          "q": "¿Vladimir es bueno para principiantes?",
+          "a": "Es accesible mecánicamente, pero exige aprender a farmear, gestionar la vida y elegir el momento de entrar."
+        },
+        {
+          "q": "¿Vladimir es mejor en mid o top?",
+          "a": "Mid es su posición principal en esta guía. Top también es viable, aunque presenta enfrentamientos y necesidades de posicionamiento diferentes."
+        }
+      ],
+      "sources": [
+        {
+          "label": "U.GG - Vladimir Mid, Patch 26.22",
+          "url": "https://u.gg/lol/champions/vladimir/build?patch=26_22"
+        },
+        {
+          "label": "League of Legends - Vladimir",
+          "url": "https://www.leagueoflegends.com/en-us/champions/vladimir/"
+        },
+        {
+          "label": "League of Legends Wiki - Vladimir",
+          "url": "https://wiki.leagueoflegends.com/en-us/Vladimir"
+        },
+        {
+          "label": "KPM.gg - Vladimir Mid",
+          "url": "https://kpm.gg/champions/vladimir/build"
+        }
+      ],
+      "statsNote": "Las estadísticas de esta guía corresponden al parche 26.22, Solo/Dúo, Esmeralda+ y región global, cuando se indica. Los porcentajes cambian conforme aumenta el número de partidas y pueden variar entre plataformas.",
+      "lastUpdated": "2026-11-17"
     }
   }
 }

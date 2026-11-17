@@ -1,4 +1,14 @@
 {
+  "rouletteStyles": {
+    "label": "نمط الروليت",
+    "classic": "الروليت الكلاسيكي",
+    "slots": "آلة الحظ",
+    "switchClassic": "التبديل إلى الروليت",
+    "switchSlots": "التبديل إلى آلة الحظ",
+    "loadError": "Could not load champions.",
+    "retry": "Try again",
+    "emptyPool": "No champions match these filters."
+  },
     "nav": {
         "play": "اللعب",
         "leaderboard": "لوحة المتصدرين",

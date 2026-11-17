@@ -433,7 +433,7 @@ export default async function GuideArticle({ content, meta, locale, related }: G
                 {content.roleLabel}
               </span>
               <span className="rounded-full border border-neutral-700 bg-neutral-900/80 px-3 py-1 text-neutral-300">
-                {t('guide.patchLabel', { patch: GUIDE_PATCH })}
+                {t('guide.patchLabel', { patch: meta.patch ?? GUIDE_PATCH })}
               </span>
               <span className="rounded-full border border-neutral-700 bg-neutral-900/80 px-3 py-1 text-neutral-300">
                 {t('guide.difficulty')}: {content.difficultyLabel}
@@ -784,7 +784,7 @@ export default async function GuideArticle({ content, meta, locale, related }: G
             <div className="sticky top-24 space-y-6">
               {meta.stats.length ? (
                 <div className="rounded-3xl border border-neutral-800 bg-neutral-900/60 p-4">
-                  <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-neutral-500">{t('guide.patchLabel', { patch: GUIDE_PATCH })}</p>
+                  <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-neutral-500">{t('guide.patchLabel', { patch: meta.patch ?? GUIDE_PATCH })}</p>
                   <div className="space-y-3">
                     {meta.stats.map((stat) => (
                       <StatCard key={stat.source} stat={stat} t={t} />

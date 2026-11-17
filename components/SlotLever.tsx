@@ -6,11 +6,12 @@ import { useTranslations } from 'next-intl'
 
 interface SlotLeverProps {
   onActivate?: () => void;
+  onPullStart?: () => void;
   disabled?: boolean;
   isSpinning?: boolean;
 }
 
-export default function SlotLever({ onActivate, disabled = false, isSpinning = false }: SlotLeverProps) {
+export default function SlotLever({ onActivate, onPullStart, disabled = false, isSpinning = false }: SlotLeverProps) {
   const t = useTranslations('slotLever')
   const [pulling, setPulling] = useState(false)
   const onActivateRef = useRef(onActivate)
@@ -42,6 +43,7 @@ export default function SlotLever({ onActivate, disabled = false, isSpinning = f
 
     pullingRef.current = true
     setPulling(true)
+    onPullStart?.()
 
     const audio = audioRef.current
     if (audio) {
@@ -77,6 +79,7 @@ export default function SlotLever({ onActivate, disabled = false, isSpinning = f
       role="button"
       tabIndex={disabled ? -1 : 0}
       aria-disabled={disabled}
+      aria-label={isSpinning ? t('spinning') : t('pull')}
       onKeyDown={(e) => {
         if (e.key === 'Enter' || e.key === ' ') {
           e.preventDefault()
