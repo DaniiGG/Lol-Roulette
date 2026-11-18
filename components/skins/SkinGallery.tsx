@@ -16,9 +16,9 @@ export function SkinCard({ skin, champion, locale }: { skin: SkinCardData; champ
   const href = `${base(locale)}/${champion.slug}/${skin.slug}`
   return <article className={styles.card}>
     <FavoriteButton id={skin.id} locale={locale} />
-    <Link href={href} aria-label={`${t.view}: ${skin.name[locale]}`}>
+    <Link href={href} prefetch={false} aria-label={`${t.view}: ${skin.name[locale]}`}>
       <div className={styles.cardArt}>
-        <Image src={`https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champion.id}_${skin.num}.jpg`} alt={skin.name[locale]} fill sizes="(max-width: 700px) 46vw, 380px" className={styles.image} />
+        <Image src={`https://ddragon.leagueoflegends.com/cdn/img/champion/loading/${champion.id}_${skin.num}.jpg`} alt={skin.name[locale]} fill unoptimized className={styles.image} />
         <div className={styles.artFade} /><span className={styles.badge}>{t.rarities[skin.rarity as keyof typeof t.rarities] ?? skin.rarity}</span>
       </div>
       <div className={styles.cardBody}><p className={styles.cardMeta}>{champion.name[locale]}{skin.legacy ? ` · ${t.legacy}` : ''}</p><h3 className={styles.cardName}>{skin.name[locale]}</h3></div>
@@ -55,8 +55,8 @@ export default function SkinGallery({ skins, champions, locale, version, champio
     </div></div>
     <div className={styles.sectionHead}><h2>{showSkins ? t.gallery : t.browse}</h2>{!championOnly && <div className={styles.toolRow}><button type="button" className={styles.toggle + (!showSkins ? ' ' + styles.active : '')} aria-pressed={!showSkins} onClick={() => { clear(); setMode('champions') }}>{t.champions}</button><button type="button" className={styles.toggle + (showSkins ? ' ' + styles.active : '')} aria-pressed={showSkins} onClick={() => setMode('skins')}>{t.skins}</button></div>}</div>
     <p className={styles.muted} role="status" style={{ marginBottom: 18 }}>{showSkins ? results.length : champions.length} {t.results}</p>
-    {!showSkins ? <div className={styles.champions}>{champions.map(champion => <Link key={champion.id} href={`${base(locale)}/${champion.slug}`} className={styles.champion}>
-      <Image src={`https://ddragon.leagueoflegends.com/cdn/${version}/img/champion/${champion.id}.png`} alt="" width={52} height={52} className={styles.championIcon} />
+    {!showSkins ? <div className={styles.champions}>{champions.map(champion => <Link key={champion.id} href={`${base(locale)}/${champion.slug}`} prefetch={false} className={styles.champion}>
+      <Image src={`https://ddragon.leagueoflegends.com/cdn/${version}/img/champion/${champion.id}.png`} alt="" width={52} height={52} unoptimized className={styles.championIcon} />
       <span><span className={styles.championName}>{champion.name[locale]}</span><span className={styles.championCount}>{counts.get(champion.slug) ?? 0} skins</span></span><ArrowUpRight size={14} className={styles.arrow} aria-hidden="true" />
     </Link>)}</div> : results.length ? <><div className={styles.grid}>{results.slice(0, championOnly ? results.length : limit).map(skin => <SkinCard key={skin.id} skin={skin} champion={championMap.get(skin.champion)!} locale={locale} />)}</div>{!championOnly && limit < results.length && <div className={styles.more}><button type="button" className={styles.cta} onClick={() => setLimit(value => value + 36)}>{t.showMore}</button></div>}</> : <div className={styles.empty}>{t.empty}<button type="button" onClick={clear}>{t.clear}</button></div>}
   </section>

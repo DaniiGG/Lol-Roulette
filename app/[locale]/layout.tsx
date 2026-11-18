@@ -11,6 +11,7 @@ const geistSans = { variable: '' } as any
 const geistMono = { variable: '' } as any
 
 const rtlLocales = ['ar']
+const serverOnlyMessages = new Set(['blog-content', 'champion-guide-content', 'patch-tier-list'])
 
 export const metadata: Metadata = rootMetadata
 
@@ -23,7 +24,9 @@ export default async function LocaleLayout({
 }>) {
   const { locale } = await params
   setRequestLocale(locale)
-  const messages = await getMessages()
+  const messages = Object.fromEntries(
+    Object.entries(await getMessages()).filter(([namespace]) => !serverOnlyMessages.has(namespace))
+  )
   const dir = rtlLocales.includes(locale) ? 'rtl' : 'ltr'
 
   return (

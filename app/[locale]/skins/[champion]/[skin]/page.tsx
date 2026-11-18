@@ -14,9 +14,13 @@ import styles from '@/components/skins/Skins.module.css'
 
 type Props = { params: Promise<{ locale: string; champion: string; skin: string }> }
 const plainText = (value: string) => value.replace(/<[^>]*>/g, '').replace(/&nbsp;/g, ' ').trim()
-// Build on demand and cache: avoid rendering thousands of detail pages at deploy time.
-export const revalidate = 86400
-export function generateStaticParams() { return [] }
+export const dynamicParams = false
+
+export function generateStaticParams() {
+  return SKIN_LOCALES.flatMap(locale =>
+    skinCatalog.skins.map(skin => ({ locale, champion: skin.champion, skin: skin.slug }))
+  )
+}
 export async function generateMetadata({ params }: Props) {
   const { locale, champion, skin: slug } = await params
   const skin = findSkin(champion, slug)

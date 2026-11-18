@@ -3,15 +3,20 @@ import { notFound } from 'next/navigation'
 import { setRequestLocale } from 'next-intl/server'
 import SkinShell, { SkinSchema } from '@/components/skins/SkinShell'
 import SkinGallery from '@/components/skins/SkinGallery'
-import { skinCatalog, championSkins, findSkinChampion, isSkinLocale, skinCard, skinSplash } from '@/lib/skins/data'
+import { SKIN_LOCALES, skinCatalog, championSkins, findSkinChampion, isSkinLocale, skinCard, skinSplash } from '@/lib/skins/data'
 import { skinCopy } from '@/lib/skins/copy'
 import { skinBase, skinBreadcrumbSchema, skinMetadata } from '@/lib/skins/seo'
 import { SITE_URL } from '@/lib/site'
 import styles from '@/components/skins/Skins.module.css'
 
 type Props = { params: Promise<{ locale: string; champion: string }> }
-export const dynamicParams = true
-export function generateStaticParams() { return ['en', 'es'].flatMap(locale => skinCatalog.champions.map(champion => ({ locale, champion: champion.slug }))) }
+export const dynamicParams = false
+
+export function generateStaticParams() {
+  return SKIN_LOCALES.flatMap(locale =>
+    skinCatalog.champions.map(champion => ({ locale, champion: champion.slug }))
+  )
+}
 export async function generateMetadata({ params }: Props) {
   const { locale, champion: slug } = await params
   const champion = findSkinChampion(slug)
