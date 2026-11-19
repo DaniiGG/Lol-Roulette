@@ -42,7 +42,6 @@ export default async function ModesPage({ params }: { params: Promise<{ locale: 
         />
 
         <div className="mb-10">
-          <p className="mb-3 text-sm uppercase tracking-[0.3em] text-[#C89B3C]">{t('sectionLabel') || 'Game Modes'}</p>
           <h1 className="mb-4 text-4xl font-semibold tracking-tight text-white md:text-5xl">{t('title')}</h1>
           <p className="max-w-3xl text-lg leading-8 text-neutral-300">{t('subtitle')}</p>
         </div>

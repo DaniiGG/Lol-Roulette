@@ -11,7 +11,7 @@ Rutas publicadas en inglés y español:
 
 Ejecuta `npm run update:skins` al actualizarse el parche. Requiere acceso a Data Dragon y CommunityDragon. El script fija el mismo parche de assets para ambas fuentes, valida que la descarga esté completa y solo escribe el JSON después de terminar todas las peticiones. Si los datos no cambian, conserva la fecha anterior. No requiere claves privadas ni cuentas de jugadores.
 
-El catálogo se guarda en `lib/skins/catalog.json`. Las fichas se generan durante el build y se actualizan al desplegar un catálogo nuevo. Las tarjetas cargan los retratos directamente desde el CDN de Riot. Next Image optimiza las ilustraciones grandes.
+El catálogo se guarda en `lib/skins/catalog.json`. Las fichas se generan durante el build y se actualizan al desplegar un catálogo nuevo. Los retratos y las ilustraciones se cargan directamente desde el CDN de Riot.
 
 ## SEO
 

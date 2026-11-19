@@ -29,7 +29,9 @@ const breadcrumbSchema = {
   ],
 }
 
-export default async function AboutPage() {
+export default async function AboutPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params
+  setRequestLocale(locale)
   const t = await getTranslations('about')
   const communityP3 = t('communityP3', { contactLink: '__CONTACT_LINK__' })
   const [communityBefore, communityAfter] = communityP3.split('__CONTACT_LINK__')

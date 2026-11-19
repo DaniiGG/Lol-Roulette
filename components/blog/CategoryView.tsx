@@ -32,9 +32,6 @@ export default function CategoryView({ posts, locale, categorySlug, t }: Categor
         />
 
         <header className="mb-12">
-          <p className="mb-3 text-sm uppercase tracking-[0.3em] text-[#C89B3C]">
-            {t('categoryLabel')}
-          </p>
           <h1 className="mb-4 text-4xl font-semibold tracking-tight text-white md:text-5xl">
             {t(`categories.${categorySlug}.name`)}
           </h1>

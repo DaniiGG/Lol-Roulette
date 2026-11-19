@@ -40,18 +40,14 @@ type BlogPostPageProps = {
   }>
 }
 
-export async function generateStaticParams() {
-  const params: { locale: string; slug: string }[] = []
-  for (const locale of routing.locales) {
-    for (const canonicalSlug of BLOG_SLUGS) {
-      const localizedSlug = getLocalizedSlug(canonicalSlug, locale)
-      params.push({ locale, slug: localizedSlug })
-      if (localizedSlug !== canonicalSlug) {
-        params.push({ locale, slug: canonicalSlug })
-      }
-    }
+export const dynamicParams = false
+
+export function generateStaticParams() {
+  const slugs = new Set<string>(BLOG_SLUGS)
+  for (const canonicalSlug of BLOG_SLUGS) {
+    for (const locale of routing.locales) slugs.add(getLocalizedSlug(canonicalSlug, locale))
   }
-  return params
+  return [...slugs].map(slug => ({ slug }))
 }
 
 export async function generateMetadata(

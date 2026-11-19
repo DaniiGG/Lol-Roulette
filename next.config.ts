@@ -61,13 +61,7 @@ const nextConfig: NextConfig = {
     return buildLegacyRedirects();
   },
   images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'ddragon.leagueoflegends.com',
-        pathname: '/cdn/**',
-      },
-    ],
+    unoptimized: true,
   },
   webpack: (config: { resolve: { fallback: { fs: boolean } } }) => {
     config.resolve.fallback = { fs: false };

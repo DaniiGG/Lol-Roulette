@@ -1,53 +1,18 @@
-import { NextResponse } from "next/server"
-import { getChampionsByLane, normalizeChampionName } from "@/lib/champion-lanes"
+import { NextResponse } from 'next/server'
+import { championIconUrl } from '@/lib/champion-data'
+import { getRouletteChampions } from '@/lib/roulette-champions'
 
-type Champion = {
-  id: string
-  key: string
-  name: string
-  tags: string[]
-}
+export function GET(request: Request) {
+  const lane = new URL(request.url).searchParams.get('lane')?.toLowerCase() || 'all'
+  const champions = getRouletteChampions(lane)
+  const champion = champions[Math.floor(Math.random() * champions.length)]
 
-export async function GET(request: Request) {
-  const { searchParams } = new URL(request.url)
-  const lane = searchParams.get('lane')?.toLowerCase() || 'all'
-
-  const version = "16.22.1"
-
-  try {
-    const res = await fetch(
-      `https://ddragon.leagueoflegends.com/cdn/${version}/data/es_ES/champion.json`,
-      { cache: "force-cache" }
-    )
-
-    if (!res.ok) throw new Error("Champion data unavailable")
-    const data = await res.json()
-    const allChampions: Champion[] = Object.values(data.data)
-
-    const validChampionNames = getChampionsByLane(lane)
-
-    let champions = allChampions.filter(champ => 
-      validChampionNames.some(name => normalizeChampionName(name) === champ.id)
-    )
-
-    if (champions.length === 0) {
-      champions = allChampions
-    }
-
-    const random = champions[Math.floor(Math.random() * champions.length)]
-
-    return NextResponse.json({
-      id: random.id,
-      key: Number(random.key),
-      name: random.name,
-      tags: random.tags,
-      lane: lane
-    })
-
-  } catch (error) {
-    return NextResponse.json(
-      { error: "Failed to fetch champions" },
-      { status: 500 }
-    )
-  }
+  return NextResponse.json({
+    id: champion.id,
+    key: champion.key,
+    name: champion.name.es,
+    tags: champion.tags,
+    lane,
+    imageUrl: championIconUrl(champion.id),
+  })
 }

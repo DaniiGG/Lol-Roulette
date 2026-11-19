@@ -76,7 +76,7 @@ export default async function PopularPage({ params }: { params: Promise<{ locale
                 href={{ pathname: '/', query: { champion: champion.name } }}
                 className="rounded-xl bg-[#C89B3C] px-4 py-2 text-sm font-semibold text-neutral-950 transition hover:bg-[#d9aa44]"
               >
-                {t('spinWith') || 'Spin with'}
+                {t.has('spinWith') ? t('spinWith') : 'Spin with'}
               </Link>
             </div>
           ))}

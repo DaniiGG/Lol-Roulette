@@ -2,10 +2,11 @@
 
 import sidebarStyles from '@/components/HomeSidebar.module.css'
 
-import { useState, useEffect, useRef, useSyncExternalStore } from "react"
+import { Suspense, useState, useEffect, useRef, useSyncExternalStore } from "react"
 import { resolveLegacyPostHref } from "@/lib/blog/meta"
 import { useTranslations, useLocale } from "next-intl"
 import { useSearchParams } from "next/navigation"
+import { championIconUrl } from '@/lib/champion-data'
 import { supabase } from "@/lib/supabase"
 import { ACHIEVEMENTS, checkAchievement, calculateLevel } from "@/lib/achievements"
 import {
@@ -33,12 +34,19 @@ import ChampionStats from "@/components/ChampionStats"
 import MatchSimulator from "@/components/MatchSimulator"
 import { AutoVerifier } from "@/lib/auto-verify"
 import RSOLoginModal from "@/components/RSOLoginmodal"
+
 import ChampionPoolModal from "@/components/ChampionPoolModal"
 import Toast from "@/components/Toast"
 import { loadChampionPool, getPoolForLane, type ChampionPool } from "@/lib/champion-pool"
 import { getChallengesByType } from "@/lib/challenge-definitions"
 
 import Script from "next/script"
+
+function ChallengeQuery({ onChange }: { onChange: (value: string | null) => void }) {
+  const challenge = useSearchParams().get('challenge')
+  useEffect(() => onChange(challenge), [challenge, onChange])
+  return null
+}
 
 type GuestPick = {
   id: string
@@ -138,8 +146,7 @@ export default function Home({ seoContent }: { seoContent: ReactNode }) {
     getGuestPicksSnapshot,
     () => '[]'
   ))
-  const searchParams = useSearchParams()
-  const urlChallenge = searchParams.get('challenge')
+  const [urlChallenge, setUrlChallenge] = useState<string | null>(null)
 
   // User state
   const [user, setUser] = useState<any>(null)
@@ -149,7 +156,7 @@ export default function Home({ seoContent }: { seoContent: ReactNode }) {
   const [showAchievementsModal, setShowAchievementsModal] = useState(false)
 
   // Challenge state
-  const [activeChallengeId, setActiveChallengeId] = useState<string | null>(urlChallenge || null)
+  const [activeChallengeId, setActiveChallengeId] = useState<string | null>(null)
   const [challengeLane, setChallengeLane] = useState<string>('all')
   const [activeChallengeSession, setActiveChallengeSession] = useState<any>(null)
   const activeChallengeType = activeChallengeSession?.challenge_type
@@ -686,6 +693,9 @@ export default function Home({ seoContent }: { seoContent: ReactNode }) {
 
   return (
     <main className="min-h-screen relative overflow-hidden bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950">
+      <Suspense fallback={null}>
+        <ChallengeQuery onChange={setUrlChallenge} />
+      </Suspense>
 
       {/* Background effects */}
       <div className="absolute inset-0 opacity-[0.02]" style={{
@@ -776,7 +786,7 @@ export default function Home({ seoContent }: { seoContent: ReactNode }) {
                       {guestPicks.map((pick) => (
                         <li key={pick.createdAt} title={pick.name} className={`${sidebarStyles.champion}`}>
                           <img
-                            src={`https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/${pick.id}.png`}
+                            src={championIconUrl(pick.id)}
                             alt={pick.name}
                             className={`${sidebarStyles.portrait}`}
                             width={44}

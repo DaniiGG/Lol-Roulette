@@ -29,7 +29,9 @@ const breadcrumbSchema = {
   ],
 }
 
-export default async function HowToPlayPage() {
+export default async function HowToPlayPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params
+  setRequestLocale(locale)
   const t = await getTranslations('howToPlay')
 
   return (

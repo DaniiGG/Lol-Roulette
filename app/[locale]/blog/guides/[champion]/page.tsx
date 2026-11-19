@@ -27,18 +27,15 @@ type GuidePageProps = {
 
 const BASE_URL = 'https://leagueroulette.com'
 
-export async function generateStaticParams() {
-  const params: Array<{ locale: string; champion: string }> = []
-  for (const locale of GUIDE_LOCALES) {
-    for (const guide of GUIDE_CHAMPIONS) {
-      const localizedSlug = getGuideSlug(guide.slug, locale)
-      params.push({ locale, champion: localizedSlug })
-      if (localizedSlug !== guide.slug) {
-        params.push({ locale, champion: guide.slug })
-      }
-    }
+export const dynamicParams = false
+
+export function generateStaticParams() {
+  const slugs = new Set<string>()
+  for (const guide of GUIDE_CHAMPIONS) {
+    slugs.add(guide.slug)
+    for (const locale of GUIDE_LOCALES) slugs.add(getGuideSlug(guide.slug, locale))
   }
-  return params
+  return GUIDE_LOCALES.flatMap(locale => [...slugs].map(champion => ({ locale, champion })))
 }
 
 export async function generateMetadata({ params }: GuidePageProps): Promise<Metadata> {

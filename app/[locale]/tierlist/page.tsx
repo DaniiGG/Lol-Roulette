@@ -67,7 +67,6 @@ export default async function TierListPage({ params }: { params: Promise<{ local
         </div>
 
         <div className="mb-8">
-          <h2 className="mb-4 text-xl font-semibold text-white">{t('tiers') || 'Tier Legend'}</h2>
           <div className="flex flex-wrap gap-3">
             {Object.entries(tierLabels).map(([tier, label]) => (
               <span

@@ -30,7 +30,9 @@ const breadcrumbSchema = {
   ],
 }
 
-export default async function PrivacyPolicy() {
+export default async function PrivacyPolicy({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params
+  setRequestLocale(locale)
   const t = await getTranslations('privacy')
 
   return (

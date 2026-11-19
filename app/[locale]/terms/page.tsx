@@ -29,7 +29,9 @@ const breadcrumbSchema = {
   ],
 }
 
-export default async function TermsOfService() {
+export default async function TermsOfService({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params
+  setRequestLocale(locale)
   const t = await getTranslations('terms')
 
   return (

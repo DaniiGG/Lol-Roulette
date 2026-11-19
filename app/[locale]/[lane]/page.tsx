@@ -2,10 +2,10 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import LaneRoulette from '@/components/LaneRoulette'
+import { getRouletteChampions } from '@/lib/roulette-champions'
 import { GUIDE_CHAMPIONS, getGuideHref, isGuideLocale } from '@/lib/guides/meta'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { buildPageMetadata, localizedPath } from '@/lib/seo/page-metadata'
-import { routing } from '@/i18n/routing'
 import type { AppPathnames } from '@/i18n/routes'
 
 import { getPostHref } from '@/lib/blog/meta'
@@ -51,15 +51,10 @@ async function getLaneCopy(lane: string) {
   }
 }
 
-export async function generateStaticParams() {
-  const lanes = Object.keys(LANE_META)
-  const params: { locale: string; lane: string }[] = []
-  for (const locale of routing.locales) {
-    for (const lane of lanes) {
-      params.push({ locale, lane })
-    }
-  }
-  return params
+export const dynamicParams = false
+
+export function generateStaticParams() {
+  return Object.keys(LANE_META).map(lane => ({ lane }))
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string; lane: string }> }): Promise<Metadata> {
@@ -119,7 +114,10 @@ export default async function LanePage({ params }: { params: Promise<{ locale: s
           <h1 className="mb-3 text-4xl font-semibold tracking-tight text-white md:text-5xl">{copy.title}</h1>
           <p className="max-w-2xl text-lg leading-8 text-neutral-300">{copy.description}</p>
         </div>
-        <LaneRoulette lane={LANE_ROLE_KEYS[lane]} />
+        <LaneRoulette champions={getRouletteChampions(LANE_ROLE_KEYS[lane]).map(champion => ({
+          id: champion.id,
+          name: locale === 'es' ? champion.name.es : champion.name.en,
+        }))} />
         <nav aria-label={copy.role} className="mb-8 flex flex-wrap gap-4">
           {Object.keys(LANE_META).filter(key => key !== lane).map(key => (
             <Link key={key} href={localizedPath(locale, `/${key}` as AppPathnames)} className="text-[#C89B3C] underline underline-offset-4">
