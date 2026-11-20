@@ -46,12 +46,6 @@ function getLocaleHref(
   }
 
   if (!isRouteAvailable(pathname, targetLocale)) return null;
-  if (pathname === '/skins/[champion]' || pathname === '/skins/[champion]/[skin]') {
-    const champion = typeof params.champion === 'string' ? params.champion : '';
-    const skin = typeof params.skin === 'string' ? params.skin : '';
-    if (!champion || (pathname === '/skins/[champion]/[skin]' && !skin)) return null;
-    return { pathname, params: pathname === '/skins/[champion]' ? { champion } : { champion, skin } };
-  }
   return { pathname };
 }
 

@@ -3,11 +3,11 @@
 import { useState } from 'react'
 import { Link, usePathname } from '@/i18n/navigation'
 import Image from 'next/image'
-import { useLocale, useTranslations } from 'next-intl'
+import { useTranslations } from 'next-intl'
 import type { AppPathnames } from '@/i18n/routes'
 import LocaleSwitcher from './LocaleSwitcher'
 
-type NavHref = Exclude<AppPathnames, '/blog/[slug]' | '/blog/guides/[champion]' | '/skins/[champion]' | '/skins/[champion]/[skin]'>
+type NavHref = Exclude<AppPathnames, '/blog/[slug]' | '/blog/guides/[champion]'>
 
 type NavLink = {
   href: NavHref
@@ -21,13 +21,11 @@ export default function Navbar() {
   const pathname = usePathname()
   const t = useTranslations('nav')
   const tQuiz = useTranslations('quiz')
-  const locale = useLocale()
 
-  const isActive = (path: string) => path === '/blog' || path === '/skins' ? pathname.startsWith(path) : pathname === path
+  const isActive = (path: string) => path === '/blog' ? pathname.startsWith(path) : pathname === path
 
 const navLinks: NavLink[] = [
     { href: '/', label: t('play'), icon: '🎮' },
-    ...(locale === 'en' || locale === 'es' ? [{ href: '/skins' as const, label: 'Skins', icon: '✧' }] : []),
     { href: '/leaderboard', label: t('leaderboard'), icon: '🏆' },
     { href: '/challenges', label: t('challenges'), icon: '⚡', isNew: true },
     { href: '/find-your-main', label: tQuiz('navLabel'), icon: '✦' },

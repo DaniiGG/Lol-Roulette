@@ -29,7 +29,6 @@ import AutoVerifyIndicator from "@/components/AutoVerifyIndicator"
 import RouletteSwitcher from "@/components/RouletteSwitcher"
 import type { ReactNode } from "react"
 import ChampionGuideLink from "@/components/ChampionGuideLink"
-import ChampionSkinLink from "@/components/ChampionSkinLink"
 import ChampionStats from "@/components/ChampionStats"
 import MatchSimulator from "@/components/MatchSimulator"
 import { AutoVerifier } from "@/lib/auto-verify"
@@ -918,7 +917,6 @@ export default function Home({ seoContent }: { seoContent: ReactNode }) {
               />
 
               {champ && !spinning && <ChampionGuideLink championId={champ.id} />}
-              {champ && !spinning && <ChampionSkinLink championId={champ.id} />}
 
 
 

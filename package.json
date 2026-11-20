@@ -7,9 +7,7 @@
     "build": "next build --webpack",
     "start": "next start",
     "lint": "eslint",
-    "test": "node --test tests/quiz-scoring.test.mjs",
-    "test:skins": "node --test tests/skins.test.mjs",
-    "update:skins": "node scripts/update-skins.mjs"
+    "test": "node --test tests/quiz-scoring.test.mjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.91.1",

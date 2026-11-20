@@ -103,10 +103,6 @@ export const pathnames = {
   '/tips': same('/tips'),
 
   // Skin galleries have real English and Spanish content.
-  '/skins': { en: '/skins', es: '/skins' },
-  '/skins/shop': { en: '/skins/shop', es: '/skins/shop' },
-  '/skins/[champion]': { en: '/skins/[champion]', es: '/skins/[champion]' },
-  '/skins/[champion]/[skin]': { en: '/skins/[champion]/[skin]', es: '/skins/[champion]/[skin]' },
 
   // Lanes
   '/top-lane': same('/top-lane'),
@@ -155,10 +151,6 @@ export const ROUTES = {
   terms: '/terms',
   tierlist: '/tierlist',
   tips: '/tips',
-  skins: '/skins',
-  skinShop: '/skins/shop',
-  championSkins: '/skins/[champion]',
-  skin: '/skins/[champion]/[skin]',
   topLane: '/top-lane',
   jungle: '/jungle',
   midLane: '/mid-lane',
@@ -198,10 +190,6 @@ export const ROUTE_LOCALES: Record<AppPathnames, readonly string[]> = {
   '/terms': ALL_LOCALES,
   '/tierlist': ALL_LOCALES,
   '/tips': ALL_LOCALES,
-  '/skins': CONTENT_LOCALES,
-  '/skins/shop': CONTENT_LOCALES,
-  '/skins/[champion]': CONTENT_LOCALES,
-  '/skins/[champion]/[skin]': CONTENT_LOCALES,
   '/top-lane': ALL_LOCALES,
   '/jungle': ALL_LOCALES,
   '/mid-lane': ALL_LOCALES,
