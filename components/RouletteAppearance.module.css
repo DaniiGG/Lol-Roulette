@@ -1,5 +1,8 @@
 .stage, .stage *, .stage *::before, .stage *::after { box-sizing:border-box; }
 .surface { width:100%; max-width:576px; margin-inline:auto; }
+.tryArrow { display:inline-flex; animation:pointAtStyle 1s ease-in-out infinite alternate; }
+@keyframes pointAtStyle { from { translate:-2px 0; } to { translate:2px 0; } }
+@media(prefers-reduced-motion:reduce) { .tryArrow { animation:none; } }
 .stage { position:relative; width:100%; min-width:0; isolation:isolate; }
 .lever { position:absolute; right:-80px; top:50%; width:72px; height:150px; transform:translateY(-50%); z-index:45; }
 .leverScale { width:200px; transform:scale(.36); transform-origin:top left; }

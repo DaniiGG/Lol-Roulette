@@ -1,5 +1,13 @@
 {
+  "rouletteShare": {
+    "label": "룰렛 공유",
+    "copy": "링크 복사",
+    "copied": "링크를 복사했습니다"
+  },
   "rouletteStyles": {
+    "puzzle": "퍼즐",
+    "balls": "추첨 볼",
+    "cards": "카드",
     "label": "룰렛 스타일",
     "classic": "클래식 룰렛",
     "slots": "슬롯머신",

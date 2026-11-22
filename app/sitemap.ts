@@ -81,16 +81,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   }
 
-  // Interactive champion mastery tree (English and Spanish only).
-  for (const locale of blogLocales) {
-    entries.push({
-      url: localizedUrl(locale, '/mastery-tree'),
-      changeFrequency: 'weekly',
-      priority: 0.8,
-      alternates: buildAlternates('/mastery-tree', blogLocales),
-    })
-  }
-
   // Blog index.
   for (const locale of blogLocales) {
     entries.push({

@@ -1,5 +1,13 @@
 {
+  "rouletteShare": {
+    "label": "Compartilhar roleta",
+    "copy": "Copiar link",
+    "copied": "Link copiado"
+  },
   "rouletteStyles": {
+    "puzzle": "Quebra-cabeça",
+    "balls": "Sorteio de bolas",
+    "cards": "Cartas",
     "label": "Estilo da roleta",
     "classic": "Roleta clássica",
     "slots": "Caça-níqueis",

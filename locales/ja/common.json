@@ -1,5 +1,13 @@
 {
+  "rouletteShare": {
+    "label": "ルーレットを共有",
+    "copy": "リンクをコピー",
+    "copied": "リンクをコピーしました"
+  },
   "rouletteStyles": {
+    "puzzle": "パズル",
+    "balls": "抽選ボール",
+    "cards": "カード",
     "label": "ルーレットのスタイル",
     "classic": "クラシックルーレット",
     "slots": "スロットマシン",
@@ -556,8 +564,8 @@
     },
     "seo": {
         "srHeading": "無料のランダムLoLチャンピオングェネレーター | League Roulette",
-        "whatIsTitle": "What is League Roulette?",
-        "whatIsText": "League Roulette is a <strong>free random champion generator</strong> for League of Legends (LoL). Spin the wheel to get a random LoL champion and challenge yourself to win ranked or normal games.",
+        "whatIsTitle": "League Rouletteとは？",
+        "whatIsText": "League Rouletteは、<strong>LoLのチャンピオンをランダムに選べる無料のルーレット</strong>です。すべてのチャンピオンから抽選するか、ロールや候補を絞って次の試合で使うチャンピオンを選べます。登録は不要です。",
         "howToTitle": "How to Use the Random Champion Picker",
         "howToSteps": [
             "Select your preferred lane (Top, Jungle, Mid, ADC, or Support)",

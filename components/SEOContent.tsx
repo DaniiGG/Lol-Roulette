@@ -1,17 +1,7 @@
-import { useLocale, useTranslations } from 'next-intl'
-import Link from 'next/link'
-import { localizedPath } from '@/lib/seo/page-metadata'
-import type { AppPathnames } from '@/i18n/routes'
+import { useTranslations } from 'next-intl'
 
 export default function SEOContent() {
   const t = useTranslations('seo')
-  const locale = useLocale()
-  const pageSeo = useTranslations('page-seo')
-  const lanes = useTranslations('laneSelector')
-  const rolePages = [
-    ['top-lane', 'top'], ['jungle', 'jungle'], ['mid-lane', 'mid'],
-    ['adc', 'adc'], ['support', 'support'], ['aram', 'aram'],
-  ] as const
   const faqSchema = {
     '@context': 'https://schema.org', '@type': 'FAQPage',
     mainEntity: Array.from({ length: 8 }, (_, index) => ({
@@ -29,10 +19,6 @@ export default function SEOContent() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <h2 className="sr-only">
-        {t('srHeading')}
-      </h2>
-
       <div className="bg-neutral-900/40 backdrop-blur-xl rounded-2xl border border-neutral-800/50 p-8 space-y-6 text-neutral-300">
 
         <section>
@@ -43,18 +29,6 @@ export default function SEOContent() {
             {t.rich('whatIsText', { strong: (chunks) => <strong>{chunks}</strong> })}
           </p>
         </section>
-
-        <nav aria-label={pageSeo('home.title')} className="grid gap-3 sm:grid-cols-2">
-          {rolePages.map(([path, roleKey]) => (
-            <Link
-              key={path}
-              href={localizedPath(locale, `/${path}` as AppPathnames)}
-              className="rounded-xl border border-neutral-700 px-4 py-3 text-[#C89B3C] underline underline-offset-4 transition hover:border-[#C89B3C]"
-            >
-              {pageSeo('lane.title', { role: roleKey === 'aram' ? 'ARAM' : lanes(roleKey) })}
-            </Link>
-          ))}
-        </nav>
 
         <section>
           <h2 className="text-2xl font-bold text-white mb-4">

@@ -1,5 +1,13 @@
 {
+  "rouletteShare": {
+    "label": "Compartir ruleta",
+    "copy": "Copiar enlace",
+    "copied": "Enlace copiado"
+  },
   "rouletteStyles": {
+    "puzzle": "Puzle",
+    "balls": "Bombo de bolas",
+    "cards": "Cartas",
     "label": "Estilo de ruleta",
     "classic": "Ruleta clásica",
     "slots": "Tragaperras",
@@ -41,8 +49,8 @@
         "guestHistoryEmpty": "Tus campeones aparecerán aquí después de tu primer giro.",
         "clearGuestHistory": "Borrar historial",
         "heroTitle1": "LEAGUE ROULETTE",
-        "heroTitle2": "CAMPEON",
-        "heroTitle3": "ALEATORIO",
+        "heroTitle2": "CAMPEÓN",
+        "heroTitle3": "ALEATORIO DE LOL",
         "tags": [
             "Gratis",
             "Instantáneo",

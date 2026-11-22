@@ -27,6 +27,7 @@ import AchievementPopup from "@/components/AchievementPopup"
 import VerificationResult from "@/components/VerificationResult"
 import AutoVerifyIndicator from "@/components/AutoVerifyIndicator"
 import RouletteSwitcher from "@/components/RouletteSwitcher"
+import RouletteShare from "@/components/RouletteShare"
 import type { ReactNode } from "react"
 import ChampionGuideLink from "@/components/ChampionGuideLink"
 import ChampionStats from "@/components/ChampionStats"
@@ -118,7 +119,7 @@ function saveGuestPicks(picks: GuestPick[]) {
   window.dispatchEvent(new Event(GUEST_PICK_CHANGE_EVENT))
 }
 
-export default function Home({ seoContent }: { seoContent: ReactNode }) {
+export default function Home({ seoContent, shareUrl }: { seoContent: ReactNode; shareUrl: string }) {
   const t = useTranslations('home')
   const tChallenges = useTranslations('challenges')
   const tLanes = useTranslations('laneSelector')
@@ -867,13 +868,14 @@ export default function Home({ seoContent }: { seoContent: ReactNode }) {
               <LaneSelector
                 selectedLane={selectedLane}
                 onLaneChange={setSelectedLane}
-                disabled={!!activeChallengeId || !!activeChallengeSession || !!(user && rerollCount > MAX_REROLLS)}
+                disabled={spinning || !!activeChallengeId || !!activeChallengeSession || !!(user && rerollCount > MAX_REROLLS)}
               />
               </div>
 
               {/* Champion Pool Toggle */}
               <div className="flex items-center justify-center gap-3 mt-2">
                 <button
+                  disabled={spinning}
                   onClick={() => { setShowPoolModal(true); setChampionPool(loadChampionPool()) }}
                   className="text-xs text-neutral-500 hover:text-[#C89B3C] transition underline underline-offset-2"
                 >
@@ -885,6 +887,7 @@ export default function Home({ seoContent }: { seoContent: ReactNode }) {
                       <input
                         type="checkbox"
                         checked={usePool}
+                        disabled={spinning}
                         onChange={(e) => setUsePool(e.target.checked)}
                         className="sr-only peer"
                       />
@@ -901,6 +904,7 @@ export default function Home({ seoContent }: { seoContent: ReactNode }) {
               <RouletteSwitcher
                 lane={selectedLane}
                 onResult={handleRouletteResult}
+                onSpinningChange={setSpinning}
                 disabled={!!(user && rerollCount > MAX_REROLLS)}
                 profileLoading={profileLoading}
                 rerollsUsed={user ? rerollCount : 0}
@@ -916,6 +920,7 @@ export default function Home({ seoContent }: { seoContent: ReactNode }) {
                 } : null}
               />
 
+              <RouletteShare url={shareUrl} />
               {champ && !spinning && <ChampionGuideLink championId={champ.id} />}
 
 

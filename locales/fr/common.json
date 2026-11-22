@@ -1,5 +1,13 @@
 {
+  "rouletteShare": {
+    "label": "Partager la roulette",
+    "copy": "Copier le lien",
+    "copied": "Lien copié"
+  },
   "rouletteStyles": {
+    "puzzle": "Puzzle",
+    "balls": "Tirage à boules",
+    "cards": "Cartes",
     "label": "Style de roulette",
     "classic": "Roulette classique",
     "slots": "Machine à sous",

@@ -39,14 +39,25 @@ const LANE_ROLE_KEYS: Record<string, string> = {
   'aram': 'aram',
 }
 
-async function getLaneCopy(lane: string) {
+async function getLaneCopy(locale: string, lane: string) {
   const t = await getTranslations('page-seo')
   const tLanes = await getTranslations('laneSelector')
   const role = lane === 'aram' ? 'ARAM' : tLanes(LANE_ROLE_KEYS[lane])
 
+  if (locale === 'en' && lane === 'support') {
+    return {
+      role,
+      title: t('supportRoulette.title'),
+      heading: t('supportRoulette.heading'),
+      description: t('supportRoulette.description'),
+    }
+  }
+
+  const title = t('lane.title', { role })
   return {
     role,
-    title: t('lane.title', { role }),
+    title,
+    heading: title,
     description: t('lane.description', { role }),
   }
 }
@@ -62,7 +73,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   setRequestLocale(locale)
   if (!Object.hasOwn(LANE_META, lane)) notFound()
 
-  const copy = await getLaneCopy(lane)
+  const copy = await getLaneCopy(locale, lane)
 
   return buildPageMetadata({
     locale,
@@ -88,7 +99,7 @@ export default async function LanePage({ params }: { params: Promise<{ locale: s
     return laneKeywords.some(kw => allText.includes(kw.toLowerCase()))
   })
 
-  const copy = await getLaneCopy(lane)
+  const copy = await getLaneCopy(locale, lane)
 
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
@@ -111,7 +122,7 @@ export default async function LanePage({ params }: { params: Promise<{ locale: s
         />
 
         <div className="mb-8">
-          <h1 className="mb-3 text-4xl font-semibold tracking-tight text-white md:text-5xl">{copy.title}</h1>
+          <h1 className="mb-3 text-4xl font-semibold tracking-tight text-white md:text-5xl">{copy.heading}</h1>
           <p className="max-w-2xl text-lg leading-8 text-neutral-300">{copy.description}</p>
         </div>
         <LaneRoulette champions={getRouletteChampions(LANE_ROLE_KEYS[lane]).map(champion => ({

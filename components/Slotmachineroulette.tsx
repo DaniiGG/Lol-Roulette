@@ -7,7 +7,9 @@ import { LoaderCircle, RotateCcw } from 'lucide-react'
 import { championIconUrl, loadChampionData } from '@/lib/champion-data'
 import { getChampionsByLane, normalizeChampionName } from '@/lib/champion-lanes'
 import { CHAMPION_CLASSES, CHAMPION_REGIONS } from '@/lib/champion-metadata'
+import { playRouletteSound } from '@/lib/roulette-sound'
 import RouletteLever from './RouletteLever'
+import DrawRoulette, { type DrawVariant } from './DrawRoulette'
 import type { RouletteWheelProps } from './RouletteWheel'
 import styles from './RouletteAppearance.module.css'
 
@@ -56,6 +58,24 @@ function Machine({ champions, disabled, profileLoading, onResult, onSpinningChan
     let cancelled = false
     const animations: Animation[] = []
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    const previousRows = round.reels.map(() => 0)
+    let soundFrame = 0
+    let lastTick = -Infinity
+    const tickReels = (now: number) => {
+      let rowChanged = false
+      animations.forEach((animation, index) => {
+        if (animation.playState !== 'running') return
+        const progress = animation.effect?.getComputedTiming().progress ?? 0
+        const row = Math.floor(progress * (round.reels[index].length - 3))
+        if (row !== previousRows[index]) rowChanged = true
+        previousRows[index] = row
+      })
+      if (rowChanged && now - lastTick >= 43) {
+        playRouletteSound('reelTick')
+        lastTick = now
+      }
+      if (animations.some(animation => animation.playState === 'running')) soundFrame = requestAnimationFrame(tickReels)
+    }
     async function animate() {
       try {
         await Promise.all(round!.reels.map(async (reel, index) => {
@@ -69,7 +89,10 @@ function Machine({ champions, disabled, profileLoading, onResult, onSpinningChan
           ], { duration: reduced ? 120 + index * 70 : 2400 + index * 440, easing: 'cubic-bezier(0.15, 0.72, 0.12, 1)', fill: 'forwards' })
           animations.push(animation)
           await animation.finished
-          if (!cancelled) setStopped(count => count + 1)
+          if (!cancelled) {
+            if (!reduced) playRouletteSound('reelStop')
+            setStopped(count => count + 1)
+          }
         }))
         if (cancelled) return
         setWinner(round!.winner)
@@ -86,8 +109,10 @@ function Machine({ champions, disabled, profileLoading, onResult, onSpinningChan
       }
     }
     void animate()
+    if (!reduced) soundFrame = requestAnimationFrame(tickReels)
     return () => {
       cancelled = true
+      cancelAnimationFrame(soundFrame)
       animations.forEach(animation => animation.cancel())
     }
   }, [round])
@@ -121,7 +146,7 @@ function Machine({ champions, disabled, profileLoading, onResult, onSpinningChan
   )
 }
 
-export default function SlotMachineRoulette(props: RouletteWheelProps) {
+export default function SlotMachineRoulette({ variant = 'slots', ...props }: RouletteWheelProps & { variant?: 'slots' | DrawVariant }) {
   const locale = useLocale()
   const t = useTranslations('rouletteStyles')
   const slot = useTranslations('slotMachine')
@@ -153,7 +178,7 @@ export default function SlotMachineRoulette(props: RouletteWheelProps) {
   const loading = catalog?.locale !== locale
   if (loading || error === locale || !champions.length) return (
     <div className={styles.stage}>
-      <RouletteLever onActivate={() => {}} disabled isSpinning={false} />
+      {variant === 'slots' && <RouletteLever onActivate={() => {}} disabled isSpinning={false} />}
       <div className={styles.cabinet} style={{ minHeight: 290 }}>
         <div className={styles.overlay} role="status">
           {error === locale ? <><span className={styles.status}>{t('loadError')}</span><button type="button" className="flex min-h-11 items-center gap-2 rounded-lg border border-neutral-700 px-4 text-sm text-[#C89B3C]" onClick={() => { setError(null); setCatalog(null); setAttempt(x => x + 1) }}><RotateCcw size={14} />{t('retry')}</button></> : loading ? <><LoaderCircle className="animate-spin text-[#C89B3C]" size={24} /><span className={styles.status}>{slot('loading')}</span></> : <span className={styles.status}>{t('emptyPool')}</span>}
@@ -161,5 +186,8 @@ export default function SlotMachineRoulette(props: RouletteWheelProps) {
       </div>
     </div>
   )
-  return <Machine key={[locale, lane, poolKey, type, value].join('|')} {...props} champions={champions} />
+  const key = JSON.stringify([locale, lane, poolKey, type, value])
+  return variant === 'slots'
+    ? <Machine key={key} {...props} champions={champions} />
+    : <DrawRoulette key={key} {...props} champions={champions} variant={variant} />
 }

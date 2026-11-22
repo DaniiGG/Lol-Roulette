@@ -1,0 +1,249 @@
+.cabinet {
+  background: radial-gradient(ellipse at 50% 0, #252b38, #10141c 58%, #0a0c11);
+}
+
+.cardStage {
+  --spread: clamp(67px, 19vw, 129px);
+  --fan: clamp(46px, 14vw, 84px);
+  position: relative;
+  height: clamp(275px, 72vw, 324px);
+  overflow: hidden;
+  border-radius: 12px;
+  perspective: 850px;
+  background: radial-gradient(ellipse at 50% 41%, #143741, #101c2b 54%, #080c16 86%);
+  box-shadow: inset 0 0 0 1px #dec28325, inset 0 12px 30px #0008;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 67px;
+  padding: 8px 4px 2px;
+}
+
+.result {
+  display: grid;
+  gap: 3px;
+  min-width: 0;
+}
+
+.result strong {
+  color: #f4d995;
+  font-size: 15px;
+  overflow-wrap: anywhere;
+}
+
+.spin {
+  min-height: 44px;
+  flex-shrink: 0;
+  padding: 7px 15px;
+  border: 1px solid #e7c77c;
+  border-radius: 8px;
+  color: #16100a;
+  background: linear-gradient(#eac985, #be954d);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.spin:hover:not(:disabled) { background: #f1d397; }
+.spin:focus-visible { outline: 2px solid #f1d397; outline-offset: 3px; }
+.spin:disabled { cursor: not-allowed; opacity: .55; }
+
+.cardMat {
+  position: absolute;
+  inset: 14px;
+  border: 1px solid #cbb17928;
+  border-radius: 10px;
+  background: radial-gradient(ellipse at 50% 62%, #ceaa5e13, transparent 58%);
+}
+
+.cardMat::after {
+  content: '';
+  position: absolute;
+  inset: 11px;
+  border-radius: 50%;
+  border: 1px solid #d5b57321;
+  box-shadow: inset 0 0 35px #d5b57309;
+}
+
+.card {
+  --direction: 0;
+  --angle: 0deg;
+  --shuffle-delay: 0ms;
+  position: absolute;
+  inset: 50% 0 auto;
+  width: clamp(69px, 23vw, 122px);
+  aspect-ratio: 5 / 8;
+  margin-inline: auto;
+  transform: translate(calc(var(--direction) * 4px), -50%) rotate(calc(var(--angle) * .4));
+}
+
+.card[data-position='left'] {
+  --direction: -1;
+  --angle: -9deg;
+}
+
+.card[data-position='right'] {
+  --direction: 1;
+  --angle: 9deg;
+  --shuffle-delay: 55ms;
+}
+
+.card[data-position='center'] {
+  --shuffle-delay: 105ms;
+  z-index: 1;
+}
+
+.cardTurn {
+  position: absolute;
+  inset: 0;
+  transform-style: preserve-3d;
+}
+
+.cardBack,
+.cardFace {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border: 1px solid #efd399;
+  border-radius: 10px;
+  backface-visibility: hidden;
+  box-shadow: 0 9px 16px #0009, 0 0 0 1px #321f12;
+}
+
+.cardBack {
+  background: repeating-linear-gradient(45deg, #e7c67519 0 1px, transparent 1px 6px),
+    repeating-linear-gradient(-45deg, #e7c67519 0 1px, transparent 1px 6px),
+    radial-gradient(ellipse, #244756, #12192b 74%);
+  box-shadow: 0 9px 16px #0009, inset 0 0 0 3px #151a2e, inset 0 0 0 4px #ba985b94;
+}
+
+.cardBack::before {
+  content: '';
+  position: absolute;
+  inset: 11% 12%;
+  border: 1px solid #d9b67569;
+  border-radius: 47%;
+  background: radial-gradient(ellipse, #101c2e72 48%, transparent 76%);
+}
+
+.cardCrest {
+  z-index: 1;
+  width: 66%;
+  height: auto;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px #eac478a8, 0 0 0 4px #131b2e, 0 0 20px #c99b4b5e;
+}
+
+.cardBack::after,
+.cardFace:has(span)::after {
+  content: '';
+  position: absolute;
+  inset: 7px;
+  border: 1px solid #e4c98a80;
+  border-radius: 4px;
+  pointer-events: none;
+}
+
+.cardFace span {
+  width: 32%;
+  aspect-ratio: 1;
+  transform: rotate(45deg);
+  border: 1px solid #e4c98a;
+  box-shadow: 0 0 12px #e4c98a60, inset 0 0 10px #e4c98a50;
+  background: #303b41;
+}
+
+.cardFace {
+  transform: rotateY(180deg);
+  background: repeating-linear-gradient(135deg, #dec28312 0 1px, transparent 1px 7px),
+    radial-gradient(ellipse, #345361, #111b2a 80%);
+}
+
+.cardFace img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 28%;
+}
+
+.card[data-position='center'] .cardFace {
+  box-shadow: 0 0 26px #ecc27172, 0 9px 18px #0009;
+}
+
+.card[data-position='center'] .cardFace::before {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  inset: 5px;
+  border: 1px solid #ffe6a287;
+  border-radius: 5px;
+  pointer-events: none;
+}
+
+.running .card[data-position='center'] .cardFace::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(113deg, transparent 32%, #ffe4aa60 49%, transparent 64%);
+  animation: foil 570ms ease-out 2780ms both;
+  pointer-events: none;
+}
+
+.running .card {
+  animation: shuffle 655ms cubic-bezier(.42,0,.22,1) var(--shuffle-delay) 2,
+    spread 560ms cubic-bezier(.18,.81,.22,1) 1450ms forwards;
+}
+
+.running .card[data-position='center'] {
+  animation: centerShuffle 655ms cubic-bezier(.42,0,.22,1) var(--shuffle-delay) 2,
+    liftCard 700ms cubic-bezier(.18,.81,.28,1) 2510ms forwards;
+}
+
+.running .card[data-position='center'] .cardTurn {
+  animation: turnCard 650ms cubic-bezier(.44,.03,.22,1) 2510ms both;
+}
+
+@keyframes shuffle {
+  0%, 100% { transform: translate(calc(var(--direction) * 4px), -50%) rotate(calc(var(--angle) * .4)); }
+  38% { transform: translate(calc(var(--direction) * var(--spread) * .72), -63%) rotate(calc(var(--angle) * 1.65)) rotateY(calc(var(--direction) * -16deg)); }
+  71% { transform: translate(calc(var(--direction) * -29px), -46%) rotate(calc(var(--angle) * -.55)); }
+}
+
+@keyframes centerShuffle {
+  0%, 100% { transform: translateY(-50%); }
+  37% { transform: translate(6%, -68%) rotate(-7deg) scale(1.04); }
+  72% { transform: translate(-5%, -43%) rotate(5deg); }
+}
+
+@keyframes spread {
+  to { transform: translate(calc(var(--fan) * var(--direction)), -50%) rotate(var(--angle)); }
+}
+
+@keyframes turnCard {
+  from { transform: rotateY(0deg); }
+  to { transform: rotateY(180deg); }
+}
+
+@keyframes liftCard {
+  to { transform: translateY(-59%) scale(1.07); }
+}
+
+@keyframes foil {
+  0% { transform: translateX(-100%); opacity: 0; }
+  20%, 75% { opacity: 1; }
+  100% { transform: translateX(100%); opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .running .card, .running .card[data-position='center'], .running .card[data-position='center'] .cardTurn { animation: none; }
+  .running .card[data-position='center'] .cardFace::after { display: none; }
+  .running .card { transform: translate(calc(var(--fan) * var(--direction)), -50%) rotate(var(--angle)); }
+  .running .card[data-position='center'] { transform: translateY(-59%) scale(1.07); }
+  .running .card[data-position='center'] .cardTurn { transform: rotateY(180deg); }
+}

@@ -1,7 +1,7 @@
 {
   "home": {
-    "title": "LoL Champion Roulette & Random Picker | League Roulette",
-    "description": "Spin the LoL champion roulette to find your next pick. Get a random champion for top, jungle, mid, ADC or support. Free to use, with no sign-up required."
+    "title": "Random LoL Champion Generator | League Roulette",
+    "description": "Pick a random League of Legends champion in one spin. Choose a role or build your own champion pool. Free to use with no sign-up."
   },
   "about": {
     "title": "About League Roulette",
@@ -58,5 +58,10 @@
   "lane": {
     "title": "Random {role} Champion Generator - LoL Roulette",
     "description": "Pick your next {role} champion with a free roulette, no sign-up needed. Discover picks and explore guides before your next match."
+  },
+  "supportRoulette": {
+    "title": "Random Support Champion Generator | League Roulette",
+    "heading": "Random LoL Support Champion Generator",
+    "description": "Spin to pick a random support champion in League of Legends. Each spin draws from the support pool, with picks like Leona, Lulu and Thresh. No sign-up needed."
   }
 }

@@ -1,0 +1,79 @@
+.reveal {
+  --origin: 44%;
+  position: absolute;
+  z-index: 80;
+  inset: 0;
+  overflow: hidden;
+  border-radius: 18px;
+  pointer-events: none;
+  animation: fade 920ms ease-out both;
+}
+
+.reveal[data-mode='balls'] { --origin: 75%; }
+
+.glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% var(--origin), transparent 12%, #efc17024 38%, transparent 73%);
+  box-shadow: inset 0 0 26px #f1c8796b;
+  animation: light 800ms ease-out both;
+}
+
+.ring,
+.sparks {
+  position: absolute;
+  top: var(--origin);
+  left: 50%;
+  width: min(78%, 380px);
+  aspect-ratio: 1;
+  translate: -50% -50%;
+}
+
+.ring {
+  border: 1px solid #ffe0a3ad;
+  border-radius: 50%;
+  box-shadow: 0 0 14px #efc47a92, inset 0 0 12px #efc47a4d;
+  animation: halo 780ms cubic-bezier(.11,.64,.18,1) both;
+}
+
+.sparks {
+  background:
+    radial-gradient(ellipse at 12% 39%, #ffe7a6 0 1px, transparent 3px),
+    radial-gradient(ellipse at 25% 18%, #ffdb89 0 2px, transparent 4px),
+    radial-gradient(ellipse at 48% 9%, #ffe7a6 0 1px, transparent 3px),
+    radial-gradient(ellipse at 67% 16%, #ffc775 0 1px, transparent 3px),
+    radial-gradient(ellipse at 89% 34%, #ffe7a6 0 2px, transparent 4px),
+    radial-gradient(ellipse at 82% 71%, #ffe7a6 0 1px, transparent 3px),
+    radial-gradient(ellipse at 63% 87%, #ffcb70 0 1px, transparent 3px),
+    radial-gradient(ellipse at 24% 77%, #ffda88 0 2px, transparent 4px);
+  filter: drop-shadow(0 0 5px #f0c272);
+  animation: scatter 850ms cubic-bezier(.16,.59,.25,1) both;
+}
+
+@keyframes fade {
+  0%, 64% { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@keyframes light {
+  0%, 100% { opacity: 0; }
+  18% { opacity: 1; }
+}
+
+@keyframes halo {
+  0% { transform: scale(.48); opacity: 0; }
+  16% { opacity: .72; }
+  to { transform: scale(1.23); opacity: 0; }
+}
+
+@keyframes scatter {
+  0% { transform: scale(.62); opacity: 0; }
+  25% { opacity: 1; }
+  to { transform: scale(1.13) translateY(-7%); opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ring, .sparks { display: none; }
+  .glow { animation: none; opacity: .4; }
+  .reveal { animation-duration: 550ms; }
+}

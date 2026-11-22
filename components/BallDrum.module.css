@@ -1,0 +1,180 @@
+.stage {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #8eb3ba20;
+  border-radius: 14px;
+  background: radial-gradient(ellipse at 50% 39%, #26404a 0%, #14232d 48%, #080d14 81%);
+  box-shadow: inset 0 8px 26px #0008;
+}
+
+.stage::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(90deg, transparent 0 35px, #8ad6dc0a 35px 36px),
+    repeating-linear-gradient(0deg, transparent 0 35px, #8ad6dc0a 35px 36px);
+  mask-image: radial-gradient(ellipse at center, #000, transparent 76%);
+}
+
+.machine {
+  position: relative;
+  width: min(100%, 412px);
+  aspect-ratio: 1;
+  margin-inline: auto;
+}
+
+.supports {
+  position: absolute;
+  inset: 39% 6% 8%;
+  border: solid #927d56;
+  border-width: 0 7px 6px;
+  border-radius: 6px 6px 25% 25%;
+  background: linear-gradient(transparent 85%, #162530 87%, #0a111b);
+  box-shadow: 0 5px 12px #0009, inset 0 -4px #bfa3705c;
+}
+
+.chamber,
+.cage {
+  position: absolute;
+  top: 5.4%;
+  left: 14%;
+  width: 72%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+
+.chamber {
+  border: 3px solid #a4b4b9;
+  background: radial-gradient(circle at 34% 15%, #4b6372, #253b48 56%, #15222e 85%);
+  box-shadow: 0 0 0 1px #090e14, 0 0 0 4px #7a6747, 0 0 0 5px #423826,
+    0 9px 25px #01050ad1, inset 0 0 26px #030b13;
+}
+
+.chamber::after {
+  content: '';
+  position: absolute;
+  inset: 66% 15% 9%;
+  border-radius: 50%;
+  background: radial-gradient(ellipse, #56dacf5c, transparent 68%);
+}
+
+.cage {
+  z-index: 3;
+  border: 5px solid #aebfc6;
+  pointer-events: none;
+  background: repeating-linear-gradient(0deg, transparent 0 28px, #0d192438 28px 29px, #bcd9e34d 29px 30px),
+    linear-gradient(145deg, #daf8ff31, transparent 36% 75%, #739dad20 90%);
+  box-shadow: 0 0 0 1px #09111b, inset 0 0 0 1px #eef6f57a, inset 0 0 18px #070f1c73;
+}
+
+.cage::before,
+.cage::after {
+  content: '';
+  position: absolute;
+  inset: -2px 22%;
+  border: 1px solid #c1d7df73;
+  border-radius: 50%;
+  box-shadow: 1px 0 0 #14232c;
+}
+
+.cage::after {
+  inset: -2px 39%;
+}
+
+.machine[data-turning] .cage {
+  animation: revolve 2050ms cubic-bezier(.35,.04,.35,1) both;
+}
+
+@keyframes revolve {
+  to { transform: rotate(720deg); }
+}
+
+.axle {
+  position: absolute;
+  z-index: 4;
+  inset: 39% 7.7% auto;
+  height: 5.4%;
+  border-inline: 12px solid #a7bbc0;
+  border-radius: 6px;
+  pointer-events: none;
+  filter: drop-shadow(0 3px 3px #000c);
+}
+
+.gate {
+  position: absolute;
+  z-index: 3;
+  inset: 74.3% 42.6% auto;
+  height: 3.5%;
+  border: 1px solid #c6af77;
+  border-radius: 1px 1px 5px 5px;
+  background: linear-gradient(#b1bfc1, #536a75 54%, #283744);
+  box-shadow: 0 3px 4px #000b;
+  transform-origin: right center;
+  transition: transform 210ms ease-out;
+}
+
+.machine[data-gate='open'] .gate {
+  transform: rotate(-82deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .machine[data-turning] .cage { animation: none; }
+  .gate { transition: none; }
+}
+
+.chute {
+  position: absolute;
+  z-index: 1;
+  top: 73%;
+  bottom: 12%;
+  left: 42.8%;
+  right: 42.8%;
+  border: 1px solid #8fadb1;
+  border-radius: 8px 8px 35% 35%;
+  background: linear-gradient(90deg, #57737d, #16242d 18%, #253d49 49%, #16242d 82%, #587781);
+  box-shadow: inset 0 5px 10px #050910, 0 5px 12px #0008;
+}
+
+.cradle {
+  position: absolute;
+  z-index: 1;
+  inset: 86% 29% 3%;
+  border: 1px solid #b49b68;
+  border-radius: 50%;
+  background: radial-gradient(ellipse, #040910 33%, #35535e 63%, #967b4b 78%);
+  box-shadow: 0 6px 0 #302c28, 0 9px 13px #000b, inset 0 4px 9px #000a;
+}
+
+.ball {
+  position: absolute;
+  z-index: 2;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border: 1px solid #e2c080;
+  border-radius: 50%;
+  translate: -50% -50%;
+  background: radial-gradient(circle at 29% 20%, #3e5262, #101c29 69%);
+  box-shadow: 1px 3px 7px #0009;
+}
+
+.ball img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ball::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(ellipse at 30% 14%, #fff6, transparent 44%);
+  box-shadow: inset -2px -3px 5px #061322ad;
+}
+
+.ball[data-extracted] {
+  z-index: 4;
+  border-color: #ffdf92;
+  box-shadow: 0 0 13px #f4c9787a, 1px 4px 6px #000b;
+}

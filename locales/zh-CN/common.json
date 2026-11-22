@@ -1,5 +1,13 @@
 {
+  "rouletteShare": {
+    "label": "分享轮盘",
+    "copy": "复制链接",
+    "copied": "链接已复制"
+  },
   "rouletteStyles": {
+    "puzzle": "拼图",
+    "balls": "摇奖机",
+    "cards": "卡牌",
     "label": "转盘样式",
     "classic": "经典转盘",
     "slots": "老虎机",

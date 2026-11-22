@@ -1,5 +1,13 @@
 {
+  "rouletteShare": {
+    "label": "Roulette delen",
+    "copy": "Link kopiëren",
+    "copied": "Link gekopieerd"
+  },
   "rouletteStyles": {
+    "puzzle": "Puzzel",
+    "balls": "Lotingstrommel",
+    "cards": "Kaarten",
     "label": "Roulettestijl",
     "classic": "Klassieke roulette",
     "slots": "Gokkast",

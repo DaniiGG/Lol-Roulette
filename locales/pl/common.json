@@ -1,5 +1,13 @@
 {
+  "rouletteShare": {
+    "label": "Udostępnij ruletkę",
+    "copy": "Kopiuj link",
+    "copied": "Skopiowano link"
+  },
   "rouletteStyles": {
+    "puzzle": "Puzzle",
+    "balls": "Bęben losujący",
+    "cards": "Karty",
     "label": "Styl ruletki",
     "classic": "Klasyczna ruletka",
     "slots": "Automat",
