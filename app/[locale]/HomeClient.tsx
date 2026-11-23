@@ -714,45 +714,40 @@ export default function Home({ seoContent, shareUrl }: { seoContent: ReactNode; 
 
         <div className="max-w-7xl mx-auto">
 
-          {/* User Stats (solo si está logueado) */}
-          {user && (
-            <div className="mb-3 flex flex-col md:flex-row md:items-center justify-between gap-3">
-              <div>
-                <UserStats user={{
-                  summoner_name: `${user.game_name}#${user.tag_line}`,
-                  level: user.level,
-                  xp: user.xp,
-                  summoner_level: user.summoner_level,
-                  profile_icon_id: user.profile_icon_id,
-                  current_streak: user.current_streak,
-                  longest_streak: user.longest_streak,
-                  total_challenges_completed: user.total_challenges_completed
-                }} />
-              </div>
-
-              <div className="flex items-center gap-2">
-                <button
-                  onClick={() => setShowAchievementsModal(true)}
-                  className="px-4 py-2 rounded-xl bg-neutral-800 text-neutral-300 hover:bg-neutral-700 hover:text-white transition text-sm"
-                >
-                  🏆{t('achievements')} <span className="text-neutral-400 text-sm">
-                    {userAchievements.length}/{Object.keys(ACHIEVEMENTS).length}🏆
-                  </span>
-                </button>
-
-                <button
-                  onClick={handleLogout}
-                  className="px-4 py-2 rounded-xl bg-neutral-800 text-neutral-400 hover:bg-neutral-700 hover:text-white transition text-sm"
-                >
-                  {t('logout')}
-                </button>
-              </div>
-            </div>
-          )}
-
           {/* Main Grid */}
           <div ref={sidebarLayoutRef} className={`max-w-4xl mx-auto space-y-3 relative home-play-layout ${user ? 'home-play-authenticated' : ''}`}>
-            <aside style={{ top: sidebarTop }} className="home-play-sidebar" aria-label={tStats('recommendedBuild')}>
+            <aside style={{ top: user ? 0 : sidebarTop }} className="home-play-sidebar">
+              {user && (
+                <div className="col-span-full flex min-w-0 flex-col gap-2">
+                  <UserStats user={{
+                    summoner_name: `${user.game_name}#${user.tag_line}`,
+                    level: user.level,
+                    xp: user.xp,
+                    summoner_level: user.summoner_level,
+                    profile_icon_id: user.profile_icon_id,
+                    current_streak: user.current_streak,
+                    longest_streak: user.longest_streak,
+                    total_challenges_completed: user.total_challenges_completed
+                  }} />
+                  <div className="flex flex-wrap justify-end gap-2">
+                    <button
+                      onClick={() => setShowAchievementsModal(true)}
+                      className="px-4 py-2 rounded-xl bg-neutral-800 text-neutral-300 hover:bg-neutral-700 hover:text-white transition text-sm"
+                    >
+                      🏆{t('achievements')} <span className="text-neutral-400 text-sm">
+                        {userAchievements.length}/{Object.keys(ACHIEVEMENTS).length}🏆
+                      </span>
+                    </button>
+
+                    <button
+                      onClick={handleLogout}
+                      className="px-4 py-2 rounded-xl bg-neutral-800 text-neutral-400 hover:bg-neutral-700 hover:text-white transition text-sm"
+                    >
+                      {t('logout')}
+                    </button>
+                  </div>
+                </div>
+              )}
               {champ ? <ChampionStats championId={champ.id} championName={champ.name} compact /> : (
                 <section className={`${sidebarStyles.card}`}>
                   <div className={`${sidebarStyles.heading}`}>
@@ -807,6 +802,7 @@ export default function Home({ seoContent, shareUrl }: { seoContent: ReactNode; 
                   )}
                 </section>
             </aside>
+            <aside id="home-ad-slot" className="home-play-ad" />
             {/* Left: Roulette (SIEMPRE VISIBLE) */}
             <div className={`${user ? 'lg:col-span-2' : 'max-w-2xl mx-auto w-full'} home-play-main space-y-6`}>
               {/* HEADER */}

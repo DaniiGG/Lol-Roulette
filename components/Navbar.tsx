@@ -21,16 +21,24 @@ export default function Navbar() {
   const pathname = usePathname()
   const t = useTranslations('nav')
   const tQuiz = useTranslations('quiz')
+  const tBlog = useTranslations('blog')
 
-  const isActive = (path: string) => path === '/blog' ? pathname.startsWith(path) : pathname === path
+  const onGuides = pathname === '/blog/guides' || pathname.startsWith('/blog/guides/')
+  const isActive = (path: string) => {
+    if (path === '/blog/guides') return onGuides
+    if (path === '/blog') return !onGuides && (pathname === '/blog' || pathname.startsWith('/blog/'))
+    return pathname === path
+  }
 
-const navLinks: NavLink[] = [
+  const navLinks: NavLink[] = [
     { href: '/', label: t('play'), icon: '🎮' },
     { href: '/leaderboard', label: t('leaderboard'), icon: '🏆' },
     { href: '/challenges', label: t('challenges'), icon: '⚡', isNew: true },
     { href: '/find-your-main', label: tQuiz('navLabel'), icon: '✦' },
     { href: '/mastery', label: t('mastery'), icon: '◈' },
     { href: '/howtoplay', label: t('howToPlay'), icon: '📖' },
+    { href: '/blog', label: t('blog'), icon: '📰' },
+    { href: '/blog/guides', label: tBlog('categories.guides.name'), icon: '📚' },
   ]
 
   return (
@@ -61,7 +69,7 @@ const navLinks: NavLink[] = [
             </div>
           </Link>
 
-          <div className="hidden min-w-0 items-center gap-0.5 lg:flex">
+          <div className="hidden min-w-0 items-center gap-0.5 xl:flex">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -87,13 +95,14 @@ const navLinks: NavLink[] = [
           </div>
 
           <div className="flex items-center gap-2">
-            <div className="hidden lg:block">
+            <div className="hidden xl:block">
               <LocaleSwitcher />
             </div>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="rounded-lg p-2 text-zinc-400 transition hover:bg-zinc-800 hover:text-white lg:hidden"
+              className="rounded-lg p-2 text-zinc-400 transition hover:bg-zinc-800 hover:text-white xl:hidden"
               aria-label="Toggle menu"
+              aria-expanded={mobileMenuOpen}
             >
               <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 {mobileMenuOpen ? (
@@ -108,7 +117,7 @@ const navLinks: NavLink[] = [
       </div>
 
       {mobileMenuOpen && (
-        <div className="border-t border-zinc-800/60 bg-zinc-950/98 backdrop-blur-xl lg:hidden animate-slide-down">
+        <div className="max-h-[calc(100dvh-4rem)] overflow-y-auto border-t border-zinc-800/60 bg-zinc-950/98 backdrop-blur-xl xl:hidden animate-slide-down">
           <div className="space-y-1 px-4 py-4">
             <div className="px-2 py-2">
               <LocaleSwitcher />

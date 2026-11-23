@@ -36,12 +36,11 @@ export default function UserStats({ user }: UserStatsProps) {
               <h2 className="text-base font-semibold text-white truncate">{user.summoner_name}</h2>
               <span className="text-cyan-400 text-[10px] font-semibold whitespace-nowrap">{t('level', { level: user.level })}</span>
             </div>
-            <div className="flex items-center gap-3 mt-1">
-              <div className="flex-1 h-1.5 bg-zinc-800 rounded-full overflow-hidden max-w-[120px]">
+            <div className="mt-1 flex flex-wrap items-center gap-x-2 gap-y-1">
+              <div className="h-1.5 w-full max-w-[120px] overflow-hidden rounded-full bg-zinc-800">
                 <div className="h-full rounded-full transition-all duration-700" style={{ width: `${progress}%`, background: 'linear-gradient(90deg, #00e5ff, #00b8d4)' }} />
               </div>
               <span className="text-zinc-500 text-[10px]">🔥{user.current_streak} | 👑{user.longest_streak}</span>
-              <span className="text-zinc-600 text-[10px]">|</span>
               <span className="text-zinc-500 text-[10px]">{t('challenges')} {user.total_challenges_completed}</span>
             </div>
           </div>
