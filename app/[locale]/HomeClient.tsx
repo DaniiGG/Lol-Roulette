@@ -15,7 +15,8 @@ import {
 } from "@/lib/api-client"
 import confetti from "canvas-confetti"
 import Cookies from 'js-cookie'
-import { History, Trash2, Swords } from 'lucide-react'
+import { History, Layers, Trash2, Swords } from 'lucide-react'
+import { trackEvent } from '@/lib/analytics/events'
 import InfoModal from "@/components/InfoModal"
 
 // Components
@@ -37,7 +38,7 @@ import RSOLoginModal from "@/components/RSOLoginmodal"
 
 import ChampionPoolModal from "@/components/ChampionPoolModal"
 import Toast from "@/components/Toast"
-import { loadChampionPool, getPoolForLane, type ChampionPool } from "@/lib/champion-pool"
+import { loadChampionPool, getPoolForLane, type AccountChampion, type ChampionPool } from "@/lib/champion-pool"
 import { getChallengesByType } from "@/lib/challenge-definitions"
 
 import Script from "next/script"
@@ -56,6 +57,7 @@ type GuestPick = {
 }
 
 const GUEST_PICK_STORAGE_KEY = 'league-roulette-guest-picks'
+const POOL_LOGIN_RETURN_KEY = 'league-roulette-pool-login'
 const GUEST_PICK_CHANGE_EVENT = 'league-roulette-guest-picks-changed'
 const MAX_GUEST_PICKS = 6
 let guestPicksMemorySnapshot = '[]'
@@ -185,10 +187,20 @@ export default function Home({ seoContent, shareUrl }: { seoContent: ReactNode; 
   const [spinning, setSpinning] = useState(false)
   const [selectedLane, setSelectedLane] = useState('all')
   const [showPoolModal, setShowPoolModal] = useState(false)
+  const poolText = useTranslations('championPool.account')
   const [usePool, setUsePool] = useState(false)
   const [championPool, setChampionPool] = useState<ChampionPool | null>(null)
-  const [poolEnabled, setPoolEnabled] = useState(false)
-  const activePoolChamps = usePool && championPool ? getPoolForLane(championPool, selectedLane) : null
+  const [accountChampions, setAccountChampions] = useState<AccountChampion[] | null>(null)
+  const [accountPool, setAccountPool] = useState<ChampionPool | null>(null)
+  const [poolSource, setPoolSource] = useState<'manual' | 'account'>('manual')
+  const loginFromPool = useRef(false)
+  const accountPoolSelected = poolSource === 'account' && accountPool !== null && !!sessionToken
+  const activePoolChamps = usePool
+    ? accountPoolSelected
+      ? accountPool[selectedLane] ?? []
+      : championPool && getPoolForLane(championPool, selectedLane)
+    : null
+  const accountPoolEmpty = accountPoolSelected && activePoolChamps?.length === 0
 
   // Premium features (requieren login)
   const [verifying, setVerifying] = useState(false)
@@ -218,7 +230,12 @@ export default function Home({ seoContent, shareUrl }: { seoContent: ReactNode; 
     if (Object.keys(saved).length > 0) {
       setChampionPool(saved)
     }
-
+    try {
+      if (sessionStorage.getItem(POOL_LOGIN_RETURN_KEY)) {
+        sessionStorage.removeItem(POOL_LOGIN_RETURN_KEY)
+        setShowPoolModal(true)
+      }
+    } catch { /* The panel can still be opened manually. */ }
   }, [])
 
   const clearGuestPicks = () => {
@@ -358,6 +375,10 @@ export default function Home({ seoContent, shareUrl }: { seoContent: ReactNode; 
   // SPIN: llamado por RouletteWheel al terminar la animación
   const handleRouletteResult = async (champData: { id: string; key: string | number; name: string }) => {
     setVerificationResult(null)
+    trackEvent('roulette_spin_completed', {
+      pool_source: accountPoolSelected && usePool ? 'account' : activePoolChamps ? 'manual' : 'none',
+      lane: selectedLane,
+    })
 
     if (!user) {
       const nextPicks = [{
@@ -685,6 +706,12 @@ export default function Home({ seoContent, shareUrl }: { seoContent: ReactNode; 
     Cookies.remove('session_token')
     setUser(null)
     setSessionToken(null)
+    setAccountChampions(null)
+    setAccountPool(null)
+    if (poolSource === 'account') {
+      setPoolSource('manual')
+      setUsePool(false)
+    }
     setVerificationResult(null)
     setRerollCount(0)  // Reset rerolls on logout
     setActiveChallengeId(null)
@@ -869,15 +896,18 @@ export default function Home({ seoContent, shareUrl }: { seoContent: ReactNode; 
               </div>
 
               {/* Champion Pool Toggle */}
-              <div className="flex items-center justify-center gap-3 mt-2">
+              <div className="flex flex-wrap items-center justify-center gap-3 mt-2">
                 <button
+                  type="button"
                   disabled={spinning}
-                  onClick={() => { setShowPoolModal(true); setChampionPool(loadChampionPool()) }}
-                  className="text-xs text-neutral-500 hover:text-[#C89B3C] transition underline underline-offset-2"
+                  aria-haspopup="dialog"
+                  onClick={() => setShowPoolModal(true)}
+                  className="inline-flex min-h-9 items-center gap-2 rounded-lg border border-[#C89B3C]/45 bg-[#C89B3C]/10 px-3 text-xs font-semibold text-[#f1d48e] transition hover:border-[#C89B3C] hover:bg-[#C89B3C]/20 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#C89B3C] disabled:opacity-50"
                 >
+                  <Layers size={15} aria-hidden="true" />
                   {t('editPool')}
                 </button>
-                {championPool && Object.keys(championPool).length > 0 && (
+                {(accountPoolSelected || (championPool && Object.keys(championPool).length > 0)) && (
                   <label className="flex items-center gap-2 cursor-pointer">
                     <div className="relative">
                       <input
@@ -890,10 +920,11 @@ export default function Home({ seoContent, shareUrl }: { seoContent: ReactNode; 
                       <div className="w-8 h-4 rounded-full bg-neutral-700 peer-checked:bg-[#C89B3C]/50 transition-colors" />
                       <div className={`absolute top-0.5 left-0.5 w-3 h-3 rounded-full bg-neutral-400 transition-all ${usePool ? 'translate-x-4 bg-[#C89B3C]' : ''}`} />
                     </div>
-                    <span className="text-xs text-neutral-500">{t('usePool')}</span>
+                    <span className="text-xs text-neutral-400">{accountPoolSelected ? poolText('active') : t('usePool')}</span>
                   </label>
                 )}
               </div>
+              {accountPoolEmpty && <p role="status" className="text-center text-xs text-amber-200">{poolText('emptyLane')}</p>}
 
               {/* ★ RULETA VISUAL ★ */}
 
@@ -901,7 +932,7 @@ export default function Home({ seoContent, shareUrl }: { seoContent: ReactNode; 
                 lane={selectedLane}
                 onResult={handleRouletteResult}
                 onSpinningChange={setSpinning}
-                disabled={!!(user && rerollCount > MAX_REROLLS)}
+                disabled={accountPoolEmpty || !!(user && rerollCount > MAX_REROLLS)}
                 profileLoading={profileLoading}
                 rerollsUsed={user ? rerollCount : 0}
                 maxRerolls={MAX_REROLLS}
@@ -1048,8 +1079,30 @@ export default function Home({ seoContent, shareUrl }: { seoContent: ReactNode; 
       {showPoolModal && (
         <ChampionPoolModal
           onClose={() => setShowPoolModal(false)}
+          profileLoading={profileLoading}
+          selectedLane={selectedLane}
+          account={sessionToken && user?.puuid && user?.region ? {
+            token: sessionToken,
+            puuid: user.puuid,
+            region: user.region,
+          } : null}
+          onLogin={() => {
+            loginFromPool.current = true
+            setShowPoolModal(false)
+            setShowLoginModal(true)
+          }}
+          accountChampions={accountChampions}
+          accountPool={accountPool}
+          editingAccountPool={accountPoolSelected}
+          onLoadAccount={setAccountChampions}
+          onUseAccount={(pool) => {
+            setAccountPool(pool)
+            setPoolSource('account')
+            setUsePool(true)
+          }}
           onSave={(pool) => {
             setChampionPool(pool)
+            setPoolSource('manual')
             if (Object.keys(pool).length > 0) setUsePool(true)
           }}
         />
@@ -1058,11 +1111,23 @@ export default function Home({ seoContent, shareUrl }: { seoContent: ReactNode; 
       {/* Login Modal */}
       {showLoginModal && (
         <RSOLoginModal
-          onClose={() => setShowLoginModal(false)}
+          onClose={() => {
+            setShowLoginModal(false)
+            if (loginFromPool.current) setShowPoolModal(true)
+            loginFromPool.current = false
+          }}
+          onOAuthStart={() => {
+            if (!loginFromPool.current) return
+            try {
+              sessionStorage.setItem(POOL_LOGIN_RETURN_KEY, '1')
+            } catch { /* The panel can still be opened manually. */ }
+          }}
           onSuccess={(token, user) => {
             setSessionToken(token)
             setUser(user)
             setShowLoginModal(false)
+            if (loginFromPool.current) setShowPoolModal(true)
+            loginFromPool.current = false
             if (user?.id) loadUserData(user.id)
           }}
         />

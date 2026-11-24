@@ -18,6 +18,7 @@ import {
 interface HybridLoginModalProps {
   onClose: () => void
   onSuccess: (token: string, user: any) => void
+  onOAuthStart?: () => void
   initialMode?: LoginMode
   variant?: 'modal' | 'inline'
 }
@@ -47,6 +48,7 @@ const getServerSnapshot = () => false
 export default function HybridLoginModal({
   onClose,
   onSuccess,
+  onOAuthStart,
   initialMode,
   variant = 'modal',
 }: HybridLoginModalProps) {
@@ -64,6 +66,7 @@ export default function HybridLoginModal({
   const [region, setRegion] = useState('euw1')
 
   const handleOAuthLogin = () => {
+    onOAuthStart?.()
     window.location.href = '/api/auth/riot-oauth/authorize'
   }
 

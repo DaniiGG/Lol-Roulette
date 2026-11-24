@@ -477,7 +477,8 @@ body::before {
 
 .home-play-layout {
   --home-content-width: 42rem;
-  --home-sidebar-width: min(240px, calc((100vw - var(--home-content-width)) / 2 - 64px));
+  --home-side-space: calc((100vw - var(--home-content-width)) / 2);
+  --home-sidebar-width: min(288px, calc(var(--home-side-space) - 48px));
 }
 .home-play-ad:empty { display: none; }
 @media (min-width: 1280px) {
@@ -489,13 +490,13 @@ body::before {
     position: absolute;
     top: 0;
     right: calc(50% - 50vw + 24px);
-    width: var(--home-sidebar-width);
+    width: min(240px, calc(var(--home-side-space) - 64px));
   }
 }
 .home-play-sidebar {
   position: absolute;
   top: 0;
-  left: calc(50% - 50vw + 24px);
+  left: calc(50% - 50vw + (var(--home-side-space) - var(--home-sidebar-width)) / 2);
   width: var(--home-sidebar-width);
   display: grid;
   gap: 20px;
