@@ -1,156 +1,194 @@
-"use client"
+﻿"use client"
 
-import { useState } from 'react'
-import { Link, usePathname } from '@/i18n/navigation'
+import { useRef, useState } from 'react'
 import Image from 'next/image'
-import { useTranslations } from 'next-intl'
-import type { AppPathnames } from '@/i18n/routes'
+import { ChevronDown, Menu, X } from 'lucide-react'
+import { useLocale, useTranslations } from 'next-intl'
+import { Link, usePathname } from '@/i18n/navigation'
+import { isRouteAvailable, type AppPathnames } from '@/i18n/routes'
 import LocaleSwitcher from './LocaleSwitcher'
 
-type NavHref = Exclude<AppPathnames, '/blog/[slug]' | '/blog/guides/[champion]'>
-
 type NavLink = {
-  href: NavHref
+  href: Exclude<AppPathnames, '/blog/[slug]' | '/blog/guides/[champion]'>
   label: string
-  icon: string
-  isNew?: boolean
 }
 
+type NavGroup = {
+  id: 'tools' | 'learn'
+  label: string
+  links: NavLink[]
+}
+
+const linkClass = 'rounded-lg px-3 py-2 text-sm font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-400'
+const activeClass = 'bg-cyan-500/10 text-cyan-300'
+const inactiveClass = 'text-zinc-300 hover:bg-zinc-800 hover:text-white'
+
 export default function Navbar() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [mobileOpen, setMobileOpen] = useState(false)
+  const [openGroup, setOpenGroup] = useState<NavGroup['id'] | null>(null)
+  const mobileToggle = useRef<HTMLButtonElement>(null)
   const pathname = usePathname()
+  const locale = useLocale()
   const t = useTranslations('nav')
   const tQuiz = useTranslations('quiz')
   const tBlog = useTranslations('blog')
 
   const onGuides = pathname === '/blog/guides' || pathname.startsWith('/blog/guides/')
-  const isActive = (path: string) => {
-    if (path === '/blog/guides') return onGuides
-    if (path === '/blog') return !onGuides && (pathname === '/blog' || pathname.startsWith('/blog/'))
-    return pathname === path
+  const isActive = (href: NavLink['href']) => {
+    if (href === '/blog/guides') return onGuides
+    if (href === '/blog') return !onGuides && (pathname === '/blog' || pathname.startsWith('/blog/'))
+    return pathname === href
   }
 
-  const navLinks: NavLink[] = [
-    { href: '/', label: t('play'), icon: '🎮' },
-    { href: '/leaderboard', label: t('leaderboard'), icon: '🏆' },
-    { href: '/challenges', label: t('challenges'), icon: '⚡', isNew: true },
-    { href: '/find-your-main', label: tQuiz('navLabel'), icon: '✦' },
-    { href: '/mastery', label: t('mastery'), icon: '◈' },
-    { href: '/howtoplay', label: t('howToPlay'), icon: '📖' },
-    { href: '/blog', label: t('blog'), icon: '📰' },
-    { href: '/blog/guides', label: tBlog('categories.guides.name'), icon: '📚' },
+  const play: NavLink = { href: '/', label: t('play') }
+  const challenges: NavLink = { href: '/challenges', label: t('challenges') }
+  const groups: NavGroup[] = [
+    {
+      id: 'tools',
+      label: t('tools'),
+      links: [
+        { href: '/find-your-main', label: tQuiz('navLabel') },
+        { href: '/mastery', label: t('mastery') },
+        ...(isRouteAvailable('/mastery-tree', locale)
+          ? [{ href: '/mastery-tree' as const, label: t('masteryTree') }]
+          : []),
+        { href: '/leaderboard', label: t('leaderboard') },
+      ],
+    },
+    {
+      id: 'learn',
+      label: t('learn'),
+      links: [
+        { href: '/howtoplay', label: t('howToPlay') },
+        { href: '/blog/guides', label: tBlog('categories.guides.name') },
+        { href: '/blog', label: t('blog') },
+      ],
+    },
+  ]
+  const secondaryLinks: NavLink[] = [
+    { href: '/contact', label: t('contact') },
+    { href: '/privacy', label: t('privacy') },
+    { href: '/terms', label: t('terms') },
   ]
 
+  function closeMenus() {
+    setMobileOpen(false)
+    setOpenGroup(null)
+  }
+
+  function renderLink(link: NavLink, { block = false, primary = false } = {}) {
+    const active = isActive(link.href)
+    const color = primary ? 'bg-cyan-300 font-semibold text-zinc-950 hover:bg-cyan-200' : active ? activeClass : inactiveClass
+
+    return (
+      <Link
+        key={link.href}
+        href={link.href}
+        prefetch={false}
+        aria-current={active ? 'page' : undefined}
+        onClick={closeMenus}
+        className={`${linkClass} ${color} ${block ? 'block' : 'inline-flex whitespace-nowrap'}`}
+      >
+        {link.label}
+      </Link>
+    )
+  }
+
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-zinc-800/80 bg-zinc-950/90 backdrop-blur-xl">
-      <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-cyan-500/30 to-transparent" />
+    <nav
+      aria-label={t('navigation')}
+      className="fixed inset-x-0 top-0 z-50 border-b border-zinc-800/80 bg-zinc-950/95 backdrop-blur-xl"
+      onKeyDown={(event) => {
+        if (event.key === 'Escape' && mobileOpen && !event.defaultPrevented) {
+          setMobileOpen(false)
+          mobileToggle.current?.focus()
+        }
+      }}
+    >
+      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
+        <Link href="/" prefetch={false} onClick={closeMenus} className="group flex shrink-0 items-center gap-3 rounded-lg focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-400">
+          <Image src="/images/logo.png" alt={t('siteName')} width={36} height={36} className="object-contain" />
+          <span aria-hidden="true" className="hidden text-lg font-bold tracking-tight text-white sm:block" style={{ fontFamily: '"Bebas Neue", sans-serif' }}>
+            {t('siteName')}
+          </span>
+        </Link>
 
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 items-center justify-between">
-          <Link href="/" className="group flex items-center gap-3">
-            <div className="relative">
-              <div className="absolute inset-0 rounded-full bg-cyan-500/20 blur-md opacity-0 group-hover:opacity-100 transition-opacity" />
-              <Image
-                src="/images/logo.png"
-                alt="League Roulette"
-                width={36}
-                height={36}
-                className="object-contain relative"
-              />
-            </div>
-            <div className="hidden sm:block">
-              <div className="text-lg font-bold text-white tracking-tight"
-                   style={{ fontFamily: '"Bebas Neue", sans-serif' }}>
-                {t('siteName')}
-              </div>
-              <div className="-mt-1 text-[10px] text-zinc-500 tracking-widest uppercase">
-                {t('siteTagline')}
-              </div>
-            </div>
-          </Link>
-
-          <div className="hidden min-w-0 items-center gap-0.5 xl:flex">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={`
-                  relative whitespace-nowrap rounded-lg px-2 py-2 text-xs font-medium transition-all duration-200
-                  ${isActive(link.href)
-                    ? 'text-cyan-300'
-                    : 'text-zinc-400 hover:text-zinc-200 hover:bg-zinc-800/50'
+        <div className="hidden items-center gap-1 lg:flex">
+          {renderLink(play, { primary: true })}
+          {renderLink(challenges)}
+          {groups.map((group) => {
+            const expanded = openGroup === group.id
+            return (
+              <div
+                key={group.id}
+                className="relative"
+                onBlur={(event) => {
+                  if (!event.currentTarget.contains(event.relatedTarget)) setOpenGroup(null)
+                }}
+                onKeyDown={(event) => {
+                  if (event.key === 'Escape' && expanded) {
+                    event.preventDefault()
+                    setOpenGroup(null)
+                    event.currentTarget.querySelector('button')?.focus()
                   }
-                `}
+                }}
               >
-                {isActive(link.href) && (
-                  <span className="absolute inset-0 rounded-lg border border-cyan-400/30 bg-cyan-500/5" />
-                )}
-                <span className="relative z-10 flex items-center gap-1.5">
-                  <span>{link.icon}</span>
-                  <span className="tracking-wide">{link.label}</span>
-                  {link.isNew && <span className="rounded-sm bg-amber-300 px-1.5 py-0.5 text-[9px] font-black leading-none text-zinc-950">NEW</span>}
-                </span>
-              </Link>
-            ))}
-          </div>
+                <button
+                  type="button"
+                  aria-expanded={expanded}
+                  aria-controls={`nav-${group.id}`}
+                  onClick={() => setOpenGroup(expanded ? null : group.id)}
+                  className={`${linkClass} inline-flex items-center gap-1.5 whitespace-nowrap ${expanded || group.links.some((link) => isActive(link.href)) ? activeClass : inactiveClass}`}
+                >
+                  {group.label}
+                  <ChevronDown aria-hidden="true" className={`h-4 w-4 transition-transform ${expanded ? 'rotate-180' : ''}`} />
+                </button>
+                <div id={`nav-${group.id}`} hidden={!expanded} className="absolute start-0 top-full mt-2 w-max min-w-48 max-w-72 space-y-1 rounded-xl border border-zinc-800 bg-zinc-950 p-2 shadow-xl">
+                  {expanded && group.links.map((link) => renderLink(link, { block: true }))}
+                </div>
+              </div>
+            )
+          })}
+        </div>
 
-          <div className="flex items-center gap-2">
-            <div className="hidden xl:block">
-              <LocaleSwitcher />
-            </div>
-            <button
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="rounded-lg p-2 text-zinc-400 transition hover:bg-zinc-800 hover:text-white xl:hidden"
-              aria-label="Toggle menu"
-              aria-expanded={mobileMenuOpen}
-            >
-              <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                {mobileMenuOpen ? (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                ) : (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                )}
-              </svg>
-            </button>
-          </div>
+        <div className="hidden lg:block">
+          <LocaleSwitcher />
+        </div>
+        <div className="flex items-center gap-2 lg:hidden">
+          {renderLink(play, { primary: true })}
+          <button
+            ref={mobileToggle}
+            type="button"
+            onClick={() => setMobileOpen(!mobileOpen)}
+            className={`${linkClass} ${mobileOpen ? activeClass : inactiveClass} p-2`}
+            aria-label={t('navigation')}
+            aria-expanded={mobileOpen}
+            aria-controls="nav-mobile"
+          >
+            {mobileOpen ? <X aria-hidden="true" size={22} /> : <Menu aria-hidden="true" size={22} />}
+          </button>
         </div>
       </div>
 
-      {mobileMenuOpen && (
-        <div className="max-h-[calc(100dvh-4rem)] overflow-y-auto border-t border-zinc-800/60 bg-zinc-950/98 backdrop-blur-xl xl:hidden animate-slide-down">
-          <div className="space-y-1 px-4 py-4">
-            <div className="px-2 py-2">
-              <LocaleSwitcher />
-            </div>
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={() => setMobileMenuOpen(false)}
-                className={`
-                  block rounded-lg px-4 py-3 text-sm font-medium transition-all
-                  ${isActive(link.href)
-                    ? 'bg-cyan-500/10 text-cyan-300 border border-cyan-400/30'
-                    : 'text-zinc-400 hover:bg-zinc-800/50 hover:text-white'
-                  }
-                `}
-              >
-                <span className="mr-3">{link.icon}</span>
-                {link.label}
-                {link.isNew && <span className="ml-2 inline-flex rounded-sm bg-amber-300 px-1.5 py-0.5 text-[9px] font-black leading-none text-zinc-950">NEW</span>}
-              </Link>
+      <div id="nav-mobile" hidden={!mobileOpen} className="max-h-[calc(100dvh-4rem)] overflow-y-auto border-t border-zinc-800 bg-zinc-950 px-4 py-3 lg:hidden">
+        {mobileOpen && (
+          <div className="mx-auto max-w-xl">
+            {renderLink(challenges, { block: true })}
+            {groups.map((group) => (
+              <section key={group.id} aria-labelledby={`mobile-${group.id}`} className="mt-2 space-y-1 border-t border-zinc-800 pt-3">
+                <h2 id={`mobile-${group.id}`} className="px-3 text-xs font-semibold text-zinc-400">{group.label}</h2>
+                {group.links.map((link) => renderLink(link, { block: true }))}
+              </section>
             ))}
-            <div className="space-y-1 border-t border-zinc-800/60 pt-3 mt-3">
-              <Link href="/contact" onClick={() => setMobileMenuOpen(false)}
-                    className="block px-4 py-2 text-sm text-zinc-500 hover:text-white transition">{t('contact')}</Link>
-              <Link href="/privacy" onClick={() => setMobileMenuOpen(false)}
-                    className="block px-4 py-2 text-sm text-zinc-500 hover:text-white transition">{t('privacy')}</Link>
-              <Link href="/terms" onClick={() => setMobileMenuOpen(false)}
-                    className="block px-4 py-2 text-sm text-zinc-500 hover:text-white transition">{t('terms')}</Link>
+            <div className="mt-3 border-t border-zinc-800 pt-3">
+              <div className="px-3"><LocaleSwitcher /></div>
+              <div className="mt-2 flex flex-wrap gap-1">
+                {secondaryLinks.map((link) => renderLink(link))}
+              </div>
             </div>
           </div>
-        </div>
-      )}
+        )}
+      </div>
     </nav>
   )
 }

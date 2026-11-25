@@ -2,6 +2,789 @@
   "patch": "26.21",
   "updatedAt": "2026-10-28",
   "champions": {
+    "yasuo": {
+      "slug": "yasuo",
+      "name": "Yasuo",
+      "title": "La Espada sin Honor",
+      "role": "mid",
+      "roleLabel": "Mid",
+      "difficulty": "high",
+      "difficultyLabel": "Alta",
+      "tagline": "Un espadachín de gran movilidad que convierte los súbditos en rutas de ataque, bloquea proyectiles y puede decidir una pelea con un solo tornado bien colocado.",
+      "metaTitle": "Cómo jugar Yasuo: build, runas y combos (26.22)",
+      "metaDescription": "Aprende a jugar Yasuo mid en el parche 26.22 con builds, runas, orden de habilidades, combos y consejos para sus enfrentamientos.",
+      "h1": "Cómo jugar Yasuo en League of Legends — Build, runas y combos (Parche 26.22)",
+      "heroIntro": [
+        "Yasuo es un luchador y asesino de mid cuyo daño depende de los ataques básicos, los golpes críticos y la precisión con sus habilidades. No utiliza maná, pero necesita gestionar su escudo pasivo, las acumulaciones de Q y los objetivos disponibles para desplazarse con E.",
+        "Esta guía cubre su build del parche 26.22, el orden de habilidades nivel a nivel, runas, combos avanzados, decisiones de línea, teamfights y enfrentamientos que castigan las entradas imprudentes."
+      ],
+      "quickAnswer": "Sube Q primero, después E y por último W. Lleva Compás letal con Precisión principal y Valor secundario. Empieza con Espada de Doran y construye Hoja del rey arruinado, Arcoescudo inmortal y Filo infinito. Juega alrededor de tu escudo pasivo, prepara tornados antes de intercambiar y utiliza los súbditos como rutas de entrada y salida. Guarda Muro de viento para los proyectiles importantes y no utilices Último aliento sobre cualquier enemigo levantado si la posición final es peligrosa.",
+      "quickStart": {
+        "role": "Carril central.",
+        "secondaryRoles": "Carril superior",
+        "difficulty": "Alta",
+        "playstyle": "Luchador móvil de daño físico, críticos y combos.",
+        "keyMechanic": "Preparar tornados con Q y utilizar E para reposicionarse entre objetivos.",
+        "beginnerMistake": "Utilizar E para avanzar sin tener una ruta de salida.",
+        "winCondition": "Ganar escaramuzas, aprovechar levantamientos aliados y eliminar objetivos prioritarios con daño sostenido."
+      },
+      "abilities": [
+        {
+          "key": "P",
+          "name": "Camino del alma errante",
+          "icon": "Yasuo_Passive.png",
+          "description": "Yasuo aumenta considerablemente su probabilidad de impacto crítico. Además, acumula Flujo mientras se desplaza. Cuando alcanza el máximo, obtiene un escudo que se activa al recibir daño de un campeón o monstruo.",
+          "tips": [
+            "Muévete constantemente para cargar el escudo.",
+            "Busca intercambios cuando tengas la pasiva disponible.",
+            "Aprovecha los objetos de crítico para alcanzar tus picos de daño.",
+            "Espera a recuperar el escudo antes de repetir un intercambio peligroso."
+          ],
+          "mistake": "Entrar en combate sin el escudo y perder vida innecesariamente."
+        },
+        {
+          "key": "Q",
+          "name": "Tempestad de acero",
+          "icon": "YasuoQ1Wrapper.png",
+          "description": "Yasuo lanza una estocada que inflige daño físico. Al golpear enemigos acumula Tormenta inminente. Con dos acumulaciones, su siguiente Q lanza un tornado que levanta a los enemigos. La velocidad de ataque reduce el enfriamiento y el tiempo de lanzamiento de Q hasta sus límites.",
+          "tips": [
+            "Utiliza Q para farmear y preparar tornados.",
+            "Golpea súbditos antes de buscar un intercambio.",
+            "Combina Q con E para golpear en un círculo alrededor de Yasuo.",
+            "Aprovecha el tornado para activar tu definitiva."
+          ],
+          "mistake": "Lanzar el tornado inmediatamente sin considerar el movimiento del enemigo."
+        },
+        {
+          "key": "W",
+          "name": "Muro de viento",
+          "icon": "YasuoW.png",
+          "description": "Yasuo crea una barrera que bloquea numerosos proyectiles enemigos.",
+          "tips": [
+            "Guárdala para habilidades importantes.",
+            "Utilízala para proteger a tus aliados durante teamfights.",
+            "Colócate correctamente respecto al muro para aprovechar su protección.",
+            "Identifica qué habilidades enemigas son proyectiles bloqueables."
+          ],
+          "mistake": "Gastar W para bloquear un ataque básico poco importante y quedarse sin defensa frente a una habilidad decisiva."
+        },
+        {
+          "key": "E",
+          "name": "Hoja cortante",
+          "icon": "YasuoE.png",
+          "description": "Yasuo se desplaza a través de un enemigo, infligiendo daño mágico. No puede volver a utilizar E sobre el mismo objetivo durante un breve periodo.",
+          "tips": [
+            "Utiliza los súbditos para acercarte o escapar.",
+            "Planifica el orden de los objetivos antes de entrar.",
+            "Combina E + Q para ejecutar un ataque circular.",
+            "Evita utilizar todos los súbditos disponibles si después necesitas retirarte."
+          ],
+          "mistake": "Desplazarte automáticamente hacia el enemigo sin comprobar dónde terminarás."
+        },
+        {
+          "key": "R",
+          "name": "Último aliento",
+          "icon": "YasuoR.png",
+          "description": "Yasuo se desplaza hasta un campeón enemigo que esté en el aire y lo mantiene suspendido, infligiendo daño físico. Recupera su Flujo y obtiene temporalmente penetración de armadura adicional para sus golpes críticos.",
+          "tips": [
+            "Combínala con tu tornado o los levantamientos de tus aliados.",
+            "Busca objetivos prioritarios que estén en el aire.",
+            "Evalúa dónde aparecerás después de utilizar R.",
+            "Aprovecha la penetración adicional para continuar atacando."
+          ],
+          "mistake": "Utilizar R sobre un tanque y aparecer rodeado de cinco enemigos."
+        }
+      ],
+      "skillOrder": {
+        "priority": "Q > E > W",
+        "start": "Q → E → W",
+        "levels": [
+          {
+            "level": 1,
+            "ability": "Q"
+          },
+          {
+            "level": 2,
+            "ability": "E"
+          },
+          {
+            "level": 3,
+            "ability": "W"
+          },
+          {
+            "level": 4,
+            "ability": "Q"
+          },
+          {
+            "level": 5,
+            "ability": "Q"
+          },
+          {
+            "level": 6,
+            "ability": "R"
+          },
+          {
+            "level": 7,
+            "ability": "Q"
+          },
+          {
+            "level": 8,
+            "ability": "E"
+          },
+          {
+            "level": 9,
+            "ability": "Q"
+          },
+          {
+            "level": 10,
+            "ability": "E"
+          },
+          {
+            "level": 11,
+            "ability": "R"
+          },
+          {
+            "level": 12,
+            "ability": "E"
+          },
+          {
+            "level": 13,
+            "ability": "E"
+          },
+          {
+            "level": 14,
+            "ability": "W"
+          },
+          {
+            "level": 15,
+            "ability": "W"
+          },
+          {
+            "level": 16,
+            "ability": "R"
+          },
+          {
+            "level": 17,
+            "ability": "W"
+          },
+          {
+            "level": 18,
+            "ability": "W"
+          }
+        ],
+        "explanation": [
+          "Q se maximiza primero porque es la principal fuente de daño y permite preparar tornados con mayor frecuencia.",
+          "E se maximiza después para mejorar el daño y la movilidad ofensiva.",
+          "W se maximiza al final porque su utilidad defensiva depende principalmente de bloquear las habilidades correctas."
+        ],
+        "note": "Contra determinados campeones cuerpo a cuerpo, empezar con E puede permitir intercambios agresivos desde el nivel 1, pero Q es la opción más sencilla para aprender."
+      },
+      "runes": {
+        "title": "Compás letal — Daño sostenido",
+        "summary": "Compás letal es la runa clave más utilizada por Yasuo en el parche 26.22. Aumenta su potencial durante los intercambios prolongados y combina especialmente bien con su dependencia de la velocidad de ataque.",
+        "primaryTree": {
+          "name": "Precisión",
+          "icon": "perk-images/Styles/7201_Precision.png"
+        },
+        "secondaryTree": {
+          "name": "Valor",
+          "icon": "perk-images/Styles/7204_Resolve.png"
+        },
+        "keystone": {
+          "id": 8008,
+          "name": "Compás letal",
+          "why": "Aumenta tu capacidad de daño sostenido durante los combates.",
+          "icon": "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png"
+        },
+        "primaryRunes": [
+          {
+            "id": 9101,
+            "name": "Absorber vida",
+            "why": "Recuperación de vida al eliminar súbditos, útil para sobrevivir durante la fase de líneas.",
+            "icon": "perk-images/Styles/Precision/AbsorbLife/AbsorbLife.png"
+          },
+          {
+            "id": 9104,
+            "name": "Leyenda: Presteza",
+            "why": "Velocidad de ataque adicional que mejora tus ataques y la frecuencia de Q.",
+            "icon": "perk-images/Styles/Precision/LegendAlacrity/LegendAlacrity.png"
+          },
+          {
+            "id": 8299,
+            "name": "Último esfuerzo",
+            "why": "Aumenta tu daño cuando tienes poca vida, especialmente útil en duelos ajustados.",
+            "icon": "perk-images/Styles/Sorcery/LastStand/LastStand.png"
+          }
+        ],
+        "secondaryRunes": [
+          {
+            "id": 8473,
+            "name": "Revestimiento de huesos",
+            "why": "Reduce el daño recibido durante intercambios cortos y combos enemigos.",
+            "icon": "perk-images/Styles/Resolve/BonePlating/BonePlating.png"
+          },
+          {
+            "id": 8451,
+            "name": "Sobrecrecimiento",
+            "why": "Proporciona vida adicional conforme avanzas en la partida.",
+            "icon": "perk-images/Styles/Resolve/Overgrowth/Overgrowth.png"
+          }
+        ],
+        "alternatives": [
+          "Pies veloces: Para líneas difíciles donde necesitas recuperación y movilidad.",
+          "Triunfo: Alternativa a Absorber vida cuando buscas mejores escaramuzas.",
+          "Segundo aliento: Contra campeones que te desgastan constantemente.",
+          "Inquebrantable: Contra composiciones con control de masas."
+        ],
+        "notes": [
+          "Si estás aprendiendo a Yasuo, Compás letal es una opción sólida porque favorece los intercambios prolongados y recompensa una buena gestión de los ataques básicos."
+        ]
+      },
+      "summonerSpells": [
+        {
+          "name": "Destello",
+          "icon": "SummonerFlash.png",
+          "why": "Fundamental para escapar, reposicionarte y ejecutar combos avanzados como Beyblade."
+        },
+        {
+          "name": "Prender",
+          "icon": "SummonerDot.png",
+          "why": "Añade presión de asesinato durante la fase de líneas y ayuda a rematar enemigos.",
+          "alternative": "Alternativa: Teleportar. Permite volver a línea y mantener el ritmo de farmeo en enfrentamientos donde es difícil conseguir asesinatos tempranos."
+        }
+      ],
+      "builds": [
+        {
+          "id": "standard",
+          "label": "Build principal — Crítico y daño sostenido",
+          "summary": "Una configuración que combina daño físico, velocidad de ataque, robo de vida y golpes críticos.",
+          "starting": {
+            "label": "Objetos iniciales",
+            "items": [
+              {
+                "id": "1055",
+                "name": "Espada de Doran",
+                "icon": "1055.png",
+                "why": "Daño y sustain para los primeros intercambios."
+              },
+              {
+                "id": "2003",
+                "name": "Poción de vida",
+                "icon": "2003.png",
+                "why": "Recuperación para la fase de líneas."
+              }
+            ]
+          },
+          "core": {
+            "label": "Objetos principales",
+            "items": [
+              {
+                "id": "3153",
+                "name": "Hoja del rey arruinado",
+                "icon": "3153.png",
+                "why": "Velocidad de ataque, robo de vida y daño adicional contra enemigos con mucha vida."
+              },
+              {
+                "id": "6673",
+                "name": "Arcoescudo inmortal",
+                "icon": "6673.png",
+                "why": "Probabilidad de crítico y un escudo defensivo que ayuda a sobrevivir al burst."
+              },
+              {
+                "id": "3031",
+                "name": "Filo infinito",
+                "icon": "3031.png",
+                "why": "Gran aumento del daño de los golpes críticos."
+              }
+            ]
+          },
+          "situational": {
+            "label": "Objetos situacionales",
+            "items": [
+              {
+                "id": "6333",
+                "name": "Baile de la muerte",
+                "icon": "6333.png",
+                "why": "Supervivencia contra daño físico y peleas prolongadas."
+              },
+              {
+                "id": "3026",
+                "name": "Ángel de la guarda",
+                "icon": "3026.png",
+                "why": "Segunda oportunidad después de una entrada arriesgada."
+              },
+              {
+                "id": "3036",
+                "name": "Recuerdos de lord Dominik",
+                "icon": "3036.png",
+                "why": "Penetración de armadura contra enemigos resistentes."
+              },
+              {
+                "id": "3033",
+                "name": "Recordatorio letal",
+                "icon": "3033.png",
+                "why": "Penetración de armadura y Heridas graves."
+              },
+              {
+                "id": "3156",
+                "name": "Fauces de Malmortius",
+                "icon": "3156.png",
+                "why": "Protección frente a burst mágico."
+              },
+              {
+                "id": "3072",
+                "name": "Sanguinaria",
+                "icon": "3072.png",
+                "why": "Robo de vida y daño para mejorar el sustain."
+              }
+            ]
+          },
+          "boots": {
+            "label": "Botas",
+            "items": [
+              {
+                "id": "3172",
+                "name": "Grebas metalizadas",
+                "icon": "3172.png",
+                "why": "Opción frecuente para obtener velocidad de ataque y mejorar los intercambios."
+              },
+              {
+                "id": "3047",
+                "name": "Botas blindadas",
+                "icon": "3047.png",
+                "why": "Contra equipos con mucho daño físico y ataques básicos."
+              },
+              {
+                "id": "3111",
+                "name": "Botas de mercurio",
+                "icon": "3111.png",
+                "why": "Contra composiciones con abundante daño mágico y control de masas."
+              }
+            ]
+          },
+          "notes": [
+            "La combinación Hoja del rey arruinado → Arcoescudo inmortal → Filo infinito es una de las rutas más utilizadas del parche 26.22."
+          ]
+        },
+        {
+          "id": "early-crit",
+          "label": "Build alternativa — Crítico temprano",
+          "summary": "Una configuración que prioriza alcanzar antes los objetos de crítico.",
+          "starting": {
+            "label": "Objetos iniciales",
+            "items": [
+              {
+                "id": "1055",
+                "name": "Espada de Doran",
+                "icon": "1055.png",
+                "why": "Daño y sustain para los primeros intercambios."
+              },
+              {
+                "id": "2003",
+                "name": "Poción de vida",
+                "icon": "2003.png",
+                "why": "Recuperación para la fase de líneas."
+              }
+            ]
+          },
+          "core": {
+            "label": "Objetos principales",
+            "items": [
+              {
+                "id": "6673",
+                "name": "Arcoescudo inmortal",
+                "icon": "6673.png",
+                "why": "Probabilidad de crítico y un escudo defensivo que ayuda a sobrevivir al burst."
+              },
+              {
+                "id": "3031",
+                "name": "Filo infinito",
+                "icon": "3031.png",
+                "why": "Gran aumento del daño de los golpes críticos."
+              },
+              {
+                "id": "6333",
+                "name": "Baile de la muerte",
+                "icon": "6333.png",
+                "why": "Supervivencia contra daño físico y peleas prolongadas."
+              }
+            ]
+          },
+          "situational": {
+            "label": "Objetos situacionales",
+            "items": [
+              {
+                "id": "3026",
+                "name": "Ángel de la guarda",
+                "icon": "3026.png",
+                "why": "Segunda oportunidad después de una entrada arriesgada."
+              },
+              {
+                "id": "3036",
+                "name": "Recuerdos de lord Dominik",
+                "icon": "3036.png",
+                "why": "Penetración de armadura contra enemigos resistentes."
+              },
+              {
+                "id": "3156",
+                "name": "Fauces de Malmortius",
+                "icon": "3156.png",
+                "why": "Protección frente a burst mágico."
+              },
+              {
+                "id": "3072",
+                "name": "Sanguinaria",
+                "icon": "3072.png",
+                "why": "Robo de vida y daño para mejorar el sustain."
+              }
+            ]
+          },
+          "boots": {
+            "label": "Botas",
+            "items": [
+              {
+                "id": "3172",
+                "name": "Grebas metalizadas",
+                "icon": "3172.png",
+                "why": "Opción frecuente para obtener velocidad de ataque y mejorar los intercambios."
+              },
+              {
+                "id": "3047",
+                "name": "Botas blindadas",
+                "icon": "3047.png",
+                "why": "Contra equipos con mucho daño físico y ataques básicos."
+              },
+              {
+                "id": "3111",
+                "name": "Botas de mercurio",
+                "icon": "3111.png",
+                "why": "Contra composiciones con abundante daño mágico y control de masas."
+              }
+            ]
+          },
+          "notes": [
+            "Esta ruta es una alternativa cuando prefieres acelerar tus picos de crítico en lugar de construir Hoja del rey arruinado primero."
+          ]
+        }
+      ],
+      "combos": [
+        {
+          "name": "Intercambio básico",
+          "sequence": [
+            {
+              "key": "E",
+              "label": "E"
+            },
+            {
+              "key": "Q",
+              "label": "Q"
+            },
+            {
+              "key": "AA",
+              "label": "Autoataque"
+            },
+            {
+              "key": "E",
+              "label": "E fuera"
+            }
+          ],
+          "situation": "Durante la fase de líneas, cuando tienes súbditos disponibles para entrar y salir.",
+          "execution": "Utiliza E sobre un súbdito para acercarte, golpea con Q y un autoataque, y utiliza otro objetivo para retirarte.",
+          "mistake": "No entres si el enemigo puede inmovilizarte antes de que completes el intercambio."
+        },
+        {
+          "name": "Combo de tornado",
+          "sequence": [
+            {
+              "key": "Q",
+              "label": "Q"
+            },
+            {
+              "key": "Q",
+              "label": "Q"
+            },
+            {
+              "key": "Q3",
+              "label": "Q3"
+            },
+            {
+              "key": "R",
+              "label": "R"
+            }
+          ],
+          "situation": "Cuando tienes dos acumulaciones de Q y el enemigo está a una distancia adecuada.",
+          "execution": "Prepara el tornado golpeando súbditos o campeones. Lanza Q3 y utiliza R cuando el enemigo quede levantado.",
+          "mistake": "No fuerces R si terminarás en una posición peligrosa."
+        },
+        {
+          "name": "Combo circular",
+          "sequence": [
+            {
+              "key": "E",
+              "label": "E"
+            },
+            {
+              "key": "Q",
+              "label": "Q"
+            }
+          ],
+          "situation": "Cuando quieres golpear a varios enemigos cercanos mientras te desplazas.",
+          "execution": "Activa Q durante el desplazamiento de E para realizar un ataque circular al llegar.",
+          "mistake": "Calcula correctamente el alcance del círculo y tu posición final."
+        },
+        {
+          "name": "Beyblade",
+          "sequence": [
+            {
+              "key": "E",
+              "label": "E"
+            },
+            {
+              "key": "Q3",
+              "label": "Q3"
+            },
+            {
+              "key": "Flash",
+              "label": "Destello"
+            },
+            {
+              "key": "R",
+              "label": "R"
+            }
+          ],
+          "situation": "Cuando necesitas sorprender a varios enemigos o alcanzar a un carry que está fuera de tu rango normal.",
+          "execution": "Prepara el tornado, comienza el combo circular E + Q y utiliza Destello durante la animación para trasladar el área de impacto. Si levantas a un objetivo válido, continúa con R.",
+          "mistake": "Es un combo mecánicamente exigente. Practica el momento exacto del Destello antes de intentarlo en clasificatorias."
+        },
+        {
+          "name": "Airblade",
+          "sequence": [
+            {
+              "key": "Q3",
+              "label": "Q3"
+            },
+            {
+              "key": "EQ",
+              "label": "E + Q sobre otro objetivo"
+            },
+            {
+              "key": "R",
+              "label": "R"
+            }
+          ],
+          "situation": "Cuando ya has levantado a un enemigo y quieres añadir daño antes de utilizar Último aliento.",
+          "execution": "Conecta el tornado, utiliza E + Q sobre un objetivo cercano mientras el enemigo permanece en el aire y activa R durante la ventana disponible.",
+          "mistake": "Necesitas suficiente velocidad de ataque y una ejecución precisa. Si tardas demasiado, el enemigo caerá antes de que puedas utilizar R."
+        },
+        {
+          "name": "Keyblade",
+          "sequence": [
+            {
+              "key": "Beyblade",
+              "label": "Beyblade"
+            },
+            {
+              "key": "Airblade",
+              "label": "Airblade"
+            }
+          ],
+          "situation": "Para maximizar el daño y sorprender a enemigos en una pelea importante.",
+          "execution": "Combina un Beyblade para levantar al objetivo con la secuencia adicional de Airblade antes de utilizar R.",
+          "mistake": "Es uno de los combos más difíciles de Yasuo. No lo conviertas en tu prioridad hasta dominar las mecánicas básicas."
+        }
+      ],
+      "sections": [
+        {
+          "id": "laning",
+          "heading": "Fase de líneas: controla la oleada y tus desplazamientos",
+          "paragraphs": [
+            "Yasuo puede presionar mucho durante los primeros niveles, pero también es vulnerable cuando utiliza E de forma imprudente.",
+            "Contra magos de rango, aprovecha tu escudo pasivo para acercarte y utiliza los súbditos para evitar habilidades. Guarda Muro de viento para los proyectiles más peligrosos.",
+            "Contra campeones cuerpo a cuerpo, busca intercambios cuando tengas Compás letal y puedas prolongar la pelea sin recibir demasiado daño de la oleada enemiga.",
+            "Evita empujar automáticamente todas las oleadas. Si la línea queda demasiado adelantada, perderás espacio para utilizar E y quedarás expuesto a emboscadas."
+          ],
+          "bullets": [
+            "Prepara el tornado antes de buscar un intercambio.",
+            "Utiliza el escudo pasivo para absorber daño.",
+            "Conserva súbditos que permitan escapar.",
+            "Controla la posición del jungla enemigo.",
+            "No utilices W contra habilidades que no puedas bloquear."
+          ]
+        },
+        {
+          "id": "mid-game",
+          "heading": "Mitad de partida: escaramuzas y presión lateral",
+          "paragraphs": [
+            "Yasuo destaca en peleas pequeñas donde puede aprovechar su movilidad y los levantamientos de sus compañeros.",
+            "Empuja oleadas laterales cuando sea seguro y busca oportunidades para unirte a tu equipo en objetivos importantes.",
+            "Si tienes aliados como Malphite, Diana o Wukong, coordina tu definitiva con sus habilidades de levantamiento.",
+            "No necesitas utilizar R inmediatamente después de cualquier levantamiento. A veces es mejor mantener tu posición y continuar atacando."
+          ],
+          "bullets": [
+            "Busca peleas alrededor de objetivos neutrales.",
+            "Utiliza la visión para preparar flancos.",
+            "No persigas enemigos sin una ruta de salida.",
+            "Aprovecha los levantamientos aliados.",
+            "Evita luchar en zonas sin objetivos disponibles para E."
+          ]
+        },
+        {
+          "id": "teamfights",
+          "heading": "Teamfights: no eres el iniciador principal",
+          "paragraphs": [
+            "Aunque Yasuo puede eliminar rápidamente a varios enemigos, sigue siendo vulnerable al control de masas y al daño concentrado.",
+            "Espera a que tu primera línea cree espacio o a que un aliado consiga un levantamiento importante.",
+            "Utiliza Muro de viento para bloquear proyectiles que amenacen a tu equipo y busca un ángulo seguro para alcanzar a los carries.",
+            "Después de utilizar R, aprovecha tu escudo y la penetración adicional para continuar atacando, pero no persigas una segunda muerte si el resto del equipo enemigo puede eliminarte."
+          ],
+          "bullets": [
+            "No utilices R automáticamente sobre el primer enemigo levantado.",
+            "Controla las habilidades de control de masas enemigas.",
+            "Protege a tus carries con Muro de viento cuando sea necesario.",
+            "Prioriza objetivos que puedas alcanzar sin morir.",
+            "Aprovecha tu daño sostenido en lugar de buscar únicamente combos espectaculares."
+          ]
+        }
+      ],
+      "matchups": {
+        "difficult": [
+          {
+            "name": "Lissandra",
+            "icon": "Lissandra.png",
+            "winRate": "54,9%",
+            "games": "8.152",
+            "advice": "Puede inmovilizar a Yasuo y neutralizar sus entradas con su definitiva. Su equipo puede aprovechar ese control de masas para eliminarte antes de que puedas atacar. No entres mientras tenga su definitiva disponible y evita utilizar E de forma predecible."
+          },
+          {
+            "name": "Malzahar",
+            "icon": "Malzahar.png",
+            "winRate": "54,7%",
+            "games": "5.499",
+            "advice": "Su definitiva puede detener tus combos y convertirte en un objetivo fácil para el jungla enemigo. Controla su escudo pasivo y evita los all-ins cuando tenga R."
+          },
+          {
+            "name": "Aurelion Sol",
+            "icon": "AurelionSol.png",
+            "winRate": "56,2%",
+            "games": "2.449",
+            "advice": "Puede controlar grandes zonas y escalar hasta superar tu impacto en peleas agrupadas. Presiónalo cuando sus habilidades importantes estén en enfriamiento y evita regalarle tiempo para escalar."
+          }
+        ],
+        "favorable": [
+          {
+            "name": "Lux",
+            "icon": "Lux.png",
+            "advice": "Yasuo puede bloquear varias de sus habilidades con Muro de viento y castigarla cuando falla su inmovilización. Guarda W para su Q o E y aprovecha los súbditos para acercarte."
+          },
+          {
+            "name": "Ahri",
+            "icon": "Ahri.png",
+            "advice": "Sus proyectiles pueden ser bloqueados y Yasuo puede castigarla cuando utiliza su hechizo de control de masas. No persigas a Ahri sin considerar las cargas de su definitiva."
+          },
+          {
+            "name": "Syndra",
+            "icon": "Syndra.png",
+            "advice": "Yasuo puede presionarla cuando sus habilidades defensivas están en enfriamiento, pero debe respetar su control de masas. Busca intercambios cortos y utiliza W para bloquear proyectiles importantes."
+          }
+        ],
+        "note": "Los enfrentamientos siguientes combinan datos del parche 26.22 con consejos estratégicos. Los porcentajes citados corresponden a victorias del rival contra Yasuo y no garantizan el resultado de una partida individual. Estos tres enfrentamientos son ejemplos estratégicos, no ventajas estadísticas confirmadas para el parche."
+      },
+      "mistakes": [
+        "Utilizar E para avanzar sin planear cómo salir.",
+        "Gastar Muro de viento en habilidades poco importantes.",
+        "Lanzar tornados sin considerar el movimiento enemigo.",
+        "Utilizar R sobre cualquier objetivo levantado.",
+        "Empujar todas las oleadas sin controlar al jungla.",
+        "Intentar combos avanzados antes de dominar los básicos.",
+        "Comprar siempre la misma build sin adaptarte al daño enemigo.",
+        "Confundir movilidad con invulnerabilidad."
+      ],
+      "practicePlan": [
+        {
+          "title": "1. Ejercicio de desplazamientos",
+          "steps": [
+            "En la herramienta de práctica, coloca varios muñecos y utiliza oleadas de súbditos.",
+            "Practica encadenar E entre objetivos sin quedarte atrapado.",
+            "Intenta terminar cada secuencia en una posición segura.",
+            "Objetivo: Aprender a visualizar una ruta de entrada y salida antes de desplazarte."
+          ]
+        },
+        {
+          "title": "2. Ejercicio de tornados",
+          "steps": [
+            "Golpea súbditos para preparar Q3 y practica acertar tornados desde distintas distancias.",
+            "Después combina E + Q para ejecutar el levantamiento circular.",
+            "Objetivo: Mejorar la precisión y reducir los tornados desperdiciados."
+          ]
+        },
+        {
+          "title": "3. Ejercicio de combos avanzados",
+          "steps": [
+            "Practica Beyblade y Airblade por separado.",
+            "Cuando puedas ejecutarlos consistentemente, intenta combinarlos en Keyblade.",
+            "Objetivo: Ejecutar los combos sin depender de movimientos improvisados."
+          ]
+        },
+        {
+          "title": "4. Revisión de teamfights",
+          "steps": [
+            "Mira una repetición y pausa antes de cada definitiva.",
+            "Identifica qué enemigo estaba levantado, dónde aparecerías y qué control de masas seguía disponible.",
+            "Objetivo: Mejorar la elección del objetivo y evitar muertes innecesarias."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "¿Es difícil aprender a Yasuo?",
+          "a": "Sí. Sus habilidades básicas son sencillas de entender, pero dominar los desplazamientos, tornados y combos avanzados requiere mucha práctica."
+        },
+        {
+          "q": "¿Cuál es la mejor build de Yasuo en el parche 26.22?",
+          "a": "Una de las rutas más populares es Hoja del rey arruinado, Arcoescudo inmortal y Filo infinito. También existen configuraciones que priorizan Arcoescudo y Filo infinito."
+        },
+        {
+          "q": "¿Qué orden de habilidades debo utilizar?",
+          "a": "Q primero, E después y W al final, mejorando R siempre que esté disponible."
+        },
+        {
+          "q": "¿Qué es el combo Beyblade de Yasuo?",
+          "a": "Es una combinación de E + Q3 + Destello que permite trasladar el área del levantamiento a una nueva posición."
+        },
+        {
+          "q": "¿Qué es Airblade?",
+          "a": "Es una técnica que permite añadir el daño de E + Q antes de completar Último aliento sobre un enemigo levantado."
+        },
+        {
+          "q": "¿Es Yasuo bueno para principiantes?",
+          "a": "No es uno de los campeones más sencillos, pero puede aprenderse empezando por el farmeo, el posicionamiento y los combos básicos."
+        },
+        {
+          "q": "¿Yasuo es mejor mid o top?",
+          "a": "Mid es su posición principal en esta guía. Top es una alternativa, aunque puede enfrentarse a luchadores con mayor resistencia y daño sostenido."
+        }
+      ],
+      "sources": [
+        {
+          "label": "U.GG — Yasuo Mid Build, Runes and Skill Order",
+          "url": "https://u.gg/lol/champions/yasuo/build?role=mid&region=world&patch=26_22"
+        },
+        {
+          "label": "Mobalytics — Yasuo Build and Runes",
+          "url": "https://mobalytics.gg/lol/champions/yasuo/build"
+        },
+        {
+          "label": "Trackimo — Yasuo Mid Build, Items and Skill Order",
+          "url": "https://trackimo.lol/champions/yasuo/mid/build"
+        },
+        {
+          "label": "Riot Games — Yasuo Official Champion Page",
+          "url": "https://www.leagueoflegends.com/en-us/champions/yasuo/"
+        }
+      ],
+      "statsNote": "Los datos principales proceden de U.GG para el parche 26.22, Esmeralda+, Solo/Dúo global. Las rutas de objetos también se contrastan con Trackimo y Mobalytics. Los porcentajes de victoria pueden variar entre plataformas debido a las diferencias de muestra, filtros y metodología. Las estadísticas de builds completas están condicionadas por las partidas que llegan a completar esos objetos.",
+      "lastUpdated": "2026-11-17"
+    },
     "katarina": {
       "slug": "katarina",
       "name": "Katarina",

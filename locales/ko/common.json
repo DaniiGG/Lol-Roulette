@@ -18,6 +18,9 @@
     "emptyPool": "No champions match these filters."
   },
     "nav": {
+        "tools": "도구",
+        "learn": "배우기",
+        "navigation": "주 탐색 메뉴",
         "play": "Play",
         "leaderboard": "Leaderboard",
         "howToPlay": "How to Play",

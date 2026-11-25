@@ -18,6 +18,9 @@
     "emptyPool": "No hay campeones para estos filtros."
   },
     "nav": {
+        "tools": "Herramientas",
+        "learn": "Aprender",
+        "navigation": "Navegación principal",
         "play": "Jugar",
         "leaderboard": "Clasificación",
         "howToPlay": "Cómo Jugar",

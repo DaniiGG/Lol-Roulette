@@ -2,6 +2,789 @@
   "patch": "26.21",
   "updatedAt": "2026-10-28",
   "champions": {
+    "yasuo": {
+      "slug": "yasuo",
+      "name": "Yasuo",
+      "title": "The Unforgiven",
+      "role": "mid",
+      "roleLabel": "Mid",
+      "difficulty": "high",
+      "difficultyLabel": "High",
+      "tagline": "A highly mobile swordsman who turns minion waves into movement paths, blocks enemy projectiles, and can decide an entire teamfight with a perfectly placed tornado.",
+      "metaTitle": "How to Play Yasuo: Build, Runes & Combos (26.22)",
+      "metaDescription": "Learn Yasuo mid in patch 26.22 with builds, runes, skill order, combos, and matchup tips.",
+      "h1": "How to Play Yasuo in League of Legends — Build, Runes & Combos (Patch 26.22)",
+      "heroIntro": [
+        "Yasuo is a mid-lane fighter and assassin specializing in critical strikes, sustained physical damage, and high-mobility combos. He doesn't use mana, but his effectiveness depends on managing his passive shield, Steel Tempest stacks, and available dash targets.",
+        "This guide covers Yasuo's Patch 26.22 build, level-by-level skill order, runes, advanced combos, laning decisions, teamfights, difficult matchups, and common mistakes."
+      ],
+      "quickAnswer": "Max Q first, followed by E and W. Run Lethal Tempo with Precision primary and Resolve secondary. Start Doran's Blade and build Blade of the Ruined King, Immortal Shieldbow, and Infinity Edge. Play around your passive shield, prepare tornadoes before trading, and use minions as entry and escape routes. Save Wind Wall for important projectiles and avoid using Last Breath on every airborne target if the landing position is dangerous.",
+      "quickStart": {
+        "role": "Mid-lane fighter.",
+        "secondaryRoles": "Top lane",
+        "difficulty": "High",
+        "playstyle": "Mobile physical damage dealer with critical strikes and extended combos.",
+        "keyMechanic": "Preparing Steel Tempest tornadoes and repositioning with Sweeping Blade.",
+        "beginnerMistake": "Dashing forward without planning an escape route.",
+        "winCondition": "Win skirmishes, capitalize on allied knockups, and eliminate priority targets through sustained damage."
+      },
+      "abilities": [
+        {
+          "key": "P",
+          "name": "Way of the Wanderer",
+          "icon": "Yasuo_Passive.png",
+          "description": "Yasuo gains increased critical strike chance. He also generates Flow while moving, which creates a shield when fully charged and triggered by enemy champion or monster damage.",
+          "tips": [
+            "Keep moving to charge your passive shield.",
+            "Trade when your shield is available.",
+            "Take advantage of critical strike items to reach your damage spikes.",
+            "Wait for your shield to recharge before repeating dangerous trades."
+          ],
+          "mistake": "Engaging without your shield and taking unnecessary damage."
+        },
+        {
+          "key": "Q",
+          "name": "Steel Tempest",
+          "icon": "YasuoQ1Wrapper.png",
+          "description": "Yasuo thrusts his sword forward, dealing physical damage. Hitting enemies generates Gathering Storm stacks. After two successful hits, his next Q launches a tornado that knocks enemies airborne. Attack speed reduces Steel Tempest's cooldown and cast time, up to their limits.",
+          "tips": [
+            "Use Q to last-hit minions and prepare tornadoes.",
+            "Stack Q on minions before engaging.",
+            "Combine E + Q for a circular attack.",
+            "Use your tornado to enable Last Breath."
+          ],
+          "mistake": "Throwing tornadoes immediately without predicting enemy movement."
+        },
+        {
+          "key": "W",
+          "name": "Wind Wall",
+          "icon": "YasuoW.png",
+          "description": "Yasuo creates a wall that blocks many enemy projectiles.",
+          "tips": [
+            "Save it for important enemy abilities.",
+            "Protect teammates during teamfights.",
+            "Position correctly around the wall.",
+            "Learn which enemy abilities count as blockable projectiles."
+          ],
+          "mistake": "Wasting Wind Wall on insignificant damage and having no protection against a crucial ability."
+        },
+        {
+          "key": "E",
+          "name": "Sweeping Blade",
+          "icon": "YasuoE.png",
+          "description": "Yasuo dashes through a target, dealing magic damage. He cannot dash through the same target again for a short period.",
+          "tips": [
+            "Use minions to approach or escape.",
+            "Plan your dash targets before engaging.",
+            "Combine E + Q for a circular strike.",
+            "Preserve available minions for your escape."
+          ],
+          "mistake": "Dashing automatically toward an enemy without considering your final position."
+        },
+        {
+          "key": "R",
+          "name": "Last Breath",
+          "icon": "YasuoR.png",
+          "description": "Yasuo blinks to an airborne enemy champion, suspending airborne enemies and dealing physical damage. He restores his Flow and temporarily gains bonus armor penetration on critical strikes.",
+          "tips": [
+            "Combine R with your tornado or allied knockups.",
+            "Prioritize valuable airborne targets.",
+            "Evaluate your landing position.",
+            "Continue attacking after R to benefit from its armor penetration."
+          ],
+          "mistake": "Ulting a tank and landing in the middle of the entire enemy team."
+        }
+      ],
+      "skillOrder": {
+        "priority": "Q > E > W",
+        "start": "Q → E → W",
+        "levels": [
+          {
+            "level": 1,
+            "ability": "Q"
+          },
+          {
+            "level": 2,
+            "ability": "E"
+          },
+          {
+            "level": 3,
+            "ability": "W"
+          },
+          {
+            "level": 4,
+            "ability": "Q"
+          },
+          {
+            "level": 5,
+            "ability": "Q"
+          },
+          {
+            "level": 6,
+            "ability": "R"
+          },
+          {
+            "level": 7,
+            "ability": "Q"
+          },
+          {
+            "level": 8,
+            "ability": "E"
+          },
+          {
+            "level": 9,
+            "ability": "Q"
+          },
+          {
+            "level": 10,
+            "ability": "E"
+          },
+          {
+            "level": 11,
+            "ability": "R"
+          },
+          {
+            "level": 12,
+            "ability": "E"
+          },
+          {
+            "level": 13,
+            "ability": "E"
+          },
+          {
+            "level": 14,
+            "ability": "W"
+          },
+          {
+            "level": 15,
+            "ability": "W"
+          },
+          {
+            "level": 16,
+            "ability": "R"
+          },
+          {
+            "level": 17,
+            "ability": "W"
+          },
+          {
+            "level": 18,
+            "ability": "W"
+          }
+        ],
+        "explanation": [
+          "Max Q first because it is your primary damage source and provides frequent tornado opportunities.",
+          "Max E second for improved damage and offensive mobility.",
+          "Max W last because its defensive value mainly comes from blocking the right abilities."
+        ],
+        "note": "Starting E can be useful against certain melee champions, but Q is the more straightforward option for learning Yasuo."
+      },
+      "runes": {
+        "title": "Lethal Tempo — Sustained Damage",
+        "summary": "Lethal Tempo is Yasuo's most popular keystone in Patch 26.22. It improves extended trades and synergizes with his reliance on attack speed.",
+        "primaryTree": {
+          "name": "Precision",
+          "icon": "perk-images/Styles/7201_Precision.png"
+        },
+        "secondaryTree": {
+          "name": "Resolve",
+          "icon": "perk-images/Styles/7204_Resolve.png"
+        },
+        "keystone": {
+          "id": 8008,
+          "name": "Lethal Tempo",
+          "why": "Improves sustained damage during extended fights.",
+          "icon": "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png"
+        },
+        "primaryRunes": [
+          {
+            "id": 9101,
+            "name": "Absorb Life",
+            "why": "Restores health when killing minions, improving lane sustain.",
+            "icon": "perk-images/Styles/Precision/AbsorbLife/AbsorbLife.png"
+          },
+          {
+            "id": 9104,
+            "name": "Legend: Alacrity",
+            "why": "Provides attack speed for faster attacks and more frequent Steel Tempest casts.",
+            "icon": "perk-images/Styles/Precision/LegendAlacrity/LegendAlacrity.png"
+          },
+          {
+            "id": 8299,
+            "name": "Last Stand",
+            "why": "Increases damage when low on health, helping Yasuo win close duels.",
+            "icon": "perk-images/Styles/Sorcery/LastStand/LastStand.png"
+          }
+        ],
+        "secondaryRunes": [
+          {
+            "id": 8473,
+            "name": "Bone Plating",
+            "why": "Reduces incoming damage during short trades and enemy combos.",
+            "icon": "perk-images/Styles/Resolve/BonePlating/BonePlating.png"
+          },
+          {
+            "id": 8451,
+            "name": "Overgrowth",
+            "why": "Provides additional health as the game progresses.",
+            "icon": "perk-images/Styles/Resolve/Overgrowth/Overgrowth.png"
+          }
+        ],
+        "alternatives": [
+          "Fleet Footwork: Better sustain and mobility against difficult poke matchups.",
+          "Triumph: An alternative to Absorb Life for stronger skirmishes.",
+          "Second Wind: Useful against frequent ranged poke.",
+          "Unflinching: Additional protection against crowd control."
+        ],
+        "notes": [
+          "Lethal Tempo is a strong default for learning Yasuo because it rewards extended trades and consistent basic attacks."
+        ]
+      },
+      "summonerSpells": [
+        {
+          "name": "Flash",
+          "icon": "SummonerFlash.png",
+          "why": "Essential for escaping, repositioning, and advanced combos such as Beyblade."
+        },
+        {
+          "name": "Ignite",
+          "icon": "SummonerDot.png",
+          "why": "Provides additional early kill pressure and helps finish low-health enemies.",
+          "alternative": "Alternative — Teleport: A safer choice for difficult lanes where maintaining farm and tempo matters more than early kills."
+        }
+      ],
+      "builds": [
+        {
+          "id": "standard",
+          "label": "Primary Build — Critical Strike and Sustained Damage",
+          "summary": "A setup combining physical damage, attack speed, lifesteal, and critical strikes.",
+          "starting": {
+            "label": "Starting Items",
+            "items": [
+              {
+                "id": "1055",
+                "name": "Doran's Blade",
+                "icon": "1055.png",
+                "why": "Damage and sustain for early trades."
+              },
+              {
+                "id": "2003",
+                "name": "Health Potion",
+                "icon": "2003.png",
+                "why": "Recovery for laning."
+              }
+            ]
+          },
+          "core": {
+            "label": "Core Items",
+            "items": [
+              {
+                "id": "3153",
+                "name": "Blade of the Ruined King",
+                "icon": "3153.png",
+                "why": "Attack speed, lifesteal, and additional damage against high-health targets."
+              },
+              {
+                "id": "6673",
+                "name": "Immortal Shieldbow",
+                "icon": "6673.png",
+                "why": "Critical strike chance and a defensive shield that helps survive burst damage."
+              },
+              {
+                "id": "3031",
+                "name": "Infinity Edge",
+                "icon": "3031.png",
+                "why": "A major increase to critical strike damage."
+              }
+            ]
+          },
+          "situational": {
+            "label": "Situational Items",
+            "items": [
+              {
+                "id": "6333",
+                "name": "Death's Dance",
+                "icon": "6333.png",
+                "why": "Improves survivability against physical damage and during extended fights."
+              },
+              {
+                "id": "3026",
+                "name": "Guardian Angel",
+                "icon": "3026.png",
+                "why": "Provides a second chance after a risky engage."
+              },
+              {
+                "id": "3036",
+                "name": "Lord Dominik's Regards",
+                "icon": "3036.png",
+                "why": "Armor penetration against durable enemies."
+              },
+              {
+                "id": "3033",
+                "name": "Mortal Reminder",
+                "icon": "3033.png",
+                "why": "Armor penetration and Grievous Wounds."
+              },
+              {
+                "id": "3156",
+                "name": "Maw of Malmortius",
+                "icon": "3156.png",
+                "why": "Protection against magic burst."
+              },
+              {
+                "id": "3072",
+                "name": "Bloodthirster",
+                "icon": "3072.png",
+                "why": "Lifesteal and additional sustained damage."
+              }
+            ]
+          },
+          "boots": {
+            "label": "Boots",
+            "items": [
+              {
+                "id": "3172",
+                "name": "Gunmetal Greaves",
+                "icon": "3172.png",
+                "why": "A popular attack-speed option."
+              },
+              {
+                "id": "3047",
+                "name": "Plated Steelcaps",
+                "icon": "3047.png",
+                "why": "Against heavy physical damage and basic attacks."
+              },
+              {
+                "id": "3111",
+                "name": "Mercury's Treads",
+                "icon": "3111.png",
+                "why": "Against magic damage and crowd control."
+              }
+            ]
+          },
+          "notes": [
+            "Blade of the Ruined King → Immortal Shieldbow → Infinity Edge is one of the most popular item paths in Patch 26.22."
+          ]
+        },
+        {
+          "id": "early-crit",
+          "label": "Alternative Build — Early Critical Strike",
+          "summary": "A build focused on reaching critical strike power spikes earlier.",
+          "starting": {
+            "label": "Starting Items",
+            "items": [
+              {
+                "id": "1055",
+                "name": "Doran's Blade",
+                "icon": "1055.png",
+                "why": "Damage and sustain for early trades."
+              },
+              {
+                "id": "2003",
+                "name": "Health Potion",
+                "icon": "2003.png",
+                "why": "Recovery for laning."
+              }
+            ]
+          },
+          "core": {
+            "label": "Core Items",
+            "items": [
+              {
+                "id": "6673",
+                "name": "Immortal Shieldbow",
+                "icon": "6673.png",
+                "why": "Critical strike chance and a defensive shield that helps survive burst damage."
+              },
+              {
+                "id": "3031",
+                "name": "Infinity Edge",
+                "icon": "3031.png",
+                "why": "A major increase to critical strike damage."
+              },
+              {
+                "id": "6333",
+                "name": "Death's Dance",
+                "icon": "6333.png",
+                "why": "Improves survivability against physical damage and during extended fights."
+              }
+            ]
+          },
+          "situational": {
+            "label": "Situational Items",
+            "items": [
+              {
+                "id": "3026",
+                "name": "Guardian Angel",
+                "icon": "3026.png",
+                "why": "Provides a second chance after a risky engage."
+              },
+              {
+                "id": "3036",
+                "name": "Lord Dominik's Regards",
+                "icon": "3036.png",
+                "why": "Armor penetration against durable enemies."
+              },
+              {
+                "id": "3156",
+                "name": "Maw of Malmortius",
+                "icon": "3156.png",
+                "why": "Protection against magic burst."
+              },
+              {
+                "id": "3072",
+                "name": "Bloodthirster",
+                "icon": "3072.png",
+                "why": "Lifesteal and additional sustained damage."
+              }
+            ]
+          },
+          "boots": {
+            "label": "Boots",
+            "items": [
+              {
+                "id": "3172",
+                "name": "Gunmetal Greaves",
+                "icon": "3172.png",
+                "why": "A popular attack-speed option."
+              },
+              {
+                "id": "3047",
+                "name": "Plated Steelcaps",
+                "icon": "3047.png",
+                "why": "Against heavy physical damage and basic attacks."
+              },
+              {
+                "id": "3111",
+                "name": "Mercury's Treads",
+                "icon": "3111.png",
+                "why": "Against magic damage and crowd control."
+              }
+            ]
+          },
+          "notes": [
+            "Choose this route when prioritizing earlier critical strike power spikes over Blade of the Ruined King's sustained damage."
+          ]
+        }
+      ],
+      "combos": [
+        {
+          "name": "Basic Lane Trade",
+          "sequence": [
+            {
+              "key": "E",
+              "label": "E"
+            },
+            {
+              "key": "Q",
+              "label": "Q"
+            },
+            {
+              "key": "AA",
+              "label": "Auto Attack"
+            },
+            {
+              "key": "E",
+              "label": "E Out"
+            }
+          ],
+          "situation": "During laning phase when minions provide safe entry and exit paths.",
+          "execution": "Dash through a minion to approach, hit Q and an auto attack, then use another target to retreat.",
+          "mistake": "Avoid engaging when the enemy can immobilize you before completing the trade."
+        },
+        {
+          "name": "Tornado Combo",
+          "sequence": [
+            {
+              "key": "Q",
+              "label": "Q"
+            },
+            {
+              "key": "Q",
+              "label": "Q"
+            },
+            {
+              "key": "Q3",
+              "label": "Q3"
+            },
+            {
+              "key": "R",
+              "label": "R"
+            }
+          ],
+          "situation": "When you have two Steel Tempest stacks and the enemy is within tornado range.",
+          "execution": "Stack Q on minions or champions, land your tornado, and cast Last Breath while the target is airborne.",
+          "mistake": "Don't force R if your landing position is dangerous."
+        },
+        {
+          "name": "Circular Strike",
+          "sequence": [
+            {
+              "key": "E",
+              "label": "E"
+            },
+            {
+              "key": "Q",
+              "label": "Q"
+            }
+          ],
+          "situation": "When you want to damage nearby enemies while dashing.",
+          "execution": "Activate Q during Sweeping Blade to perform a circular attack.",
+          "mistake": "Pay attention to the circular hitbox and your final position."
+        },
+        {
+          "name": "Beyblade",
+          "sequence": [
+            {
+              "key": "E",
+              "label": "E"
+            },
+            {
+              "key": "Q3",
+              "label": "Q3"
+            },
+            {
+              "key": "Flash",
+              "label": "Flash"
+            },
+            {
+              "key": "R",
+              "label": "R"
+            }
+          ],
+          "situation": "When you need to surprise enemies or reach a carry outside your normal range.",
+          "execution": "Prepare your tornado, begin the E + Q circular attack, and Flash during the animation to reposition the knockup area. Follow with R if you hit a valid target.",
+          "mistake": "This is mechanically demanding. Practice Flash timing before attempting it in ranked games."
+        },
+        {
+          "name": "Airblade",
+          "sequence": [
+            {
+              "key": "Q3",
+              "label": "Q3"
+            },
+            {
+              "key": "EQ",
+              "label": "E + Q on Another Target"
+            },
+            {
+              "key": "R",
+              "label": "R"
+            }
+          ],
+          "situation": "When an enemy is already airborne and you want to add damage before Last Breath.",
+          "execution": "Land your tornado, use E + Q on a nearby target while the enemy remains airborne, and cast R during the available window.",
+          "mistake": "You need sufficient attack speed and precise timing. If you are too slow, the target will land before you can ult."
+        },
+        {
+          "name": "Keyblade",
+          "sequence": [
+            {
+              "key": "Beyblade",
+              "label": "Beyblade"
+            },
+            {
+              "key": "Airblade",
+              "label": "Airblade"
+            }
+          ],
+          "situation": "To maximize damage and surprise enemies during an important fight.",
+          "execution": "Combine a Beyblade knockup with the additional Airblade sequence before Last Breath.",
+          "mistake": "This is one of Yasuo's most difficult combos. Master the fundamentals first."
+        }
+      ],
+      "sections": [
+        {
+          "id": "laning",
+          "heading": "Laning Phase: Control the Wave and Your Dashes",
+          "paragraphs": [
+            "Yasuo can apply significant pressure during early levels, but he is vulnerable when using Sweeping Blade carelessly.",
+            "Against ranged mages, use your passive shield to approach and minions to dodge skillshots. Save Wind Wall for their most dangerous projectiles.",
+            "Against melee champions, look for extended trades when Lethal Tempo is available and you can fight without taking excessive minion damage.",
+            "Avoid automatically pushing every wave. Overextending removes safe dash routes and exposes you to jungle ganks."
+          ],
+          "bullets": [
+            "Prepare your tornado before trading.",
+            "Use your passive shield to absorb damage.",
+            "Preserve minions for escaping.",
+            "Track the enemy jungler.",
+            "Don't waste Wind Wall against unblockable abilities."
+          ]
+        },
+        {
+          "id": "mid-game",
+          "heading": "Mid Game: Skirmishes and Side-Lane Pressure",
+          "paragraphs": [
+            "Yasuo excels in smaller fights where he can use mobility and allied knockups.",
+            "Push side waves when safe and look for opportunities around important objectives.",
+            "If your team includes champions such as Malphite, Diana, or Wukong, coordinate Last Breath with their knockup abilities.",
+            "You don't need to ult immediately after every knockup. Sometimes maintaining your position and continuing to attack is more valuable."
+          ],
+          "bullets": [
+            "Look for fights around neutral objectives.",
+            "Use vision to prepare flanks.",
+            "Don't chase enemies without an escape route.",
+            "Capitalize on allied knockups.",
+            "Avoid fighting where no targets are available for E."
+          ]
+        },
+        {
+          "id": "teamfights",
+          "heading": "Teamfights: Don't Always Engage First",
+          "paragraphs": [
+            "Although Yasuo can eliminate multiple enemies quickly, he remains vulnerable to crowd control and focused damage.",
+            "Wait for your frontline to create space or for an ally to land an important knockup.",
+            "Use Wind Wall to block projectiles threatening your team and find a safe angle toward enemy carries.",
+            "After using Last Breath, take advantage of your shield and additional armor penetration to continue attacking. Don't chase another kill when the remaining enemies can immediately eliminate you."
+          ],
+          "bullets": [
+            "Don't automatically ult the first airborne enemy.",
+            "Track enemy crowd control cooldowns.",
+            "Protect your carries with Wind Wall when necessary.",
+            "Prioritize targets you can reach safely.",
+            "Use sustained damage instead of relying entirely on flashy combos."
+          ]
+        }
+      ],
+      "matchups": {
+        "difficult": [
+          {
+            "name": "Lissandra",
+            "icon": "Lissandra.png",
+            "winRate": "54.9%",
+            "games": "8,152",
+            "advice": "Lissandra can immobilize Yasuo and stop his engages with her ultimate. Her team can capitalize on this crowd control to eliminate him. Avoid committing while her ultimate is available, and don't use predictable dashes."
+          },
+          {
+            "name": "Malzahar",
+            "icon": "Malzahar.png",
+            "winRate": "54.7%",
+            "games": "5,499",
+            "advice": "Malzahar's ultimate can stop Yasuo's combos and leave him vulnerable to jungle pressure. Track his passive shield and avoid all-ins while his ultimate is available."
+          },
+          {
+            "name": "Aurelion Sol",
+            "icon": "AurelionSol.png",
+            "winRate": "56.2%",
+            "games": "2,449",
+            "advice": "Aurelion Sol can control large areas and eventually outscale Yasuo's impact in grouped fights. Pressure him when his important abilities are on cooldown and prevent him from scaling freely."
+          }
+        ],
+        "favorable": [
+          {
+            "name": "Lux",
+            "icon": "Lux.png",
+            "advice": "Yasuo can block several of Lux's abilities with Wind Wall and punish her after she misses her root. Save W for important projectiles and use minions to close the distance."
+          },
+          {
+            "name": "Ahri",
+            "icon": "Ahri.png",
+            "advice": "Yasuo can block Ahri's projectiles and punish her when Charm is unavailable. Don't chase Ahri without accounting for her ultimate charges."
+          },
+          {
+            "name": "Syndra",
+            "icon": "Syndra.png",
+            "advice": "Yasuo can pressure Syndra when her defensive abilities are on cooldown, but must respect her crowd control. Look for short trades and use Wind Wall against important projectiles."
+          }
+        ],
+        "note": "The following matchups combine Patch 26.22 statistics with strategic advice. Listed win rates refer to the opposing champion's performance against Yasuo. These three matchups are strategic examples, not statistically confirmed favorable matchups for the patch."
+      },
+      "mistakes": [
+        "Dashing forward without planning an escape.",
+        "Wasting Wind Wall on insignificant abilities.",
+        "Throwing tornadoes without predicting enemy movement.",
+        "Using Last Breath on every airborne target.",
+        "Constantly pushing waves without tracking the enemy jungler.",
+        "Attempting advanced combos before mastering basic mechanics.",
+        "Building identical items regardless of enemy composition.",
+        "Confusing high mobility with invulnerability."
+      ],
+      "practicePlan": [
+        {
+          "title": "1. Dash Path Drill",
+          "steps": [
+            "In Practice Tool, place several training dummies and use minion waves.",
+            "Practice chaining Sweeping Blade between targets without getting trapped.",
+            "Try to finish each sequence in a safe position.",
+            "Goal: Learn to visualize entry and escape routes before dashing."
+          ]
+        },
+        {
+          "title": "2. Tornado Accuracy Drill",
+          "steps": [
+            "Hit minions to prepare Q3 and practice landing tornadoes from different distances.",
+            "Then combine E + Q for circular knockups.",
+            "Goal: Improve accuracy and reduce wasted tornadoes."
+          ]
+        },
+        {
+          "title": "3. Advanced Combo Drill",
+          "steps": [
+            "Practice Beyblade and Airblade separately.",
+            "Once you can execute both consistently, combine them into Keyblade.",
+            "Goal: Perform advanced combos reliably rather than improvising under pressure."
+          ]
+        },
+        {
+          "title": "4. Teamfight Review",
+          "steps": [
+            "Watch a replay and pause before every ultimate.",
+            "Identify which enemy was airborne, where you would land, and which crowd control abilities remained available.",
+            "Goal: Improve target selection and avoid unnecessary deaths."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "Is Yasuo difficult to learn?",
+          "a": "Yes. His basic abilities are straightforward, but mastering dash paths, tornadoes, and advanced combos takes considerable practice."
+        },
+        {
+          "q": "What is the best Yasuo build in Patch 26.22?",
+          "a": "One of the most popular builds is Blade of the Ruined King, Immortal Shieldbow, and Infinity Edge. Other builds prioritize Shieldbow and Infinity Edge earlier."
+        },
+        {
+          "q": "What skill order should I use?",
+          "a": "Max Q first, E second, and W last, leveling R whenever available."
+        },
+        {
+          "q": "What is Yasuo's Beyblade combo?",
+          "a": "Beyblade is an E + Q3 + Flash combination that relocates the circular knockup area."
+        },
+        {
+          "q": "What is Airblade?",
+          "a": "Airblade is an advanced technique that adds E + Q damage before completing Last Breath on an airborne enemy."
+        },
+        {
+          "q": "Is Yasuo good for beginners?",
+          "a": "Yasuo isn't one of the easiest champions, but beginners can learn him by focusing on farming, positioning, and basic combos before advanced mechanics."
+        },
+        {
+          "q": "Is Yasuo better mid or top?",
+          "a": "Mid is his primary role in this guide. Top is also viable, although Yasuo may face durable fighters with stronger sustained damage."
+        }
+      ],
+      "sources": [
+        {
+          "label": "U.GG — Yasuo Mid Build, Runes and Skill Order",
+          "url": "https://u.gg/lol/champions/yasuo/build?role=mid&region=world&patch=26_22"
+        },
+        {
+          "label": "Mobalytics — Yasuo Build and Runes",
+          "url": "https://mobalytics.gg/lol/champions/yasuo/build"
+        },
+        {
+          "label": "Trackimo — Yasuo Mid Build, Items and Skill Order",
+          "url": "https://trackimo.lol/champions/yasuo/mid/build"
+        },
+        {
+          "label": "Riot Games — Yasuo Official Champion Page",
+          "url": "https://www.leagueoflegends.com/en-us/champions/yasuo/"
+        }
+      ],
+      "statsNote": "The primary statistics come from U.GG for Patch 26.22, Emerald+, global Ranked Solo/Duo. Item paths are also compared with Trackimo and Mobalytics. Win rates can differ between platforms because of sample sizes, filters, and statistical methodologies. Completed-build win rates are conditional on games lasting long enough to reach those items.",
+      "lastUpdated": "2026-11-17"
+    },
     "katarina": {
       "slug": "katarina",
       "name": "Katarina",

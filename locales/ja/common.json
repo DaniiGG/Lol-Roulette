@@ -18,6 +18,9 @@
     "emptyPool": "No champions match these filters."
   },
     "nav": {
+        "tools": "ツール",
+        "learn": "学ぶ",
+        "navigation": "メインナビゲーション",
         "play": "Play",
         "leaderboard": "Leaderboard",
         "howToPlay": "How to Play",

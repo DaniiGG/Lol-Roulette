@@ -27,6 +27,30 @@ const LOLALYTICS_BASE = 'https://lolalytics.com/lol'
 
 export const GUIDE_CHAMPIONS: GuideChampionMeta[] = [
   {
+    slug: 'yasuo',
+    championId: 'Yasuo',
+    roles: ['mid', 'top'],
+    primaryRole: 'mid',
+    ddragonDifficulty: 8,
+    patch: '26.22',
+    localizedSlugs: { en: 'how-to-play-yasuo', es: 'como-jugar-yasuo' },
+    publishedAt: '2026-11-17',
+    updatedAt: '2026-11-17',
+    related: ['vladimir', 'katarina', 'azir'],
+    splash: splashFor('Yasuo'),
+    loading: loadingFor('Yasuo'),
+    stats: [
+      {
+        source: 'U.GG',
+        context: 'Mid / Emerald+ / Global / Ranked Solo-Duo / Patch 26.22',
+        winRate: '48.97%',
+        matches: '179,462',
+        url: `${UGGBASE}/yasuo/build?role=mid&region=world&patch=26_22`,
+      },
+    ],
+    sources: [],
+  },
+  {
     slug: 'vladimir', championId: 'Vladimir', roles: ['mid', 'top'], primaryRole: 'mid',
     ddragonDifficulty: 7, patch: '26.22',
     localizedSlugs: { en: 'how-to-play-vladimir', es: 'como-jugar-vladimir' },

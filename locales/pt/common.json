@@ -18,6 +18,9 @@
     "emptyPool": "No champions match these filters."
   },
     "nav": {
+        "tools": "Ferramentas",
+        "learn": "Aprender",
+        "navigation": "Navegação principal",
         "play": "Jogar",
         "leaderboard": "Classificação",
         "howToPlay": "Como Jogar",
