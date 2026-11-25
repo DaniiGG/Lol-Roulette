@@ -27,6 +27,32 @@ const LOLALYTICS_BASE = 'https://lolalytics.com/lol'
 
 export const GUIDE_CHAMPIONS: GuideChampionMeta[] = [
   {
+    slug: 'locke',
+    championId: 'Locke',
+    roles: ['mid', 'jungle'],
+    primaryRole: 'mid',
+    ddragonDifficulty: 6,
+    patch: '26.23',
+    localizedSlugs: { en: 'how-to-play-locke', es: 'como-jugar-locke' },
+    publishedAt: '2026-11-25',
+    updatedAt: '2026-11-25',
+    related: ['katarina', 'yasuo', 'vladimir'],
+    splash: splashFor('Locke'),
+    loading: loadingFor('Locke'),
+    stats: [
+      {
+        source: 'Mobalytics',
+        context: 'Mid / Emerald+ / Patch 26.23',
+        winRate: '49.2%',
+        pickRate: '5.5%',
+        banRate: '29.3%',
+        matches: '70,469',
+        url: 'https://mobalytics.gg/lol/champions/locke/build/mid',
+      },
+    ],
+    sources: [],
+  },
+  {
     slug: 'yasuo',
     championId: 'Yasuo',
     roles: ['mid', 'top'],

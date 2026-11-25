@@ -2,6 +2,849 @@
   "patch": "26.21",
   "updatedAt": "2026-10-28",
   "champions": {
+    "locke": {
+      "slug": "locke",
+      "name": "Locke",
+      "title": "The Ashen Exorcist",
+      "role": "mid",
+      "roleLabel": "Mid",
+      "difficulty": "medium",
+      "difficultyLabel": "Medium",
+      "tagline": "A mobile magic damage assassin who marks enemies, combines abilities with basic attacks, and grows stronger by executing enemy champions.",
+      "metaTitle": "How to Play Locke: Build, Runes & Combos (26.23)",
+      "metaDescription": "Learn Locke mid in patch 26.23 with builds, runes, skill order, combos, and tips for securing Purgatory executions.",
+      "h1": "How to Play Locke in League of Legends — Build, Runes & Combos (Patch 26.23)",
+      "heroIntro": [
+        "Locke is a mid-lane assassin specializing in magic damage, mobility, and finishing weakened targets. His effectiveness depends on combining Ritual Nails with basic attacks, taking advantage of Soul Ignition's attack speed, and securing executions with Purgatory.",
+        "Unlike many AP assassins, Locke needs to remain within attacking distance during certain stages of his combos to maximize his damage.",
+        "This guide covers Locke's Patch 26.23 build, level-by-level skill order, runes, combos, laning strategy, teamfights, and matchups."
+      ],
+      "quickAnswer": "Max Q first, followed by E and W. Run Electrocute with Domination primary and Resolve secondary. Start Doran's Ring and build Lich Bane, Sorcerer's Shoes, and Shadowflame. Use Q to prepare marks, E to close the distance, and W to empower your basic attack pattern. Use Purgatory to execute enemies and gain additional power throughout the game. Avoid engaging before the enemy uses their most dangerous crowd control abilities.",
+      "quickStart": {
+        "role": "Mid lane.",
+        "secondaryRoles": "Jungle",
+        "difficulty": "Medium",
+        "playstyle": "Mobile AP assassin with empowered basic attacks and executions.",
+        "keyMechanic": "Applying and consuming Ritual Nails marks with basic attacks.",
+        "beginnerMistake": "Spending every mobility tool without ensuring you can eliminate your target or survive.",
+        "winCondition": "Secure kills, gain power through Purgatory, and eliminate priority targets during skirmishes."
+      },
+      "abilities": [
+        {
+          "key": "P",
+          "name": "Silver Stake",
+          "icon": "Locke_Passive.png",
+          "description": "Locke's basic attacks apply additional magic damage that becomes stronger as his target loses health.",
+          "tips": [
+            "Weave basic attacks between abilities.",
+            "Prioritize weakened targets when you can reach them safely.",
+            "Take advantage of Soul Ignition's attack speed.",
+            "Remember that your damage comes from both abilities and attacks."
+          ],
+          "mistake": "Casting every ability and disengaging without using basic attacks."
+        },
+        {
+          "key": "Q",
+          "name": "Ritual Nails",
+          "icon": "LockeQ.png",
+          "description": "Locke throws spiritual nails that damage, slow, and mark enemies. His attacks can consume these marks to deal additional damage. Repeated applications improve his ability to control the target.",
+          "tips": [
+            "Prepare trades from a safe distance.",
+            "Consume marks with basic attacks.",
+            "Use the slow to approach or chase enemies.",
+            "Practice landing Q against moving targets."
+          ],
+          "mistake": "Applying marks without following up with empowered attacks."
+        },
+        {
+          "key": "W",
+          "name": "Soul Ignition",
+          "icon": "LockeW.png",
+          "description": "Locke sacrifices some health to temporarily increase his attack speed and movement speed. When the effect ends, he recovers some of the damage suffered during its duration.",
+          "tips": [
+            "Activate W when you can perform multiple attacks.",
+            "Use the movement speed to approach or reposition.",
+            "Account for incoming damage before the healing becomes available.",
+            "Use it during fights you have a realistic chance of surviving."
+          ],
+          "mistake": "Treating delayed healing as immediate protection against burst damage."
+        },
+        {
+          "key": "E",
+          "name": "Ashen Pursuit",
+          "icon": "LockeE.png",
+          "description": "Locke teleports to a location, damaging enemies around his destination. His following attack provides an additional dash that can damage enemies he passes through.",
+          "tips": [
+            "Dodge important enemy abilities.",
+            "Find angles that provide access to priority targets.",
+            "Use the following attack to continue your combo.",
+            "Consider your final position before committing."
+          ],
+          "mistake": "Engaging directly into an enemy who still has all their crowd control available."
+        },
+        {
+          "key": "R",
+          "name": "Purgatory",
+          "icon": "LockeR.png",
+          "description": "Locke throws an artifact that affects enemies within an area. Marked champions can be executed when their health falls below the corresponding threshold. Successful executions refresh the remaining marks and allow Locke to gain additional power.",
+          "tips": [
+            "Try to affect multiple champions during teamfights.",
+            "Cast R before your target dies.",
+            "Prioritize enemies that can quickly reach the execution threshold.",
+            "Capitalize on executions to maintain pressure on other targets."
+          ],
+          "mistake": "Casting Purgatory too late and missing an execution opportunity."
+        }
+      ],
+      "skillOrder": {
+        "priority": "Q > E > W",
+        "start": "Q → E → W",
+        "levels": [
+          {
+            "level": 1,
+            "ability": "Q"
+          },
+          {
+            "level": 2,
+            "ability": "E"
+          },
+          {
+            "level": 3,
+            "ability": "W"
+          },
+          {
+            "level": 4,
+            "ability": "Q"
+          },
+          {
+            "level": 5,
+            "ability": "Q"
+          },
+          {
+            "level": 6,
+            "ability": "R"
+          },
+          {
+            "level": 7,
+            "ability": "Q"
+          },
+          {
+            "level": 8,
+            "ability": "E"
+          },
+          {
+            "level": 9,
+            "ability": "Q"
+          },
+          {
+            "level": 10,
+            "ability": "E"
+          },
+          {
+            "level": 11,
+            "ability": "R"
+          },
+          {
+            "level": 12,
+            "ability": "E"
+          },
+          {
+            "level": 13,
+            "ability": "E"
+          },
+          {
+            "level": 14,
+            "ability": "W"
+          },
+          {
+            "level": 15,
+            "ability": "W"
+          },
+          {
+            "level": 16,
+            "ability": "R"
+          },
+          {
+            "level": 17,
+            "ability": "W"
+          },
+          {
+            "level": 18,
+            "ability": "W"
+          }
+        ],
+        "explanation": [
+          "Max Q first because it is Locke's primary trading and marking tool.",
+          "Max E second to improve the damage associated with his engages.",
+          "Max W last because its core movement and attack speed utility is available from the first rank."
+        ],
+        "note": "Rank up R at levels 6, 11, and 16."
+      },
+      "runes": {
+        "title": "Electrocute Burst",
+        "summary": "This setup improves short trades while providing defensive tools that help Locke survive after engaging. It is the most popular rune page for Locke Mid in the sampled Patch 26.23 data.",
+        "primaryTree": {
+          "name": "Domination",
+          "icon": "perk-images/Styles/7200_Domination.png"
+        },
+        "secondaryTree": {
+          "name": "Resolve",
+          "icon": "perk-images/Styles/7204_Resolve.png"
+        },
+        "keystone": {
+          "id": 8112,
+          "name": "Electrocute",
+          "why": "Additional burst damage when combining abilities and attacks against a target.",
+          "icon": "perk-images/Styles/Domination/Electrocute/Electrocute.png"
+        },
+        "primaryRunes": [
+          {
+            "id": 8143,
+            "name": "Sudden Impact",
+            "why": "Improves trades after using Ashen Pursuit's mobility.",
+            "icon": "perk-images/Styles/Domination/SuddenImpact/SuddenImpact.png"
+          },
+          {
+            "id": 8137,
+            "name": "Sixth Sense",
+            "why": "Helps detect enemy vision and prepare roaming routes and flanks.",
+            "icon": "perk-images/Styles/Domination/SixthSense/SixthSense.png"
+          },
+          {
+            "id": 8106,
+            "name": "Ultimate Hunter",
+            "why": "Provides ultimate ability haste as you collect stacks, allowing more frequent Purgatory opportunities.",
+            "icon": "perk-images/Styles/Domination/UltimateHunter/UltimateHunter.png"
+          }
+        ],
+        "secondaryRunes": [
+          {
+            "id": 8473,
+            "name": "Bone Plating",
+            "why": "Reduces incoming damage from short trades and enemy combos.",
+            "icon": "perk-images/Styles/Resolve/BonePlating/BonePlating.png"
+          },
+          {
+            "id": 8453,
+            "name": "Revitalize",
+            "why": "Improves healing effectiveness and complements Soul Ignition's recovery mechanic.",
+            "icon": "perk-images/Styles/Resolve/Revitalize/Revitalize.png"
+          }
+        ],
+        "alternatives": [
+          "Conqueror: An alternative for extended combat against durable enemies.",
+          "Second Wind: Replace Bone Plating against frequent poke.",
+          "Dark Harvest: An experimental option focused on eliminating weakened targets."
+        ],
+        "notes": [
+          "Rune Shards: Adaptive Force · Adaptive Force · Health.",
+          "Electrocute remains the recommended starting point when learning Locke."
+        ]
+      },
+      "summonerSpells": [
+        {
+          "name": "Flash",
+          "why": "Essential for escaping, dodging important abilities, repositioning, and reaching priority targets.",
+          "icon": "SummonerFlash.png"
+        },
+        {
+          "name": "Ignite",
+          "why": "Adds early kill pressure and helps reduce enemy health toward Purgatory's execution threshold.",
+          "icon": "SummonerDot.png",
+          "alternative": "Alternative — Teleport. A situational choice against difficult matchups where maintaining farm and tempo is more important than securing early kills."
+        }
+      ],
+      "builds": [
+        {
+          "id": "standard",
+          "label": "Primary Build — AP Burst",
+          "summary": "A setup designed to combine magic burst damage with empowered basic attacks.",
+          "starting": {
+            "label": "Starting Items",
+            "items": [
+              {
+                "id": "1056",
+                "name": "Doran's Ring",
+                "why": "Ability power and useful laning resources.",
+                "icon": "1056.png"
+              },
+              {
+                "id": "2003",
+                "name": "Two Health Potions",
+                "why": "Additional sustain during early trades.",
+                "icon": "2003.png"
+              }
+            ]
+          },
+          "core": {
+            "label": "Core Items",
+            "items": [
+              {
+                "id": "3100",
+                "name": "Lich Bane",
+                "why": "Spellblade damage naturally complements Locke's ability-and-basic-attack combat pattern.",
+                "icon": "3100.png"
+              },
+              {
+                "id": "4645",
+                "name": "Shadowflame",
+                "why": "Improves magic damage against weakened targets and complements Silver Stake.",
+                "icon": "4645.png"
+              },
+              {
+                "id": "3157",
+                "name": "Zhonya's Hourglass",
+                "why": "Provides a defensive option after committing mobility abilities.",
+                "icon": "3157.png"
+              },
+              {
+                "id": "3089",
+                "name": "Rabadon's Deathcap",
+                "why": "A major ability power increase for stronger late-game damage.",
+                "icon": "3089.png"
+              },
+              {
+                "id": "3135",
+                "name": "Void Staff",
+                "why": "Percentage magic penetration against enemies stacking magic resistance.",
+                "icon": "3135.png"
+              }
+            ]
+          },
+          "boots": {
+            "label": "Boots",
+            "items": [
+              {
+                "id": "3020",
+                "name": "Sorcerer's Shoes",
+                "why": "Magic penetration for stronger burst.",
+                "icon": "3020.png"
+              },
+              {
+                "id": "3111",
+                "name": "Mercury's Treads",
+                "why": "Against heavy crowd control and magic damage.",
+                "icon": "3111.png"
+              },
+              {
+                "id": "3047",
+                "name": "Plated Steelcaps",
+                "why": "Against basic-attack-focused physical damage compositions.",
+                "icon": "3047.png"
+              }
+            ]
+          },
+          "situational": {
+            "label": "Situational Items",
+            "items": [
+              {
+                "id": "4646",
+                "name": "Stormsurge",
+                "why": "Enhances explosive damage sequences against vulnerable targets.",
+                "icon": "4646.png"
+              },
+              {
+                "id": "3115",
+                "name": "Nashor's Tooth",
+                "why": "An alternative for stronger basic attacks and attack speed.",
+                "icon": "3115.png"
+              },
+              {
+                "id": "3102",
+                "name": "Banshee's Veil",
+                "why": "Protects against an important enemy ability that could interrupt your engage.",
+                "icon": "3102.png"
+              },
+              {
+                "id": "3165",
+                "name": "Morellonomicon",
+                "why": "Grievous Wounds against healing-heavy compositions.",
+                "icon": "3165.png"
+              },
+              {
+                "id": "3041",
+                "name": "Mejai's Soulstealer",
+                "why": "A snowball option when you can safely maintain Dark Seal stacks.",
+                "icon": "3041.png"
+              }
+            ]
+          },
+          "notes": [
+            "Build win rate: 50.1% across 30,268 matches in the sampled data."
+          ]
+        },
+        {
+          "id": "stormsurge",
+          "label": "Alternative Build — Stormsurge Burst",
+          "summary": "A damage-focused configuration that replaces the first item with Stormsurge to prioritize explosive damage windows.",
+          "starting": {
+            "label": "Starting Items",
+            "items": [
+              {
+                "id": "1056",
+                "name": "Doran's Ring",
+                "why": "Ability power and useful laning resources.",
+                "icon": "1056.png"
+              },
+              {
+                "id": "2003",
+                "name": "Two Health Potions",
+                "why": "Additional sustain during early trades.",
+                "icon": "2003.png"
+              }
+            ]
+          },
+          "core": {
+            "label": "Suggested Core",
+            "items": [
+              {
+                "id": "4646",
+                "name": "Stormsurge",
+                "why": "Enhances explosive damage sequences against vulnerable targets.",
+                "icon": "4646.png"
+              },
+              {
+                "id": "4645",
+                "name": "Shadowflame",
+                "why": "Improves magic damage against weakened targets and complements Silver Stake.",
+                "icon": "4645.png"
+              },
+              {
+                "id": "3089",
+                "name": "Rabadon's Deathcap",
+                "why": "A major ability power increase for stronger late-game damage.",
+                "icon": "3089.png"
+              }
+            ]
+          },
+          "boots": {
+            "label": "Boots",
+            "items": [
+              {
+                "id": "3020",
+                "name": "Sorcerer's Shoes",
+                "why": "Magic penetration for stronger burst.",
+                "icon": "3020.png"
+              },
+              {
+                "id": "3111",
+                "name": "Mercury's Treads",
+                "why": "Against heavy crowd control and magic damage.",
+                "icon": "3111.png"
+              },
+              {
+                "id": "3047",
+                "name": "Plated Steelcaps",
+                "why": "Against basic-attack-focused physical damage compositions.",
+                "icon": "3047.png"
+              }
+            ]
+          },
+          "situational": {
+            "label": "Situational Items",
+            "items": [
+              {
+                "id": "3100",
+                "name": "Lich Bane",
+                "why": "Spellblade damage naturally complements Locke's ability-and-basic-attack combat pattern.",
+                "icon": "3100.png"
+              },
+              {
+                "id": "3157",
+                "name": "Zhonya's Hourglass",
+                "why": "Provides a defensive option after committing mobility abilities.",
+                "icon": "3157.png"
+              },
+              {
+                "id": "3135",
+                "name": "Void Staff",
+                "why": "Percentage magic penetration against enemies stacking magic resistance.",
+                "icon": "3135.png"
+              },
+              {
+                "id": "3102",
+                "name": "Banshee's Veil",
+                "why": "Protects against an important enemy ability that could interrupt your engage.",
+                "icon": "3102.png"
+              }
+            ]
+          },
+          "notes": [
+            "The Stormsurge variant has a 50.7% win rate in the consulted Mobalytics data. This does not automatically make it superior in every matchup.",
+            "Lich Bane remains the most popular first item and an excellent option for learning Locke's combat pattern."
+          ]
+        }
+      ],
+      "combos": [
+        {
+          "name": "Basic Lane Trade",
+          "sequence": [
+            {
+              "key": "Q",
+              "label": "Q"
+            },
+            {
+              "key": "E",
+              "label": "E"
+            },
+            {
+              "key": "AA",
+              "label": "Auto Attack"
+            },
+            {
+              "key": "retreat",
+              "label": "Disengage"
+            }
+          ],
+          "situation": "When your opponent approaches the wave or has just used an important defensive ability.",
+          "execution": "Land Q to apply a mark, close the distance with E, and perform an empowered basic attack before disengaging.",
+          "mistake": "Avoid spending E when the enemy jungler might be nearby and you need an escape tool."
+        },
+        {
+          "name": "Extended Trade",
+          "sequence": [
+            {
+              "key": "Q",
+              "label": "Q"
+            },
+            {
+              "key": "W",
+              "label": "W"
+            },
+            {
+              "key": "E",
+              "label": "E"
+            },
+            {
+              "key": "AA",
+              "label": "Auto Attacks"
+            },
+            {
+              "key": "Q",
+              "label": "Q when available"
+            }
+          ],
+          "situation": "When you have room to chase your opponent and can safely perform multiple basic attacks.",
+          "execution": "Prepare your marks with Q, activate W for attack speed and mobility, approach using E, and take advantage of your empowered attacks.",
+          "mistake": "Don't extend the fight if you could die before Soul Ignition's healing becomes available."
+        },
+        {
+          "name": "Surprise Engage",
+          "sequence": [
+            {
+              "key": "E",
+              "label": "E"
+            },
+            {
+              "key": "Q",
+              "label": "Q"
+            },
+            {
+              "key": "AA",
+              "label": "Auto Attack"
+            },
+            {
+              "key": "W",
+              "label": "W"
+            }
+          ],
+          "situation": "When the enemy is out of position or you need to quickly close the distance.",
+          "execution": "Approach from an unexpected angle with E, apply marks with Q, and follow up with a basic attack. Activate W if continuing the fight is safe.",
+          "mistake": "Engaging before landing Q creates additional risk if you miss the ability."
+        },
+        {
+          "name": "Execution All-In",
+          "sequence": [
+            {
+              "key": "Q",
+              "label": "Q"
+            },
+            {
+              "key": "W",
+              "label": "W"
+            },
+            {
+              "key": "E",
+              "label": "E"
+            },
+            {
+              "key": "R",
+              "label": "R"
+            },
+            {
+              "key": "AA",
+              "label": "Auto Attacks"
+            }
+          ],
+          "situation": "When you reach level 6 and your opponent is sufficiently weakened to threaten an execution.",
+          "execution": "Mark the enemy with Q, activate W, and close the distance with E. Apply Purgatory and continue attacking until the target reaches the execution threshold.",
+          "mistake": "Don't delay R until the final moment if the target could die before being marked."
+        },
+        {
+          "name": "Teamfight Combo",
+          "sequence": [
+            {
+              "key": "wait",
+              "label": "Wait for CC"
+            },
+            {
+              "key": "E",
+              "label": "E"
+            },
+            {
+              "key": "R",
+              "label": "R"
+            },
+            {
+              "key": "Q",
+              "label": "Q"
+            },
+            {
+              "key": "W",
+              "label": "W"
+            },
+            {
+              "key": "AA",
+              "label": "Auto Attacks"
+            }
+          ],
+          "situation": "When multiple enemies are grouped and their primary defensive abilities are on cooldown.",
+          "execution": "Find a flanking angle, engage with E, and place Purgatory on multiple champions. Apply Q and activate W to empower your attacks while looking for the first execution.",
+          "mistake": "Refreshing Purgatory's marks does not automatically reset every ability."
+        }
+      ],
+      "sections": [
+        {
+          "id": "laning",
+          "heading": "Laning Phase: Mark, Attack, and Control Distance",
+          "paragraphs": [
+            "During the early levels, Locke should use Q to prepare trades and punish positioning mistakes.",
+            "You don't need to use E every time you land Q. Sometimes applying pressure from a safe distance is enough to control the opponent.",
+            "Against ranged mages, preserve your health and wait for them to spend their main defensive abilities. Once those abilities are on cooldown, use E to close the distance.",
+            "Against melee assassins, avoid spending W and E simultaneously if your opponent can still retaliate with their complete combo.",
+            "Keeping the wave closer to your side of the lane can provide more room to chase without immediately entering enemy turret range."
+          ],
+          "bullets": [
+            "Trade when your important abilities are available.",
+            "Use basic attacks to consume marks.",
+            "Avoid automatically pushing every wave.",
+            "Track the enemy jungler.",
+            "Use level 6 to create kill pressure and roaming opportunities."
+          ]
+        },
+        {
+          "id": "mid-game",
+          "heading": "Mid Game: Secure Executions and Create Advantages",
+          "paragraphs": [
+            "Locke can increase his impact by securing Purgatory executions.",
+            "After completing Lich Bane, look for river skirmishes, roaming opportunities, and isolated enemies.",
+            "Push your wave before leaving mid lane. An unsuccessful roam that costs multiple waves can hurt your progress more than a potential execution would help.",
+            "Smaller fights allow Locke to exploit mobility and empowered attacks without exposing himself to the entire enemy team."
+          ],
+          "bullets": [
+            "Look for enemies with limited mobility.",
+            "Use allied vision to prepare ambushes.",
+            "Track Purgatory's cooldown before rotating.",
+            "Avoid forcing executions in dangerous positions.",
+            "Convert kills into objectives and map advantages."
+          ]
+        },
+        {
+          "id": "teamfights",
+          "heading": "Teamfights: Find the First Execution",
+          "paragraphs": [
+            "Locke should not always be the primary engager. Despite his mobility and healing, crowd control can prevent him from completing his damage rotation.",
+            "Wait for your frontline to force enemies to spend defensive abilities.",
+            "Find a flanking angle and use Purgatory on multiple targets whenever possible. Prioritize enemies that can quickly reach the execution threshold.",
+            "After securing the first elimination, reassess the fight. Maintaining an ultimate mark does not guarantee that reaching another target is safe."
+          ],
+          "bullets": [
+            "Avoid engaging into available crowd control.",
+            "Prioritize weakened enemies and vulnerable carries.",
+            "Utilize Soul Ignition's attack speed.",
+            "Apply Purgatory before your target dies.",
+            "Use Zhonya's Hourglass when necessary.",
+            "Don't chase executions in already-lost fights."
+          ]
+        }
+      ],
+      "matchups": {
+        "difficult": [
+          {
+            "name": "Naafiri",
+            "icon": "Naafiri.png",
+            "winRate": "43.8%",
+            "games": "297",
+            "advice": "Naafiri can punish your engages with her own burst damage. Avoid spending every mobility ability before she uses her offensive tools. This matchup has a relatively small statistical sample."
+          },
+          {
+            "name": "Annie",
+            "icon": "Annie.png",
+            "winRate": "44.7%",
+            "games": "1,097",
+            "advice": "Her reliable stun can prevent Locke from attacking and surviving until Soul Ignition's healing becomes available. Track her passive stun stacks before engaging."
+          },
+          {
+            "name": "Ekko",
+            "icon": "Ekko.png",
+            "winRate": "44.9%",
+            "games": "1,896",
+            "advice": "His mobility, shielding, and ultimate make securing executions difficult. Try to force Chronobreak before committing every resource."
+          },
+          {
+            "name": "Akali",
+            "icon": "Akali.png",
+            "winRate": "45.2%",
+            "games": "3,355",
+            "advice": "Her invisibility prevents Locke from consistently consuming marks with basic attacks. Avoid chasing her inside Twilight Shroud. Save resources until she becomes visible."
+          },
+          {
+            "name": "Katarina",
+            "icon": "Katarina.png",
+            "winRate": "46.1%",
+            "games": "2,282",
+            "advice": "Her mobility and cooldown resets can make landing abilities and completing trades difficult. Punish her when her mobility is unavailable and avoid standing near her daggers."
+          }
+        ],
+        "favorable": [
+          {
+            "name": "Ezreal",
+            "icon": "Ezreal.png",
+            "winRate": "56.5%",
+            "games": "556",
+            "advice": "Punish him when Arcane Shift is unavailable. Avoid spending every mobility tool before he uses his escape."
+          },
+          {
+            "name": "Orianna",
+            "icon": "Orianna.png",
+            "winRate": "54.6%",
+            "games": "2,012",
+            "advice": "Her limited mobility creates trading opportunities when her defensive abilities are unavailable."
+          },
+          {
+            "name": "Syndra",
+            "icon": "Syndra.png",
+            "winRate": "53.8%",
+            "games": "3,173",
+            "advice": "She becomes vulnerable after using Scatter the Weak. Avoid her crowd control and capitalize on that window."
+          },
+          {
+            "name": "Xerath",
+            "icon": "Xerath.png",
+            "winRate": "53.2%",
+            "games": "1,415",
+            "advice": "His limited mobility makes him vulnerable once you close the distance. Avoid engaging directly into his stun."
+          },
+          {
+            "name": "Azir",
+            "icon": "Azir.png",
+            "winRate": "53.1%",
+            "games": "1,060",
+            "advice": "Look for trades when his repositioning tools are unavailable and avoid extended fights within his soldiers."
+          }
+        ],
+        "note": "The following percentages represent Locke's mid-lane win rate against each champion in Patch 26.23, Emerald+, according to Mobalytics."
+      },
+      "mistakes": [
+        "Ignoring basic attacks after applying Ritual Nails marks.",
+        "Activating W without opportunities to use its attack speed.",
+        "Relying on delayed healing to survive excessive burst damage.",
+        "Engaging with E without tracking enemy crowd control.",
+        "Casting Purgatory too late.",
+        "Chasing weakened enemies under turrets or without vision.",
+        "Sacrificing too much farm for execution opportunities.",
+        "Building identical items regardless of enemy resistances."
+      ],
+      "practicePlan": [
+        {
+          "title": "1. Mark Consumption Drill",
+          "steps": [
+            "Place multiple training dummies in Practice Tool.",
+            "Apply Q and practice consuming marks through basic attacks.",
+            "Experiment with different ability and attack sequences.",
+            "Goal: Maximize mark consumption without wasting attacks."
+          ]
+        },
+        {
+          "title": "2. Mobility Drill",
+          "steps": [
+            "Practice E from different angles and observe the final position of its following attack.",
+            "Repeat against targets at different distances.",
+            "Goal: Improve control over your engagement positioning."
+          ]
+        },
+        {
+          "title": "3. Execution Drill",
+          "steps": [
+            "Reduce the health of several training dummies and practice casting Purgatory before applying finishing damage.",
+            "Observe execution indicators and mark durations.",
+            "Goal: Recognize when to apply your ultimate."
+          ]
+        },
+        {
+          "title": "4. Teamfight Review",
+          "steps": [
+            "Watch a replay after each playing session.",
+            "Analyze available enemy defensive abilities, engagement timing, W usage, and execution opportunities.",
+            "Goal: Reduce deaths caused by premature engages."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "Is Locke difficult to learn?",
+          "a": "Locke requires considerable practice because he combines abilities, basic attacks, mobility, delayed healing, and execution mechanics."
+        },
+        {
+          "q": "What is the best Locke build in Patch 26.23?",
+          "a": "The most popular setup includes Lich Bane, Sorcerer's Shoes, Shadowflame, Zhonya's Hourglass, Rabadon's Deathcap, and Void Staff."
+        },
+        {
+          "q": "What runes should I use on Locke?",
+          "a": "Electrocute with Sudden Impact, Sixth Sense, and Ultimate Hunter. Use Bone Plating and Revitalize in the secondary Resolve tree."
+        },
+        {
+          "q": "What skill order should I use?",
+          "a": "Max Q first, E second, and W last. Upgrade R at levels 6, 11, and 16."
+        },
+        {
+          "q": "Is Locke AP or AD?",
+          "a": "Locke is primarily an AP assassin. His abilities and empowered attacks deal magic damage."
+        },
+        {
+          "q": "How does Locke's ultimate work?",
+          "a": "Purgatory marks enemy champions and executes them when they reach the corresponding health threshold. Successful executions refresh remaining marks and allow Locke to gain additional power."
+        },
+        {
+          "q": "Is Locke better mid or jungle?",
+          "a": "Mid is his primary role and the focus of this guide. Jungle is also possible but requires a different build and gameplay strategy."
+        },
+        {
+          "q": "Who counters Locke?",
+          "a": "Naafiri, Annie, Ekko, Akali, and Katarina are statistically difficult opponents in the consulted Patch 26.23 sample."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Riot Games — Patch 26.13 Notes and Official Locke Introduction",
+          "url": "https://www.leagueoflegends.com/en-us/news/game-updates/league-of-legends-patch-26-13-notes/"
+        },
+        {
+          "label": "Mobalytics — Locke Mid Build, Runes and Counters",
+          "url": "https://mobalytics.gg/lol/champions/locke/build/mid"
+        },
+        {
+          "label": "U.GG — Locke Mid Counters",
+          "url": "https://u.gg/lol/champions/locke/counter"
+        },
+        {
+          "label": "OP.GG — Locke Champion Abilities",
+          "url": "https://op.gg/lol/champions/locke/skills"
+        }
+      ],
+      "statsNote": "Statistics are based on Mobalytics snapshots for Patch 26.23, Emerald+. Matchup trends were additionally compared against U.GG. Values may change as new matches are recorded. Combo sequences and strategic advice are practical recommendations rather than measured performance statistics.",
+      "lastUpdated": "2026-11-25"
+    },
     "yasuo": {
       "slug": "yasuo",
       "name": "Yasuo",

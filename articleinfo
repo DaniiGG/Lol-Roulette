@@ -1,100 +1,110 @@
-# Cómo jugar Yasuo en League of Legends — Build, runas y combos (Parche 26.22)
+# Cómo jugar Locke en League of Legends — Build, runas y combos (Parche 26.23)
 
-**La Espada sin Honor**
+**El Exorcista Ceniciento**
 
-Un espadachín de gran movilidad que convierte los súbditos en rutas de ataque, bloquea proyectiles y puede decidir una pelea con un solo tornado bien colocado.
+Un asesino mágico que marca a sus enemigos, combina habilidades con ataques básicos y aumenta su poder ejecutando campeones.
 
-Yasuo es un luchador y asesino de mid cuyo daño depende de los ataques básicos, los golpes críticos y la precisión con sus habilidades. No utiliza maná, pero necesita gestionar su escudo pasivo, las acumulaciones de Q y los objetivos disponibles para desplazarse con E.
+Locke es un asesino de mid especializado en daño mágico, movilidad y eliminación de objetivos debilitados. Su daño depende de combinar los Clavos rituales con ataques básicos, aprovechar la velocidad de ataque de su W y utilizar Purgatorio para ejecutar enemigos.
 
-Esta guía cubre su build del parche 26.22, el orden de habilidades nivel a nivel, runas, combos avanzados, decisiones de línea, teamfights y enfrentamientos que castigan las entradas imprudentes.
+A diferencia de otros asesinos AP, Locke necesita permanecer durante ciertos momentos al alcance de sus enemigos para aprovechar todo el potencial de sus marcas y ataques.
 
-**13 min de lectura**  
-**Actualizada:** 17 nov 2026  
-**48,97% WR — 179.462 partidas**  
-**Rol:** Mid  
-**Parche:** 26.22, Esmeralda+, Solo/Dúo global
+Esta guía cubre su build del parche 26.23, el orden de habilidades nivel a nivel, runas, combos, decisiones de línea, teamfights y enfrentamientos.
+
+**Actualizada:** 25 nov 2026  
+**Win rate:** 49,2%  
+**Pick rate:** 5,5%  
+**Ban rate:** 29,3%  
+**Partidas analizadas:** 70.469  
+**Rol:** Mid
 
 ## Respuesta rápida
 
-Sube Q primero, después E y por último W. Lleva Compás letal con Precisión principal y Valor secundario. Empieza con Espada de Doran y construye Hoja del rey arruinado, Arcoescudo inmortal y Filo infinito.
+Sube Q primero, después E y finalmente W. Lleva Electrocutar con Dominación principal y Valor secundario. Empieza con Anillo de Doran y construye Perdición del liche, Botas de hechicero y Llamasombría.
 
-Juega alrededor de tu escudo pasivo, prepara tornados antes de intercambiar y utiliza los súbditos como rutas de entrada y salida. Guarda Muro de viento para los proyectiles importantes y no utilices Último aliento sobre cualquier enemigo levantado si la posición final es peligrosa.
+Utiliza Q para preparar marcas, E para acercarte y W para potenciar tus ataques básicos. Aprovecha Purgatorio para ejecutar enemigos y conseguir poder adicional durante la partida.
 
-Yasuo tiene un 48,97% de victorias en mid durante el parche 26.22 según U.GG. Su potencial mecánico es alto, pero necesita buenas decisiones para convertir una ventaja individual en una victoria.
+No entres antes de que el enemigo utilice sus principales habilidades de control de masas.
 
 **Rol:** Carril central.
 
-**Estilo de juego:** Luchador móvil de daño físico, críticos y combos.
+**Estilo de juego:** Asesino AP con ataques potenciados, movilidad y ejecuciones.
 
-**Mecánica clave:** Preparar tornados con Q y utilizar E para reposicionarse entre objetivos.
+**Mecánica clave:** Aplicar y consumir las marcas de Q mediante ataques básicos.
 
-**Condición de victoria:** Ganar escaramuzas, aprovechar levantamientos aliados y eliminar objetivos prioritarios con daño sostenido.
+**Condición de victoria:** Conseguir asesinatos, acumular poder con Purgatorio y eliminar objetivos prioritarios durante las escaramuzas.
 
-**Error de principiante:** Utilizar E para avanzar sin tener una ruta de salida.
+**Error de principiante:** Gastar todas las habilidades de movilidad sin asegurar que puedes eliminar al objetivo o sobrevivir.
 
 ## Habilidades y consejos
 
-### P — Camino del alma errante
+### P — Estaca de plata
 
-Yasuo aumenta considerablemente su probabilidad de impacto crítico. Además, acumula Flujo mientras se desplaza. Cuando alcanza el máximo, obtiene un escudo que se activa al recibir daño de un campeón o monstruo.
-
-**Cómo usarla:**
-- Muévete constantemente para cargar el escudo.
-- Busca intercambios cuando tengas la pasiva disponible.
-- Aprovecha los objetos de crítico para alcanzar tus picos de daño.
-- Espera a recuperar el escudo antes de repetir un intercambio peligroso.
-
-**Error común:** Entrar en combate sin el escudo y perder vida innecesariamente.
-
-### Q — Tempestad de acero
-
-Yasuo lanza una estocada que inflige daño físico. Al golpear enemigos acumula Tormenta inminente. Con dos acumulaciones, su siguiente Q lanza un tornado que levanta a los enemigos.
-
-La velocidad de ataque reduce el enfriamiento y el tiempo de lanzamiento de Q hasta sus límites.
+Los ataques básicos de Locke infligen daño mágico adicional. Este daño aumenta cuanto menor sea la vida restante del objetivo.
 
 **Cómo usarla:**
-- Utiliza Q para farmear y preparar tornados.
-- Golpea súbditos antes de buscar un intercambio.
-- Combina Q con E para golpear en un círculo alrededor de Yasuo.
-- Aprovecha el tornado para activar tu definitiva.
 
-**Error común:** Lanzar el tornado inmediatamente sin considerar el movimiento del enemigo.
+- Intercala ataques básicos entre tus habilidades.
+- Prioriza enemigos debilitados cuando puedas alcanzarlos con seguridad.
+- Aprovecha la velocidad de ataque proporcionada por W.
+- Recuerda que tu daño no depende únicamente de las habilidades.
 
-### W — Muro de viento
+**Error común:** Lanzar todas las habilidades y retirarse sin realizar ataques básicos.
 
-Yasuo crea una barrera que bloquea numerosos proyectiles enemigos.
+### Q — Clavos rituales
 
-**Cómo usarla:**
-- Guárdala para habilidades importantes.
-- Utilízala para proteger a tus aliados durante teamfights.
-- Colócate correctamente respecto al muro para aprovechar su protección.
-- Identifica qué habilidades enemigas son proyectiles bloqueables.
+Locke lanza clavos espirituales que dañan, ralentizan y marcan a los enemigos. Sus ataques pueden consumir las marcas para aumentar el daño infligido.
 
-**Error común:** Gastar W para bloquear un ataque básico poco importante y quedarse sin defensa frente a una habilidad decisiva.
-
-### E — Hoja cortante
-
-Yasuo se desplaza a través de un enemigo, infligiendo daño mágico. No puede volver a utilizar E sobre el mismo objetivo durante un breve periodo.
+Las aplicaciones sucesivas mejoran su capacidad para controlar al objetivo.
 
 **Cómo usarla:**
-- Utiliza los súbditos para acercarte o escapar.
-- Planifica el orden de los objetivos antes de entrar.
-- Combina E + Q para ejecutar un ataque circular.
-- Evita utilizar todos los súbditos disponibles si después necesitas retirarte.
 
-**Error común:** Desplazarte automáticamente hacia el enemigo sin comprobar dónde terminarás.
+- Utiliza Q para preparar intercambios desde una distancia segura.
+- Consume las marcas mediante ataques básicos.
+- Aprovecha la ralentización para acercarte o continuar persiguiendo.
+- Practica la puntería contra objetivos en movimiento.
 
-### R — Último aliento
+**Error común:** Acumular marcas sin aprovechar posteriormente los ataques potenciados.
 
-Yasuo se desplaza hasta un campeón enemigo que esté en el aire y lo mantiene suspendido, infligiendo daño físico. Recupera su Flujo y obtiene temporalmente penetración de armadura adicional para sus golpes críticos.
+### W — Ignición de alma
+
+Locke sacrifica parte de su vida para potenciar temporalmente su velocidad de ataque y movimiento. Al terminar el efecto, recupera una parte del daño sufrido durante la habilidad.
 
 **Cómo usarla:**
-- Combínala con tu tornado o los levantamientos de tus aliados.
-- Busca objetivos prioritarios que estén en el aire.
-- Evalúa dónde aparecerás después de utilizar R.
-- Aprovecha la penetración adicional para continuar atacando.
 
-**Error común:** Utilizar R sobre un tanque y aparecer rodeado de cinco enemigos.
+- Actívala cuando puedas realizar varios ataques básicos.
+- Aprovecha la movilidad para acercarte o reposicionarte.
+- Calcula cuánto daño puedes recibir antes de que llegue la curación.
+- Utilízala en intercambios donde tengas posibilidades reales de sobrevivir.
+
+**Error común:** Confundir la curación retardada con una protección inmediata frente al burst.
+
+### E — Afán ceniciento
+
+Locke se teletransporta a una ubicación, causando daño en la zona de llegada. Su siguiente ataque dispone de un desplazamiento que también puede dañar a los enemigos atravesados.
+
+**Cómo usarla:**
+
+- Utilízala para esquivar habilidades importantes.
+- Busca ángulos que te permitan alcanzar objetivos prioritarios.
+- Aprovecha el ataque posterior para continuar el combo.
+- Ten en cuenta la posición en la que terminarás.
+
+**Error común:** Utilizar E para entrar directamente contra un enemigo que todavía tiene todo su control de masas.
+
+### R — Purgatorio
+
+Locke lanza un artefacto que afecta a los enemigos de una zona. Los campeones marcados pueden ser ejecutados cuando su vida desciende por debajo del umbral correspondiente.
+
+Las ejecuciones refrescan la duración de las marcas restantes y permiten a Locke obtener poder adicional.
+
+**Cómo usarla:**
+
+- Intenta afectar a varios campeones en teamfights.
+- Utilízala antes de que el objetivo muera.
+- Busca enemigos que puedan alcanzar rápidamente el umbral de ejecución.
+- Aprovecha las ejecuciones para mantener la amenaza sobre otros objetivos.
+
+**Error común:** Esperar demasiado para utilizar Purgatorio y perder una oportunidad de ejecución.
 
 ## Orden de habilidades
 
@@ -123,377 +133,471 @@ Yasuo se desplaza hasta un campeón enemigo que esté en el aire y lo mantiene s
 | 17 | W |
 | 18 | W |
 
-Q se maximiza primero porque es la principal fuente de daño y permite preparar tornados con mayor frecuencia.
+Q se maximiza primero porque es la herramienta principal para preparar intercambios y aplicar marcas.
 
-E se maximiza después para mejorar el daño y la movilidad ofensiva.
+E se maximiza después para potenciar el daño asociado a tus entradas.
 
-W se maximiza al final porque su utilidad defensiva depende principalmente de bloquear las habilidades correctas.
-
-Contra determinados campeones cuerpo a cuerpo, empezar con E puede permitir intercambios agresivos desde el nivel 1, pero Q es la opción más sencilla para aprender.
+W se maximiza al final, ya que sus principales herramientas de movilidad y velocidad de ataque están disponibles desde el primer punto.
 
 ## Runas
 
-### Compás letal — Daño sostenido
+### Burst con Electrocutar
 
-**Precisión + Valor**
+**Dominación + Valor**
 
-Compás letal es la runa clave más utilizada por Yasuo en el parche 26.22. Aumenta su potencial durante los intercambios prolongados y combina especialmente bien con su dependencia de la velocidad de ataque.
+Esta configuración favorece los intercambios rápidos y proporciona herramientas defensivas para sobrevivir después de entrar.
 
-**Árbol principal — Precisión**
+Es la página de runas más popular de Locke mid en la muestra consultada del parche 26.23.
 
-**Compás letal:** Aumenta tu capacidad de daño sostenido durante los combates.
+### Árbol principal — Dominación
 
-**Absorber vida:** Recuperación de vida al eliminar súbditos, útil para sobrevivir durante la fase de líneas.
+**Electrocutar**
 
-**Leyenda: Presteza:** Velocidad de ataque adicional que mejora tus ataques y la frecuencia de Q.
+Daño adicional al combinar ataques y habilidades, ideal para eliminar objetivos vulnerables.
 
-**Último esfuerzo:** Aumenta tu daño cuando tienes poca vida, especialmente útil en duelos ajustados.
+**Impacto repentino**
 
-**Árbol secundario — Valor**
+Potencia los intercambios después de utilizar la movilidad de Afán ceniciento.
 
-**Revestimiento de huesos:** Reduce el daño recibido durante intercambios cortos y combos enemigos.
+**Sexto sentido**
 
-**Sobrecrecimiento:** Proporciona vida adicional conforme avanzas en la partida.
+Ayuda a detectar visión enemiga y preparar rutas de roam y flanqueo.
+
+**Cazador definitivo**
+
+Reduce el enfriamiento de Purgatorio conforme consigues acumulaciones.
+
+### Árbol secundario — Valor
+
+**Revestimiento de huesos**
+
+Reduce parte del daño enemigo durante intercambios cortos.
+
+**Revitalizar**
+
+Mejora la eficacia de la curación y complementa la recuperación de vida de Ignición de alma.
+
+### Fragmentos de runas
+
+- Fuerza adaptable.
+- Fuerza adaptable.
+- Vida.
 
 ### Alternativas
 
-- **Pies veloces:** Para líneas difíciles donde necesitas recuperación y movilidad.
-- **Triunfo:** Alternativa a Absorber vida cuando buscas mejores escaramuzas.
-- **Segundo aliento:** Contra campeones que te desgastan constantemente.
-- **Inquebrantable:** Contra composiciones con control de masas.
+**Conquistador:** Alternativa para combates prolongados contra enemigos resistentes.
 
-Si estás aprendiendo a Yasuo, Compás letal es una opción sólida porque favorece los intercambios prolongados y recompensa una buena gestión de los ataques básicos.
+**Segundo aliento:** Sustituye a Revestimiento de huesos contra rivales con poke frecuente.
+
+**Cosecha oscura:** Opción experimental para potenciar la eliminación de enemigos debilitados.
+
+Electrocutar es la opción recomendada para comenzar a aprender el campeón.
 
 ## Hechizos de invocador
 
 **Destello**
 
-Fundamental para escapar, reposicionarte y ejecutar combos avanzados como Beyblade.
+Permite escapar, esquivar habilidades importantes y alcanzar objetivos fuera de tu rango habitual.
 
 **Prender**
 
-Añade presión de asesinato durante la fase de líneas y ayuda a rematar enemigos.
+Mejora la presión de asesinato durante la fase de líneas y facilita reducir la vida del enemigo hasta el umbral de ejecución.
 
-**Alternativa: Teleportar**
+**Alternativa — Teleportar**
 
-Permite volver a línea y mantener el ritmo de farmeo en enfrentamientos donde es difícil conseguir asesinatos tempranos.
+Una opción situacional para enfrentamientos difíciles donde conservar el ritmo de farmeo es más importante que buscar asesinatos tempranos.
 
 ## Builds
 
-### Build principal — Crítico y daño sostenido
+### Build principal — Burst AP
 
-Una configuración que combina daño físico, velocidad de ataque, robo de vida y golpes críticos.
+Una configuración diseñada para combinar daño mágico explosivo con ataques básicos potenciados.
+
+**Win rate de la configuración:** 50,1% en 30.268 partidas de la muestra consultada.
+
+### Objetos iniciales
+
+**Anillo de Doran**
+
+Poder de habilidad y recursos para sobrevivir durante los primeros niveles.
+
+**Dos pociones de vida**
+
+Recuperación para mantenerte en línea tras los primeros intercambios.
+
+### Objetos principales
+
+**Perdición del liche**
+
+El ataque potenciado de Hechizoespada complementa naturalmente el patrón de habilidades y ataques básicos de Locke.
+
+**Llamasombría**
+
+Refuerza el daño mágico contra enemigos debilitados y complementa el funcionamiento de la pasiva.
+
+**Reloj de arena de Zhonya**
+
+Permite sobrevivir a momentos peligrosos tras utilizar las habilidades de entrada.
+
+**Sombrero mortal de Rabadon**
+
+Aumenta considerablemente el poder de habilidad y potencia el daño durante el late game.
+
+**Bastón del Vacío**
+
+Penetración mágica porcentual para combatir enemigos que acumulan resistencia mágica.
+
+### Botas
+
+**Botas de hechicero:** Penetración mágica para potenciar el burst.
+
+**Botas de mercurio:** Contra equipos con mucho control de masas y daño mágico.
+
+**Botas blindadas:** Contra composiciones dominadas por ataques básicos y daño físico.
+
+### Objetos situacionales
+
+**Sobrecarga tormentosa**
+
+Potencia las secuencias de daño explosivo contra objetivos vulnerables.
+
+**Diente de Nashor**
+
+Alternativa para aumentar el daño mediante ataques básicos y velocidad de ataque.
+
+**Velo del hada de la muerte**
+
+Protección contra una habilidad enemiga importante que pueda detener tu entrada.
+
+**Morellonomicón**
+
+Heridas graves contra composiciones con mucha curación.
+
+**Robaalmas de Mejai**
+
+Opción de snowball cuando puedes conservar las acumulaciones de Sello oscuro.
+
+### Build alternativa — Burst con Sobrecarga tormentosa
+
+Una configuración que sustituye el primer objeto por Sobrecarga tormentosa para priorizar ventanas de daño explosivo.
 
 **Objetos iniciales**
 
-**Espada de Doran:** Daño y sustain para los primeros intercambios.
+- Anillo de Doran.
+- Dos pociones de vida.
 
-**Poción de vida:** Recuperación para la fase de líneas.
+**Núcleo recomendado**
 
-**Objetos principales**
-
-**Hoja del rey arruinado:** Velocidad de ataque, robo de vida y daño adicional contra enemigos con mucha vida.
-
-**Arcoescudo inmortal:** Probabilidad de crítico y un escudo defensivo que ayuda a sobrevivir al burst.
-
-**Filo infinito:** Gran aumento del daño de los golpes críticos.
-
-**Botas**
-
-**Grebas metalizadas:** Opción frecuente para obtener velocidad de ataque y mejorar los intercambios.
-
-**Botas blindadas:** Contra equipos con mucho daño físico y ataques básicos.
-
-**Botas de mercurio:** Contra composiciones con abundante daño mágico y control de masas.
+- Sobrecarga tormentosa.
+- Botas de hechicero.
+- Llamasombría.
+- Sombrero mortal de Rabadon.
 
 **Objetos situacionales**
 
-**Baile de la muerte:** Supervivencia contra daño físico y peleas prolongadas.
+- Perdición del liche.
+- Reloj de arena de Zhonya.
+- Bastón del Vacío.
+- Velo del hada de la muerte.
 
-**Ángel de la guarda:** Segunda oportunidad después de una entrada arriesgada.
+La variante con Sobrecarga tormentosa presenta un 50,7% de victorias en Mobalytics. Esto no significa necesariamente que sea superior en todas las partidas.
 
-**Recuerdos de lord Dominik:** Penetración de armadura contra enemigos resistentes.
-
-**Recordatorio letal:** Penetración de armadura y Heridas graves.
-
-**Fauces de Malmortius:** Protección frente a burst mágico.
-
-**Sanguinaria:** Robo de vida y daño para mejorar el sustain.
-
-La combinación Hoja del rey arruinado → Arcoescudo inmortal → Filo infinito es una de las rutas más utilizadas del parche 26.22.
-
-### Build alternativa — Crítico temprano
-
-Una configuración que prioriza alcanzar antes los objetos de crítico.
-
-**Objetos iniciales**
-- Espada de Doran
-- Poción de vida
-
-**Objetos principales**
-- Arcoescudo inmortal
-- Filo infinito
-- Baile de la muerte
-
-**Objetos situacionales**
-- Ángel de la guarda
-- Recuerdos de lord Dominik
-- Fauces de Malmortius
-- Sanguinaria
-
-Esta ruta es una alternativa cuando prefieres acelerar tus picos de crítico en lugar de construir Hoja del rey arruinado primero.
+Perdición del liche sigue siendo la opción más popular y una excelente elección para aprender el patrón de combate de Locke.
 
 ## Combos
 
-### Intercambio básico
+### Intercambio básico en línea
 
-**E → Q → Autoataque → E fuera**
+**Q → E → Autoataque → Retroceder**
 
-**Cuándo usarlo:** Durante la fase de líneas, cuando tienes súbditos disponibles para entrar y salir.
+**Cuándo usarlo**
 
-**Cómo ejecutarlo:** Utiliza E sobre un súbdito para acercarte, golpea con Q y un autoataque, y utiliza otro objetivo para retirarte.
+Cuando el enemigo se acerca a farmear o acaba de utilizar una habilidad defensiva.
 
-**Cuidado:** No entres si el enemigo puede inmovilizarte antes de que completes el intercambio.
+**Cómo ejecutarlo**
 
-### Combo de tornado
+Conecta Q para preparar la marca, utiliza E para acercarte y realiza un ataque básico potenciado antes de retirarte.
 
-**Q → Q → Q3 → R**
+**Cuidado:** No gastes E si el jungla enemigo está cerca y necesitas una herramienta para escapar.
 
-**Cuándo usarlo:** Cuando tienes dos acumulaciones de Q y el enemigo está a una distancia adecuada.
+### Intercambio prolongado
 
-**Cómo ejecutarlo:** Prepara el tornado golpeando súbditos o campeones. Lanza Q3 y utiliza R cuando el enemigo quede levantado.
+**Q → W → E → Autoataques → Q cuando esté disponible**
 
-**Cuidado:** No fuerces R si terminarás en una posición peligrosa.
+**Cuándo usarlo**
 
-### Combo circular
+Cuando tienes espacio para perseguir al enemigo y puedes realizar varios ataques básicos.
 
-**E → Q**
+**Cómo ejecutarlo**
 
-**Cuándo usarlo:** Cuando quieres golpear a varios enemigos cercanos mientras te desplazas.
+Prepara las marcas con Q, activa W para aumentar tu movilidad y velocidad de ataque, acércate con E y aprovecha tus ataques potenciados.
 
-**Cómo ejecutarlo:** Activa Q durante el desplazamiento de E para realizar un ataque circular al llegar.
+**Cuidado:** No prolongues el combate si puedes morir antes de recibir la curación de W.
 
-**Cuidado:** Calcula correctamente el alcance del círculo y tu posición final.
+### Entrada sorpresa
 
-### Beyblade
+**E → Q → Autoataque → W**
 
-**Q3 → E + Q → Destello → R**
+**Cuándo usarlo**
 
-**Cuándo usarlo:** Cuando necesitas sorprender a varios enemigos o alcanzar a un carry que está fuera de tu rango normal.
+Cuando el enemigo está fuera de posición o necesitas acortar rápidamente la distancia.
 
-**Cómo ejecutarlo:** Prepara el tornado, comienza el combo circular E + Q y utiliza Destello durante la animación para trasladar el área de impacto. Si levantas a un objetivo válido, continúa con R.
+**Cómo ejecutarlo**
 
-**Cuidado:** Es un combo mecánicamente exigente. Practica el momento exacto del Destello antes de intentarlo en clasificatorias.
+Utiliza E para acercarte desde un ángulo inesperado, aplica las marcas con Q y realiza un ataque básico. Activa W si puedes continuar el combate de forma segura.
 
-### Airblade
+**Cuidado:** Entrar antes de conectar Q aumenta el riesgo si fallas la habilidad.
 
-**Q3 → E + Q sobre otro objetivo → R**
+### All-in con ejecución
 
-**Cuándo usarlo:** Cuando ya has levantado a un enemigo y quieres añadir daño antes de utilizar Último aliento.
+**Q → W → E → R → Autoataques**
 
-**Cómo ejecutarlo:** Conecta el tornado, utiliza E + Q sobre un objetivo cercano mientras el enemigo permanece en el aire y activa R durante la ventana disponible.
+**Cuándo usarlo**
 
-**Cuidado:** Necesitas suficiente velocidad de ataque y una ejecución precisa. Si tardas demasiado, el enemigo caerá antes de que puedas utilizar R.
+Cuando tienes nivel 6 y el enemigo está lo suficientemente debilitado para buscar una ejecución.
 
-### Keyblade
+**Cómo ejecutarlo**
 
-**Beyblade → Airblade**
+Marca al enemigo con Q, activa W y acércate mediante E. Aplica Purgatorio y continúa atacando para reducir su vida hasta el umbral de ejecución.
 
-**Cuándo usarlo:** Para maximizar el daño y sorprender a enemigos en una pelea importante.
+**Cuidado:** No reserves R hasta el último instante si existe la posibilidad de que el enemigo muera antes de ser marcado.
 
-**Cómo ejecutarlo:** Combina un Beyblade para levantar al objetivo con la secuencia adicional de Airblade antes de utilizar R.
+### Combo de teamfight
 
-**Cuidado:** Es uno de los combos más difíciles de Yasuo. No lo conviertas en tu prioridad hasta dominar las mecánicas básicas.
+**Esperar CC → E → R → Q → W → Autoataques**
 
-## Fase de líneas: controla la oleada y tus desplazamientos
+**Cuándo usarlo**
 
-Yasuo puede presionar mucho durante los primeros niveles, pero también es vulnerable cuando utiliza E de forma imprudente.
+Cuando varios enemigos están agrupados y sus principales herramientas defensivas están en enfriamiento.
 
-Contra magos de rango, aprovecha tu escudo pasivo para acercarte y utiliza los súbditos para evitar habilidades. Guarda Muro de viento para los proyectiles más peligrosos.
+**Cómo ejecutarlo**
 
-Contra campeones cuerpo a cuerpo, busca intercambios cuando tengas Compás letal y puedas prolongar la pelea sin recibir demasiado daño de la oleada enemiga.
+Busca un ángulo lateral, entra con E y coloca Purgatorio sobre varios campeones. Aplica Q y utiliza W para potenciar tus ataques mientras buscas la primera ejecución.
 
-Evita empujar automáticamente todas las oleadas. Si la línea queda demasiado adelantada, perderás espacio para utilizar E y quedarás expuesto a emboscadas.
+**Cuidado:** No confundas refrescar las marcas de Purgatorio con reiniciar automáticamente todas tus habilidades.
 
-- Prepara el tornado antes de buscar un intercambio.
-- Utiliza el escudo pasivo para absorber daño.
-- Conserva súbditos que permitan escapar.
+## Fase de líneas: marca, golpea y controla la distancia
+
+Durante los primeros niveles, Locke debe aprovechar Q para preparar intercambios y castigar errores de posicionamiento.
+
+No necesitas utilizar E cada vez que conectes Q. A veces, aplicar presión desde una distancia segura es suficiente para controlar al enemigo.
+
+Contra magos de rango, conserva vida y espera a que gasten sus principales herramientas defensivas. Cuando esas habilidades estén en enfriamiento, utiliza E para acortar la distancia.
+
+Contra asesinos cuerpo a cuerpo, evita gastar W y E simultáneamente si todavía pueden responder con todo su daño.
+
+Mantener la oleada cerca de tu lado de la línea puede proporcionarte más espacio para perseguir al enemigo sin entrar inmediatamente bajo su torre.
+
+- Prioriza intercambios cuando tengas tus habilidades disponibles.
+- Utiliza ataques básicos para consumir marcas.
+- Evita empujar automáticamente todas las oleadas.
 - Controla la posición del jungla enemigo.
-- No utilices W contra habilidades que no puedas bloquear.
+- Aprovecha el nivel 6 para buscar asesinatos o roams.
 
-## Mitad de partida: escaramuzas y presión lateral
+## Mitad de partida: consigue ejecuciones y crea ventajas
 
-Yasuo destaca en peleas pequeñas donde puede aprovechar su movilidad y los levantamientos de sus compañeros.
+Locke puede aumentar su impacto mediante las ejecuciones de Purgatorio.
 
-Empuja oleadas laterales cuando sea seguro y busca oportunidades para unirte a tu equipo en objetivos importantes.
+Una vez completes Perdición del liche, busca escaramuzas en el río, oportunidades de roam y enemigos aislados.
 
-Si tienes aliados como Malphite, Diana o Wukong, coordina tu definitiva con sus habilidades de levantamiento.
+Empuja la oleada antes de abandonar mid. Un roam fallido que te hace perder dos oleadas puede perjudicarte más de lo que beneficia una posible ejecución.
 
-No necesitas utilizar R inmediatamente después de cualquier levantamiento. A veces es mejor mantener tu posición y continuar atacando.
+Los enfrentamientos pequeños permiten aprovechar mejor la movilidad y el daño de los ataques potenciados sin exponerte a todo el equipo enemigo.
 
-- Busca peleas alrededor de objetivos neutrales.
-- Utiliza la visión para preparar flancos.
-- No persigas enemigos sin una ruta de salida.
-- Aprovecha los levantamientos aliados.
-- Evita luchar en zonas sin objetivos disponibles para E.
+- Busca enemigos sin movilidad.
+- Aprovecha la visión de tu equipo para preparar emboscadas.
+- Controla el enfriamiento de Purgatorio antes de rotar.
+- No fuerces ejecuciones en posiciones peligrosas.
+- Convierte los asesinatos en objetivos y ventajas de mapa.
 
-## Teamfights: no eres el iniciador principal
+## Teamfights: busca la primera ejecución
 
-Aunque Yasuo puede eliminar rápidamente a varios enemigos, sigue siendo vulnerable al control de masas y al daño concentrado.
+Locke no debería iniciar todas las peleas. Aunque dispone de movilidad y curación, el control de masas puede impedir que complete sus secuencias de daño.
 
-Espera a que tu primera línea cree espacio o a que un aliado consiga un levantamiento importante.
+Espera a que la primera línea aliada obligue a los enemigos a gastar sus habilidades defensivas.
 
-Utiliza Muro de viento para bloquear proyectiles que amenacen a tu equipo y busca un ángulo seguro para alcanzar a los carries.
+Busca un ángulo lateral y utiliza Purgatorio sobre varios objetivos cuando sea posible. Prioriza aquellos que puedan alcanzar rápidamente el umbral de ejecución.
 
-Después de utilizar R, aprovecha tu escudo y la penetración adicional para continuar atacando, pero no persigas una segunda muerte si el resto del equipo enemigo puede eliminarte.
+Después de la primera eliminación, vuelve a evaluar la pelea. Mantener activa una marca no garantiza que puedas alcanzar al siguiente enemigo sin morir.
 
-- No utilices R automáticamente sobre el primer enemigo levantado.
-- Controla las habilidades de control de masas enemigas.
-- Protege a tus carries con Muro de viento cuando sea necesario.
-- Prioriza objetivos que puedas alcanzar sin morir.
-- Aprovecha tu daño sostenido en lugar de buscar únicamente combos espectaculares.
+- Evita entrar contra control de masas disponible.
+- Prioriza objetivos con poca vida o escasas herramientas defensivas.
+- Aprovecha la velocidad de ataque de W.
+- Aplica Purgatorio antes de eliminar al objetivo.
+- Utiliza Zhonya cuando necesites ganar tiempo.
+- No persigas una ejecución si la pelea ya está perdida.
 
 ## Enfrentamientos
 
-Los enfrentamientos siguientes combinan datos del parche 26.22 con consejos estratégicos. Los porcentajes citados corresponden a victorias del rival contra Yasuo y no garantizan el resultado de una partida individual.
+Los siguientes porcentajes representan el win rate de Locke mid contra cada campeón en el parche 26.23, Esmeralda+, según Mobalytics.
 
 ### Enfrentamientos difíciles
 
-**Lissandra**
+**Naafiri**
 
-Puede inmovilizar a Yasuo y neutralizar sus entradas con su definitiva. Su equipo puede aprovechar ese control de masas para eliminarte antes de que puedas atacar.
+43,8% WR · 297 partidas.
 
-**54,9% WR de Lissandra contra Yasuo — 8.152 partidas.**
+Naafiri puede castigar tus entradas con su propio daño explosivo.
 
-**Consejo:** No entres mientras tenga su definitiva disponible y evita utilizar E de forma predecible.
+Evita gastar toda tu movilidad antes de que utilice sus herramientas ofensivas. La muestra de este enfrentamiento es relativamente pequeña.
 
-**Malzahar**
+**Annie**
 
-Su definitiva puede detener tus combos y convertirte en un objetivo fácil para el jungla enemigo.
+44,7% WR · 1.097 partidas.
 
-**54,7% WR de Malzahar contra Yasuo — 5.499 partidas.**
+Su aturdimiento fiable puede impedirte realizar ataques básicos y sobrevivir hasta la recuperación de W.
 
-**Consejo:** Controla su escudo pasivo y evita los all-ins cuando tenga R.
+Controla las acumulaciones de su pasiva antes de entrar.
 
-**Aurelion Sol**
+**Ekko**
 
-Puede controlar grandes zonas y escalar hasta superar tu impacto en peleas agrupadas.
+44,9% WR · 1.896 partidas.
 
-**56,2% WR de Aurelion Sol contra Yasuo — 2.449 partidas.**
+Su movilidad, escudo y definitiva dificultan confirmar una ejecución.
 
-**Consejo:** Presiónalo cuando sus habilidades importantes estén en enfriamiento y evita regalarle tiempo para escalar.
+Intenta obligarle a utilizar Cronorruptura antes de comprometer todos tus recursos.
 
-### Enfrentamientos favorables o de presión
+**Akali**
 
-**Lux**
+45,2% WR · 3.355 partidas.
 
-Yasuo puede bloquear varias de sus habilidades con Muro de viento y castigarla cuando falla su inmovilización.
+Su invisibilidad dificulta consumir las marcas mediante ataques básicos.
 
-**Consejo:** Guarda W para su Q o E y aprovecha los súbditos para acercarte.
+Evita perseguirla dentro del Velo del crepúsculo y guarda recursos para cuando vuelva a ser visible.
 
-**Ahri**
+**Katarina**
 
-Sus proyectiles pueden ser bloqueados y Yasuo puede castigarla cuando utiliza su hechizo de control de masas.
+46,1% WR · 2.282 partidas.
 
-**Consejo:** No persigas a Ahri sin considerar las cargas de su definitiva.
+Sus desplazamientos y reinicios pueden dificultar conectar tus habilidades y completar los intercambios.
+
+Castígala cuando utilice su movilidad y evita permanecer junto a sus dagas.
+
+### Enfrentamientos favorables
+
+**Ezreal**
+
+56,5% WR · 556 partidas.
+
+Puedes aprovechar las ventanas en las que Desplazamiento arcano está en enfriamiento. No gastes toda tu movilidad antes de que utilice su escape.
+
+**Orianna**
+
+54,6% WR · 2.012 partidas.
+
+Su movilidad limitada permite buscar intercambios cuando sus herramientas defensivas no están disponibles.
 
 **Syndra**
 
-Yasuo puede presionarla cuando sus habilidades defensivas están en enfriamiento, pero debe respetar su control de masas.
+53,8% WR · 3.173 partidas.
 
-**Consejo:** Busca intercambios cortos y utiliza W para bloquear proyectiles importantes.
+Es vulnerable después de utilizar Dispersar a los débiles. Esquiva su control de masas y aprovecha esa ventana.
 
-Estos tres enfrentamientos son ejemplos estratégicos, no ventajas estadísticas confirmadas para el parche.
+**Xerath**
+
+53,2% WR · 1.415 partidas.
+
+Su falta de movilidad permite castigarlo si consigues acercarte. Evita entrar directamente contra su aturdimiento.
+
+**Azir**
+
+53,1% WR · 1.060 partidas.
+
+Busca intercambios cuando sus herramientas de reposicionamiento estén en enfriamiento y evita luchar durante demasiado tiempo dentro de sus soldados.
 
 ## Errores comunes que corregir
 
-1. Utilizar E para avanzar sin planear cómo salir.
-2. Gastar Muro de viento en habilidades poco importantes.
-3. Lanzar tornados sin considerar el movimiento enemigo.
-4. Utilizar R sobre cualquier objetivo levantado.
-5. Empujar todas las oleadas sin controlar al jungla.
-6. Intentar combos avanzados antes de dominar los básicos.
-7. Comprar siempre la misma build sin adaptarte al daño enemigo.
-8. Confundir movilidad con invulnerabilidad.
+1. No utilizar ataques básicos para consumir las marcas de Q.
+2. Activar W cuando no vas a poder aprovechar su velocidad de ataque.
+3. Confiar en la curación retardada para sobrevivir a cualquier cantidad de daño.
+4. Gastar E sin comprobar el control de masas enemigo.
+5. Lanzar Purgatorio demasiado tarde.
+6. Perseguir enemigos debilitados bajo torres o sin visión.
+7. Sacrificar demasiado farmeo buscando ejecuciones.
+8. Elegir siempre los mismos objetos independientemente de las resistencias enemigas.
 
 ## Plan de práctica
 
-### 1. Ejercicio de desplazamientos
+### 1. Ejercicio de marcas y ataques básicos
 
-En la herramienta de práctica, coloca varios muñecos y utiliza oleadas de súbditos.
+En la herramienta de práctica, coloca varios muñecos.
 
-Practica encadenar E entre objetivos sin quedarte atrapado.
+Aplica Q y practica consumir las marcas mediante ataques básicos.
 
-Intenta terminar cada secuencia en una posición segura.
+Combina diferentes secuencias de habilidades y ataques para familiarizarte con el patrón de daño.
 
-**Objetivo:** Aprender a visualizar una ruta de entrada y salida antes de desplazarte.
+**Objetivo:** Aprender a aprovechar las marcas sin desperdiciar ataques.
 
-### 2. Ejercicio de tornados
+### 2. Ejercicio de movilidad
 
-Golpea súbditos para preparar Q3 y practica acertar tornados desde distintas distancias.
+Practica E desde diferentes ángulos y observa dónde termina el desplazamiento del ataque posterior.
 
-Después combina E + Q para ejecutar el levantamiento circular.
+Repite contra objetivos situados a diferentes distancias.
 
-**Objetivo:** Mejorar la precisión y reducir los tornados desperdiciados.
+**Objetivo:** Controlar la posición final de tus entradas.
 
-### 3. Ejercicio de combos avanzados
+### 3. Ejercicio de ejecución
 
-Practica Beyblade y Airblade por separado.
+Reduce la vida de varios muñecos y practica utilizar Purgatorio antes de infligir el daño final.
 
-Cuando puedas ejecutarlos consistentemente, intenta combinarlos en Keyblade.
+Observa el indicador de ejecución y la duración de las marcas.
 
-**Objetivo:** Ejecutar los combos sin depender de movimientos improvisados.
+**Objetivo:** Reconocer cuándo debes utilizar la definitiva.
 
 ### 4. Revisión de teamfights
 
-Mira una repetición y pausa antes de cada definitiva.
+Revisa una repetición después de cada sesión de juego.
 
-Identifica qué enemigo estaba levantado, dónde aparecerías y qué control de masas seguía disponible.
+Analiza las habilidades defensivas enemigas, tu momento de entrada, el uso de W y las oportunidades de ejecución.
 
-**Objetivo:** Mejorar la elección del objetivo y evitar muertes innecesarias.
+**Objetivo:** Evitar muertes provocadas por entradas precipitadas.
 
 ## Preguntas frecuentes
 
-**¿Es difícil aprender a Yasuo?**
+**¿Es difícil aprender a Locke?**
 
-Sí. Sus habilidades básicas son sencillas de entender, pero dominar los desplazamientos, tornados y combos avanzados requiere mucha práctica.
+Tiene una dificultad considerable porque necesita combinar habilidades, ataques básicos y movilidad mientras gestiona su supervivencia y sus ejecuciones.
 
-**¿Cuál es la mejor build de Yasuo en el parche 26.22?**
+**¿Cuál es la mejor build de Locke en el parche 26.23?**
 
-Una de las rutas más populares es Hoja del rey arruinado, Arcoescudo inmortal y Filo infinito. También existen configuraciones que priorizan Arcoescudo y Filo infinito.
+La configuración más popular utiliza Perdición del liche, Botas de hechicero, Llamasombría, Reloj de arena de Zhonya, Sombrero mortal de Rabadon y Bastón del Vacío.
+
+**¿Qué runas debo utilizar con Locke?**
+
+Electrocutar con Impacto repentino, Sexto sentido y Cazador definitivo. Valor secundario con Revestimiento de huesos y Revitalizar.
 
 **¿Qué orden de habilidades debo utilizar?**
 
-Q primero, E después y W al final, mejorando R siempre que esté disponible.
+Q primero, E después y W al final. Mejora R en los niveles 6, 11 y 16.
 
-**¿Qué es el combo Beyblade de Yasuo?**
+**¿Locke es AP o AD?**
 
-Es una combinación de E + Q3 + Destello que permite trasladar el área del levantamiento a una nueva posición.
+Es principalmente un asesino AP. Sus habilidades y ataques potenciados infligen daño mágico.
 
-**¿Qué es Airblade?**
+**¿Cómo funciona la definitiva de Locke?**
 
-Es una técnica que permite añadir el daño de E + Q antes de completar Último aliento sobre un enemigo levantado.
+Purgatorio marca campeones enemigos y permite ejecutarlos cuando alcanzan su umbral de vida correspondiente. Las ejecuciones prolongan las marcas restantes y permiten conseguir poder adicional.
 
-**¿Es Yasuo bueno para principiantes?**
+**¿Locke es mejor en mid o jungla?**
 
-No es uno de los campeones más sencillos, pero puede aprenderse empezando por el farmeo, el posicionamiento y los combos básicos.
+Mid es su posición principal y la analizada en esta guía. También puede jugarse en jungla, aunque requiere una configuración y estrategia diferentes.
 
-**¿Yasuo es mejor mid o top?**
+**¿Quién hace counter a Locke?**
 
-Mid es su posición principal en esta guía. Top es una alternativa, aunque puede enfrentarse a luchadores con mayor resistencia y daño sostenido.
+Naafiri, Annie, Ekko, Akali y Katarina presentan enfrentamientos estadísticamente difíciles en la muestra consultada del parche 26.23.
 
 ## Sobre las estadísticas
 
-Los datos principales proceden de U.GG para el parche 26.22, Esmeralda+, Solo/Dúo global. Las rutas de objetos también se contrastan con Trackimo y Mobalytics.
+Los datos corresponden a instantáneas de Mobalytics del parche 26.23 en Esmeralda+. Los enfrentamientos se han contrastado adicionalmente con U.GG.
 
-Los porcentajes de victoria pueden variar entre plataformas debido a las diferencias de muestra, filtros y metodología. Las estadísticas de builds completas están condicionadas por las partidas que llegan a completar esos objetos.
+Las cifras pueden variar conforme se registren nuevas partidas. Los combos y consejos estratégicos son recomendaciones prácticas, no estadísticas de rendimiento.
 
 ## Fuentes
 
-- U.GG — Yasuo Mid Build, Runes and Skill Order, Patch 26.22.
-- Mobalytics — Yasuo Build and Runes, Patch 26.22.
-- Trackimo — Yasuo Mid Build, Items and Skill Order, Patch 26.22.
-- Riot Games — Yasuo Official Champion Page.
+- Riot Games — Notas de la versión 26.13 y presentación oficial de Locke.
+- Mobalytics — Locke Mid Build, Runes and Counters, Patch 26.23.
+- U.GG — Locke Mid Counters, Patch 26.23.
+- OP.GG — Locke Champion Abilities.
 
 
 
@@ -501,103 +605,113 @@ Los porcentajes de victoria pueden variar entre plataformas debido a las diferen
 
 
 
-# How to Play Yasuo in League of Legends — Build, Runes & Combos (Patch 26.22)
+# How to Play Locke in League of Legends — Build, Runes & Combos (Patch 26.23)
 
-**The Unforgiven**
+**The Ashen Exorcist**
 
-A highly mobile swordsman who turns minion waves into movement paths, blocks enemy projectiles, and can decide an entire teamfight with a perfectly placed tornado.
+A mobile magic damage assassin who marks enemies, combines abilities with basic attacks, and grows stronger by executing enemy champions.
 
-Yasuo is a mid-lane fighter and assassin specializing in critical strikes, sustained physical damage, and high-mobility combos. He doesn't use mana, but his effectiveness depends on managing his passive shield, Steel Tempest stacks, and available dash targets.
+Locke is a mid-lane assassin specializing in magic damage, mobility, and finishing weakened targets. His effectiveness depends on combining Ritual Nails with basic attacks, taking advantage of Soul Ignition's attack speed, and securing executions with Purgatory.
 
-This guide covers Yasuo's Patch 26.22 build, level-by-level skill order, runes, advanced combos, laning decisions, teamfights, difficult matchups, and common mistakes.
+Unlike many AP assassins, Locke needs to remain within attacking distance during certain stages of his combos to maximize his damage.
 
-**Reading time:** 13 minutes  
-**Updated:** November 17, 2026  
-**Win rate:** 48.97% — 179,462 matches  
-**Role:** Mid  
-**Patch:** 26.22, Emerald+, Global Ranked Solo/Duo
+This guide covers Locke's Patch 26.23 build, level-by-level skill order, runes, combos, laning strategy, teamfights, and matchups.
+
+**Updated:** November 25, 2026  
+**Win rate:** 49.2%  
+**Pick rate:** 5.5%  
+**Ban rate:** 29.3%  
+**Matches analyzed:** 70,469  
+**Role:** Mid
 
 ## Quick Answer
 
-Max Q first, followed by E and W. Run Lethal Tempo with Precision primary and Resolve secondary. Start Doran's Blade and build Blade of the Ruined King, Immortal Shieldbow, and Infinity Edge.
+Max Q first, followed by E and W. Run Electrocute with Domination primary and Resolve secondary. Start Doran's Ring and build Lich Bane, Sorcerer's Shoes, and Shadowflame.
 
-Play around your passive shield, prepare tornadoes before trading, and use minions as entry and escape routes. Save Wind Wall for important projectiles and avoid using Last Breath on every airborne target if the landing position is dangerous.
+Use Q to prepare marks, E to close the distance, and W to empower your basic attack pattern. Use Purgatory to execute enemies and gain additional power throughout the game.
 
-Yasuo has a 48.97% mid-lane win rate in Patch 26.22 according to U.GG. His mechanical potential is extremely high, but success depends on turning individual outplays into meaningful advantages.
+Avoid engaging before the enemy uses their most dangerous crowd control abilities.
 
-**Role:** Mid-lane fighter.
+**Role:** Mid lane.
 
-**Playstyle:** Mobile physical damage dealer with critical strikes and extended combos.
+**Playstyle:** Mobile AP assassin with empowered basic attacks and executions.
 
-**Key mechanic:** Preparing Steel Tempest tornadoes and repositioning with Sweeping Blade.
+**Key mechanic:** Applying and consuming Ritual Nails marks with basic attacks.
 
-**Win condition:** Win skirmishes, capitalize on allied knockups, and eliminate priority targets through sustained damage.
+**Win condition:** Secure kills, gain power through Purgatory, and eliminate priority targets during skirmishes.
 
-**Beginner mistake:** Dashing forward without planning an escape route.
+**Beginner mistake:** Spending every mobility tool without ensuring you can eliminate your target or survive.
 
 ## Abilities and Tips
 
-### P — Way of the Wanderer
+### P — Silver Stake
 
-Yasuo gains increased critical strike chance. He also generates Flow while moving, which creates a shield when fully charged and triggered by enemy champion or monster damage.
-
-**How to use it:**
-- Keep moving to charge your passive shield.
-- Trade when your shield is available.
-- Take advantage of critical strike items to reach your damage spikes.
-- Wait for your shield to recharge before repeating dangerous trades.
-
-**Common mistake:** Engaging without your shield and taking unnecessary damage.
-
-### Q — Steel Tempest
-
-Yasuo thrusts his sword forward, dealing physical damage. Hitting enemies generates Gathering Storm stacks. After two successful hits, his next Q launches a tornado that knocks enemies airborne.
-
-Attack speed reduces Steel Tempest's cooldown and cast time, up to their limits.
+Locke's basic attacks apply additional magic damage that becomes stronger as his target loses health.
 
 **How to use it:**
-- Use Q to last-hit minions and prepare tornadoes.
-- Stack Q on minions before engaging.
-- Combine E + Q for a circular attack.
-- Use your tornado to enable Last Breath.
 
-**Common mistake:** Throwing tornadoes immediately without predicting enemy movement.
+- Weave basic attacks between abilities.
+- Prioritize weakened targets when you can reach them safely.
+- Take advantage of Soul Ignition's attack speed.
+- Remember that your damage comes from both abilities and attacks.
 
-### W — Wind Wall
+**Common mistake:** Casting every ability and disengaging without using basic attacks.
 
-Yasuo creates a wall that blocks many enemy projectiles.
+### Q — Ritual Nails
 
-**How to use it:**
-- Save it for important enemy abilities.
-- Protect teammates during teamfights.
-- Position correctly around the wall.
-- Learn which enemy abilities count as blockable projectiles.
+Locke throws spiritual nails that damage, slow, and mark enemies. His attacks can consume these marks to deal additional damage.
 
-**Common mistake:** Wasting Wind Wall on insignificant damage and having no protection against a crucial ability.
-
-### E — Sweeping Blade
-
-Yasuo dashes through a target, dealing magic damage. He cannot dash through the same target again for a short period.
+Repeated applications improve his ability to control the target.
 
 **How to use it:**
-- Use minions to approach or escape.
-- Plan your dash targets before engaging.
-- Combine E + Q for a circular strike.
-- Preserve available minions for your escape.
 
-**Common mistake:** Dashing automatically toward an enemy without considering your final position.
+- Prepare trades from a safe distance.
+- Consume marks with basic attacks.
+- Use the slow to approach or chase enemies.
+- Practice landing Q against moving targets.
 
-### R — Last Breath
+**Common mistake:** Applying marks without following up with empowered attacks.
 
-Yasuo blinks to an airborne enemy champion, suspending airborne enemies and dealing physical damage. He restores his Flow and temporarily gains bonus armor penetration on critical strikes.
+### W — Soul Ignition
+
+Locke sacrifices some health to temporarily increase his attack speed and movement speed. When the effect ends, he recovers some of the damage suffered during its duration.
 
 **How to use it:**
-- Combine R with your tornado or allied knockups.
-- Prioritize valuable airborne targets.
-- Evaluate your landing position.
-- Continue attacking after R to benefit from its armor penetration.
 
-**Common mistake:** Ulting a tank and landing in the middle of the entire enemy team.
+- Activate W when you can perform multiple attacks.
+- Use the movement speed to approach or reposition.
+- Account for incoming damage before the healing becomes available.
+- Use it during fights you have a realistic chance of surviving.
+
+**Common mistake:** Treating delayed healing as immediate protection against burst damage.
+
+### E — Ashen Pursuit
+
+Locke teleports to a location, damaging enemies around his destination. His following attack provides an additional dash that can damage enemies he passes through.
+
+**How to use it:**
+
+- Dodge important enemy abilities.
+- Find angles that provide access to priority targets.
+- Use the following attack to continue your combo.
+- Consider your final position before committing.
+
+**Common mistake:** Engaging directly into an enemy who still has all their crowd control available.
+
+### R — Purgatory
+
+Locke throws an artifact that affects enemies within an area. Marked champions can be executed when their health falls below the corresponding threshold.
+
+Successful executions refresh the remaining marks and allow Locke to gain additional power.
+
+**How to use it:**
+
+- Try to affect multiple champions during teamfights.
+- Cast R before your target dies.
+- Prioritize enemies that can quickly reach the execution threshold.
+- Capitalize on executions to maintain pressure on other targets.
+
+**Common mistake:** Casting Purgatory too late and missing an execution opportunity.
 
 ## Skill Order
 
@@ -626,364 +740,468 @@ Yasuo blinks to an airborne enemy champion, suspending airborne enemies and deal
 | 17 | W |
 | 18 | W |
 
-Max Q first because it is your primary damage source and provides frequent tornado opportunities.
+Max Q first because it is Locke's primary trading and marking tool.
 
-Max E second for improved damage and offensive mobility.
+Max E second to improve the damage associated with his engages.
 
-Max W last because its defensive value mainly comes from blocking the right abilities.
-
-Starting E can be useful against certain melee champions, but Q is the more straightforward option for learning Yasuo.
+Max W last because its core movement and attack speed utility is available from the first rank.
 
 ## Runes
 
-### Lethal Tempo — Sustained Damage
+### Electrocute Burst
 
-**Precision + Resolve**
+**Domination + Resolve**
 
-Lethal Tempo is Yasuo's most popular keystone in Patch 26.22. It improves extended trades and synergizes with his reliance on attack speed.
+This setup improves short trades while providing defensive tools that help Locke survive after engaging.
 
-**Primary Tree — Precision**
+It is the most popular rune page for Locke Mid in the sampled Patch 26.23 data.
 
-**Lethal Tempo:** Improves sustained damage during extended fights.
+### Primary Tree — Domination
 
-**Absorb Life:** Restores health when killing minions, improving lane sustain.
+**Electrocute**
 
-**Legend: Alacrity:** Provides attack speed for faster attacks and more frequent Steel Tempest casts.
+Additional burst damage when combining abilities and attacks against a target.
 
-**Last Stand:** Increases damage when low on health, helping Yasuo win close duels.
+**Sudden Impact**
 
-**Secondary Tree — Resolve**
+Improves trades after using Ashen Pursuit's mobility.
 
-**Bone Plating:** Reduces incoming damage during short trades and enemy combos.
+**Sixth Sense**
 
-**Overgrowth:** Provides additional health as the game progresses.
+Helps detect enemy vision and prepare roaming routes and flanks.
+
+**Ultimate Hunter**
+
+Provides ultimate ability haste as you collect stacks, allowing more frequent Purgatory opportunities.
+
+### Secondary Tree — Resolve
+
+**Bone Plating**
+
+Reduces incoming damage from short trades and enemy combos.
+
+**Revitalize**
+
+Improves healing effectiveness and complements Soul Ignition's recovery mechanic.
+
+### Rune Shards
+
+- Adaptive Force.
+- Adaptive Force.
+- Health.
 
 ### Alternatives
 
-- **Fleet Footwork:** Better sustain and mobility against difficult poke matchups.
-- **Triumph:** An alternative to Absorb Life for stronger skirmishes.
-- **Second Wind:** Useful against frequent ranged poke.
-- **Unflinching:** Additional protection against crowd control.
+**Conqueror:** An alternative for extended combat against durable enemies.
 
-Lethal Tempo is a strong default for learning Yasuo because it rewards extended trades and consistent basic attacks.
+**Second Wind:** Replace Bone Plating against frequent poke.
+
+**Dark Harvest:** An experimental option focused on eliminating weakened targets.
+
+Electrocute remains the recommended starting point when learning Locke.
 
 ## Summoner Spells
 
-**Flash:** Essential for escaping, repositioning, and advanced combos such as Beyblade.
+**Flash**
 
-**Ignite:** Provides additional early kill pressure and helps finish low-health enemies.
+Essential for escaping, dodging important abilities, repositioning, and reaching priority targets.
 
-**Alternative — Teleport:** A safer choice for difficult lanes where maintaining farm and tempo matters more than early kills.
+**Ignite**
+
+Adds early kill pressure and helps reduce enemy health toward Purgatory's execution threshold.
+
+**Alternative — Teleport**
+
+A situational choice against difficult matchups where maintaining farm and tempo is more important than securing early kills.
 
 ## Builds
 
-### Primary Build — Critical Strike and Sustained Damage
+### Primary Build — AP Burst
 
-A setup combining physical damage, attack speed, lifesteal, and critical strikes.
+A setup designed to combine magic burst damage with empowered basic attacks.
+
+**Build win rate:** 50.1% across 30,268 matches in the sampled data.
+
+### Starting Items
+
+**Doran's Ring**
+
+Ability power and useful laning resources.
+
+**Two Health Potions**
+
+Additional sustain during early trades.
+
+### Core Items
+
+**Lich Bane**
+
+Spellblade damage naturally complements Locke's ability-and-basic-attack combat pattern.
+
+**Shadowflame**
+
+Improves magic damage against weakened targets and complements Silver Stake.
+
+**Zhonya's Hourglass**
+
+Provides a defensive option after committing mobility abilities.
+
+**Rabadon's Deathcap**
+
+A major ability power increase for stronger late-game damage.
+
+**Void Staff**
+
+Percentage magic penetration against enemies stacking magic resistance.
+
+### Boots
+
+**Sorcerer's Shoes:** Magic penetration for stronger burst.
+
+**Mercury's Treads:** Against heavy crowd control and magic damage.
+
+**Plated Steelcaps:** Against basic-attack-focused physical damage compositions.
+
+### Situational Items
+
+**Stormsurge**
+
+Enhances explosive damage sequences against vulnerable targets.
+
+**Nashor's Tooth**
+
+An alternative for stronger basic attacks and attack speed.
+
+**Banshee's Veil**
+
+Protects against an important enemy ability that could interrupt your engage.
+
+**Morellonomicon**
+
+Grievous Wounds against healing-heavy compositions.
+
+**Mejai's Soulstealer**
+
+A snowball option when you can safely maintain Dark Seal stacks.
+
+### Alternative Build — Stormsurge Burst
+
+A damage-focused configuration that replaces the first item with Stormsurge to prioritize explosive damage windows.
 
 **Starting Items**
-- Doran's Blade
-- Health Potion
 
-**Core Items**
+- Doran's Ring.
+- Two Health Potions.
 
-**Blade of the Ruined King:** Attack speed, lifesteal, and additional damage against high-health targets.
+**Suggested Core**
 
-**Immortal Shieldbow:** Critical strike chance and a defensive shield that helps survive burst damage.
-
-**Infinity Edge:** A major increase to critical strike damage.
-
-**Boots**
-- Gunmetal Greaves: A popular attack-speed option.
-- Plated Steelcaps: Against heavy physical damage and basic attacks.
-- Mercury's Treads: Against magic damage and crowd control.
+- Stormsurge.
+- Sorcerer's Shoes.
+- Shadowflame.
+- Rabadon's Deathcap.
 
 **Situational Items**
 
-**Death's Dance:** Improves survivability against physical damage and during extended fights.
+- Lich Bane.
+- Zhonya's Hourglass.
+- Void Staff.
+- Banshee's Veil.
 
-**Guardian Angel:** Provides a second chance after a risky engage.
+The Stormsurge variant has a 50.7% win rate in the consulted Mobalytics data. This does not automatically make it superior in every matchup.
 
-**Lord Dominik's Regards:** Armor penetration against durable enemies.
-
-**Mortal Reminder:** Armor penetration and Grievous Wounds.
-
-**Maw of Malmortius:** Protection against magic burst.
-
-**Bloodthirster:** Lifesteal and additional sustained damage.
-
-Blade of the Ruined King → Immortal Shieldbow → Infinity Edge is one of the most popular item paths in Patch 26.22.
-
-### Alternative Build — Early Critical Strike
-
-A build focused on reaching critical strike power spikes earlier.
-
-**Starting Items**
-- Doran's Blade
-- Health Potion
-
-**Core Items**
-- Immortal Shieldbow
-- Infinity Edge
-- Death's Dance
-
-**Situational Items**
-- Guardian Angel
-- Lord Dominik's Regards
-- Maw of Malmortius
-- Bloodthirster
-
-Choose this route when prioritizing earlier critical strike power spikes over Blade of the Ruined King's sustained damage.
+Lich Bane remains the most popular first item and an excellent option for learning Locke's combat pattern.
 
 ## Combos
 
 ### Basic Lane Trade
 
-**E → Q → Auto Attack → E Out**
+**Q → E → Auto Attack → Disengage**
 
-**When to use it:** During laning phase when minions provide safe entry and exit paths.
+**When to use it**
 
-**How to execute:** Dash through a minion to approach, hit Q and an auto attack, then use another target to retreat.
+When your opponent approaches the wave or has just used an important defensive ability.
 
-**Warning:** Avoid engaging when the enemy can immobilize you before completing the trade.
+**How to execute**
 
-### Tornado Combo
+Land Q to apply a mark, close the distance with E, and perform an empowered basic attack before disengaging.
 
-**Q → Q → Q3 → R**
+**Warning:** Avoid spending E when the enemy jungler might be nearby and you need an escape tool.
 
-**When to use it:** When you have two Steel Tempest stacks and the enemy is within tornado range.
+### Extended Trade
 
-**How to execute:** Stack Q on minions or champions, land your tornado, and cast Last Breath while the target is airborne.
+**Q → W → E → Auto Attacks → Q when available**
 
-**Warning:** Don't force R if your landing position is dangerous.
+**When to use it**
 
-### Circular Strike
+When you have room to chase your opponent and can safely perform multiple basic attacks.
 
-**E → Q**
+**How to execute**
 
-**When to use it:** When you want to damage nearby enemies while dashing.
+Prepare your marks with Q, activate W for attack speed and mobility, approach using E, and take advantage of your empowered attacks.
 
-**How to execute:** Activate Q during Sweeping Blade to perform a circular attack.
+**Warning:** Don't extend the fight if you could die before Soul Ignition's healing becomes available.
 
-**Warning:** Pay attention to the circular hitbox and your final position.
+### Surprise Engage
 
-### Beyblade
+**E → Q → Auto Attack → W**
 
-**Q3 → E + Q → Flash → R**
+**When to use it**
 
-**When to use it:** When you need to surprise enemies or reach a carry outside your normal range.
+When the enemy is out of position or you need to quickly close the distance.
 
-**How to execute:** Prepare your tornado, begin the E + Q circular attack, and Flash during the animation to reposition the knockup area. Follow with R if you hit a valid target.
+**How to execute**
 
-**Warning:** This is mechanically demanding. Practice Flash timing before attempting it in ranked games.
+Approach from an unexpected angle with E, apply marks with Q, and follow up with a basic attack. Activate W if continuing the fight is safe.
 
-### Airblade
+**Warning:** Engaging before landing Q creates additional risk if you miss the ability.
 
-**Q3 → E + Q on Another Target → R**
+### Execution All-In
 
-**When to use it:** When an enemy is already airborne and you want to add damage before Last Breath.
+**Q → W → E → R → Auto Attacks**
 
-**How to execute:** Land your tornado, use E + Q on a nearby target while the enemy remains airborne, and cast R during the available window.
+**When to use it**
 
-**Warning:** You need sufficient attack speed and precise timing. If you are too slow, the target will land before you can ult.
+When you reach level 6 and your opponent is sufficiently weakened to threaten an execution.
 
-### Keyblade
+**How to execute**
 
-**Beyblade → Airblade**
+Mark the enemy with Q, activate W, and close the distance with E. Apply Purgatory and continue attacking until the target reaches the execution threshold.
 
-**When to use it:** To maximize damage and surprise enemies during an important fight.
+**Warning:** Don't delay R until the final moment if the target could die before being marked.
 
-**How to execute:** Combine a Beyblade knockup with the additional Airblade sequence before Last Breath.
+### Teamfight Combo
 
-**Warning:** This is one of Yasuo's most difficult combos. Master the fundamentals first.
+**Wait for CC → E → R → Q → W → Auto Attacks**
 
-## Laning Phase: Control the Wave and Your Dashes
+**When to use it**
 
-Yasuo can apply significant pressure during early levels, but he is vulnerable when using Sweeping Blade carelessly.
+When multiple enemies are grouped and their primary defensive abilities are on cooldown.
 
-Against ranged mages, use your passive shield to approach and minions to dodge skillshots. Save Wind Wall for their most dangerous projectiles.
+**How to execute**
 
-Against melee champions, look for extended trades when Lethal Tempo is available and you can fight without taking excessive minion damage.
+Find a flanking angle, engage with E, and place Purgatory on multiple champions. Apply Q and activate W to empower your attacks while looking for the first execution.
 
-Avoid automatically pushing every wave. Overextending removes safe dash routes and exposes you to jungle ganks.
+**Warning:** Refreshing Purgatory's marks does not automatically reset every ability.
 
-- Prepare your tornado before trading.
-- Use your passive shield to absorb damage.
-- Preserve minions for escaping.
+## Laning Phase: Mark, Attack, and Control Distance
+
+During the early levels, Locke should use Q to prepare trades and punish positioning mistakes.
+
+You don't need to use E every time you land Q. Sometimes applying pressure from a safe distance is enough to control the opponent.
+
+Against ranged mages, preserve your health and wait for them to spend their main defensive abilities. Once those abilities are on cooldown, use E to close the distance.
+
+Against melee assassins, avoid spending W and E simultaneously if your opponent can still retaliate with their complete combo.
+
+Keeping the wave closer to your side of the lane can provide more room to chase without immediately entering enemy turret range.
+
+- Trade when your important abilities are available.
+- Use basic attacks to consume marks.
+- Avoid automatically pushing every wave.
 - Track the enemy jungler.
-- Don't waste Wind Wall against unblockable abilities.
+- Use level 6 to create kill pressure and roaming opportunities.
 
-## Mid Game: Skirmishes and Side-Lane Pressure
+## Mid Game: Secure Executions and Create Advantages
 
-Yasuo excels in smaller fights where he can use mobility and allied knockups.
+Locke can increase his impact by securing Purgatory executions.
 
-Push side waves when safe and look for opportunities around important objectives.
+After completing Lich Bane, look for river skirmishes, roaming opportunities, and isolated enemies.
 
-If your team includes champions such as Malphite, Diana, or Wukong, coordinate Last Breath with their knockup abilities.
+Push your wave before leaving mid lane. An unsuccessful roam that costs multiple waves can hurt your progress more than a potential execution would help.
 
-You don't need to ult immediately after every knockup. Sometimes maintaining your position and continuing to attack is more valuable.
+Smaller fights allow Locke to exploit mobility and empowered attacks without exposing himself to the entire enemy team.
 
-- Look for fights around neutral objectives.
-- Use vision to prepare flanks.
-- Don't chase enemies without an escape route.
-- Capitalize on allied knockups.
-- Avoid fighting where no targets are available for E.
+- Look for enemies with limited mobility.
+- Use allied vision to prepare ambushes.
+- Track Purgatory's cooldown before rotating.
+- Avoid forcing executions in dangerous positions.
+- Convert kills into objectives and map advantages.
 
-## Teamfights: Don't Always Engage First
+## Teamfights: Find the First Execution
 
-Although Yasuo can eliminate multiple enemies quickly, he remains vulnerable to crowd control and focused damage.
+Locke should not always be the primary engager. Despite his mobility and healing, crowd control can prevent him from completing his damage rotation.
 
-Wait for your frontline to create space or for an ally to land an important knockup.
+Wait for your frontline to force enemies to spend defensive abilities.
 
-Use Wind Wall to block projectiles threatening your team and find a safe angle toward enemy carries.
+Find a flanking angle and use Purgatory on multiple targets whenever possible. Prioritize enemies that can quickly reach the execution threshold.
 
-After using Last Breath, take advantage of your shield and additional armor penetration to continue attacking. Don't chase another kill when the remaining enemies can immediately eliminate you.
+After securing the first elimination, reassess the fight. Maintaining an ultimate mark does not guarantee that reaching another target is safe.
 
-- Don't automatically ult the first airborne enemy.
-- Track enemy crowd control cooldowns.
-- Protect your carries with Wind Wall when necessary.
-- Prioritize targets you can reach safely.
-- Use sustained damage instead of relying entirely on flashy combos.
+- Avoid engaging into available crowd control.
+- Prioritize weakened enemies and vulnerable carries.
+- Utilize Soul Ignition's attack speed.
+- Apply Purgatory before your target dies.
+- Use Zhonya's Hourglass when necessary.
+- Don't chase executions in already-lost fights.
 
 ## Matchups
 
-The following matchups combine Patch 26.22 statistics with strategic advice. Listed win rates refer to the opposing champion's performance against Yasuo.
+The following percentages represent Locke's mid-lane win rate against each champion in Patch 26.23, Emerald+, according to Mobalytics.
 
 ### Difficult Matchups
 
-**Lissandra**
+**Naafiri**
 
-Lissandra can immobilize Yasuo and stop his engages with her ultimate. Her team can capitalize on this crowd control to eliminate him.
+43.8% WR · 297 matches.
 
-**Lissandra: 54.9% WR vs Yasuo — 8,152 matches.**
+Naafiri can punish your engages with her own burst damage.
 
-**Tip:** Avoid committing while her ultimate is available, and don't use predictable dashes.
+Avoid spending every mobility ability before she uses her offensive tools. This matchup has a relatively small statistical sample.
 
-**Malzahar**
+**Annie**
 
-Malzahar's ultimate can stop Yasuo's combos and leave him vulnerable to jungle pressure.
+44.7% WR · 1,097 matches.
 
-**Malzahar: 54.7% WR vs Yasuo — 5,499 matches.**
+Her reliable stun can prevent Locke from attacking and surviving until Soul Ignition's healing becomes available.
 
-**Tip:** Track his passive shield and avoid all-ins while his ultimate is available.
+Track her passive stun stacks before engaging.
 
-**Aurelion Sol**
+**Ekko**
 
-Aurelion Sol can control large areas and eventually outscale Yasuo's impact in grouped fights.
+44.9% WR · 1,896 matches.
 
-**Aurelion Sol: 56.2% WR vs Yasuo — 2,449 matches.**
+His mobility, shielding, and ultimate make securing executions difficult.
 
-**Tip:** Pressure him when his important abilities are on cooldown and prevent him from scaling freely.
+Try to force Chronobreak before committing every resource.
 
-### Favorable or Pressure-Oriented Matchups
+**Akali**
 
-**Lux**
+45.2% WR · 3,355 matches.
 
-Yasuo can block several of Lux's abilities with Wind Wall and punish her after she misses her root.
+Her invisibility prevents Locke from consistently consuming marks with basic attacks.
 
-**Tip:** Save W for important projectiles and use minions to close the distance.
+Avoid chasing her inside Twilight Shroud. Save resources until she becomes visible.
 
-**Ahri**
+**Katarina**
 
-Yasuo can block Ahri's projectiles and punish her when Charm is unavailable.
+46.1% WR · 2,282 matches.
 
-**Tip:** Don't chase Ahri without accounting for her ultimate charges.
+Her mobility and cooldown resets can make landing abilities and completing trades difficult.
+
+Punish her when her mobility is unavailable and avoid standing near her daggers.
+
+### Favorable Matchups
+
+**Ezreal**
+
+56.5% WR · 556 matches.
+
+Punish him when Arcane Shift is unavailable. Avoid spending every mobility tool before he uses his escape.
+
+**Orianna**
+
+54.6% WR · 2,012 matches.
+
+Her limited mobility creates trading opportunities when her defensive abilities are unavailable.
 
 **Syndra**
 
-Yasuo can pressure Syndra when her defensive abilities are on cooldown, but must respect her crowd control.
+53.8% WR · 3,173 matches.
 
-**Tip:** Look for short trades and use Wind Wall against important projectiles.
+She becomes vulnerable after using Scatter the Weak. Avoid her crowd control and capitalize on that window.
 
-These three matchups are strategic examples, not statistically confirmed favorable matchups for the patch.
+**Xerath**
+
+53.2% WR · 1,415 matches.
+
+His limited mobility makes him vulnerable once you close the distance. Avoid engaging directly into his stun.
+
+**Azir**
+
+53.1% WR · 1,060 matches.
+
+Look for trades when his repositioning tools are unavailable and avoid extended fights within his soldiers.
 
 ## Common Mistakes to Fix
 
-1. Dashing forward without planning an escape.
-2. Wasting Wind Wall on insignificant abilities.
-3. Throwing tornadoes without predicting enemy movement.
-4. Using Last Breath on every airborne target.
-5. Constantly pushing waves without tracking the enemy jungler.
-6. Attempting advanced combos before mastering basic mechanics.
-7. Building identical items regardless of enemy composition.
-8. Confusing high mobility with invulnerability.
+1. Ignoring basic attacks after applying Ritual Nails marks.
+2. Activating W without opportunities to use its attack speed.
+3. Relying on delayed healing to survive excessive burst damage.
+4. Engaging with E without tracking enemy crowd control.
+5. Casting Purgatory too late.
+6. Chasing weakened enemies under turrets or without vision.
+7. Sacrificing too much farm for execution opportunities.
+8. Building identical items regardless of enemy resistances.
 
 ## Practice Plan
 
-### 1. Dash Path Drill
+### 1. Mark Consumption Drill
 
-In Practice Tool, place several training dummies and use minion waves.
+Place multiple training dummies in Practice Tool.
 
-Practice chaining Sweeping Blade between targets without getting trapped.
+Apply Q and practice consuming marks through basic attacks.
 
-Try to finish each sequence in a safe position.
+Experiment with different ability and attack sequences.
 
-**Goal:** Learn to visualize entry and escape routes before dashing.
+**Goal:** Maximize mark consumption without wasting attacks.
 
-### 2. Tornado Accuracy Drill
+### 2. Mobility Drill
 
-Hit minions to prepare Q3 and practice landing tornadoes from different distances.
+Practice E from different angles and observe the final position of its following attack.
 
-Then combine E + Q for circular knockups.
+Repeat against targets at different distances.
 
-**Goal:** Improve accuracy and reduce wasted tornadoes.
+**Goal:** Improve control over your engagement positioning.
 
-### 3. Advanced Combo Drill
+### 3. Execution Drill
 
-Practice Beyblade and Airblade separately.
+Reduce the health of several training dummies and practice casting Purgatory before applying finishing damage.
 
-Once you can execute both consistently, combine them into Keyblade.
+Observe execution indicators and mark durations.
 
-**Goal:** Perform advanced combos reliably rather than improvising under pressure.
+**Goal:** Recognize when to apply your ultimate.
 
 ### 4. Teamfight Review
 
-Watch a replay and pause before every ultimate.
+Watch a replay after each playing session.
 
-Identify which enemy was airborne, where you would land, and which crowd control abilities remained available.
+Analyze available enemy defensive abilities, engagement timing, W usage, and execution opportunities.
 
-**Goal:** Improve target selection and avoid unnecessary deaths.
+**Goal:** Reduce deaths caused by premature engages.
 
 ## Frequently Asked Questions
 
-**Is Yasuo difficult to learn?**
+**Is Locke difficult to learn?**
 
-Yes. His basic abilities are straightforward, but mastering dash paths, tornadoes, and advanced combos takes considerable practice.
+Locke requires considerable practice because he combines abilities, basic attacks, mobility, delayed healing, and execution mechanics.
 
-**What is the best Yasuo build in Patch 26.22?**
+**What is the best Locke build in Patch 26.23?**
 
-One of the most popular builds is Blade of the Ruined King, Immortal Shieldbow, and Infinity Edge. Other builds prioritize Shieldbow and Infinity Edge earlier.
+The most popular setup includes Lich Bane, Sorcerer's Shoes, Shadowflame, Zhonya's Hourglass, Rabadon's Deathcap, and Void Staff.
+
+**What runes should I use on Locke?**
+
+Electrocute with Sudden Impact, Sixth Sense, and Ultimate Hunter. Use Bone Plating and Revitalize in the secondary Resolve tree.
 
 **What skill order should I use?**
 
-Max Q first, E second, and W last, leveling R whenever available.
+Max Q first, E second, and W last. Upgrade R at levels 6, 11, and 16.
 
-**What is Yasuo's Beyblade combo?**
+**Is Locke AP or AD?**
 
-Beyblade is an E + Q3 + Flash combination that relocates the circular knockup area.
+Locke is primarily an AP assassin. His abilities and empowered attacks deal magic damage.
 
-**What is Airblade?**
+**How does Locke's ultimate work?**
 
-Airblade is an advanced technique that adds E + Q damage before completing Last Breath on an airborne enemy.
+Purgatory marks enemy champions and executes them when they reach the corresponding health threshold. Successful executions refresh remaining marks and allow Locke to gain additional power.
 
-**Is Yasuo good for beginners?**
+**Is Locke better mid or jungle?**
 
-Yasuo isn't one of the easiest champions, but beginners can learn him by focusing on farming, positioning, and basic combos before advanced mechanics.
+Mid is his primary role and the focus of this guide. Jungle is also possible but requires a different build and gameplay strategy.
 
-**Is Yasuo better mid or top?**
+**Who counters Locke?**
 
-Mid is his primary role in this guide. Top is also viable, although Yasuo may face durable fighters with stronger sustained damage.
+Naafiri, Annie, Ekko, Akali, and Katarina are statistically difficult opponents in the consulted Patch 26.23 sample.
 
 ## About the Statistics
 
-The primary statistics come from U.GG for Patch 26.22, Emerald+, global Ranked Solo/Duo. Item paths are also compared with Trackimo and Mobalytics.
+Statistics are based on Mobalytics snapshots for Patch 26.23, Emerald+. Matchup trends were additionally compared against U.GG.
 
-Win rates can differ between platforms because of sample sizes, filters, and statistical methodologies. Completed-build win rates are conditional on games lasting long enough to reach those items.
+Values may change as new matches are recorded. Combo sequences and strategic advice are practical recommendations rather than measured performance statistics.
 
 ## Sources
 
-- U.GG — Yasuo Mid Build, Runes and Skill Order, Patch 26.22.
-- Mobalytics — Yasuo Build and Runes, Patch 26.22.
-- Trackimo — Yasuo Mid Build, Items and Skill Order, Patch 26.22.
-- Riot Games — Yasuo Official Champion Page.
-
+- Riot Games — Patch 26.13 Notes and Official Locke Introduction.
+- Mobalytics — Locke Mid Build, Runes and Counters, Patch 26.23.
+- U.GG — Locke Mid Counters, Patch 26.23.
+- OP.GG — Locke Champion Abilities.

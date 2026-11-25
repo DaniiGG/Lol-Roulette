@@ -2,6 +2,849 @@
   "patch": "26.21",
   "updatedAt": "2026-10-28",
   "champions": {
+    "locke": {
+      "slug": "locke",
+      "name": "Locke",
+      "title": "El Exorcista Ceniciento",
+      "role": "mid",
+      "roleLabel": "Mid",
+      "difficulty": "medium",
+      "difficultyLabel": "Media",
+      "tagline": "Un asesino mágico que marca a sus enemigos, combina habilidades con ataques básicos y aumenta su poder ejecutando campeones.",
+      "metaTitle": "Cómo jugar Locke: build, runas y combos (26.23)",
+      "metaDescription": "Aprende a jugar Locke mid en el parche 26.23 con builds, runas, orden de habilidades, combos y consejos para ejecutar con Purgatorio.",
+      "h1": "Cómo jugar Locke en League of Legends — Build, runas y combos (Parche 26.23)",
+      "heroIntro": [
+        "Locke es un asesino de mid especializado en daño mágico, movilidad y eliminación de objetivos debilitados. Su daño depende de combinar los Clavos rituales con ataques básicos, aprovechar la velocidad de ataque de su W y utilizar Purgatorio para ejecutar enemigos.",
+        "A diferencia de otros asesinos AP, Locke necesita permanecer durante ciertos momentos al alcance de sus enemigos para aprovechar todo el potencial de sus marcas y ataques.",
+        "Esta guía cubre su build del parche 26.23, el orden de habilidades nivel a nivel, runas, combos, decisiones de línea, teamfights y enfrentamientos."
+      ],
+      "quickAnswer": "Sube Q primero, después E y finalmente W. Lleva Electrocutar con Dominación principal y Valor secundario. Empieza con Anillo de Doran y construye Perdición del liche, Botas de hechicero y Llamasombría. Utiliza Q para preparar marcas, E para acercarte y W para potenciar tus ataques básicos. Aprovecha Purgatorio para ejecutar enemigos y conseguir poder adicional durante la partida. No entres antes de que el enemigo utilice sus principales habilidades de control de masas.",
+      "quickStart": {
+        "role": "Carril central.",
+        "secondaryRoles": "Jungla",
+        "difficulty": "Media",
+        "playstyle": "Asesino AP con ataques potenciados, movilidad y ejecuciones.",
+        "keyMechanic": "Aplicar y consumir las marcas de Q mediante ataques básicos.",
+        "beginnerMistake": "Gastar todas las habilidades de movilidad sin asegurar que puedes eliminar al objetivo o sobrevivir.",
+        "winCondition": "Conseguir asesinatos, acumular poder con Purgatorio y eliminar objetivos prioritarios durante las escaramuzas."
+      },
+      "abilities": [
+        {
+          "key": "P",
+          "name": "Estaca de plata",
+          "icon": "Locke_Passive.png",
+          "description": "Los ataques básicos de Locke infligen daño mágico adicional. Este daño aumenta cuanto menor sea la vida restante del objetivo.",
+          "tips": [
+            "Intercala ataques básicos entre tus habilidades.",
+            "Prioriza enemigos debilitados cuando puedas alcanzarlos con seguridad.",
+            "Aprovecha la velocidad de ataque proporcionada por W.",
+            "Recuerda que tu daño no depende únicamente de las habilidades."
+          ],
+          "mistake": "Lanzar todas las habilidades y retirarse sin realizar ataques básicos."
+        },
+        {
+          "key": "Q",
+          "name": "Clavos rituales",
+          "icon": "LockeQ.png",
+          "description": "Locke lanza clavos espirituales que dañan, ralentizan y marcan a los enemigos. Sus ataques pueden consumir las marcas para aumentar el daño infligido. Las aplicaciones sucesivas mejoran su capacidad para controlar al objetivo.",
+          "tips": [
+            "Utiliza Q para preparar intercambios desde una distancia segura.",
+            "Consume las marcas mediante ataques básicos.",
+            "Aprovecha la ralentización para acercarte o continuar persiguiendo.",
+            "Practica la puntería contra objetivos en movimiento."
+          ],
+          "mistake": "Acumular marcas sin aprovechar posteriormente los ataques potenciados."
+        },
+        {
+          "key": "W",
+          "name": "Ignición de alma",
+          "icon": "LockeW.png",
+          "description": "Locke sacrifica parte de su vida para potenciar temporalmente su velocidad de ataque y movimiento. Al terminar el efecto, recupera una parte del daño sufrido durante la habilidad.",
+          "tips": [
+            "Actívala cuando puedas realizar varios ataques básicos.",
+            "Aprovecha la movilidad para acercarte o reposicionarte.",
+            "Calcula cuánto daño puedes recibir antes de que llegue la curación.",
+            "Utilízala en intercambios donde tengas posibilidades reales de sobrevivir."
+          ],
+          "mistake": "Confundir la curación retardada con una protección inmediata frente al burst."
+        },
+        {
+          "key": "E",
+          "name": "Afán ceniciento",
+          "icon": "LockeE.png",
+          "description": "Locke se teletransporta a una ubicación, causando daño en la zona de llegada. Su siguiente ataque dispone de un desplazamiento que también puede dañar a los enemigos atravesados.",
+          "tips": [
+            "Utilízala para esquivar habilidades importantes.",
+            "Busca ángulos que te permitan alcanzar objetivos prioritarios.",
+            "Aprovecha el ataque posterior para continuar el combo.",
+            "Ten en cuenta la posición en la que terminarás."
+          ],
+          "mistake": "Utilizar E para entrar directamente contra un enemigo que todavía tiene todo su control de masas."
+        },
+        {
+          "key": "R",
+          "name": "Purgatorio",
+          "icon": "LockeR.png",
+          "description": "Locke lanza un artefacto que afecta a los enemigos de una zona. Los campeones marcados pueden ser ejecutados cuando su vida desciende por debajo del umbral correspondiente. Las ejecuciones refrescan la duración de las marcas restantes y permiten a Locke obtener poder adicional.",
+          "tips": [
+            "Intenta afectar a varios campeones en teamfights.",
+            "Utilízala antes de que el objetivo muera.",
+            "Busca enemigos que puedan alcanzar rápidamente el umbral de ejecución.",
+            "Aprovecha las ejecuciones para mantener la amenaza sobre otros objetivos."
+          ],
+          "mistake": "Esperar demasiado para utilizar Purgatorio y perder una oportunidad de ejecución."
+        }
+      ],
+      "skillOrder": {
+        "priority": "Q > E > W",
+        "start": "Q → E → W",
+        "levels": [
+          {
+            "level": 1,
+            "ability": "Q"
+          },
+          {
+            "level": 2,
+            "ability": "E"
+          },
+          {
+            "level": 3,
+            "ability": "W"
+          },
+          {
+            "level": 4,
+            "ability": "Q"
+          },
+          {
+            "level": 5,
+            "ability": "Q"
+          },
+          {
+            "level": 6,
+            "ability": "R"
+          },
+          {
+            "level": 7,
+            "ability": "Q"
+          },
+          {
+            "level": 8,
+            "ability": "E"
+          },
+          {
+            "level": 9,
+            "ability": "Q"
+          },
+          {
+            "level": 10,
+            "ability": "E"
+          },
+          {
+            "level": 11,
+            "ability": "R"
+          },
+          {
+            "level": 12,
+            "ability": "E"
+          },
+          {
+            "level": 13,
+            "ability": "E"
+          },
+          {
+            "level": 14,
+            "ability": "W"
+          },
+          {
+            "level": 15,
+            "ability": "W"
+          },
+          {
+            "level": 16,
+            "ability": "R"
+          },
+          {
+            "level": 17,
+            "ability": "W"
+          },
+          {
+            "level": 18,
+            "ability": "W"
+          }
+        ],
+        "explanation": [
+          "Q se maximiza primero porque es la herramienta principal para preparar intercambios y aplicar marcas.",
+          "E se maximiza después para potenciar el daño asociado a tus entradas.",
+          "W se maximiza al final, ya que sus principales herramientas de movilidad y velocidad de ataque están disponibles desde el primer punto."
+        ],
+        "note": "Mejora R en los niveles 6, 11 y 16."
+      },
+      "runes": {
+        "title": "Burst con Electrocutar",
+        "summary": "Esta configuración favorece los intercambios rápidos y proporciona herramientas defensivas para sobrevivir después de entrar. Es la página de runas más popular de Locke mid en la muestra consultada del parche 26.23.",
+        "primaryTree": {
+          "name": "Dominación",
+          "icon": "perk-images/Styles/7200_Domination.png"
+        },
+        "secondaryTree": {
+          "name": "Valor",
+          "icon": "perk-images/Styles/7204_Resolve.png"
+        },
+        "keystone": {
+          "id": 8112,
+          "name": "Electrocutar",
+          "why": "Daño adicional al combinar ataques y habilidades, ideal para eliminar objetivos vulnerables.",
+          "icon": "perk-images/Styles/Domination/Electrocute/Electrocute.png"
+        },
+        "primaryRunes": [
+          {
+            "id": 8143,
+            "name": "Impacto repentino",
+            "why": "Potencia los intercambios después de utilizar la movilidad de Afán ceniciento.",
+            "icon": "perk-images/Styles/Domination/SuddenImpact/SuddenImpact.png"
+          },
+          {
+            "id": 8137,
+            "name": "Sexto sentido",
+            "why": "Ayuda a detectar visión enemiga y preparar rutas de roam y flanqueo.",
+            "icon": "perk-images/Styles/Domination/SixthSense/SixthSense.png"
+          },
+          {
+            "id": 8106,
+            "name": "Cazador definitivo",
+            "why": "Reduce el enfriamiento de Purgatorio conforme consigues acumulaciones.",
+            "icon": "perk-images/Styles/Domination/UltimateHunter/UltimateHunter.png"
+          }
+        ],
+        "secondaryRunes": [
+          {
+            "id": 8473,
+            "name": "Revestimiento de huesos",
+            "why": "Reduce parte del daño enemigo durante intercambios cortos.",
+            "icon": "perk-images/Styles/Resolve/BonePlating/BonePlating.png"
+          },
+          {
+            "id": 8453,
+            "name": "Revitalizar",
+            "why": "Mejora la eficacia de la curación y complementa la recuperación de vida de Ignición de alma.",
+            "icon": "perk-images/Styles/Resolve/Revitalize/Revitalize.png"
+          }
+        ],
+        "alternatives": [
+          "Conquistador: Alternativa para combates prolongados contra enemigos resistentes.",
+          "Segundo aliento: Sustituye a Revestimiento de huesos contra rivales con poke frecuente.",
+          "Cosecha oscura: Opción experimental para potenciar la eliminación de enemigos debilitados."
+        ],
+        "notes": [
+          "Fragmentos de runas: Fuerza adaptable · Fuerza adaptable · Vida.",
+          "Electrocutar es la opción recomendada para comenzar a aprender el campeón."
+        ]
+      },
+      "summonerSpells": [
+        {
+          "name": "Destello",
+          "why": "Permite escapar, esquivar habilidades importantes y alcanzar objetivos fuera de tu rango habitual.",
+          "icon": "SummonerFlash.png"
+        },
+        {
+          "name": "Prender",
+          "why": "Mejora la presión de asesinato durante la fase de líneas y facilita reducir la vida del enemigo hasta el umbral de ejecución.",
+          "icon": "SummonerDot.png",
+          "alternative": "Alternativa — Teleportar. Una opción situacional para enfrentamientos difíciles donde conservar el ritmo de farmeo es más importante que buscar asesinatos tempranos."
+        }
+      ],
+      "builds": [
+        {
+          "id": "standard",
+          "label": "Build principal — Burst AP",
+          "summary": "Una configuración diseñada para combinar daño mágico explosivo con ataques básicos potenciados.",
+          "starting": {
+            "label": "Objetos iniciales",
+            "items": [
+              {
+                "id": "1056",
+                "name": "Anillo de Doran",
+                "why": "Poder de habilidad y recursos para sobrevivir durante los primeros niveles.",
+                "icon": "1056.png"
+              },
+              {
+                "id": "2003",
+                "name": "Dos pociones de vida",
+                "why": "Recuperación para mantenerte en línea tras los primeros intercambios.",
+                "icon": "2003.png"
+              }
+            ]
+          },
+          "core": {
+            "label": "Objetos principales",
+            "items": [
+              {
+                "id": "3100",
+                "name": "Perdición del liche",
+                "why": "El ataque potenciado de Hechizoespada complementa naturalmente el patrón de habilidades y ataques básicos de Locke.",
+                "icon": "3100.png"
+              },
+              {
+                "id": "4645",
+                "name": "Llamasombría",
+                "why": "Refuerza el daño mágico contra enemigos debilitados y complementa el funcionamiento de la pasiva.",
+                "icon": "4645.png"
+              },
+              {
+                "id": "3157",
+                "name": "Reloj de arena de Zhonya",
+                "why": "Permite sobrevivir a momentos peligrosos tras utilizar las habilidades de entrada.",
+                "icon": "3157.png"
+              },
+              {
+                "id": "3089",
+                "name": "Sombrero mortal de Rabadon",
+                "why": "Aumenta considerablemente el poder de habilidad y potencia el daño durante el late game.",
+                "icon": "3089.png"
+              },
+              {
+                "id": "3135",
+                "name": "Bastón del Vacío",
+                "why": "Penetración mágica porcentual para combatir enemigos que acumulan resistencia mágica.",
+                "icon": "3135.png"
+              }
+            ]
+          },
+          "boots": {
+            "label": "Botas",
+            "items": [
+              {
+                "id": "3020",
+                "name": "Botas de hechicero",
+                "why": "Penetración mágica para potenciar el burst.",
+                "icon": "3020.png"
+              },
+              {
+                "id": "3111",
+                "name": "Botas de mercurio",
+                "why": "Contra equipos con mucho control de masas y daño mágico.",
+                "icon": "3111.png"
+              },
+              {
+                "id": "3047",
+                "name": "Botas blindadas",
+                "why": "Contra composiciones dominadas por ataques básicos y daño físico.",
+                "icon": "3047.png"
+              }
+            ]
+          },
+          "situational": {
+            "label": "Objetos situacionales",
+            "items": [
+              {
+                "id": "4646",
+                "name": "Sobrecarga tormentosa",
+                "why": "Potencia las secuencias de daño explosivo contra objetivos vulnerables.",
+                "icon": "4646.png"
+              },
+              {
+                "id": "3115",
+                "name": "Diente de Nashor",
+                "why": "Alternativa para aumentar el daño mediante ataques básicos y velocidad de ataque.",
+                "icon": "3115.png"
+              },
+              {
+                "id": "3102",
+                "name": "Velo del hada de la muerte",
+                "why": "Protección contra una habilidad enemiga importante que pueda detener tu entrada.",
+                "icon": "3102.png"
+              },
+              {
+                "id": "3165",
+                "name": "Morellonomicón",
+                "why": "Heridas graves contra composiciones con mucha curación.",
+                "icon": "3165.png"
+              },
+              {
+                "id": "3041",
+                "name": "Robaalmas de Mejai",
+                "why": "Opción de snowball cuando puedes conservar las acumulaciones de Sello oscuro.",
+                "icon": "3041.png"
+              }
+            ]
+          },
+          "notes": [
+            "Win rate de la configuración: 50,1% en 30.268 partidas de la muestra consultada."
+          ]
+        },
+        {
+          "id": "stormsurge",
+          "label": "Build alternativa — Burst con Sobrecarga tormentosa",
+          "summary": "Una configuración que sustituye el primer objeto por Sobrecarga tormentosa para priorizar ventanas de daño explosivo.",
+          "starting": {
+            "label": "Objetos iniciales",
+            "items": [
+              {
+                "id": "1056",
+                "name": "Anillo de Doran",
+                "why": "Poder de habilidad y recursos para sobrevivir durante los primeros niveles.",
+                "icon": "1056.png"
+              },
+              {
+                "id": "2003",
+                "name": "Dos pociones de vida",
+                "why": "Recuperación para mantenerte en línea tras los primeros intercambios.",
+                "icon": "2003.png"
+              }
+            ]
+          },
+          "core": {
+            "label": "Núcleo recomendado",
+            "items": [
+              {
+                "id": "4646",
+                "name": "Sobrecarga tormentosa",
+                "why": "Potencia las secuencias de daño explosivo contra objetivos vulnerables.",
+                "icon": "4646.png"
+              },
+              {
+                "id": "4645",
+                "name": "Llamasombría",
+                "why": "Refuerza el daño mágico contra enemigos debilitados y complementa el funcionamiento de la pasiva.",
+                "icon": "4645.png"
+              },
+              {
+                "id": "3089",
+                "name": "Sombrero mortal de Rabadon",
+                "why": "Aumenta considerablemente el poder de habilidad y potencia el daño durante el late game.",
+                "icon": "3089.png"
+              }
+            ]
+          },
+          "boots": {
+            "label": "Botas",
+            "items": [
+              {
+                "id": "3020",
+                "name": "Botas de hechicero",
+                "why": "Penetración mágica para potenciar el burst.",
+                "icon": "3020.png"
+              },
+              {
+                "id": "3111",
+                "name": "Botas de mercurio",
+                "why": "Contra equipos con mucho control de masas y daño mágico.",
+                "icon": "3111.png"
+              },
+              {
+                "id": "3047",
+                "name": "Botas blindadas",
+                "why": "Contra composiciones dominadas por ataques básicos y daño físico.",
+                "icon": "3047.png"
+              }
+            ]
+          },
+          "situational": {
+            "label": "Objetos situacionales",
+            "items": [
+              {
+                "id": "3100",
+                "name": "Perdición del liche",
+                "why": "El ataque potenciado de Hechizoespada complementa naturalmente el patrón de habilidades y ataques básicos de Locke.",
+                "icon": "3100.png"
+              },
+              {
+                "id": "3157",
+                "name": "Reloj de arena de Zhonya",
+                "why": "Permite sobrevivir a momentos peligrosos tras utilizar las habilidades de entrada.",
+                "icon": "3157.png"
+              },
+              {
+                "id": "3135",
+                "name": "Bastón del Vacío",
+                "why": "Penetración mágica porcentual para combatir enemigos que acumulan resistencia mágica.",
+                "icon": "3135.png"
+              },
+              {
+                "id": "3102",
+                "name": "Velo del hada de la muerte",
+                "why": "Protección contra una habilidad enemiga importante que pueda detener tu entrada.",
+                "icon": "3102.png"
+              }
+            ]
+          },
+          "notes": [
+            "La variante con Sobrecarga tormentosa presenta un 50,7% de victorias en Mobalytics. Esto no significa necesariamente que sea superior en todas las partidas.",
+            "Perdición del liche sigue siendo la opción más popular y una excelente elección para aprender el patrón de combate de Locke."
+          ]
+        }
+      ],
+      "combos": [
+        {
+          "name": "Intercambio básico en línea",
+          "sequence": [
+            {
+              "key": "Q",
+              "label": "Q"
+            },
+            {
+              "key": "E",
+              "label": "E"
+            },
+            {
+              "key": "AA",
+              "label": "Autoataque"
+            },
+            {
+              "key": "retreat",
+              "label": "Retroceder"
+            }
+          ],
+          "situation": "Cuando el enemigo se acerca a farmear o acaba de utilizar una habilidad defensiva.",
+          "execution": "Conecta Q para preparar la marca, utiliza E para acercarte y realiza un ataque básico potenciado antes de retirarte.",
+          "mistake": "No gastes E si el jungla enemigo está cerca y necesitas una herramienta para escapar."
+        },
+        {
+          "name": "Intercambio prolongado",
+          "sequence": [
+            {
+              "key": "Q",
+              "label": "Q"
+            },
+            {
+              "key": "W",
+              "label": "W"
+            },
+            {
+              "key": "E",
+              "label": "E"
+            },
+            {
+              "key": "AA",
+              "label": "Autoataques"
+            },
+            {
+              "key": "Q",
+              "label": "Q cuando esté disponible"
+            }
+          ],
+          "situation": "Cuando tienes espacio para perseguir al enemigo y puedes realizar varios ataques básicos.",
+          "execution": "Prepara las marcas con Q, activa W para aumentar tu movilidad y velocidad de ataque, acércate con E y aprovecha tus ataques potenciados.",
+          "mistake": "No prolongues el combate si puedes morir antes de recibir la curación de W."
+        },
+        {
+          "name": "Entrada sorpresa",
+          "sequence": [
+            {
+              "key": "E",
+              "label": "E"
+            },
+            {
+              "key": "Q",
+              "label": "Q"
+            },
+            {
+              "key": "AA",
+              "label": "Autoataque"
+            },
+            {
+              "key": "W",
+              "label": "W"
+            }
+          ],
+          "situation": "Cuando el enemigo está fuera de posición o necesitas acortar rápidamente la distancia.",
+          "execution": "Utiliza E para acercarte desde un ángulo inesperado, aplica las marcas con Q y realiza un ataque básico. Activa W si puedes continuar el combate de forma segura.",
+          "mistake": "Entrar antes de conectar Q aumenta el riesgo si fallas la habilidad."
+        },
+        {
+          "name": "All-in con ejecución",
+          "sequence": [
+            {
+              "key": "Q",
+              "label": "Q"
+            },
+            {
+              "key": "W",
+              "label": "W"
+            },
+            {
+              "key": "E",
+              "label": "E"
+            },
+            {
+              "key": "R",
+              "label": "R"
+            },
+            {
+              "key": "AA",
+              "label": "Autoataques"
+            }
+          ],
+          "situation": "Cuando tienes nivel 6 y el enemigo está lo suficientemente debilitado para buscar una ejecución.",
+          "execution": "Marca al enemigo con Q, activa W y acércate mediante E. Aplica Purgatorio y continúa atacando para reducir su vida hasta el umbral de ejecución.",
+          "mistake": "No reserves R hasta el último instante si existe la posibilidad de que el enemigo muera antes de ser marcado."
+        },
+        {
+          "name": "Combo de teamfight",
+          "sequence": [
+            {
+              "key": "wait",
+              "label": "Esperar CC"
+            },
+            {
+              "key": "E",
+              "label": "E"
+            },
+            {
+              "key": "R",
+              "label": "R"
+            },
+            {
+              "key": "Q",
+              "label": "Q"
+            },
+            {
+              "key": "W",
+              "label": "W"
+            },
+            {
+              "key": "AA",
+              "label": "Autoataques"
+            }
+          ],
+          "situation": "Cuando varios enemigos están agrupados y sus principales herramientas defensivas están en enfriamiento.",
+          "execution": "Busca un ángulo lateral, entra con E y coloca Purgatorio sobre varios campeones. Aplica Q y utiliza W para potenciar tus ataques mientras buscas la primera ejecución.",
+          "mistake": "No confundas refrescar las marcas de Purgatorio con reiniciar automáticamente todas tus habilidades."
+        }
+      ],
+      "sections": [
+        {
+          "id": "laning",
+          "heading": "Fase de líneas: marca, golpea y controla la distancia",
+          "paragraphs": [
+            "Durante los primeros niveles, Locke debe aprovechar Q para preparar intercambios y castigar errores de posicionamiento.",
+            "No necesitas utilizar E cada vez que conectes Q. A veces, aplicar presión desde una distancia segura es suficiente para controlar al enemigo.",
+            "Contra magos de rango, conserva vida y espera a que gasten sus principales herramientas defensivas. Cuando esas habilidades estén en enfriamiento, utiliza E para acortar la distancia.",
+            "Contra asesinos cuerpo a cuerpo, evita gastar W y E simultáneamente si todavía pueden responder con todo su daño.",
+            "Mantener la oleada cerca de tu lado de la línea puede proporcionarte más espacio para perseguir al enemigo sin entrar inmediatamente bajo su torre."
+          ],
+          "bullets": [
+            "Prioriza intercambios cuando tengas tus habilidades disponibles.",
+            "Utiliza ataques básicos para consumir marcas.",
+            "Evita empujar automáticamente todas las oleadas.",
+            "Controla la posición del jungla enemigo.",
+            "Aprovecha el nivel 6 para buscar asesinatos o roams."
+          ]
+        },
+        {
+          "id": "mid-game",
+          "heading": "Mitad de partida: consigue ejecuciones y crea ventajas",
+          "paragraphs": [
+            "Locke puede aumentar su impacto mediante las ejecuciones de Purgatorio.",
+            "Una vez completes Perdición del liche, busca escaramuzas en el río, oportunidades de roam y enemigos aislados.",
+            "Empuja la oleada antes de abandonar mid. Un roam fallido que te hace perder dos oleadas puede perjudicarte más de lo que beneficia una posible ejecución.",
+            "Los enfrentamientos pequeños permiten aprovechar mejor la movilidad y el daño de los ataques potenciados sin exponerte a todo el equipo enemigo."
+          ],
+          "bullets": [
+            "Busca enemigos sin movilidad.",
+            "Aprovecha la visión de tu equipo para preparar emboscadas.",
+            "Controla el enfriamiento de Purgatorio antes de rotar.",
+            "No fuerces ejecuciones en posiciones peligrosas.",
+            "Convierte los asesinatos en objetivos y ventajas de mapa."
+          ]
+        },
+        {
+          "id": "teamfights",
+          "heading": "Teamfights: busca la primera ejecución",
+          "paragraphs": [
+            "Locke no debería iniciar todas las peleas. Aunque dispone de movilidad y curación, el control de masas puede impedir que complete sus secuencias de daño.",
+            "Espera a que la primera línea aliada obligue a los enemigos a gastar sus habilidades defensivas.",
+            "Busca un ángulo lateral y utiliza Purgatorio sobre varios objetivos cuando sea posible. Prioriza aquellos que puedan alcanzar rápidamente el umbral de ejecución.",
+            "Después de la primera eliminación, vuelve a evaluar la pelea. Mantener activa una marca no garantiza que puedas alcanzar al siguiente enemigo sin morir."
+          ],
+          "bullets": [
+            "Evita entrar contra control de masas disponible.",
+            "Prioriza objetivos con poca vida o escasas herramientas defensivas.",
+            "Aprovecha la velocidad de ataque de W.",
+            "Aplica Purgatorio antes de eliminar al objetivo.",
+            "Utiliza Zhonya cuando necesites ganar tiempo.",
+            "No persigas una ejecución si la pelea ya está perdida."
+          ]
+        }
+      ],
+      "matchups": {
+        "difficult": [
+          {
+            "name": "Naafiri",
+            "icon": "Naafiri.png",
+            "winRate": "43,8%",
+            "games": "297",
+            "advice": "Naafiri puede castigar tus entradas con su propio daño explosivo. Evita gastar toda tu movilidad antes de que utilice sus herramientas ofensivas. La muestra de este enfrentamiento es relativamente pequeña."
+          },
+          {
+            "name": "Annie",
+            "icon": "Annie.png",
+            "winRate": "44,7%",
+            "games": "1.097",
+            "advice": "Su aturdimiento fiable puede impedirte realizar ataques básicos y sobrevivir hasta la recuperación de W. Controla las acumulaciones de su pasiva antes de entrar."
+          },
+          {
+            "name": "Ekko",
+            "icon": "Ekko.png",
+            "winRate": "44,9%",
+            "games": "1.896",
+            "advice": "Su movilidad, escudo y definitiva dificultan confirmar una ejecución. Intenta obligarle a utilizar Cronorruptura antes de comprometer todos tus recursos."
+          },
+          {
+            "name": "Akali",
+            "icon": "Akali.png",
+            "winRate": "45,2%",
+            "games": "3.355",
+            "advice": "Su invisibilidad dificulta consumir las marcas mediante ataques básicos. Evita perseguirla dentro del Velo del crepúsculo y guarda recursos para cuando vuelva a ser visible."
+          },
+          {
+            "name": "Katarina",
+            "icon": "Katarina.png",
+            "winRate": "46,1%",
+            "games": "2.282",
+            "advice": "Sus desplazamientos y reinicios pueden dificultar conectar tus habilidades y completar los intercambios. Castígala cuando utilice su movilidad y evita permanecer junto a sus dagas."
+          }
+        ],
+        "favorable": [
+          {
+            "name": "Ezreal",
+            "icon": "Ezreal.png",
+            "winRate": "56,5%",
+            "games": "556",
+            "advice": "Puedes aprovechar las ventanas en las que Desplazamiento arcano está en enfriamiento. No gastes toda tu movilidad antes de que utilice su escape."
+          },
+          {
+            "name": "Orianna",
+            "icon": "Orianna.png",
+            "winRate": "54,6%",
+            "games": "2.012",
+            "advice": "Su movilidad limitada permite buscar intercambios cuando sus herramientas defensivas no están disponibles."
+          },
+          {
+            "name": "Syndra",
+            "icon": "Syndra.png",
+            "winRate": "53,8%",
+            "games": "3.173",
+            "advice": "Es vulnerable después de utilizar Dispersar a los débiles. Esquiva su control de masas y aprovecha esa ventana."
+          },
+          {
+            "name": "Xerath",
+            "icon": "Xerath.png",
+            "winRate": "53,2%",
+            "games": "1.415",
+            "advice": "Su falta de movilidad permite castigarlo si consigues acercarte. Evita entrar directamente contra su aturdimiento."
+          },
+          {
+            "name": "Azir",
+            "icon": "Azir.png",
+            "winRate": "53,1%",
+            "games": "1.060",
+            "advice": "Busca intercambios cuando sus herramientas de reposicionamiento estén en enfriamiento y evita luchar durante demasiado tiempo dentro de sus soldados."
+          }
+        ],
+        "note": "Los siguientes porcentajes representan el win rate de Locke mid contra cada campeón en el parche 26.23, Esmeralda+, según Mobalytics."
+      },
+      "mistakes": [
+        "No utilizar ataques básicos para consumir las marcas de Q.",
+        "Activar W cuando no vas a poder aprovechar su velocidad de ataque.",
+        "Confiar en la curación retardada para sobrevivir a cualquier cantidad de daño.",
+        "Gastar E sin comprobar el control de masas enemigo.",
+        "Lanzar Purgatorio demasiado tarde.",
+        "Perseguir enemigos debilitados bajo torres o sin visión.",
+        "Sacrificar demasiado farmeo buscando ejecuciones.",
+        "Elegir siempre los mismos objetos independientemente de las resistencias enemigas."
+      ],
+      "practicePlan": [
+        {
+          "title": "1. Ejercicio de marcas y ataques básicos",
+          "steps": [
+            "En la herramienta de práctica, coloca varios muñecos.",
+            "Aplica Q y practica consumir las marcas mediante ataques básicos.",
+            "Combina diferentes secuencias de habilidades y ataques para familiarizarte con el patrón de daño.",
+            "Objetivo: Aprender a aprovechar las marcas sin desperdiciar ataques."
+          ]
+        },
+        {
+          "title": "2. Ejercicio de movilidad",
+          "steps": [
+            "Practica E desde diferentes ángulos y observa dónde termina el desplazamiento del ataque posterior.",
+            "Repite contra objetivos situados a diferentes distancias.",
+            "Objetivo: Controlar la posición final de tus entradas."
+          ]
+        },
+        {
+          "title": "3. Ejercicio de ejecución",
+          "steps": [
+            "Reduce la vida de varios muñecos y practica utilizar Purgatorio antes de infligir el daño final.",
+            "Observa el indicador de ejecución y la duración de las marcas.",
+            "Objetivo: Reconocer cuándo debes utilizar la definitiva."
+          ]
+        },
+        {
+          "title": "4. Revisión de teamfights",
+          "steps": [
+            "Revisa una repetición después de cada sesión de juego.",
+            "Analiza las habilidades defensivas enemigas, tu momento de entrada, el uso de W y las oportunidades de ejecución.",
+            "Objetivo: Evitar muertes provocadas por entradas precipitadas."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "¿Es difícil aprender a Locke?",
+          "a": "Tiene una dificultad considerable porque necesita combinar habilidades, ataques básicos y movilidad mientras gestiona su supervivencia y sus ejecuciones."
+        },
+        {
+          "q": "¿Cuál es la mejor build de Locke en el parche 26.23?",
+          "a": "La configuración más popular utiliza Perdición del liche, Botas de hechicero, Llamasombría, Reloj de arena de Zhonya, Sombrero mortal de Rabadon y Bastón del Vacío."
+        },
+        {
+          "q": "¿Qué runas debo utilizar con Locke?",
+          "a": "Electrocutar con Impacto repentino, Sexto sentido y Cazador definitivo. Valor secundario con Revestimiento de huesos y Revitalizar."
+        },
+        {
+          "q": "¿Qué orden de habilidades debo utilizar?",
+          "a": "Q primero, E después y W al final. Mejora R en los niveles 6, 11 y 16."
+        },
+        {
+          "q": "¿Locke es AP o AD?",
+          "a": "Es principalmente un asesino AP. Sus habilidades y ataques potenciados infligen daño mágico."
+        },
+        {
+          "q": "¿Cómo funciona la definitiva de Locke?",
+          "a": "Purgatorio marca campeones enemigos y permite ejecutarlos cuando alcanzan su umbral de vida correspondiente. Las ejecuciones prolongan las marcas restantes y permiten conseguir poder adicional."
+        },
+        {
+          "q": "¿Locke es mejor en mid o jungla?",
+          "a": "Mid es su posición principal y la analizada en esta guía. También puede jugarse en jungla, aunque requiere una configuración y estrategia diferentes."
+        },
+        {
+          "q": "¿Quién hace counter a Locke?",
+          "a": "Naafiri, Annie, Ekko, Akali y Katarina presentan enfrentamientos estadísticamente difíciles en la muestra consultada del parche 26.23."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Riot Games — Notas de la versión 26.13 y presentación oficial de Locke",
+          "url": "https://www.leagueoflegends.com/en-us/news/game-updates/league-of-legends-patch-26-13-notes/"
+        },
+        {
+          "label": "Mobalytics — Locke Mid Build, Runes and Counters",
+          "url": "https://mobalytics.gg/lol/champions/locke/build/mid"
+        },
+        {
+          "label": "U.GG — Locke Mid Counters",
+          "url": "https://u.gg/lol/champions/locke/counter"
+        },
+        {
+          "label": "OP.GG — Locke Champion Abilities",
+          "url": "https://op.gg/lol/champions/locke/skills"
+        }
+      ],
+      "statsNote": "Los datos corresponden a instantáneas de Mobalytics del parche 26.23 en Esmeralda+. Los enfrentamientos se han contrastado adicionalmente con U.GG. Las cifras pueden variar conforme se registren nuevas partidas. Los combos y consejos estratégicos son recomendaciones prácticas, no estadísticas de rendimiento.",
+      "lastUpdated": "2026-11-25"
+    },
     "yasuo": {
       "slug": "yasuo",
       "name": "Yasuo",
