@@ -14,11 +14,13 @@ import { useLocale, useTranslations } from 'next-intl'
 import {
   AlertTriangle,
   ArrowRight,
+  Atom,
   Check,
   ChevronDown,
   Crosshair,
   Expand,
   GitBranch,
+  ChartBar,
   Hand,
   Info,
   Keyboard,
@@ -27,12 +29,14 @@ import {
   Maximize2,
   MousePointer2,
   Move,
+  Orbit,
   Plus,
   RefreshCw,
   RotateCcw,
   Ruler,
   Search,
   Share2,
+  SlidersHorizontal,
   Sparkles,
   UserRound,
   X,
@@ -40,6 +44,7 @@ import {
   ZoomOut,
 } from 'lucide-react'
 import TreeScene from './TreeScene'
+import MasteryCollectionView, { type MasteryView } from './MasteryCollectionView'
 import ChampionDetailsModal from './ChampionDetailsModal'
 import PersonalizeModal from './PersonalizeModal'
 import ShareModal from './ShareModal'
@@ -68,6 +73,7 @@ import { ANALYTICS_EVENTS, trackEvent } from '@/lib/analytics/events'
 
 const STORAGE_KEY = 'leagueroulette:mastery-tree:v1'
 const MAX_STORED_ENTRIES = 500
+const RIOT_MASTERY_CACHE_MS = 5 * 60 * 1000
 const MIN_SCALE = 0.48
 const MAX_SCALE = 4
 const FOCUS_SCALE = 1.8
@@ -119,9 +125,8 @@ function readStoredMasteries(): MasteryMap {
           : null
       const level =
         typeof value.level === 'number' &&
-        Number.isFinite(value.level) &&
-        value.level >= 0 &&
-        value.level <= 10
+        Number.isSafeInteger(value.level) &&
+        value.level >= 0
           ? Math.round(value.level)
           : null
 
@@ -144,14 +149,19 @@ function svgPoint(svg: SVGSVGElement, clientX: number, clientY: number) {
 interface MasteryTreeExplorerProps {
   readOnlyMastery?: boolean
   embedded?: boolean
+  riotProfile?: { puuid: string; region: string }
 }
 
 export default function MasteryTreeExplorer({
   readOnlyMastery = false,
   embedded = false,
+  riotProfile,
 }: MasteryTreeExplorerProps) {
+  const puuid = riotProfile?.puuid
+  const region = riotProfile?.region
   const locale = useLocale()
   const t = useTranslations('masteryTreeExplorer')
+  const ui = useTranslations('mastery-page')
   const numberFormatter = useMemo(() => new Intl.NumberFormat(locale), [locale])
 
   const [catalog, setCatalog] = useState<ChampionCatalogEntry[] | null>(null)
@@ -162,6 +172,8 @@ export default function MasteryTreeExplorer({
   const [hydrated, setHydrated] = useState(false)
   const autoLoadRef = useRef(false)
   const [mode, setMode] = useState<ExplorerMode>('explore')
+  const [masteryView, setMasteryView] = useState<MasteryView>('orbit')
+  const [filtersOpen, setFiltersOpen] = useState(false)
   const [sizeByMastery, setSizeByMastery] = useState(true)
   const [showBranches, setShowBranches] = useState(true)
   const [roleFilter, setRoleFilter] = useState<ExplorerRole | 'all'>('all')
@@ -238,24 +250,24 @@ export default function MasteryTreeExplorer({
       }
     }
 
-    const stored = readStoredMasteries()
+    const stored = readOnlyMastery ? {} : readStoredMasteries()
     if (Object.keys(stored).length > 0) {
       setMasteries(stored)
       setMode('personal')
       persistRef.current = true
     }
     setHydrated(true)
-  }, [])
+  }, [readOnlyMastery])
   /* eslint-enable react-hooks/set-state-in-effect */
 
   useEffect(() => {
-    if (!hydrated || !persistRef.current) return
+    if (readOnlyMastery || !hydrated || !persistRef.current) return
     try {
       window.localStorage.setItem(STORAGE_KEY, JSON.stringify(masteries))
     } catch {
       // Storage can be unavailable in private or restricted contexts.
     }
-  }, [masteries, hydrated])
+  }, [masteries, hydrated, readOnlyMastery])
 
   useEffect(() => {
     trackEvent(ANALYTICS_EVENTS.treeOpened, { locale })
@@ -307,9 +319,8 @@ export default function MasteryTreeExplorer({
   const selectedRank = useMemo(() => {
     if (selectedId === null) return null
     if (layout.centerNodeId === selectedId) return 1
-    return (
-      layout.nodes.find((node) => node.championId === selectedId)?.rank ?? null
-    )
+    const node = layout.nodes.find((entry) => entry.championId === selectedId)
+    return node ? node.rank + (layout.centerNodeId === null ? 0 : 1) : null
   }, [layout, selectedId])
 
   const normalizedQuery = normalizeSearch(query.trim())
@@ -398,7 +409,7 @@ export default function MasteryTreeExplorer({
     let cancelled = false
 
     const run = async () => {
-      if (cancelled || autoLoadRef.current || !hydrated) return
+      if (readOnlyMastery || cancelled || autoLoadRef.current || !hydrated) return
       // Respect explicit data: share URL or localStorage take precedence.
       if (Object.keys(masteries).length > 0) return
 
@@ -452,7 +463,57 @@ export default function MasteryTreeExplorer({
     return () => {
       cancelled = true
     }
-  }, [hydrated, masteries, updateMasteries])
+  }, [hydrated, masteries, readOnlyMastery, updateMasteries])
+
+  useEffect(() => {
+    if (!readOnlyMastery || !hydrated || sharedNotice !== null || !puuid || !region) return
+    const token = Cookies.get('session_token')
+    if (!token) return
+    const controller = new AbortController()
+    const cacheKey = `${STORAGE_KEY}:riot-v1:${region}:${puuid}`
+
+    async function loadRiotMasteries() {
+      let cached: string | undefined
+      try {
+        const entry = JSON.parse(sessionStorage.getItem(cacheKey) ?? 'null')
+        if (entry?.expires > Date.now() && typeof entry.data === 'string') cached = entry.data
+      } catch {
+        // Continue without a cache when storage is unavailable.
+      }
+
+      let result = cached ? parseMasteryImport(cached) : null
+      try {
+        if (!result?.ok) {
+          const response = await fetch('/api/champion-mastery', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
+            body: JSON.stringify({ puuid, region }),
+            signal: controller.signal,
+          })
+          if (!response.ok || controller.signal.aborted) return
+          const payload = await response.json()
+          if (!Array.isArray(payload?.masteries)) return
+          const data = JSON.stringify(payload.masteries)
+          result = parseMasteryImport(data)
+          if (!result.ok || controller.signal.aborted) return
+          try {
+            sessionStorage.setItem(cacheKey, JSON.stringify({ expires: Date.now() + RIOT_MASTERY_CACHE_MS, data }))
+          } catch {
+            // The fetched mastery can still be displayed.
+          }
+        }
+
+        if (controller.signal.aborted) return
+        setMasteries(Object.fromEntries(result.entries.map(({ championId, points, level }) => [championId, { points, level }])))
+        setMode('personal')
+      } catch {
+        // A failed request leaves the catalog available to explore.
+      }
+    }
+
+    void loadRiotMasteries()
+    return () => controller.abort()
+  }, [hydrated, puuid, readOnlyMastery, region, sharedNotice])
 
   const openPersonalize = useCallback(
     (championId: number | null = null) => {
@@ -477,7 +538,7 @@ export default function MasteryTreeExplorer({
   }
 
   const handleSelectChampion = useCallback(
-    (champion: ChampionCatalogEntry, source: 'tree' | 'search' | 'directory') => {
+    (champion: ChampionCatalogEntry, source: 'tree' | 'search' | 'directory' | 'orbit' | 'atom' | 'profile') => {
       setSelectedId(champion.championId)
       setDetailsOpen(true)
       setHoveredId(null)
@@ -586,6 +647,7 @@ export default function MasteryTreeExplorer({
       }
 
       setRoleFilter('all')
+      setMasteryView('map')
       setSelectedId(champion.championId)
       setDetailsOpen(false)
       setView({
@@ -631,6 +693,18 @@ export default function MasteryTreeExplorer({
     openPersonalize(null)
   }
 
+  const hasViewPicker = embedded && mode === 'personal' && layout.nodes.length > 0
+  const activeMasteryView = hasViewPicker ? masteryView : 'map'
+  const showMap = activeMasteryView === 'map'
+  const collectionNodes = activeMasteryView === 'orbit' || activeMasteryView === 'atom'
+    ? (catalog ?? []).map((champion, rank) => ({
+        ...champion,
+        rank,
+        points: masteries[champion.championId]?.points ?? null,
+        level: masteries[champion.championId]?.level ?? null,
+      }))
+    : layout.nodes
+
   useEffect(() => {
     const svg = svgRef.current
     if (!svg) return
@@ -656,7 +730,7 @@ export default function MasteryTreeExplorer({
 
     svg.addEventListener('wheel', handleWheel, { passive: false })
     return () => svg.removeEventListener('wheel', handleWheel)
-  }, [layout.nodes.length])
+  }, [layout.nodes.length, showMap])
 
   const handlePointerDown = (event: ReactPointerEvent<SVGSVGElement>) => {
     const target = event.target as Element
@@ -807,13 +881,13 @@ export default function MasteryTreeExplorer({
               </p>
             </div>
             <div className="flex shrink-0 items-center gap-2">
-              <button
+              {!readOnlyMastery && <button
                 type="button"
                 onClick={startOwnTree}
                 className="rounded-lg border border-[#c89b3c]/35 bg-[#c89b3c]/10 px-3 py-1.5 text-[10px] font-semibold text-[#f0c75e] transition hover:bg-[#c89b3c]/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#f0c75e]/50"
               >
                 {t('shareLoadedCta')}
-              </button>
+              </button>}
               <button
                 type="button"
                 onClick={() => setSharedNotice(null)}
@@ -876,6 +950,7 @@ export default function MasteryTreeExplorer({
 
           <div className="rounded-[1.75rem] border border-white/[0.07] bg-[#080512]/80 p-2 shadow-[0_30px_100px_-40px_rgba(0,0,0,0.9)] sm:p-3">
             <div className="flex flex-col gap-3 border-b border-white/[0.06] px-2 pb-3 sm:px-3">
+              <div id="mt-filters" className={hasViewPicker && !filtersOpen ? 'hidden space-y-3 sm:block' : 'space-y-3'}>
               <div className="flex flex-wrap items-center gap-2">
                 <div
                   role="group"
@@ -1005,14 +1080,14 @@ export default function MasteryTreeExplorer({
                 </div>
 
                 <div className="ml-auto flex items-center gap-2">
-                  <button
+                  {!readOnlyMastery && <button
                     type="button"
                     onClick={() => openPersonalize(null)}
                     className="inline-flex h-9 items-center gap-1.5 rounded-xl border border-white/10 bg-white/[0.04] px-3 text-[10px] font-semibold text-white/60 transition hover:border-[#f0c75e]/35 hover:text-[#f0c75e] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#f0c75e]/50"
                   >
                     <UserRound className="h-3.5 w-3.5" />
                     <span className="hidden sm:inline">{t('personalize')}</span>
-                  </button>
+                  </button>}
                   <button
                     type="button"
                     onClick={openShare}
@@ -1072,7 +1147,7 @@ export default function MasteryTreeExplorer({
                   })}
                 </div>
 
-                <div className="flex items-center gap-1.5">
+                {showMap && <div className="flex items-center gap-1.5">
                   <button
                     type="button"
                     onClick={() => setShowBranches((value) => !value)}
@@ -1103,13 +1178,47 @@ export default function MasteryTreeExplorer({
                     <Ruler className="h-3 w-3" />
                     {sizeByMastery ? t('sizeByMastery') : t('sizeEven')}
                   </button>
-                </div>
+                </div>}
               </div>
+              </div>
+
+              {hasViewPicker && (
+                <div role="group" aria-label={ui('viewLabel')} className="flex flex-wrap gap-1.5">
+                  {([
+                    { id: 'map', Icon: GitBranch },
+                    { id: 'orbit', Icon: Orbit },
+                    { id: 'atom', Icon: Atom },
+                    { id: 'profile', Icon: ChartBar },
+                  ] as const).map(({ id, Icon }) => (
+                    <button
+                      key={id}
+                      type="button"
+                      onClick={() => setMasteryView(id)}
+                      aria-pressed={activeMasteryView === id}
+                      className={`inline-flex items-center gap-1 rounded-lg border px-2 py-1.5 text-[11px] font-semibold transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f0c75e] sm:gap-1.5 sm:px-3 sm:text-xs ${activeMasteryView === id ? 'border-[#f0c75e]/40 bg-[#f0c75e]/10 text-[#f0c75e]' : 'border-white/10 text-white/65 hover:text-white'}`}
+                    >
+                      <Icon size={14} className="hidden sm:block" aria-hidden="true" />
+                      {ui(id === 'map' ? 'mapView' : id)}
+                    </button>
+                  ))}
+                  <button
+                    type="button"
+                    onClick={() => setFiltersOpen(!filtersOpen)}
+                    aria-expanded={filtersOpen}
+                    aria-controls="mt-filters"
+                    aria-label={ui('filters')}
+                    className="ms-auto inline-flex items-center rounded-lg border border-white/10 px-2 text-white/75 focus-visible:outline-2 focus-visible:outline-[#f0c75e] sm:hidden"
+                  >
+                    <SlidersHorizontal size={15} aria-hidden="true" />
+                  </button>
+                </div>
+              )}
             </div>
 
+            {showMap ? <>
             <div
               ref={canvasRef}
-              className={embedded ? 'relative mt-2 h-[420px] overflow-hidden rounded-[1.4rem] border border-white/[0.06] bg-[#05030d] sm:h-[540px] lg:h-[620px]' : 'relative mt-2 h-[480px] overflow-hidden rounded-[1.4rem] border border-white/[0.06] bg-[#05030d] sm:h-[620px] lg:h-[720px]'}
+              className={embedded ? 'relative mt-2 h-[clamp(232px,calc(100dvh-328px),532px)] overflow-hidden rounded-[1.4rem] border border-white/[0.06] bg-[#05030d]' : 'relative mt-2 h-[480px] overflow-hidden rounded-[1.4rem] border border-white/[0.06] bg-[#05030d] sm:h-[620px] lg:h-[720px]'}
             >
               <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(124,58,237,0.08),transparent_66%)]" />
 
@@ -1301,7 +1410,7 @@ export default function MasteryTreeExplorer({
                     )}
                     {mode === 'explore' && (
                       <p className="border-t border-white/[0.06] pt-1.5 text-[9px] leading-relaxed text-white/30">
-                        {t('tooltipExploreHint')}
+                        {readOnlyMastery ? ui('viewDetailsHint') : t('tooltipExploreHint')}
                       </p>
                     )}
                   </div>
@@ -1321,17 +1430,17 @@ export default function MasteryTreeExplorer({
                       {t('emptyPersonalTitle')}
                     </h3>
                     <p className="mt-2 text-xs leading-relaxed text-white/40">
-                      {t('emptyPersonalBody')}
+                      {readOnlyMastery ? ui('noMasteryData') : t('emptyPersonalBody')}
                     </p>
                     <div className="mt-4 flex flex-col gap-2 sm:flex-row">
-                      <button
+                      {!readOnlyMastery && <button
                         type="button"
                         onClick={() => openPersonalize(null)}
                         className="inline-flex flex-1 items-center justify-center gap-1.5 rounded-lg border border-[#c89b3c]/40 bg-[#c89b3c]/15 px-3 py-2 text-[10px] font-semibold text-[#f0c75e] transition hover:bg-[#c89b3c]/25 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#f0c75e]/50"
                       >
                         <Plus className="h-3.5 w-3.5" />
                         {t('emptyPersonalCta')}
-                      </button>
+                      </button>}
                       <button
                         type="button"
                         onClick={() => handleMode('explore')}
@@ -1436,6 +1545,19 @@ export default function MasteryTreeExplorer({
                 {t('zoomToNames')}
               </span>
             </div>
+            </> : (
+              <MasteryCollectionView
+                view={activeMasteryView}
+                nodes={collectionNodes.filter((node) =>
+                  (roleFilter === 'all' || node.roles.includes(roleFilter)) &&
+                  (!searchActive || matchIds.has(node.championId)),
+                )}
+                roleLabels={roleLabels}
+                formatter={numberFormatter}
+                selectedId={detailsOpen ? selectedId ?? undefined : undefined}
+                onSelect={(node) => handleSelectChampion(node, activeMasteryView)}
+              />
+            )}
           </div>
         </section>
 
@@ -1753,12 +1875,12 @@ export default function MasteryTreeExplorer({
         rank={selectedRank}
         total={layout.nodes.length}
         totalPoints={layout.totalPoints}
-        onFocus={focusChampion}
-        onPersonalize={(champion) => openPersonalize(champion.championId)}
-        onRemove={removeMastery}
+        onFocus={!readOnlyMastery || selectedRank !== null ? focusChampion : undefined}
+        onPersonalize={readOnlyMastery ? undefined : (champion) => openPersonalize(champion.championId)}
+        onRemove={readOnlyMastery ? undefined : removeMastery}
       />
 
-      <PersonalizeModal
+      {!readOnlyMastery && <PersonalizeModal
         open={personalizeOpen}
         onClose={() => {
           setPersonalizeOpen(false)
@@ -1769,8 +1891,7 @@ export default function MasteryTreeExplorer({
         onChange={updateMasteries}
         locale={locale}
         initialChampionId={personalizeTarget}
-        readOnlyMastery={readOnlyMastery}
-      />
+      />}
 
       <ShareModal
         open={shareOpen}

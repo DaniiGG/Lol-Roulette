@@ -23,9 +23,9 @@ interface ChampionDetailsModalProps {
   rank: number | null
   total: number
   totalPoints: number
-  onFocus: (champion: ChampionCatalogEntry) => void
-  onPersonalize: (champion: ChampionCatalogEntry) => void
-  onRemove: (champion: ChampionCatalogEntry) => void
+  onFocus?: (champion: ChampionCatalogEntry) => void
+  onPersonalize?: (champion: ChampionCatalogEntry) => void
+  onRemove?: (champion: ChampionCatalogEntry) => void
 }
 
 export default function ChampionDetailsModal({
@@ -225,24 +225,24 @@ export default function ChampionDetailsModal({
           </Link>
         )}
 
-        <div className="mt-5 flex flex-wrap gap-2">
-          <button
+        {(onFocus || onPersonalize || (mastery && onRemove)) && <div className="mt-5 flex flex-wrap gap-2">
+          {onFocus && <button
             type="button"
             onClick={() => onFocus(champion)}
             className="inline-flex flex-1 items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/[0.04] px-4 py-2.5 text-xs font-semibold text-white/70 transition hover:border-[#f0c75e]/40 hover:bg-[#f0c75e]/10 hover:text-[#f0c75e] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#f0c75e]/50"
           >
             <Crosshair className="h-4 w-4" />
             {t('detailsFocus')}
-          </button>
-          <button
+          </button>}
+          {onPersonalize && <button
             type="button"
             onClick={() => onPersonalize(champion)}
             className="inline-flex flex-1 items-center justify-center gap-2 rounded-xl border border-[#c89b3c]/35 bg-[#c89b3c]/10 px-4 py-2.5 text-xs font-semibold text-[#f0c75e] transition hover:bg-[#c89b3c]/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#f0c75e]/50"
           >
             <Plus className="h-4 w-4" />
             {mastery ? t('detailsEdit') : t('detailsAdd')}
-          </button>
-          {mastery && (
+          </button>}
+          {mastery && onRemove && (
             <button
               type="button"
               onClick={() => onRemove(champion)}
@@ -252,7 +252,7 @@ export default function ChampionDetailsModal({
               <Trash2 className="h-4 w-4" />
             </button>
           )}
-        </div>
+        </div>}
       </div>
     </AccessibleModal>
   )

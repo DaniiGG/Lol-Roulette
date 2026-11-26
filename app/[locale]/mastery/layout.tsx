@@ -17,7 +17,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     path: '/mastery',
     title: t('mastery.title'),
     description: t('mastery.description'),
-    robots: { index: false, follow: true },
   })
 }
 

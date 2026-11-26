@@ -1,8 +1,7 @@
 // app/sitemap.ts
 import { MetadataRoute } from 'next'
 import { getPathname } from '@/i18n/navigation'
-import { routing } from '@/i18n/routing'
-import { BLOG_CATEGORY_ROUTES, type AppPathnames, type Locale } from '@/i18n/routes'
+import { BLOG_CATEGORY_ROUTES, getRouteLocales, type AppPathnames, type Locale } from '@/i18n/routes'
 import { BLOG_SLUGS, getPostHref, getPostMeta } from '@/lib/blog/meta'
 import { CATEGORIES } from '@/lib/blog/categories'
 import {
@@ -25,10 +24,13 @@ const staticPages: Array<{
 }> = [
   { path: '/', priority: 1, freq: 'daily' },
   { path: '/find-your-main', priority: 0.9, freq: 'weekly' },
+  { path: '/random-team-generator', priority: 0.8, freq: 'monthly' },
+  { path: '/bot-lane-duo-randomizer', priority: 0.8, freq: 'monthly' },
   { path: '/howtoplay', priority: 0.9, freq: 'weekly' },
   { path: '/faq', priority: 0.8, freq: 'weekly' },
   { path: '/tips', priority: 0.7, freq: 'weekly' },
   { path: '/leaderboard', priority: 0.7, freq: 'daily' },
+  { path: '/mastery', priority: 0.8, freq: 'monthly' },
   { path: '/modes', priority: 0.7, freq: 'weekly' },
   { path: '/popular', priority: 0.7, freq: 'weekly' },
   { path: '/tierlist', priority: 0.7, freq: 'daily' },
@@ -69,14 +71,15 @@ function buildAlternates(
 export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = []
 
-  // Static pages available in every locale (mastery is noindex).
+  // Indexable static pages in their available languages.
   for (const page of staticPages) {
-    for (const locale of routing.locales) {
+    const locales = getRouteLocales(page.path)
+    for (const locale of locales) {
       entries.push({
         url: localizedUrl(locale, page.path),
         changeFrequency: page.freq,
         priority: page.priority,
-        alternates: buildAlternates(page.path, routing.locales),
+        alternates: buildAlternates(page.path, locales),
       })
     }
   }

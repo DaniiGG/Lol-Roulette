@@ -15,7 +15,9 @@ import {
 } from "@/lib/api-client"
 import confetti from "canvas-confetti"
 import Cookies from 'js-cookie'
-import { History, Layers, Trash2, Swords } from 'lucide-react'
+import { Dices, History, Layers, Trash2, Swords } from 'lucide-react'
+import { Link } from '@/i18n/navigation'
+import { isRouteAvailable } from '@/i18n/routes'
 import { trackEvent } from '@/lib/analytics/events'
 import InfoModal from "@/components/InfoModal"
 
@@ -126,6 +128,7 @@ export default function Home({ seoContent, shareUrl }: { seoContent: ReactNode; 
   const tChallenges = useTranslations('challenges')
   const tLanes = useTranslations('laneSelector')
   const locale = useLocale()
+  const nav = useTranslations('nav')
   const sidebarLayoutRef = useRef<HTMLDivElement>(null)
   const laneSelectorRef = useRef<HTMLDivElement>(null)
   const [sidebarTop, setSidebarTop] = useState(0)
@@ -829,7 +832,23 @@ export default function Home({ seoContent, shareUrl }: { seoContent: ReactNode; 
                   )}
                 </section>
             </aside>
-            <aside id="home-ad-slot" className="home-play-ad" />
+            <aside className="home-play-right">
+              {isRouteAvailable('/bot-lane-duo-randomizer', locale) && (
+                <Link
+                  href="/bot-lane-duo-randomizer"
+                  prefetch={false}
+                  className="block rounded-2xl border border-amber-300/35 bg-gradient-to-br from-amber-300/10 to-neutral-950 p-4 transition-colors hover:border-amber-300/70 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-300"
+                >
+                  <span className="mb-3 flex items-center gap-2 text-amber-200">
+                    <Dices className="h-5 w-5" aria-hidden="true" />
+                    <span className="rounded-md bg-amber-300/15 px-2 py-0.5 text-xs font-semibold">{nav('duoNew')}</span>
+                  </span>
+                  <span className="block font-bold leading-snug text-white">{nav('duoRoulette')}</span>
+                  <span className="mt-2 block text-sm leading-relaxed text-neutral-300">{nav('duoDescription')}</span>
+                </Link>
+              )}
+              <div id="home-ad-slot" className="home-play-ad" />
+            </aside>
             {/* Left: Roulette (SIEMPRE VISIBLE) */}
             <div className={`${user ? 'lg:col-span-2' : 'max-w-2xl mx-auto w-full'} home-play-main space-y-6`}>
               {/* HEADER */}

@@ -19,6 +19,9 @@
   },
     "nav": {
         "tools": "Herramientas",
+        "duoRoulette": "Ruleta de dúos ADC + support",
+        "duoNew": "Nueva",
+        "duoDescription": "Sortea un ADC y un support para jugar con un amigo.",
         "learn": "Aprender",
         "navigation": "Navegación principal",
         "play": "Jugar",

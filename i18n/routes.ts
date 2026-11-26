@@ -79,6 +79,16 @@ export const pathnames = {
 
   '/find-your-main': same('/find-your-main'),
 
+  '/random-team-generator': {
+    en: '/random-team-generator',
+    es: '/generador-equipos-lol',
+  },
+
+  '/bot-lane-duo-randomizer': {
+    en: '/bot-lane-duo-randomizer',
+    es: '/ruleta-duos-adc-support',
+  },
+
   '/howtoplay': same('/howtoplay'),
 
   '/leaderboard': same('/leaderboard'),
@@ -180,6 +190,8 @@ export const ROUTE_LOCALES: Record<AppPathnames, readonly string[]> = {
   '/contact': ALL_LOCALES,
   '/faq': ALL_LOCALES,
   '/find-your-main': ALL_LOCALES,
+  '/random-team-generator': CONTENT_LOCALES,
+  '/bot-lane-duo-randomizer': CONTENT_LOCALES,
   '/howtoplay': ALL_LOCALES,
   '/leaderboard': ALL_LOCALES,
   '/mastery': ALL_LOCALES,

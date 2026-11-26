@@ -120,9 +120,8 @@ export function parseMasteryImport(
       const parsedLevel = readNumber(rawLevel)
       if (
         parsedLevel === null ||
-        !Number.isInteger(parsedLevel) ||
-        parsedLevel < 0 ||
-        parsedLevel > 10
+        !Number.isSafeInteger(parsedLevel) ||
+        parsedLevel < 0
       ) {
         return { ok: false, code: 'level' }
       }

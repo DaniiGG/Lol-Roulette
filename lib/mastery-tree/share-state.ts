@@ -38,7 +38,7 @@ function normalizePoints(value: unknown): number | null {
 function normalizeLevel(value: unknown): number | null {
   if (typeof value !== 'number' || !Number.isFinite(value)) return null
   const rounded = Math.round(value)
-  if (rounded < 0 || rounded > 10) return null
+  if (rounded < 0 || !Number.isSafeInteger(rounded)) return null
   return rounded
 }
 

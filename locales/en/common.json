@@ -19,6 +19,9 @@
   },
     "nav": {
         "tools": "Tools",
+        "duoRoulette": "ADC + Support Duo Randomizer",
+        "duoNew": "New",
+        "duoDescription": "Roll an ADC and support to play with a friend.",
         "learn": "Learn",
         "navigation": "Main navigation",
         "play": "Play",

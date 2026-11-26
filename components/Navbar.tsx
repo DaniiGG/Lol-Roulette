@@ -11,6 +11,7 @@ import LocaleSwitcher from './LocaleSwitcher'
 type NavLink = {
   href: Exclude<AppPathnames, '/blog/[slug]' | '/blog/guides/[champion]'>
   label: string
+  badge?: string
 }
 
 type NavGroup = {
@@ -48,6 +49,12 @@ export default function Navbar() {
       label: t('tools'),
       links: [
         { href: '/find-your-main', label: tQuiz('navLabel') },
+        ...(isRouteAvailable('/random-team-generator', locale)
+          ? [{ href: '/random-team-generator' as const, label: locale === 'es' ? 'Generador de equipos LoL' : 'LoL Team Generator' }]
+          : []),
+        ...(isRouteAvailable('/bot-lane-duo-randomizer', locale)
+          ? [{ href: '/bot-lane-duo-randomizer' as const, label: t('duoRoulette'), badge: t('duoNew') }]
+          : []),
         { href: '/mastery', label: t('mastery') },
         ...(isRouteAvailable('/mastery-tree', locale)
           ? [{ href: '/mastery-tree' as const, label: t('masteryTree') }]
@@ -90,6 +97,7 @@ export default function Navbar() {
         className={`${linkClass} ${color} ${block ? 'block' : 'inline-flex whitespace-nowrap'}`}
       >
         {link.label}
+        {link.badge && <span className="ms-2 inline-block rounded-md bg-amber-300/15 px-2 py-0.5 text-xs font-semibold text-amber-200">{link.badge}</span>}
       </Link>
     )
   }

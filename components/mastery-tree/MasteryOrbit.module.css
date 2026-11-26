@@ -1,0 +1,135 @@
+.orbit {
+  position: relative;
+  isolation: isolate;
+  aspect-ratio: 1;
+  width: min(100%, 680px);
+  margin-inline: auto;
+  border-radius: 50%;
+  background: radial-gradient(circle, #6d478e55, transparent 65%);
+}
+
+.orbitCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  box-shadow: 0 0 24px #f0c75e30;
+  transform: translate(-50%, -50%);
+}
+
+.orbit[data-atom='true'] .orbitCenter {
+  z-index: 1;
+  box-shadow: 0 0 0 4px #f0c75e24, 0 0 30px #f0c75e55;
+}
+
+.atomTracks {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: #f0c75e55;
+  stroke-width: 0.3;
+  pointer-events: none;
+}
+
+.orbitPlane { position: absolute; inset: 0; pointer-events: none; }
+
+.orbitRing {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  pointer-events: none;
+  animation: orbitRotation var(--orbit-duration) linear infinite;
+}
+
+.orbitRing::before {
+  position: absolute;
+  inset: var(--track-inset);
+  border: 1px solid #bc92f347;
+  border-radius: 50%;
+  content: '';
+}
+
+.orbitPosition {
+  position: absolute;
+  left: var(--start-x);
+  top: var(--start-y);
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+}
+
+.orbitPortrait {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border: 1px solid;
+  border-radius: 50%;
+  background: #100c1c;
+}
+
+.orbitRing .orbitPortrait {
+  animation: orbitCounterRotation var(--orbit-duration) linear infinite;
+}
+.orbit[data-atom='true'] .orbitRing,
+.orbit[data-atom='true'] .orbitPortrait { animation: none; }
+.orbit[data-atom='true'] .orbitRing::before { display: none; }
+
+@property --mastery-atom-phase {
+  syntax: '<angle>';
+  inherits: true;
+  initial-value: 0turn;
+}
+
+@supports (transform: translate(calc(1cqw * cos(1deg)))) {
+  .orbit[data-atom='true'] { container-type: inline-size; }
+  .orbit[data-atom='true'] .orbitRing { animation: atomTravel var(--orbit-duration) linear infinite; }
+  .orbit[data-atom='true'] .orbitPosition {
+    --atom-angle: calc(var(--atom-start-angle) + var(--mastery-atom-phase));
+    --atom-x: calc(var(--atom-radius) * cos(var(--atom-angle)));
+    --atom-y: calc(var(--atom-radius) * sin(var(--atom-angle)) * 0.5);
+    left: 50%;
+    top: 50%;
+    transform:
+      translate(
+        calc(1cqw * (var(--atom-x) * var(--atom-plane-cos) - var(--atom-y) * var(--atom-plane-sin))),
+        calc(1cqw * (var(--atom-x) * var(--atom-plane-sin) + var(--atom-y) * var(--atom-plane-cos)))
+      )
+      translate(-50%, -50%);
+  }
+}
+
+.orbitPortrait img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.orbitPortrait:is(button) { pointer-events: auto; cursor: pointer; }
+.orbitPortrait:is(button):is(:hover, :focus-visible, [data-selected='true']) { outline: 2px solid #f0c75e; outline-offset: 2px; }
+
+.orbit[data-paused='true'] :is(.orbitRing, .orbitRing .orbitPortrait) {
+  animation-play-state: paused;
+}
+
+@keyframes orbitRotation { to { transform: rotate(var(--orbit-turn)); } }
+@keyframes orbitCounterRotation { to { transform: rotate(calc(-1 * var(--orbit-turn))); } }
+@keyframes atomTravel { to { --mastery-atom-phase: var(--orbit-turn); } }
+
+.motionButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 8px;
+  border-radius: 8px;
+  color: #f0c75e;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.motionButton:hover { background: #f0c75e1a; }
+.motionButton:focus-visible { outline: 2px solid #f0c75e; }
+
+@media (prefers-reduced-motion: reduce) {
+  .orbitRing, .orbitRing .orbitPortrait, .orbit[data-atom='true'] .orbitRing { animation: none; }
+  .motionButton { display: none; }
+}

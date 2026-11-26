@@ -1,0 +1,62 @@
+﻿.orbit {
+  background:
+    repeating-radial-gradient(ellipse at 50% 18%, transparent 0 31px, #bd8dff22 32px 33px, transparent 34px 55px),
+    radial-gradient(ellipse at 50% 8%, #53367d85, transparent 64%),
+    #0d0920;
+}
+
+.orbit .featuredPortrait {
+  box-shadow: 0 0 0 3px #080311, 0 0 0 4px color-mix(in srgb, currentColor 55%, transparent), 0 0 17px color-mix(in srgb, currentColor 42%, transparent);
+}
+
+.fingerprint {
+  background:
+    repeating-linear-gradient(135deg, #4bebdc0a 0 1px, transparent 1px 8px),
+    radial-gradient(ellipse at 85% 5%, #244b5680, transparent 72%),
+    #0a171e;
+}
+
+.fingerprint .tile {
+  border-inline-start-width: 3px;
+  background: #122833;
+}
+
+.pulse {
+  background:
+    linear-gradient(#83f3e51a 1px, transparent 1px) 0 0 / 100% 16px,
+    radial-gradient(ellipse at top, #16475b9e, transparent 72%),
+    #06121b;
+}
+
+.channel {
+  --signal: #4fd1ef;
+  position: relative;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 0 1px 2px;
+  border: 1px solid color-mix(in srgb, var(--signal) 30%, transparent);
+  border-radius: 4px;
+  background: #091522a8;
+}
+
+.signal {
+  position: absolute;
+  inset: auto 1px 1px;
+  border-radius: 2px;
+  border-top: 1px solid var(--signal);
+  background: linear-gradient(to top, transparent, color-mix(in srgb, var(--signal) 66%, transparent));
+  transition: filter 140ms ease, opacity 140ms ease;
+}
+
+.channel:hover .signal,
+.channel:focus-visible .signal {
+  filter: drop-shadow(0 0 4px var(--signal));
+  opacity: .85;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .signal { transition: none; }
+}
